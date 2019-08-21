@@ -1,0 +1,756 @@
+2019-07-01 11:44:15		New key binding (context "default"): meta2-1;5P => /bar scroll buflist * -100%
+2019-07-01 11:44:15		New key binding (context "default"): meta2-1;5Q => /bar scroll buflist * +100%
+2019-07-01 11:44:15		New key binding (context "default"): meta-meta-OQ => /bar scroll buflist * e
+2019-07-01 11:44:15		New key binding (context "default"): meta2-1;3Q => /bar scroll buflist * e
+2019-07-01 11:44:15		New key binding (context "default"): meta2-1;3P => /bar scroll buflist * b
+2019-07-01 11:44:15		New key binding (context "default"): meta-meta-OP => /bar scroll buflist * b
+2019-07-01 11:44:15		New key binding (context "default"): meta-OQ => /bar scroll buflist * +100%
+2019-07-01 11:44:15		New key binding (context "default"): meta-OP => /bar scroll buflist * -100%
+2019-07-01 11:44:15		New key binding (context "default"): meta-meta2-12~ => /bar scroll buflist * e
+2019-07-01 11:44:15		New key binding (context "default"): meta-meta2-11~ => /bar scroll buflist * b
+2019-07-01 11:44:15		New key binding (context "default"): meta2-12^ => /bar scroll buflist * +100%
+2019-07-01 11:44:15		New key binding (context "default"): meta2-12~ => /bar scroll buflist * +100%
+2019-07-01 11:44:15		New key binding (context "default"): meta2-11^ => /bar scroll buflist * -100%
+2019-07-01 11:44:15		New key binding (context "default"): meta2-11~ => /bar scroll buflist * -100%
+2019-07-01 11:44:15		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, script, spell, tcl, trigger, xfer
+2019-07-01 11:44:18	=!=	Error: unknown command "/clear" (type /help for help)
+2019-07-01 11:44:20	=!=	Error: unknown command "/cls" (type /help for help)
+2019-07-01 11:44:22	=!=	You can not write text in this buffer
+2019-07-01 11:45:17		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, script, spell, tcl, trigger, xfer
+2019-07-01 11:45:38		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, script, spell, tcl, trigger, xfer
+2019-07-01 11:45:40	=!=	irc: unable to add temporary server "chat.freenode.net" because the addition of temporary servers with command /connect is currently disabled
+2019-07-01 11:45:40	=!=	irc: if you want to add a standard server, use the command "/server add" (see /help server); if you really want to add a temporary server (NOT SAVED), turn on the option irc.look.temporary_servers
+2019-07-01 11:45:54	=!=	Too few arguments for command "/server add" (help on command: /help server)
+2019-07-01 11:45:59		[irc]  /server  list|listfull [<name>]
+2019-07-01 11:45:59		                add <name> <hostname>[/<port>] [-temp] [-<option>[=<value>]] [-no<option>]
+2019-07-01 11:45:59		                copy|rename <name> <new_name>
+2019-07-01 11:45:59		                reorder <name> [<name>...]
+2019-07-01 11:45:59		                open <name>|-all [<name>...]
+2019-07-01 11:45:59		                del|keep <name>
+2019-07-01 11:45:59		                deloutq|jump|raw
+2019-07-01 11:45:59		list, add or remove IRC servers
+2019-07-01 11:45:59		    list: list servers (without argument, this list is displayed)
+2019-07-01 11:45:59		listfull: list servers with detailed info for each server
+2019-07-01 11:45:59		     add: add a new server
+2019-07-01 11:45:59		    name: server name, for internal and display use; this name is used to connect to the server (/connect name) and to set server options: irc.server.name.xxx
+2019-07-01 11:45:59		hostname: name or IP address of server, with optional port (default: 6667), many addresses can be separated by a comma
+2019-07-01 11:45:59		   -temp: add a temporary server (not saved)
+2019-07-01 11:45:59		  option: set option for server (for boolean option, value can be omitted)
+2019-07-01 11:45:59		nooption: set boolean option to 'off' (for example: -nossl)
+2019-07-01 11:45:59		    copy: duplicate a server
+2019-07-01 11:45:59		  rename: rename a server
+2019-07-01 11:45:59		 reorder: reorder list of servers
+2019-07-01 11:45:59		    open: open the server buffer without connecting
+2019-07-01 11:45:59		    keep: keep server in config file (for temporary servers only)
+2019-07-01 11:45:59		     del: delete a server
+2019-07-01 11:45:59		 deloutq: delete messages out queue for all servers (all messages WeeChat is currently sending)
+2019-07-01 11:45:59		    jump: jump to server buffer
+2019-07-01 11:45:59		     raw: open buffer with raw IRC data
+2019-07-01 11:45:59		Examples:
+2019-07-01 11:45:59		  /server listfull
+2019-07-01 11:45:59		  /server add freenode chat.freenode.net
+2019-07-01 11:45:59		  /server add freenode chat.freenode.net/6697 -ssl -autoconnect
+2019-07-01 11:45:59		  /server add chatspike irc.chatspike.net/6667,irc.duckspike.net/6667
+2019-07-01 11:45:59		  /server copy freenode freenode-test
+2019-07-01 11:45:59		  /server rename freenode-test freenode2
+2019-07-01 11:45:59		  /server reorder freenode2 freenode
+2019-07-01 11:45:59		  /server del freenode
+2019-07-01 11:45:59		  /server deloutq
+2019-07-01 11:46:06		irc: server freenode added
+2019-07-01 11:47:36	=!=	Error: unknown command "/NickServ" (type /help for help)
+2019-07-01 11:49:16	=!=	Too few arguments for command "/msg" (help on command: /help msg)
+2019-07-01 11:52:53		Option changed: irc.server.freenode.nicks = "mynick,mynick2,mynick3,mynick4,mynick5"  (default if null: "syrinxos,syrinxos1,syrinxos2,syrinxos3,syrinxos4")
+2019-07-01 11:53:35		Option changed: irc.server.freenode.nicks = "Syrinxos, Syrinxos1, Syrinxos2, syrinxos"  (default if null: "syrinxos,syrinxos1,syrinxos2,syrinxos3,syrinxos4")
+2019-07-01 11:53:43		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, script, spell, tcl, trigger, xfer
+2019-07-01 11:54:57		Option changed: irc.server.freenode.sasl_username = "Syrinxos"  (default if null: "")
+2019-07-01 11:55:03		Option changed: irc.server.freenode.sasl_password = "xxxxxxx"  (default if null: "")
+2019-07-01 11:55:09		Option changed: irc.server.freenode.sasl_password = "M2709&FNM"  (default if null: "")
+2019-07-01 11:55:18		Option changed: irc.server.freenode.command = "/msg nickserv identify xxxxxxx"  (default if null: "")
+2019-07-01 11:55:26		Option changed: irc.server.freenode.command = "/msg nickserv identify M2709&FNM"  (default if null: "")
+2019-07-01 11:55:31		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, script, spell, tcl, trigger, xfer
+2019-07-01 11:55:56		[core]
+2019-07-01 11:55:56		  away     debug    key      proxy    set      window 
+2019-07-01 11:55:56		  bar      eval     layout   quit     unset  
+2019-07-01 11:55:56		  buffer   filter   mouse    reload   upgrade
+2019-07-01 11:55:56		  color    help     mute     repeat   uptime 
+2019-07-01 11:55:56		  command  history  plugin   save     version
+2019-07-01 11:55:56		  cursor   input    print    secure   wait   
+2019-07-01 11:55:56		[relay]
+2019-07-01 11:55:56		  relay
+2019-07-01 11:55:56		[guile]
+2019-07-01 11:55:56		  guile
+2019-07-01 11:55:56		[spell]
+2019-07-01 11:55:56		  spell
+2019-07-01 11:55:56		[alias]
+2019-07-01 11:55:56		  AAWAY    BYE      IG       MSGBUF   SIGNOFF  WC     
+2019-07-01 11:55:56		  alias    C        J        MUB      T        WI     
+2019-07-01 11:55:56		  AME      CHAT     K        N        UB       WII    
+2019-07-01 11:55:57		  AMSG     CL       KB       Q        UMODE    WW     
+2019-07-01 11:55:57		  ANICK    CLOSE    LEAVE    REDRAW   V      
+2019-07-01 11:55:57		  BEEP     EXIT     M        SAY      W      
+2019-07-01 11:55:57		[perl]
+2019-07-01 11:55:57		  perl
+2019-07-01 11:55:57		[lua]
+2019-07-01 11:55:57		  lua
+2019-07-01 11:55:57		[script]
+2019-07-01 11:55:57		  script
+2019-07-01 11:55:57		[tcl]
+2019-07-01 11:55:57		  tcl
+2019-07-01 11:55:57		[fifo]
+2019-07-01 11:55:57		  fifo
+2019-07-01 11:55:57		[buflist]
+2019-07-01 11:55:57		  buflist
+2019-07-01 11:55:57		[exec]
+2019-07-01 11:55:57		  exec
+2019-07-01 11:55:57		[trigger]
+2019-07-01 11:55:57		  trigger
+2019-07-01 11:55:57		[irc]
+2019-07-01 11:55:57		  admin       ison        part        squit     
+2019-07-01 11:55:57		  allchan     join        ping        stats     
+2019-07-01 11:55:57		  allpv       kick        pong        summon    
+2019-07-01 11:55:57		  allserv     kickban     query       time      
+2019-07-01 11:55:57		  ban         kill        quiet       topic     
+2019-07-01 11:55:57		  cap         links       quote       trace     
+2019-07-01 11:55:57		  connect     list        reconnect   unban     
+2019-07-01 11:55:57		  ctcp        lusers      rehash      unquiet   
+2019-07-01 11:55:57		  cycle       map         remove      userhost  
+2019-07-01 11:55:57		  dcc         me          restart     users     
+2019-07-01 11:55:57		  dehalfop    mode        sajoin      version   
+2019-07-01 11:55:57		  deop        motd        samode      voice     
+2019-07-01 11:55:57		  devoice     msg         sanick      wallchops 
+2019-07-01 11:55:57		  die         names       sapart      wallops   
+2019-07-01 11:55:57		  disconnect  nick        saquit      who       
+2019-07-01 11:55:57		  halfop      notice      server      whois     
+2019-07-01 11:55:57		  ignore      notify      service     whowas    
+2019-07-01 11:55:57		  info        op          servlist  
+2019-07-01 11:55:57		  invite      oper        squery    
+2019-07-01 11:55:57		[charset]
+2019-07-01 11:55:57		  charset
+2019-07-01 11:55:57		[logger]
+2019-07-01 11:55:57		  logger
+2019-07-01 11:55:57		[python]
+2019-07-01 11:55:57		  python
+2019-07-01 11:55:57		[xfer]
+2019-07-01 11:55:57		  me  xfer
+2019-07-01 11:55:57		[fset]
+2019-07-01 11:55:57		  fset
+2019-07-01 11:56:00	=!=	Error: unknown command "/clear" (type /help for help)
+2019-07-01 12:07:45		Option changed: irc.look.smart_filter = on
+2019-07-01 12:09:05		Mouse enabled
+2019-07-01 12:15:07		Filter "irc_smart" added:
+2019-07-01 12:15:07		  [irc_smart] buffer: * / tags: irc_smart_filter / regex: * 
+2019-07-01 12:15:45		Option changed: weechat.bar.nicklist.hidden = on  (default: off)
+2019-07-01 12:15:52		Option changed: weechat.bar.nicklist.hidden = off
+2019-07-01 12:19:10	=!=	Error: WeeChat main buffer can't be closed
+2019-07-01 12:19:26	=!=	irc: command "join" must be executed on irc buffer (server, channel or private)
+2019-07-01 12:19:43	=!=	Error: unknown command "/depart" (type /help for help)
+2019-07-01 12:21:55	=!=	irc: warning: invalid autojoin value "#mechboards, #archlinux", see /help irc.server.freenode.autojoin
+2019-07-01 12:21:55		Option changed: irc.server.freenode.autojoin = "#mechboards, #archlinux"  (default if null: "")
+2019-07-01 12:24:34	=!=	irc: warning: invalid autojoin value "#mechboards, #archlinux", see /help irc.server.freenode.autojoin
+2019-07-01 12:24:35		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, script, spell, tcl, trigger, xfer
+2019-07-01 12:25:53		Option changed: weechat.bar.nicklist.hidden = on  (default: off)
+2019-07-01 12:26:10	=!=	Error: option "weechat.bar.*" not found
+2019-07-01 12:28:20	=!=	Error: unknown command "/clear" (type /help for help)
+2019-07-01 12:44:18	=!=	irc: warning: invalid autojoin value "#mechboards, #archlinux", see /help irc.server.freenode.autojoin
+2019-07-01 12:44:19		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, script, spell, tcl, trigger, xfer
+2019-07-01 13:54:40	=!=	irc: warning: invalid autojoin value "#mechboards, #archlinux", see /help irc.server.freenode.autojoin
+2019-07-01 13:54:40		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, script, spell, tcl, trigger, xfer
+2019-07-01 13:55:26		Option changed: irc.server.freenode.autoconnect = on  (default if null: off)
+2019-07-01 13:55:31	=!=	irc: warning: invalid autojoin value "#mechboards, #archlinux", see /help irc.server.freenode.autojoin
+2019-07-01 13:55:31		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, script, spell, tcl, trigger, xfer
+2019-07-01 13:56:22	=!=	Error: failed to set option "irc.look.server_buffer"
+2019-07-01 13:56:30		Option changed: irc.look.server_buffer = independent  (default: merge_with_core)
+2019-07-01 13:57:22		script: downloading list of scripts...
+2019-07-01 13:57:22		script: 362 scripts for WeeChat 2.5
+2019-07-01 13:57:22		python: loading script "/home/syrinxos/dotfiles/weechat/.config/weechat/python/go.py"
+2019-07-01 13:57:23		python: registered script "go", version 2.5 (Quick jump to buffers)
+2019-07-01 13:58:22		Option changed: weechat.look.bar_more_down = "▼"  (default: "++")
+2019-07-01 13:58:32		Option changed: weechat.look.bar_more_left = "◀"  (default: "<<")
+2019-07-01 13:58:35		Option changed: weechat.look.bar_more_right = "▶"  (default: ">>")
+2019-07-01 13:58:38		Option changed: weechat.look.bar_more_up = "▲"  (default: "--")
+2019-07-01 13:58:41		Option changed: weechat.look.buffer_time_format = "${252}%H${245}%M${240}%S"  (default: "%H:%M:%S")
+2019-07-01 13:58:51		Option changed: weechat.look.buffer_time_format = "${color:252}%H${color:245}%M${color:240}%S"  (default: "%H:%M:%S")
+2019-07-01 13:58:57		Option changed: weechat.bar.status.color_bg = 60  (default: blue)
+2019-07-01 13:59:01		Option changed: weechat.bar.title.color_bg = 60  (default: blue)
+2019-07-01 13:59:04		Option changed: weechat.color.chat_delimiters = 29  (default: green)
+2019-07-01 13:59:08		Option changed: weechat.color.chat_host = 24  (default: cyan)
+2019-07-01 13:59:14		Option changed: weechat.color.chat_prefix_suffix = 24  (default: green)
+2019-07-01 13:59:17		Option changed: weechat.color.nicklist_away = 244  (default: cyan)
+2019-07-01 13:59:20		Option changed: weechat.color.separator = 60  (default: blue)
+2019-07-01 13:59:23		Option changed: irc.color.reason_quit = 244  (default: default)
+2019-07-01 13:59:26		Option changed: weechat.color.chat_nick_colors = "cyan,magenta,green,brown,lightblue,default,lightcyan,lightmagenta,lightgreen,blue,31,35,38,40,49,63,70,80,92,99,112,126,130,138,142,148,160,162,167,169,174,176,178,184,186,210,212,215,247"  (default: "cyan,magenta,green,brown,lightblue,default,lightcyan,lightmagenta,lightgreen,blue")
+2019-07-01 13:59:30		Option changed: irc.color.topic_old = 244  (default: default)
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:50	=!=	You can not write text in this buffer
+2019-07-01 14:01:57		Option changed: weechat.bar.title.items = "= "buffer_number,buffer_name,| hotlist,| lag,| completion,| scroll""  (default: "buffer_title")
+2019-07-01 14:02:13		Option changed: irc.color.nick_prefixes = "= "q:lightred;a:lightcyan;o:lightgreen;h:lightmagenta;v:yellow;*:lightblue""  (default: "y:lightred;q:lightred;a:lightcyan;o:lightgreen;h:lightmagenta;v:yellow;*:lightblue")
+2019-07-01 14:02:27	=!=	Error: failed to set option "relay.color.status_active"
+2019-07-01 14:19:21		Option changed: irc.server.freenode.autojoin = "#mechboards,#archlinux"  (default if null: "")
+2019-07-01 14:19:49	=!=	Error: unknown bar "toggle"
+2019-07-01 16:12:50		Option changed: irc.server.freenode.autojoin = "#mechboards,#archlinux,#reddit-gamedev"  (default if null: "")
+2019-07-01 16:21:13		Option changed: weechat.bar.title.color_fg = 66  (default: default)
+2019-07-01 16:21:24		Option changed: weechat.bar.status.color_fg = 66  (default: default)
+2019-07-01 16:21:24		Option changed: weechat.bar.status.color_delim = 66  (default: cyan)
+2019-07-01 16:21:24		Option changed: weechat.color.status_time = 66  (default: default)
+2019-07-01 16:21:24		Option changed: weechat.color.status_name = 66  (default: white)
+2019-07-01 16:21:24		Option changed: weechat.color.status_nicklist_count = 66  (default: default)
+2019-07-01 16:21:24		Option changed: weechat.color.status_name_ssl = 66  (default: lightgreen)
+2019-07-01 16:21:24		Option changed: weechat.color.status_number = 66  (default: yellow)
+2019-07-01 16:21:24		Option changed: weechat.color.status_count_other = 66  (default: default)
+2019-07-01 16:21:24		Option changed: weechat.color.status_data_other = 66  (default: default)
+2019-07-01 16:21:24		Option changed: irc.color.item_channel_modes = 66  (default: default)
+2019-07-01 16:21:30		Option changed: buflist.format.buffer_current = "${color:0,1}${number}${if:${number_displayed}?.: } ${name}"  (default: "${color:,blue}${format_buffer}")
+2019-07-01 16:21:36		Option changed: weechat.color.separator = 66  (default: blue)
+2019-07-01 16:22:54		python: loading script "/home/syrinxos/dotfiles/weechat/.config/weechat/python/colorize_nicks.py"
+2019-07-01 16:22:54		python: registered script "colorize_nicks", version 26 (Use the weechat nick colors in the chat area)
+2019-07-01 16:22:54		perl: loading script "/home/syrinxos/dotfiles/weechat/.config/weechat/perl/iset.pl"
+2019-07-01 16:22:54		perl: registered script "iset", version 4.3 (Interactive Set for configuration options)
+2019-07-01 16:22:54		New key binding (context "mouse"): @chat(perl.iset):button1 => hsignal:iset_mouse
+2019-07-01 16:22:54		New key binding (context "mouse"): @chat(perl.iset):button2* => hsignal:iset_mouse
+2019-07-01 16:22:54		New key binding (context "mouse"): @chat(perl.iset):wheeldown => /repeat 5 /iset **down
+2019-07-01 16:22:54		New key binding (context "mouse"): @chat(perl.iset):wheelup => /repeat 5 /iset **up
+2019-07-01 16:22:54	=!=	perl: failed to move script -a /home/syrinxos/.config/weechat/script/buffers.pl to /home/syrinxos/dotfiles/weechat/.config/weechat/perl/buffers.pl (No such file or directory)
+2019-07-01 16:22:59		script: script "colorize_nicks.py" is already installed and up-to-date
+2019-07-01 16:23:06		Notify changed for "core.weechat": "all" to "message"
+2019-07-01 16:23:06		Notify changed for "irc.server.freenode": "all" to "message"
+2019-07-01 16:23:06		Notify changed for "irc.freenode.#Mechboards": "all" to "message"
+2019-07-01 16:23:06		Notify changed for "irc.freenode.#archlinux": "all" to "message"
+2019-07-01 16:23:06		Notify changed for "irc.freenode.#reddit-gamedev": "all" to "message"
+2019-07-01 16:23:06		Option changed: weechat.look.buffer_notify_default = message  (default: all)
+2019-07-01 16:23:12		Option changed: weechat.look.color_nick_offline = on  (default: off)
+2019-07-01 16:23:19		Option changed: weechat.look.prefix_same_nick = "⤷"  (default: "")
+2019-07-01 16:23:31		Option changed: weechat.color.chat_channel = darkgray  (default: white)
+2019-07-01 16:23:31		Option changed: weechat.color.chat_delimiters = darkgray  (default: green)
+2019-07-01 16:23:31		Option changed: weechat.color.chat_highlight_bg = 60  (default: magenta)
+2019-07-01 16:23:31		Option changed: weechat.color.chat_host = darkgray  (default: cyan)
+2019-07-01 16:23:31		Option changed: weechat.color.chat_nick = darkgray  (default: lightcyan)
+2019-07-01 16:23:31		Option changed: weechat.color.chat_nick_colors = "cyan,magenta,green,brown,lightblue,default,lightcyan,lightmagenta,lightgreen,blue,31,35,38,40,49,63,70,80,92,99,112,126,130,138,142,148,160,162,167,169,174,176,178,184,186,210,212,215,247"  (default: "cyan,magenta,green,brown,lightblue,default,lightcyan,lightmagenta,lightgreen,blue")
+2019-07-01 16:23:42		Option changed: weechat.color.chat_nick_offline = darkgray  (default: default)
+2019-07-01 16:23:42		Option changed: weechat.color.chat_prefix_action = darkgray  (default: white)
+2019-07-01 16:23:42		Option changed: weechat.color.chat_prefix_join = 24  (default: lightgreen)
+2019-07-01 16:23:42		Option changed: weechat.color.chat_prefix_network = darkgray  (default: magenta)
+2019-07-01 16:23:42		Option changed: weechat.color.chat_prefix_quit = 23  (default: lightred)
+2019-07-01 16:23:42		Option changed: weechat.color.chat_prefix_suffix = 16  (default: green)
+2019-07-01 16:23:42		Option changed: weechat.color.chat_read_marker = 16  (default: magenta)
+2019-07-01 16:23:42		Option changed: weechat.color.chat_tags = darkgray  (default: red)
+2019-07-01 16:23:42		Option changed: weechat.color.chat_time = darkgray  (default: default)
+2019-07-01 16:23:42		Option changed: weechat.color.chat_time_delimiters = 234  (default: brown)
+2019-07-01 16:23:42		Option changed: weechat.color.nicklist_away = 244  (default: cyan)
+2019-07-01 16:23:42		Option changed: weechat.color.separator = 16  (default: blue)
+2019-07-01 16:23:55	=!=	Error: option "weechat.bar.buffers.hidden" not found
+2019-07-01 16:23:55	=!=	Error: option "weechat.bar.buffers.items" not found
+2019-07-01 16:23:55		Option changed: weechat.bar.isetbar.items = "isetbar_help"  (default: "")
+2019-07-01 16:23:55		Option changed: weechat.bar.status.color_bg = 234  (default: blue)
+2019-07-01 16:23:55		Option changed: weechat.bar.title.color_bg = 234  (default: blue)
+2019-07-01 16:24:03		Option changed: irc.look.color_nicks_in_names = on  (default: off)
+2019-07-01 16:24:03		Option changed: irc.look.color_nicks_in_server_messages = off  (default: on)
+2019-07-01 16:24:10		Option changed: irc.color.message_join = darkgray  (default: green)
+2019-07-01 16:24:10		Option changed: irc.color.message_quit = darkgray  (default: red)
+2019-07-01 16:24:10		Option changed: irc.color.reason_quit = darkgray  (default: default)
+2019-07-01 16:24:10		Option changed: iset.color.bg_selected = 234  (default: red)
+2019-07-01 16:24:10		Option changed: iset.help.show_plugin_description = on  (default: off)
+2019-07-01 16:25:53		Option changed: colorize_nicks.look.colorize_input = on  (default: off)
+2019-07-01 16:25:53		Option changed: colorize_nicks.look.ignore_tags = "irc_join,irc_part,irc_quit"  (default: "")
+2019-07-01 16:28:41		python: scripts unloaded
+2019-07-01 16:32:07		perl scripts loaded: iset
+2019-07-01 16:32:07		python scripts loaded: colorize_nicks, go
+2019-07-01 16:32:07		script: 362 scripts for WeeChat 2.5
+2019-07-01 16:32:07		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, script, spell, tcl, trigger, xfer
+2019-07-01 17:01:30		Option changed: irc.server.freenode.autojoin = "#mechboards,#archlinux,#reddit-gamedev,#herbstluftwm"  (default if null: "")
+2019-07-01 17:47:16		python: scripts unloaded
+2019-07-01 23:18:57		perl scripts loaded: iset
+2019-07-01 23:18:58		python scripts loaded: colorize_nicks, go
+2019-07-01 23:18:58		script: 362 scripts for WeeChat 2.5
+2019-07-01 23:18:58		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, script, spell, tcl, trigger, xfer
+2019-07-01 23:58:12		python: scripts unloaded
+2019-07-02 08:56:36		perl scripts loaded: iset
+2019-07-02 08:56:36		python scripts loaded: colorize_nicks, go
+2019-07-02 08:56:36		script: 362 scripts for WeeChat 2.5
+2019-07-02 08:56:36		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, script, spell, tcl, trigger, xfer
+2019-07-02 09:12:46	=!=	Error: unknown command "/search" (type /help for help)
+2019-07-02 09:14:03		Option changed: irc.server.freenode.autojoin = "#mechboards,#archlinux,#reddit-gamedev,#herbstluftwm,#go-nuts"  (default if null: "")
+2019-07-02 10:04:56		python: scripts unloaded
+2019-07-02 10:18:34		perl scripts loaded: iset
+2019-07-02 10:18:35		python scripts loaded: colorize_nicks, go
+2019-07-02 10:18:35		script: 362 scripts for WeeChat 2.5
+2019-07-02 10:18:35		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, script, spell, tcl, trigger, xfer
+2019-07-02 10:56:16		[core]  /key  list|listdefault|listdiff [<context>]
+2019-07-02 10:56:16		              bind <key> [<command> [<args>]]
+2019-07-02 10:56:16		              bindctxt <context> <key> [<command> [<args>]]
+2019-07-02 10:56:16		              unbind <key>
+2019-07-02 10:56:16		              unbindctxt <context> <key>
+2019-07-02 10:56:16		              reset <key>
+2019-07-02 10:56:16		              resetctxt <context> <key>
+2019-07-02 10:56:16		              resetall -yes [<context>]
+2019-07-02 10:56:16		              missing [<context>]
+2019-07-02 10:56:16		bind/unbind keys
+2019-07-02 10:56:16		       list: list all current keys (without argument, this list is displayed)
+2019-07-02 10:56:16		listdefault: list default keys
+2019-07-02 10:56:16		   listdiff: list differences between current and default keys (keys added, redefined or deleted)
+2019-07-02 10:56:16		    context: name of context ("default" or "search")
+2019-07-02 10:56:16		       bind: bind a command to a key or display command bound to key (for context "default")
+2019-07-02 10:56:16		   bindctxt: bind a command to a key or display command bound to key, for given context
+2019-07-02 10:56:16		    command: command (many commands can be separated by semicolons)
+2019-07-02 10:56:16		     unbind: remove a key binding (for context "default")
+2019-07-02 10:56:16		 unbindctxt: remove a key binding for given context
+2019-07-02 10:56:16		      reset: reset a key to default binding (for context "default")
+2019-07-02 10:56:16		  resetctxt: reset a key to default binding, for given context
+2019-07-02 10:56:16		   resetall: restore bindings to the default values and delete ALL personal bindings (use carefully!)
+2019-07-02 10:56:16		    missing: add missing keys (using default bindings), useful after installing new WeeChat version
+2019-07-02 10:56:16		When binding a command to a key, it is recommended to use key alt+k (or Esc then k), and then press the key to bind: this will insert key code in command line.
+2019-07-02 10:56:16		For context "mouse" (possible in context "cursor" too), key has format: "@area:key" or "@area1>area2:key" where area can be:
+2019-07-02 10:56:16		          *: any area on screen
+2019-07-02 10:56:16		       chat: chat area (any buffer)
+2019-07-02 10:56:16		  chat(xxx): chat area for buffer with name "xxx" (full name including plugin)
+2019-07-02 10:56:16		     bar(*): any bar
+2019-07-02 10:56:16		   bar(xxx): bar "xxx"
+2019-07-02 10:56:16		    item(*): any bar item
+2019-07-02 10:56:16		  item(xxx): bar item "xxx"
+2019-07-02 10:56:16		Wildcard "*" is allowed in key to match many mouse events.
+2019-07-02 10:56:16		A special value for command with format "hsignal:name" can be used for context mouse, this will send the hsignal "name" with the focus hashtable as argument.
+2019-07-02 10:56:16		Another special value "-" can be used to disable key (it will be ignored when looking for keys).
+2019-07-02 10:56:16		Examples:
+2019-07-02 10:56:16		  key alt-t to toggle nicklist bar:
+2019-07-02 10:56:16		    /key bind meta-t /bar toggle nicklist
+2019-07-02 10:56:16		  key alt-r to jump to #weechat IRC channel:
+2019-07-02 10:56:16		    /key bind meta-r /buffer #weechat
+2019-07-02 10:56:16		  restore default binding for key alt-r:
+2019-07-02 10:56:16		    /key reset meta-r
+2019-07-02 10:56:16		  key "tab" to stop search in buffer:
+2019-07-02 10:56:16		    /key bindctxt search ctrl-I /input search_stop
+2019-07-02 10:56:16		  middle button of mouse on a nick to retrieve info on nick:
+2019-07-02 10:56:16		    /key bindctxt mouse @item(buffer_nicklist):button3 /msg nickserv info ${nick}
+2019-07-02 17:56:51		python: scripts unloaded
+2019-07-03 08:55:59		perl scripts loaded: iset
+2019-07-03 08:55:59		python scripts loaded: colorize_nicks, go
+2019-07-03 08:55:59		script: downloading list of scripts...
+2019-07-03 08:55:59		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, script, spell, tcl, trigger, xfer
+2019-07-03 08:55:59		script: 362 scripts for WeeChat 2.5
+2019-07-03 17:53:27		python: scripts unloaded
+2019-07-04 08:53:29		perl scripts loaded: iset
+2019-07-04 08:53:29		python scripts loaded: colorize_nicks, go
+2019-07-04 08:53:29		script: 362 scripts for WeeChat 2.5
+2019-07-04 08:53:29		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, script, spell, tcl, trigger, xfer
+2019-07-04 11:02:16		[irc]  /list  [-server <server>] [-re <regex>] [<channel>[,<channel>...]] [<target>]
+2019-07-04 11:02:16		list channels and their topic
+2019-07-04 11:02:16		 server: send to this server (internal name)
+2019-07-04 11:02:16		  regex: POSIX extended regular expression used to filter results (case insensitive, can start by "(?-i)" to become case sensitive)
+2019-07-04 11:02:16		channel: channel to list
+2019-07-04 11:02:16		 target: server name
+2019-07-04 11:02:16		Examples:
+2019-07-04 11:02:16		  list all channels on server (can be very slow on large networks):
+2019-07-04 11:02:16		    /list
+2019-07-04 11:02:16		  list channel #weechat:
+2019-07-04 11:02:16		    /list #weechat
+2019-07-04 11:02:16		  list all channels beginning with "#weechat" (can be very slow on large networks):
+2019-07-04 11:02:16		    /list -re #weechat.*
+2019-07-04 11:02:22	=!=	Error with command "/list -re" (help on command: /help list)
+2019-07-04 11:02:29		[irc]  /list  [-server <server>] [-re <regex>] [<channel>[,<channel>...]] [<target>]
+2019-07-04 11:02:29		list channels and their topic
+2019-07-04 11:02:29		 server: send to this server (internal name)
+2019-07-04 11:02:29		  regex: POSIX extended regular expression used to filter results (case insensitive, can start by "(?-i)" to become case sensitive)
+2019-07-04 11:02:29		channel: channel to list
+2019-07-04 11:02:29		 target: server name
+2019-07-04 11:02:29		Examples:
+2019-07-04 11:02:29		  list all channels on server (can be very slow on large networks):
+2019-07-04 11:02:29		    /list
+2019-07-04 11:02:29		  list channel #weechat:
+2019-07-04 11:02:29		    /list #weechat
+2019-07-04 11:02:29		  list all channels beginning with "#weechat" (can be very slow on large networks):
+2019-07-04 11:02:29		    /list -re #weechat.*
+2019-07-04 11:03:07	=!=	irc: command "list" must be executed on irc buffer (server, channel or private)
+2019-07-04 17:47:13		python: scripts unloaded
+2019-07-05 09:26:27		perl scripts loaded: iset
+2019-07-05 09:26:27		python scripts loaded: colorize_nicks, go
+2019-07-05 09:26:27		script: downloading list of scripts...
+2019-07-05 09:26:27		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, script, spell, tcl, trigger, xfer
+2019-07-05 09:26:28		script: 362 scripts for WeeChat 2.5
+2019-07-05 09:32:23		python: scripts unloaded
+2019-07-05 09:37:32		perl scripts loaded: iset
+2019-07-05 09:37:32		python scripts loaded: colorize_nicks, go
+2019-07-05 09:37:32		script: 362 scripts for WeeChat 2.5
+2019-07-05 09:37:32		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, script, spell, tcl, trigger, xfer
+2019-07-05 11:06:54		script: script "iset.pl" is already installed and up-to-date
+2019-07-05 11:06:54		script: script "colorize_nicks.py" is already installed and up-to-date
+2019-07-05 11:06:54		python: loading script "/home/syrinxos/dotfiles/weechat/.config/weechat/python/buffer_autoclose.py"
+2019-07-05 11:06:55		python: registered script "buffer_autoclose", version 0.5 (Automatically close inactive private message buffers)
+2019-07-05 11:06:55		python: loading script "/home/syrinxos/dotfiles/weechat/.config/weechat/python/urlbuf.py"
+2019-07-05 11:06:55		python: registered script "urlbuf", version 0.2 (A common buffer for received URLs.)
+2019-07-05 11:07:07		python: stdout/stderr (urlbuf): TypeError: urlbuf_close_cb() takes exactly 2 arguments (0 given)
+2019-07-05 11:07:07	=!=	python: error in function "urlbuf_close_cb"
+2019-07-05 11:07:07		python: scripts unloaded
+2019-07-05 11:07:09		perl scripts loaded: iset
+2019-07-05 11:07:10		python scripts loaded: buffer_autoclose, colorize_nicks, go, urlbuf
+2019-07-05 11:07:10		script: 362 scripts for WeeChat 2.5
+2019-07-05 11:07:10		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, script, spell, tcl, trigger, xfer
+2019-07-05 11:07:39	=!=	Error: option "buffers.color.hotlist_message_fg" not found
+2019-07-05 11:08:01		Option changed: weechat.look.prefix_align_max = 15  (default: 0)
+2019-07-05 11:08:10		Key "meta-n" unbound (context: "default")
+2019-07-05 11:08:10		New key binding (context "default"): meta-n => /bar toggle nicklist
+2019-07-05 11:08:49		Option changed: weechat.look.buffer_notify_default = message  (default: all)
+2019-07-05 11:09:02	=!=	Error: option "weechat.bar.buffers.position" not found
+2019-07-05 11:09:18		Option changed: weechat.bar.buflist.position = top  (default: left)
+2019-07-05 11:09:29	=!=	Error: option "buffers.look.hide_merged_buffers" not found
+2019-07-05 11:10:22	=!=	You can not write text in this buffer
+2019-07-05 11:10:33		Unknown configuration file "layout"
+2019-07-05 11:10:38		Options saved to sec.conf
+2019-07-05 11:10:38		Options saved to weechat.conf
+2019-07-05 11:10:38		Options saved to plugins.conf
+2019-07-05 11:10:38		Options saved to charset.conf
+2019-07-05 11:10:38		Options saved to logger.conf
+2019-07-05 11:10:38		Options saved to exec.conf
+2019-07-05 11:10:38		Options saved to trigger.conf
+2019-07-05 11:10:38		Options saved to spell.conf
+2019-07-05 11:10:38		Options saved to alias.conf
+2019-07-05 11:10:38		Options saved to buflist.conf
+2019-07-05 11:10:38		Options saved to fifo.conf
+2019-07-05 11:10:38		Options saved to xfer.conf
+2019-07-05 11:10:38		Options saved to irc.conf
+2019-07-05 11:10:38		Options saved to relay.conf
+2019-07-05 11:10:38		Options saved to guile.conf
+2019-07-05 11:10:38		Options saved to perl.conf
+2019-07-05 11:10:38		Options saved to iset.conf
+2019-07-05 11:10:38		Options saved to lua.conf
+2019-07-05 11:10:38		Options saved to tcl.conf
+2019-07-05 11:10:38		Options saved to python.conf
+2019-07-05 11:10:38		Options saved to colorize_nicks.conf
+2019-07-05 11:10:38		Options saved to script.conf
+2019-07-05 11:10:38		Options saved to fset.conf
+2019-07-05 11:10:46	=!=	Error with command "/layout order" (help on command: /help layout)
+2019-07-05 11:11:00		WARNING: this option can cause serious display bugs, if you have such problems, you must turn off this option.
+2019-07-05 11:11:00		Option changed: weechat.look.eat_newline_glitch = on  (default: off)
+2019-07-05 11:11:16		Option changed: weechat.bar.nicklist.position = top  (default: right)
+2019-07-05 11:11:16		Option changed: weechat.look.prefix_align = none  (default: right)
+2019-07-05 11:11:16		Option changed: weechat.look.align_end_of_lines = time  (default: message)
+2019-07-05 11:32:31		python: stdout/stderr (urlbuf): TypeError: urlbuf_close_cb() takes exactly 2 arguments (0 given)
+2019-07-05 11:32:31	=!=	python: error in function "urlbuf_close_cb"
+2019-07-05 11:32:31		python: scripts unloaded
+2019-07-05 11:32:35		perl scripts loaded: iset
+2019-07-05 11:32:35		python scripts loaded: buffer_autoclose, colorize_nicks, go, urlbuf
+2019-07-05 11:32:35		script: 362 scripts for WeeChat 2.5
+2019-07-05 11:32:35		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, script, spell, tcl, trigger, xfer
+2019-07-05 11:32:47		Option changed: weechat.startup.display_logo = off  (default: on)
+2019-07-05 11:33:06		Option changed: weechat.look.align_end_of_lines = message
+2019-07-05 11:33:15		Option changed: weechat.look.align_multiline_words = on
+2019-07-05 11:33:32		Option changed: weechat.look.bar_more_down = " + "  (default: "++")
+2019-07-05 11:33:38		Option changed: weechat.look.bar_more_down = "++"
+2019-07-05 11:34:54		python: stdout/stderr (urlbuf): TypeError: urlbuf_close_cb() takes exactly 2 arguments (0 given)
+2019-07-05 11:34:54	=!=	python: error in function "urlbuf_close_cb"
+2019-07-05 11:34:54		python: scripts unloaded
+2019-07-05 11:35:02		perl scripts loaded: iset
+2019-07-05 11:35:02		python scripts loaded: buffer_autoclose, colorize_nicks, go, urlbuf
+2019-07-05 11:35:02		script: 362 scripts for WeeChat 2.5
+2019-07-05 11:35:02		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, script, spell, tcl, trigger, xfer
+2019-07-05 11:35:15		Option changed: weechat.color.bar_more = green  (default: lightmagenta)
+2019-07-05 11:35:19		Option changed: weechat.color.chat = white  (default: default)
+2019-07-05 11:35:25		Option changed: weechat.color.chat_bg = default
+2019-07-05 11:35:31		Option changed: weechat.color.chat_buffer = white
+2019-07-05 11:35:42		Option changed: weechat.color.chat_channel = white
+2019-07-05 11:35:48		Option changed: weechat.color.chat_delimiters = green
+2019-07-05 11:35:55		Option changed: weechat.color.chat_highlight = yellow
+2019-07-05 11:36:02		Option changed: weechat.color.chat_highlight_bg = default  (default: magenta)
+2019-07-05 11:36:20		Option changed: weechat.color.chat_host = cyan
+2019-07-05 11:36:34		Option changed: weechat.color.chat_prefix_action = white
+2019-07-05 11:36:40		Option changed: weechat.color.chat_prefix_buffer = red  (default: brown)
+2019-07-05 11:36:52		Option changed: weechat.color.chat_prefix_buffer_inactive_buffer = darkgray  (default: default)
+2019-07-05 11:37:05		Option changed: weechat.color.chat_prefix_error = yellow
+2019-07-05 11:37:25	=!=	irc: command "part" must be executed on irc buffer (server, channel or private)
+2019-07-05 11:37:30	=!=	irc: command "part" must be executed on irc buffer (server, channel or private)
+2019-07-05 11:37:49		Option changed: weechat.color.chat_prefix_join = lightgreen
+2019-07-05 11:37:55		Option changed: weechat.color.chat_prefix_more = lightmagenta
+2019-07-05 11:38:02		Option changed: weechat.color.chat_prefix_network = magenta
+2019-07-05 11:38:09		Option changed: weechat.color.chat_prefix_quit = lightred
+2019-07-05 11:38:18		Option changed: weechat.color.chat_prefix_suffix = darkgray  (default: green)
+2019-07-05 11:38:27		Option changed: weechat.color.chat_read_marker = magenta
+2019-07-05 11:38:37		Option changed: weechat.color.chat_read_marker_bg = default
+2019-07-05 11:38:47		Option changed: weechat.color.chat_server = brown
+2019-07-05 11:38:57		Option changed: weechat.color.chat_tags = red
+2019-07-05 11:39:02		Option changed: weechat.color.chat_text_found = yellow
+2019-07-05 11:39:05		Option changed: weechat.color.chat_text_found_bg = yellow  (default: lightmagenta)
+2019-07-05 11:39:11		Option changed: weechat.color.chat_text_found_bg = lightmagenta
+2019-07-05 11:39:22		Option changed: weechat.color.chat_time = red  (default: default)
+2019-07-05 11:39:29		Option changed: weechat.color.chat_time_delimiters = red  (default: brown)
+2019-07-05 11:39:34		Option changed: weechat.color.chat_value = cyan
+2019-07-05 11:39:44		Option changed: weechat.color.input_actions = lightgreen
+2019-07-05 11:39:53		Option changed: weechat.color.input_text_not_found = red
+2019-07-05 11:40:00		Option changed: weechat.color.separator = darkgray  (default: blue)
+2019-07-05 11:40:11		Option changed: weechat.color.status_count_highlight = magenta
+2019-07-05 11:40:23		Option changed: weechat.color.status_count_msg = brown
+2019-07-05 11:40:33		Option changed: weechat.color.status_count_other = default
+2019-07-05 11:40:38		Option changed: weechat.color.status_count_private = green
+2019-07-05 11:41:00		python: stdout/stderr (urlbuf): TypeError: urlbuf_close_cb() takes exactly 2 arguments (0 given)
+2019-07-05 11:41:00	=!=	python: error in function "urlbuf_close_cb"
+2019-07-05 11:41:00		python: scripts unloaded
+2019-07-05 11:41:11		perl scripts loaded: iset
+2019-07-05 11:41:12		python scripts loaded: buffer_autoclose, colorize_nicks, go, urlbuf
+2019-07-05 11:41:12		script: 362 scripts for WeeChat 2.5
+2019-07-05 11:41:12		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, script, spell, tcl, trigger, xfer
+2019-07-05 11:41:26		python: stdout/stderr (urlbuf): TypeError: urlbuf_close_cb() takes exactly 2 arguments (0 given)
+2019-07-05 11:41:26	=!=	python: error in function "urlbuf_close_cb"
+2019-07-05 11:41:26		python: scripts unloaded
+2019-07-05 11:41:30		perl scripts loaded: iset
+2019-07-05 11:41:31		python scripts loaded: buffer_autoclose, colorize_nicks, go, urlbuf
+2019-07-05 11:41:31		script: 362 scripts for WeeChat 2.5
+2019-07-05 11:41:31		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, script, spell, tcl, trigger, xfer
+2019-07-05 12:28:02		Option changed: weechat.look.align_end_of_lines = buffer  (default: message)
+2019-07-05 12:28:08		Option changed: weechat.look.align_end_of_lines = prefix  (default: message)
+2019-07-05 12:28:13		Option changed: weechat.look.align_end_of_lines = suffix  (default: message)
+2019-07-05 12:28:18		Option changed: weechat.look.align_end_of_lines = time  (default: message)
+2019-07-05 12:28:23		Option changed: weechat.look.align_end_of_lines = buffer  (default: message)
+2019-07-05 12:28:25		Option changed: weechat.look.align_end_of_lines = prefix  (default: message)
+2019-07-05 12:28:39		Option changed: weechat.look.align_end_of_lines = message
+2019-07-05 12:28:48		Option changed: weechat.look.align_multiline_words = off  (default: on)
+2019-07-05 12:28:50		Option changed: weechat.look.align_multiline_words = on
+2019-07-05 12:29:02		Option changed: weechat.look.align_end_of_lines = suffix  (default: message)
+2019-07-05 12:29:04		Option changed: weechat.look.align_end_of_lines = message
+2019-07-05 12:29:07		Option changed: weechat.look.align_end_of_lines = buffer  (default: message)
+2019-07-05 12:31:11		Option changed: weechat.look.align_end_of_lines = message
+2019-07-05 12:31:32		Option changed: weechat.look.highlight = "nick"  (default: "")
+2019-07-05 12:33:38		Option changed: weechat.look.prefix_action = "|"  (default: " *")
+2019-07-05 12:33:44		Option changed: weechat.look.prefix_action = " *"
+2019-07-05 12:33:56		Option changed: weechat.look.prefix_align = right
+2019-07-05 12:34:42		Option changed: weechat.look.prefix_suffix = "»"  (default: "|")
+2019-07-05 17:51:15		python: stdout/stderr (urlbuf): TypeError: urlbuf_close_cb() takes exactly 2 arguments (0 given)
+2019-07-05 17:51:15	=!=	python: error in function "urlbuf_close_cb"
+2019-07-05 17:51:15		python: scripts unloaded
+2019-07-08 09:19:07		perl scripts loaded: iset
+2019-07-08 09:19:08		python scripts loaded: buffer_autoclose, colorize_nicks, go, urlbuf
+2019-07-08 09:19:08		script: downloading list of scripts...
+2019-07-08 09:19:08		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, script, spell, tcl, trigger, xfer
+2019-07-08 09:19:08		script: 363 scripts for WeeChat 2.5
+2019-07-08 09:19:11		python: stdout/stderr (urlbuf): TypeError: urlbuf_close_cb() takes exactly 2 arguments (0 given)
+2019-07-08 09:19:11	=!=	python: error in function "urlbuf_close_cb"
+2019-07-08 09:19:11		python: scripts unloaded
+2019-07-08 09:19:14		perl scripts loaded: iset
+2019-07-08 09:19:15		python scripts loaded: buffer_autoclose, colorize_nicks, go, urlbuf
+2019-07-08 09:19:15		script: 363 scripts for WeeChat 2.5
+2019-07-08 09:19:15		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, script, spell, tcl, trigger, xfer
+2019-07-08 11:46:13		Option changed: irc.server.freenode.autojoin = "#mechboards,#archlinux,#reddit-gamedev,#herbstluftwm,#go-nuts,#minecraft"  (default if null: "")
+2019-07-08 17:13:21		python: stdout/stderr (urlbuf): TypeError: urlbuf_close_cb() takes exactly 2 arguments (0 given)
+2019-07-08 17:13:21	=!=	python: error in function "urlbuf_close_cb"
+2019-07-08 17:13:21		python: scripts unloaded
+2019-07-09 09:12:05		perl scripts loaded: iset
+2019-07-09 09:12:06		python scripts loaded: buffer_autoclose, colorize_nicks, go, urlbuf
+2019-07-09 09:12:07		script: 363 scripts for WeeChat 2.5
+2019-07-09 09:12:07		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, script, spell, tcl, trigger, xfer
+2019-07-09 17:53:32		python: stdout/stderr (urlbuf): TypeError: urlbuf_close_cb() takes exactly 2 arguments (0 given)
+2019-07-09 17:53:32	=!=	python: error in function "urlbuf_close_cb"
+2019-07-09 17:53:32		python: scripts unloaded
+2019-07-10 09:01:17		perl scripts loaded: iset
+2019-07-10 09:01:18		python scripts loaded: buffer_autoclose, colorize_nicks, go, urlbuf
+2019-07-10 09:01:18		script: downloading list of scripts...
+2019-07-10 09:01:18		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, script, spell, tcl, trigger, xfer
+2019-07-10 09:01:18		script: 363 scripts for WeeChat 2.5
+2019-07-10 17:53:39		python: stdout/stderr (urlbuf): TypeError: urlbuf_close_cb() takes exactly 2 arguments (0 given)
+2019-07-10 17:53:39	=!=	python: error in function "urlbuf_close_cb"
+2019-07-10 17:53:39		python: scripts unloaded
+2019-07-10 22:38:21		perl scripts loaded: iset
+2019-07-10 22:38:21		python scripts loaded: buffer_autoclose, colorize_nicks, go, urlbuf
+2019-07-10 22:38:21		script: 363 scripts for WeeChat 2.5
+2019-07-10 22:38:21		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, script, spell, tcl, trigger, xfer
+2019-07-10 22:38:21		python: stdout/stderr (urlbuf): TypeError: urlbuf_close_cb() takes exactly 2 arguments (0 given)
+2019-07-10 22:38:21	=!=	python: error in function "urlbuf_close_cb"
+2019-07-10 22:38:21		python: scripts unloaded
+2019-07-10 22:38:24		perl scripts loaded: iset
+2019-07-10 22:38:24		python scripts loaded: buffer_autoclose, colorize_nicks, go, urlbuf
+2019-07-10 22:38:24		script: 363 scripts for WeeChat 2.5
+2019-07-10 22:38:24		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, script, spell, tcl, trigger, xfer
+2019-07-10 23:01:16	=!=	No help available, "relay.irc.backlog_" is not a command or an option
+2019-07-10 23:01:22	=!=	Error: unknown command "/setrelay.irc.backlog_*" (type /help for help)
+2019-07-10 23:01:53	=!=	irc: command "part" must be executed on irc buffer (server, channel or private)
+2019-07-10 23:09:00		python: stdout/stderr (urlbuf): TypeError: urlbuf_close_cb() takes exactly 2 arguments (0 given)
+2019-07-10 23:09:00	=!=	python: error in function "urlbuf_close_cb"
+2019-07-10 23:09:00		python: scripts unloaded
+2019-07-10 23:11:25		perl scripts loaded: iset
+2019-07-10 23:11:25		python scripts loaded: buffer_autoclose, colorize_nicks, go, urlbuf
+2019-07-10 23:11:25		script: 363 scripts for WeeChat 2.5
+2019-07-10 23:11:25		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, script, spell, tcl, trigger, xfer
+2019-07-10 23:11:25		python: stdout/stderr (urlbuf): TypeError: urlbuf_close_cb() takes exactly 2 arguments (0 given)
+2019-07-10 23:11:25	=!=	python: error in function "urlbuf_close_cb"
+2019-07-10 23:11:25		python: scripts unloaded
+2019-07-10 23:11:31		perl scripts loaded: iset
+2019-07-10 23:11:32		python scripts loaded: buffer_autoclose, colorize_nicks, go, urlbuf
+2019-07-10 23:11:32		script: 363 scripts for WeeChat 2.5
+2019-07-10 23:11:32		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, script, spell, tcl, trigger, xfer
+2019-07-10 23:16:33		python: stdout/stderr (urlbuf): TypeError: urlbuf_close_cb() takes exactly 2 arguments (0 given)
+2019-07-10 23:16:33	=!=	python: error in function "urlbuf_close_cb"
+2019-07-10 23:16:33		python: scripts unloaded
+2019-07-11 09:02:02		perl scripts loaded: iset
+2019-07-11 09:02:02		python scripts loaded: buffer_autoclose, colorize_nicks, go, urlbuf
+2019-07-11 09:02:02		script: downloading list of scripts...
+2019-07-11 09:02:02		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, script, spell, tcl, trigger, xfer
+2019-07-11 09:02:03		script: 363 scripts for WeeChat 2.5
+2019-07-11 17:22:05		python: stdout/stderr (urlbuf): TypeError: urlbuf_close_cb() takes exactly 2 arguments (0 given)
+2019-07-11 17:22:05	=!=	python: error in function "urlbuf_close_cb"
+2019-07-11 17:22:05		python: scripts unloaded
+2019-07-12 09:04:41		perl scripts loaded: iset
+2019-07-12 09:04:41		python scripts loaded: buffer_autoclose, colorize_nicks, go, urlbuf
+2019-07-12 09:04:41		script: downloading list of scripts...
+2019-07-12 09:04:41		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, script, spell, tcl, trigger, xfer
+2019-07-12 09:04:42		script: 363 scripts for WeeChat 2.5
+2019-07-12 13:06:17		Option changed: irc.server.freenode.autojoin = "#mechboards,#archlinux,#reddit-gamedev,#herbstluftwm,#go-nuts,#minecraft,#SDL"  (default if null: "")
+2019-07-12 17:22:44		python: stdout/stderr (urlbuf): TypeError: urlbuf_close_cb() takes exactly 2 arguments (0 given)
+2019-07-12 17:22:44	=!=	python: error in function "urlbuf_close_cb"
+2019-07-12 17:22:45		python: scripts unloaded
+2019-07-15 09:11:16		perl scripts loaded: iset
+2019-07-15 09:11:17		python scripts loaded: buffer_autoclose, colorize_nicks, go, urlbuf
+2019-07-15 09:11:17		script: downloading list of scripts...
+2019-07-15 09:11:17		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, script, spell, tcl, trigger, xfer
+2019-07-15 09:11:18		script: 363 scripts for WeeChat 2.5
+2019-07-15 09:21:35		python: stdout/stderr (urlbuf): TypeError: urlbuf_close_cb() takes exactly 2 arguments (0 given)
+2019-07-15 09:21:35	=!=	python: error in function "urlbuf_close_cb"
+2019-07-15 09:21:35		python: scripts unloaded
+2019-07-15 09:21:36		perl scripts loaded: iset
+2019-07-15 09:21:37		python scripts loaded: buffer_autoclose, colorize_nicks, go, urlbuf
+2019-07-15 09:21:37		script: 363 scripts for WeeChat 2.5
+2019-07-15 09:21:37		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, script, spell, tcl, trigger, xfer
+2019-07-15 14:13:56		Option changed: irc.server.freenode.autojoin = "#mechboards,#archlinux,#reddit-gamedev,#herbstluftwm,#go-nuts,#minecraft,#SDL,#godotengine"  (default if null: "")
+2019-07-15 14:24:22		Option changed: weechat.look.eat_newline_glitch = on  (default: off)
+2019-07-15 14:24:22	=!=	You can not write text in this buffer
+2019-07-15 14:24:25		Option changed: weechat.look.eat_newline_glitch = on  (default: off)
+2019-07-15 17:55:03		python: stdout/stderr (urlbuf): TypeError: urlbuf_close_cb() takes exactly 2 arguments (0 given)
+2019-07-15 17:55:03	=!=	python: error in function "urlbuf_close_cb"
+2019-07-15 17:55:03		python: scripts unloaded
+2019-07-16 09:12:41		perl scripts loaded: iset
+2019-07-16 09:12:41		python scripts loaded: buffer_autoclose, colorize_nicks, go, urlbuf
+2019-07-16 09:12:41		script: downloading list of scripts...
+2019-07-16 09:12:41		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, script, spell, tcl, trigger, xfer
+2019-07-16 09:12:41		script: 363 scripts for WeeChat 2.5
+2019-07-16 17:54:35		python: stdout/stderr (urlbuf): TypeError: urlbuf_close_cb() takes exactly 2 arguments (0 given)
+2019-07-16 17:54:35	=!=	python: error in function "urlbuf_close_cb"
+2019-07-16 17:54:35		python: scripts unloaded
+2019-07-23 09:10:54		perl scripts loaded: iset
+2019-07-23 09:10:54		python scripts loaded: buffer_autoclose, colorize_nicks, go, urlbuf
+2019-07-23 09:10:54		script: downloading list of scripts...
+2019-07-23 09:10:54		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, script, spell, tcl, trigger, xfer
+2019-07-23 09:10:55		script: 363 scripts for WeeChat 2.5
+2019-07-23 17:51:43		python: stdout/stderr (urlbuf): TypeError: urlbuf_close_cb() takes exactly 2 arguments (0 given)
+2019-07-23 17:51:43	=!=	python: error in function "urlbuf_close_cb"
+2019-07-23 17:51:43		python: scripts unloaded

@@ -1,0 +1,114 @@
+execute pathogen#infect()
+set title
+colorscheme monokai
+set nocompatible
+set modelines=0
+set filetype=on
+"set autochdir
+set mouse=a
+filetype plugin on
+syntax enable
+
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+
+
+set encoding=utf-8
+set scrolloff=3
+set autoindent
+set showmode
+set showcmd
+set wildmenu
+set wildmode=list:longest
+"set cursorline
+set backspace=indent,eol,start
+set laststatus=2
+set relativenumber
+set number
+set undofile
+set smartindent
+syntax enable
+
+let mapleader=","
+
+nnoremap / /\v
+vnoremap / /\v
+set ignorecase
+set smartcase
+set gdefault
+set incsearch
+set showmatch
+set hlsearch
+nnoremap <leader><space> :noh<cr>
+
+nmap <leader>m :!make<cr>
+
+set wrap
+set formatoptions=qrn1
+
+cmap w!! w !sudo tee > /dev/null %
+inoremap <F1> <ESC>
+nnoremap <F1> <ESC>
+vnoremap <F1> <ESC>
+vnoremap // y/<C-R>"<CR>
+inoremap jk <ESC>
+
+nnoremap <leader>w <C-w>v<C-w>l
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+:map <C-s> :w <Enter>
+nnoremap <C-n> :bnext<CR>
+nnoremap <C-p> :bprevious<CR>
+nnoremap <A-a> <C-a>
+nnoremap <A-x> <C-x>
+
+nmap ,d :b#<bar>bd#<CR>
+
+
+" NerdTree
+map <C-m> :NERDTreeFocus<CR>
+
+
+" Airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+let g:airline_theme='wombat'
+
+" gitgutter
+set updatetime=100
+
+" fzf
+let g:fzf_history_dir = '~/.local/share/fzf-history'
+let g:fzf_buffers_jump = 1
+let g:fzf_tags_command = 'ctags -R'
+
+nmap <Leader>F :GFiles<CR>
+nmap <leader>f :Files<CR>
+nmap <leader>b :Buffers<CR>
+nmap <leader>h :History<CR>
+nmap <leader>t :BTags<CR>
+nmap <leader>T :Tags<CR>
+nmap <leader>l :BLines<CR>
+nmap <leader>L :Lines<CR>
+nmap <leader>' :Marks<CR>
+
+" Tagbar
+nmap <leader>x :TagbarToggle<CR> 
+nnoremap <C-S-f> :Ag 
+
+" Folding
+set foldmethod=indent
+set nofoldenable
+
+set guifont=Hack\ Nerd\ Font\ 14
+
+let g:vimwiki_list = [{'path':'/home/syrinxos/Dropbox/Documents/notes','syntax':'markdown', 'ext':'md', 'path_html':'/home/syrinxos/ownCloud/Documents/notes/export/html/'}]
+autocmd FileType vimwiki set ft=markdown
+
+autocmd FileType gdscript3 setlocal softtabstop=0 shiftwidth=4 tabstop=4 noexpandtab copyindent preserveindent
+
+

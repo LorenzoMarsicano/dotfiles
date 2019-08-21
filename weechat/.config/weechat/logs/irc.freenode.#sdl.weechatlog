@@ -1,0 +1,199 @@
+2019-07-12 13:05:50	-->	Syrinxos (~syrinxos@host-131-114-213-6.m.unipi.it) has joined #SDL
+2019-07-12 13:05:50	--	Topic for #SDL is "Official SDL Channel http://www.libsdl.org/ | You must identify with NickServ to join/talk"
+2019-07-12 13:05:50	--	Topic set by akawaka (~akawaka@2605:e000:1701:40f8:211:32ff:fe51:9639) on Wed, 01 Aug 2018 18:04:39
+2019-07-12 13:05:50	--	Channel #SDL: 83 nicks (1 op, 0 voices, 82 normals)
+2019-07-12 13:05:50	--	PvNotice(ChanServ): Welcome to #sdl - The Offical Simple DirectMedia Layer Channel
+2019-07-12 13:05:50	--	URL for #SDL: http://www.libsdl.org/
+2019-07-12 13:05:52	--	Channel created on Sun, 26 Nov 2006 07:42:43
+2019-07-12 13:06:18	<--	codebrainz (~codebrain@S010634bdfa9ee795.vc.shawcable.net) has quit (Ping timeout: 245 seconds)
+2019-07-12 13:30:27	<--	Goanna (~AdiIRC@124-170-161-30.dyn.iinet.net.au) has quit (Quit: Going offline, see ya! (www.adiirc.com))
+2019-07-12 13:32:42	-->	Goanna (~AdiIRC@124-170-161-30.dyn.iinet.net.au) has joined #SDL
+2019-07-12 13:53:13	<--	mxttie (~mattie@ptr-82njb8jygx4gzi82v7a.18120a2.ip6.access.telenet.be) has quit (Ping timeout: 276 seconds)
+2019-07-12 13:56:22	<--	Goanna (~AdiIRC@124-170-161-30.dyn.iinet.net.au) has quit (Quit: Going offline, see ya! (www.adiirc.com))
+2019-07-12 14:14:19	-->	Foaly (~Foaly@ppp-88-217-71-24.dynamic.mnet-online.de) has joined #SDL
+2019-07-12 14:34:07	<--	Foaly (~Foaly@ppp-88-217-71-24.dynamic.mnet-online.de) has quit (Quit: When in doubt, hit it with the wrench.)
+2019-07-12 14:44:43	-->	LunarJetman2 (LunarJetma@94.14.216.120) has joined #SDL
+2019-07-12 14:59:50	-->	xeno_ (~xeno@unaffiliated/xeno) has joined #SDL
+2019-07-12 15:02:09	<--	xeno (~xeno@unaffiliated/xeno) has quit (Ping timeout: 245 seconds)
+2019-07-12 15:29:15	<--	zalt (~lambda443@unaffiliated/lambda443) has quit (Read error: Connection reset by peer)
+2019-07-12 15:46:34	-->	zalt (~lambda443@unaffiliated/lambda443) has joined #SDL
+2019-07-12 15:56:53	-->	Foaly (~Foaly@ppp-88-217-71-24.dynamic.mnet-online.de) has joined #SDL
+2019-07-12 16:05:54	--	xeno_ is now known as xeno
+2019-07-12 16:06:09	<--	zalt (~lambda443@unaffiliated/lambda443) has quit (Read error: Connection reset by peer)
+2019-07-12 16:06:58	-->	zalt (~lambda443@unaffiliated/lambda443) has joined #SDL
+2019-07-12 16:09:11	-->	[Relic] (~Relic]@2602:306:33a3:6d30:f1a9:4b9c:aba2:45a5) has joined #SDL
+2019-07-12 16:13:24	-->	zalt_ (~lambda443@unaffiliated/lambda443) has joined #SDL
+2019-07-12 16:14:12	<--	zalt (~lambda443@unaffiliated/lambda443) has quit (Ping timeout: 272 seconds)
+2019-07-12 16:17:24	<--	zalt_ (~lambda443@unaffiliated/lambda443) has quit (Client Quit)
+2019-07-12 16:17:50	-->	zalt_ (~lambda443@unaffiliated/lambda443) has joined #SDL
+2019-07-12 16:23:28	<--	zalt_ (~lambda443@unaffiliated/lambda443) has quit (Read error: Connection reset by peer)
+2019-07-12 16:24:13	-->	zalt (~lambda443@unaffiliated/lambda443) has joined #SDL
+2019-07-12 16:34:28	<--	zalt (~lambda443@unaffiliated/lambda443) has quit (Ping timeout: 272 seconds)
+2019-07-12 16:35:22	-->	zalt (~lambda443@unaffiliated/lambda443) has joined #SDL
+2019-07-12 16:39:35	<--	zalt (~lambda443@unaffiliated/lambda443) has quit (Read error: Connection reset by peer)
+2019-07-12 16:44:47	-->	ImQ009 (~ImQ009@unaffiliated/imq009) has joined #SDL
+2019-07-12 16:46:54	<--	MarcinWieczorek (~marcin@212.182.24.81) has quit (Quit: ZNC 1.7.4 - https://znc.in)
+2019-07-12 17:03:44	-->	zalt (~lambda443@unaffiliated/lambda443) has joined #SDL
+2019-07-15 09:11:45	-->	Syrinxos (~syrinxos@host-131-114-213-6.m.unipi.it) has joined #SDL
+2019-07-15 09:11:45	--	Topic for #SDL is "Official SDL Channel http://www.libsdl.org/ | You must identify with NickServ to join/talk"
+2019-07-15 09:11:45	--	Topic set by akawaka (~akawaka@2605:e000:1701:40f8:211:32ff:fe51:9639) on Wed, 01 Aug 2018 18:04:39
+2019-07-15 09:11:45	--	Channel #SDL: 74 nicks (1 op, 0 voices, 73 normals)
+2019-07-15 09:11:45	--	PvNotice(ChanServ): Welcome to #sdl - The Offical Simple DirectMedia Layer Channel
+2019-07-15 09:11:45	--	URL for #SDL: http://www.libsdl.org/
+2019-07-15 09:11:57	--	Channel created on Sun, 26 Nov 2006 07:42:43
+2019-07-15 09:16:24	-->	shamayimjosh (~joshn@2001:8003:c418:f800:2c97:dcc1:9f1b:2925) has joined #SDL
+2019-07-15 09:16:24	-->	Lightkey (~Darklock@p200300F693D1235122CF30FFFE083718.dip0.t-ipconnect.de) has joined #SDL
+2019-07-15 09:16:24	-->	st-gourichon-fid (~Stephane@2a01:e0a:177:3e10:d227:88ff:fe71:788d) has joined #SDL
+2019-07-15 09:16:24	-->	drewbarbs (~drewbarbs@2601:14a:700:eaa1:b4d1:3650:4556:2d71) has joined #SDL
+2019-07-15 09:16:24	-->	macsforme (~macsforme@bzflag/developer/Constitution) has joined #SDL
+2019-07-15 09:16:24	-->	neobrain (~neobrain@noether.physik.uni-erlangen.de) has joined #SDL
+2019-07-15 09:16:24	-->	romangg (subdiff@gateway/shell/kde/x-pvwmeqvqsppaxklf) has joined #SDL
+2019-07-15 09:16:24	-->	akaWolf (~akaWolf@unaffiliated/akawolf) has joined #SDL
+2019-07-15 09:16:48	-->	jhenke (~jhe@p200300F873C3250102012EFFFE4F7246.dip0.t-ipconnect.de) has joined #SDL
+2019-07-15 09:16:48	-->	pixelherodev (znc@2604:bf00:710:0:5054:ff:fe94:ef02) has joined #SDL
+2019-07-15 09:16:48	-->	elias (~allefant@allegro/developer/allefant) has joined #SDL
+2019-07-15 09:16:52	<--	akaWolf (~akaWolf@unaffiliated/akawolf) has quit (Max SendQ exceeded)
+2019-07-15 09:17:05	-->	akaWolf (~akaWolf@unaffiliated/akawolf) has joined #SDL
+2019-07-15 09:21:53	-->	Syrinxos (~syrinxos@host-131-114-213-6.m.unipi.it) has joined #SDL
+2019-07-15 09:21:53	--	Topic for #SDL is "Official SDL Channel http://www.libsdl.org/ | You must identify with NickServ to join/talk"
+2019-07-15 09:21:53	--	Topic set by akawaka (~akawaka@2605:e000:1701:40f8:211:32ff:fe51:9639) on Wed, 01 Aug 2018 18:04:39
+2019-07-15 09:21:53	--	Channel #SDL: 85 nicks (1 op, 0 voices, 84 normals)
+2019-07-15 09:21:53	--	PvNotice(ChanServ): Welcome to #sdl - The Offical Simple DirectMedia Layer Channel
+2019-07-15 09:21:53	--	URL for #SDL: http://www.libsdl.org/
+2019-07-15 09:22:04	--	Channel created on Sun, 26 Nov 2006 07:42:43
+2019-07-15 10:06:44	<--	Lightkey (~Darklock@p200300F693D1235122CF30FFFE083718.dip0.t-ipconnect.de) has quit (Ping timeout: 252 seconds)
+2019-07-15 10:09:30	<--	MarcinWieczorek (~marcin@212.182.24.81) has quit (Quit: ZNC 1.7.4 - https://znc.in)
+2019-07-15 10:18:02	-->	MarcinWieczorek (~marcin@212.182.24.81) has joined #SDL
+2019-07-15 10:25:36	<--	ArRay_ (~ArRay_@gateway/tor-sasl/array/x-42000387) has quit (Ping timeout: 260 seconds)
+2019-07-15 10:26:24	<--	shamayimjosh (~joshn@2001:8003:c418:f800:2c97:dcc1:9f1b:2925) has quit (*.net *.split)
+2019-07-15 10:26:47	<--	st-gourichon-fid (~Stephane@2a01:e0a:177:3e10:d227:88ff:fe71:788d) has quit (*.net *.split)
+2019-07-15 10:26:47	<--	drewbarbs (~drewbarbs@2601:14a:700:eaa1:b4d1:3650:4556:2d71) has quit (*.net *.split)
+2019-07-15 10:26:47	<--	macsforme (~macsforme@bzflag/developer/Constitution) has quit (*.net *.split)
+2019-07-15 10:26:47	<--	romangg (subdiff@gateway/shell/kde/x-pvwmeqvqsppaxklf) has quit (*.net *.split)
+2019-07-15 10:26:47	<--	neobrain (~neobrain@noether.physik.uni-erlangen.de) has quit (*.net *.split)
+2019-07-15 10:27:06	<--	jhenke (~jhe@p200300F873C3250102012EFFFE4F7246.dip0.t-ipconnect.de) has quit (*.net *.split)
+2019-07-15 10:27:09	<--	pixelherodev (znc@2604:bf00:710:0:5054:ff:fe94:ef02) has quit (*.net *.split)
+2019-07-15 10:27:11	<--	elias (~allefant@allegro/developer/allefant) has quit (*.net *.split)
+2019-07-15 10:33:44	-->	ArRay_ (~ArRay_@gateway/tor-sasl/array/x-42000387) has joined #SDL
+2019-07-15 10:36:17	-->	elias (~allefant@allegro/developer/allefant) has joined #SDL
+2019-07-15 10:36:27	-->	st-gourichon-fid (~Stephane@2a01:e0a:177:3e10:d227:88ff:fe71:788d) has joined #SDL
+2019-07-15 10:36:44	-->	macsforme (~macsforme@bzflag/developer/Constitution) has joined #SDL
+2019-07-15 10:36:48	-->	drewbarbs (~drewbarbs@c-76-21-232-2.hsd1.md.comcast.net) has joined #SDL
+2019-07-15 10:37:17	-->	jhenke (~jhe@p200300F873C3250102012EFFFE4F7246.dip0.t-ipconnect.de) has joined #SDL
+2019-07-15 10:37:58	-->	romangg (subdiff@gateway/shell/kde/x-wngwdlkimjzeprjn) has joined #SDL
+2019-07-15 10:40:57	-->	Lightkey (~Darklock@p200300F693D1235122CF30FFFE083718.dip0.t-ipconnect.de) has joined #SDL
+2019-07-15 10:41:17	<--	codebrainz (~codebrain@S010634bdfa9ee795.vc.shawcable.net) has quit (Ping timeout: 245 seconds)
+2019-07-15 11:24:47	-->	zap0 (~zap0@14-201-222-143.tpgi.com.au) has joined #SDL
+2019-07-15 11:27:32	<--	stefkos (~Pawel@79.184.47.247.ipv4.supernova.orange.pl) has quit (Ping timeout: 258 seconds)
+2019-07-15 13:40:50	<--	J_L_P (~J_L_P@ool-ad02282d.dyn.optonline.net) has quit (Quit: Leaving)
+2019-07-15 13:48:36	<--	ArRay_ (~ArRay_@gateway/tor-sasl/array/x-42000387) has quit (Ping timeout: 260 seconds)
+2019-07-15 13:51:53	<--	YuGiOhJCJ (~YuGiOhJCJ@gateway/tor-sasl/yugiohjcj) has quit (Remote host closed the connection)
+2019-07-15 13:52:13	-->	ArRay_ (~ArRay_@gateway/tor-sasl/array/x-42000387) has joined #SDL
+2019-07-15 13:52:23	-->	shamayimjosh (~joshn@120.155.17.243) has joined #SDL
+2019-07-15 13:53:33	-->	J_L_P (~J_L_P@ool-ad02282d.dyn.optonline.net) has joined #SDL
+2019-07-15 14:09:05	<--	namedkitten (~quassel@namedkitten.pw) has quit (Quit: No.)
+2019-07-15 14:13:49	-->	namedkitten (~quassel@namedkitten.pw) has joined #SDL
+2019-07-15 14:38:25	-->	abf_ (~abf@2601:404:c101:234::16d3) has joined #SDL
+2019-07-15 15:05:45	<--	shamayimjosh (~joshn@120.155.17.243) has quit (Quit: Going offline, see ya! (www.adiirc.com))
+2019-07-15 15:12:49	-->	donofrio (~donofrio@host-232.subnet-17.med.umich.edu) has joined #SDL
+2019-07-15 15:19:47	--	irc: disconnected from server
+2019-07-15 15:20:20	-->	Syrinxos (~syrinxos@mob-5-90-10-233.net.vodafone.it) has joined #SDL
+2019-07-15 15:20:21	--	Topic for #SDL is "Official SDL Channel http://www.libsdl.org/ | You must identify with NickServ to join/talk"
+2019-07-15 15:20:21	--	Topic set by akawaka (~akawaka@2605:e000:1701:40f8:211:32ff:fe51:9639) on Wed, 01 Aug 2018 18:04:39
+2019-07-15 15:20:21	--	Channel #SDL: 82 nicks (1 op, 0 voices, 81 normals)
+2019-07-15 15:20:21	--	PvNotice(ChanServ): Welcome to #sdl - The Offical Simple DirectMedia Layer Channel
+2019-07-15 15:20:21	--	URL for #SDL: http://www.libsdl.org/
+2019-07-15 15:20:39	--	Channel created on Sun, 26 Nov 2006 07:42:43
+2019-07-15 15:33:07	--	irc: disconnected from server
+2019-07-15 15:33:43	-->	Syrinxos (~syrinxos@host-131-114-213-6.m.unipi.it) has joined #SDL
+2019-07-15 15:33:44	--	Topic for #SDL is "Official SDL Channel http://www.libsdl.org/ | You must identify with NickServ to join/talk"
+2019-07-15 15:33:44	--	Topic set by akawaka (~akawaka@2605:e000:1701:40f8:211:32ff:fe51:9639) on Wed, 01 Aug 2018 18:04:39
+2019-07-15 15:33:44	--	Channel #SDL: 82 nicks (1 op, 0 voices, 81 normals)
+2019-07-15 15:33:44	--	PvNotice(ChanServ): Welcome to #sdl - The Offical Simple DirectMedia Layer Channel
+2019-07-15 15:33:44	--	URL for #SDL: http://www.libsdl.org/
+2019-07-15 15:34:00	--	Channel created on Sun, 26 Nov 2006 07:42:43
+2019-07-15 15:54:38	<--	macroprep (~smallvill@cpe-172-193-55-193.qld.foxtel.net.au) has quit (Ping timeout: 245 seconds)
+2019-07-15 15:58:05	-->	macroprep (~smallvill@cpe-172-193-55-193.qld.foxtel.net.au) has joined #SDL
+2019-07-15 16:23:30	<--	Lord-Kamina (~Lord-Kami@pc-71-21-164-190.cm.vtr.net) has quit (Ping timeout: 248 seconds)
+2019-07-15 16:49:16	<--	qeed (~qeed@cpe-172-248-136-12.socal.res.rr.com) has quit (Quit: qeed)
+2019-07-15 16:50:57	-->	qeed (~qeed@172.248.136.12) has joined #SDL
+2019-07-15 16:55:13	<--	realtime (~sabbath@unaffiliated/realtime) has quit (Quit: ZNC 1.7.2 - https://znc.in)
+2019-07-15 16:55:32	-->	realtime (~sabbath@unaffiliated/realtime) has joined #SDL
+2019-07-15 17:09:12	-->	[Relic] (~Relic]@2602:306:33a3:6d30:7076:9278:431d:bb05) has joined #SDL
+2019-07-15 17:16:00	-->	Lord-Kamina (~Lord-Kami@pc-71-21-164-190.cm.vtr.net) has joined #SDL
+2019-07-15 17:34:33	<--	MarcinWieczorek (~marcin@212.182.24.81) has quit (Quit: ZNC 1.7.4 - https://znc.in)
+2019-07-15 17:54:42	<--	Lord-Kamina (~Lord-Kami@pc-71-21-164-190.cm.vtr.net) has quit (Ping timeout: 248 seconds)
+2019-07-16 09:12:55	-->	Syrinxos (~syrinxos@host-131-114-213-6.m.unipi.it) has joined #SDL
+2019-07-16 09:12:55	--	Topic for #SDL is "Official SDL Channel http://www.libsdl.org/ | You must identify with NickServ to join/talk"
+2019-07-16 09:12:55	--	Topic set by akawaka (~akawaka@2605:e000:1701:40f8:211:32ff:fe51:9639) on Wed, 01 Aug 2018 18:04:39
+2019-07-16 09:12:55	--	Channel #SDL: 82 nicks (1 op, 0 voices, 81 normals)
+2019-07-16 09:12:55	--	PvNotice(ChanServ): Welcome to #sdl - The Offical Simple DirectMedia Layer Channel
+2019-07-16 09:12:55	--	URL for #SDL: http://www.libsdl.org/
+2019-07-16 09:13:08	--	Channel created on Sun, 26 Nov 2006 07:42:43
+2019-07-16 09:17:54	-->	MarcinWieczorek (~marcin@212.182.24.81) has joined #SDL
+2019-07-16 09:19:18	<--	Redfoxmoon (~red@unaffiliated/kitt3n) has quit (Ping timeout: 268 seconds)
+2019-07-16 09:46:43	-->	Lord-Kamina (~Lord-Kami@pc-71-21-164-190.cm.vtr.net) has joined #SDL
+2019-07-16 09:48:40	<--	Lord-Kam_ (~Lord-Kami@pc-71-21-164-190.cm.vtr.net) has quit (Ping timeout: 272 seconds)
+2019-07-16 10:29:28	<--	macroprep_ (~smallvill@cpe-172-193-55-193.qld.foxtel.net.au) has quit (Remote host closed the connection)
+2019-07-16 10:29:52	-->	macroprep_ (~smallvill@cpe-172-193-55-193.qld.foxtel.net.au) has joined #SDL
+2019-07-16 11:04:31	<--	bpmedley (~bpm@2600:1700:eb20:6050:4d5:7d48:ed0c:8151) has quit (Ping timeout: 276 seconds)
+2019-07-16 11:08:07	-->	YuGiOhJCJ (~YuGiOhJCJ@gateway/tor-sasl/yugiohjcj) has joined #SDL
+2019-07-16 11:51:43	<--	codebrainz (~codebrain@S010634bdfa9ee795.vc.shawcable.net) has quit (Ping timeout: 245 seconds)
+2019-07-16 12:03:34	<--	stefkos (~Pawel@79.184.34.189.ipv4.supernova.orange.pl) has quit (Ping timeout: 272 seconds)
+2019-07-16 12:22:49	-->	mxttie (~mattie@ptr-82njb8jygx4gzi82v7a.18120a2.ip6.access.telenet.be) has joined #SDL
+2019-07-16 12:39:11	<--	mxttie (~mattie@ptr-82njb8jygx4gzi82v7a.18120a2.ip6.access.telenet.be) has quit (Ping timeout: 252 seconds)
+2019-07-16 13:37:03	<--	donofrio (~donofrio@host-232.subnet-17.med.umich.edu) has quit (Remote host closed the connection)
+2019-07-16 13:39:07	-->	donofrio (~donofrio@host-232.subnet-17.med.umich.edu) has joined #SDL
+2019-07-16 13:42:21	-->	macroprep__ (~smallvill@cpe-172-193-55-193.qld.foxtel.net.au) has joined #SDL
+2019-07-16 13:44:48	<--	macroprep_ (~smallvill@cpe-172-193-55-193.qld.foxtel.net.au) has quit (Read error: Connection reset by peer)
+2019-07-16 13:44:52	<--	J_L_P (~J_L_P@ool-ad02282d.dyn.optonline.net) has quit (Quit: Leaving)
+2019-07-16 13:52:49	-->	J_L_P (~J_L_P@ool-ad02282d.dyn.optonline.net) has joined #SDL
+2019-07-16 15:58:07	<--	MarcinWieczorek (~marcin@212.182.24.81) has quit (Quit: ZNC 1.7.4 - https://znc.in)
+2019-07-16 16:29:14	-->	Redfoxmoon (~red@unaffiliated/kitt3n) has joined #SDL
+2019-07-16 16:35:29	-->	[Relic] (~Relic]@2602:306:33a3:6d30:5479:94e7:97b8:73a6) has joined #SDL
+2019-07-16 16:45:22	<--	Redfoxmoon (~red@unaffiliated/kitt3n) has quit (Read error: Connection timed out)
+2019-07-16 16:50:38	-->	Redfoxmoon (~red@unaffiliated/kitt3n) has joined #SDL
+2019-07-16 17:22:46	<--	[Relic] (~Relic]@2602:306:33a3:6d30:5479:94e7:97b8:73a6) has quit (Quit: Leaving)
+2019-07-16 17:47:30	-->	zalt (~lambda443@unaffiliated/lambda443) has joined #SDL
+2019-07-23 09:11:09	-->	Syrinxos (~syrinxos@host-131-114-213-66.m.unipi.it) has joined #SDL
+2019-07-23 09:11:09	--	Topic for #SDL is "Official SDL Channel http://www.libsdl.org/ | You must identify with NickServ to join/talk"
+2019-07-23 09:11:09	--	Topic set by akawaka (~akawaka@2605:e000:1701:40f8:211:32ff:fe51:9639) on Wed, 01 Aug 2018 18:04:39
+2019-07-23 09:11:09	--	Channel #SDL: 85 nicks (1 op, 0 voices, 84 normals)
+2019-07-23 09:11:09	--	PvNotice(ChanServ): Welcome to #sdl - The Offical Simple DirectMedia Layer Channel
+2019-07-23 09:11:09	--	URL for #SDL: http://www.libsdl.org/
+2019-07-23 09:11:21	--	Channel created on Sun, 26 Nov 2006 07:42:43
+2019-07-23 09:19:55	-->	donofrio__ (~donofrio@host-232.subnet-17.med.umich.edu) has joined #SDL
+2019-07-23 09:24:03	<--	akaWolf (~akaWolf@unaffiliated/akawolf) has quit (Ping timeout: 245 seconds)
+2019-07-23 09:24:03	<--	donofrio_ (~donofrio@host-232.subnet-17.med.umich.edu) has quit (Ping timeout: 245 seconds)
+2019-07-23 09:24:03	-->	akaWolf1 (~akaWolf@unaffiliated/akawolf) has joined #SDL
+2019-07-23 09:24:50	-->	imp (~imp@2804:14d:5c2f:a8c3:c03e:47cb:7b5e:99cd) has joined #SDL
+2019-07-23 09:26:07	<--	imp (~imp@2804:14d:5c2f:a8c3:c03e:47cb:7b5e:99cd) has quit (Remote host closed the connection)
+2019-07-23 09:42:10	-->	macroprep__ (~smallvill@cpe-172-193-104-55.qld.foxtel.net.au) has joined #SDL
+2019-07-23 09:45:33	-->	Tobbi (~Tobbi@supertux/tobbi) has joined #SDL
+2019-07-23 09:45:33	<--	macroprep_ (~smallvill@cpe-172-193-104-55.qld.foxtel.net.au) has quit (Read error: Connection reset by peer)
+2019-07-23 09:51:38	-->	YuGiOhJCJ (~YuGiOhJCJ@gateway/tor-sasl/yugiohjcj) has joined #SDL
+2019-07-23 10:14:25	<--	ArRay_ (~ArRay_@gateway/tor-sasl/array/x-42000387) has quit (Remote host closed the connection)
+2019-07-23 10:16:39	-->	ArRay_ (~ArRay_@gateway/tor-sasl/array/x-42000387) has joined #SDL
+2019-07-23 10:39:04	-->	macroprep_ (~smallvill@cpe-172-193-104-55.qld.foxtel.net.au) has joined #SDL
+2019-07-23 10:42:38	<--	macroprep__ (~smallvill@cpe-172-193-104-55.qld.foxtel.net.au) has quit (Ping timeout: 272 seconds)
+2019-07-23 11:45:52	<--	macroprep_ (~smallvill@cpe-172-193-104-55.qld.foxtel.net.au) has quit (Remote host closed the connection)
+2019-07-23 11:46:55	-->	macroprep_ (~smallvill@cpe-172-193-104-55.qld.foxtel.net.au) has joined #SDL
+2019-07-23 11:50:24	<--	stefkos (~Pawel@79.184.35.47.ipv4.supernova.orange.pl) has quit (Ping timeout: 272 seconds)
+2019-07-23 12:07:42	-->	macroprep__ (~smallvill@cpe-172-193-104-55.qld.foxtel.net.au) has joined #SDL
+2019-07-23 12:08:49	-->	J_L_P (~J_L_P@ool-18bc8fae.dyn.optonline.net) has joined #SDL
+2019-07-23 12:11:07	<--	macroprep_ (~smallvill@cpe-172-193-104-55.qld.foxtel.net.au) has quit (Read error: Connection reset by peer)
+2019-07-23 12:25:28	<--	Tobbi (~Tobbi@supertux/tobbi) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-07-23 12:44:17	-->	rfgpfeiffer (~quassel@x4db69172.dyn.telefonica.de) has joined #SDL
+2019-07-23 13:15:09	-->	mxttie (~mattie@ptr-82njb8jygx4gzi82v7a.18120a2.ip6.access.telenet.be) has joined #SDL
+2019-07-23 13:57:39	<--	mxttie (~mattie@ptr-82njb8jygx4gzi82v7a.18120a2.ip6.access.telenet.be) has quit (Ping timeout: 264 seconds)
+2019-07-23 14:36:01	-->	iderik (~weechat@h-162-65.A147.priv.bahnhof.se) has joined #SDL
+2019-07-23 15:43:39	-->	Gryfelhase (~Gryflhase@dslb-088-074-166-249.088.074.pools.vodafone-ip.de) has joined #SDL
+2019-07-23 16:01:55	<--	macroprep__ (~smallvill@cpe-172-193-104-55.qld.foxtel.net.au) has quit (Quit: Leaving)
+2019-07-23 16:25:43	-->	zap0 (~zap0@14-201-222-143.tpgi.com.au) has joined #SDL
+2019-07-23 16:37:54	<--	codebrainz (~codebrain@S010634bdfa9ee795.vc.shawcable.net) has quit (Ping timeout: 248 seconds)
+2019-07-23 16:49:37	<--	rfgpfeiffer (~quassel@x4db69172.dyn.telefonica.de) has quit (Remote host closed the connection)
+2019-07-23 16:50:40	-->	ImQ009 (~ImQ009@unaffiliated/imq009) has joined #SDL
+2019-07-23 16:52:25	-->	[Relic] (~Relic]@2602:306:33a3:6d30:b96b:7967:fca2:e6a2) has joined #SDL
+2019-07-23 17:13:33	<--	Gryfelhase (~Gryflhase@dslb-088-074-166-249.088.074.pools.vodafone-ip.de) has quit (Ping timeout: 268 seconds)
+2019-07-23 17:28:53	-->	Tobbi (~Tobbi@supertux/tobbi) has joined #SDL
+2019-07-23 17:36:49	-->	Gryfelhase (~Gryflhase@dslb-002-201-038-217.002.201.pools.vodafone-ip.de) has joined #SDL

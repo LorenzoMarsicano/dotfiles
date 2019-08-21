@@ -1,0 +1,2114 @@
+2019-07-01 16:12:21	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-07-01 16:12:21	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-07-01 16:12:21	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-07-01 16:12:21	--	Channel #reddit-gamedev: 76 nicks (0 ops, 18 voices, 58 normals)
+2019-07-01 16:12:24	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-07-01 16:32:21	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-07-01 16:32:21	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-07-01 16:32:21	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-07-01 16:32:21	--	Channel #reddit-gamedev: 76 nicks (0 ops, 18 voices, 58 normals)
+2019-07-01 16:32:26	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-07-01 17:09:43	-->	Chevluh (~Chev@73.43.1.85.dynamic.wline.res.cust.swisscom.ch) has joined #reddit-gamedev
+2019-07-01 17:16:53	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #reddit-gamedev
+2019-07-01 17:29:08	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Quit: Leaving)
+2019-07-01 17:31:45	-->	^|SnIpeR|^ (~drzoids@cpe-120-146-186-20.static.qld.bigpond.net.au) has joined #reddit-gamedev
+2019-07-01 17:32:01	<--	^|SnIpeR|^ (~drzoids@cpe-120-146-186-20.static.qld.bigpond.net.au) has quit (Client Quit)
+2019-07-01 23:19:15	-->	Syrinxos (~syrinxos@net-93-65-132-78.cust.vodafonedsl.it) has joined #reddit-gamedev
+2019-07-01 23:19:15	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-07-01 23:19:15	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-07-01 23:19:15	--	Channel #reddit-gamedev: 80 nicks (0 ops, 17 voices, 63 normals)
+2019-07-01 23:19:19	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-07-01 23:20:05	<--	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has quit (Remote host closed the connection)
+2019-07-01 23:24:48	-->	Jatt (~CABAL@c83-248-46-35.bredband.comhem.se) has joined #reddit-gamedev
+2019-07-01 23:25:07	<--	terminx (~terminx@198.8.81.214) has quit (Quit: ZNC - http://znc.in)
+2019-07-01 23:26:59	<--	Jattenalle (~CABAL@c83-248-46-35.bredband.comhem.se) has quit (Ping timeout: 245 seconds)
+2019-07-01 23:26:59	--	Jatt is now known as Jattenalle
+2019-07-01 23:27:18	-->	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has joined #reddit-gamedev
+2019-07-01 23:32:16	<--	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has quit (Ping timeout: 272 seconds)
+2019-07-01 23:40:14	-->	terminx (~terminx@198.8.81.214) has joined #reddit-gamedev
+2019-07-01 23:40:14	--	Mode #reddit-gamedev [+v terminx] by ChanServ
+2019-07-01 23:40:58	-->	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has joined #reddit-gamedev
+2019-07-02 08:56:50	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-07-02 08:56:50	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-07-02 08:56:50	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-07-02 08:56:50	--	Channel #reddit-gamedev: 72 nicks (0 ops, 16 voices, 56 normals)
+2019-07-02 08:56:54	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-07-02 09:01:25	-->	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has joined #reddit-gamedev
+2019-07-02 09:02:16	<--	Jattenalle (~CABAL@c83-248-46-35.bredband.comhem.se) has quit (Ping timeout: 272 seconds)
+2019-07-02 09:08:05	+Jonas___	DrAwesomeClaws, "why do I have to pay, I didn't even finish it!"
+2019-07-02 09:08:29	+Jonas___	"okay okay I'll pay for the half I ate.."
+2019-07-02 09:10:30	-->	Jattenalle (~CABAL@c83-248-46-35.bredband.comhem.se) has joined #reddit-gamedev
+2019-07-02 09:10:30	--	Mode #reddit-gamedev [+v Jattenalle] by ChanServ
+2019-07-02 09:10:55	<--	Snoras (~Snoras@gateway/tor-sasl/snoras) has quit (Remote host closed the connection)
+2019-07-02 09:11:12	-->	Snoras (~Snoras@gateway/tor-sasl/snoras) has joined #reddit-gamedev
+2019-07-02 09:16:41	<--	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has quit (Ping timeout: 246 seconds)
+2019-07-02 09:25:27	+zebbiz_pi	Jonas___: What?
+2019-07-02 09:25:41	+Jonas___	what do you mean what?
+2019-07-02 09:25:47	+Jonas___	do you pay for cake that you haven't eaten?!
+2019-07-02 09:25:55	+zebbiz_pi	No
+2019-07-02 09:26:01	+Jonas___	there you go then
+2019-07-02 10:18:51	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-07-02 10:18:51	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-07-02 10:18:51	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-07-02 10:18:51	--	Channel #reddit-gamedev: 74 nicks (0 ops, 17 voices, 57 normals)
+2019-07-02 10:18:55	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-07-02 10:19:12	+carefish	imo it would be a good way to make people more aware
+2019-07-02 10:19:27	<--	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has quit (Ping timeout: 245 seconds)
+2019-07-02 10:19:40	+carefish	however you still have the hard of hearing/bad/pisspoor eye sight like me... so maybe those things making noise is pretty good
+2019-07-02 10:19:53	+carefish	automatic claxon would be nicer i guess
+2019-07-02 10:21:44	+carefish	tho that would be even more annoying
+2019-07-02 10:21:46	+carefish	hmm
+2019-07-02 10:22:05	+carefish	i am not sure how to 'solve' the quietness of electric vehicles
+2019-07-02 10:23:13	+Jonas___	we could mandate them making noises below 20km/h
+2019-07-02 10:23:18	+Jonas___	just a thought
+2019-07-02 10:24:02	+carefish	that's what they propose
+2019-07-02 10:24:23	+zebbiz_pi	that's the joke
+2019-07-02 10:24:40	+carefish	the problem i see there is, if manufacturers suddenly use all manner of noises... then how can we discern danger from all those noises? am i going to need to memorize all the noises of manufacturers?
+2019-07-02 10:24:59	+carefish	there's no standardization or anything researched like this
+2019-07-02 10:25:18	+carefish	iirc the nissan leaf has a weird 'spacey' sound when it revs up
+2019-07-02 10:25:45	+carefish	which i didn't immediately recognize as 'hey, there's something of interest and a few hundred kg's you'll want to watch out for'
+2019-07-02 10:26:02	+carefish	idk if it was a nissan leaf, i suck at remembering car manufacturers/models/makes
+2019-07-02 10:28:21	TidB	Hm, let's hope this'll get regulated and standardised
+2019-07-02 10:29:15	TidB	The could just use their slogan/brand as their sound
+2019-07-02 10:29:22	TidB	nissannissannissannissannissan
+2019-07-02 10:29:37	+carefish	hehe
+2019-07-02 10:29:48	+carefish	i think going quieter is the solution
+2019-07-02 10:30:04	+carefish	it'll force people to occasionally look up from their phones while they cross a crosswalk
+2019-07-02 10:30:24	+zebbiz_pi	lol, that won't work
+2019-07-02 10:30:29	+zebbiz_pi	people are stupid
+2019-07-02 10:30:47	+carefish	cause that's the most baffling thing i've seen few times now of 16 y/o's absolutely not even looking left and right on a cross walk just assuming the clicker of the light thing is correct
+2019-07-02 10:31:12	+carefish	while there is a fucking bus barreling towards that crosswalk and no signs of it stopping or slowing down
+2019-07-02 10:32:12	TidB	That reminds me of spending some time in Italy and learning that noone cares about crosswalks
+2019-07-02 10:32:51	+carefish	oh yeah
+2019-07-02 10:32:55	+carefish	in europe crosswalks are kinda useless
+2019-07-02 10:33:07	+carefish	they are way more of a guideline than an actual thing to abide by
+2019-07-02 10:34:01	+carefish	compared to places like canada/america, where you definitely could cross a street/boulevard without a crosswalk... it tends to be kinda dangerous
+2019-07-02 10:35:07	+carefish	i think the absolute worst for that is bangkok
+2019-07-02 10:35:23	+carefish	crosswalks aren't safe, nor is the traffic very safe
+2019-07-02 10:35:29	TidB	I dunno if Germany is an outlier then (stereotypical obedience to rules haha yes), but here crosswalks are respected like every time. I feel safe giong over crosswalks why a car is approaching (but I try to get into eye contact with the driver so it's actually safe)
+2019-07-02 10:35:48	+carefish	yeah, germany is the odd one out here
+2019-07-02 10:36:02	+carefish	it was lovely to be kinda afk in the head and wander around hanover
+2019-07-02 10:36:40	+carefish	though to offset that... there's quite a bit of homeless in germany
+2019-07-02 10:43:19	-->	terminx_ (~terminx@198.8.81.214) has joined #reddit-gamedev
+2019-07-02 10:44:01	<--	terminx (~terminx@198.8.81.214) has quit (Ping timeout: 244 seconds)
+2019-07-02 10:45:18	elsie273	Jonas what are you doing today?
+2019-07-02 10:46:47	-->	terminx (~terminx@198.8.81.214) has joined #reddit-gamedev
+2019-07-02 10:46:47	--	Mode #reddit-gamedev [+v terminx] by ChanServ
+2019-07-02 10:47:09	+Jonas___	elsie273, work work work
+2019-07-02 10:47:25	+Jonas___	yesterday I got interrupted at the bbq by work as well, and then I did work for the rest of the night
+2019-07-02 10:47:25	+carefish	pfah
+2019-07-02 10:47:27	+Jonas___	you?
+2019-07-02 10:47:47	<--	terminx_ (~terminx@198.8.81.214) has quit (Ping timeout: 245 seconds)
+2019-07-02 11:03:36	<--	terminx (~terminx@198.8.81.214) has quit (Ping timeout: 248 seconds)
+2019-07-02 11:04:00	-->	terminx (~terminx@198.8.81.214) has joined #reddit-gamedev
+2019-07-02 11:04:00	--	Mode #reddit-gamedev [+v terminx] by ChanServ
+2019-07-02 11:08:47	elsie273	Jonas work is lame
+2019-07-02 11:08:54	elsie273	i'm at work but idk
+2019-07-02 11:09:14	elsie273	you were at a bbq?
+2019-07-02 11:11:25	+carefish	hi there elsie273
+2019-07-02 11:12:59	+Jonas___	yeah, just visiting a friend and throwing some meat on the grill so it was just a small thing
+2019-07-02 11:13:19	<--	terminx (~terminx@198.8.81.214) has quit (Ping timeout: 268 seconds)
+2019-07-02 11:13:34	+Jonas___	like five of us
+2019-07-02 11:13:42	-->	terminx (~terminx@198.8.81.214) has joined #reddit-gamedev
+2019-07-02 11:13:42	--	Mode #reddit-gamedev [+v terminx] by ChanServ
+2019-07-02 11:13:51	+Jonas___	I wish I was home playing video games tho
+2019-07-02 11:13:59	+Jonas___	I can't stop playing oxygen not included
+2019-07-02 11:14:04	+Jonas___	but I gotta do more work when I get home
+2019-07-02 11:33:09	-->	paladinn (~paladin@unaffiliated/paladinn) has joined #reddit-gamedev
+2019-07-02 11:38:56	elsie273	hi carefish
+2019-07-02 11:39:00	elsie273	Jonas that sounds nice
+2019-07-02 12:16:57	-->	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has joined #reddit-gamedev
+2019-07-02 12:28:25	-->	Uhfgood (~Uhfgood@2603:9000:b10e:c500:5823:893f:67f9:7cde) has joined #reddit-gamedev
+2019-07-02 12:38:17	<--	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has quit (Ping timeout: 246 seconds)
+2019-07-02 12:53:39	-->	^|SnIpeR|^ (~BIeh@cpe-120-146-186-20.static.qld.bigpond.net.au) has joined #reddit-gamedev
+2019-07-02 12:56:06	<--	^|SnIpeR|^ (~BIeh@cpe-120-146-186-20.static.qld.bigpond.net.au) has quit (Client Quit)
+2019-07-02 13:06:49	-->	DrGonzo (~DrGonzo@modemcable080.164-57-74.mc.videotron.ca) has joined #reddit-gamedev
+2019-07-02 13:14:02	<--	DrGonzo (~DrGonzo@modemcable080.164-57-74.mc.videotron.ca) has quit (Ping timeout: 245 seconds)
+2019-07-02 13:15:29	<--	Narris (~bunnies@vtelinet-216-66-102-10.vermontel.net) has quit (Read error: Connection reset by peer)
+2019-07-02 13:29:39	-->	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has joined #reddit-gamedev
+2019-07-02 13:34:56	<--	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has quit (Remote host closed the connection)
+2019-07-02 13:39:52	-->	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has joined #reddit-gamedev
+2019-07-02 13:44:17	<--	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has quit (Ping timeout: 258 seconds)
+2019-07-02 13:50:44	-->	ImQ009 (~ImQ009@unaffiliated/imq009) has joined #reddit-gamedev
+2019-07-02 14:01:29	elsie273	Jonas i basically just went to my boss and told him i can't do this client work bc it's awful
+2019-07-02 14:01:31	elsie273	idk
+2019-07-02 14:01:40	elsie273	i feel awful recently
+2019-07-02 14:01:45	+Jonas___	ouch, that bad huh?
+2019-07-02 14:02:08	+Jonas___	is the client work poorly defined or really tedious or something?
+2019-07-02 14:43:57	+zebbiz_pi	elsie273: What did boss say?
+2019-07-02 14:57:32	-->	mukunda (mukunda@adsl-68-19-151-178.jan.bellsouth.net) has joined #reddit-gamedev
+2019-07-02 15:34:07	elsie273	Jonas it's poorly defined. lots of investigatory tasks into why their sites are down or why there are memory spikes or whatever with no other info
+2019-07-02 15:34:44	elsie273	zebbiz, he gets it and i'll get a lightened load or off this work over the next couple of weeks probably
+2019-07-02 15:36:45	+zebbiz_pi	I like your boss, he seems kind and understanding
+2019-07-02 15:38:24	+Jonas___	so standard firefighting devops
+2019-07-02 15:38:50	+Jonas___	"shit's fucked"  "can I get a more detailed description?"  "shit's fucked and we need it fixed yesterday"
+2019-07-02 15:39:19	+zebbiz_pi	https://www.youtube.com/watch?v=NWxISwEBU0U
+2019-07-02 15:51:51	+Jonas___	everyone starts yelling that the site is down
+2019-07-02 15:52:22	+Jonas___	cloudflare is apparently having issues and thus our fancy CDN caused downtime
+2019-07-02 16:03:46	Uhfgood	can anyone see what i'm typing?
+2019-07-02 16:03:58	+zebbiz_pi	Uhfgood: No
+2019-07-02 16:04:03	Uhfgood	oh good
+2019-07-02 16:04:07	+zebbiz_pi	Only people looking at this chat
+2019-07-02 16:07:24	TidB	heh
+2019-07-02 16:07:45	TidB	i'm on irccloud which uses cloudflare and some of my messages appeared in my client as if they were sent twice
+2019-07-02 16:15:42	elsie273	zebbiz_pi he is
+2019-07-02 16:29:24	+DrAwesomeClaws	phone interview done, time to get crunk
+2019-07-02 16:29:49	+Jonas___	throw a freestyle rap their way
+2019-07-02 16:29:53	+Jonas___	interviewers love phat beats
+2019-07-02 16:29:58	+DrAwesomeClaws	damn, wish i thought of that
+2019-07-02 16:30:15	+Jonas___	just call them again under a pseudonym
+2019-07-02 16:30:49	+DrAwesomeClaws	well i already work for the company so i think they'd know.  Maybe i can just tell them to pull store security footage of last time i dropped some rhymes while working
+2019-07-02 16:34:51	+zebbiz_pi	DrAwesomeClaws: What was the interview about?
+2019-07-02 16:34:57	+zebbiz_pi	Promotion?
+2019-07-02 16:35:01	+zebbiz_pi	New job?
+2019-07-02 16:35:08	+zebbiz_pi	New hire?
+2019-07-02 16:35:23	+zebbiz_pi	Candy corn?
+2019-07-02 16:35:27	+zebbiz_pi	Candy porn?
+2019-07-02 16:35:27	+DrAwesomeClaws	new job.  Attempting to stay with same company, but move to a technical position
+2019-07-02 16:35:53	+DrAwesomeClaws	things are looking good, but it's a bit odd to go from minimum wage retail associate to a sr engineer, haha
+2019-07-02 16:45:48	-->	Narris (~bunnies@static-64-222-164-230.man.east.myfairpoint.net) has joined #reddit-gamedev
+2019-07-02 17:01:30	-->	^|SnIpeR|^ (~drzoids@cpe-120-146-186-20.static.qld.bigpond.net.au) has joined #reddit-gamedev
+2019-07-02 17:01:42	<--	^|SnIpeR|^ (~drzoids@cpe-120-146-186-20.static.qld.bigpond.net.au) has quit (Client Quit)
+2019-07-02 17:33:35	-->	warmwaffles (~warmwaffl@108.174.85.188) has joined #reddit-gamedev
+2019-07-02 17:34:39	-->	Chevluh (~Chev@73.43.1.85.dynamic.wline.res.cust.swisscom.ch) has joined #reddit-gamedev
+2019-07-02 17:38:16	<--	n0tus (uid352043@gateway/web/irccloud.com/x-kcpvgsuwfllwetps) has quit (Quit: Connection closed for inactivity)
+2019-07-02 17:43:11	<--	pulse (~pulse@unaffiliated/pulse) has quit (Quit: pulse)
+2019-07-02 17:45:28	R2robot	carefish: Re quieter vehicles... most care noise is from the tires on the road.. not the engines.  Unless they have some obnoxious aftermarket exhaust.
+2019-07-02 17:50:52	+carefish	hehe, they were talking about adding noise generators at lower speeds where cars are more silent
+2019-07-02 17:51:00	+carefish	sub 20km/h
+2019-07-03 08:56:19	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-07-03 08:56:19	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-07-03 08:56:19	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-07-03 08:56:19	--	Channel #reddit-gamedev: 70 nicks (0 ops, 17 voices, 53 normals)
+2019-07-03 08:56:23	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-07-03 10:07:23	--	irc: disconnected from server
+2019-07-03 10:07:52	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-07-03 10:07:52	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-07-03 10:07:52	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-07-03 10:07:52	--	Channel #reddit-gamedev: 70 nicks (0 ops, 17 voices, 53 normals)
+2019-07-03 10:08:04	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-07-03 10:21:00	-->	elsie273 (~Android@2a01:4c8:418:7f21:3b64:cd22:2bf4:e9b5) has joined #reddit-gamedev
+2019-07-03 10:26:48	+Jonas___	good morning
+2019-07-03 10:29:03	elsie273	good morning ^-^
+2019-07-03 10:29:16	elsie273	i feel so dead
+2019-07-03 10:30:41	elsie273	how is your day looking?
+2019-07-03 10:31:52	+Jonas___	same as always
+2019-07-03 10:32:12	+Jonas___	juggling a billion tasks at work and feeling like I'm not making any progress on any of them
+2019-07-03 10:32:14	+Jonas___	you?
+2019-07-03 10:37:14	elsie273	idk
+2019-07-03 10:37:32	elsie273	i'm just assigned the same work as yesterday but taking it easy
+2019-07-03 10:37:47	+Jonas___	maybe you could play oxygen not included on breaks
+2019-07-03 10:38:13	elsie273	i'm in one of those awful moods where i have like a super productivr/creative itch but no energy or anything for an outlet
+2019-07-03 10:38:31	elsie273	i'm going to try doodling throughout the day
+2019-07-03 10:40:15	+zebbiz_pi	I have a fun task today
+2019-07-03 10:40:41	+zebbiz_pi	I have a list of >130 tests that are documented, but not linked to the tests
+2019-07-03 10:40:56	+Jonas___	the tests are not linked to the tests?
+2019-07-03 10:41:03	+zebbiz_pi	So I have to find which tests relate to which documented test case and write it into the code
+2019-07-03 10:41:08	+zebbiz_pi	Correct
+2019-07-03 10:41:16	+zebbiz_pi	Sometimes they are, but not completely
+2019-07-03 10:41:29	+Jonas___	I guess someone has to link the tests to the tests then
+2019-07-03 10:41:56	+zebbiz_pi	The fucker who wrote the tests and documentation should do it
+2019-07-03 10:42:08	+Jonas___	you'd think so
+2019-07-03 10:42:19	+Jonas___	clearly he had more important things to do
+2019-07-03 10:42:30	+zebbiz_pi	well...
+2019-07-03 10:42:33	+zebbiz_pi	I didn't do it
+2019-07-03 10:42:39	+zebbiz_pi	but I didn't know any better
+2019-07-03 10:42:41	+zebbiz_pi	Now I do
+2019-07-03 10:42:58	+Jonas___	punished for your sins with list of 130 offenses
+2019-07-03 10:43:07	+zebbiz_pi	Mine was quick
+2019-07-03 10:43:13	+zebbiz_pi	only like 10 cases
+2019-07-03 10:44:22	+zebbiz_pi	And I knew what they did
+2019-07-03 10:44:51	+zebbiz_pi	But now I have to read the code to understand what it tests, and read the documentation to check if it's correct
+2019-07-03 10:45:14	+Jonas___	sounds wonderful
+2019-07-03 11:08:07	-->	kidnextdoor (~igor@unaffiliated/imaginarius) has joined #reddit-gamedev
+2019-07-03 11:08:31	<--	kidnextdoor (~igor@unaffiliated/imaginarius) has left #reddit-gamedev
+2019-07-03 12:07:18	-->	_DB (68375605@gateway/web/cgi-irc/kiwiirc.com/ip.104.55.86.5) has joined #reddit-gamedev
+2019-07-03 12:40:01	<--	NomadJim (~NomadJim@pdpc/supporter/active/nomadjim) has quit (Read error: Connection reset by peer)
+2019-07-03 12:43:02	-->	NomadJim (~NomadJim@pdpc/supporter/active/nomadjim) has joined #reddit-gamedev
+2019-07-03 12:43:02	--	Mode #reddit-gamedev [+v NomadJim] by ChanServ
+2019-07-03 13:27:11	-->	Uhfgood (~Uhfgood@2603:9000:b10e:c500:55b0:2607:46a8:1621) has joined #reddit-gamedev
+2019-07-03 13:27:43	-->	pulse (~pulse@unaffiliated/pulse) has joined #reddit-gamedev
+2019-07-03 14:26:07	+zebbiz_pi	uuugggghhh
+2019-07-03 14:26:16	+zebbiz_pi	I'm at a part where I wrote the tests
+2019-07-03 14:26:19	+zebbiz_pi	and documentation
+2019-07-03 14:26:24	+zebbiz_pi	and I don't know wtf it does
+2019-07-03 14:26:39	+zebbiz_pi	I hate younger me
+2019-07-03 14:37:27	-->	tacco\unfoog (~tacco@mue-88-130-74-070.dsl.tropolys.de) has joined #reddit-gamedev
+2019-07-03 14:46:55	+Jonas___	I need to buy new tires, plz help
+2019-07-03 14:48:00	+Jonas___	it's one pair of 225/45 R17 91Y and one pair of 245/40 R17 91Y, but what brand is good, which one is overpriced and which one isn't is all greek to me
+2019-07-03 14:50:09	+Jonas___	it feels like it's more than just the tire dimensions, like pattern, rubber composition, noise levels, etc
+2019-07-03 14:50:39	+Jonas___	will it be too soft on the warm asphalt or too stiff on the cold asphalt?
+2019-07-03 14:53:01	+zebbiz_pi	Jonas___: Will it only drive in spain?
+2019-07-03 14:54:05	+Jonas___	yes, or if I decide to take it on a drive north I won't do it on the spain-tires during anything other than summer..but that's unlikely to happen in the first place
+2019-07-03 14:58:52	+Jonas___	I guess I can just go on some random online review site and take their words for it
+2019-07-03 14:59:17	+zebbiz_pi	yeah
+2019-07-03 14:59:35	+zebbiz_pi	Don't listen to a bunch of game geeks on irc
+2019-07-03 15:02:23	-->	^|SnIpeR|^ (~drzoids@1.128.111.176) has joined #reddit-gamedev
+2019-07-03 15:03:11	+Jonas___	I honestly don't trust people who make their money from ads from manufacturers, to be honest in their reviews of said manufacturers anyway
+2019-07-03 15:03:55	<--	^|SnIpeR|^ (~drzoids@1.128.111.176) has quit (Client Quit)
+2019-07-03 15:04:41	<--	tacco\unfoog (~tacco@mue-88-130-74-070.dsl.tropolys.de) has quit
+2019-07-03 15:04:48	+Jonas___	so it's probably an even race, randos on the internet vs 'journalists'
+2019-07-03 15:08:34	+Jonas___	michelin pilot s4 seems to be popular and michelin is a brand I have heard of before, so that's probably good
+2019-07-03 15:11:29	+DrAwesomeClaws	Jonas___, just about any tires should be fine.  More expensive tires may wear better over time, or work better in bad weather
+2019-07-03 15:20:47	-->	n0tus (uid352043@gateway/web/irccloud.com/x-bafjfhoeuvtyoitw) has joined #reddit-gamedev
+2019-07-03 15:22:37	+Jonas___	I'm trying to get better grip than the ones I have currently, the occasional light skidding isn't great
+2019-07-03 15:22:57	+Jonas___	probably a combination of old existing tires, hot asphalt and speed
+2019-07-03 15:24:48	+carefish	hmm
+2019-07-03 15:24:59	+carefish	you might wanna double check what the spanish locals themselves do though
+2019-07-03 15:25:27	+carefish	best thing to do is look which tires their copcars/taxi's are using
+2019-07-03 15:28:41	n0tus	just buy new tires
+2019-07-03 15:33:37	+Jonas___	all 4 wheels changed, approx €500, I think that might be cheaper than doing the same in sweden
+2019-07-03 15:33:57	n0tus	this betsy ross nike thing is ridiculous, got pulled from shelves and banned from resellers due to relationship with slavery in the US, yet they are totally fine with using asian slaves to make their nikes
+2019-07-03 15:33:57	+Jonas___	and as a bonus I don't have to mess about with winter tires every year, I'll just run these until they start falling off
+2019-07-03 15:35:26	+Jonas___	that's the thing with the american flag on shoes?
+2019-07-03 15:36:14	n0tus	the old american flag yes
+2019-07-03 15:42:48	+Jonas___	oh
+2019-07-03 15:43:16	+Jonas___	in the past bad things happened so nobody may celebrate any part of it now
+2019-07-03 15:43:29	+Jonas___	#firstworldproblems
+2019-07-03 15:51:43	+carefish	_ => delete(_);
+2019-07-03 15:51:55	<--	mukunda (~mukunda@adsl-68-19-151-204.jan.bellsouth.net) has quit (Ping timeout: 245 seconds)
+2019-07-03 15:52:22	+DrAwesomeClaws	_ is a bad variable name there. _ usually implies not used / dont care
+2019-07-03 15:53:34	+carefish	in C# you use it to discard whatever it is
+2019-07-03 15:53:59	+carefish	or accept whatever it is, depending on how you look at it lmao
+2019-07-03 15:56:19	+carefish	so imo it is properly used :P cause firstworldproblems.. /care
+2019-07-03 15:57:42	n0tus	same with python and javascript and many other languages
+2019-07-03 15:57:48	+DrAwesomeClaws	haha, im coming at it from a haskell /js angle.  Where it'd be something like foo = (_, __, varThatIActuallyCareAbout) { ... // _, __ never used otherwise we'd give them a real name }
+2019-07-03 15:58:05	n0tus	js added _ support
+2019-07-03 15:59:26	n0tus	the underscore in js is used for the same exact reason in python and C# afaik, its a discard
+2019-07-03 15:59:42	+DrAwesomeClaws	yeah, but they dont need to add support for that
+2019-07-03 15:59:45	+DrAwesomeClaws	just a convention
+2019-07-03 15:59:56	+DrAwesomeClaws	though linters support it, they won't flag it as unused
+2019-07-03 16:01:59	+carefish	i'm messing around with parallel linq stuff from C#
+2019-07-03 16:02:16	+carefish	i wanna know how those can be beneficial vs. writing traditional for/foreaches
+2019-07-03 16:02:57	+carefish	so far it seems like you need to pay some attention to how you layout your classes for it to be kinda beneficial as well as knowing how linq allocates things
+2019-07-03 16:03:52	n0tus	ah i was probably thinking of linter support, i thought at one point it was giving me shit about _ so i assumed it was a change to the native language, makes more sense now as a convention
+2019-07-03 16:03:58	+DrAwesomeClaws	well linq is a more functional approach.  Functional usually implies easier parrallelism because of purity of functions, no side effects / mutations
+2019-07-03 16:04:19	+zebbiz_pi	Jonas___: Buy Nokia tires!
+2019-07-03 16:04:21	+DrAwesomeClaws	afair anyway
+2019-07-03 16:04:32	+DrAwesomeClaws	i haven't messed with linq in many years
+2019-07-03 16:05:24	+Jonas___	zebbiz_pi, couldn't even find those here
+2019-07-03 16:05:32	+Jonas___	maybe the spanish tire market is less lucrative without winter tires
+2019-07-03 16:06:13	n0tus	yah plus its more expressive to operate on collections of data using LINQ vs a bunch of explicit for loops
+2019-07-03 16:07:09	+carefish	yeah, i'm really enjoying linq so far
+2019-07-03 16:08:00	n0tus	i rarely ever use for loops if i can avoid it, ill use map, filter, and reduce in js, or pull in a lib like lodash-fp or ramda
+2019-07-03 16:08:37	+carefish	i'm so used to doing forloops, so linq is a nice breath of fresh air
+2019-07-03 16:08:44	+DrAwesomeClaws	yeah, the only time i use for, or even mutate things, is for specific performance reasons these days.  I write pretty much everything functionally now
+2019-07-03 16:10:00	+carefish	next step once i am comfy w/ linq is read up if/how you can use that SIMD vectorization stuff along with the parallelism w/ linq. might come in handy later
+2019-07-03 16:10:30	+zebbiz_pi	DrAwesomeClaws: https://www.youtube.com/watch?v=aboeZMyBP4w
+2019-07-03 16:11:10	+zebbiz_pi	Jonas___: https://www.youtube.com/watch?v=Ol2OEgWLKWs
+2019-07-03 16:11:31	+DrAwesomeClaws	zebbiz_pi, that's not accurate at all.  That guy isn't even black
+2019-07-03 16:11:48	+zebbiz_pi	lol, good luck finding a black guy in finland
+2019-07-03 16:12:44	+DrAwesomeClaws	this shouldn't be so difficult
+2019-07-03 16:12:56	+DrAwesomeClaws	trying to get a day off work so i can go to an interview at the company i already work for
+2019-07-03 16:19:05	-->	warmwaffles (~warmwaffl@108.174.85.188) has joined #reddit-gamedev
+2019-07-03 16:20:44	-->	^|SnIpeR|^ (~drzoids@1.128.111.176) has joined #reddit-gamedev
+2019-07-03 16:21:46	<--	^|SnIpeR|^ (~drzoids@1.128.111.176) has quit (Client Quit)
+2019-07-03 16:44:34	+DrAwesomeClaws	geez, amazon aws bill is due
+2019-07-03 16:44:37	+DrAwesomeClaws	$0.13
+2019-07-03 16:44:44	+DrAwesomeClaws	dunno if i can cover it, wonder if i can finance?
+2019-07-03 17:02:28	+Jonas___	I might be able to spot you otherwise
+2019-07-03 17:02:48	n0tus	ill set up a gofundme
+2019-07-03 17:02:51	+Jonas___	I just put up another $130/mo server, just in case the first one has a few minutes of downtime at an inconvenient time
+2019-07-03 17:08:07	n0tus	my slave name is cornbread
+2019-07-03 17:19:17	+carefish	damn, someone beat me to it
+2019-07-03 17:19:22	+carefish	https://github.com/jackmott/LinqFaster
+2019-07-03 17:21:52	-->	ImQ009 (~ImQ009@unaffiliated/imq009) has joined #reddit-gamedev
+2019-07-03 17:29:14	warmwaffles	lol read that as `ling faster` like a changeling in spacestation 13
+2019-07-03 17:34:29	n0tus	in horizon zero dawn story mode u can take down dinosaurs with one arrow lol
+2019-07-04 08:53:48	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-07-04 08:53:48	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-07-04 08:53:48	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-07-04 08:53:48	--	Channel #reddit-gamedev: 71 nicks (0 ops, 16 voices, 55 normals)
+2019-07-04 08:53:51	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-07-04 09:54:20	+Jonas___	I'm sure china is shaking in their boots
+2019-07-04 09:54:31	+Jonas___	the big bad UK is coming
+2019-07-04 10:21:51	+carefish	lmao
+2019-07-04 10:22:07	+carefish	i can see a big ben ripping itself from the ground and march onward to china
+2019-07-04 10:23:50	+carefish	being escorted by a dozen of queens guardsmen
+2019-07-04 11:18:49	+zebbiz_pi	https://european-pirateparty.eu/pirate-marcel-kolaja-elected-vice-president-of-the-european-parliament/
+2019-07-04 11:39:13	-->	paladinn (~paladin@2804:14d:3281:61b3:bd82:3e4d:5086:5976) has joined #reddit-gamedev
+2019-07-04 11:39:13	<--	paladinn (~paladin@2804:14d:3281:61b3:bd82:3e4d:5086:5976) has quit (Changing host)
+2019-07-04 11:39:13	-->	paladinn (~paladin@unaffiliated/paladinn) has joined #reddit-gamedev
+2019-07-04 12:00:46	+Jonas___	I hope the czech pirate party is less cucked than the swedish one
+2019-07-04 12:12:26	+zebbiz_pi	Jonas___: In what way?
+2019-07-04 12:13:21	-->	elsie273 (~Android@213.205.194.115) has joined #reddit-gamedev
+2019-07-04 12:14:02	+Jonas___	they are basically just the green party but paintjob to seem anti-copyright
+2019-07-04 12:14:33	+Jonas___	they started off as a one-issue party, as far as I'm aware, but now they've adopted the green party's positions on basically everything except the core issue
+2019-07-04 12:16:31	+Jonas___	pro-piracy is great, but I'm not voting for an undercover green party
+2019-07-04 12:17:49	TidB	?
+2019-07-04 12:17:54	TidB	also using 'cucked'?
+2019-07-04 12:18:09	+Jonas___	deal /w it, language-nazi
+2019-07-04 12:18:21	TidB	?
+2019-07-04 12:23:48	+zebbiz_pi	Jonas___: I know you miss sweden, here's a link that'll take you back home https://www.youtube.com/watch?v=6-8E4Nirh9s
+2019-07-04 12:31:32	-->	Uhfgood (~Uhfgood@2603:9000:b10e:c500:e5a4:8adf:c011:2b57) has joined #reddit-gamedev
+2019-07-04 12:40:50	-->	pulse (~pulse@unaffiliated/pulse) has joined #reddit-gamedev
+2019-07-04 12:43:39	-->	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has joined #reddit-gamedev
+2019-07-04 12:48:10	<--	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has quit (Ping timeout: 246 seconds)
+2019-07-04 12:49:55	-->	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has joined #reddit-gamedev
+2019-07-04 13:11:00	<--	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has quit (Remote host closed the connection)
+2019-07-04 13:11:51	-->	^|SnIpeR|^ (~drzoids@1.128.111.176) has joined #reddit-gamedev
+2019-07-04 13:12:01	<--	^|SnIpeR|^ (~drzoids@1.128.111.176) has quit (Client Quit)
+2019-07-04 13:20:16	-->	mukunda (mukunda@adsl-68-19-173-211.jan.bellsouth.net) has joined #reddit-gamedev
+2019-07-04 13:37:01	-->	_DB (68375605@gateway/web/cgi-irc/kiwiirc.com/ip.104.55.86.5) has joined #reddit-gamedev
+2019-07-04 13:43:03	-->	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has joined #reddit-gamedev
+2019-07-04 13:43:48	<--	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has quit (Remote host closed the connection)
+2019-07-04 13:44:02	+Jonas___	thanks zebbiz_pi
+2019-07-04 13:44:32	+Jonas___	I actually just came back from the local swedish store, with a renewed supply of erik's chilibearnaise and max original sauce
+2019-07-04 13:45:08	+Jonas___	you can get a lot of good meat here, but they're not big fans of bearnaise
+2019-07-04 13:48:59	-->	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has joined #reddit-gamedev
+2019-07-04 13:53:54	<--	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has quit (Ping timeout: 272 seconds)
+2019-07-04 13:58:27	-->	Jatt (~CABAL@c83-248-46-35.bredband.comhem.se) has joined #reddit-gamedev
+2019-07-04 14:00:25	-->	Zire (~CABAL@c83-248-46-35.bredband.comhem.se) has joined #reddit-gamedev
+2019-07-04 14:01:30	<--	Jattenalle (~CABAL@c83-248-46-35.bredband.comhem.se) has quit (Ping timeout: 272 seconds)
+2019-07-04 14:01:30	--	Zire is now known as Jattenalle
+2019-07-04 14:03:21	<--	Jatt (~CABAL@c83-248-46-35.bredband.comhem.se) has quit (Ping timeout: 268 seconds)
+2019-07-04 15:12:29	-->	Jatt (~CABAL@c83-248-46-35.bredband.comhem.se) has joined #reddit-gamedev
+2019-07-04 15:14:38	<--	Jattenalle (~CABAL@c83-248-46-35.bredband.comhem.se) has quit (Ping timeout: 245 seconds)
+2019-07-04 15:14:38	--	Jatt is now known as Jattenalle
+2019-07-04 15:47:08	Uhfgood	hey
+2019-07-04 15:59:57	+Jonas___	new tires next tuesday
+2019-07-04 16:00:07	+Jonas___	what should I do to wear out my tires in the meanwhile?
+2019-07-04 16:08:30	+Jonas___	I'm thinking donuts, live life on the wild side
+2019-07-04 16:32:54	+zebbiz_pi	Jonas___: Yes
+2019-07-04 16:33:02	+zebbiz_pi	Screeching through the night
+2019-07-04 16:33:06	+zebbiz_pi	Like a teenager
+2019-07-04 16:33:15	+Jonas___	there's a nice parking lot nearby, large and empty
+2019-07-04 16:33:28	+Jonas___	I might as well give it a go
+2019-07-04 16:40:36	+zebbiz_pi	inb4 Jonas___ blows his tires and ruins the rims
+2019-07-04 16:43:18	-->	ImQ009 (~ImQ009@unaffiliated/imq009) has joined #reddit-gamedev
+2019-07-04 16:43:35	+Jonas___	that'd make me sad, don't jinx it
+2019-07-04 16:44:31	+zebbiz_pi	It's ok to have fun, but be careful
+2019-07-04 16:44:36	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #reddit-gamedev
+2019-07-04 16:44:58	+Jonas___	tack pappa
+2019-07-04 16:45:34	+zebbiz_pi	:)
+2019-07-04 16:46:21	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Remote host closed the connection)
+2019-07-04 16:47:39	+zebbiz_pi	Jonas___: Men om du kommer hem och säger att du har dött i en bilolycka så slår jag ijhäl dig
+2019-07-04 16:48:28	+Jonas___	I'm not sure I'll even have the horsepower and turning radius to do something
+2019-07-04 16:48:45	+Jonas___	my car has the turning radius of a small oil tanker boat
+2019-07-04 16:49:04	+zebbiz_pi	It's a rear wheel drive, right?
+2019-07-04 16:49:20	+zebbiz_pi	Make and model? Year?
+2019-07-04 16:49:31	+Jonas___	rear wheel drive, but automatic
+2019-07-04 16:49:48	+zebbiz_pi	>automatic
+2019-07-04 16:49:50	+Jonas___	it's a mercedes slk 320..2001, I think
+2019-07-04 16:50:00	+zebbiz_pi	Bet it's an electric handbreak as well
+2019-07-04 16:50:17	+Jonas___	I don't even consider manuals anymore, I've gotten too comfortable with the gocart model of driving
+2019-07-04 16:50:27	+Jonas___	press pedal A to go, press pedal B to not go
+2019-07-04 16:50:57	+zebbiz_pi	https://teknikensvarld.se/provkorning-av-mercedes-slk-320-123082/
+2019-07-04 16:51:59	+zebbiz_pi	>Toppfart 245 km/h manuell, 242 km/h automat.
+2019-07-04 16:52:05	+zebbiz_pi	You chose... poorly
+2019-07-04 16:52:31	+Jonas___	I really like it
+2019-07-04 16:52:48	+Jonas___	hardtop, folds into the trunk, perfect for the weather here
+2019-07-04 16:53:23	+Jonas___	only 2 seats so not too much with the giving people rides or hauling stuff for people
+2019-07-04 16:53:46	+Jonas___	and other drivers sometimes think it's a sportcar so they get out of the way
+2019-07-04 16:56:16	+zebbiz_pi	Jonas___: 2 seats are fine
+2019-07-04 16:56:24	+zebbiz_pi	How often do you pick  up more than 2 girls?
+2019-07-04 16:56:57	+Jonas___	you just gotta make sure one of them is chunky enough to put the second one in their lap
+2019-07-04 16:57:19	+Jonas___	or put the top down to allow for unlimited stacking in laps
+2019-07-04 17:17:19	+zebbiz_pi	uuuugggghhh
+2019-07-04 17:17:23	+zebbiz_pi	Documentation
+2019-07-04 17:17:27	+zebbiz_pi	uuuugggghhh
+2019-07-04 17:22:43	Jattenalle	write the things! write 'em all!
+2019-07-04 17:22:50	+zebbiz_pi	I have written them
+2019-07-04 17:22:59	+zebbiz_pi	But apparently they weren't good enough
+2019-07-04 17:23:05	+zebbiz_pi	so now I have to rewrite them
+2019-07-04 17:23:08	Jattenalle	but did you put the correct cover sheet for the report!?
+2019-07-04 17:23:20	Jattenalle	oh no! they're gonna need you to come in this saturday... mmm'kay...
+2019-07-04 17:23:24	Jattenalle	:3
+2019-07-04 17:23:25	+zebbiz_pi	Nope
+2019-07-04 17:23:43	+zebbiz_pi	I refuse
+2019-07-04 17:24:18	Jattenalle	https://www.youtube.com/watch?v=GjJCdCXFslY
+2019-07-04 17:24:35	+zebbiz_pi	I know
+2019-07-04 17:24:45	Jattenalle	the trick is to not stop
+2019-07-04 17:24:59	Jattenalle	once you're making a beeline for the exit, walk through the blockers
+2019-07-04 17:25:05	+zebbiz_pi	Never stop never stopping
+2019-07-04 17:26:54	+zebbiz_pi	https://www.youtube.com/watch?v=fdso7TDjDtM
+2019-07-04 17:28:42	<--	_DB (68375605@gateway/web/cgi-irc/kiwiirc.com/ip.104.55.86.5) has quit (Ping timeout: 268 seconds)
+2019-07-04 17:34:46	+zebbiz_pi	https://www.youtube.com/watch?v=N7iVWK2W48o
+2019-07-04 17:34:53	+zebbiz_pi	Nice video idea
+2019-07-04 17:41:15	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #reddit-gamedev
+2019-07-04 17:46:14	elsie273	Jonas i told my boss i just can't even respond to these clients anymore because it's stressing me out for no reason somehow
+2019-07-04 17:46:19	elsie273	and he's cool with it
+2019-07-05 09:26:43	-->	Syrinxos (~syrinxos@host-131-114-213-6.m.unipi.it) has joined #reddit-gamedev
+2019-07-05 09:26:43	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-07-05 09:26:43	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-07-05 09:26:43	--	Channel #reddit-gamedev: 69 nicks (0 ops, 16 voices, 53 normals)
+2019-07-05 09:26:47	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-07-05 09:37:52	-->	Syrinxos (~syrinxos@host-131-114-213-6.m.unipi.it) has joined #reddit-gamedev
+2019-07-05 09:37:52	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-07-05 09:37:52	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-07-05 09:37:52	--	Channel #reddit-gamedev: 69 nicks (0 ops, 16 voices, 53 normals)
+2019-07-05 09:37:56	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-07-05 10:48:17	-->	elsie273 (~Android@213.205.194.30) has joined #reddit-gamedev
+2019-07-05 11:07:25	-->	Syrinxos (~syrinxos@host-131-114-213-6.m.unipi.it) has joined #reddit-gamedev
+2019-07-05 11:07:25	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-07-05 11:07:25	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-07-05 11:07:25	--	Channel #reddit-gamedev: 70 nicks (0 ops, 16 voices, 54 normals)
+2019-07-05 11:07:29	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-07-05 11:32:53	-->	Syrinxos (~syrinxos@host-131-114-213-6.m.unipi.it) has joined #reddit-gamedev
+2019-07-05 11:32:53	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-07-05 11:32:53	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-07-05 11:32:53	--	Channel #reddit-gamedev: 70 nicks (0 ops, 16 voices, 54 normals)
+2019-07-05 11:32:56	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-07-05 11:32:57	-->	paladinn (~paladin@unaffiliated/paladinn) has joined #reddit-gamedev
+2019-07-05 11:35:17	-->	Syrinxos (~syrinxos@host-131-114-213-6.m.unipi.it) has joined #reddit-gamedev
+2019-07-05 11:35:17	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-07-05 11:35:17	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-07-05 11:35:17	--	Channel #reddit-gamedev: 71 nicks (0 ops, 16 voices, 55 normals)
+2019-07-05 11:35:21	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-07-05 11:41:50	-->	Syrinxos (~syrinxos@host-131-114-213-6.m.unipi.it) has joined #reddit-gamedev
+2019-07-05 11:41:50	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-07-05 11:41:50	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-07-05 11:41:50	--	Channel #reddit-gamedev: 71 nicks (0 ops, 16 voices, 55 normals)
+2019-07-05 11:41:55	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-07-05 12:38:53	-->	Uhfgood (~Uhfgood@2603:9000:b10e:c500:f48c:4797:1bc4:8dae) has joined #reddit-gamedev
+2019-07-05 12:57:11	-->	_DB (68375605@gateway/web/cgi-irc/kiwiirc.com/ip.104.55.86.5) has joined #reddit-gamedev
+2019-07-05 13:01:43	-->	pulse (~pulse@unaffiliated/pulse) has joined #reddit-gamedev
+2019-07-05 14:07:28	-->	mukunda (~mukunda@adsl-68-19-173-211.jan.bellsouth.net) has joined #reddit-gamedev
+2019-07-05 14:12:40	<--	mukunda (~mukunda@adsl-68-19-173-211.jan.bellsouth.net) has quit
+2019-07-05 14:46:47	-->	mukunda (~mukunda@adsl-68-19-173-211.jan.bellsouth.net) has joined #reddit-gamedev
+2019-07-05 15:35:33	-->	HZun (~HZun@0x3ec721e2.osd.customer.dk.telia.net) has joined #reddit-gamedev
+2019-07-05 15:52:53	-->	bomb (~bomb@gateway/tor-sasl/bomb) has joined #reddit-gamedev
+2019-07-05 15:52:54	--	Mode #reddit-gamedev [+v bomb] by ChanServ
+2019-07-05 17:04:39	-->	^|SnIpeR|^ (~drzoids@cpe-120-146-186-20.static.qld.bigpond.net.au) has joined #reddit-gamedev
+2019-07-05 17:04:54	<--	^|SnIpeR|^ (~drzoids@cpe-120-146-186-20.static.qld.bigpond.net.au) has quit (Client Quit)
+2019-07-05 17:23:36	<--	bomb (~bomb@gateway/tor-sasl/bomb) has quit (Remote host closed the connection)
+2019-07-05 17:48:40	-->	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has joined #reddit-gamedev
+2019-07-05 17:49:48	-->	warmwaffles (~warmwaffl@108.174.85.188) has joined #reddit-gamedev
+2019-07-08 09:19:30	-->	Syrinxos (~syrinxos@host-131-114-213-6.m.unipi.it) has joined #reddit-gamedev
+2019-07-08 09:19:30	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-07-08 09:19:30	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-07-08 09:19:30	--	Channel #reddit-gamedev: 74 nicks (0 ops, 18 voices, 56 normals)
+2019-07-08 09:19:34	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-07-08 09:20:13	<--	lourfire (~quassel@19.ip-91-134-136.eu) has quit (Quit: No Ping reply in 180 seconds.)
+2019-07-08 09:22:38	-->	lourfire (~quassel@19.ip-91-134-136.eu) has joined #reddit-gamedev
+2019-07-08 09:28:18	-->	_DB (68375605@gateway/web/cgi-irc/kiwiirc.com/ip.104.55.86.5) has joined #reddit-gamedev
+2019-07-08 09:36:23	<--	n0tus (uid352043@gateway/web/irccloud.com/x-zixpqueisipdjsms) has quit (Quit: Connection closed for inactivity)
+2019-07-08 10:01:17	yuken	Does anyone here know anything about GLSL? I'm trying to write some OpenGL 2.1 shaders, currently all tutorials I can come across that are relevant for what I'm using (gfx-rs in Rust) are using OpenGL 3.2
+2019-07-08 10:01:48	yuken	and GLSL 150 shaders work differently from GLSL 120 apparently. Although, for some reason, I can use GLSL 150 shaders with an OpenGL 2.1 context.
+2019-07-08 10:11:57	aeth	yuken: nvidia drivers?
+2019-07-08 10:12:35	aeth	yuken: Nvidia drivers let you do wrong things. The people using Intel integrated on Linux will let you find out about that later on.
+2019-07-08 10:12:55	aeth	The best GLSL material I know of is the wiki. https://www.khronos.org/opengl/wiki/OpenGL_Shading_Language
+2019-07-08 10:13:08	yuken	aeth, AMD.
+2019-07-08 10:13:12	yuken	and on Linux.
+2019-07-08 10:13:29	aeth	Also, there's a lot of documentation, e.g. http://docs.gl/
+2019-07-08 10:13:37	yuken	well
+2019-07-08 10:13:44	yuken	I have no clue how to use GLSL in the first place
+2019-07-08 10:13:59	aeth	yuken: Well, I guess it's sort of an arms race like with web browser tech. Once someone starts accepting bad input they all have to so nothing breaks. You probably aren't supposed to do that, anyway. I'm just guessing, though.
+2019-07-08 10:14:00	yuken	and I doubt that'll help me with GLSL from 2005.
+2019-07-08 10:14:38	aeth	docs.gl tells you what's available in gl2, gl3, gl4.
+2019-07-08 10:15:11	aeth	or one of the many similar sites
+2019-07-08 10:15:22	yuken	oh god, I hav eno clue how gfx-rs is handling this as well
+2019-07-08 10:15:27	yuken	it has a macro to setup... "stuff"
+2019-07-08 10:15:32	aeth	The wiki often tells you when a feature is first available, e.g. the box on this page tells you "core since version 4.0" https://www.khronos.org/opengl/wiki/Tessellation
+2019-07-08 10:16:25	yuken	https://gist.github.com/YukenK/774323fc1240dc77067c7ddaad9706ca is an example of said macro.
+2019-07-08 10:21:47	yuken	oh god, I can't figure this crap out aeth.
+2019-07-08 10:36:22	aeth	yuken: just use OpenGL 3, that seems to be where all of the tutorials are, unless they suddenly all moved to 4
+2019-07-08 10:36:25	aeth	imo
+2019-07-08 10:36:43	<--	mukunda (~mukunda@adsl-68-19-173-211.jan.bellsouth.net) has quit (Ping timeout: 245 seconds)
+2019-07-08 10:37:56	aeth	Most documentation/etc. seems to assume OpenGL 3.2 or OpenGL 3.3 with extra features noted so you can just use an extension or bump up the minimum version if necessary.
+2019-07-08 10:38:49	yuken	aeth, I want to have wide support.
+2019-07-08 10:39:12	aeth	OpenGL 2.x tends to just be people with bad drivers or weird combinations
+2019-07-08 10:39:26	yuken	Or old hardware, which is what I'm trying to target.
+2019-07-08 10:40:00	aeth	3.2 is 2009-08-03, so if you are supporting 10 years of hardware, it should run fine. Really, 3.x should run on hardware going back to 3.0, or 2008-08-11.
+2019-07-08 10:40:23	yuken	I want to be able to build this on a Pentium Pro, aeth.
+2019-07-08 10:40:28	IkeKrull	if its 2d, which i assume it is given your vertex buffer, you wont miss much with 2.1 except perhaps fbos/render to texture features
+2019-07-08 10:41:12	yuken	Unless I add in a software renderer and just use OpenGL 3.2 or 4 for hardware accel.
+2019-07-08 10:41:17	aeth	yuken: So you support 99.9% with 3.x and you want to support 99.99999%? Or something. Diminishing returns...
+2019-07-08 10:41:51	aeth	You'll still need a software renderer for people with bad drivers, like me on Linux circa 2007, which is why I only played games with software renderers around that time.
+2019-07-08 10:42:17	yuken	That's what I'm trying to avoid, I would rather shoot myself than deal with xlib/etc directly to write a software renderer, aeth
+2019-07-08 10:42:38	aeth	What about SDL2's legacy 2D renderer? Or is it only hardware accelerated now?
+2019-07-08 10:42:52	yuken	No clue, I'm not using SDL.
+2019-07-08 10:43:17	aeth	There might be other 2D renderers. Weird to pull in a whole dependency that probably won't be used except as a fallback, but I'm sure some people do when they must have reliability
+2019-07-08 10:43:48	yuken	There are no software 2D renderers I can use here, I'd have to write my own.
+2019-07-08 10:44:00	aeth	ah
+2019-07-08 10:44:32	yuken	I just don't see a benefit to using OpenGL 3 or 4, other than maybe some ease-of-use stuff .
+2019-07-08 10:44:34	aeth	It might be easier than getting reliable OpenGL 2 information in 2019 outside of finding old books.
+2019-07-08 10:45:09	aeth	Once you go OpenGL 3 you can progressively add features based on the capability of the graphics card with OpenGL extensions afaik. I've never bothered doing that, though.
+2019-07-08 10:45:51	aeth	OpenGL 3.2 is kind of the baseline of that, although a lot choose 3.3 instead because in theory if your hardware supports 3.2 it supports 3.3. There are some people with bad drivers (I encountered them on IRC!) who can't run 3.3, though.
+2019-07-08 10:45:56	yuken	My game is a tiny 2D MORPG that I plan to port to DOS (to give an example of how graphically intensive it is) as a project-for-fun
+2019-07-08 10:46:08	yuken	with the most intensive thing being a day-night cycle that just applies a dark overlay.
+2019-07-08 10:46:29	yuken	So what would the real benefit be?
+2019-07-08 10:46:35	aeth	yuken: I think OpenGL is designed so you can run it as a software renderer if hardware acceleration isn't available? As well as just certain parts if there's only a partial OpenGL implementation.
+2019-07-08 10:46:51	aeth	I'm not sure if they dropped that with 3
+2019-07-08 10:46:54	yuken	If that's the case, that would be great.
+2019-07-08 10:47:33	aeth	https://stackoverflow.com/questions/10431591/opengl-software-rendering-alternatives
+2019-07-08 10:48:19	aeth	It looks like as of 2014-08-25 Mesa 3D has 3 software implementations of OpenGL 3.1. It might be 3.2 by now, which gives you your baseline.
+2019-07-08 10:48:34	aeth	Not sure about DOS, though
+2019-07-08 10:48:43	yuken	wqell DOS, i'm rewriting the client.
+2019-07-08 10:49:02	yuken	The client does no logic, just accepts/sends network info and renders stuff in its proper location.
+2019-07-08 10:49:09	yuken	All other logic is done server-side.
+2019-07-08 10:49:56	aeth	LLVMPipe and SoftPipe 3.3 in Mesa 17.1.0. https://people.freedesktop.org/~imirkin/glxinfo/#v=Mesa%2017.1.0
+2019-07-08 10:50:12	aeth	That's the last feature table that contains all of the information on that site
+2019-07-08 10:52:11	aeth	https://www.mesa3d.org/llvmpipe.html
+2019-07-08 10:53:14	yuken	meh, I guess I'll use GLSL 150 & OpenGL 3.2 then.
+2019-07-08 10:53:34	aeth	from the LLVMpipe page: "For x86 or amd64 processors, 64-bit mode is recommended. Support for SSE2 is strongly encouraged. Support for SSE3 and SSE4.1 will yield the most efficient code. The fewer features the CPU has the more likely it is that you will run into underperforming, buggy, or incomplete code."
+2019-07-08 10:53:36	yuken	I'll be writing a software renderer for the DOS port, but that's simple enough in DOS, you just write to a specific memory address
+2019-07-08 10:53:43	aeth	Wow I would not want to maintain the LLVMpipe code
+2019-07-08 10:54:26	aeth	It's basically saying, "Here's all the things we'd like you to have and that would make our job easier. They're recommended, but not required, since this is for really old, bad computers anyway."
+2019-07-08 10:55:26	aeth	I guess that's what happens when you have to support literally everything everywhere for all time.
+2019-07-08 10:55:45	aeth	You only have to deal with the Pentium Pro.
+2019-07-08 10:55:56	yuken	I'm supporting this old stuff more as a hobby because I hjad, at one point, a crpapy old computer in the modern era
+2019-07-08 10:56:15	yuken	a T5250 + GMA 965/X3100 in 2014. Not, uh, a pleasant experience for someone who wanted to game.
+2019-07-08 10:57:05	aeth	I can empathize. As I said, I didn't have working 3D drivers in the 2005-2007ish range. Although maybe with today's LLVMpipe I wouldn't notice (except for the framerate!)
+2019-07-08 10:57:33	aeth	it's definitely the only way to support "everyone" on x86
+2019-07-08 11:27:18	-->	RazielZ (~Raziel@unaffiliated/raziel) has joined #reddit-gamedev
+2019-07-08 11:29:38	<--	RazielXYZ (~Raziel@unaffiliated/raziel) has quit (Ping timeout: 245 seconds)
+2019-07-08 11:35:47	-->	NomadJim (~NomadJim@pdpc/supporter/active/nomadjim) has joined #reddit-gamedev
+2019-07-08 11:35:47	--	Mode #reddit-gamedev [+v NomadJim] by ChanServ
+2019-07-08 12:09:54	<--	Type-21 (~Type-21@unaffiliated/type-21) has quit (Ping timeout: 252 seconds)
+2019-07-08 12:28:44	+carefish	yuken: if all y'all wanna do is 2d stuff, look up how to rasterize your own things
+2019-07-08 12:28:48	-->	Uhfgood (~Uhfgood@2603:9000:b10e:c500:3cef:2fa7:2ba0:679c) has joined #reddit-gamedev
+2019-07-08 12:29:02	+carefish	cause any of the modern things probably won't play ncie with ms-dos
+2019-07-08 12:30:07	+carefish	also SDL1 will most likely give you a really nice and thing abstraction layer to do that
+2019-07-08 12:30:25	+carefish	not sure about sdl2
+2019-07-08 12:47:15	<--	moldybits (~mb@unaffiliated/moldybits) has quit (Quit: WeeChat 2.4)
+2019-07-08 12:58:13	-->	Waynes (~Waynes@unaffiliated/waynes) has joined #reddit-gamedev
+2019-07-08 12:58:13	--	Mode #reddit-gamedev [+v Waynes] by ChanServ
+2019-07-08 13:02:36	-->	DrGonzo (~DrGonzo@modemcable080.164-57-74.mc.videotron.ca) has joined #reddit-gamedev
+2019-07-08 13:35:45	<--	DrGonzo (~DrGonzo@modemcable080.164-57-74.mc.videotron.ca) has quit (Ping timeout: 244 seconds)
+2019-07-08 13:54:58	<--	cruelnoise (~cruelnois@glphon2233w-grc-09-184-145-52-37.dsl.bell.ca) has quit (Ping timeout: 246 seconds)
+2019-07-08 15:42:56	-->	mukunda (mukunda@adsl-68-19-173-211.jan.bellsouth.net) has joined #reddit-gamedev
+2019-07-08 16:01:52	<--	Waynes (~Waynes@unaffiliated/waynes) has quit (Quit: Leaving.)
+2019-07-08 16:04:50	deniska	8 bit guy made an RTS for a literal 8086 and you complain about T5250 :D
+2019-07-08 16:09:50	Uhfgood	I love watching 8-bit guy
+2019-07-08 16:10:56	-->	upupbb-user1 (~puppy@140.213.41.178) has joined #reddit-gamedev
+2019-07-08 16:11:08	upupbb-user1	hello i new membeer
+2019-07-08 16:16:42	<--	upupbb-user1 (~puppy@140.213.41.178) has quit (Quit: Leaving)
+2019-07-08 16:35:45	+Jonas___	that was a quick membership
+2019-07-08 17:00:25	-->	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has joined #reddit-gamedev
+2019-07-08 17:05:20	<--	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has quit (Ping timeout: 272 seconds)
+2019-07-08 17:07:13	<--	terminx (~terminx@198.8.81.214) has quit (Ping timeout: 248 seconds)
+2019-07-09 09:12:23	-->	Syrinxos (~syrinxos@host-131-114-213-6.m.unipi.it) has joined #reddit-gamedev
+2019-07-09 09:12:23	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-07-09 09:12:23	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-07-09 09:12:23	--	Channel #reddit-gamedev: 72 nicks (0 ops, 18 voices, 54 normals)
+2019-07-09 09:12:26	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-07-09 09:25:02	<--	DerHase (~Dave@catv-80-98-155-44.catv.broadband.hu) has quit (Ping timeout: 245 seconds)
+2019-07-09 09:54:52	<--	nanoz (~nanoz@unaffiliated/nanoz) has quit (Ping timeout: 272 seconds)
+2019-07-09 10:07:57	-->	bomb (~bomb@gateway/tor-sasl/bomb) has joined #reddit-gamedev
+2019-07-09 10:07:57	--	Mode #reddit-gamedev [+v bomb] by ChanServ
+2019-07-09 10:34:52	+shan	zebbiz_pi + yuken : :p sorry, just excited, i graduated from 1mbps myself
+2019-07-09 10:44:44	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #reddit-gamedev
+2019-07-09 10:49:06	-->	elsie273 (~Android@2a01:4c8:41d:dd67:a4d6:e9ff:43c2:fe0d) has joined #reddit-gamedev
+2019-07-09 10:53:21	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Quit: Leaving)
+2019-07-09 10:55:41	+bomb	yay shan did you also get a computer?
+2019-07-09 11:05:07	<--	Serus (~Serus@unaffiliated/serus) has quit (Ping timeout: 246 seconds)
+2019-07-09 11:07:26	<--	bomb (~bomb@gateway/tor-sasl/bomb) has quit (Remote host closed the connection)
+2019-07-09 11:11:31	-->	steelgolem (~SteelGole@sydnns0115w-47-55-207-18.dhcp-dynamic.fibreop.ns.bellaliant.net) has joined #reddit-gamedev
+2019-07-09 11:13:11	+Jonas___	zebbiz_pi, 7MB/s over tor, are you hosting the camomille road?
+2019-07-09 11:14:10	<--	steelgolem_ (~SteelGole@sydnns0115w-47-55-207-18.dhcp-dynamic.fibreop.ns.bellaliant.net) has quit (Ping timeout: 258 seconds)
+2019-07-09 11:24:18	+shan	Bomb: yes i did :D Hard at work on the game now
+2019-07-09 11:33:05	-->	Serus (~Serus@unaffiliated/serus) has joined #reddit-gamedev
+2019-07-09 12:08:14	+zebbiz_pi	Jonas___: I mean that that would be impressive, not that I'm doing that
+2019-07-09 12:15:29	+carefish	goooooood morning #reddit-gamedev
+2019-07-09 12:15:36	+Jonas___	that sounds just like what someone who were, would say
+2019-07-09 12:16:06	+carefish	my fastest throughput at home was 62? MB/sec
+2019-07-09 12:16:22	+carefish	dl from steam though, so not sure if that counts
+2019-07-09 12:24:55	-->	steelgolem_ (~SteelGole@sydnns0115w-47-55-207-18.dhcp-dynamic.fibreop.ns.bellaliant.net) has joined #reddit-gamedev
+2019-07-09 12:26:48	-->	DrGonzo (~DrGonzo@modemcable080.164-57-74.mc.videotron.ca) has joined #reddit-gamedev
+2019-07-09 12:27:29	yuken	hm, so
+2019-07-09 12:27:57	<--	steelgolem (~SteelGole@sydnns0115w-47-55-207-18.dhcp-dynamic.fibreop.ns.bellaliant.net) has quit (Ping timeout: 245 seconds)
+2019-07-09 12:28:00	+shan	do any of you play games for escapism?
+2019-07-09 12:28:15	yuken	life is escapism from video games.
+2019-07-09 12:28:24	+shan	better yet, do you make them to customize your escapes?
+2019-07-09 12:28:25	+carefish	i haven't played a vidya game in a few weeks now
+2019-07-09 12:33:52	-->	Uhfgood (~Uhfgood@2603:9000:b10e:c500:44ad:7016:1c69:d9f1) has joined #reddit-gamedev
+2019-07-09 13:11:11	-->	mukunda (mukunda@adsl-74-240-51-91.jan.bellsouth.net) has joined #reddit-gamedev
+2019-07-09 13:40:41	<--	elsie273 (~Android@2a01:4c8:41d:dd67:a4d6:e9ff:43c2:fe0d) has quit (Quit: -a- Connection Timed Out)
+2019-07-09 13:43:05	-->	_DB (68375605@gateway/web/cgi-irc/kiwiirc.com/ip.104.55.86.5) has joined #reddit-gamedev
+2019-07-09 13:44:01	<--	DrGonzo (~DrGonzo@modemcable080.164-57-74.mc.videotron.ca) has quit (Ping timeout: 248 seconds)
+2019-07-09 13:52:47	-->	niceplace_ (~nice@2a03:b0c0:2:d0::4b8:5001) has joined #reddit-gamedev
+2019-07-09 13:55:57	<--	niceplace (~nice@2a03:b0c0:2:d0::4b8:5001) has quit (*.net *.split)
+2019-07-09 13:55:59	<--	IkeKrull (~ikey@2a02:348:8e:6090::1) has quit (*.net *.split)
+2019-07-09 13:56:00	<--	carefish (~carefish@ipv6.is1337.eu) has quit (*.net *.split)
+2019-07-09 14:00:57	-->	carefish (~carefish@ipv6.is1337.eu) has joined #reddit-gamedev
+2019-07-09 14:00:57	--	Mode #reddit-gamedev [+v carefish] by ChanServ
+2019-07-09 14:01:29	-->	IkeKrull (~ikey@2a02:348:8e:6090::1) has joined #reddit-gamedev
+2019-07-09 14:14:46	<--	Uhfgood (~Uhfgood@2603:9000:b10e:c500:44ad:7016:1c69:d9f1) has quit (Ping timeout: 276 seconds)
+2019-07-09 14:27:06	-->	elsie273 (~Android@2a01:4c8:41d:dd67:a4d6:e9ff:43c2:fe0d) has joined #reddit-gamedev
+2019-07-09 14:43:13	+Jattenalle	https://www.youtube.com/watch?v=sNkERQlK8j8
+2019-07-09 14:43:25	+Jattenalle	gives me flashbacks to mucking about in DOS back in the day
+2019-07-09 14:44:28	-->	Waynes (~Waynes@unaffiliated/waynes) has joined #reddit-gamedev
+2019-07-09 14:44:28	--	Mode #reddit-gamedev [+v Waynes] by ChanServ
+2019-07-09 14:49:41	+carefish	awesome video Jattenalle
+2019-07-09 14:49:44	+carefish	thanks
+2019-07-09 14:49:55	+carefish	always like seeing breadboard super specific applications
+2019-07-09 14:50:06	+Jattenalle	he's got plenty more, got a long series of him building an 8 bit computer
+2019-07-09 14:50:29	+Jattenalle	but yeah i like these self-contained specific implementations
+2019-07-09 14:50:42	+carefish	hehe
+2019-07-09 14:50:52	+Jattenalle	that CRC video actually also contains transmission and CRC verification, not just CRC calculation
+2019-07-09 14:50:53	+carefish	i like that he shows how he calculated the crc himself
+2019-07-09 14:51:22	+Jattenalle	heh yeah when i saw that and "It's just a bunch of subtraction" my mind went "Hang on... no no no... wait... shit.. yeah!"
+2019-07-09 14:51:32	+Jattenalle	never occured to me that that's literally what it is
+2019-07-09 14:52:29	+carefish	yuken: that video is required watching for you too if you're still mucking about with UDP
+2019-07-09 14:52:54	+Waynes	why, UDP is great
+2019-07-09 14:54:17	+carefish	he's making a game that should have a few 100 connected clients, and i feel that some of these CRC techniques will explain how to do 'guaranteed' deliveries through udp
+2019-07-09 14:55:20	+Waynes	I thought you'd use UDP when you don't want reliability
+2019-07-09 14:55:30	+Jattenalle	pfft, don't be silly carefish, why learn when you can just somelibraryIDownloaded.getCRC(*mydata)
+2019-07-09 14:55:32	+Waynes	or rather, the accompanying latency
+2019-07-09 14:56:05	+Waynes	import zlib;zlib.crc32(data)
+2019-07-09 14:56:13	+carefish	Jattenalle: well...
+2019-07-09 14:56:19	+Waynes	or #include <zlib.h> crc32(...)
+2019-07-09 14:56:22	+carefish	y'know
+2019-07-09 14:56:26	+carefish	screw you guys
+2019-07-09 14:56:28	+carefish	:(
+2019-07-09 14:56:30	+carefish	:P
+2019-07-09 14:56:34	+Waynes	:D
+2019-07-09 14:56:47	+Jattenalle	lol
+2019-07-09 14:57:07	+Waynes	why learn anything if you can just import a library to do it for you
+2019-07-09 14:57:33	+Waynes	programmers are just glorified Dr Frankensteins
+2019-07-09 14:57:47	+carefish	through enough
+2019-07-09 14:58:27	+carefish	and the ones that aren't frankenstein.... are probably either jekyll or hyde.
+2019-07-09 14:58:59	+Jattenalle	true*
+2019-07-09 15:00:27	+carefish	there's not enough caffein coarsing through my veins yet
+2019-07-09 15:00:45	+Waynes	tried an infusion yet?
+2019-07-09 15:01:50	+carefish	nah
+2019-07-09 15:02:06	+carefish	i do kinda wish i had those electronical skills Jattenalle
+2019-07-09 15:02:12	+carefish	it looks super simple
+2019-07-09 15:02:21	+Jattenalle	spoiler: it is super simple
+2019-07-09 15:02:44	+Jattenalle	kind of like programming, easy to get the basics.. the professionalism comes in knowing WHAT and HOW to use things
+2019-07-09 15:02:49	+Waynes	electronics are stupid, every time you want to do something new you have to pay money
+2019-07-09 15:04:11	+carefish	looks like a lot of fun too once you get the hang of it
+2019-07-09 15:04:26	+carefish	which arguably is true for programming (...and many other things too)
+2019-07-09 15:23:12	-->	^|SnIpeR|^ (~drzoids@1.128.111.176) has joined #reddit-gamedev
+2019-07-09 15:23:22	<--	^|SnIpeR|^ (~drzoids@1.128.111.176) has quit (Client Quit)
+2019-07-09 15:35:26	-->	warmwaffles (~warmwaffl@108.174.85.188) has joined #reddit-gamedev
+2019-07-09 15:45:15	-->	Uhfgood (~Uhfgood@2603:9000:b10e:c500:313c:85f0:885e:9610) has joined #reddit-gamedev
+2019-07-09 15:53:21	deniska	electronics is like programming, but a bug can also be a wire connected poorly
+2019-07-09 15:53:33	deniska	and your only debug method is probably a LED.. which could be connected poorly
+2019-07-09 15:54:19	 *	deniska once wired a LED matrix poorly on a breadboard
+2019-07-09 15:54:38	deniska	well, not poorly in terms of connections, but connected wrong places :)
+2019-07-09 15:54:47	deniska	made fixes via software ._.
+2019-07-09 15:56:15	+carefish	lmao
+2019-07-09 15:59:17	deniska	https://zremcom.ru/images/stories/Stat/interes/2011/kulibin/rebol.jpg cursed image
+2019-07-09 16:01:27	+carefish	wait wot
+2019-07-09 16:02:23	+carefish	resoldered... southbridge? possessed with that zombie funghi lol
+2019-07-09 16:03:07	+Jattenalle	extreme overclocking
+2019-07-09 16:03:14	+Jattenalle	raise the CPU for better cooling access
+2019-07-09 16:03:21	+Jattenalle	those were the days
+2019-07-09 16:04:03	+Jattenalle	extreme, as in, liquid nitrogen/helium
+2019-07-09 16:05:07	+carefish	hmm
+2019-07-09 16:14:28	n0tus	Waynes: lets not forget the pain in the ass that is sourcing rare parts and group buys
+2019-07-09 16:16:27	+Waynes	rare parts
+2019-07-09 16:16:35	+Waynes	like shiny ICs lol
+2019-07-09 16:20:20	+zebbiz_pi	deniska: What do you think of this? https://imgur.com/TSLFpIn
+2019-07-09 16:20:56	warmwaffles	cable porn worthy
+2019-07-09 16:22:16	+carefish	Jattenalle: that hw clip is great
+2019-07-09 16:25:51	+Waynes	zebbiz_pi: someone spilled his spaghetti
+2019-07-09 16:30:10	+carefish	soo, another question popped in my mind today
+2019-07-09 16:31:18	+carefish	stuff like rust and vulkan should go hand in hand right? can rust emit those as thread safe libraries with generated C header files?
+2019-07-09 16:33:28	+Jattenalle	zebbiz_pi, just dip it in hotglue and ship it... "Production quality"
+2019-07-09 16:35:29	+Waynes	anyone actually using rust?
+2019-07-09 16:35:53	+zebbiz_pi	Waynes: Mozilla
+2019-07-09 16:36:28	+Waynes	*anyone you know actually using rust?
+2019-07-09 16:36:48	+Jattenalle	crazy people?
+2019-07-09 16:37:13	+Waynes	rust seemed like too much work for me
+2019-07-09 16:39:12	+carefish	well
+2019-07-09 16:39:19	+carefish	i kinda see some future in it
+2019-07-09 16:39:30	+carefish	with it's ability to spit out webassembly
+2019-07-09 16:39:59	+Waynes	can't everything be compiled to webassembly these days
+2019-07-09 16:40:03	+carefish	so you could abstract away platform specific rendering, and still have a webgame using webgl/canvas
+2019-07-09 16:40:16	+shan	FUCk
+2019-07-09 16:40:19	+Waynes	threads are still shit though
+2019-07-09 16:40:21	+shan	i have a game to make
+2019-07-09 16:40:32	+Waynes	shan: best of luck
+2019-07-09 16:40:50	n0tus	i like rust, i personally like working with things like option and result types and the ability to reduce runtime errors with them, its the same thing that Elm does really well IMO, Elm is just more strict
+2019-07-09 16:41:06	+shan	Waynes: do i work on the combat and movement first or do i build a playable demo showing off exploration and dialogue first
+2019-07-09 16:41:14	+carefish	i don't know what elm is
+2019-07-09 16:41:25	+Waynes	shan: doesn't a playable demo require movement
+2019-07-09 16:41:38	+shan	Waynes: right, i already have movement
+2019-07-09 16:41:40	+carefish	the other reason i was looking at rust is because it also seems to play nice with blazor's webassembly stuff
+2019-07-09 16:42:02	n0tus	elm is a purely functional language for making web frontends
+2019-07-09 16:42:06	+Waynes	shan: start with whatever is necessary to get the general feel of the game
+2019-07-09 16:42:15	+shan	hmmmmm...
+2019-07-09 16:42:19	n0tus	the most used architecture used in web frontends today which is flux and its derivatives, come from Elm
+2019-07-09 16:42:27	+shan	but that means animations. I don't have animations.
+2019-07-09 16:42:39	+Waynes	shan: so you waste less time if you find out that your game idea is not fun after all
+2019-07-09 16:42:49	+Waynes	shan: don't need animations for that
+2019-07-09 16:42:49	+carefish	mixamo animation packs shan
+2019-07-09 16:42:52	+carefish	those are free.
+2019-07-09 16:42:56	+shan	Waynes: looks like it'll be combat first, then
+2019-07-09 16:43:19	+carefish	hm, ok
+2019-07-09 16:43:34	+shan	carefish: thanks for tip, i'll do the animation right after i have a movement demo
+2019-07-09 16:43:59	+carefish	also they have fighting moves in there
+2019-07-09 16:44:05	+carefish	so you should be ok for a while
+2019-07-09 16:44:16	+shan	carefish: are there robots
+2019-07-09 16:44:26	+shan	also i REALLY wanna make a 3d game
+2019-07-09 16:44:37	+Waynes	don't
+2019-07-09 16:44:38	+carefish	grab unity, get moving
+2019-07-09 16:44:43	+Waynes	you can't afford the assets
+2019-07-09 16:44:59	+carefish	there's tons of free unity packages for prototyping though
+2019-07-09 16:45:00	+shan	carefish: EWWW unity
+2019-07-09 16:45:06	+shan	godot :)
+2019-07-09 16:45:17	+carefish	if you want to know if your game idea is fun, imo unity gets that across really fast
+2019-07-09 16:45:28	+carefish	i don't know how fast godot is in prototyping
+2019-07-09 16:45:29	+shan	yee...
+2019-07-09 16:45:38	+shan	nah, i should stick to 2d
+2019-07-09 16:45:41	+shan	im just one guy
+2019-07-09 16:46:12	+shan	brb, though
+2019-07-09 16:46:15	<--	shan (~shan@unaffiliated/jasatso1301) has quit (Quit: kthxbai)
+2019-07-09 16:47:18	-->	shan (~shan@unaffiliated/jasatso1301) has joined #reddit-gamedev
+2019-07-09 16:47:18	--	Mode #reddit-gamedev [+v shan] by ChanServ
+2019-07-09 16:47:22	+shan	bacl
+2019-07-09 16:48:15	+shan	i'm also wondering if i need a whole physics system
+2019-07-09 16:48:28	+shan	or if i can make do with what i have
+2019-07-09 16:50:32	+carefish	for combat/movement, do you need physics 'now'?
+2019-07-09 16:50:43	+carefish	i don't think so. first make that then see later
+2019-07-09 16:50:44	+carefish	gogogo
+2019-07-09 16:50:49	+carefish	make make create
+2019-07-09 16:50:50	+shan	mmm
+2019-07-09 16:50:51	+carefish	etc
+2019-07-09 16:58:54	+shan	god damn it
+2019-07-09 16:59:04	+shan	returned to codebase after couple of weeks
+2019-07-09 16:59:14	+shan	suddenly, collision is completely fucking broken
+2019-07-09 17:00:47	deniska	shan: do you use current date in calculations?
+2019-07-09 17:00:55	+shan	deniska: No lol
+2019-07-09 17:02:58	+Waynes	things will be fun when time overflows 31 bits
+2019-07-09 17:04:29	+shan	crap, i'll just start a fresh codebase
+2019-07-09 17:04:30	deniska	Waynes: I don't think I'd sign under that, 32 bit overflow will be more drastic
+2019-07-09 17:04:35	+shan	clearly past me was retarded
+2019-07-09 17:05:04	+Waynes	shan: that will always be the case as long as you grow as a programmer
+2019-07-09 17:05:10	+shan	hahah
+2019-07-09 17:05:13	+shan	true
+2019-07-09 17:05:17	+Waynes	deniska: yes, but also way further in the future
+2019-07-09 17:20:48	<--	Waynes (~Waynes@unaffiliated/waynes) has quit (Quit: Leaving.)
+2019-07-09 17:45:23	-->	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has joined #reddit-gamedev
+2019-07-09 17:49:52	<--	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has quit (Ping timeout: 268 seconds)
+2019-07-10 09:01:33	-->	Syrinxos (~syrinxos@host-131-114-213-6.m.unipi.it) has joined #reddit-gamedev
+2019-07-10 09:01:33	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-07-10 09:01:33	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-07-10 09:01:33	--	Channel #reddit-gamedev: 74 nicks (0 ops, 21 voices, 53 normals)
+2019-07-10 09:01:37	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-07-10 09:01:45	+Jonas___	yes, I'm a pussy I guess
+2019-07-10 09:05:47	<--	shantaram (uid207478@gateway/web/irccloud.com/x-toofdgtilqemsiwe) has quit (Quit: Connection closed for inactivity)
+2019-07-10 09:19:52	<--	shantaram94 (76b9fd42@unaffiliated/jasatso1301) has quit (Remote host closed the connection)
+2019-07-10 10:02:35	+zebbiz_pi	Jonas___: No, pussy implies something good
+2019-07-10 10:02:39	+zebbiz_pi	You're just a wuss
+2019-07-10 10:03:12	+Jonas___	well, then it's good that I've got tires I can actually brake well with, now
+2019-07-10 10:03:18	+Jonas___	for all my going slow needs
+2019-07-10 10:05:30	+zebbiz_pi	aye
+2019-07-10 10:13:46	+bomb	I HATE U
+2019-07-10 10:13:47	<--	bomb (~bomb@gateway/tor-sasl/bomb) has quit (Quit: .)
+2019-07-10 10:29:21	+Jonas___	no need to blow up on us
+2019-07-10 10:39:43	yuken	Jonas___, was that a pun
+2019-07-10 10:39:59	+Jonas___	yuken count on it
+2019-07-10 10:40:12	yuken	okay you're banned from freenode
+2019-07-10 10:40:18	+Jonas___	:(
+2019-07-10 10:58:31	+carefish	yuken: no, you need to batch those calls yourself.
+2019-07-10 11:00:24	yuken	right now, my drawing code looks like this: "for i in 0..xyz { canvas.copy(&texture, src, dst); } canvas.present()" carefish.
+2019-07-10 11:00:36	yuken	GOt any good articles on draw batching, or should I GOogle it? :P
+2019-07-10 11:00:51	+carefish	google, try it out, if it doesn't work ask questions and post links used
+2019-07-10 11:00:56	yuken	mmkay.
+2019-07-10 11:01:02	+carefish	seriously good to always google for that stuff
+2019-07-10 11:01:08	+carefish	then try it out/poke at it
+2019-07-10 11:01:23	+carefish	if either didn't work out, ask questions :p
+2019-07-10 11:01:32	yuken	Right now, with software rendering in SDL, that above method is eating up 70% CPU
+2019-07-10 11:01:36	yuken	on a 4GHz 4790k lul
+2019-07-10 11:01:38	+carefish	but imo it's not too difficult.
+2019-07-10 11:01:48	+carefish	yeah that's kinda bad
+2019-07-10 11:01:58	yuken	I can't look anything up r/n, or I would have done that before asking. Weird internet situation here.
+2019-07-10 11:02:01	+carefish	how do you know it's that for loop tho
+2019-07-10 11:02:03	yuken	but I'll do it in an hour or so
+2019-07-10 11:02:10	yuken	I commented it out, dropped to 0.1% load, carefish
+2019-07-10 11:03:27	+carefish	so you might wanna batch your calls then ;)
+2019-07-10 11:03:56	+carefish	anyway, common technique is to 'save' all the draw calls, and then send all of those at once at the end of the frame
+2019-07-10 11:04:38	yuken	I'd assume with hardware acceleration, calling "canvas.copy" does that, and then "canvas.present" is what flushes it to the GPU
+2019-07-10 11:04:45	yuken	but idk with software rendering.
+2019-07-10 11:04:53	+carefish	ListOfObjectsToDraw.Add(sprite)
+2019-07-10 11:05:03	+carefish	render.draw(ListOfObjects)
+2019-07-10 11:05:38	yuken	oh, hm. pretty simple, I'll look at SDL2's Rust docs to see if it can render a list of stuff like that.
+2019-07-10 11:06:29	yuken	I also got map loading, serde_json saved my ass - it can copy a strict-typed json file into a Rust struct suepr easily, so I can just do that and then generate a tile map from a Tiled map. https://gist.github.com/YukenK/a0a89129ffca0cfd71783bf16a747b28
+2019-07-10 11:06:31	yuken	which is super awesome.
+2019-07-10 11:07:09	+carefish	nice. always good to use tools for serialization when you're starting out imo
+2019-07-10 11:08:05	yuken	I'm probably gonna use a good compression library to send the data over the network, too. Dunno what to pick though.
+2019-07-10 11:08:07	+carefish	so you have to make sure the tile textures are on 1 opengl texture yuken, that should fix the lot of it
+2019-07-10 11:08:13	yuken	LZ4 seems popular enough.
+2019-07-10 11:08:14	+carefish	zlib
+2019-07-10 11:08:18	+carefish	just use zlib
+2019-07-10 11:08:31	yuken	carefish, no OpenGL here, software rendering. All the tile textures are, right now, on 1 png.
+2019-07-10 11:08:40	yuken	1024x1024, and I'll create a 2nd 1024x1024 texture if I need more.
+2019-07-10 11:08:42	+carefish	microsoft moved to using zlib in their compression streams in .net core
+2019-07-10 11:08:57	yuken	what's the license on zlib?
+2019-07-10 11:09:08	+carefish	idk, super permissive.
+2019-07-10 11:09:18	+carefish	anyway, if all your textures are on 1 spritesheet already
+2019-07-10 11:09:28	yuken	sounds good to me then. although, if I do wanna do a DOS port for fun, idk if I should compress stuff for that
+2019-07-10 11:09:32	+carefish	then you gotta provide proper clipping masks and you're almost half way already
+2019-07-10 11:09:35	yuken	seems like it would take longer to decompress than to send the data lul
+2019-07-10 11:09:42	yuken	clipping masks, carefish?
+2019-07-10 11:10:37	yuken	I assume those are essentially pointing to where the texture is in the file, right?
+2019-07-10 11:12:53	+carefish	https://www.patreon.com/posts/project-sdl-21856507
+2019-07-10 11:12:58	+carefish	that article looks promising.
+2019-07-10 11:13:19	+carefish	ctrl-f for 'sdl_sethint"
+2019-07-10 11:13:20	yuken	I'll check it out when I can, thanks. I would have Googled it first but again,w eird internet stuff r/n, so I'm just watching anime for an hour
+2019-07-10 11:13:30	yuken	And thanks for putting up with my annoyances ;)
+2019-07-10 11:14:52	yuken	So for my UI, I'm thinking of just iterating through all appropriate UI elements each frame and checking mouse position, seems like it would work fairly well. There was a good immediate-mode GUI article somewhere, C, that showed you how to do that.
+2019-07-10 11:21:05	+carefish	i'm kinda ok w/ questions and stuff. but sometimes your questions feel way too much like a google hit away and imo it's one of the skills to learn to make learning programming easier overall
+2019-07-10 11:21:21	yuken	I do know how to Google, I dunno why I keep asking in here.
+2019-07-10 11:22:03	+carefish	also throw your shtuff on github
+2019-07-10 11:22:12	+carefish	makes it far easier for us to poke at it
+2019-07-10 11:22:17	yuken	fiiiine.
+2019-07-10 11:23:04	yuken	... I should probably go write up a little design doc for this, otherwise it's gonna sprawl out of control fast.
+2019-07-10 11:26:26	+carefish	yeah
+2019-07-10 11:26:28	+carefish	it will
+2019-07-10 11:26:41	+carefish	so define what an alpha looks like, beta looks like, etc
+2019-07-10 11:27:01	yuken	not just that, but how each system kinda talks to eachother. I don't wanna write it on the fly and the nhave to revamp it 9 times and then pull out entire systems.
+2019-07-10 11:27:06	+carefish	and... 'fuck new features.' throw those on the 'nice to have' pile straight away
+2019-07-10 11:27:14	yuken	I'm trying to go for extreme modularity here, basically.
+2019-07-10 11:27:22	yuken	So most systems should be unreliant on others, except for the base system.
+2019-07-10 11:27:23	+carefish	you'[re gonna need to do that anyways since you're learning
+2019-07-10 11:27:40	+carefish	i'd go with making the game being more improtant than modularity
+2019-07-10 11:28:00	+carefish	the skills you get while making the game will show you how to do it better 'later'
+2019-07-10 11:28:14	yuken	I've made games before! Just never at scale :p
+2019-07-10 11:29:31	+carefish	and never in rust before
+2019-07-10 11:29:39	+carefish	amirite
+2019-07-10 11:29:43	yuken	hey you shut up
+2019-07-10 11:30:01	+carefish	so. focus on the game, not its modularity.
+2019-07-10 11:30:18	+carefish	nice to think that way, but makey makey gamey gamey
+2019-07-10 11:30:47	yuken	I just put pen on paper and holy crap, my handwriting is worse than doctor's chicken scratch
+2019-07-10 11:30:51	yuken	I never lift my hand up... writing print.
+2019-07-10 11:31:29	+carefish	i am saddened. rip torn died
+2019-07-10 11:31:36	yuken	who :o?
+2019-07-10 11:31:43	+carefish	omg man
+2019-07-10 11:31:49	+carefish	you unculturedswine
+2019-07-10 11:31:58	yuken	I know nothing of this person.
+2019-07-10 11:32:13	+carefish	https://www.youtube.com/watch?v=QhHSqaU9kqY
+2019-07-10 11:32:35	-->	larpon (~lmp@193-106-166-119.ip4.fiberby.net) has joined #reddit-gamedev
+2019-07-10 11:33:47	+carefish	go watch the movie 'dodgeball' with him in it
+2019-07-10 11:33:49	+carefish	2004
+2019-07-10 11:34:04	+carefish	seriously good laugh, if you kinda like corny-ish humor lol
+2019-07-10 11:34:14	yuken	hm, I've vaguely heard of the name of that movie.
+2019-07-10 11:38:54	+carefish	anyway, rip torn is known for playing in the men in black series (zed), don geiss from 30 rock, down periscope (admiral winslow)
+2019-07-10 11:39:09	+carefish	dodgeball, as i said earlier
+2019-07-10 11:39:14	yuken	don geiss...
+2019-07-10 11:39:17	+carefish	and some more movies/series i'm probably forgetting
+2019-07-10 11:39:20	yuken	I saw 30 Rock and I'm not sure if I remember him.
+2019-07-10 11:39:55	+carefish	jack's boss
+2019-07-10 11:40:55	+carefish	anyways
+2019-07-10 11:41:03	+carefish	i gotta get my head in the zone forcoding today
+2019-07-10 11:41:08	+carefish	gotta get a lot of stuff done
+2019-07-10 11:41:16	yuken	do it or I'll destroy your life, that should motivate you.
+2019-07-10 11:42:11	+carefish	you don't even know where to find me
+2019-07-10 11:42:13	+carefish	haaa
+2019-07-10 11:42:33	yuken	Sure I don't ;)
+2019-07-10 11:44:08	yuken	Did you see the prototype Mars home? It's good enough that I'd live in it on Earth.
+2019-07-10 12:03:22	<--	buirg (~buirg@178.128.75.133) has quit (Ping timeout: 245 seconds)
+2019-07-10 12:09:42	yuken	hmm
+2019-07-10 12:10:04	yuken	carefish, I'm looking through the Rust SDL2 docs in its canvas, and cant' see anything that would let me, say, batch render by giving it an array of items or something of that nature.
+2019-07-10 12:10:51	-->	buirg (~buirg@178.128.75.133) has joined #reddit-gamedev
+2019-07-10 12:18:14	--	irc: disconnected from server
+2019-07-10 12:18:40	-->	Syrinxos (~syrinxos@host-131-114-213-6.m.unipi.it) has joined #reddit-gamedev
+2019-07-10 12:18:40	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-07-10 12:18:40	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-07-10 12:18:40	--	Channel #reddit-gamedev: 72 nicks (0 ops, 18 voices, 54 normals)
+2019-07-10 12:18:54	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-07-10 12:22:01	<--	mukunda (mukunda@adsl-74-240-51-91.jan.bellsouth.net) has quit (Ping timeout: 246 seconds)
+2019-07-10 12:22:27	yuken	oh jeez carefish, apparently the built-in SDL2 rendering stuff won't really work for batching.
+2019-07-10 12:24:49	yuken	oh wait, hm. I may be retarded too, I'm rendering the entire 128x128 area...
+2019-07-10 12:30:58	<--	buirg (~buirg@178.128.75.133) has quit (Ping timeout: 268 seconds)
+2019-07-10 12:34:04	-->	buirg (~buirg@178.128.75.133) has joined #reddit-gamedev
+2019-07-10 12:37:07	<--	bttf (~bttf@138.68.16.63) has quit (Ping timeout: 245 seconds)
+2019-07-10 12:38:39	-->	bttf (~bttf@138.68.16.63) has joined #reddit-gamedev
+2019-07-10 12:41:58	yuken	carefish, huh, well I magically got it down to 2% CPU use.
+2019-07-10 12:48:49	-->	Uhfgood (~Uhfgood@2603:9000:b10e:c500:709a:cbfd:7c97:ec01) has joined #reddit-gamedev
+2019-07-10 12:55:43	+zebbiz_pi	yuken: Because it's not running at all?
+2019-07-10 13:04:20	-->	DrGonzo (~DrGonzo@modemcable080.164-57-74.mc.videotron.ca) has joined #reddit-gamedev
+2019-07-10 13:19:24	yuken	nah zebbiz_pi, only rendering what's in view + optimized release
+2019-07-10 14:36:27	-->	steelgolem_ (~SteelGole@sydnns0115w-47-55-207-18.dhcp-dynamic.fibreop.ns.bellaliant.net) has joined #reddit-gamedev
+2019-07-10 14:39:37	<--	steelgolem__ (~SteelGole@sydnns0115w-47-55-207-18.dhcp-dynamic.fibreop.ns.bellaliant.net) has quit (Ping timeout: 245 seconds)
+2019-07-10 15:02:03	-->	steelgolem__ (~SteelGole@sydnns0115w-47-55-207-18.dhcp-dynamic.fibreop.ns.bellaliant.net) has joined #reddit-gamedev
+2019-07-10 15:05:02	<--	steelgolem_ (~SteelGole@sydnns0115w-47-55-207-18.dhcp-dynamic.fibreop.ns.bellaliant.net) has quit (Ping timeout: 244 seconds)
+2019-07-10 15:25:00	+Jattenalle	yuken, SDL2 itself doesnt let you batch, use OpenGL for that
+2019-07-10 15:25:11	+Jattenalle	you can get an opengl context super easily by using SDL2 to setup your window
+2019-07-10 15:25:36	+Jattenalle	it's a common use case: use SDL2 to create window and deal with OS crap, and use the context it gives you
+2019-07-10 15:25:47	+Jattenalle	from then on you just use GL stuff, and dont touch SDL again
+2019-07-10 15:26:35	+Jattenalle	all that said, if you enable double buffering, the GPU will be smart enough to batch.. even without double buffering it'll probably batch
+2019-07-10 15:26:47	+Jattenalle	err, the driver*
+2019-07-10 15:28:27	-->	steelgolem_ (~SteelGole@sydnns0115w-47-55-207-18.dhcp-dynamic.fibreop.ns.bellaliant.net) has joined #reddit-gamedev
+2019-07-10 15:30:23	+Jattenalle	carefish, aaw man, rip torn was great
+2019-07-10 15:30:28	+shan	ew
+2019-07-10 15:30:31	 *	shan pukes
+2019-07-10 15:30:42	+shan	still no work on the game done than what was this morning
+2019-07-10 15:31:11	+shan	watched three episodes of black mirror though
+2019-07-10 15:31:23	<--	steelgolem__ (~SteelGole@sydnns0115w-47-55-207-18.dhcp-dynamic.fibreop.ns.bellaliant.net) has quit (Ping timeout: 244 seconds)
+2019-07-10 15:38:07	<--	steelgolem_ (~SteelGole@sydnns0115w-47-55-207-18.dhcp-dynamic.fibreop.ns.bellaliant.net) has quit (Read error: Connection reset by peer)
+2019-07-10 15:38:33	-->	steelgolem_ (~SteelGole@sydnns0115w-47-55-207-18.dhcp-dynamic.fibreop.ns.bellaliant.net) has joined #reddit-gamedev
+2019-07-10 15:38:54	-->	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has joined #reddit-gamedev
+2019-07-10 15:39:16	<--	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has quit (Remote host closed the connection)
+2019-07-10 15:40:31	+carefish	hmm
+2019-07-10 15:40:40	+carefish	so i tried stuff w/ C#'s reflection
+2019-07-10 15:40:45	+carefish	specifically DynamicMethod
+2019-07-10 15:41:09	+carefish	and it seems that's approx 2 to 4ms slower than a native func (fibonacci) when done 100k times
+2019-07-10 15:41:14	+carefish	that is super cool to know
+2019-07-10 15:41:41	+carefish	not entirely sure whats causing the fluctuation
+2019-07-10 15:42:21	+carefish	'native' i mean native to C#
+2019-07-10 15:42:28	+carefish	not unsafe blocks and stuff
+2019-07-10 15:44:34	-->	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has joined #reddit-gamedev
+2019-07-10 15:47:54	-->	mukunda (mukunda@adsl-74-240-51-91.jan.bellsouth.net) has joined #reddit-gamedev
+2019-07-10 15:48:47	<--	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has quit (Ping timeout: 245 seconds)
+2019-07-10 15:52:01	-->	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has joined #reddit-gamedev
+2019-07-10 16:19:20	<--	NomadJim (~NomadJim@pdpc/supporter/active/nomadjim) has quit (Read error: No route to host)
+2019-07-10 16:19:55	-->	NomadJim (~NomadJim@pdpc/supporter/active/nomadjim) has joined #reddit-gamedev
+2019-07-10 16:19:55	--	Mode #reddit-gamedev [+v NomadJim] by ChanServ
+2019-07-10 16:20:37	<--	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has quit (Remote host closed the connection)
+2019-07-10 16:21:01	<--	NomadJim (~NomadJim@pdpc/supporter/active/nomadjim) has quit (Read error: No route to host)
+2019-07-10 16:21:29	-->	NomadJim (~NomadJim@pdpc/supporter/active/nomadjim) has joined #reddit-gamedev
+2019-07-10 16:21:29	--	Mode #reddit-gamedev [+v NomadJim] by ChanServ
+2019-07-10 16:25:36	-->	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has joined #reddit-gamedev
+2019-07-10 16:30:36	<--	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has quit (Ping timeout: 258 seconds)
+2019-07-10 16:50:35	-->	ImQ009 (~ImQ009@unaffiliated/imq009) has joined #reddit-gamedev
+2019-07-10 16:58:44	-->	cruelnoise (~cruelnois@glphon2233w-grc-03-174-95-42-63.dsl.bell.ca) has joined #reddit-gamedev
+2019-07-10 17:12:53	-->	HZun (~HZun@0x3ec721e2.osd.customer.dk.telia.net) has joined #reddit-gamedev
+2019-07-10 17:18:13	<--	HZun (~HZun@0x3ec721e2.osd.customer.dk.telia.net) has quit (Quit: Leaving)
+2019-07-10 17:22:48	<--	n0tus (uid352043@gateway/web/irccloud.com/x-bcdnhaobajurprnb) has quit (Quit: Connection closed for inactivity)
+2019-07-10 17:40:28	<--	mukunda (mukunda@adsl-74-240-51-91.jan.bellsouth.net) has quit (Ping timeout: 245 seconds)
+2019-07-10 22:38:43	-->	Syrinxos (~syrinxos@net-93-65-141-249.cust.vodafonedsl.it) has joined #reddit-gamedev
+2019-07-10 22:38:43	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-07-10 22:38:43	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-07-10 22:38:43	--	Channel #reddit-gamedev: 77 nicks (0 ops, 18 voices, 59 normals)
+2019-07-10 22:38:46	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-07-10 23:04:19	<--	elsie808 (~elsie808@94.8.210.117) has quit (Read error: Connection reset by peer)
+2019-07-10 23:11:51	-->	Syrinxos (~syrinxos@net-93-65-141-249.cust.vodafonedsl.it) has joined #reddit-gamedev
+2019-07-10 23:11:51	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-07-10 23:11:51	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-07-10 23:11:51	--	Channel #reddit-gamedev: 76 nicks (0 ops, 18 voices, 58 normals)
+2019-07-10 23:11:55	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-07-10 23:15:54	<--	mukunda (~mukunda@adsl-74-240-51-91.jan.bellsouth.net) has quit (Read error: Connection reset by peer)
+2019-07-11 09:02:22	-->	Syrinxos (~syrinxos@host-131-114-213-6.m.unipi.it) has joined #reddit-gamedev
+2019-07-11 09:02:22	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-07-11 09:02:22	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-07-11 09:02:22	--	Channel #reddit-gamedev: 68 nicks (0 ops, 17 voices, 51 normals)
+2019-07-11 09:02:26	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-07-11 09:04:12	<--	DerHase (~Dave@catv-80-98-155-44.catv.broadband.hu) has quit (Ping timeout: 245 seconds)
+2019-07-11 09:11:53	<--	cruelnoise (~cruelnois@glphon2233w-grc-03-174-95-42-63.dsl.bell.ca) has quit (Read error: Connection reset by peer)
+2019-07-11 09:21:53	+jonas__	yuken take photos now?
+2019-07-11 09:22:02	+jonas__	linux truly is the desktop of the future
+2019-07-11 09:22:11	yuken	jonas__, i'm gonna ban you
+2019-07-11 09:22:31	+jonas__	yukent :|
+2019-07-11 10:17:17	<--	n0tus (uid352043@gateway/web/irccloud.com/x-yljgekermrmieefs) has quit (Quit: Connection closed for inactivity)
+2019-07-11 11:49:52	-->	larpon (~lmp@193-106-166-119.ip4.fiberby.net) has joined #reddit-gamedev
+2019-07-11 12:01:38	-->	elsie273 (~Android@2a01:4c8:41d:dd67:52ab:ff31:c829:5df) has joined #reddit-gamedev
+2019-07-11 12:03:56	<--	larpon (~lmp@193-106-166-119.ip4.fiberby.net) has quit (Quit: Konversation terminated!)
+2019-07-11 12:04:14	-->	larpon (~lmp@193-106-166-119.ip4.fiberby.net) has joined #reddit-gamedev
+2019-07-11 12:30:02	-->	shfil (uid293885@gateway/web/irccloud.com/x-sgeznvspwodubzgs) has joined #reddit-gamedev
+2019-07-11 12:34:35	+carefish	yuken: make sure to post pics/gifs of progress :)
+2019-07-11 12:34:53	+carefish	and it might be worth your while to write down like 2/3 sentences when you make those progress pics
+2019-07-11 12:35:13	+carefish	in a few months from now you can use that to stay motivated when the main nbulk of the theings are done
+2019-07-11 12:36:25	+carefish	litterally a google slides thing where each slide has 1 or 2 pics/gifs with a teeny bit o' text
+2019-07-11 12:36:54	yuken	oooh, good idea carefish.
+2019-07-11 12:37:46	+carefish	so at the end of each work day
+2019-07-11 12:37:50	+carefish	spend 5 minutes doing this
+2019-07-11 12:37:56	+carefish	you're gonna thank yourself later
+2019-07-11 12:41:13	-->	Uhfgood (~Uhfgood@2603:9000:b10e:c500:192e:92ff:ec8:afe2) has joined #reddit-gamedev
+2019-07-11 13:02:42	+shan	watching baby driver again
+2019-07-11 13:03:24	+shan	yuken: can i see the game pic you apparently sent earlier that i missed?
+2019-07-11 13:03:32	yuken	carefish, wanna see the blyatiful code? I'm gonna put it on githoob later today too
+2019-07-11 13:03:36	yuken	or my own hosted cgit instance
+2019-07-11 13:03:38	yuken	probably that
+2019-07-11 13:05:31	-->	Cahaan (~Cahaan@91.180.35.171) has joined #reddit-gamedev
+2019-07-11 13:05:31	--	Mode #reddit-gamedev [+v Cahaan] by ChanServ
+2019-07-11 13:09:16	elsie273	i tried looking up cgit
+2019-07-11 13:09:23	elsie273	"canadian girls in training"
+2019-07-11 13:10:39	+carefish	what the hell is cgit
+2019-07-11 13:10:51	+carefish	also github is free now
+2019-07-11 13:10:57	+carefish	unlimited free private repo's
+2019-07-11 13:10:59	+carefish	etc etc
+2019-07-11 13:20:50	yuken	cgit is self-hosted web git
+2019-07-11 13:20:54	yuken	written in c, hence "c"
+2019-07-11 13:21:09	yuken	you've probably seen it a lot, most self-hosted stuff that I know of uses it
+2019-07-11 13:24:05	yuken	https://gist.github.com/YukenK/82650c301acb109fba901a5374e79ca3 is what my render/client code looks like carefish, 4% CPU use on a 4790k seems pretty acceptable for the general release client.
+2019-07-11 13:24:26	yuken	and I can probably optimize it more by batching tiles if I want, like turning every 4x4 group of identical tiles into a single render copy instead, but that's more advanced stuff.
+2019-07-11 13:27:55	+shan	yuken: what is set_viewport ?
+2019-07-11 13:28:55	yuken	that... isn't obvious? it's setting the viewport.
+2019-07-11 13:29:28	+shan	what provides it i mean
+2019-07-11 13:29:32	+shan	did you write it yourself
+2019-07-11 13:29:35	+shan	the function
+2019-07-11 13:29:38	yuken	"window.canvas"
+2019-07-11 13:29:59	+shan	and is that rust or go or what
+2019-07-11 13:30:29	+shan	rust, it's rust
+2019-07-11 13:31:08	+shan	mmm it has dynamic typing and does not require brackets in if statements
+2019-07-11 13:31:11	+shan	i like this
+2019-07-11 13:31:17	yuken	uh
+2019-07-11 13:31:19	yuken	it has no dynamic typing
+2019-07-11 13:33:19	+carefish	https://imgur.com/gallery/ak5w2bV
+2019-07-11 13:34:29	+carefish	i don't see any advantage of self-hosted git for personal projects :P only when i deal with clients that have the requirement that data stays on-premise i deal with self-hosted git
+2019-07-11 13:34:50	+carefish	otherwise, any of the git providers (github, bitbucket, gitlab) will work just fine
+2019-07-11 13:36:14	+carefish	and even then, when it's self-hosted, i usually grab gitlab cause it is amazeballs. though it's not exactly a lean package
+2019-07-11 13:36:27	<--	larpon (~lmp@193-106-166-119.ip4.fiberby.net) has quit (Quit: Konversation terminated!)
+2019-07-11 13:37:33	+jonas__	elsie273, you didn't highlight me when you responded yesterday, so I didn't notice
+2019-07-11 13:37:49	+jonas__	whyfor the sudden burst of energy, did you discover cocaine?
+2019-07-11 13:39:49	+zebbiz_pi	https://www.youtube.com/watch?v=qYS732zyYfU
+2019-07-11 13:49:34	<--	Uhfgood (~Uhfgood@2603:9000:b10e:c500:192e:92ff:ec8:afe2) has quit (Ping timeout: 276 seconds)
+2019-07-11 13:50:45	elsie273	jonas__ no idk why
+2019-07-11 13:50:51	elsie273	i didn't tidy very much
+2019-07-11 13:51:13	elsie273	i need to do it tonight because i have a person doing a thing on friday
+2019-07-11 13:51:20	+jonas__	sometimes I get those bursts of energy as well
+2019-07-11 13:51:28	+jonas__	and I go around tidying
+2019-07-11 13:51:40	+jonas__	other times I just don't do anything and let things pile up
+2019-07-11 13:52:00	+jonas__	right now I have unwashed dishes waiting for me because I was lazy yesterday
+2019-07-11 13:52:06	elsie273	i moved a monitor on to a box and set up a standing setup that might help me
+2019-07-11 13:52:31	+jonas__	you got one of those raise/lowerable desks?
+2019-07-11 13:52:34	elsie273	i've decided to do a game jam this weekend and see if i can actually do work again. because it's been months now
+2019-07-11 13:52:43	elsie273	no, i have lots of cardboard boxes
+2019-07-11 13:53:57	+jonas__	diy, I like it
+2019-07-11 13:54:09	+jonas__	the IKEA man can't take your money if you just use box
+2019-07-11 14:07:32	yuken	carefish, I prefer self-hosting for everything where I can
+2019-07-11 14:21:38	-->	shantaram (uid207478@gateway/web/irccloud.com/x-fgyotrzpgvafwkul) has joined #reddit-gamedev
+2019-07-11 14:21:39	--	Mode #reddit-gamedev [+v shantaram] by ChanServ
+2019-07-11 14:31:58	+carefish	which game jam elsie273?
+2019-07-11 15:11:35	elsie273	idk, any
+2019-07-11 15:11:44	elsie273	just an excuse to do something
+2019-07-11 15:12:01	elsie273	jonas docker for windows is so slow
+2019-07-11 15:18:46	+jonas__	yeah, windows for dev is just a gui for my linux machines, tbh
+2019-07-11 15:19:22	elsie273	in this case i want to automate deployment of our .net sites
+2019-07-11 15:19:44	elsie273	but filesystem access is horrendously show
+2019-07-11 15:19:47	elsie273	slow
+2019-07-11 15:20:28	elsie273	i'm going to try a machine with an ssd soon
+2019-07-11 15:21:17	yuken	No SSDs in 2019?!
+2019-07-11 15:26:34	deniska	not everyone is rich :)
+2019-07-11 15:27:07	+carefish	20 bucks for 120gb ssd
+2019-07-11 15:28:13	yuken	SSDs are NOT expensive, deniska
+2019-07-11 15:28:53	+shan	carefish: link?
+2019-07-11 15:32:48	+carefish	crucial bx500 120gb 18,50 euro's / 240 gb 27,76 euro's
+2019-07-11 15:33:04	+carefish	https://www.amazon.com/Crucial-BX500-120GB-2-5-Inch-Internal/dp/B07G3L3DRK
+2019-07-11 15:38:48	deniska	yuken: well, per GB they are quite more costly
+2019-07-11 15:39:04	deniska	240gb can hold like 2 AAA games :)
+2019-07-11 15:40:00	+carefish	i use 1 256gb for os+apps, and one game
+2019-07-11 15:40:15	+carefish	the game gets removed/replaced whenever i want to play something else though
+2019-07-11 15:40:43	+carefish	installing any game through steam generally takes less than 5 minutes
+2019-07-11 15:41:47	yuken	deniska, ok
+2019-07-11 15:41:52	yuken	buy a 1TB SSD or a 2TB SSD then.
+2019-07-11 15:45:12	deniska	yuken: and those are not too cheap
+2019-07-11 15:45:26	yuken	sure they are.
+2019-07-11 15:45:30	yuken	1TB is $89, 2TB is $160~
+2019-07-11 15:45:40	deniska	carefish: ah, so having small ssd is ok if you're on fiber :)
+2019-07-11 15:46:01	deniska	yuken: 90$ was like half of the cost of my PC already :P
+2019-07-11 15:51:22	-->	mukunda (mukunda@adsl-74-240-51-91.jan.bellsouth.net) has joined #reddit-gamedev
+2019-07-11 15:52:25	-->	^|SnIpeR|^ (~drzoids@cpe-120-146-186-20.static.qld.bigpond.net.au) has joined #reddit-gamedev
+2019-07-11 15:52:42	<--	^|SnIpeR|^ (~drzoids@cpe-120-146-186-20.static.qld.bigpond.net.au) has quit (Client Quit)
+2019-07-11 16:08:49	-->	nanoz (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-07-11 16:21:54	-->	n0tus (uid352043@gateway/web/irccloud.com/x-ydnvmenuszommohm) has joined #reddit-gamedev
+2019-07-11 16:22:34	<--	shan (~shan@unaffiliated/jasatso1301) has quit (Quit: kthxbai)
+2019-07-11 16:25:09	-->	ImQ009 (~ImQ009@unaffiliated/imq009) has joined #reddit-gamedev
+2019-07-11 16:41:14	-->	_DB (68375605@gateway/web/cgi-irc/kiwiirc.com/ip.104.55.86.5) has joined #reddit-gamedev
+2019-07-11 16:46:52	<--	nanoz (~nanoz@unaffiliated/nanoz) has quit (Ping timeout: 246 seconds)
+2019-07-11 17:01:12	<--	shantaram (uid207478@gateway/web/irccloud.com/x-fgyotrzpgvafwkul) has quit (Quit: Connection closed for inactivity)
+2019-07-11 17:07:57	<--	terminx (~terminx@198.8.81.214) has quit (Ping timeout: 245 seconds)
+2019-07-11 17:13:29	-->	terminx (~terminx@198.8.81.214) has joined #reddit-gamedev
+2019-07-11 17:13:29	--	Mode #reddit-gamedev [+v terminx] by ChanServ
+2019-07-11 17:18:51	-->	Chevluh (~Chev@73.43.1.85.dynamic.wline.res.cust.swisscom.ch) has joined #reddit-gamedev
+2019-07-12 09:04:57	-->	Syrinxos (~syrinxos@host-131-114-213-6.m.unipi.it) has joined #reddit-gamedev
+2019-07-12 09:04:57	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-07-12 09:04:57	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-07-12 09:04:57	--	Channel #reddit-gamedev: 74 nicks (0 ops, 19 voices, 55 normals)
+2019-07-12 09:05:00	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-07-12 09:06:07	+zebbiz_pi	DrAwesomeCraws: Did you see the update? https://www.youtube.com/watch?v=mh7PpgTKoac
+2019-07-12 09:10:12	<--	Type-21 (~Type-21@unaffiliated/type-21) has quit (Ping timeout: 252 seconds)
+2019-07-12 09:19:17	<--	DerHase (~Dave@catv-80-98-155-44.catv.broadband.hu) has quit (Ping timeout: 244 seconds)
+2019-07-12 09:22:03	+jonas__	zebbiz_pi, why can't that youtuber take the extra 10 seconds it would take to add a link to the description
+2019-07-12 09:22:10	+jonas__	that explains the context
+2019-07-12 09:22:19	+jonas__	I feel like I have no idea what this update is a follow-up to or about
+2019-07-12 09:23:30	+zebbiz_pi	jonas__: Look at DrAwesomeCraws link
+2019-07-12 09:23:35	+zebbiz_pi	But yes, he should have done that
+2019-07-12 09:29:16	+jonas__	the link was music so now I understand even less
+2019-07-12 09:29:49	+zebbiz_pi	jonas__: What? This link
+2019-07-12 09:29:50	+zebbiz_pi	05:29:58 <+DrAwesomeCraws> chael sonnen is a good story teller
+2019-07-12 09:29:50	+zebbiz_pi	05:29:59 <+DrAwesomeCraws> https://www.youtube.com/watch?v=a881X4SYWDs
+2019-07-12 09:30:28	+jonas__	oh, I thought I copied that link but I musta failed and gotten the same music link from before again
+2019-07-12 09:32:46	<--	_DB (68375605@gateway/web/cgi-irc/kiwiirc.com/ip.104.55.86.5) has quit (Ping timeout: 246 seconds)
+2019-07-12 09:34:40	<--	steelgolem__ (~SteelGole@sydnns0115w-47-55-207-18.dhcp-dynamic.fibreop.ns.bellaliant.net) has quit (Read error: Connection reset by peer)
+2019-07-12 09:35:05	-->	steelgolem__ (~SteelGole@sydnns0115w-47-55-207-18.dhcp-dynamic.fibreop.ns.bellaliant.net) has joined #reddit-gamedev
+2019-07-12 09:43:52	-->	Type-21 (~Type-21@unaffiliated/type-21) has joined #reddit-gamedev
+2019-07-12 09:43:52	--	Mode #reddit-gamedev [+v Type-21] by ChanServ
+2019-07-12 09:54:38	-->	elsie273 (~Android@2a01:4c8:40e:5d83:e9b2:69af:2b23:828b) has joined #reddit-gamedev
+2019-07-12 10:08:23	yuken	 Oh god
+2019-07-12 10:08:32	yuken	I've somehow gotten my game up to 25% CPU use at 1080p rendering 60x34 tiles
+2019-07-12 10:23:36	+jonas__	zebbiz_pi, that was interesting
+2019-07-12 10:23:52	+jonas__	keep going, I believe yuken get it to 100% one day
+2019-07-12 10:24:04	yuken	you shut up jonas__!
+2019-07-12 10:24:09	+jonas__	:X
+2019-07-12 10:32:42	+zebbiz_pi	poor jonas__
+2019-07-12 10:32:50	+zebbiz_pi	geetting bullied by yuken
+2019-07-12 10:33:32	+zebbiz_pi	hmmm, y is pretty close to k on the keyboard...
+2019-07-12 10:33:38	+zebbiz_pi	jonas__: You can call him kuken
+2019-07-12 10:33:52	yuken	why is this using so much ceepeeyoooou
+2019-07-12 10:34:34	elsie273	work hard and soon you can hit 100%
+2019-07-12 10:34:36	+jonas__	but that wouldn't be anywhere close to as much fun, zebbiz_pi
+2019-07-12 10:35:43	elsie273	the game jam i'm planning to do has a theme and limitation set now
+2019-07-12 10:35:53	+zebbiz_pi	what is it?
+2019-07-12 10:36:02	elsie273	theme is "explosions" and limitation is "destruction"
+2019-07-12 10:36:17	+zebbiz_pi	voxels
+2019-07-12 10:36:19	elsie273	limitation kinda sucks bc it's just locking in the obvious route
+2019-07-12 10:36:24	+zebbiz_pi	there's gonna be so many voxels
+2019-07-12 10:52:26	elsie273	i'm kinda tired today
+2019-07-12 10:54:11	+zebbiz_pi	Woke up, fell out of bed, dragged a comb across my head
+2019-07-12 10:57:07	+bomb	i was going to go to the gym yesterday, but they shut it down
+2019-07-12 10:57:18	+bomb	they killed the gym due to financial problems
+2019-07-12 10:57:37	+bomb	they SIGTERM'd it
+2019-07-12 10:57:59	+zebbiz_pi	brutal
+2019-07-12 10:58:08	+bomb	:'(  i'm forever fat
+2019-07-12 10:58:13	+zebbiz_pi	Dude
+2019-07-12 10:58:28	+zebbiz_pi	fat is lost by eating less/changing diet
+2019-07-12 10:58:43	+zebbiz_pi	But it is easier to lose fat if you have more muscle
+2019-07-12 10:58:50	+bomb	yes but that's slow, unless i eat like 100 cals a day
+2019-07-12 10:58:59	+zebbiz_pi	Also, check out /r/bodyweightfitness
+2019-07-12 10:59:07	+zebbiz_pi	You need close to no equipment
+2019-07-12 10:59:09	+bomb	gym would cost me another 2-3k of cals daily
+2019-07-12 10:59:10	+jonas__	yeah, exercise has a negligible effect on actual obesity
+2019-07-12 10:59:15	+bomb	i don't have space :"(
+2019-07-12 10:59:28	+zebbiz_pi	bomb: Can't you lay down on the floor?
+2019-07-12 10:59:36	+bomb	nope
+2019-07-12 10:59:43	+zebbiz_pi	Can't you go outside?
+2019-07-12 10:59:50	+bomb	yes
+2019-07-12 10:59:55	+zebbiz_pi	Good
+2019-07-12 10:59:59	+zebbiz_pi	That's all you need
+2019-07-12 11:00:22	+jonas__	you set such a high bar
+2019-07-12 11:00:30	+bomb	^
+2019-07-12 11:00:32	+zebbiz_pi	You're just making excuses
+2019-07-12 11:00:47	+jonas__	'can you control what and how much you put into your mouth? good, that's all you need'
+2019-07-12 11:00:50	+zebbiz_pi	You don't need shit to do pushups and squats
+2019-07-12 11:01:21	+bomb	what to do outside then?
+2019-07-12 11:01:26	+zebbiz_pi	Run
+2019-07-12 11:01:33	+zebbiz_pi	Do pullups on tree branches
+2019-07-12 11:01:54	+bomb	RIP tree
+2019-07-12 11:02:23	+jonas__	waddle up slopes really fast for cardio
+2019-07-12 11:02:45	+zebbiz_pi	Ride bike to be kind to your knees
+2019-07-12 11:02:49	+jonas__	(I can make fat jokes because I'm fat)
+2019-07-12 11:02:52	+zebbiz_pi	If you're that fat
+2019-07-12 11:03:07	+jonas__	I have fat privilege
+2019-07-12 11:03:16	+zebbiz_pi	jonas__: How fat are you? Height and weight
+2019-07-12 11:03:46	+jonas__	I'm not gonna tell this channel that, then DrAwesomeCraws would tell me to hike again and I'm not going down that rabbit hole
+2019-07-12 11:03:47	+zebbiz_pi	I assume >30 bf%
+2019-07-12 11:03:49	+jonas__	*down that trail
+2019-07-12 11:03:58	+zebbiz_pi	huehue
+2019-07-12 11:04:24	+bomb	https://keisan.casio.com/exec/system/1350891527
+2019-07-12 11:04:59	+zebbiz_pi	Unit	
+2019-07-12 11:04:59	+bomb	if i walk 6 hours i can burn 2378 calories
+2019-07-12 11:05:00	+zebbiz_pi	SI(cm;kg)USA(ft;lbs)
+2019-07-12 11:05:09	+zebbiz_pi	I like how only USA use ft and lbs
+2019-07-12 11:05:37	+bomb	they'll eventually realize that's totes bullshit
+2019-07-12 11:05:50	+zebbiz_pi	bomb: At what speed?
+2019-07-12 11:05:54	+jonas__	according to that calculator, 2 hours of 5km/h walking burns calories equivalent to one 100g chocolate bar
+2019-07-12 11:05:59	+bomb	5.6 km/h
+2019-07-12 11:06:03	+jonas__	this is why exercise doesn't matter compared to diet
+2019-07-12 11:06:26	+jonas__	literally irrelevant as long as diet is not controlled, and not very important compared to diet once the diet is controlled
+2019-07-12 11:06:38	+bomb	so true, but i don't eat over 1500-2000/day already
+2019-07-12 11:06:42	+zebbiz_pi	bomb: I would burn 1717 kcal
+2019-07-12 11:06:47	+bomb	i just need to move more
+2019-07-12 11:06:59	+jonas__	alright, that's good then
+2019-07-12 11:09:06	+bomb	good thing about walking, you can do it like 12 hours a day just fine
+2019-07-12 11:09:06	+jonas__	bomb, I remember that this was a good read in the past: http://www.fourmilab.ch/hackdiet/www/hackdietf.html
+2019-07-12 11:09:21	 *	bomb clicks
+2019-07-12 11:09:45	+jonas__	it has some simple but effective bodyweight exercises in there as well, and a lot of factual discussion without fad-magazine hype shit
+2019-07-12 11:10:29	+jonas__	I don't think that thing covers it, but I've also found carb-restricted diet like keto or atkins to be very effective
+2019-07-12 11:11:12	+zebbiz_pi	11:11:11
+2019-07-12 11:11:15	+zebbiz_pi	sweet
+2019-07-12 11:14:52	+bomb	that's actually a good long term plan. eat less, walk a bit and everything's gonna be alright
+2019-07-12 11:15:00	+zebbiz_pi	yeah
+2019-07-12 11:15:09	+zebbiz_pi	crash diets rarely work in the long term
+2019-07-12 11:15:33	+bomb	now i have time, like 3 months of almost free time. i think i can go a bit further and work my ass off
+2019-07-12 11:16:36	+jonas__	you gonna go for cardio or building muscle?
+2019-07-12 11:16:52	+zebbiz_pi	Start with walking
+2019-07-12 11:17:05	+zebbiz_pi	Small changes are easier to maintain
+2019-07-12 11:17:06	yuken	no, don't do that. start running at full speed to every place you want to go
+2019-07-12 11:17:11	yuken	run at full speed forever
+2019-07-12 11:17:17	+zebbiz_pi	ninja run
+2019-07-12 11:17:23	+zebbiz_pi	arms back
+2019-07-12 11:17:24	+bomb	cardio, i'm tired of being big already, not interested in muscles yet
+2019-07-12 11:17:30	yuken	no zebbiz_pi
+2019-07-12 11:17:34	yuken	arms straight up to the sky
+2019-07-12 11:17:38	+bomb	dude i can't run outside that's embarrassing
+2019-07-12 11:17:48	+zebbiz_pi	bomb: Building muscles helps with losing fat, fyi
+2019-07-12 11:18:08	+bomb	right, but you can't build muscle when calorie deficit, no?
+2019-07-12 11:18:21	+bomb	unless muscles build themselves using the body fat
+2019-07-12 11:18:27	+zebbiz_pi	They do not
+2019-07-12 11:18:50	+zebbiz_pi	But you will maintain muscle if you use them
+2019-07-12 11:19:01	+bomb	i think lifting is good for burning the sugar in your body
+2019-07-12 11:19:33	+bomb	right, exercising muscles is also a good way to tell your body not to burn proteins when it needs energy
+2019-07-12 11:19:55	+bomb	are you 65 KG btw?
+2019-07-12 11:20:19	+jonas__	I believe you can build muscle at a caloric deficit, but it's gonna be slower going
+2019-07-12 11:21:09	+jonas__	remember that once you eat, there will be a temporary caloric surplus that can be used to build muscles for a bit..then the deficit comes back, which fat reserves will primarily be used to cover
+2019-07-12 11:21:20	+jonas__	(or so I imagine it working, I'm not a doctor)
+2019-07-12 11:21:31	+jonas__	obviously it's gonna be a lot harder though
+2019-07-12 11:21:49	+zebbiz_pi	bomb: Me? I'm 60kg
+2019-07-12 11:22:03	+jonas__	how many zebbiz_pi can you squat?
+2019-07-12 11:23:47	+jonas__	fuck, I miss full body exercises :(  my feet have betrayed me by getting achy
+2019-07-12 11:26:03	+bomb	injure is baaad
+2019-07-12 11:28:43	+jonas__	yeah, it's okay now for the most part, except the occasional flare-up, but I have to avoid things like deadlifts and squats sadly
+2019-07-12 11:36:44	elsie273	i suck at food control
+2019-07-12 11:36:55	+zebbiz_pi	me too
+2019-07-12 11:36:55	elsie273	i mean i manage it but have a bad relationship with food
+2019-07-12 11:37:18	elsie273	i got weighed last monday and i'm 134lbs which is good for my height
+2019-07-12 11:37:33	elsie273	or, i was 134lbs. i'm probably like 300lbs after the food i've eaten
+2019-07-12 11:38:38	+zebbiz_pi	elsie273: How tall are you?
+2019-07-12 11:38:47	elsie273	179cm
+2019-07-12 11:39:02	elsie273	5'10.5"
+2019-07-12 11:39:02	+zebbiz_pi	Yeah, that's decent
+2019-07-12 11:39:09	+zebbiz_pi	Nah, use SI
+2019-07-12 11:39:12	+zebbiz_pi	Much better
+2019-07-12 11:39:21	+zebbiz_pi	muricans should get used to it
+2019-07-12 11:40:15	+bomb	what is your WEIGHT elsie273
+2019-07-12 11:40:22	+bomb	how FAT are you tell us
+2019-07-12 11:40:38	+zebbiz_pi	bomb: 134lbs, can't you read?
+2019-07-12 11:40:47	<--	terminx (~terminx@198.8.81.214) has quit (Ping timeout: 258 seconds)
+2019-07-12 11:40:53	+zebbiz_pi	60.7kg
+2019-07-12 11:41:07	+bomb	ah
+2019-07-12 11:41:36	+bomb	i thought that meant 134 sterling
+2019-07-12 11:41:44	+jonas__	134 stones
+2019-07-12 11:41:45	+bomb	they use pounds for money huehue
+2019-07-12 11:41:51	+jonas__	UK units FTW
+2019-07-12 11:42:11	elsie273	i'm 9st8lbs i think
+2019-07-12 11:42:15	+jonas__	did you know that in the UK, they measure fluids in cuppas?
+2019-07-12 11:42:23	+jonas__	because tea
+2019-07-12 11:42:24	+bomb	cuppa?
+2019-07-12 11:42:57	elsie273	i bought some jelly beans half an hour ago
+2019-07-12 11:43:02	elsie273	so i already feel guilty
+2019-07-12 11:43:27	+jonas__	your atonement is running at a brisk pace for 40 minutes
+2019-07-12 11:43:43	elsie273	no
+2019-07-12 11:43:47	elsie273	exercise is hard
+2019-07-12 11:43:51	elsie273	i'm not about that
+2019-07-12 11:49:14	+bomb	should i buy an exercise bike?
+2019-07-12 11:49:49	+bomb	i can cycle for hours while playing netflix or watching overwatch
+2019-07-12 11:50:22	-->	paladinn (~paladin@2804:14d:3281:61b3:b069:d69:8dc2:bc5c) has joined #reddit-gamedev
+2019-07-12 11:50:22	<--	paladinn (~paladin@2804:14d:3281:61b3:b069:d69:8dc2:bc5c) has quit (Changing host)
+2019-07-12 11:50:22	-->	paladinn (~paladin@unaffiliated/paladinn) has joined #reddit-gamedev
+2019-07-12 12:05:11	-->	mukunda (mukunda@adsl-74-240-51-91.jan.bellsouth.net) has joined #reddit-gamedev
+2019-07-12 12:14:51	+carefish	awesome yuken @ posting it on github. also, i am unsure what you are doing that requires a constant vigilant eye on cpu usage. it's good to try to keep the usage and stuff down but it might be better to set 'limits' of performance for yourself and only start optimizing/making it better if you go over those
+2019-07-12 12:15:25	+carefish	ie: under 20% cpu usage is fine. above 60 fps is fine, below is not ok
+2019-07-12 12:15:30	+carefish	etc limits like those
+2019-07-12 12:15:55	+carefish	rather than being irked whn your code goes from 2% to 8.something
+2019-07-12 12:16:29	yuken	carefish, well, now it's at 25%.
+2019-07-12 12:16:40	+carefish	that still sounds acceptable
+2019-07-12 12:16:47	yuken	Not when I'm running a 4790k
+2019-07-12 12:16:53	yuken	and people could be running this on a machine from 2006.
+2019-07-12 12:16:54	+carefish	what's that proc
+2019-07-12 12:16:56	+carefish	speed/etc
+2019-07-12 12:17:02	yuken	4GHz Haswell.
+2019-07-12 12:17:05	+carefish	sounds like a somewhat 'oldish' i7
+2019-07-12 12:17:10	yuken	CPU: Intel(R) Core(TM) i7-4790K CPU @ 4.00GHz (1.90GHz)
+2019-07-12 12:17:32	yuken	And it will only get worse, I'd imagine, as I add more stuff.
+2019-07-12 12:17:33	+carefish	so did you test whether that 25% was on 4ghz or on 1.9ghz
+2019-07-12 12:17:43	yuken	wot
+2019-07-12 12:17:52	+carefish	throttling yo
+2019-07-12 12:17:56	-->	terminx (~terminx@198.8.81.214) has joined #reddit-gamedev
+2019-07-12 12:17:56	+carefish	it's a thing nowadays
+2019-07-12 12:17:56	--	Mode #reddit-gamedev [+v terminx] by ChanServ
+2019-07-12 12:17:59	yuken	top will measure percentage in how much of a single CPU thread's time it's using, no?
+2019-07-12 12:18:07	+carefish	if cpu doesn't need more hz's, it'll downclock
+2019-07-12 12:18:15	yuken	yes I know that
+2019-07-12 12:18:27	+carefish	i don't know how `top' registers those hz changes
+2019-07-12 12:18:30	yuken	but top measures it in how much of the maximum cycles it can take from the CPU, I'm fairly sure.
+2019-07-12 12:18:40	+carefish	but i sincerely doubt your game eats 25% of a 4ghz proc
+2019-07-12 12:18:42	yuken	so 25% means it's using 25% of an entire core/thread's time.
+2019-07-12 12:19:03	+carefish	still though
+2019-07-12 12:19:10	+carefish	better get someone with a shitty machine to test
+2019-07-12 12:19:36	+carefish	the only really big issue in your game, performance wise, would be the batching drawcalls thing
+2019-07-12 12:19:36	yuken	I'm probably gonna try running it on my Raspberry Pi real quick or somethin
+2019-07-12 12:19:58	+carefish	so unless that's not working, i seriously doubt any pc will have issues
+2019-07-12 12:20:16	+carefish	maybe older machines if they are in areas with a few hundred clients, but even then its unlikely
+2019-07-12 12:20:36	yuken	yeah, CPU use appears to be how much in % it is using fo the available cycles
+2019-07-12 12:20:39	yuken	or something of that nature.
+2019-07-12 12:24:16	+carefish	omfg
+2019-07-12 12:24:19	+carefish	rainstoooorm
+2019-07-12 12:24:22	yuken	good
+2019-07-12 12:24:26	yuken	cold & rain > hot & no rain
+2019-07-12 12:24:30	+carefish	big globlets of wet muck
+2019-07-12 12:24:34	+carefish	nah
+2019-07-12 12:24:40	+carefish	i am a warm person
+2019-07-12 12:24:46	yuken	then you're a bad person <3
+2019-07-12 12:24:50	+carefish	i really like warm weather and sun
+2019-07-12 12:25:04	+carefish	i can't stand measly shitty winters that only have rain and wind
+2019-07-12 12:25:24	yuken	Winter is best experience at -40 and 1 foot of snow.
+2019-07-12 12:25:31	+carefish	kind-of like extremes. i like anything 18C+ and anything -18C
+2019-07-12 12:25:33	yuken	I'd love to move to Siberia if it weren't Russian territory. Or close to Russia.
+2019-07-12 12:28:20	+carefish	ffs, one of the biggest providers here in hte neterlands
+2019-07-12 12:28:34	+carefish	is starting to roll out fibre glass as a test for 50k houses
+2019-07-12 12:28:37	+carefish	guess what
+2019-07-12 12:28:43	+carefish	that test is in the middle of fuckwhere
+2019-07-12 12:28:49	yuken	lul
+2019-07-12 12:28:59	+bomb	guys i'm fat
+2019-07-12 12:29:00	yuken	is it on farmland only?
+2019-07-12 12:29:11	+bomb	stop whatever you're doing and discuss my fitness now :(
+2019-07-12 12:29:17	+carefish	i can understand that digging in a village to put the cables in is cheaper... but what will you get out of that test if nobody is gonna really use it
+2019-07-12 12:29:33	+carefish	it's a 1gbit/s fibre test
+2019-07-12 12:29:37	+carefish	which is delicious
+2019-07-12 12:29:50	+carefish	but it seems i'll always fall out of th offerings
+2019-07-12 12:29:57	+bomb	ehh does your harddisk even support that speed?
+2019-07-12 12:30:05	+carefish	the building next door to my appartment in amsterdam... has fucking fibre glass
+2019-07-12 12:30:30	+carefish	and i am stuck on a measly 'mere' 500/40 :(
+2019-07-12 12:30:55	+carefish	the upload speed of 40mbit is nice, but not fast enough for my tastes :p
+2019-07-12 12:31:03	+carefish	thats gof me chuffed boi
+2019-07-12 12:31:14	+carefish	really wanna stab the folks at that provider now
+2019-07-12 12:31:53	+carefish	'please dudes just do it for cities now... your infrastructure will have coping problems soon as the current generation gets jobs and is able to get their own netflixs/streaming thing rather than piggybacking their parents account
+2019-07-12 12:32:14	+bomb	https://i.pinimg.com/564x/1b/39/c0/1b39c0ee6848d3b8c7ff654b9e121134.jpg
+2019-07-12 12:32:14	+bomb	dayum
+2019-07-12 12:32:26	+bomb	(warning: boobs)
+2019-07-12 12:32:36	+carefish	that looks like a year in between bomb
+2019-07-12 12:32:47	+carefish	progress like that is probably not easy to get
+2019-07-12 12:32:56	+bomb	yeah imagine being tyler durden in a year
+2019-07-12 12:33:09	+bomb	well living as a fat fuck isn't easy either
+2019-07-12 12:34:35	+carefish	oh god
+2019-07-12 12:34:40	+carefish	the future of passwordless login's
+2019-07-12 12:34:44	+carefish	with biometric data
+2019-07-12 12:34:50	+carefish	like finger print/face/etc
+2019-07-12 12:34:53	+carefish	ffs
+2019-07-12 12:34:55	+carefish	please no
+2019-07-12 12:35:20	+carefish	grrr
+2019-07-12 12:35:25	+carefish	i am outraged at my newspaper
+2019-07-12 12:35:28	+carefish	...i'm getting old
+2019-07-12 12:36:56	+bomb	http://hitchfit-9o2bsjkqfblwk.stackpathdns.com/wp-content/uploads/2012/07/LWFG01.jpg
+2019-07-12 12:37:03	+bomb	motherfucker gets like 20 years younger
+2019-07-12 12:38:25	+carefish	yeah
+2019-07-12 12:38:32	+carefish	so when are you showing your progress pic
+2019-07-12 12:38:42	+carefish	if you wanna stay anonymous blur out your face
+2019-07-12 12:39:30	-->	Uhfgood (~Uhfgood@2603:9000:b10e:c500:e42a:bedc:557a:854a) has joined #reddit-gamedev
+2019-07-12 12:41:13	+bomb	https://www.youtube.com/watch?v=Gjk9MKnwu_c
+2019-07-12 12:50:45	-->	^|SnIpeR|^ (~drzoids@cpe-120-146-186-20.static.qld.bigpond.net.au) has joined #reddit-gamedev
+2019-07-12 12:51:00	<--	^|SnIpeR|^ (~drzoids@cpe-120-146-186-20.static.qld.bigpond.net.au) has quit (Client Quit)
+2019-07-12 13:25:48	<--	Snoras (~Snoras@gateway/tor-sasl/snoras) has quit (Ping timeout: 260 seconds)
+2019-07-12 13:26:43	-->	Snoras (~Snoras@gateway/tor-sasl/snoras) has joined #reddit-gamedev
+2019-07-12 13:30:34	<--	Type-21 (~Type-21@unaffiliated/type-21) has quit (Ping timeout: 252 seconds)
+2019-07-12 13:37:05	<--	mukunda (mukunda@adsl-74-240-51-91.jan.bellsouth.net) has quit (Ping timeout: 248 seconds)
+2019-07-12 13:55:05	-->	steelgolem_ (~SteelGole@sydnns0115w-47-55-207-18.dhcp-dynamic.fibreop.ns.bellaliant.net) has joined #reddit-gamedev
+2019-07-12 13:57:57	<--	steelgolem__ (~SteelGole@sydnns0115w-47-55-207-18.dhcp-dynamic.fibreop.ns.bellaliant.net) has quit (Ping timeout: 245 seconds)
+2019-07-12 14:04:13	yuken	oh nfity, SDL2 handles text input for me.
+2019-07-12 14:16:08	+bomb	just use godot lol
+2019-07-12 14:16:25	+bomb	wait you're doing rust + sdl2?
+2019-07-12 14:17:19	<--	elsie273 (~Android@2a01:4c8:40e:5d83:e9b2:69af:2b23:828b) has quit (Quit: -a- Connection Timed Out)
+2019-07-12 14:17:43	yuken	yes bomb?
+2019-07-12 14:18:21	+bomb	why not SFML
+2019-07-12 14:18:28	yuken	Because.
+2019-07-12 14:18:29	+bomb	no good rust bindings?
+2019-07-12 14:18:35	yuken	no, they exist and are fine.
+2019-07-12 14:19:19	+bomb	you're lying. that's probably someone's weekend project
+2019-07-12 14:19:27	yuken	uh, no
+2019-07-12 14:19:30	yuken	it's made by the guy who did SFML
+2019-07-12 14:19:39	+bomb	:|
+2019-07-12 14:19:42	<--	bomb (~bomb@gateway/tor-sasl/bomb) has left #reddit-gamedev (".")
+2019-07-12 15:13:09	+jonas__	bomb left as I was gonna reply
+2019-07-12 15:13:21	+jonas__	fine he doesn't deserve it, yuken have my affection instead
+2019-07-12 15:14:15	yuken	can we ban jonas__
+2019-07-12 15:14:34	+jonas__	playing hard to get huh
+2019-07-12 15:16:57	yuken	can i write a complex 3d vidya game in php
+2019-07-12 15:17:38	+jonas__	sounds like the kind of task that'll make a terry davis out of you
+2019-07-12 15:17:54	yuken	what if I write a language that compiles to PHP
+2019-07-12 15:17:56	yuken	so it's easy to work with?
+2019-07-12 15:17:58	+Jattenalle	you can, the question is why you'd want to
+2019-07-12 15:18:01	+jonas__	terry davis confirmed
+2019-07-12 15:18:05	+jonas__	RIP yuken
+2019-07-12 15:18:08	+Jattenalle	run it on TempleOS
+2019-07-12 15:18:36	+jonas__	I didn't think people could reincarnate into already grown individuals, but I guess terry's powers are greater than most mortal men
+2019-07-12 15:20:27	yuken	I'm not a diagnosed schizophrenic jonas__ :(
+2019-07-12 15:21:39	<--	bnyio (~bnyio@alcatraz.open-xchange.com) has quit (Quit: WeeChat 2.5)
+2019-07-12 15:25:33	+jonas__	just because you're schizophrenic, doesn't mean god isn't actually talking to you
+2019-07-12 15:42:48	+Jattenalle	so i just learned of the facebook group that is set out to charge area 51
+2019-07-12 15:42:55	 *	Jattenalle grabs popcorn
+2019-07-12 15:52:21	-->	mukunda (mukunda@adsl-74-240-51-91.jan.bellsouth.net) has joined #reddit-gamedev
+2019-07-12 15:57:10	+jonas__	good luck with that
+2019-07-12 15:57:32	+jonas__	the outcome will be an unpleasant encounter with military police, I imagine
+2019-07-12 16:07:53	-->	cry0 (cry0@gateway/vpn/mullvad/cry0) has joined #reddit-gamedev
+2019-07-12 16:15:03	-->	_DB (68375605@gateway/web/cgi-irc/kiwiirc.com/ip.104.55.86.5) has joined #reddit-gamedev
+2019-07-12 16:44:47	-->	ImQ009 (~ImQ009@unaffiliated/imq009) has joined #reddit-gamedev
+2019-07-12 16:48:24	yuken	I mean
+2019-07-12 16:48:31	yuken	they have machine guns capable of taking out a small coutnry
+2019-07-12 16:48:44	yuken	and most likely ground missiles...
+2019-07-12 16:48:46	yuken	so glhf lol
+2019-07-12 17:05:02	-->	cruelnoise (~cruelnois@glphon2233w-grc-03-174-95-42-63.dsl.bell.ca) has joined #reddit-gamedev
+2019-07-12 17:08:28	<--	paladinn (~paladin@unaffiliated/paladinn) has quit (Ping timeout: 264 seconds)
+2019-07-15 09:11:45	-->	Syrinxos (~syrinxos@host-131-114-213-6.m.unipi.it) has joined #reddit-gamedev
+2019-07-15 09:11:45	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-07-15 09:11:45	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-07-15 09:11:45	--	Channel #reddit-gamedev: 72 nicks (0 ops, 19 voices, 53 normals)
+2019-07-15 09:11:49	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-07-15 09:12:46	-->	^|SnIpeR|^ (~drzoids@cpe-120-146-186-20.static.qld.bigpond.net.au) has joined #reddit-gamedev
+2019-07-15 09:12:52	<--	^|SnIpeR|^ (~drzoids@cpe-120-146-186-20.static.qld.bigpond.net.au) has quit (Client Quit)
+2019-07-15 09:16:23	-->	chipolux (~chipolux@2600:8804:5600:cd00:eea8:6bff:fe6b:e125) has joined #reddit-gamedev
+2019-07-15 09:16:23	-->	niceplace_ (~nice@2a03:b0c0:2:d0::4b8:5001) has joined #reddit-gamedev
+2019-07-15 09:16:47	-->	nek0 (~nek0@2a01:4f8:222:2b41::66) has joined #reddit-gamedev
+2019-07-15 09:16:47	-->	Motig (~Motig@unaffiliated/motig) has joined #reddit-gamedev
+2019-07-15 09:16:47	-->	HiggsPossum (~HiggsPoss@unaffiliated/higgspossum) has joined #reddit-gamedev
+2019-07-15 09:21:53	-->	Syrinxos (~syrinxos@host-131-114-213-6.m.unipi.it) has joined #reddit-gamedev
+2019-07-15 09:21:53	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-07-15 09:21:53	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-07-15 09:21:53	--	Channel #reddit-gamedev: 77 nicks (0 ops, 19 voices, 58 normals)
+2019-07-15 09:21:56	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-07-15 09:53:22	<--	mukunda (~mukunda@adsl-68-19-251-109.bna.bellsouth.net) has quit (Ping timeout: 245 seconds)
+2019-07-15 10:02:07	<--	shan (~shan@unaffiliated/jasatso1301) has quit (Ping timeout: 245 seconds)
+2019-07-15 10:03:13	-->	shan (~shan@unaffiliated/jasatso1301) has joined #reddit-gamedev
+2019-07-15 10:03:13	--	Mode #reddit-gamedev [+v shan] by ChanServ
+2019-07-15 10:26:24	<--	chipolux (~chipolux@2600:8804:5600:cd00:eea8:6bff:fe6b:e125) has quit (*.net *.split)
+2019-07-15 10:26:47	<--	niceplace_ (~nice@2a03:b0c0:2:d0::4b8:5001) has quit (*.net *.split)
+2019-07-15 10:27:06	<--	nek0 (~nek0@2a01:4f8:222:2b41::66) has quit (*.net *.split)
+2019-07-15 10:27:11	<--	Motig (~Motig@unaffiliated/motig) has quit (*.net *.split)
+2019-07-15 10:27:11	<--	HiggsPossum (~HiggsPoss@unaffiliated/higgspossum) has quit (*.net *.split)
+2019-07-15 10:35:36	-->	Motig (~Motig@2a01:9cc0:47:3:1a:4:0:2) has joined #reddit-gamedev
+2019-07-15 10:35:39	<--	Motig (~Motig@2a01:9cc0:47:3:1a:4:0:2) has quit (Changing host)
+2019-07-15 10:35:39	-->	Motig (~Motig@unaffiliated/motig) has joined #reddit-gamedev
+2019-07-15 10:35:43	-->	nek0 (~nek0@2a01:4f8:222:2b41::66) has joined #reddit-gamedev
+2019-07-15 10:36:25	-->	niceplace (~nice@2a03:b0c0:2:d0::4b8:5001) has joined #reddit-gamedev
+2019-07-15 10:36:52	-->	chipolux (~chipolux@2600:8804:5600:cd00:eea8:6bff:fe6b:e125) has joined #reddit-gamedev
+2019-07-15 10:36:54	-->	HiggsPossum (~HiggsPoss@unaffiliated/higgspossum) has joined #reddit-gamedev
+2019-07-15 11:23:56	<--	Cahaan (~Cahaan@91.180.35.171) has quit (Read error: Connection reset by peer)
+2019-07-15 11:25:37	-->	Cahaan (~Cahaan@91.180.35.171) has joined #reddit-gamedev
+2019-07-15 11:25:37	--	Mode #reddit-gamedev [+v Cahaan] by ChanServ
+2019-07-15 11:43:59	-->	elsie273 (~Android@2a01:4c8:40e:5d83:f85d:829e:830:580e) has joined #reddit-gamedev
+2019-07-15 12:01:27	elsie273	gooood morning o.o
+2019-07-15 12:03:09	+carefish	HEY ELSIE
+2019-07-15 12:03:11	+carefish	HOW ARE YOU
+2019-07-15 12:03:13	+carefish	OMG WTF
+2019-07-15 12:07:01	<--	n0tus (uid352043@gateway/web/irccloud.com/x-ydnvmenuszommohm) has quit (Ping timeout: 250 seconds)
+2019-07-15 12:07:09	-->	n0tus (uid352043@gateway/web/irccloud.com/x-reqlfbbltpubpnea) has joined #reddit-gamedev
+2019-07-15 12:16:09	elsie273	omg wtf?
+2019-07-15 12:18:04	+carefish	yeah
+2019-07-15 12:18:06	+carefish	wtf omg
+2019-07-15 12:20:15	elsie273	i'm okay. tired and tired of umbraco
+2019-07-15 12:20:17	elsie273	hbu?
+2019-07-15 12:20:46	+carefish	umbraco... the cms?
+2019-07-15 12:21:20	+carefish	i am trying to get my C# scripting to work w/ the super simplistic 2d opengl rendering thing i got going on
+2019-07-15 12:22:13	+carefish	which does seem to be working pretty good
+2019-07-15 12:22:35	elsie273	yes the cms
+2019-07-15 12:22:59	elsie273	the hellscape
+2019-07-15 12:23:06	elsie273	that's cool
+2019-07-15 12:23:22	elsie273	i saw you mention hot reloading last night, what are you doing with that?
+2019-07-15 12:24:12	+carefish	trying to make my own 'poke at it and see' framework
+2019-07-15 12:24:26	+carefish	sometimes on the 'net i find interesting psuedo code/code not for C#
+2019-07-15 12:24:42	+carefish	and i feel like 'dang, too bad i can't really test/try/fuck with that'
+2019-07-15 12:24:49	+carefish	i know there's stuff like processing and p5.js
+2019-07-15 12:24:58	+carefish	but those have their own issues which i really don't care for
+2019-07-15 12:25:19	+carefish	once this thing is somewhat 'done', there's only one .exe and a scripts folder and boom presto you can draw shit
+2019-07-15 12:25:45	+carefish	and to draw shit, just fire up the .exe and make your changes in the scripts, it'll get hotreloaded and such
+2019-07-15 12:26:00	+carefish	and since it's compiled C#, there shouldn't be too many unexpected slowdowns
+2019-07-15 12:26:16	+carefish	the 'unexpected' is important here
+2019-07-15 12:26:39	+carefish	probably/hopefully later today i have the first version working
+2019-07-15 12:26:54	+carefish	merging my opentk/opengl adventures with this guy
+2019-07-15 12:27:27	+carefish	then you should be able to have an entry point (probably gonna use main for that, as is convention)
+2019-07-15 12:27:45	+carefish	and from there on, just draw sprites by 'new'ing them and not give a single shit how they're rendered
+2019-07-15 12:28:21	+carefish	just deal with loading in a nice looking texture (var spr = new Sprite("path") and do stuff with the sprite (spr.Rotation += angle, for example)
+2019-07-15 12:28:52	+carefish	and last night i reduced the memory usage w/ approx 60mb
+2019-07-15 12:29:11	+carefish	so now the memory usage of this app is still on the high side, but who cares. prototype away! huehue
+2019-07-15 12:29:35	-->	Uhfgood (~Uhfgood@2603:9000:b10e:c500:90b1:c913:5ad9:238b) has joined #reddit-gamedev
+2019-07-15 12:30:17	<--	Motig (~Motig@unaffiliated/motig) has quit (Remote host closed the connection)
+2019-07-15 12:31:08	+carefish	so in the end: main.cs (filename doesn't matter, need a 'main' entry point.) and a start/init function to grab your resources
+2019-07-15 12:31:21	+carefish	and a simple update() that's gonna be at the FPS you request it to be at
+2019-07-15 12:33:31	+carefish	and once that works fine and dandy through C#
+2019-07-15 12:33:37	+carefish	i think i'll add javascript too
+2019-07-15 12:33:42	+carefish	just for luls
+2019-07-15 12:34:09	+carefish	and want to know how you could code it so you can call javascript from the scripted C# side and vice versa
+2019-07-15 12:55:54	yuken	hmmm
+2019-07-15 12:56:25	yuken	I need to figure out how I'm going to keep track of _where_ my mobs/clients are.
+2019-07-15 12:56:52	yuken	So server receives an input from client #1, how the hell does the server know where the client is in the world, if it's constnatly being shared between threads?
+2019-07-15 12:57:44	+carefish	?
+2019-07-15 12:57:58	+carefish	the position of the client (a player) is always known though
+2019-07-15 12:58:43	yuken	Unless
+2019-07-15 12:58:58	yuken	I just store all clients in the network thread, and have them point to the mob they're associated with instead.
+2019-07-15 12:59:52	+carefish	let's redefine mob to something i hear more often
+2019-07-15 13:00:02	+carefish	'npc'
+2019-07-15 13:00:10	yuken	Mob in this case is the object associated with a player or movable entity that isn't an item.
+2019-07-15 13:00:21	yuken	They have Stats, they are Damageable, Renderable and Movable.
+2019-07-15 13:01:13	+carefish	so it's basically a pickup?
+2019-07-15 13:01:23	yuken	wut?
+2019-07-15 13:02:11	+carefish	item that can be picked up by players, but also left on the ground as a movable entity
+2019-07-15 13:02:38	yuken	No. They aren't items.
+2019-07-15 13:03:07	yuken	A Mob just refers to any movable, damageable, stats-having, renderable entity.
+2019-07-15 13:03:23	+carefish	so it's an entity?
+2019-07-15 13:03:25	yuken	Yes.
+2019-07-15 13:04:30	yuken	A client can switch mobs during gameplay, but a client must always have a mob associated with it. NPCs are also mobs.
+2019-07-15 13:05:24	+carefish	i still think with references this may have been easier to solve
+2019-07-15 13:05:48	yuken	Mobs will be constantly moving around in memory, carefish.
+2019-07-15 13:05:49	+carefish	right now it sounds like you need to figure out some way to send messages between threads reliably
+2019-07-15 13:05:58	yuken	So a reference wouldn't work.
+2019-07-15 13:06:05	+carefish	sure they would
+2019-07-15 13:06:26	+carefish	i pass reference to object, object changes whatever the reference points to but doesn't change where it points to
+2019-07-15 13:06:58	yuken	wat
+2019-07-15 13:07:01	yuken	I'm 99% sure that wouldn't work.
+2019-07-15 13:09:51	yuken	unless you flipped some words there and meant that the reference would be set to point to the correct spot?
+2019-07-15 13:11:09	+carefish	the memory address the reference points to shouldn't ever change though
+2019-07-15 13:11:20	+carefish	unless you're destroying that reference and new'ing something else on top of it
+2019-07-15 13:11:48	yuken	... actually, if I'm using Rc, that's right. I was thinking because I'm always moving my mobs/etc between threads and vectors, that they would change locations
+2019-07-15 13:11:58	yuken	but if all I'm doing is moving the _pointers_ around, that doesn't change anything
+2019-07-15 13:12:39	+carefish	https://ideone.com/iErEBq
+2019-07-15 13:13:15	yuken	yeah carefish, for a second I thought I was still actually moving my mobs around, and not just pointers to them.
+2019-07-15 13:13:20	yuken	So that would work.
+2019-07-15 13:13:48	+carefish	moving any memory around should be avoided if you can
+2019-07-15 13:13:52	yuken	I'll need to abstract all my interactions with my mobs/items/etc though, so they're properly locked and unlocked whenever.
+2019-07-15 13:14:07	yuken	but outside of that, it shouldn't be too hard. I just need to get inter-threaded communications up I guess.
+2019-07-15 13:14:08	+carefish	unless it's to put data closer to eachother in memory for that 'data localization' stuff, but that's next level CS stuff
+2019-07-15 13:15:51	yuken	egh, maybe I won't even thread this, because that's getting a bit complicated.
+2019-07-15 13:17:14	yuken	If I want to thread this, I might need a damn event queue too, so I don't miss any events.
+2019-07-15 13:17:38	+carefish	how about this
+2019-07-15 13:17:49	+carefish	first game the networking work flawlessly the way you want it
+2019-07-15 13:17:55	+carefish	then start to improve it with threading
+2019-07-15 13:18:10	yuken	Well, that isn't the problem that I was thinking of, carefish.
+2019-07-15 13:18:13	+carefish	because threaded networking is a recipe to grow grey hairs well before its your time to do so
+2019-07-15 13:18:34	yuken	I was thinking of locking/unlocking issues and, say, the client needing to do something to the mob at the same time as the mob is being used by another thread.
+2019-07-15 13:18:54	+carefish	of those of those actions are 'writes'
+2019-07-15 13:19:04	+carefish	then you're shit outta luck and they'll have to wait for eachother
+2019-07-15 13:19:27	yuken	yeah, I may just... ignore threading completely. That's already a bit too complex.
+2019-07-15 13:20:18	+carefish	nah, threading is good to understand
+2019-07-15 13:20:42	yuken	basically, "oh no I can't access this thing, guess I need to queue up this event for when I can..."
+2019-07-15 13:20:53	yuken	and that's already gonna be a pain to deal with, even in Rust.
+2019-07-15 13:21:01	+carefish	but the parts that make it super hard to understand is that it requires most code to allow for multithreading which is kinda hard to wrap your head around... if you don't even know 'what' your app really is going to be
+2019-07-15 13:21:07	yuken	The only threading Iv'e worked with before were where the threads did not need to speak to one another.
+2019-07-15 13:22:29	+carefish	well, the easiest way to do communication between threads, imo, is very similar to the CQRS pattern
+2019-07-15 13:23:00	yuken	maybe I'll just rewrite everything in an ECS-style and write up a proper event queue for all my stuff
+2019-07-15 13:23:15	+carefish	threads send Commands or Queries to their respective handlers. which then have a means to deal with those commands/queries
+2019-07-15 13:23:48	+carefish	like a message bus type thing
+2019-07-15 13:29:03	yuken	oh, discord egirl killed by her discord eboy
+2019-07-15 13:47:28	+carefish	https://ideone.com/M6aH5u yuken
+2019-07-15 13:48:15	+carefish	this is the CQRS pattern simplified
+2019-07-15 13:48:33	yuken	carefish, maybe I'll rewrite my stuff to fit that pattern, then.
+2019-07-15 13:48:53	+carefish	it will allow you to send messages like commands or queries
+2019-07-15 13:49:00	+carefish	and then have the handler take care of those
+2019-07-15 13:49:19	yuken	And, I might switch over to a better pattern than... what I have now, to say the least.
+2019-07-15 13:49:41	yuken	https://github.com/YukenK/infinity/blob/master/src/mob.rs is what my stuff looks like r/n and it's pretty mediocre
+2019-07-15 13:49:42	+carefish	semantic difference Query and Command make it SUPER easy to debug your problems later on
+2019-07-15 13:49:59	+carefish	especially if you ensure that only commands can do writes
+2019-07-15 13:50:27	+carefish	don't dismiss your code dude
+2019-07-15 13:50:30	+carefish	keep going
+2019-07-15 13:50:36	+carefish	you're learning, figuring things out, etc
+2019-07-15 13:51:15	+carefish	there is one feature i don't have time to show/code a sample for with CQRS yuken
+2019-07-15 13:51:40	yuken	ye but look at that
+2019-07-15 13:51:45	+carefish	but the idea is that you 'inject' a handler into a, in your case a mob, and that the mob's handler takes care of all commands/queries that were meant for that mob
+2019-07-15 13:51:48	yuken	it just seems mediocre, not using components to build an object.
+2019-07-15 13:51:52	+carefish	who cares
+2019-07-15 13:51:54	+carefish	seriously
+2019-07-15 13:52:00	+carefish	when you're learning things
+2019-07-15 13:52:05	+carefish	don't worry too much about cleanliness
+2019-07-15 13:52:15	+carefish	it's all gonna have some code smell sooner or later
+2019-07-15 13:53:39	+carefish	code seems fine to me
+2019-07-15 13:53:51	+carefish	doesn't seem to make a lot of sense to use components for now
+2019-07-15 13:54:05	+carefish	because afaik, there aren't many components for you to build your mobs from yet
+2019-07-15 13:55:19	+carefish	also, rust is hard-mode for what you're doing. it's okay to shortcut your way to comprehension
+2019-07-15 14:24:19	-->	h (~quassel@196.244.191.98) has joined #reddit-gamedev
+2019-07-15 14:24:20	--	h is now known as Hzar
+2019-07-15 14:29:46	+Waynes	CQRS is just shitty function calls
+2019-07-15 14:47:53	yuken	carefish, so I'll need an event queue for all my threads, and something which handles those events properly. hm
+2019-07-15 14:56:05	+carefish	well... the event queue is already in that list inside the handler
+2019-07-15 14:56:31	+carefish	soo i guess you'll have to make sure the handler synchronizes read/writes properly between commands/queries
+2019-07-15 14:57:43	yuken	It's just a lot more difficult of an idea to have that, especially because I need to make... basically nothing timing-dependent, use plenty of callbacks, whatnot.
+2019-07-15 14:59:57	+carefish	protip: timing dependency code stinks, unless in well controlled environments
+2019-07-15 15:00:42	yuken	guess later today I'm gonna take pen on paper and write up a thing on how I'm gonna do that
+2019-07-15 15:00:47	yuken	a little diagram on how it all works.
+2019-07-15 15:04:23	+carefish	yerp
+2019-07-15 15:04:25	+carefish	always good idea
+2019-07-15 15:05:53	yuken	Right now the basic idea is: every thread has an event/command handler, which is the only way to talk between threads. I have an Event struct, which is what I'll use to send events, and then... figure it out from there
+2019-07-15 15:06:13	+carefish	google for this stuff dude
+2019-07-15 15:06:26	+carefish	you are not trying to solve this for the first time, many went before you
+2019-07-15 15:06:27	yuken	I have been Googling!
+2019-07-15 15:06:33	+carefish	it's good to read other peoples code and approaches
+2019-07-15 15:07:06	+carefish	https://doc.rust-lang.org/book/ch16-02-message-passing.html
+2019-07-15 15:07:24	+carefish	looks like that will do precisely what you need
+2019-07-15 15:07:37	yuken	channels are annoying when you have 10-20 different threads
+2019-07-15 15:07:38	+DrAwesomeCraws	just use perl instead
+2019-07-15 15:07:52	yuken	and then you need a shit-load of receivers and senders, keeping track of those...
+2019-07-15 15:08:01	yuken	because each sender can only send to its receiver, not a random receiver.
+2019-07-15 15:08:38	+carefish	and now you know why certain programming fields are paid much more than others.
+2019-07-15 15:10:06	yuken	Rust has Mutexes,  which will... probably be how I handle it,  maybe.
+2019-07-15 15:10:38	+carefish	so a receiver endpoint could be the actual message bus
+2019-07-15 15:10:54	+carefish	so that all your objects send to that message bus, and the message bus sends it to its destination
+2019-07-15 15:11:01	yuken	actually carefish, https://github.com/crossbeam-rs/crossbeam-channel
+2019-07-15 15:11:19	yuken	There is a very popular Rust lib, crossbeam, that does this.
+2019-07-15 15:11:30	yuken	Maybe.
+2019-07-15 15:12:16	+carefish	definitely go for it
+2019-07-15 15:12:27	yuken	I dunno if that does exactly what I need, but it might help.
+2019-07-15 15:12:28	+carefish	the built-in one is shortname for multiple producer single consumer
+2019-07-15 15:12:35	yuken	I know that :p
+2019-07-15 15:12:39	+carefish	so to fork mutli consumers in there on your own is gonna be hard
+2019-07-15 15:12:53	+carefish	so that crossbeam looks like what you wanna use
+2019-07-15 15:13:56	yuken	Okay, https://docs.rs/crossbeam/0.7.1/crossbeam/channel/index.html looks pretty simple nad nice.
+2019-07-15 15:14:13	yuken	Zero-capacity channels means that they block until received/sent, then you have channels with capacity, then infinite capacity channels.
+2019-07-15 15:19:47	--	irc: disconnected from server
+2019-07-15 15:20:12	-->	Syrinxos (~syrinxos@mob-5-90-10-233.net.vodafone.it) has joined #reddit-gamedev
+2019-07-15 15:20:12	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-07-15 15:20:12	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-07-15 15:20:13	--	Channel #reddit-gamedev: 78 nicks (0 ops, 19 voices, 59 normals)
+2019-07-15 15:20:31	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-07-15 15:20:35	+carefish	the other one is so you have your own knowledge base at the ready for when you feel adventurous enough to try and lift that prototype code into something real
+2019-07-15 15:20:49	+carefish	and potentially have caught some nice edge cases and whatnot
+2019-07-15 15:21:12	yuken	well, that's what I normally do for testing stuff, recreate it in a new environment.
+2019-07-15 15:22:02	yuken	I'm not sure if it's even worse it to try and thread this, it was originally just an idea.
+2019-07-15 15:23:14	+carefish	well these tests go further than just tests y'know
+2019-07-15 15:23:18	yuken	Threading would be good if I wanted to run it on a super low-end device though, like a Raspberry Pi as a game server.
+2019-07-15 15:23:26	+carefish	if it's like those ideone samples i sent you, then yes. those are just 'tests'
+2019-07-15 15:23:43	+carefish	what i really mean here is: setup your networking threading thing, let that communicate between client and server
+2019-07-15 15:23:51	+carefish	make sure that that runs as you want it to run
+2019-07-15 15:23:54	yuken	There is no server yet.
+2019-07-15 15:24:00	+carefish	and THEN test messaging across threads
+2019-07-15 15:24:10	+carefish	oh, the udp listener thing you threw out?
+2019-07-15 15:24:22	yuken	That was a test.
+2019-07-15 15:24:31	+carefish	well, grab that again
+2019-07-15 15:24:47	+carefish	do some messaging between your network thread and main thread
+2019-07-15 15:24:55	+carefish	get the hang of using that crossbream library
+2019-07-15 15:25:04	+carefish	really doesn't matter much what that messaging is
+2019-07-15 15:25:25	+carefish	but you need to write with that library in that udp sample you made so you can have a better view on how to proceed with your drawn diagrams
+2019-07-15 15:25:57	+carefish	i still think you should use threading to the fucking max, it's a sure fire way to get very intimate with rust
+2019-07-15 15:26:24	yuken	fiiine, at least it would allow it to run on slow but multi-core devices like a Pi.
+2019-07-15 15:26:41	+carefish	yes.
+2019-07-15 15:26:47	+carefish	you're gonna thank yourself later
+2019-07-15 15:26:58	+carefish	some of these programming things.. they 'look' hard
+2019-07-15 15:27:15	+carefish	which is because they are hard, but once you get into them they are way more managable than many people think
+2019-07-15 15:27:22	Hzar	Well threading is easy to do wrong
+2019-07-15 15:27:54	+carefish	very easy to do wrong yeah
+2019-07-15 15:27:54	yuken	How do I handle my event loop with an event queue? Like, 60/120/240/3000000 times per second, I loop over all entities that are supposed to have "ticks", and do all appropriate stuff on them.
+2019-07-15 15:27:54	yuken	DO I just have those as events too, and push them into the queue, and then after that, loop over the queue?
+2019-07-15 15:27:57	+carefish	just loop over it as fast as possible
+2019-07-15 15:33:07	--	irc: disconnected from server
+2019-07-15 15:33:35	-->	Syrinxos (~syrinxos@host-131-114-213-6.m.unipi.it) has joined #reddit-gamedev
+2019-07-15 15:33:36	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-07-15 15:33:36	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-07-15 15:33:36	--	Channel #reddit-gamedev: 78 nicks (0 ops, 19 voices, 59 normals)
+2019-07-15 15:33:52	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-07-15 15:34:50	+carefish	yuken: struct Event { eventid, threadid, mobid, eventtype }
+2019-07-15 15:34:54	+carefish	done
+2019-07-15 15:35:01	yuken	wat
+2019-07-15 15:35:23	Hzar	im guessing this code is going to be slower than if it was single threaded
+2019-07-15 15:36:01	yuken	It probably is, Hzar.
+2019-07-15 15:36:08	+carefish	similar things go for your mobs and such
+2019-07-15 15:36:23	+carefish	struct mob { eventid, threadid }
+2019-07-15 15:36:29	yuken	I genuinely don't think that having an Event like that would ever work, carefish, in Rust.
+2019-07-15 15:36:40	+carefish	i don't know rust
+2019-07-15 15:36:40	yuken	I can't leave struct members null, and there are way too many different possibilities that I might want.
+2019-07-15 15:37:07	+carefish	i'm sure you can assign -1 or 0 on them though
+2019-07-15 15:37:55	Hzar	assuming they are references(never done rust): just make a reference to a generic thing that does nothing?
+2019-07-15 15:38:14	+carefish	i've been telling yuken to use references everywhere you can
+2019-07-15 15:38:19	yuken	Can't use references.
+2019-07-15 15:38:25	yuken	This ain't C.
+2019-07-15 15:38:29	+carefish	that would solve a lot of his questions relating to 'who owns what'
+2019-07-15 15:38:53	yuken	Unless I want to deal with lifetimes
+2019-07-15 15:39:02	+carefish	which you will have to, the moment you involve threading
+2019-07-15 15:39:05	+carefish	or networking
+2019-07-15 15:40:12	Hzar	whats a reference/const non null pointer called in rust then?
+2019-07-15 15:40:25	yuken	Rc.
+2019-07-15 15:40:30	Hzar	an rc?
+2019-07-15 15:40:50	Hzar	rc stands for?
+2019-07-15 15:42:40	Hzar	reference counted pointer
+2019-07-15 15:52:13	+carefish	so...
+2019-07-15 15:52:33	+carefish	let mut myReference = &someObjet; won't do the trick yuken?
+2019-07-15 15:52:57	+carefish	i get that that might throw compile time errors if those refs can't be determined
+2019-07-15 15:53:05	yuken	no, carefish
+2019-07-15 15:53:19	yuken	Rust enforces lifetimes on borrows.
+2019-07-15 15:54:38	-->	mukunda (~mukunda@adsl-68-19-251-109.bna.bellsouth.net) has joined #reddit-gamedev
+2019-07-15 16:27:22	-->	warmwaffles (~warmwaffl@108.174.85.188) has joined #reddit-gamedev
+2019-07-15 16:27:34	+Jattenalle	how are your projects coming along?
+2019-07-15 16:28:59	warmwaffles	horribly
+2019-07-15 16:29:25	warmwaffles	whole month of unemployment and I don't have shit to show for it
+2019-07-15 16:32:44	+carefish	i got hotreloading compiled dll's to work Jattenalle
+2019-07-15 16:32:55	n0tus	im sorry i thought this was americ
+2019-07-15 16:32:57	n0tus	a
+2019-07-15 16:33:01	+Waynes	warmwaffles: don't worry, most of us don't have shit to show for a much larger time span
+2019-07-15 16:33:25	+carefish	app grabs folder, compiles that into a dll, reload existing dll if any, bam i got compiled C# as a scripting language
+2019-07-15 16:33:50	+carefish	also it keeps the dll in memory, so no disk writes of cumbersome big files
+2019-07-15 16:34:05	yuken	that sounds horrific carefish
+2019-07-15 16:34:38	+carefish	it is
+2019-07-15 16:34:48	+carefish	but it's for a prototyping framework so meh
+2019-07-15 16:35:18	+carefish	now i'm working on getting simple sprite stuff to work
+2019-07-15 16:35:54	+carefish	which is going nicely, and once i figure out how to disallow certain namespaces from being used/called from the scripting side i can post some build sof this to mess around with
+2019-07-15 16:36:33	+carefish	main goal of this prototyping tool: ability to draw simple sprites and text, as well as direct opengl access if the user wants it
+2019-07-15 16:37:52	+carefish	how to use it?
+2019-07-15 16:38:55	+carefish	either get .net core runtime, clone the repo, open folder in vscode w/ the appropriate C# extensions to get debug abilities for your compiled scripts or if you don't want to use that feature... just start writing
+2019-07-15 16:39:09	+carefish	or download a build, and start messing with the provided sample scripts right away
+2019-07-15 16:39:40	+Jattenalle	nicely done carefish, hotloading dll's is the shit when developing
+2019-07-15 16:40:06	+carefish	in the latter case it's probably a good idea to use an editor that has syntax highlighting... until i figure out how to get vscode to also run from the build+scripts thing for debugging
+2019-07-15 16:40:45	+carefish	i hope to give a sample build for anyone interested later today
+2019-07-15 16:41:23	+carefish	win-x64 or mac builds i can do, not sure if i can easily provide generic linux builds
+2019-07-15 16:41:41	+carefish	this also taught me how those AWS lambda and azure functions work Jattenalle
+2019-07-15 16:41:57	+carefish	so now i can have my own 'serverless' functions
+2019-07-15 16:43:20	+carefish	current strategy for disallowing namespaces is super naive but seems to work pretty well, i wonder how well it holds up once the scripts folder start to actuall be somewhat big
+2019-07-15 16:44:07	yuken	why not just allow OS/System namespace carefish? ez pz
+2019-07-15 16:44:11	yuken	let users write and read all files.
+2019-07-15 16:44:34	+carefish	that was my first thought as well
+2019-07-15 16:44:52	+carefish	don't care about it and such, let the user deal with it
+2019-07-15 16:45:13	+carefish	i do think that that is a very bad idea overall, since it's super easy to write portable nastiness with this now
+2019-07-15 16:45:20	yuken	Send_To_Russia(System.File.Read("C:\Windows\System32\SAM"))
+2019-07-15 16:45:24	yuken	ez pz
+2019-07-15 16:45:48	+carefish	the code right now will allow you to do whatever the hell you please
+2019-07-15 16:46:02	+carefish	if i turn off the simple list checking thing
+2019-07-15 16:46:21	+Jattenalle	just have it execute everything off of a public discord chat
+2019-07-15 16:46:31	+carefish	i could provide my own wrapper around io, and only allow reads/writes from cwd
+2019-07-15 16:46:36	+Jattenalle	if you can't trust random anonymous people on the internet, then who can you trust?
+2019-07-15 16:47:31	+carefish	anyways, would any one of you be interested in messing with a build later today?
+2019-07-15 16:51:50	+carefish	hmm, adding debugging to this might be easier than i thought
+2019-07-15 16:52:32	+carefish	just have to make it spitout PDB files alongside the dll ha
+2019-07-15 16:54:13	-->	steelgolem__ (~SteelGole@sydnns0115w-47-55-207-18.dhcp-dynamic.fibreop.ns.bellaliant.net) has joined #reddit-gamedev
+2019-07-15 16:55:34	<--	bnyio (~bnyio@alcatraz.open-xchange.com) has quit (Quit: WeeChat 2.5)
+2019-07-15 16:57:19	<--	steelgolem_ (~SteelGole@sydnns0115w-47-55-207-18.dhcp-dynamic.fibreop.ns.bellaliant.net) has quit (Ping timeout: 246 seconds)
+2019-07-15 17:10:19	elsie273	if i leave work early will someone encourage me to actually get personal stuff done at home?
+2019-07-15 17:11:59	n0tus	man so many C++ devs totally unaware of how to deal with dependencies and build systems in sane way
+2019-07-15 17:12:13	n0tus	you'd think they would look at other languages for inspiration
+2019-07-15 17:12:25	n0tus	languages ecosystems*
+2019-07-15 17:13:04	<--	terminx (~terminx@198.8.81.214) has quit (Ping timeout: 272 seconds)
+2019-07-15 17:17:51	-->	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has joined #reddit-gamedev
+2019-07-15 17:18:20	deniska	n0tus: other languages at the time were, like, C and Pascal
+2019-07-15 17:18:35	deniska	and nowadays it's too late to fix
+2019-07-15 17:19:08	-->	terminx (~terminx@198.8.81.214) has joined #reddit-gamedev
+2019-07-15 17:19:08	--	Mode #reddit-gamedev [+v terminx] by ChanServ
+2019-07-15 17:19:43	n0tus	its not too late to fix, people have already fixed it and larger companies already use the solution, just doesnt seem to find its way into hobbyists hands, but then they go on /r/opengl and complain about not being able to get setup
+2019-07-15 17:20:03	n0tus	all it requires to be fixed is a good package management system and generates build variables, which already exists
+2019-07-15 17:21:19	n0tus	also the standard ships every 3 years but it doesnt need to be part of the standard
+2019-07-15 17:22:51	<--	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has quit (Ping timeout: 268 seconds)
+2019-07-15 17:23:02	+carefish	wasn't it you that uses conan n0tus
+2019-07-15 17:23:06	n0tus	yeah
+2019-07-15 17:23:09	+carefish	why not convert everyone you know to that
+2019-07-15 17:23:14	n0tus	im trying
+2019-07-15 17:23:26	+carefish	i will try to use it next game jam
+2019-07-15 17:23:44	+carefish	cause sdl2 is easy enough to write something fun in a weekend
+2019-07-15 17:24:17	n0tus	im going to write up a tutorial this week and post it in the opengl subreddit
+2019-07-15 17:24:27	+carefish	what type of tutorial?
+2019-07-15 17:24:37	+carefish	2d opengl or c++ opengl w/ conan things?
+2019-07-15 17:25:15	n0tus	C++ opengl with conan, just how to get basic libraries pulled in and how to compile the code via CLI
+2019-07-15 17:25:23	+carefish	noice
+2019-07-15 17:25:28	+carefish	i'd definitely be interested in that
+2019-07-15 17:25:31	elsie273	package managers are a bit gross
+2019-07-15 17:25:39	n0tus	why is that
+2019-07-15 17:25:41	+carefish	i feck'n love em
+2019-07-15 17:25:56	n0tus	you ever take a look at conan? its pretty well designed, they manage multiple architectures and build systems very well
+2019-07-15 17:26:04	+carefish	so what i sometimes don't like from the C/C++ parts of coding
+2019-07-15 17:26:20	+carefish	some libraries really do not want ot provide binaries 'because someone could mess with them'
+2019-07-15 17:27:15	+carefish	which is kinda frustrating, cause then you either have to reference the project hat builds your binaries or compile them yourself somehow
+2019-07-15 17:27:30	+carefish	and oof. that stuff almost never goes off flawlessly on windows
+2019-07-15 17:27:50	+carefish	so i hope that conan might fix that for me and bring back some of the joy of C++ coding :p
+2019-07-15 17:27:57	n0tus	it did for me
+2019-07-15 17:28:27	+carefish	right now i am super hyped by .net core
+2019-07-15 17:28:36	n0tus	the elm package manager is also pretty cool, it automatically enforces semantic versioning
+2019-07-15 17:28:39	+carefish	some things are so much better than the 'old' .net framework
+2019-07-15 17:29:47	+carefish	oh that's also quite nice
+2019-07-15 17:30:10	+carefish	so you're kinda sure to be ok with moving between x.x.y-z ?
+2019-07-15 17:30:17	+carefish	and stuff won't break
+2019-07-15 17:30:27	+carefish	the hwole err. major/minor/patch thing
+2019-07-15 17:31:01	n0tus	yeah, does some interesting type system analysis to acheive it
+2019-07-15 17:31:35	-->	Chevluh (~Chev@73.43.1.85.dynamic.wline.res.cust.swisscom.ch) has joined #reddit-gamedev
+2019-07-15 17:33:24	+carefish	nice
+2019-07-15 17:35:04	+carefish	hmm, so i gotta refactor how i do the hotreloading thing to allow debugging
+2019-07-15 17:35:38	+carefish	you'd still need a way to connect to it automatically via vscode or something
+2019-07-15 17:35:55	+carefish	oh well, first get my other stuff working
+2019-07-15 17:36:06	+carefish	debugging on the script side w/o the .net runtime installed would be nice
+2019-07-15 17:36:14	+carefish	not required at all
+2019-07-15 17:40:00	+carefish	or just let people use the programmatic way
+2019-07-15 17:40:12	+carefish	if(debugger.attached) breakpoint() type o thing
+2019-07-15 17:43:50	yuken	Hmm.
+2019-07-15 17:44:06	yuken	carefish, how am I going to decide whether or not to spawn a new thread for this stuff, if I'm not using one thread per instance?
+2019-07-15 17:45:08	+carefish	uhh?
+2019-07-15 17:45:23	+carefish	not sure if i understand the question
+2019-07-15 17:50:36	<--	mukunda (~mukunda@adsl-68-19-251-109.bna.bellsouth.net) has quit (Ping timeout: 268 seconds)
+2019-07-16 09:12:55	-->	Syrinxos (~syrinxos@host-131-114-213-6.m.unipi.it) has joined #reddit-gamedev
+2019-07-16 09:12:55	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-07-16 09:12:55	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-07-16 09:12:55	--	Channel #reddit-gamedev: 71 nicks (0 ops, 17 voices, 54 normals)
+2019-07-16 09:13:00	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-07-16 09:23:12	-->	Waynes (~Waynes@unaffiliated/waynes) has joined #reddit-gamedev
+2019-07-16 09:23:13	--	Mode #reddit-gamedev [+v Waynes] by ChanServ
+2019-07-16 10:52:50	-->	elsie273 (~Android@2a01:4c8:40e:5d83:c609:6477:cbc8:a344) has joined #reddit-gamedev
+2019-07-16 11:35:11	-->	paladinn (~paladin@2804:14d:3281:61b3:d0d2:4013:865d:5655) has joined #reddit-gamedev
+2019-07-16 11:35:11	<--	paladinn (~paladin@2804:14d:3281:61b3:d0d2:4013:865d:5655) has quit (Changing host)
+2019-07-16 11:35:11	-->	paladinn (~paladin@unaffiliated/paladinn) has joined #reddit-gamedev
+2019-07-16 11:36:13	<--	elsie273 (~Android@2a01:4c8:40e:5d83:c609:6477:cbc8:a344) has quit (Ping timeout: 250 seconds)
+2019-07-16 11:41:15	-->	elsie273 (~Android@2a01:4c8:40e:5d83:cfc5:92f5:c9a6:d321) has joined #reddit-gamedev
+2019-07-16 12:11:21	<--	_DB (68375605@gateway/web/cgi-irc/kiwiirc.com/ip.104.55.86.5) has quit (Ping timeout: 268 seconds)
+2019-07-16 12:13:15	-->	Uhfgood (~Uhfgood@2603:9000:b10e:c500:f5f8:450:2d54:62f9) has joined #reddit-gamedev
+2019-07-16 12:50:10	+carefish	hmm
+2019-07-16 12:50:17	+carefish	the thing that i find super annoying with opengl so far
+2019-07-16 12:50:29	+carefish	there's no 'right way' to do stuff it seems?
+2019-07-16 12:51:09	+carefish	i see so many approaches with practically the same end result (although some where really naive implementations like sending seperate quads/verts per 2d sprite vs. one implmenetation that sends all of them an bam
+2019-07-16 12:51:34	+carefish	so i guess... i can do whatever i feel like, but that doesn't give me a comfortable solid footing ;/
+2019-07-16 13:44:49	-->	h (~quassel@196.244.191.34) has joined #reddit-gamedev
+2019-07-16 13:45:13	--	h is now known as Guest37306
+2019-07-16 14:08:18	<--	Jaex (jaex@sharex/developer/jaex) has quit (Remote host closed the connection)
+2019-07-16 14:30:39	yuken	Oh jeez.
+2019-07-16 14:30:50	yuken	carefish, an event system like this is gonna get complicated because I can't return pointers to memory in Rust.
+2019-07-16 14:30:54	yuken	I'd have to return a specific type.
+2019-07-16 14:44:15	<--	Waynes (~Waynes@unaffiliated/waynes) has quit (Quit: Leaving.)
+2019-07-16 15:02:44	Guest37306	Can't you return an integer?
+2019-07-16 15:10:32	<--	NomadJim (~NomadJim@pdpc/supporter/active/nomadjim) has quit (Quit: Leaving)
+2019-07-16 15:18:52	-->	NomadJim (~NomadJim@pdpc/supporter/active/nomadjim) has joined #reddit-gamedev
+2019-07-16 15:18:53	--	Mode #reddit-gamedev [+v NomadJim] by ChanServ
+2019-07-16 15:30:56	yuken	Guest37306, yes?
+2019-07-16 15:53:35	<--	NomadJim (~NomadJim@pdpc/supporter/active/nomadjim) has quit (Read error: Connection reset by peer)
+2019-07-16 15:54:09	-->	NomadJim (~NomadJim@pdpc/supporter/active/nomadjim) has joined #reddit-gamedev
+2019-07-16 15:54:09	--	Mode #reddit-gamedev [+v NomadJim] by ChanServ
+2019-07-16 16:02:57	-->	mukunda (~mukunda@adsl-68-19-251-109.bna.bellsouth.net) has joined #reddit-gamedev
+2019-07-16 16:09:45	+zebbiz_pi	I linked this in the office chat https://www.twitch.tv/adorablestars
+2019-07-16 16:10:02	+zebbiz_pi	I think I have reduced production by doing so :P
+2019-07-16 16:16:48	-->	^|SnIpeR|^ (~drzoids@cpe-120-146-186-20.static.qld.bigpond.net.au) has joined #reddit-gamedev
+2019-07-16 16:17:04	<--	^|SnIpeR|^ (~drzoids@cpe-120-146-186-20.static.qld.bigpond.net.au) has quit (Client Quit)
+2019-07-16 16:30:06	n0tus	carefish: you're correct in that there is no right way, but some ways are better than others,  opengl tutorials are good to get started but you might have to look at the architecture of other people's renderers to get a good feel as to what you want your end result to be
+2019-07-16 16:31:24	n0tus	carefish: this is worth checking out if you havent https://github.com/ssloy/tinyrenderer/wiki
+2019-07-16 16:32:29	+carefish	is this from the same guy that made tinywindow
+2019-07-16 16:32:56	+carefish	doesn't appear to be
+2019-07-16 16:33:21	+carefish	but i'll do that yeah, i've been keeping a few sources and tutorials side by side to note their differences and what makes them different
+2019-07-16 16:33:40	+carefish	https://github.com/ziacko/TinyWindow this guy
+2019-07-16 16:35:34	yuken	carefish, I have this... "thing" so far. https://gist.github.com/YukenK/b99b633565f9b52616bfd95817cf8959
+2019-07-16 16:36:13	n0tus	tiny renderer is more of a teaching tool meant to teach you how to do graphics programming with no libraries at all (well one for model loading I think), the idea is that by having people do everything by hand they can make better decisions with opengl, you code out all the drawing functions and everything
+2019-07-16 16:37:08	n0tus	he has the same for a raycaster, raytracer, and ray marching
+2019-07-16 16:37:09	+carefish	i'll go through the motions
+2019-07-16 16:37:23	--	Guest37306 is now known as Hzar
+2019-07-16 16:38:31	Hzar	Do many people do graphics without a game engine et al these days?
+2019-07-16 16:39:14	+carefish	idk
+2019-07-16 16:39:38	n0tus	sure but you usually do graphics with a renderer, a well made game engine will not care about the renderer
+2019-07-16 16:39:44	+carefish	i just want to know more after using game engines for a long time
+2019-07-16 16:40:27	Hzar	well theres modelviewprojection matrix, some shaders with normals, specular etc
+2019-07-16 16:40:41	Hzar	that would take a few weeks to code from scratch
+2019-07-16 16:40:51	n0tus	as in a well made game engine should have decoupling between the renderer and the rest of the engine so you can swap them out
+2019-07-16 16:41:04	+carefish	i wanna interface with opengl and 2d only for now
+2019-07-16 16:41:07	n0tus	yah some people like making games and some people like making engines
+2019-07-16 16:41:13	n0tus	this crowd is mostly the latter
+2019-07-16 16:41:58	+carefish	i already saw some 3d stuff and that's awesome to know but i fear it'll distract me way too much from what i want right now: a basic understanding of opengl so i can move on with confidence and not code with fingers crossed when i poke at it
+2019-07-16 16:42:09	+carefish	i prefer making games tbh
+2019-07-16 16:42:20	Hzar	engines is fun
+2019-07-16 16:42:22	n0tus	the /r/SAT subreddit got banned last night, they reopened this morning, apparently its cause they share tests in the sub
+2019-07-16 16:42:31	Hzar	but then you end up spending 2 weeks making the same thing that you can setup in 20 mins with some engine
+2019-07-16 16:42:37	+carefish	i have an idea, but i wanna muck ahead with this prototype thing and then actually use it for that idea
+2019-07-16 16:43:12	n0tus	its not really about the time it takes Hzar, at least for people who want to make engines, its more about the learning experience, understanding everything from top to bottom
+2019-07-16 16:43:18	+carefish	so far it took me 2 days to get planes and cubes rotating/moving around... and understand what i am doing
+2019-07-16 16:43:30	Hzar	2 days sounds pretty speedy honestly
+2019-07-16 16:43:37	+carefish	now i am trying to read those sources to actually hide away a lot of drawing code for the scripting side
+2019-07-16 16:44:44	+carefish	in the end i want to be able to instantiate a new Sprite in an init function, and then be able to move that thing around in a simple update function
+2019-07-16 16:45:13	+carefish	var spr = new Sprite(); //in update(float dt): spr.x += wahtever;
+2019-07-16 16:45:54	+carefish	so thanks for those links n0tus
+2019-07-16 16:46:10	+carefish	i think once i got this to work using those vertex arrays, i'll look into vulkan
+2019-07-16 16:46:19	+carefish	i 'think' by that time i understand way more what vulkan wants from me
+2019-07-16 16:46:46	+carefish	again, future business. once the sprite stuff works i intend to make a few prototypes to see where i need to add more
+2019-07-16 16:47:05	Hzar	shaders
+2019-07-16 16:48:34	+carefish	having a lot of fun with making C# my scripting domain
+2019-07-16 16:48:51	Hzar	like a website?
+2019-07-16 16:48:55	+carefish	cause i've already been using it to test stuff, then literally copy/pasting it into the actual project when it works well enough
+2019-07-16 16:49:30	Hzar	eh i cant read it seems
+2019-07-16 16:49:38	+carefish	no, these last few days i have been working on a pet project of mine, the ability to quickly create prototypes with C# without needing an engine or a .net runtime
+2019-07-16 16:50:00	+carefish	the latter part works pretty good so far
+2019-07-16 16:50:11	+carefish	that was the hotreloading thing i was working on y'day
+2019-07-16 16:50:25	n0tus	do u pet ur pet project
+2019-07-16 16:50:30	Hzar	isn't there classloaders in mono or .net or whatever C# runs on?
+2019-07-16 16:50:43	+carefish	the single file executable is ginormous, like 95mb, but it works on at least 4 different machines that i could test (1 linux, 1 mac, 2 windows)
+2019-07-16 16:50:56	Hzar	hotloading in jvm is definitely a thing
+2019-07-16 16:51:03	+carefish	yeah, i had to do it myself
+2019-07-16 16:51:18	+carefish	because what i'm doing is recompiling the C# into an assembly
+2019-07-16 16:51:22	+carefish	it's not interpreted
+2019-07-16 16:51:31	Hzar	How do you handle the memory?
+2019-07-16 16:51:49	+carefish	unload the context and load the new context on demand
+2019-07-16 16:52:24	Hzar	hmm
+2019-07-16 16:52:29	+carefish	so far, memory usage is within reason. approx the same size as the binary itself, a tiny bit bigger: 105mb
+2019-07-16 16:52:30	Hzar	sounds like a hard problem
+2019-07-16 16:52:42	+carefish	even if you spam ctrl-s on a script file
+2019-07-16 16:52:47	+carefish	at most it grows to 165mb
+2019-07-16 16:52:56	+carefish	and slinks down pretty soon after
+2019-07-16 16:54:02	+carefish	also, i'm referencing the entire .net standard 3.0 thing (i 'could' target 2.0... but nope. i want to use IAsyncEnumerable and IAsyncDisposable
+2019-07-16 16:54:37	n0tus	i was watching some video of fisherman off the coast having their boat dragged around by a great white shark and in the video they censored the swearing and fisherman swear so much it was just one long continuous censor tone
+2019-07-16 16:54:47	+carefish	lmao
+2019-07-16 16:55:08	+carefish	anyway, once i get that sprite stuff working, mind trying to break it n0tus ?
+2019-07-16 16:55:55	+carefish	or anyone for that matter
+2019-07-16 16:56:07	Hzar	you guys ever done anything with surface nets?
+2019-07-16 16:56:15	+carefish	idk what surface nets are
+2019-07-16 16:56:32	Hzar	like minecraft style voxels but you move the corners around
+2019-07-16 16:56:38	+carefish	oh
+2019-07-16 16:56:43	+carefish	like lengyel thing?
+2019-07-16 16:57:17	Hzar	similar yes
+2019-07-16 16:57:20	Hzar	he uses dual contouring
+2019-07-16 16:57:37	Hzar	which stores more data on each voxel, but I assume is better than surface nets (though I havn't figured out why yet...)
+2019-07-16 16:59:13	Hzar	or wait
+2019-07-16 17:00:56	Hzar	this looks like its marching cubes with LOD
+2019-07-16 17:01:31	-->	^|SnIpeR|^ (~drzoids@cpe-120-146-186-20.static.qld.bigpond.net.au) has joined #reddit-gamedev
+2019-07-16 17:01:51	Hzar	So I had a look at marching cubes, but it seems like minecraft cubes is a nicer topology to work with (and you can move the vertices around by storing a scalar field)
+2019-07-16 17:03:28	+carefish	so i have not worked with surface netting
+2019-07-16 17:04:37	<--	^|SnIpeR|^ (~drzoids@cpe-120-146-186-20.static.qld.bigpond.net.au) has quit (Client Quit)
+2019-07-16 17:04:45	+carefish	very very shortly with lengyel's thing for a vr game, but was really difficult to do performantly
+2019-07-16 17:05:00	+carefish	was using ue4 at the time
+2019-07-16 17:06:20	+carefish	hmm
+2019-07-16 17:06:36	+carefish	i think i'll expose Sprite as a thing to derive from, to use through composition
+2019-07-16 17:08:52	+carefish	i'm curious if i should allow users to decide themselves how to update or provide them an overridable method, and if they call base.Update() it'll get updated using the internal mechanism or if they don't they can use their own mechanism
+2019-07-16 17:09:14	+carefish	oh well, fek it. food time
+2019-07-16 17:10:53	+carefish	i kinda liked unity's approach in this
+2019-07-16 17:11:06	+carefish	if you want to use the provided things, inherit from monobehaviour
+2019-07-16 17:11:17	+carefish	if you don't, well.. just have one inherit from it and kick off from there
+2019-07-16 17:14:29	+carefish	or tell unity to use a specific startup file and go from there
+2019-07-16 17:15:57	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #reddit-gamedev
+2019-07-16 17:16:00	-->	shan_ (~shan@unaffiliated/jasatso1301) has joined #reddit-gamedev
+2019-07-16 17:16:00	--	Mode #reddit-gamedev [+v shan_] by ChanServ
+2019-07-16 17:19:18	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Remote host closed the connection)
+2019-07-16 17:23:35	-->	Chevluh (~Chev@73.43.1.85.dynamic.wline.res.cust.swisscom.ch) has joined #reddit-gamedev
+2019-07-23 09:11:09	-->	Syrinxos (~syrinxos@host-131-114-213-66.m.unipi.it) has joined #reddit-gamedev
+2019-07-23 09:11:09	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-07-23 09:11:09	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-07-23 09:11:09	--	Channel #reddit-gamedev: 70 nicks (0 ops, 17 voices, 53 normals)
+2019-07-23 09:11:13	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-07-23 09:13:02	+shan	deniska: yes, electron type sitch
+2019-07-23 09:14:42	<--	kxnxtx (~konata@212.159.76.130) has quit (Ping timeout: 248 seconds)
+2019-07-23 09:20:00	-->	BlkStaff (~bunnies@vtelinet-216-66-102-10.vermontel.net) has joined #reddit-gamedev
+2019-07-23 09:24:03	<--	Narris (~bunnies@vtelinet-216-66-102-10.vermontel.net) has quit (Ping timeout: 245 seconds)
+2019-07-23 09:24:03	--	BlkStaff is now known as Narris
+2019-07-23 11:13:51	+jonas__	2mb+ seems like the pagesize of a standard HTML page nowadays
+2019-07-23 11:18:18	deniska	on dialup 2mb was like 20 minute download
+2019-07-23 11:24:25	aeth	ublock origin. now it's a 1 minute download.
+2019-07-23 11:27:57	<--	mukunda (mukunda@adsl-68-19-251-109.bna.bellsouth.net) has quit (Ping timeout: 245 seconds)
+2019-07-23 11:34:01	-->	paladinn (~paladin@2804:14d:3281:61b3:a8d5:8d64:131c:17c5) has joined #reddit-gamedev
+2019-07-23 11:34:02	<--	paladinn (~paladin@2804:14d:3281:61b3:a8d5:8d64:131c:17c5) has quit (Changing host)
+2019-07-23 11:34:02	-->	paladinn (~paladin@unaffiliated/paladinn) has joined #reddit-gamedev
+2019-07-23 11:42:15	<--	shan (~shan@unaffiliated/jasatso1301) has quit (Read error: Connection reset by peer)
+2019-07-23 11:46:34	-->	shan (~shan@unaffiliated/jasatso1301) has joined #reddit-gamedev
+2019-07-23 11:46:34	--	Mode #reddit-gamedev [+v shan] by ChanServ
+2019-07-23 12:04:51	+shan	YOOO BITCHES
+2019-07-23 12:05:05	+shan	I implemented the map format for my game, and an editor for it
+2019-07-23 12:05:19	+carefish	good job
+2019-07-23 12:05:51	+carefish	good mornin' folks
+2019-07-23 12:06:01	+shan	i mean, there's still some work left on the editor, but i can see my way clear to it
+2019-07-23 12:07:19	+carefish	shan: if you are unsure if you should load all your assets, i think this question might answer it: 'can i still upload this to facebook instant games?' (regardless if you wanna target that or not)
+2019-07-23 12:07:33	+carefish	if the answer is still yes, i'm sure loading all assets at once is fine
+2019-07-23 12:07:48	+carefish	iirc thre's a 30mb limit on fb instant(?)
+2019-07-23 12:08:48	+shan	i believe i will load all of them at once, except for music
+2019-07-23 12:09:03	+carefish	how many mb's of assets are we talking about
+2019-07-23 12:09:28	+carefish	because music doesn't have to be loaded, it can be streamed
+2019-07-23 12:09:46	+carefish	but again, concrete numbers give concrete advice
+2019-07-23 12:10:08	+carefish	sub 30mb? don't worry too much about it. you should let your players know though.
+2019-07-23 12:10:23	+shan	carefish: i doubt that the script (the word scripts) and art assets combined are going to be > 30mb
+2019-07-23 12:10:32	+carefish	if the game is sub 5mb, let them know that it won't take too long anymore
+2019-07-23 12:11:18	+carefish	cause if you let them download 2mb, and it 'feels' like its too long for them... you just lost players
+2019-07-23 12:12:56	+shan	so, like, a loading screen?
+2019-07-23 12:13:49	+carefish	yeah
+2019-07-23 12:13:51	+carefish	anythign
+2019-07-23 12:14:05	+carefish	another good one: download larger assets in the background
+2019-07-23 12:14:14	+carefish	but still let the players know
+2019-07-23 12:14:41	+carefish	"yoooo main game is in! you can play while we fish in the rest of the game"
+2019-07-23 12:15:59	+shan	ok
+2019-07-23 12:16:15	+shan	i mean, it's a localhost thing, so i shouldn't have trouble
+2019-07-23 12:20:28	+carefish	oh
+2019-07-23 12:20:32	+carefish	i thought you were gonna host it somewhere
+2019-07-23 12:20:44	+carefish	if you are gonna put it in electron, all you do need is a loading bar somewhere
+2019-07-23 12:20:48	+shan	yeah
+2019-07-23 12:21:01	+shan	it probably won't be electron
+2019-07-23 12:21:09	+shan	i'd like to use something that uses gecko
+2019-07-23 12:26:39	+carefish	?
+2019-07-23 12:26:42	+carefish	idk what that is
+2019-07-23 12:32:23	-->	Uhfgood (~Uhfgood@2603:9000:b10e:c500:84e0:184e:25b2:cce8) has joined #reddit-gamedev
+2019-07-23 12:34:49	-->	h (~quassel@196.244.191.114) has joined #reddit-gamedev
+2019-07-23 12:35:12	--	h is now known as Guest82004
+2019-07-23 12:37:25	deniska	gecko is firefox engine
+2019-07-23 12:46:03	-->	Enemby (~Enemby_@c-174-52-7-66.hsd1.ut.comcast.net) has joined #reddit-gamedev
+2019-07-23 12:47:41	-->	elsie273 (~Android@2a01:4c8:41f:24a8:a0c8:6d82:aea6:eb5) has joined #reddit-gamedev
+2019-07-23 13:09:57	+shan	deniska: yes
+2019-07-23 13:10:07	+shan	carefish: it's firefox's rendering engine
+2019-07-23 13:10:18	+shan	i'm testing in firefox
+2019-07-23 13:10:28	+shan	and so i have only implemented firefox's gamepad api
+2019-07-23 13:14:36	+carefish	oh
+2019-07-23 13:23:20	<--	shan (~shan@unaffiliated/jasatso1301) has quit (Quit: kthxbai)
+2019-07-23 13:24:49	-->	shan (~shan@unaffiliated/jasatso1301) has joined #reddit-gamedev
+2019-07-23 13:24:49	--	Mode #reddit-gamedev [+v shan] by ChanServ
+2019-07-23 14:14:02	-->	arlefreak (~arlefreak@2a0a-a540-e5ee-0-ba27-ebff-fe8c-d2e.ipv6dyn.netcologne.de) has joined #reddit-gamedev
+2019-07-23 15:04:50	<--	Guest82004 (~quassel@196.244.191.114) has quit (Ping timeout: 272 seconds)
+2019-07-23 15:19:07	-->	Waynes (~Waynes@unaffiliated/waynes) has joined #reddit-gamedev
+2019-07-23 15:19:07	--	Mode #reddit-gamedev [+v Waynes] by ChanServ
+2019-07-23 15:20:49	-->	^|SnIpeR|^ (~drzoids@1.128.110.104) has joined #reddit-gamedev
+2019-07-23 15:21:03	<--	^|SnIpeR|^ (~drzoids@1.128.110.104) has quit (Client Quit)
+2019-07-23 15:28:22	<--	Waynes (~Waynes@unaffiliated/waynes) has quit (Ping timeout: 245 seconds)
+2019-07-23 15:35:50	-->	Waynes (~Waynes@unaffiliated/waynes) has joined #reddit-gamedev
+2019-07-23 15:35:50	--	Mode #reddit-gamedev [+v Waynes] by ChanServ
+2019-07-23 15:52:49	-->	mukunda (mukunda@adsl-74-240-49-73.jan.bellsouth.net) has joined #reddit-gamedev
+2019-07-23 16:16:31	+jonas__	elsie273, how's it going?
+2019-07-23 16:17:02	elsie273	kinda tired and unproductive
+2019-07-23 16:17:04	elsie273	hbu?
+2019-07-23 16:18:52	+Waynes	meirl
+2019-07-23 16:26:16	elsie273	jonas i need to remember to ping you so we don't take three days for each pair of sentences
+2019-07-23 16:28:06	+jonas__	yeah, pinging helps :P
+2019-07-23 16:30:33	+carefish	just applied again for a msft internship, fingers crossed
+2019-07-23 16:30:52	-->	n0tus (uid352043@gateway/web/irccloud.com/x-htxxfnlmfrjfxgsw) has joined #reddit-gamedev
+2019-07-23 16:34:17	 *	Waynes crosses fingers for carefish
+2019-07-23 16:35:09	+Waynes	oh, look, tensorflow changed its api yet again
+2019-07-23 16:35:19	+Waynes	not even the examples on the official website are up to date
+2019-07-23 16:37:32	+Waynes	also indentation is all over the place
+2019-07-23 16:38:33	+Waynes	the guy who thought that indentation should be relevant for syntax was an idiot
+2019-07-23 16:39:24	+jonas__	elsie273, I'm busy, but good
+2019-07-23 16:39:28	+jonas__	time to go home soon, yay
+2019-07-23 16:40:03	+jonas__	probably gonna play some void bastards when I do
+2019-07-23 16:40:13	+jonas__	I like its artstyle, celshaded and neat
+2019-07-23 16:43:13	elsie273	it looks pretty
+2019-07-23 16:43:18	elsie273	what's it like?
+2019-07-23 16:43:25	<--	paladinn (~paladin@unaffiliated/paladinn) has quit (Ping timeout: 252 seconds)
+2019-07-23 16:45:02	+carefish	Waynes: it's the one thing i hate about python.
+2019-07-23 16:45:06	+carefish	the rest is pretty good
+2019-07-23 16:45:36	+Waynes	yeah, overall it's nice
+2019-07-23 16:46:04	+carefish	though it does force you to keep making well named functions
+2019-07-23 16:46:13	+carefish	which can be nice if you're starting out learning programming
+2019-07-23 16:46:24	+Waynes	well named?
+2019-07-23 16:46:35	+Waynes	you mean well formatted?
+2019-07-23 16:46:44	+carefish	in the sense that you don't want indentation hell as a starter so chunking up funcs is something that will feel somewhat appealing to a starter i imagine
+2019-07-23 16:47:22	+carefish	which definitely is a good behavior to teach to people who are new to coding
+2019-07-23 16:48:10	+carefish	but other than that? indentation as a requirement for syntax? screw all of that
+2019-07-23 16:48:14	+Waynes	ah yes, I agree
+2019-07-23 16:49:12	-->	paladinn (~paladin@2804:14d:3281:61b3:a8d5:8d64:131c:17c5) has joined #reddit-gamedev
+2019-07-23 16:49:12	<--	paladinn (~paladin@2804:14d:3281:61b3:a8d5:8d64:131c:17c5) has quit (Changing host)
+2019-07-23 16:49:12	-->	paladinn (~paladin@unaffiliated/paladinn) has joined #reddit-gamedev
+2019-07-23 16:49:30	yuken	Waynes, let the indentation take over ;) https://gist.github.com/YukenK/03d40eef4c02fb1f6b50ce050e297f6f & https://gist.github.com/YukenK/2f5b9f1a3cb43c8f778fd04505a1288b
+2019-07-23 16:49:54	+Waynes	eww, tabs
+2019-07-23 16:50:08	+carefish	isn't nim kinda esoteric?
+2019-07-23 16:50:16	yuken	thhat's not nim.
+2019-07-23 16:50:20	+Waynes	nah, it's a real language
+2019-07-23 16:50:21	yuken	just that nim has the closest syntax.
+2019-07-23 16:50:25	+carefish	oh
+2019-07-23 16:50:28	+carefish	nevermind
+2019-07-23 16:50:40	-->	ImQ009 (~ImQ009@unaffiliated/imq009) has joined #reddit-gamedev
+2019-07-23 16:50:42	yuken	it's a horrific language that no one should ever use.
+2019-07-23 16:50:52	+carefish	you know anything about nim Waynes? i thought it was kind-of esoteric
+2019-07-23 16:51:19	+Waynes	the term "esoteric programming language" usually refers to stuff like brainfuck or ook
+2019-07-23 16:51:47	+carefish	hrm ok
+2019-07-23 16:51:52	+carefish	well, what would this fall under then?
+2019-07-23 16:52:06	+Waynes	niche maybe?
+2019-07-23 16:53:02	+carefish	hmm yeah agreed
+2019-07-23 16:53:10	+carefish	though i wasn't aware it could export to js too
+2019-07-23 16:53:20	+carefish	i thought it was for native dev on platform of choice
+2019-07-23 16:53:31	+carefish	tbh its syntax doesn't look too bad
+2019-07-23 16:53:55	+carefish	it very much looks like an improvement of python ?
+2019-07-23 16:54:03	+Waynes	everything that can be compiled to C can possibly be made to run on any platform
+2019-07-23 16:54:09	+carefish	i don't remember exactly when the last time i saw nim... i think it was 6? years ago
+2019-07-23 16:56:30	yuken	nim is actually a pretty decent language from what I know - runs on anything because it's just C, can even be used to write an operating system.
+2019-07-23 16:56:40	yuken	And high performance.
+2019-07-23 16:57:03	+Waynes	it has some weird quirks like "style insensitivity", i.e. you can call fooBar as foo_bar and vice versa
+2019-07-23 16:57:31	+carefish	i just saw an example which blew my mind
+2019-07-23 16:57:58	+carefish	https://nim-lang.org/features.html scroll down to 'small core with a rich prospect for extensibility'
+2019-07-23 16:58:17	+carefish	that code sample on the right, that's stupid programming fun you can do with that
+2019-07-23 16:58:52	+carefish	making whatever string value is in the variable a strongly typed data type
+2019-07-23 16:58:59	+carefish	pretty nifty.
+2019-07-23 16:59:58	yuken	nim was actually going to be my second choice after Rust, but I chose Rust cuz idk.
+2019-07-23 17:00:07	+carefish	especially since you can see how they achieve that with the nnenmty/newemptynode calls
+2019-07-23 17:00:29	+carefish	really cool that that resolves at compiletime :)
+2019-07-23 17:00:44	+Waynes	but with great power comes great responsibility
+2019-07-23 17:01:03	+carefish	who doesn't love abusing a language now and then
+2019-07-23 17:01:13	+carefish	just clobber the cpu/memory :>
+2019-07-23 17:04:27	<--	paladinn (~paladin@unaffiliated/paladinn) has quit (Ping timeout: 250 seconds)
+2019-07-23 17:05:25	+jonas__	elsie273, void bastards is good, I like it
+2019-07-23 17:05:58	+jonas__	each ship is like a short level, you can play it for however long you like..to the death or retreat if things get too heated
+2019-07-23 17:06:11	+jonas__	and each level has cool randomized modifiers that adds to the roguelike aspect
+2019-07-23 17:06:38	+jonas__	I'd call it rogue-lite, as there is death and roguelike elements, but only limited loss on death
+2019-07-23 17:06:50	-->	paladinn (~paladin@unaffiliated/paladinn) has joined #reddit-gamedev
+2019-07-23 17:13:19	-->	Chevluh (~Chev@73.43.1.85.dynamic.wline.res.cust.swisscom.ch) has joined #reddit-gamedev
+2019-07-23 17:16:41	-->	h (~quassel@196.244.191.114) has joined #reddit-gamedev
+2019-07-23 17:17:03	--	h is now known as Guest11726
+2019-07-23 17:20:14	+carefish	this feels like a redundant question, but i'm gonna ask it anyways: if i only want 2d sprites, it is smarter to use gl quads so i can draw even more sprites vs the 2 triangle setup?
+2019-07-23 17:20:56	+carefish	cause i kinda am leaning towards leaving all of the opengl code only deal with triangles so it's easier to read overall
+2019-07-23 17:21:33	+Waynes	quads are deprecated anyway
+2019-07-23 17:21:58	+Waynes	so I'd go with triangles everywhere
+2019-07-23 17:22:49	+carefish	i do believe i might support it later down the road once i have 3d models to work though
+2019-07-23 17:23:05	+carefish	because i do think it might be a good idea to use quads when i make user interfaces with it
+2019-07-23 17:23:40	+Waynes	just wrap it so it emits two triangles
+2019-07-23 17:24:07	+carefish	that's what all my sprites are now
+2019-07-23 17:24:24	+carefish	reading up on those projection matrices and stuff to learn how to move them around
+2019-07-23 17:24:43	+carefish	some of it is easy, but never really touched matrices before
+2019-07-23 17:26:27	yuken	carefish, aren't gl quads just 2 triangles, but handled for you nicer?
+2019-07-23 17:26:35	yuken	that's how SFML's quads were ,at least.
+2019-07-23 17:26:40	yuken	(and SFML used OpenGL)
+2019-07-23 17:27:02	+carefish	afaik when you specify GLQuads your vertice array needs to contain quads
+2019-07-23 17:27:40	yuken	well yeah, but it's just an abstraction from triangles, no? Rather than specifying 2 triangles with the vertices to make a rectangle, you specify 4 points for a quad.
+2019-07-23 17:27:52	+carefish	i don't know
+2019-07-23 17:27:54	+carefish	hence the question
+2019-07-23 17:28:45	+carefish	so a quad vertice array will be smaller in memory than a triangle array yuken
+2019-07-23 17:29:02	+carefish	that was semi-why i wondered if it actually works the way it think it does
+2019-07-23 17:29:12	yuken	hm, looks like quad is a separate primitive, deprecated since OpenGL 3.0
+2019-07-23 17:29:14	yuken	and removed since 3.1
+2019-07-23 17:29:17	yuken	https://www.khronos.org/opengl/wiki/Primitive#Quads
+2019-07-23 17:29:19	+carefish	oh lelz
+2019-07-23 17:29:26	+carefish	well i'm at 4+
+2019-07-23 17:29:32	yuken	but appears to still be 2 triangles in most implementations
+2019-07-23 17:29:34	+carefish	so guess i don't have to worry about any of this
+2019-07-23 17:29:39	yuken	but GPU vendors can do whatever they want.
+2019-07-23 17:29:48	+carefish	then it stays triangles
+2019-07-23 17:29:50	+carefish	woo.
+2019-07-23 17:32:55	elsie273	jonas when i'm home in a few hours i'm going to try adding some pretty text printing syntax to my engine
+2019-07-23 17:33:03	elsie273	i haven't worked on games stuff since april
+2019-07-23 17:33:08	elsie273	i stuck
+2019-07-23 17:33:13	elsie273	suck
+2019-07-23 17:47:35	-->	DerHase (~Dave@catv-80-99-84-192.catv.broadband.hu) has joined #reddit-gamedev

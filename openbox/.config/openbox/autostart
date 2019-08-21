@@ -1,0 +1,7 @@
+dropbox &
+polybar main &
+setxkbmap -layout us -variant intl &
+redshift-gtk &
+pkill redshift-gtk &
+compton &
+
