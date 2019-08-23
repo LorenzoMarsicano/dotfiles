@@ -1,6 +1,6 @@
 execute pathogen#infect()
 set title
-colorscheme monokai
+colorscheme wal 
 set nocompatible
 set modelines=0
 set filetype=on
@@ -76,7 +76,7 @@ map <C-m> :NERDTreeFocus<CR>
 " Airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme='wombat'
+let g:airline_theme='luna'
 
 " gitgutter
 set updatetime=100

@@ -88,7 +88,8 @@ scroll-down = i3wm-wsprev
 ;== Module Location ========================================================
 
 modules-left = arch workspaces terminal firefox telegram thunar thunderbird
-modules-right = mpd volume network date powermenu
+modules-center = mpd 
+modules-right = volume network date powermenu
  
 ;== Modules ========================================================
 
@@ -181,7 +182,7 @@ type = internal/mpd
 format-online = <icon-prev> <toggle> <icon-next> <label-song> 
 ;format-online =  <label-song> 
 ;alt icons =   
-label-offline = 🎜 mpd is offline
+label-offline = 🎜  mpd is offline
 format-online-foreground = ${color.ashade8}
 format-online-background = ${color.shade8}
 format-online-padding = 2
@@ -191,7 +192,7 @@ icon-next = ﭠ
 icon-prev = ﭢ
 icon-pause = 
 
-label-song-maxlen = 25
+label-song-maxlen =  45
 label-song-ellipsis = true
 
 ;==========================================================

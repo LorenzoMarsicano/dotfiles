@@ -1,7 +1,9 @@
 dropbox &
+wal -R &
 polybar main &
 setxkbmap -layout us -variant intl &
 redshift-gtk &
 pkill redshift-gtk &
 compton &
+mpd /home/syrinxos/.config/mpd/mpd.conf &
 

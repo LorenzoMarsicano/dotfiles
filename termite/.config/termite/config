@@ -4,7 +4,7 @@ allow_bold = true
 bold_is_bright = true
 clickable_url = true
 dynamic_title = true
-font = Fantasque Sans Mono 12
+font = Hack 9 
 #fullscreen = true
 #icon_name = terminal
 #mouse_autohide = false
@@ -15,7 +15,7 @@ font = Fantasque Sans Mono 12
 scrollback_lines = 10000
 #search_wrap = true
 urgent_on_bell = true
-#hyperlinks = false
+hyperlinks = true 
 
 # $BROWSER is used by default if set, with xdg-open as a fallback
 #browser = xdg-open
