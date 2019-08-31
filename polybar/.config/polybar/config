@@ -87,7 +87,7 @@ scroll-down = i3wm-wsprev
 
 ;== Module Location ========================================================
 
-modules-left = arch workspaces terminal firefox telegram thunar thunderbird
+modules-left = arch workspaces terminal firefox thunar thunderbird
 modules-center = mpd 
 modules-right = volume network date powermenu
  
@@ -248,7 +248,7 @@ animation-charging-6 = 
 animation-charging-framerate = 750
 
 [module/volume]
-type = internal/alsa
+type = internal/pulseaudio
 format-volume = <ramp-volume> <label-volume>
 format-volume-padding = 2
 format-volume-background = ${color.shade6}
