@@ -1,11 +1,9 @@
 set -xg EDITOR nvim
 
-set PATH /home/syrinxos/Scripts $PATH
 cat ~/.cache/wal/sequences &  
 
-
 #---------------------------------- EXPORT-----------------------------------------------------------------
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$HOME/Code/go/bin:$PATH"
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$HOME/Code/go/bin:$PATH:$HOME/Scripts"
 
 export LC_COLLATE="C"
 
@@ -20,7 +18,6 @@ export PURE_GIT_UP_ARROW='↑'
 export WEECHAT_HOME='~/.config/weechat'
 
 #---------------------------------- ALIAS ------------------------------------------------------------------
-alias secondary_screen="bash /home/syrinxos/dotfiles/herbstluftwm/.config/herbstluftwm/secondary_panel.sh"
 alias ls="ls -al --color"
 alias l="ls"
 alias n="nnn"
@@ -29,5 +26,5 @@ alias vim="nvim"
 alias v="nvim"
 
 #------------------------------------------------------------------------------------------------------------
-set -g -x GOPATH /home/syrinxos/Code/go/
-if test -f /home/syrinxos/.autojump/share/autojump/autojump.fish; . /home/syrinxos/.autojump/share/autojump/autojump.fish; end
+set -g -x GOPATH /home/lorenzo/Code/go/
+if test -f /home/lorenzo/.autojump/share/autojump/autojump.fish; . /home/lorenzo/.autojump/share/autojump/autojump.fish; end

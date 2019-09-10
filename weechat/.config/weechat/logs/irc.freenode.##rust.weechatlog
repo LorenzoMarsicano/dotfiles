@@ -1,0 +1,244 @@
+2019-09-10 09:41:35	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined ##rust
+2019-09-10 09:41:35	--	Topic for ##rust is "Unofficial channel for the Rust programming language |  Playground https://play.rust-lang.org/ | Discord http://discord.gg/rust-lang | Forum https://users.rust-lang.org | Code of conduct: rust-lang.org/conduct.html | TL;DR: be nice and we'll get along just fine"
+2019-09-10 09:41:35	--	Topic set by Manishearth (~Manishear@wikipedia/Manishearth) on Mon, 13 May 2019 05:47:40
+2019-09-10 09:41:35	--	Channel ##rust: 520 nicks (2 ops, 0 voices, 518 normals)
+2019-09-10 09:41:37	--	Channel created on Tue, 30 Jul 2013 17:50:50
+2019-09-10 09:43:00	<--	libertyprime (~libertypr@client-173-016.guest.otago.ac.nz) has quit (Quit: leaving)
+2019-09-10 09:44:34	-->	libertyprime (~libertypr@client-173-016.guest.otago.ac.nz) has joined ##rust
+2019-09-10 09:55:04	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined ##rust
+2019-09-10 09:55:04	--	Topic for ##rust is "Unofficial channel for the Rust programming language |  Playground https://play.rust-lang.org/ | Discord http://discord.gg/rust-lang | Forum https://users.rust-lang.org | Code of conduct: rust-lang.org/conduct.html | TL;DR: be nice and we'll get along just fine"
+2019-09-10 09:55:04	--	Topic set by Manishearth (~Manishear@wikipedia/Manishearth) on Mon, 13 May 2019 05:47:40
+2019-09-10 09:55:04	--	Channel ##rust: 520 nicks (2 ops, 0 voices, 518 normals)
+2019-09-10 09:55:17	<--	NerdyPepper (~nerdypepp@106.51.110.63) has quit (Ping timeout: 258 seconds)
+2019-09-10 09:55:21	--	Channel created on Tue, 30 Jul 2013 17:50:50
+2019-09-10 10:00:03	M-ou-se	gbmor: src/bin/yourbinaryname/main.rs should work
+2019-09-10 10:00:15	M-ou-se	See https://doc.rust-lang.org/cargo/reference/manifest.html#the-project-layout
+2019-09-10 10:00:42	M-ou-se	"If your executable consists of more than just one source file, you might also use a directory inside src/bin containing a main.rs file which will be treated as an executable with a name of the parent directory."
+2019-09-10 10:06:04	<--	pknull (~pooky@184.103.28.136) has quit (Quit: Departing.)
+2019-09-10 10:07:25	-->	pknull (~pooky@184.103.28.136) has joined ##rust
+2019-09-10 10:08:39	-->	gierdo (~Dominik_G@185-196-123-9.dynamic.monzoon.net) has joined ##rust
+2019-09-10 10:12:19	<--	lovesegfault (~bemeurer@2600:1700:5f20:83e0::27) has quit (Quit: WeeChat 2.5)
+2019-09-10 10:13:31	-->	m0rphism (~m0rphism@149.172.82.115) has joined ##rust
+2019-09-10 10:13:33	-->	Kirjava (~cake@183.ip-51-254-223.eu) has joined ##rust
+2019-09-10 10:26:52	-->	aLeSD (~aLeSD@122.red-80-24-12.staticip.rima-tde.net) has joined ##rust
+2019-09-10 10:28:08	<--	pknull (~pooky@184.103.28.136) has quit (Quit: Departing.)
+2019-09-10 10:28:26	-->	pknull (~pooky@184.103.28.136) has joined ##rust
+2019-09-10 10:30:26	-->	djhworld (~djhworld@90.252.118.61) has joined ##rust
+2019-09-10 10:33:04	<--	red_stalker (~red_stalk@2620:10d:c090:180::570c) has quit (Ping timeout: 264 seconds)
+2019-09-10 10:42:01	crodjer	How can I experiment with `async/await`? When I run with `cargo +nightly` and futures preview with async-await , I get an error:
+2019-09-10 10:42:07	crodjer	compile_error!("The `async-await` feature requires the `nightly` feature as an explicit opt-in to unstable features");
+2019-09-10 10:43:09	<--	Yaniel (yaniel@unaffiliated/yaniel) has quit (Remote host closed the connection)
+2019-09-10 10:43:18	crodjer	This is trying to compile a simple `hello-world` cargo init project with just a new dependency.
+2019-09-10 10:46:42	-->	Yaniel (yaniel@unaffiliated/yaniel) has joined ##rust
+2019-09-10 10:50:21	-->	ave_milia (ave@gateway/vpn/privateinternetaccess/avemilia) has joined ##rust
+2019-09-10 10:52:08	<--	Lord_of_Life (~Lord@unaffiliated/lord-of-life/x-0885362) has quit (Ping timeout: 245 seconds)
+2019-09-10 10:54:52	-->	Lord_of_Life (~Lord@unaffiliated/lord-of-life/x-0885362) has joined ##rust
+2019-09-10 10:56:53	<--	meena (~eena@159.69.218.51) has quit (Quit: The Lounge - https://thelounge.chat)
+2019-09-10 10:57:17	-->	meena (~eena@159.69.218.51) has joined ##rust
+2019-09-10 10:57:37	-->	ellcs (~mantel@193.174.12.196) has joined ##rust
+2019-09-10 10:58:48	Faux	crodjer: With what code? It should work. Is your nightly new enough?
+2019-09-10 10:59:27	<--	meena (~eena@159.69.218.51) has quit (Client Quit)
+2019-09-10 10:59:46	-->	meena (~eena@159.69.218.51) has joined ##rust
+2019-09-10 11:00:25	<--	meena (~eena@159.69.218.51) has left ##rust
+2019-09-10 11:00:26	vorner	crodjer, You also need an `#![feature(async_await)]` attribute at the top of your main file to opt into that specific feature.
+2019-09-10 11:01:20	Faux	vorner: No, it's been stabilised. https://play.rust-lang.org/?version=nightly&mode=debug&edition=2018&gist=b7905eb67034f50e2c66f62a26c7e934
+2019-09-10 11:02:34	tjis	so this async_await stuff, is that just for futures2 or does it work with futures1 and therefore tokio as well?
+2019-09-10 11:02:57	<--	libertyprime (~libertypr@client-173-016.guest.otago.ac.nz) has quit (Ping timeout: 245 seconds)
+2019-09-10 11:03:12	Faux	There is a compatibility layer which people seem to use, but I personally think is not worth the effort for.
+2019-09-10 11:08:31	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined ##rust
+2019-09-10 11:08:31	--	Topic for ##rust is "Unofficial channel for the Rust programming language |  Playground https://play.rust-lang.org/ | Discord http://discord.gg/rust-lang | Forum https://users.rust-lang.org | Code of conduct: rust-lang.org/conduct.html | TL;DR: be nice and we'll get along just fine"
+2019-09-10 11:08:31	--	Topic set by Manishearth (~Manishear@wikipedia/Manishearth) on Mon, 13 May 2019 05:47:40
+2019-09-10 11:08:31	--	Channel ##rust: 523 nicks (2 ops, 0 voices, 521 normals)
+2019-09-10 11:08:47	--	Channel created on Tue, 30 Jul 2013 17:50:50
+2019-09-10 11:08:49	<--	nostoi (~nostoi@103.red-83-50-221.dynamicip.rima-tde.net) has quit (Quit: Verlassend)
+2019-09-10 11:12:58	<--	pknull (~pooky@184.103.28.136) has quit (Quit: Departing.)
+2019-09-10 11:13:28	-->	pknull (~pooky@184.103.28.136) has joined ##rust
+2019-09-10 11:14:00	Aorimn	is there a minimal example (e.g. a hello world) of this new async/await syntax somewhere?
+2019-09-10 11:15:03	Faux	https://rust-lang.github.io/async-book/01_getting_started/04_async_await_primer.html
+2019-09-10 11:15:42	Aorimn	I didn't know there was an async book, thanks!
+2019-09-10 11:15:49	Faux	Alas, incompatible with playground's futures implementation, probably because I skipped all the pages about aliasing dependencies.
+2019-09-10 11:16:58	j`ey	more than Futures, I want generators :(
+2019-09-10 11:17:50	-->	tsaka__ (~torstein@dslb-178-004-036-111.178.004.pools.vodafone-ip.de) has joined ##rust
+2019-09-10 11:18:36	<--	sdlarsen (~sdlarsen@77.68.185.196) has quit (Quit: WeeChat 2.6)
+2019-09-10 11:20:17	Faux	I always assumed it required the same level of compiler support, but haven't actually sat down and checked.
+2019-09-10 11:20:52	-->	thequux (~thequux@78-21-43-173.access.telenet.be) has joined ##rust
+2019-09-10 11:24:38	calops	don't we have generators in nightly?
+2019-09-10 11:24:45	-->	tollyx (~tollyx@151.236.202.129.c.fiberdirekt.net) has joined ##rust
+2019-09-10 11:25:32	Faux	Playground says yes.
+2019-09-10 11:29:52	j`ey	Yeah, I was just a bit weary about basing one of my important functions on them
+2019-09-10 11:32:31	-->	SisterFister (~SisterFis@catv-178-48-164-108.catv.broadband.hu) has joined ##rust
+2019-09-10 11:34:27	<--	thequux (~thequux@78-21-43-173.access.telenet.be) has quit (Read error: Connection reset by peer)
+2019-09-10 11:36:34	<--	cheakoirccloud (uid293319@gateway/web/irccloud.com/x-hbaxlfdihfkwymdx) has quit (Quit: Connection closed for inactivity)
+2019-09-10 11:49:37	-->	libertyprime (~libertypr@219-89-182-226-fibre.sparkbb.co.nz) has joined ##rust
+2019-09-10 11:56:30	-->	mawis (~matthias@2a02:810d:4bc0:7852:2efd:a1ff:febe:32a1) has joined ##rust
+2019-09-10 11:59:33	<--	PeterRabbit (~peter@2600:6c64:6180:86:83f:44da:1aa9:185) has quit (Read error: Connection reset by peer)
+2019-09-10 12:01:48	-->	PeterRabbit (~peter@2600:6c64:6180:86:1055:96d5:c49b:7bec) has joined ##rust
+2019-09-10 12:06:51	<--	mawis (~matthias@2a02:810d:4bc0:7852:2efd:a1ff:febe:32a1) has quit (Ping timeout: 250 seconds)
+2019-09-10 12:10:39	-->	mawis (~matthias@ipb21ba9d3.dynamic.kabel-deutschland.de) has joined ##rust
+2019-09-10 12:11:16	trimoq	hi, can someone tell me if there is a way to define the order of the execution of multiple procedural macros on a function? in particular, I want to add a parameter to a function with macro A and then generate code with macro B from a library, also including the output of macro A
+2019-09-10 12:12:59	<--	bpsecret (~bpsecret@unaffiliated/bpsecret) has quit (Ping timeout: 244 seconds)
+2019-09-10 12:15:08	-->	airwind (~belovent@cr-01.anx09.lju.si.anexia-it.com) has joined ##rust
+2019-09-10 12:18:33	<--	PeterRabbit (~peter@2600:6c64:6180:86:1055:96d5:c49b:7bec) has quit (Read error: Connection reset by peer)
+2019-09-10 12:18:53	-->	PeterRabbit (~peter@2600:6c64:6180:86:1055:96d5:c49b:7bec) has joined ##rust
+2019-09-10 12:18:56	-->	bpsecret (~bpsecret@unaffiliated/bpsecret) has joined ##rust
+2019-09-10 12:23:37	<--	est31 (~quassel@gateway/tor-sasl/est31) has quit (Remote host closed the connection)
+2019-09-10 12:23:48	-->	est31 (~quassel@gateway/tor-sasl/est31) has joined ##rust
+2019-09-10 12:24:13	-->	royal_screwup213 (d98a3b22@gateway/web/cgi-irc/kiwiirc.com/ip.217.138.59.34) has joined ##rust
+2019-09-10 12:24:42	M-ou-se	trimoq: i don't think there are any guarantees, but i'd guess they execute in the order they are mentioned in the attributes on that function.
+2019-09-10 12:28:01	trimoq	M-ou-se: thanks, good to know that there are no strong guarantess, perhaps what i try to achieve is a bad idea then. where is the best place to look such things up? (i am new to rust macros and have not found the "true" source of documentation)
+2019-09-10 12:29:23	M-ou-se	documentation about these things is always a bit... disapointing. maybe open an issue on the rust repo to ask if there are any guarantees, if you can't find it anywhere
+2019-09-10 12:30:54	M-ou-se	the RFC that introduced a feature might be a good place to find details on its rules
+2019-09-10 12:33:17	M-ou-se	might also be interesting to see if anybody is using multiple proc macro atributes on the same item anywhere in the wild. but it's a bit hard to grep for
+2019-09-10 12:36:23	-->	Tichodroma (~lutz@fsf/member/Tichodroma) has joined ##rust
+2019-09-10 12:36:45	trimoq	oh, the rfc is a nice idea, thanks, i will try my luck there
+2019-09-10 12:36:53	<--	pknull (~pooky@184.103.28.136) has quit (Quit: Departing.)
+2019-09-10 12:37:33	-->	pknull (~pooky@184.103.28.136) has joined ##rust
+2019-09-10 12:37:43	M-ou-se	the proc macro RFC doesn't look like the current state of proc macros at all. looks like a lot has changed since then :(
+2019-09-10 12:43:48	-->	user9 (984d0e22@leoseb.u-ga.fr) has joined ##rust
+2019-09-10 12:45:27	<--	fjellfras (~fjellfras@49.248.13.74) has quit (Quit: Leaving)
+2019-09-10 12:47:47	<--	rople (~rople@193-114-148-110.tpgi.com.au) has quit (Quit: rople)
+2019-09-10 12:48:12	-->	rople (~rople@193-114-148-110.tpgi.com.au) has joined ##rust
+2019-09-10 12:48:31	-->	happycoder (~happycode@14.139.185.114) has joined ##rust
+2019-09-10 12:50:05	<--	pknull (~pooky@184.103.28.136) has quit (Quit: Departing.)
+2019-09-10 12:50:34	-->	pknull (~pooky@184.103.28.136) has joined ##rust
+2019-09-10 12:53:14	<--	pknull (~pooky@184.103.28.136) has quit (Client Quit)
+2019-09-10 12:54:34	-->	pknull (~pooky@184.103.28.136) has joined ##rust
+2019-09-10 12:57:06	-->	elichai2 (uid212594@gateway/web/irccloud.com/x-tqcxyncnqjqoqprn) has joined ##rust
+2019-09-10 13:05:53	<--	happycoder (~happycode@14.139.185.114) has quit (Ping timeout: 268 seconds)
+2019-09-10 13:06:22	-->	happycoder (~happycode@14.139.185.114) has joined ##rust
+2019-09-10 13:16:07	<--	gierdo (~Dominik_G@185-196-123-9.dynamic.monzoon.net) has quit (Ping timeout: 258 seconds)
+2019-09-10 13:16:33	crodjer	Faux: I am working with simple hello world: https://play.rust-lang.org/?version=nightly&mode=debug&edition=2018&gist=7be6af1196730ed7ee30641b1af17ed2, with a futures preview dependency:
+2019-09-10 13:16:40	crodjer	```futures-preview = { version = "=0.3.0-alpha.18", features = ["async-await"] }```
+2019-09-10 13:18:08	<--	libertyprime (~libertypr@219-89-182-226-fibre.sparkbb.co.nz) has quit (Ping timeout: 276 seconds)
+2019-09-10 13:18:32	crodjer	This is how I am trying to build: `cargo +nightly build`
+2019-09-10 13:19:16	-->	libertyprime (~libertypr@101.98.42.91) has joined ##rust
+2019-09-10 13:25:04	-->	NerdyPepper (~nerdypepp@106.51.110.63) has joined ##rust
+2019-09-10 13:29:57	-->	haenous (~TheHaenou@134.19.179.179) has joined ##rust
+2019-09-10 13:32:02	royal_screwup213	is it just me or is it difficult to rust really hard to read? :(  I'm looking at this https://github.com/Geal/nom/commit/0b15ccde8de8248e8eda6858ef296c10d75d61a0 and i feel like it would take me a very long time to even come close to undetrstanding the snippet as a whole, let alone a file
+2019-09-10 13:32:52	Faux	nom is really pushing the limits of the language, on purpose, it's not typical rust code. The syntax there is pretty simple, but there's a load of stuff going on.
+2019-09-10 13:33:34	Faux	""There's a function, cut, parametised on I, O, E, and F; which returns a function from I to IResult; with restrictions on those types."
+2019-09-10 13:34:42	M-ou-se	would've been a bit more readable if they put all the restrictions after 'where', instead of putting some in the first <> part
+2019-09-10 13:34:50	Faux	Yeah.
+2019-09-10 13:35:17	Faux	Or if `type  CloneySlice = Clone + Slice<RangeTo<usize>>;` was allowed.
+2019-09-10 13:35:51	royal_screwup213	ah yeah, I understand those pieces invidiually...but making sense of of it as a whole i find pretty difficult haha. Like, why are these restriction there (and as the library user, should I care?)... Do you guys have any recommendations for getting better at rust? i've read the rust book and attempting a toy project involving requests and stuff :)
+2019-09-10 13:36:02	ilmari	evalr: type CloneySlice = impl Clone + Slice<RanteTo<usize>>;
+2019-09-10 13:36:06	--	Notice(evalr): error[E0405]: cannot find trait `Slice` in this scope
+2019-09-10 13:36:08	--	Notice(evalr): ~~~ Full output: https://play.rust-lang.org/?gist=e5f757f5e8a8196e364560e6a5fcfe4e&version=stable&mode=debug
+2019-09-10 13:36:26	Faux	evalr: type CloneySlice = impl Clone + Debug;
+2019-09-10 13:36:29	--	Notice(evalr): error[E0405]: cannot find trait `Debug` in this scope
+2019-09-10 13:36:31	--	Notice(evalr): ~~~ Full output: https://play.rust-lang.org/?gist=245e404677143719ea217ef46e1921eb&version=stable&mode=debug
+2019-09-10 13:36:35	ilmari	evalr: trait Slice<T> {} type CloneySlice = impl Clone + Slice<RangeTo<usize>>;
+2019-09-10 13:36:37	--	Notice(evalr): error[E0412]: cannot find type `RangeTo` in this scope
+2019-09-10 13:36:39	--	Notice(evalr): ~~~ Full output: https://play.rust-lang.org/?gist=d0a572de77aa85c2fe8e34842c7b580d&version=stable&mode=debug
+2019-09-10 13:36:44	ilmari	evalr: trait Slice<T> {} type CloneySlice = impl Clone + Slice<usize>;
+2019-09-10 13:36:47	--	Notice(evalr): error[E0562]: `impl Trait` not allowed outside of function and inherent method return types
+2019-09-10 13:36:47	j`ey	royal_screwup213: you cant understand why the restrictions are there without know what the code is doing
+2019-09-10 13:36:49	--	Notice(evalr): ~~~ Full output: https://play.rust-lang.org/?gist=5491c727d6a9d7cb10210eb08d2a3af8&version=stable&mode=debug
+2019-09-10 13:37:01	j`ey	royal_screwup213: as a library user, you probably shouldnt have to care
+2019-09-10 13:37:34	ilmari	ah, https://github.com/rust-lang/rust/issues/63063
+2019-09-10 13:38:04	ilmari	impl Trait in type aliases is still RFC: https://github.com/rust-lang/rfcs/pull/2515
+2019-09-10 13:38:12	Faux	I remember this issue from before `impl` so you had me going for a bit there. :)
+2019-09-10 13:38:14	royal_screwup213	hmm i see...it just feels like there's so much magic going on....i mean, sure, even in python/java when i'M using a lib I obviously don't understan all the internals. But I can definitely try to discern things step by step....with rust, I feel that would be pretty difficult
+2019-09-10 13:38:51	j`ey	royal_screwup213: just takes time to learn
+2019-09-10 13:38:58	Faux	java.util.Collections { public static <T extends Comparable<? super T>> void sort(List<T> list) { list.sort(null); } }
+2019-09-10 13:41:12	<--	baali (~baali@59.98.239.188) has quit (Ping timeout: 246 seconds)
+2019-09-10 13:42:02	<--	rople (~rople@193-114-148-110.tpgi.com.au) has quit (Quit: rople)
+2019-09-10 13:42:45	<--	goncalor (~goncalor@unaffiliated/goncalor) has quit (Read error: Connection reset by peer)
+2019-09-10 13:42:53	-->	rople (~rople@193-114-148-110.tpgi.com.au) has joined ##rust
+2019-09-10 13:44:30	-->	goncalor (~goncalor@unaffiliated/goncalor) has joined ##rust
+2019-09-10 13:45:33	eddyb	PSA: buffer your IO https://github.com/rust-lang/rust/pull/64344
+2019-09-10 13:46:09	eddyb	this was found after noticing that running more things in parallel made each of them slower. it was probably up in the millions of write syscalls to the kernel
+2019-09-10 13:47:06	eddyb	14:35 <Faux> Or if `type  CloneySlice = Clone + Slice<RangeTo<usize>>;` was allowed.
+2019-09-10 13:47:14	<--	happycoder (~happycode@14.139.185.114) has quit (Remote host closed the connection)
+2019-09-10 13:47:31	eddyb	evalr: trait Slice<T> {} trait CloneySlice = Clone + Slice<usize>;
+2019-09-10 13:47:33	--	Notice(evalr): error[E0658]: trait aliases are experimental
+2019-09-10 13:47:35	--	Notice(evalr): ~~~ Full output: https://play.rust-lang.org/?gist=add4c0c3fcf135c8076aa148a45cb7e7&version=stable&mode=debug
+2019-09-10 13:47:44	eddyb	it's unstable but it exists
+2019-09-10 13:47:52	Faux	eddyb: *nice* speedup.
+2019-09-10 13:47:57	eddyb	yes
+2019-09-10 13:48:01	eddyb	:D
+2019-09-10 13:49:56	eddyb	build.lyken.rs is such a beast, but -j48 has downsides
+2019-09-10 13:50:30	eddyb	like "murdering the kernel with `write!`s"
+2019-09-10 13:50:47	j`ey	eddyb: lol nice
+2019-09-10 13:51:06	eddyb	it also got worse at some point so something happened on the server, that I don't know yet
+2019-09-10 13:51:33	Faux	spectre? :)
+2019-09-10 13:51:45	eddyb	but as long as I don't peg it with silly IO it doesn't matter much
+2019-09-10 13:51:48	<--	royal_screwup213 (d98a3b22@gateway/web/cgi-irc/kiwiirc.com/ip.217.138.59.34) has quit (Remote host closed the connection)
+2019-09-10 13:52:15	eddyb	Faux: these tests got slower but others didn't. oh mitigations make syscalls specifically slower?
+2019-09-10 13:52:28	Faux	Yeah, the syscall overhead went up.
+2019-09-10 13:52:36	eddyb	right cause it has to trash stuff when crossing domains
+2019-09-10 13:52:52	eddyb	sorry, it's been a while, I've been shutting all of that out
+2019-09-10 13:54:25	-->	delYsid (~user@debian/developer/mlang) has joined ##rust
+2019-09-10 13:54:51	eddyb	now I'm just waiting for someone to introduce a RISC-V server line close to competitive with AMD and Intel
+2019-09-10 13:55:43	eddyb	Faux: oh right, also, this is an AMD 24-core 48-thread machine (EPYC? I forget)
+2019-09-10 13:56:05	Faux	Some of the things applied to them, too.
+2019-09-10 13:56:22	eddyb	so it wouldn't be affected in the exact same way as the Intel machines most other devs and CI use (AFAIK)
+2019-09-10 13:56:35	eddyb	Faux: right, and some things might be worse on them
+2019-09-10 13:56:38	Faux	vendor_id : AuthenticAMD
+2019-09-10 13:56:41	Faux	model name : AMD Opteron(tm) X3421 APU
+2019-09-10 13:56:43	Faux	bugs  : fxsave_leak sysret_ss_attrs null_seg spectre_v1 spectre_v2 spec_store_bypass
+2019-09-10 13:56:51	delYsid	Rust/Cargo newbie here: I am trying to depend on a crate (sonos) which depends on openssl, but apparently a too old version since it will not recognize the lib I have installed.  Is there a cargo trick to update a transient dependency somehow?
+2019-09-10 13:56:53	eddyb	less bugs but maybe slower with mitigations
+2019-09-10 13:57:18	eddyb	delYsid: only locally, AFAIK
+2019-09-10 13:57:33	delYsid	eddyb: Locally would be fine.
+2019-09-10 13:57:43	eddyb	something like `[patch.'crates-io']`, maybe?
+2019-09-10 13:57:47	Faux	https://doc.rust-lang.org/edition-guide/rust-2018/cargo-and-crates-io/replacing-dependencies-with-patch.html
+2019-09-10 13:57:54	eddyb	yeah that :D
+2019-09-10 13:58:38	eddyb	I'm at lunch rn otherwise I would've copy-pasted an example I have laying around
+2019-09-10 13:59:24	<--	rople (~rople@193-114-148-110.tpgi.com.au) has quit (Ping timeout: 246 seconds)
+2019-09-10 14:00:44	-->	nerosnm (~alrakis@cpc1-bath8-2-0-cust148.18-1.cable.virginm.net) has joined ##rust
+2019-09-10 14:07:51	-->	Kaivo (~Kaivo@ec2-35-182-108-102.ca-central-1.compute.amazonaws.com) has joined ##rust
+2019-09-10 14:09:08	-->	ytain (~ghfg@2607:f2c0:92f1:f300:69ae:a1ca:6cce:cee6) has joined ##rust
+2019-09-10 14:15:33	-->	sacredfrog (~ryan@dev.appthecloud.io) has joined ##rust
+2019-09-10 14:16:11	<--	esrse (~nil@175.126.171.165) has quit (Ping timeout: 268 seconds)
+2019-09-10 14:18:40	-->	Nahual (~Nahual@unaffiliated/nahual) has joined ##rust
+2019-09-10 14:28:06	-->	djapo (~archie@unaffiliated/djapo) has joined ##rust
+2019-09-10 14:34:05	<--	learningc (~learningc@mti-37-145.tm.net.my) has quit (Ping timeout: 268 seconds)
+2019-09-10 14:41:58	-->	shakes (shakes@gateway/vpn/privateinternetaccess/shakes) has joined ##rust
+2019-09-10 14:51:22	-->	gierdo (~Dominik_G@185-196-123-10.dynamic.monzoon.net) has joined ##rust
+2019-09-10 14:52:50	<--	Tichodroma (~lutz@fsf/member/Tichodroma) has quit (Ping timeout: 240 seconds)
+2019-09-10 14:55:03	-->	Tichodroma (~lutz@fsf/member/Tichodroma) has joined ##rust
+2019-09-10 14:59:56	-->	jenny-m (~jdm-@167.100.78.229) has joined ##rust
+2019-09-10 15:01:58	<--	PeterRabbit (~peter@2600:6c64:6180:86:1055:96d5:c49b:7bec) has quit (Read error: Connection reset by peer)
+2019-09-10 15:02:45	-->	PeterRabbit (~peter@2600:6c64:6180:86:1055:96d5:c49b:7bec) has joined ##rust
+2019-09-10 15:03:09	<--	fichtl (~hades@84-75-99-98.dclient.hispeed.ch) has quit (Read error: Connection reset by peer)
+2019-09-10 15:03:15	-->	npmccallum (~npmccallu@107-200-241-210.lightspeed.wlfrct.sbcglobal.net) has joined ##rust
+2019-09-10 15:05:55	sysKin	heh, this is my second evening of trying to learn how to use rust and I have to say, the difficulty of googling answers is starting to become frustrating
+2019-09-10 15:06:02	<--	shakes (shakes@gateway/vpn/privateinternetaccess/shakes) has quit (Ping timeout: 276 seconds)
+2019-09-10 15:06:23	j`ey	you can ask questions here too :P
+2019-09-10 15:06:23	ZirconiumX	sysKin: how do you mean?
+2019-09-10 15:06:34	ZirconiumX	For example, there's rustc --explain
+2019-09-10 15:06:46	Kinnison	sysKin: Until things start to click, it can be quite hard to know how to search.  Asking in places such as here will likely yield better results in the short term :D
+2019-09-10 15:06:56	sysKin	yeah I understand that.....
+2019-09-10 15:07:21	oherrala	sysKin: add "rustlang" to every google search and you might get better results
+2019-09-10 15:07:28	 *	Kinnison appreciates this is a pain.  Making sure you start out with small goals is also a good plan -- don't aim to write a spotify client as the first program you write in a new language :D
+2019-09-10 15:08:01	sysKin	and perhaps my first real project, which involves linking to a static c library, is not the best choice. but it's so hard for me to build a thing I don't need :)
+2019-09-10 15:08:06	j`ey	Kinnison: I see rustup works with musl hosts now, great!
+2019-09-10 15:08:16	tjis	take every compiler error personally and fight the borrow checker in anger until your will proves superior
+2019-09-10 15:08:26	Kinnison	j`ey: Yep, though the usual caveats of musl-is-not-tier-1 still apply :D
+2019-09-10 15:09:01	Kinnison	sysKin: Yeah, it can be a bit of a mental shift to appreciate that writing something you don't have a direct use for can be good to learn technique and to practice your new learning
+2019-09-10 15:09:02	la_mettrie	sysKin: hope you are reading Klabnik & Nichols - "The Rust Programming Language".  Keep on asking questions without reading that book is a bad idea
+2019-09-10 15:09:06	oherrala	Kinnison: yep, like procedural macros not working :)
+2019-09-10 15:09:12	-->	learningc (~learningc@121.122.76.45) has joined ##rust
+2019-09-10 15:09:22	Kinnison	sysKin: The first serious pile of code I wrote in Rust was a reimplementation of all my AdventOfCode solutions from a previous year
+2019-09-10 15:09:27	Kinnison	oherrala: Mmm :/
+2019-09-10 15:09:36	Kinnison	oherrala: or, sometimes, being linked to the wrong libgcc_s :-D
+2019-09-10 15:09:43	sysKin	la_mettrie: I did read it :) but actually my problems are not so much with the language right now
+2019-09-10 15:11:06	j`ey	sysKin: what are the problems?
+2019-09-10 15:11:26	oherrala	Kinnison: I rushed into testing rustup in Alpine last night to see if I could shave of gigabyte or two from our CI docker images. But couldn't yet figure out how to compile crates with proc macros. oh well.
+2019-09-10 15:11:33	sysKin	ok, perhaps you could just help a noob out here: I'm linking a static c library and after giving up on bindgen, I finally got the linker to actually see it. however now the lipnker can't find crt symbols called within (such as sprintf), so I'm trying to include crt
+2019-09-10 15:11:38	Kinnison	oherrala: :(
+2019-09-10 15:12:07	<--	NerdyPepper (~nerdypepp@106.51.110.63) has quit (Ping timeout: 245 seconds)
+2019-09-10 15:12:23	sysKin	and apparently (could be wrong) I'm supposed to add "-C target-feature=+crt-static" to rustc. ok. my problem is, google can't tell me *where* I add this
+2019-09-10 15:12:45	sysKin	it's probably so obvious they don't have to tell >_<
+2019-09-10 15:13:12	j`ey	how are you linking to it?
+2019-09-10 15:14:01	sysKin	the toolchain is windows msvc... otherwise I'm not sure what you're asking :)
+2019-09-10 15:14:18	oherrala	sysKin: I'm not sure if your solution is the right one, but you can put compiler flags into projects .cargo/config file
+2019-09-10 15:14:23	-->	NerdyPepper (~nerdypepp@122.172.125.104) has joined ##rust
+2019-09-10 15:14:37	ZirconiumX	You can't static link the CRT on Windows, as far as I know
+2019-09-10 15:14:39	j`ey	sysKin: as in, what are you doing to get the library linked against?
+2019-09-10 15:14:57	oherrala	sysKin: [target.<yourtarget>]\nrustflags = "<your flags>"\n
+2019-09-10 15:15:47	sysKin	j`ey: build.rs has println!("cargo:rustc-link-lib=static=libname");
+2019-09-10 15:15:50	oherrala	ZirconiumX: umh, we are using -Ctarget-feature=+crt-static for msvc :)
+2019-09-10 15:16:13	sysKin	come to think of it, the link.exe *is* being told to include msvcrt.lib
+2019-09-10 15:16:14	oherrala	ZirconiumX: works great and is required for including the visual c++ statically into binary.

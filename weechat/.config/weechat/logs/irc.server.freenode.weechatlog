@@ -9374,3 +9374,244 @@
 2019-07-23 09:11:03	--	CTCP requested by freenode-connect: VERSION
 2019-07-23 09:11:03	--	CTCP reply to freenode-connect: VERSION WeeChat 2.5 (Jun 11 2019 10:01:45)
 2019-07-23 09:11:09	--	NickServ (NickServ@services.): You are already logged in as Syrinxos.
+2019-09-10 09:35:50	--	irc: connecting to server chat.freenode.net/6667...
+2019-09-10 09:35:51	--	irc: connected to chat.freenode.net/6667 (204.225.96.251)
+2019-09-10 09:35:52	--	tolkien.freenode.net: *** Looking up your hostname...
+2019-09-10 09:35:53	--	tolkien.freenode.net: *** Checking Ident
+2019-09-10 09:35:53	--	tolkien.freenode.net: *** Found your hostname
+2019-09-10 09:36:01	--	tolkien.freenode.net: *** No Ident response
+2019-09-10 09:36:02	--	irc: client capability, server supports: extended-join multi-prefix identify-msg account-notify sasl
+2019-09-10 09:36:02	--	irc: client capability, requesting: sasl
+2019-09-10 09:36:03	--	irc: client capability, enabled: sasl
+2019-09-10 09:36:04	--	You are now logged in as Syrinxos. (Syrinxos!syrinxos@93-34-1-84.ip47.fastwebnet.it)
+2019-09-10 09:36:05	--	SASL authentication successful
+2019-09-10 09:36:06	--	Welcome to the freenode Internet Relay Chat Network Syrinxos
+2019-09-10 09:36:06	--	MSG(nickserv): identify *********
+2019-09-10 09:36:06	--	Your host is tolkien.freenode.net[204.225.96.251/6667], running version ircd-seven-1.1.7
+2019-09-10 09:36:06	--	This server was created Tue Sep 25 2018 at 13:20:43 UTC
+2019-09-10 09:36:06	--	tolkien.freenode.net ircd-seven-1.1.7 DOQRSZaghilopsuwz CFILMPQSbcefgijklmnopqrstuvz bkloveqjfI
+2019-09-10 09:36:06	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstuz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode STATUSMSG=@+ CALLERID=g CASEMAPPING=rfc1459 :are supported by this server
+2019-09-10 09:36:06	--	CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 DEAF=D FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: EXTBAN=$,ajrxz CLIENTVER=3.0 SAFELIST ELIST=CTU KNOCK :are supported by this server
+2019-09-10 09:36:06	--	WHOX ETRACE CPRIVMSG CNOTICE :are supported by this server
+2019-09-10 09:36:06	--	There are 106 users and 84980 invisible on 30 servers
+2019-09-10 09:36:06	--	37 :IRC Operators online
+2019-09-10 09:36:06	--	10 :unknown connection(s)
+2019-09-10 09:36:06	--	48590 :channels formed
+2019-09-10 09:36:06	--	I have 6709 clients and 1 servers
+2019-09-10 09:36:06	--	6709 7531 :Current local users 6709, max 7531
+2019-09-10 09:36:06	--	85086 94773 :Current global users 85086, max 94773
+2019-09-10 09:36:06	--	Highest connection count: 7532 (7531 clients) (2534295 connections received)
+2019-09-10 09:36:06	--	- tolkien.freenode.net Message of the Day - 
+2019-09-10 09:36:06	--	- Welcome to tolkien.freenode.net in Sanford, NC, US. Thanks to
+2019-09-10 09:36:06	--	- https://travelingmailbox.com/ for sponsoring this server
+2019-09-10 09:36:06	--	- Welcome to freenode - supporting the free and open source
+2019-09-10 09:36:06	--	- software communities since 1998.
+2019-09-10 09:36:06	--	-  
+2019-09-10 09:36:06	--	- By connecting to freenode you indicate that you have read and
+2019-09-10 09:36:06	--	- accept our policies and guidelines as set out on https://freenode.net
+2019-09-10 09:36:06	--	-  
+2019-09-10 09:36:06	--	- In the event that you observe behaviour that contravenes our policies,
+2019-09-10 09:36:06	--	- please notify a volunteer staff member via private message, or send us an
+2019-09-10 09:36:06	--	- e-mail to complaints@freenode.net -- we will do our best to address the
+2019-09-10 09:36:06	--	- situation within a reasonable period of time, and we may request further
+2019-09-10 09:36:06	--	- information or, as appropriate, involve other parties such as channel operators 
+2019-09-10 09:36:06	--	- Group Contacts representing an on-topic group.
+2019-09-10 09:36:06	--	-  
+2019-09-10 09:36:06	--	- freenode runs an open proxy scanner.
+2019-09-10 09:36:06	--	-  
+2019-09-10 09:36:06	--	- If you are looking for assistance, you may be able to find a list of 
+2019-09-10 09:36:06	--	- volunteer staff on '/stats p' (shows only on-call staff) or by joining 
+2019-09-10 09:36:06	--	- #freenode and using the '/who freenode/staff/*' command. You may message
+2019-09-10 09:36:06	--	- any of us at any time. Please note that freenode predominantly provides 
+2019-09-10 09:36:06	--	- assistance via private message, and while we have a network channel the 
+2019-09-10 09:36:06	--	- primary venue for support requests is via private message to a member 
+2019-09-10 09:36:06	--	- of the volunteer staff team.
+2019-09-10 09:36:06	--	-  
+2019-09-10 09:36:06	--	- From time to time, volunteer staff may send server-wide notices relating to
+2019-09-10 09:36:06	--	- the project, or the communities that we host. The majority of such notices
+2019-09-10 09:36:06	--	- will be sent as wallops, and you can '/mode <yournick> +w' to ensure that you
+2019-09-10 09:36:06	--	- do not miss them. Important messages relating to the freenode project, including
+2019-09-10 09:36:06	--	- notices of upcoming maintenance and other scheduled downtime will be issued as
+2019-09-10 09:36:06	--	- global notices.
+2019-09-10 09:36:06	--	-  
+2019-09-10 09:36:06	--	- Representing an on-topic project? Don't forget to register, more information
+2019-09-10 09:36:06	--	- can be found on the https://freenode.net website under "Group Registration".
+2019-09-10 09:36:06	--	-  
+2019-09-10 09:36:06	--	- Thank you also to our server sponsors for the sustained support in keeping the
+2019-09-10 09:36:06	--	- network going for close to two decades.
+2019-09-10 09:36:06	--	-  
+2019-09-10 09:36:06	--	- Thank you to all of our attendees, sponsors, speakers, exhibitors, helpers,
+2019-09-10 09:36:06	--	- and everyone else who made this year's freenode #live conference amazing.
+2019-09-10 09:36:06	--	- https://freenode.net/news/live-2018
+2019-09-10 09:36:06	--	-  
+2019-09-10 09:36:06	--	- Thank you for using freenode!
+2019-09-10 09:36:06	--	End of /MOTD command.
+2019-09-10 09:36:06	--	User mode [+i] by Syrinxos
+2019-09-10 09:36:12	--	NickServ (NickServ@services.): You are already logged in as Syrinxos.
+2019-09-10 09:41:35	--	#rust: ##rust :Forwarding to another channel
+2019-09-10 09:54:42	--	irc: connecting to server chat.freenode.net/6667...
+2019-09-10 09:54:43	--	irc: connected to chat.freenode.net/6667 (185.30.166.37)
+2019-09-10 09:54:44	--	orwell.freenode.net: *** Looking up your hostname...
+2019-09-10 09:54:45	--	orwell.freenode.net: *** Checking Ident
+2019-09-10 09:54:45	--	orwell.freenode.net: *** Found your hostname
+2019-09-10 09:54:51	--	orwell.freenode.net: *** No Ident response
+2019-09-10 09:54:52	--	irc: client capability, server supports: extended-join tls multi-prefix identify-msg account-notify chghost sasl cap-notify away-notify
+2019-09-10 09:54:52	--	irc: client capability, requesting: sasl
+2019-09-10 09:54:53	--	irc: client capability, enabled: sasl
+2019-09-10 09:54:55	--	You are now logged in as Syrinxos. (Syrinxos!syrinxos@93-34-1-84.ip47.fastwebnet.it)
+2019-09-10 09:54:56	--	SASL authentication successful
+2019-09-10 09:54:57	--	Welcome to the freenode Internet Relay Chat Network Syrinxos
+2019-09-10 09:54:57	--	MSG(nickserv): identify *********
+2019-09-10 09:54:57	--	Your host is orwell.freenode.net[185.30.166.37/6667], running version ircd-seven-1.1.8
+2019-09-10 09:54:57	--	This server was created Sun Sep 8 2019 at 20:18:33 UTC
+2019-09-10 09:54:57	--	orwell.freenode.net ircd-seven-1.1.8 DOQRSZaghilopsuwz CFILMPQSbcefgijklmnopqrstuvz bkloveqjfI
+2019-09-10 09:54:57	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstuz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode STATUSMSG=@+ CALLERID=g CASEMAPPING=rfc1459 :are supported by this server
+2019-09-10 09:54:57	--	CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 DEAF=D FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: EXTBAN=$,ajrxz CLIENTVER=3.0 KNOCK CPRIVMSG CNOTICE :are supported by this server
+2019-09-10 09:54:57	--	SAFELIST ELIST=CTU ETRACE WHOX :are supported by this server
+2019-09-10 09:54:57	--	There are 107 users and 85334 invisible on 30 servers
+2019-09-10 09:54:57	--	37 :IRC Operators online
+2019-09-10 09:54:57	--	15 :unknown connection(s)
+2019-09-10 09:54:57	--	48612 :channels formed
+2019-09-10 09:54:57	--	I have 1515 clients and 1 servers
+2019-09-10 09:54:57	--	1515 1515 :Current local users 1515, max 1515
+2019-09-10 09:54:57	--	85441 87128 :Current global users 85441, max 87128
+2019-09-10 09:54:57	--	Highest connection count: 1516 (1515 clients) (4903 connections received)
+2019-09-10 09:54:57	--	- orwell.freenode.net Message of the Day - 
+2019-09-10 09:54:57	--	- Welcome to orwell.freenode.net in Amsterdam, NL.
+2019-09-10 09:54:57	--	- Thanks to http://www.hyperfilter.com/ for sponsoring
+2019-09-10 09:54:57	--	- this server!
+2019-09-10 09:54:57	--	-  
+2019-09-10 09:54:57	--	- ORWELL, GEORGE [1903 - 1950] Born in India, his mother
+2019-09-10 09:54:57	--	- moved him to England when he was one year old, and it
+2019-09-10 09:54:57	--	- was in England where he was educated and spent most of
+2019-09-10 09:54:57	--	- his life.  Orwell is perhaps best known for his novels
+2019-09-10 09:54:57	--	- Nineteen Eighty-Four and Animal Farm.
+2019-09-10 09:54:57	--	-  
+2019-09-10 09:54:57	--	-  
+2019-09-10 09:54:57	--	- Welcome to freenode - supporting the free and open source
+2019-09-10 09:54:57	--	- software communities since 1998.
+2019-09-10 09:54:57	--	-  
+2019-09-10 09:54:57	--	- By connecting to freenode you indicate that you have read and
+2019-09-10 09:54:57	--	- accept our policies and guidelines as set out on https://freenode.net
+2019-09-10 09:54:57	--	-  
+2019-09-10 09:54:57	--	- In the event that you observe behaviour that contravenes our policies,
+2019-09-10 09:54:57	--	- please notify a volunteer staff member via private message, or send us an
+2019-09-10 09:54:57	--	- e-mail to complaints@freenode.net -- we will do our best to address the
+2019-09-10 09:54:57	--	- situation within a reasonable period of time, and we may request further
+2019-09-10 09:54:57	--	- information or, as appropriate, involve other parties such as channel operators 
+2019-09-10 09:54:57	--	- Group Contacts representing an on-topic group.
+2019-09-10 09:54:57	--	-  
+2019-09-10 09:54:57	--	- freenode runs an open proxy scanner.
+2019-09-10 09:54:57	--	-  
+2019-09-10 09:54:57	--	- If you are looking for assistance, you may be able to find a list of 
+2019-09-10 09:54:57	--	- volunteer staff on '/stats p' (shows only on-call staff) or by joining 
+2019-09-10 09:54:57	--	- #freenode and using the '/who freenode/staff/*' command. You may message
+2019-09-10 09:54:57	--	- any of us at any time. Please note that freenode predominantly provides 
+2019-09-10 09:54:57	--	- assistance via private message, and while we have a network channel the 
+2019-09-10 09:54:57	--	- primary venue for support requests is via private message to a member 
+2019-09-10 09:54:57	--	- of the volunteer staff team.
+2019-09-10 09:54:57	--	-  
+2019-09-10 09:54:57	--	- From time to time, volunteer staff may send server-wide notices relating to
+2019-09-10 09:54:57	--	- the project, or the communities that we host. The majority of such notices
+2019-09-10 09:54:57	--	- will be sent as wallops, and you can '/mode <yournick> +w' to ensure that you
+2019-09-10 09:54:57	--	- do not miss them. Important messages relating to the freenode project, including
+2019-09-10 09:54:57	--	- notices of upcoming maintenance and other scheduled downtime will be issued as
+2019-09-10 09:54:57	--	- global notices.
+2019-09-10 09:54:57	--	-  
+2019-09-10 09:54:57	--	- Representing an on-topic project? Don't forget to register, more information
+2019-09-10 09:54:57	--	- can be found on the https://freenode.net website under "Group Registration".
+2019-09-10 09:54:57	--	-  
+2019-09-10 09:54:57	--	- Thank you also to our server sponsors for the sustained support in keeping the
+2019-09-10 09:54:57	--	- network going for close to two decades.
+2019-09-10 09:54:58	--	-  
+2019-09-10 09:54:58	--	- Thank you to all of our attendees, sponsors, speakers, exhibitors, helpers,
+2019-09-10 09:54:58	--	- and everyone else who made this year's freenode #live conference amazing.
+2019-09-10 09:54:58	--	- https://freenode.net/news/live-2018
+2019-09-10 09:54:58	--	-  
+2019-09-10 09:54:58	--	- Thank you for using freenode!
+2019-09-10 09:54:58	--	End of /MOTD command.
+2019-09-10 09:54:58	--	User mode [+i] by Syrinxos
+2019-09-10 09:55:04	--	#rust: ##rust :Forwarding to another channel
+2019-09-10 09:55:04	--	NickServ (NickServ@services.): You are already logged in as Syrinxos.
+2019-09-10 11:08:15	--	irc: connecting to server chat.freenode.net/6667...
+2019-09-10 11:08:15	--	irc: connected to chat.freenode.net/6667 (94.125.182.252)
+2019-09-10 11:08:15	--	adams.freenode.net: *** Looking up your hostname...
+2019-09-10 11:08:15	--	adams.freenode.net: *** Checking Ident
+2019-09-10 11:08:15	--	adams.freenode.net: *** Found your hostname
+2019-09-10 11:08:23	--	adams.freenode.net: *** No Ident response
+2019-09-10 11:08:23	--	irc: client capability, server supports: extended-join tls multi-prefix identify-msg account-notify chghost sasl cap-notify away-notify
+2019-09-10 11:08:23	--	irc: client capability, requesting: sasl
+2019-09-10 11:08:23	--	irc: client capability, enabled: sasl
+2019-09-10 11:08:24	--	You are now logged in as Syrinxos. (Syrinxos!syrinxos@93-34-1-84.ip47.fastwebnet.it)
+2019-09-10 11:08:24	--	SASL authentication successful
+2019-09-10 11:08:25	--	Welcome to the freenode Internet Relay Chat Network Syrinxos
+2019-09-10 11:08:25	--	MSG(nickserv): identify *********
+2019-09-10 11:08:25	--	Your host is adams.freenode.net[94.125.182.252/6667], running version ircd-seven-1.1.8
+2019-09-10 11:08:25	--	This server was created Sun Sep 8 2019 at 20:14:07 UTC
+2019-09-10 11:08:25	--	adams.freenode.net ircd-seven-1.1.8 DOQRSZaghilopsuwz CFILMPQSbcefgijklmnopqrstuvz bkloveqjfI
+2019-09-10 11:08:25	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstuz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode STATUSMSG=@+ CALLERID=g CASEMAPPING=rfc1459 :are supported by this server
+2019-09-10 11:08:25	--	CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 DEAF=D FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: EXTBAN=$,ajrxz CLIENTVER=3.0 CPRIVMSG CNOTICE ETRACE :are supported by this server
+2019-09-10 11:08:25	--	KNOCK SAFELIST ELIST=CTU WHOX :are supported by this server
+2019-09-10 11:08:25	--	There are 107 users and 86004 invisible on 30 servers
+2019-09-10 11:08:25	--	36 :IRC Operators online
+2019-09-10 11:08:25	--	23 :unknown connection(s)
+2019-09-10 11:08:25	--	48680 :channels formed
+2019-09-10 11:08:25	--	I have 1869 clients and 1 servers
+2019-09-10 11:08:25	--	1869 1885 :Current local users 1869, max 1885
+2019-09-10 11:08:25	--	86111 87128 :Current global users 86111, max 87128
+2019-09-10 11:08:25	--	Highest connection count: 1886 (1885 clients) (6193 connections received)
+2019-09-10 11:08:25	--	- adams.freenode.net Message of the Day - 
+2019-09-10 11:08:25	--	- Welcome to adams.freenode.net. Thanks to ATW Internet Kft 
+2019-09-10 11:08:25	--	- (http://www.atw.hu) for sponsoring this server!
+2019-09-10 11:08:25	--	-  
+2019-09-10 11:08:25	--	- ADAMS, DOUGLAS (1952-2001).  Author of The Hitch Hikers Guide
+2019-09-10 11:08:25	--	- to the Galaxy and many other witty and humourous books,
+2019-09-10 11:08:25	--	- portrayed in his uniquely British irony. He is sorely missed
+2019-09-10 11:08:25	--	- by many millions of devoted fans. "So long and thanks for all
+2019-09-10 11:08:25	--	- the books!"
+2019-09-10 11:08:25	--	-  
+2019-09-10 11:08:25	--	- Welcome to freenode - supporting the free and open source
+2019-09-10 11:08:25	--	- software communities since 1998.
+2019-09-10 11:08:25	--	-  
+2019-09-10 11:08:25	--	- By connecting to freenode you indicate that you have read and
+2019-09-10 11:08:25	--	- accept our policies and guidelines as set out on https://freenode.net
+2019-09-10 11:08:25	--	-  
+2019-09-10 11:08:25	--	- In the event that you observe behaviour that contravenes our policies,
+2019-09-10 11:08:25	--	- please notify a volunteer staff member via private message, or send us an
+2019-09-10 11:08:25	--	- e-mail to complaints@freenode.net -- we will do our best to address the
+2019-09-10 11:08:25	--	- situation within a reasonable period of time, and we may request further
+2019-09-10 11:08:25	--	- information or, as appropriate, involve other parties such as channel operators 
+2019-09-10 11:08:25	--	- Group Contacts representing an on-topic group.
+2019-09-10 11:08:25	--	-  
+2019-09-10 11:08:25	--	- freenode runs an open proxy scanner.
+2019-09-10 11:08:25	--	-  
+2019-09-10 11:08:25	--	- If you are looking for assistance, you may be able to find a list of 
+2019-09-10 11:08:25	--	- volunteer staff on '/stats p' (shows only on-call staff) or by joining 
+2019-09-10 11:08:25	--	- #freenode and using the '/who freenode/staff/*' command. You may message
+2019-09-10 11:08:25	--	- any of us at any time. Please note that freenode predominantly provides 
+2019-09-10 11:08:25	--	- assistance via private message, and while we have a network channel the 
+2019-09-10 11:08:25	--	- primary venue for support requests is via private message to a member 
+2019-09-10 11:08:25	--	- of the volunteer staff team.
+2019-09-10 11:08:25	--	-  
+2019-09-10 11:08:25	--	- From time to time, volunteer staff may send server-wide notices relating to
+2019-09-10 11:08:25	--	- the project, or the communities that we host. The majority of such notices
+2019-09-10 11:08:25	--	- will be sent as wallops, and you can '/mode <yournick> +w' to ensure that you
+2019-09-10 11:08:25	--	- do not miss them. Important messages relating to the freenode project, including
+2019-09-10 11:08:25	--	- notices of upcoming maintenance and other scheduled downtime will be issued as
+2019-09-10 11:08:25	--	- global notices.
+2019-09-10 11:08:25	--	-  
+2019-09-10 11:08:25	--	- Representing an on-topic project? Don't forget to register, more information
+2019-09-10 11:08:25	--	- can be found on the https://freenode.net website under "Group Registration".
+2019-09-10 11:08:25	--	-  
+2019-09-10 11:08:25	--	- Thank you also to our server sponsors for the sustained support in keeping the
+2019-09-10 11:08:25	--	- network going for close to two decades.
+2019-09-10 11:08:25	--	-  
+2019-09-10 11:08:25	--	- Thank you to all of our attendees, sponsors, speakers, exhibitors, helpers,
+2019-09-10 11:08:25	--	- and everyone else who made this year's freenode #live conference amazing.
+2019-09-10 11:08:25	--	- https://freenode.net/news/live-2018
+2019-09-10 11:08:25	--	-  
+2019-09-10 11:08:25	--	- Thank you for using freenode!
+2019-09-10 11:08:25	--	End of /MOTD command.
+2019-09-10 11:08:25	--	User mode [+i] by Syrinxos
+2019-09-10 11:08:31	--	#rust: ##rust :Forwarding to another channel
+2019-09-10 11:08:31	--	NickServ (NickServ@services.): You are already logged in as Syrinxos.

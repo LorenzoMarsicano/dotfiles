@@ -197,3 +197,48 @@
 2019-07-23 17:13:33	<--	Gryfelhase (~Gryflhase@dslb-088-074-166-249.088.074.pools.vodafone-ip.de) has quit (Ping timeout: 268 seconds)
 2019-07-23 17:28:53	-->	Tobbi (~Tobbi@supertux/tobbi) has joined #SDL
 2019-07-23 17:36:49	-->	Gryfelhase (~Gryflhase@dslb-002-201-038-217.002.201.pools.vodafone-ip.de) has joined #SDL
+2019-09-10 09:36:12	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #SDL
+2019-09-10 09:36:12	--	Topic for #SDL is "Official SDL Channel http://www.libsdl.org/ | You must identify with NickServ to join/talk"
+2019-09-10 09:36:12	--	Topic set by akawaka (~akawaka@2605:e000:1701:40f8:211:32ff:fe51:9639) on Wed, 01 Aug 2018 18:04:39
+2019-09-10 09:36:12	--	Channel #SDL: 85 nicks (0 ops, 0 voices, 85 normals)
+2019-09-10 09:36:12	--	PvNotice(ChanServ): Welcome to #sdl - The Offical Simple DirectMedia Layer Channel
+2019-09-10 09:36:12	--	URL for #SDL: http://www.libsdl.org/
+2019-09-10 09:36:25	--	Channel created on Sun, 26 Nov 2006 07:42:43
+2019-09-10 09:37:15	<--	krychu (~krychu@213.242.84.161) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-09-10 09:55:04	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #SDL
+2019-09-10 09:55:04	--	Topic for #SDL is "Official SDL Channel http://www.libsdl.org/ | You must identify with NickServ to join/talk"
+2019-09-10 09:55:04	--	Topic set by akawaka (~akawaka@2605:e000:1701:40f8:211:32ff:fe51:9639) on Wed, 01 Aug 2018 18:04:39
+2019-09-10 09:55:04	--	Channel #SDL: 84 nicks (0 ops, 0 voices, 84 normals)
+2019-09-10 09:55:04	--	PvNotice(ChanServ): Welcome to #sdl - The Offical Simple DirectMedia Layer Channel
+2019-09-10 09:55:04	--	URL for #SDL: http://www.libsdl.org/
+2019-09-10 09:55:17	--	Channel created on Sun, 26 Nov 2006 07:42:43
+2019-09-10 09:57:01	-->	krychu (~krychu@213.242.84.161) has joined #SDL
+2019-09-10 10:05:17	-->	fogobogo (~fogobogo@unaffiliated/fogobogo) has joined #SDL
+2019-09-10 10:22:38	ArRay_	J_L_P: saw your messages
+2019-09-10 10:22:52	ArRay_	You could also use the freenode hidden service (tor)
+2019-09-10 11:08:31	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #SDL
+2019-09-10 11:08:31	--	Topic for #SDL is "Official SDL Channel http://www.libsdl.org/ | You must identify with NickServ to join/talk"
+2019-09-10 11:08:31	--	Topic set by akawaka (~akawaka@2605:e000:1701:40f8:211:32ff:fe51:9639) on Wed, 01 Aug 2018 18:04:39
+2019-09-10 11:08:31	--	Channel #SDL: 86 nicks (0 ops, 0 voices, 86 normals)
+2019-09-10 11:08:31	--	PvNotice(ChanServ): Welcome to #sdl - The Offical Simple DirectMedia Layer Channel
+2019-09-10 11:08:31	--	URL for #SDL: http://www.libsdl.org/
+2019-09-10 11:08:43	--	Channel created on Sun, 26 Nov 2006 07:42:43
+2019-09-10 11:30:27	<--	krychu (~krychu@213.242.84.161) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-09-10 11:34:53	-->	slvn_ (~slvn_@2a01:e34:ef55:a6f0:f5da:9050:e19c:7ada) has joined #SDL
+2019-09-10 11:52:11	-->	RebelCoder (~RebelCode@81.2.166.161) has joined #SDL
+2019-09-10 11:58:03	<--	Crocodillian (~rkitover@unaffiliated/caelum) has quit (Remote host closed the connection)
+2019-09-10 11:59:12	-->	Crocodillian (~rkitover@unaffiliated/caelum) has joined #SDL
+2019-09-10 12:10:03	<--	J_L_P__ (~J_L_P@45.41.134.159) has quit (Quit: Leaving)
+2019-09-10 12:10:09	<--	J_L_P (2d29869f@gateway/web/cgi-irc/kiwiirc.com/ip.45.41.134.159) has quit (Remote host closed the connection)
+2019-09-10 12:13:38	-->	krychu (~krychu@213.242.84.161) has joined #SDL
+2019-09-10 12:25:12	-->	J_L_P (2d29869f@gateway/web/cgi-irc/kiwiirc.com/ip.45.41.134.159) has joined #SDL
+2019-09-10 12:25:20	J_L_P	Morning!
+2019-09-10 12:37:30	<--	YuGiOhJCJ (~YuGiOhJCJ@gateway/tor-sasl/yugiohjcj) has quit (Quit: YuGiOhJCJ)
+2019-09-10 12:40:07	<--	krychu (~krychu@213.242.84.161) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-09-10 13:22:57	-->	krychu (~krychu@213.242.84.161) has joined #SDL
+2019-09-10 14:11:18	-->	jfcaron (~jfcaron@unaffiliated/jfcaron) has joined #SDL
+2019-09-10 14:25:44	<--	RebelCoder (~RebelCode@81.2.166.161) has quit (Ping timeout: 276 seconds)
+2019-09-10 14:48:24	-->	krychu_ (~krychu@2a02:1205:5008:5790:edb1:370d:4cd0:c666) has joined #SDL
+2019-09-10 14:48:24	<--	krychu_ (~krychu@2a02:1205:5008:5790:edb1:370d:4cd0:c666) has quit (Client Quit)
+2019-09-10 14:58:24	-->	irrenhaus3 (~xenon@HSI-KBW-109-193-027-154.hsi7.kabel-badenwuerttemberg.de) has joined #SDL
+2019-09-10 14:59:30	<--	jfcaron (~jfcaron@unaffiliated/jfcaron) has quit (Quit: jfcaron)

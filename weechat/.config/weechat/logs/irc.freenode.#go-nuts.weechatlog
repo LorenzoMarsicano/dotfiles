@@ -6659,3 +6659,275 @@
 2019-07-23 17:50:50	dominikh	edrocks: znc is fairly easy to set up.
 2019-07-23 17:50:53	fata	isn't layout supposed to be 2006-01-02?
 2019-07-23 17:50:59	dominikh	or, my favourite, running weechat in tmux
+2019-09-10 09:36:12	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #go-nuts
+2019-09-10 09:36:12	--	Topic for #go-nuts is "golang.org | known issues: golang.org/issue | https://freenode.logbot.info/go-nuts | don't ask to ask, just ask | don't solve problems you don't have | did you check your errors?"
+2019-09-10 09:36:12	--	Topic set by skelterjohn (sid13218@gateway/web/irccloud.com/x-gfctwrngwpjcjgtp) on Tue, 18 Jun 2019 19:13:21
+2019-09-10 09:36:12	--	Channel #go-nuts: 759 nicks (0 ops, 2 voices, 757 normals)
+2019-09-10 09:36:12	--	PvNotice(ChanServ): Please follow the Go Community Code of Conduct when chatting here. See https://golang.org/conduct
+2019-09-10 09:36:22	--	Channel created on Mon, 09 Nov 2009 19:22:37
+2019-09-10 09:38:24	sztanpet	sure, but why tar, what does it give you apart from familiarity even which is doubtful if you wonder whether to tar individually or not
+2019-09-10 09:39:08	-->	ZORR0W (~amrit@117.232.253.183) has joined #go-nuts
+2019-09-10 09:39:47	abbiya	yeah
+2019-09-10 09:40:06	abbiya	when is the situation to use archive and compress together ?
+2019-09-10 09:41:05	hwm4rgs	when you want an archive to take less space
+2019-09-10 09:43:00	<--	libertyprime (~libertypr@client-173-016.guest.otago.ac.nz) has quit (Quit: leaving)
+2019-09-10 09:44:34	-->	libertyprime (~libertypr@client-173-016.guest.otago.ac.nz) has joined #go-nuts
+2019-09-10 09:45:57	<--	_rubik (wgriggs@gateway/vpn/privateinternetaccess/rubik/x-98007891) has quit (Quit: WeeChat 2.5)
+2019-09-10 09:50:46	<--	cnsunyour (~cnsunyour@2408:8207:18e9:3f70:7836:eff0:2639:24b6) has quit (Quit: WeeChat 2.6)
+2019-09-10 09:52:15	<--	drap3r (~drap3r@c-73-15-142-51.hsd1.ca.comcast.net) has quit (Remote host closed the connection)
+2019-09-10 09:55:04	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #go-nuts
+2019-09-10 09:55:04	--	Topic for #go-nuts is "golang.org | known issues: golang.org/issue | https://freenode.logbot.info/go-nuts | don't ask to ask, just ask | don't solve problems you don't have | did you check your errors?"
+2019-09-10 09:55:04	--	Topic set by skelterjohn (sid13218@gateway/web/irccloud.com/x-gfctwrngwpjcjgtp) on Tue, 18 Jun 2019 19:13:21
+2019-09-10 09:55:04	--	Channel #go-nuts: 757 nicks (0 ops, 2 voices, 755 normals)
+2019-09-10 09:55:04	--	PvNotice(ChanServ): Please follow the Go Community Code of Conduct when chatting here. See https://golang.org/conduct
+2019-09-10 09:55:13	--	Channel created on Mon, 09 Nov 2009 19:22:37
+2019-09-10 09:57:13	-->	absc (~absc@176.9.150.19) has joined #go-nuts
+2019-09-10 09:57:40	<--	__alex (~alex@p200300C9C70A321909ED1EBF1C603B32.dip0.t-ipconnect.de) has quit (Ping timeout: 264 seconds)
+2019-09-10 09:57:48	<--	absc (~absc@176.9.150.19) has quit (Remote host closed the connection)
+2019-09-10 09:58:29	-->	absc (~absc@176.9.150.19) has joined #go-nuts
+2019-09-10 10:00:22	abbiya	archive and compress or compress each of the files and archive ?
+2019-09-10 10:00:56	-->	cnsunyour (~cnsunyour@114.244.176.207) has joined #go-nuts
+2019-09-10 10:01:38	nacelle	archive and compress
+2019-09-10 10:01:53	-->	nanoz (~nanoz@unaffiliated/nanoz) has joined #go-nuts
+2019-09-10 10:02:10	<--	aissen (~aissen@unaffiliated/aissen) has quit (Ping timeout: 252 seconds)
+2019-09-10 10:02:31	nacelle	two reasons - 1) easier to work with as a user with the end result  2) you get better compression because it can consider the whole set of files for repeated data, not just repeated data across one file
+2019-09-10 10:03:31	abbiya	thanks
+2019-09-10 10:03:41	nacelle	(usually better compression, potentially the same/no compression depending on the image encoding (which may be compressed in an of itself.)  I doubt you would ever see worse.)
+2019-09-10 10:06:04	<--	pknull (~pooky@184.103.28.136) has quit (Quit: Departing.)
+2019-09-10 10:07:25	-->	pknull (~pooky@184.103.28.136) has joined #go-nuts
+2019-09-10 10:07:49	-->	notagopher (~serbuvlad@109.99.136.250) has joined #go-nuts
+2019-09-10 10:07:57	<--	barrett (~barrett@unaffiliated/barrett) has quit (Ping timeout: 244 seconds)
+2019-09-10 10:08:39	<--	kvda (~kvda@unaffiliated/kvda) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-09-10 10:09:04	-->	Lythal (~Lythal@vpn-umea.slu.se) has joined #go-nuts
+2019-09-10 10:09:05	-->	tgirod (~girod@xspeech4.loria.fr) has joined #go-nuts
+2019-09-10 10:10:10	tgirod	hey! anyone using go+vscode: lint warnings are preventing me to rename a symbol. is there a way to disable that?
+2019-09-10 10:10:33	Lythal	Hey everyone! Not exactly an issue with Go, but does anyone have syntax highlighting definitions for html/template in GtkSourceView?
+2019-09-10 10:11:33	tgirod	alternatively: anyone knows of a tool that would generate empty godocs for my code?
+2019-09-10 10:13:36	b0nn	tgirod: Tried //nolint:WHATEVERLINTERISCOMPLAINING
+2019-09-10 10:13:38	b0nn	?
+2019-09-10 10:14:08	tgirod	b0nn: no, checking this out.
+2019-09-10 10:14:43	b0nn	IIRC that comment immediately before the line that is broken
+2019-09-10 10:17:23	tgirod	b0nn: hmm. but I have many exported methods without godocs, and those warnings are preventing me from renaming to unexport them. if I have to add a //nolint before each one, I'm better of renaming them manually!
+2019-09-10 10:17:55	sztanpet	how are they preventing you
+2019-09-10 10:18:25	b0nn	oh, in that case // FUNCNAME -
+2019-09-10 10:18:47	<--	smcquay (~smcquay@173-164-185-125-SFBA.hfc.comcastbusiness.net) has quit (Ping timeout: 245 seconds)
+2019-09-10 10:19:05	b0nn	or // FuncName -
+2019-09-10 10:20:04	b0nn	lol, the only programmatic way for you to 'fix' the problem is sed
+2019-09-10 10:20:18	tgirod	sztanpet: when I press F2 to rename, I get an error saying "cannot rename because package xxxx contains errors"
+2019-09-10 10:20:42	floppydh	what's a common pattern to differentiate between different types of errors? - like critical/noncritical
+2019-09-10 10:20:59	tgirod	sztanpet: even though it doesn't
+2019-09-10 10:21:55	<--	plutoniix (~q@175.176.222.7) has quit (Quit: Leaving)
+2019-09-10 10:22:27	-->	truaal3 (~truaal@unaffiliated/theshirbiny) has joined #go-nuts
+2019-09-10 10:22:34	tgirod	I'm usually a vim user, but wanted to give vscode a try (because gorename doesn't work anymore). but apparently it's not better there
+2019-09-10 10:24:01	-->	cad (uid66953@gateway/web/irccloud.com/x-dfilhukanxfbptsc) has joined #go-nuts
+2019-09-10 10:25:22	sztanpet	floppydh panic when your exposed api is being misused (by users not reading the docs, etc), return errors otherwise, how you differentiate errors depends entirely on your usecase otherwise and not sure the disctinction is even important
+2019-09-10 10:25:43	sztanpet	tgirod so the only thing preventing you is a software you put between yourself and the code, not like thats any help, was just wondering how a linter can prevent you from doing stuff
+2019-09-10 10:26:24	tgirod	sztanpet: indeed, this situation is really backward. I hate when take works against me.
+2019-09-10 10:26:52	-->	aLeSD (~aLeSD@122.red-80-24-12.staticip.rima-tde.net) has joined #go-nuts
+2019-09-10 10:27:37	floppydh	sztanpet: right, how do you feel about returning multiple errors? like `func Call() (nonCriticalErr error, criticalErr error)`
+2019-09-10 10:28:08	<--	pknull (~pooky@184.103.28.136) has quit (Quit: Departing.)
+2019-09-10 10:28:26	-->	pknull (~pooky@184.103.28.136) has joined #go-nuts
+2019-09-10 10:28:41	-->	freswa (~freswa@p200300C52F28F302240E34FC721D26CC.dip0.t-ipconnect.de) has joined #go-nuts
+2019-09-10 10:28:51	sztanpet	it stinks, why would you do that
+2019-09-10 10:29:17	floppydh	sztanpet: because I want my consumer to optionally care about nonCriticalErrors and both should be handled by the consumer
+2019-09-10 10:29:25	-->	aissen (~aissen@unaffiliated/aissen) has joined #go-nuts
+2019-09-10 10:29:43	sztanpet	did you see how network transient error are handled by the stdlib?
+2019-09-10 10:29:48	b0nn	if they're not critical, they're warnings?
+2019-09-10 10:29:52	floppydh	b0nn:sort of
+2019-09-10 10:29:59	floppydh	sztanpet:no
+2019-09-10 10:30:41	sztanpet	floppydh https://golang.org/pkg/net/#AddrError
+2019-09-10 10:30:48	sztanpet	see the methods?
+2019-09-10 10:30:48	-->	djhworld (~djhworld@90.252.118.61) has joined #go-nuts
+2019-09-10 10:31:00	<--	nanoz (~nanoz@unaffiliated/nanoz) has quit (Ping timeout: 246 seconds)
+2019-09-10 10:31:09	floppydh	sztanpet: ahhh
+2019-09-10 10:31:11	floppydh	sztanpet: gotcha
+2019-09-10 10:31:25	sztanpet	the error type can tell you whether its critical or not and your api consumer can decide to care and type-assert for it
+2019-09-10 10:31:30	bpalmer	floppydh: why not just 'func Call() error' and 'func IsNotImportant(err error) bool'
+2019-09-10 10:31:39	floppydh	bpalmer:right thats the idea
+2019-09-10 10:31:44	floppydh	thanks to both of you
+2019-09-10 10:31:50	floppydh	seems like a decent plan
+2019-09-10 10:32:00	b0nn	^ he means me :-D
+2019-09-10 10:32:50	sztanpet	how do you define a critical error floppydh, im curious
+2019-09-10 10:32:52	b0nn	well, that went down like a cold cup of sick :\
+2019-09-10 10:36:02	<--	Anthaas (~Anthaas@unaffiliated/anthaas) has quit (Read error: Connection reset by peer)
+2019-09-10 10:36:27	<--	Dave_Elec (~Dave@196.188.72.247) has quit (Ping timeout: 240 seconds)
+2019-09-10 10:36:55	-->	Anthaas (~Anthaas@unaffiliated/anthaas) has joined #go-nuts
+2019-09-10 10:40:53	<--	grumble (~grumble@freenode/staff/grumble) has quit (Ping timeout: 622 seconds)
+2019-09-10 10:41:28	<--	aissen (~aissen@unaffiliated/aissen) has quit (Ping timeout: 264 seconds)
+2019-09-10 10:44:00	-->	Glenjamin (sid155591@gateway/web/irccloud.com/x-kjoxvgggsfwlzjbd) has joined #go-nuts
+2019-09-10 10:44:02	-->	TcM1911 (~TcM1911@cpc104718-belf11-2-0-cust781.2-1.cable.virginm.net) has joined #go-nuts
+2019-09-10 10:44:18	Glenjamin	👋
+2019-09-10 10:45:04	-->	Dave_Elec (~Dave@196.188.72.247) has joined #go-nuts
+2019-09-10 10:45:10	Glenjamin	Hi everyone, I'm wondering if anyone knows of a linter which will allow me to block use of functions by regex or a list? Specifically I want to warn on use of `fmt.Print*` - as all output in our code should be going via logging libs
+2019-09-10 10:47:33	<--	vila (~vila@2a01:e35:2e63:5f40:689d:7ae4:35d4:cac5) has quit (Ping timeout: 250 seconds)
+2019-09-10 10:49:01	-->	nanoz (~nanoz@unaffiliated/nanoz) has joined #go-nuts
+2019-09-10 10:49:28	sztanpet	why not just set those functions to nil, so you get a compiler error on use?
+2019-09-10 10:50:15	-->	techquila (~techquila@2407:7000:9125:e400:a453:6053:e9c0:bace) has joined #go-nuts
+2019-09-10 10:50:37	<--	pabs3 (~pabs3@unaffiliated/pabs3) has left #go-nuts ("Don't rest until the streets are paved in poems.")
+2019-09-10 10:56:24	sztanpet	daw, you cant
+2019-09-10 10:59:59	-->	vila (~vila@2a01:e35:2e63:5f40:7016:4209:2762:de32) has joined #go-nuts
+2019-09-10 11:02:57	<--	libertyprime (~libertypr@client-173-016.guest.otago.ac.nz) has quit (Ping timeout: 245 seconds)
+2019-09-10 11:04:16	<--	freswa (~freswa@p200300C52F28F302240E34FC721D26CC.dip0.t-ipconnect.de) has quit (Ping timeout: 264 seconds)
+2019-09-10 11:08:31	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #go-nuts
+2019-09-10 11:08:31	--	Topic for #go-nuts is "golang.org | known issues: golang.org/issue | https://freenode.logbot.info/go-nuts | don't ask to ask, just ask | don't solve problems you don't have | did you check your errors?"
+2019-09-10 11:08:31	--	Topic set by skelterjohn (sid13218@gateway/web/irccloud.com/x-gfctwrngwpjcjgtp) on Tue, 18 Jun 2019 19:13:21
+2019-09-10 11:08:31	--	Channel #go-nuts: 762 nicks (0 ops, 2 voices, 760 normals)
+2019-09-10 11:08:31	--	PvNotice(ChanServ): Please follow the Go Community Code of Conduct when chatting here. See https://golang.org/conduct
+2019-09-10 11:08:39	--	Channel created on Mon, 09 Nov 2009 19:22:37
+2019-09-10 11:08:54	-->	azuri5 (~textual@14.143.147.182) has joined #go-nuts
+2019-09-10 11:12:58	<--	pknull (~pooky@184.103.28.136) has quit (Quit: Departing.)
+2019-09-10 11:13:28	-->	pknull (~pooky@184.103.28.136) has joined #go-nuts
+2019-09-10 11:13:35	<--	truaal4 (~truaal@unaffiliated/theshirbiny) has quit (Read error: Connection reset by peer)
+2019-09-10 11:14:57	<--	marmotini_ (~marmotini@197.237.11.100) has quit (Remote host closed the connection)
+2019-09-10 11:15:19	-->	thiero1010 (uid375152@gateway/web/irccloud.com/x-pasnvezmqsphrovi) has joined #go-nuts
+2019-09-10 11:15:21	-->	marmotini_ (~marmotini@197.237.11.100) has joined #go-nuts
+2019-09-10 11:15:57	-->	truaal4 (~truaal@unaffiliated/theshirbiny) has joined #go-nuts
+2019-09-10 11:16:19	-->	freswa (~freswa@p200300C52F28F3027842C8B2034ADC3F.dip0.t-ipconnect.de) has joined #go-nuts
+2019-09-10 11:17:29	-->	aissen (~aissen@unaffiliated/aissen) has joined #go-nuts
+2019-09-10 11:17:51	<--	pztrn (~pztrnpztr@aurora.pztrn.name) has quit (Remote host closed the connection)
+2019-09-10 11:18:26	-->	pztrn (~pztrn@2a04:3600::1003) has joined #go-nuts
+2019-09-10 11:19:15	-->	plutoniix (~q@175.176.222.7) has joined #go-nuts
+2019-09-10 11:21:28	lavalike	Glenjamin: something like this? https://github.com/mgechev/revive#extensibility
+2019-09-10 11:21:37	<--	absc (~absc@176.9.150.19) has quit (Quit: Leaving)
+2019-09-10 11:22:16	Glenjamin	sztanpet: i'm fine with their using during development, but i want to block them from merging into master
+2019-09-10 11:23:31	Glenjamin	lavalike: I was hoping there might be a pre-canned version i could use. We're using `golangci-lint`, which doesn't currently support `revive` afaik
+2019-09-10 11:23:45	lavalike	it can blacklist a package but not a particular function from a package, so you have to write that rule yourself
+2019-09-10 11:23:57	lavalike	unless you're fine with just doing away with fmt entirely
+2019-09-10 11:24:25	<--	stefan_n (~stefan@unaffiliated/stefan-n/x-2953917) has quit (Ping timeout: 244 seconds)
+2019-09-10 11:24:27	Glenjamin	i think we use `.Sprint*`fairly extensively and that's not a problem
+2019-09-10 11:25:51	Glenjamin	i'm using `depguard` to warn about `spew` - i think i'll just live with not enforcing this
+2019-09-10 11:26:29	<--	Lythal (~Lythal@vpn-umea.slu.se) has quit (Ping timeout: 258 seconds)
+2019-09-10 11:27:28	sztanpet	creating your own linter is not hard tho
+2019-09-10 11:28:15	sztanpet	https://arslan.io/2019/06/13/using-go-analysis-to-write-a-custom-linter/ and stuff
+2019-09-10 11:33:20	<--	pztrn (~pztrn@2a04:3600::1003) has quit (Quit: ZNC 1.7.2+deb3 - https://znc.in)
+2019-09-10 11:37:03	<--	azuri5 (~textual@14.143.147.182) has quit (Quit: azuri5)
+2019-09-10 11:37:42	<--	tgirod (~girod@xspeech4.loria.fr) has left #go-nuts ("WeeChat 2.3")
+2019-09-10 11:37:51	<--	woshty (~woshty@unaffiliated/woshty) has quit (Ping timeout: 264 seconds)
+2019-09-10 11:38:50	<--	notagopher (~serbuvlad@109.99.136.250) has quit
+2019-09-10 11:41:19	siXy	Glenjamin: This sounds like a problem that would be better solved by proper code review, honestly
+2019-09-10 11:44:12	<--	aissen (~aissen@unaffiliated/aissen) has quit (Ping timeout: 245 seconds)
+2019-09-10 11:45:11	-->	__alex (~alex@p200300C9C70A321909ED1EBF1C603B32.dip0.t-ipconnect.de) has joined #go-nuts
+2019-09-10 11:45:28	-->	woshty (~woshty@unaffiliated/woshty) has joined #go-nuts
+2019-09-10 11:48:20	<--	ZORR0W (~amrit@117.232.253.183) has quit (Ping timeout: 246 seconds)
+2019-09-10 11:49:37	-->	libertyprime (~libertypr@219-89-182-226-fibre.sparkbb.co.nz) has joined #go-nuts
+2019-09-10 11:50:58	<--	absolutejam3 (~absolutej@vrrp.core.bridgehead.infra.victoriaplum.com) has quit (Ping timeout: 246 seconds)
+2019-09-10 11:51:23	<--	cgfbee (~bot@oc1.itim-cj.ro) has quit (Remote host closed the connection)
+2019-09-10 11:54:16	Glenjamin	not having a human code review check for things that a computer can trivially check is literally the point of linters
+2019-09-10 11:56:01	cnf	linters \o/
+2019-09-10 11:56:31	-->	azuri5 (~textual@14.143.147.182) has joined #go-nuts
+2019-09-10 11:56:52	siXy	Sure, but unless you have a long list of special-to-you things that are not allowed, putting in the effort to write a linter seems like a poor cost/benefit.
+2019-09-10 11:57:02	<--	kori (~kori@arrowheads/kori) has quit (Quit: WeeChat 2.5)
+2019-09-10 11:58:47	-->	ZORR0W (~amrit@117.232.253.183) has joined #go-nuts
+2019-09-10 11:59:27	Glenjamin	right, which is why i asked if there was a linter which already existed for this. If my effort was adding "fmt.Print*" to a list, it would be worth it
+2019-09-10 11:59:39	Glenjamin	if the effort is writing a custom linter, then it's probably not
+2019-09-10 11:59:43	-->	absolutejam3 (~absolutej@vrrp.core.bridgehead.infra.victoriaplum.com) has joined #go-nuts
+2019-09-10 12:03:51	-->	cgfbee (~bot@oc1.itim-cj.ro) has joined #go-nuts
+2019-09-10 12:04:36	<--	Skarlso (~Skarlso@68.183.219.82) has quit (Quit: The Lounge - https://thelounge.chat)
+2019-09-10 12:07:34	-->	Skarlso (~Skarlso@167.71.59.4) has joined #go-nuts
+2019-09-10 12:07:59	siXy	Yeah, that was meant to be a response to writing your own one - sorry, re-reading i didn't make that as clear as I should have.
+2019-09-10 12:10:23	<--	Orbitrix (~Huevos@c-76-26-110-2.hsd1.nm.comcast.net) has quit (Remote host closed the connection)
+2019-09-10 12:11:02	-->	Orbitrix (~Huevos@c-76-26-110-2.hsd1.nm.comcast.net) has joined #go-nuts
+2019-09-10 12:13:33	<--	Skarlso (~Skarlso@167.71.59.4) has quit (Quit: The Lounge - https://thelounge.chat)
+2019-09-10 12:14:22	-->	smcquay (~smcquay@173-164-185-125-SFBA.hfc.comcastbusiness.net) has joined #go-nuts
+2019-09-10 12:16:07	-->	saml_ (~saml@unaffiliated/saml) has joined #go-nuts
+2019-09-10 12:16:21	lavalike	the thing I linked would have you with a functioning linter by now
+2019-09-10 12:16:59	-->	Skarlso (~Skarlso@159.89.103.145) has joined #go-nuts
+2019-09-10 12:17:00	<--	ZORR0W (~amrit@117.232.253.183) has quit (Quit: leaving)
+2019-09-10 12:21:02	<--	SorinIntoCode (~marius_ro@5.2.196.6) has quit (Remote host closed the connection)
+2019-09-10 12:24:33	-->	grumble (~grumble@freenode/staff/grumble) has joined #go-nuts
+2019-09-10 12:26:14	<--	saml_ (~saml@unaffiliated/saml) has quit (Remote host closed the connection)
+2019-09-10 12:36:49	-->	stmuk_ (~steve@15.43.187.81.in-addr.arpa) has joined #go-nuts
+2019-09-10 12:36:53	<--	pknull (~pooky@184.103.28.136) has quit (Quit: Departing.)
+2019-09-10 12:37:33	-->	pknull (~pooky@184.103.28.136) has joined #go-nuts
+2019-09-10 12:37:47	<--	stmuk (~steve@15.43.187.81.in-addr.arpa) has quit (Ping timeout: 244 seconds)
+2019-09-10 12:40:26	<--	mrig (~mrig@unaffiliated/mrig) has quit (Ping timeout: 245 seconds)
+2019-09-10 12:42:11	-->	progart (~kamee@46.241.132.97) has joined #go-nuts
+2019-09-10 12:42:13	<--	progart (~kamee@46.241.132.97) has quit (Max SendQ exceeded)
+2019-09-10 12:42:21	-->	mrig (~mrig@unaffiliated/mrig) has joined #go-nuts
+2019-09-10 12:43:00	-->	progart (~kamee@46.241.132.97) has joined #go-nuts
+2019-09-10 12:43:05	<--	progart (~kamee@46.241.132.97) has quit (Max SendQ exceeded)
+2019-09-10 12:43:47	-->	user9 (984d0e22@leoseb.u-ga.fr) has joined #go-nuts
+2019-09-10 12:45:08	-->	progart (~kamee@46.241.132.97) has joined #go-nuts
+2019-09-10 12:45:17	<--	marmotini_ (~marmotini@197.237.11.100) has quit (Remote host closed the connection)
+2019-09-10 12:45:19	<--	progart (~kamee@46.241.132.97) has quit (Max SendQ exceeded)
+2019-09-10 12:45:27	<--	fjellfras (~fjellfras@49.248.13.74) has quit (Quit: Leaving)
+2019-09-10 12:45:41	-->	progart (~kamee@46.241.132.97) has joined #go-nuts
+2019-09-10 12:45:53	<--	progart (~kamee@46.241.132.97) has quit (Max SendQ exceeded)
+2019-09-10 12:46:08	<--	stmuk_ (~steve@15.43.187.81.in-addr.arpa) has quit (Remote host closed the connection)
+2019-09-10 12:46:32	-->	stmuk_ (~steve@15.43.187.81.in-addr.arpa) has joined #go-nuts
+2019-09-10 12:46:59	-->	progart (~kamee@46.241.132.97) has joined #go-nuts
+2019-09-10 12:47:37	<--	rople (~rople@193-114-148-110.tpgi.com.au) has left #go-nuts
+2019-09-10 12:48:12	-->	rople (~rople@193-114-148-110.tpgi.com.au) has joined #go-nuts
+2019-09-10 12:48:55	-->	gzj (~GZJ0X@199.19.105.140.16clouds.com) has joined #go-nuts
+2019-09-10 12:49:56	<--	gzj (~GZJ0X@199.19.105.140.16clouds.com) has left #go-nuts
+2019-09-10 12:50:05	<--	pknull (~pooky@184.103.28.136) has quit (Quit: Departing.)
+2019-09-10 12:50:34	-->	pknull (~pooky@184.103.28.136) has joined #go-nuts
+2019-09-10 12:51:03	<--	titouan (~titouan@163.172.184.222) has quit (Remote host closed the connection)
+2019-09-10 12:52:31	-->	titouan (~titouan@163.172.184.222) has joined #go-nuts
+2019-09-10 12:53:14	<--	pknull (~pooky@184.103.28.136) has quit (Client Quit)
+2019-09-10 12:54:26	-->	walterve (~walterve@37.228.243.110) has joined #go-nuts
+2019-09-10 12:54:34	-->	pknull (~pooky@184.103.28.136) has joined #go-nuts
+2019-09-10 12:54:58	-->	barrett (~barrett@unaffiliated/barrett) has joined #go-nuts
+2019-09-10 12:55:23	<--	orcam (~orcam@shell.unerror.com) has quit (Quit: bye)
+2019-09-10 13:01:13	<--	plutoniix (~q@175.176.222.7) has quit (Quit: Leaving)
+2019-09-10 13:03:45	-->	orcam (~orcam@shell.unerror.com) has joined #go-nuts
+2019-09-10 13:04:49	-->	aissen (~aissen@unaffiliated/aissen) has joined #go-nuts
+2019-09-10 13:08:26	<--	aissen (~aissen@unaffiliated/aissen) has quit (Client Quit)
+2019-09-10 13:09:18	-->	aissen (~aissen@unaffiliated/aissen) has joined #go-nuts
+2019-09-10 13:12:33	<--	cad (uid66953@gateway/web/irccloud.com/x-dfilhukanxfbptsc) has quit (Quit: Connection closed for inactivity)
+2019-09-10 13:14:33	<--	alexanderbarbosa (~user@2804:7f3:8387:aac6:2ad2:44ff:fe0e:5276) has quit (Read error: No route to host)
+2019-09-10 13:18:08	<--	libertyprime (~libertypr@219-89-182-226-fibre.sparkbb.co.nz) has quit (Ping timeout: 276 seconds)
+2019-09-10 13:19:11	-->	libertyprime (~libertypr@101.98.42.91) has joined #go-nuts
+2019-09-10 13:20:05	-->	Martchus (~martchus@dslb-088-066-226-193.088.066.pools.vodafone-ip.de) has joined #go-nuts
+2019-09-10 13:20:08	<--	Martchus_ (~martchus@ipservice-092-211-011-171.092.211.pools.vodafone-ip.de) has quit (Ping timeout: 244 seconds)
+2019-09-10 13:20:26	<--	barrett (~barrett@unaffiliated/barrett) has quit (Ping timeout: 240 seconds)
+2019-09-10 13:21:07	<--	chunkhang (~chunkhang@202.185.53.136) has quit (Quit: Goodbye world)
+2019-09-10 13:22:37	-->	d9k (~d9k@62-113-182-76.bb.dnainternet.fi) has joined #go-nuts
+2019-09-10 13:25:17	-->	DesertRock (~Desert@65.129.137.18) has joined #go-nuts
+2019-09-10 13:27:29	<--	azuri5 (~textual@14.143.147.182) has quit (Quit: azuri5)
+2019-09-10 13:33:56	-->	azuri5 (~textual@14.143.147.182) has joined #go-nuts
+2019-09-10 13:35:59	<--	walterve (~walterve@37.228.243.110) has quit (Quit: leaving)
+2019-09-10 13:42:02	<--	rople (~rople@193-114-148-110.tpgi.com.au) has quit (Quit: rople)
+2019-09-10 13:42:53	-->	rople (~rople@193-114-148-110.tpgi.com.au) has joined #go-nuts
+2019-09-10 13:45:53	-->	jlebrech (~jlebrech@5.2.197.53) has joined #go-nuts
+2019-09-10 13:46:53	jlebrech	how would I walk through a map[string]string? assuming i don't know the keys.
+2019-09-10 13:47:14	siXy	jlebrech: With range.
+2019-09-10 13:47:29	siXy	jlebrech: Have you gone through tour.golang.org yet?
+2019-09-10 13:47:51	jlebrech	nope, i will.
+2019-09-10 13:52:59	-->	kvda (~kvda@unaffiliated/kvda) has joined #go-nuts
+2019-09-10 13:55:46	jlebrech	siXy: i think i was doing it right. it was just the data that was messed up. bad yaml
+2019-09-10 13:58:07	jlebrech	what the recommended pastebin for this channel?
+2019-09-10 13:58:56	siXy	play.golang.org
+2019-09-10 13:59:01	siXy	don't forget to hit share
+2019-09-10 13:59:24	<--	rople (~rople@193-114-148-110.tpgi.com.au) has quit (Ping timeout: 246 seconds)
+2019-09-10 14:00:17	-->	tufteddeer (~tufteddee@185.213.155.160) has joined #go-nuts
+2019-09-10 14:07:50	-->	Kaivo (~Kaivo@ec2-35-182-108-102.ca-central-1.compute.amazonaws.com) has joined #go-nuts
+2019-09-10 14:08:08	<--	kvda (~kvda@unaffiliated/kvda) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-09-10 14:15:33	-->	sacredfrog (~ryan@dev.appthecloud.io) has joined #go-nuts
+2019-09-10 14:15:53	jlebrech	siXy: thanks, i'll share my findings here
+2019-09-10 14:16:15	-->	SorinIntoCode (~marius_ro@5.2.196.6) has joined #go-nuts
+2019-09-10 14:19:07	<--	seejy (~cj@eightburst.hosted.icj.me) has quit (Quit: gbye!)
+2019-09-10 14:20:04	-->	seejy (~cj@eightburst.hosted.icj.me) has joined #go-nuts
+2019-09-10 14:25:47	<--	abbiya (~abbiya@115.111.235.210) has quit (Quit: abbiya)
+2019-09-10 14:25:51	<--	__alex (~alex@p200300C9C70A321909ED1EBF1C603B32.dip0.t-ipconnect.de) has quit (Ping timeout: 264 seconds)
+2019-09-10 14:34:51	-->	absc (~absc@176.9.150.19) has joined #go-nuts
+2019-09-10 14:36:56	--	grumble is now known as \emph{grumble}
+2019-09-10 14:37:29	-->	arahael3 (~arahael@203.111.95.215) has joined #go-nuts
+2019-09-10 14:37:59	-->	__alex (~alex@p200300C9C70A3284BE73037CD7DD627A.dip0.t-ipconnect.de) has joined #go-nuts
+2019-09-10 14:38:51	<--	arahael2 (~arahael@203.63.143.30) has quit (Ping timeout: 240 seconds)
+2019-09-10 14:43:24	<--	jlebrech (~jlebrech@5.2.197.53) has quit (Remote host closed the connection)
+2019-09-10 14:46:30	-->	pepee (~pepee@unaffiliated/pepee) has joined #go-nuts
+2019-09-10 14:48:04	-->	jarlopez (~johan.mic@96-84-211-65-static.hfc.comcastbusiness.net) has joined #go-nuts
+2019-09-10 14:50:19	jarlopez	What's the behavior of context.Context.Done() and ctx.WithTimeout() if called multiple times? Does each invocation replace the current deadline?
+2019-09-10 14:52:24	-->	cad (uid66953@gateway/web/irccloud.com/x-qenycggxfbcyivrc) has joined #go-nuts
+2019-09-10 14:52:50	<--	Tichodroma (~lutz@fsf/member/Tichodroma) has quit (Ping timeout: 240 seconds)
+2019-09-10 14:54:57	-->	Tichodroma (~lutz@fsf/member/Tichodroma) has joined #go-nuts
+2019-09-10 14:55:03	<--	thiero1010 (uid375152@gateway/web/irccloud.com/x-pasnvezmqsphrovi) has quit (Quit: Connection closed for inactivity)
+2019-09-10 14:58:26	<--	psyb0t (~psyb0t@84.39.112.87) has quit (Remote host closed the connection)
+2019-09-10 15:03:28	-->	ledx (~thomas@unaffiliated/l3dx) has joined #go-nuts
+2019-09-10 15:04:35	-->	icholy (~icholy@68.71.18.45) has joined #go-nuts
+2019-09-10 15:05:02	<--	random_yanek (~random_ya@host-89-230-165-166.dynamic.mm.pl) has quit (Ping timeout: 244 seconds)
+2019-09-10 15:11:56	-->	random_yanek (~random_ya@87.116.229.147) has joined #go-nuts
+2019-09-10 15:12:40	-->	rbarroso (~rbarroso@89.107.183.3) has joined #go-nuts
+2019-09-10 15:13:17	rbarroso	Hi, any way to process an UUID for a shorter ID? we need to work with 27 characters only but UUID holds 32
+2019-09-10 15:15:02	-->	variscanprimes (~kw@217.33.123.116) has joined #go-nuts

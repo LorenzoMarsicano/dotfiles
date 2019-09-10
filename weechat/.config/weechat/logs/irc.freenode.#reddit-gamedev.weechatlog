@@ -2112,3 +2112,69 @@
 2019-07-23 17:33:08	elsie273	i stuck
 2019-07-23 17:33:13	elsie273	suck
 2019-07-23 17:47:35	-->	DerHase (~Dave@catv-80-99-84-192.catv.broadband.hu) has joined #reddit-gamedev
+2019-09-10 09:36:12	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-09-10 09:36:12	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-09-10 09:36:12	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-09-10 09:36:12	--	Channel #reddit-gamedev: 69 nicks (0 ops, 16 voices, 53 normals)
+2019-09-10 09:36:18	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-09-10 09:37:15	<--	krychu (~krychu@213.242.84.161) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-09-10 09:39:32	-->	macz (~macz@d207-216-213-126.bchsia.telus.net) has joined #reddit-gamedev
+2019-09-10 09:43:47	<--	macz (~macz@d207-216-213-126.bchsia.telus.net) has quit (Ping timeout: 245 seconds)
+2019-09-10 09:55:04	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-09-10 09:55:04	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-09-10 09:55:04	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-09-10 09:55:04	--	Channel #reddit-gamedev: 68 nicks (0 ops, 16 voices, 52 normals)
+2019-09-10 09:55:09	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-09-10 09:57:01	-->	krychu (~krychu@213.242.84.161) has joined #reddit-gamedev
+2019-09-10 10:01:53	-->	nanoz (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-09-10 10:05:57	-->	elsie273 (~Android@2a01:4c8:41e:47a4:a4c3:f1cc:d2d3:e0ab) has joined #reddit-gamedev
+2019-09-10 10:31:00	<--	nanoz (~nanoz@unaffiliated/nanoz) has quit (Ping timeout: 246 seconds)
+2019-09-10 10:49:01	-->	nanoz (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-09-10 11:08:31	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-09-10 11:08:31	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-09-10 11:08:31	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-09-10 11:08:31	--	Channel #reddit-gamedev: 71 nicks (0 ops, 16 voices, 55 normals)
+2019-09-10 11:08:35	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-09-10 11:30:27	<--	krychu (~krychu@213.242.84.161) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-09-10 11:43:27	elsie273	Jonas it's brrrrr cold
+2019-09-10 11:43:36	elsie273	the sun is out though
+2019-09-10 11:44:05	+Jonas__	elsie273, it's a bit chilly here as well
+2019-09-10 11:44:23	+Jonas__	this it the first time in a long time that I've noticed the inside of the office being colder than the outside
+2019-09-10 11:44:36	+Jonas__	err, the inside being *warmer*
+2019-09-10 11:45:27	elsie273	i'm wearing gloves
+2019-09-10 11:46:24	elsie273	also i sketched this in a few minutes yesterday. i'm super glad to be at a point where i can like, put a pen to paper and draw some nonsense and not feel bad about it
+2019-09-10 11:46:27	elsie273	https://i.imgur.com/bfHd3TK.jpg
+2019-09-10 12:03:59	-->	Uhfgood (~Uhfgood@2603:9000:b10b:c00:3ce2:37dd:afbb:8ad6) has joined #reddit-gamedev
+2019-09-10 12:13:05	-->	krychu (~krychu@213.242.84.161) has joined #reddit-gamedev
+2019-09-10 12:25:19	-->	macz (~macz@d207-216-213-126.bchsia.telus.net) has joined #reddit-gamedev
+2019-09-10 12:30:02	<--	macz (~macz@d207-216-213-126.bchsia.telus.net) has quit (Ping timeout: 276 seconds)
+2019-09-10 12:40:07	<--	krychu (~krychu@213.242.84.161) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-09-10 13:18:45	+Jonas__	nice lake, elsie273
+2019-09-10 13:18:57	+Jonas__	you do art for fun, I do code
+2019-09-10 13:19:04	+Jonas__	I feel like we're very different
+2019-09-10 13:22:44	-->	krychu (~krychu@213.242.84.161) has joined #reddit-gamedev
+2019-09-10 13:30:05	elsie273	um excuse me
+2019-09-10 13:30:30	elsie273	i write enough code to turn it into laborious torture
+2019-09-10 13:30:46	elsie273	last night as soon as i turned off the computer i had a big todo list
+2019-09-10 13:31:10	elsie273	it always happens and i always write the list but still they never get done
+2019-09-10 13:31:22	elsie273	soooo frustrated at myself this year
+2019-09-10 13:38:02	ahub	OK guy, I'm fed up with my current playlist
+2019-09-10 13:38:16	ahub	Can you suggest some calm music for programming & focusing ?
+2019-09-10 13:39:59	+Jonas__	god is an astronaut
+2019-09-10 13:40:22	ahub	Already in it, but I'm looking for something like that
+2019-09-10 13:41:04	+Jonas__	I'm not sure it classifies as calm, but infected mushroom can be good too
+2019-09-10 13:41:10	+Jonas__	it usually makes me a bit wired tho
+2019-09-10 13:41:22	ahub	Cool, gotta try this one then, thanks Jonas__
+2019-09-10 13:46:28	+Jonas__	the glitch mob also has some nice tracks, not too slow, not too hectic, not too verbal
+2019-09-10 13:46:49	+Jonas__	I can't copy paste links right now because my setup's broken, but the glitch mob love death immortality can be found on YT
+2019-09-10 13:50:12	ahub	Sure
+2019-09-10 13:50:15	ahub	Thanks
+2019-09-10 13:55:06	-->	tacco\unfoog (~tacco@203-67-142-46.pool.kielnet.net) has joined #reddit-gamedev
+2019-09-10 14:00:52	<--	shan (~shan@unaffiliated/jasatso1301) has quit (Ping timeout: 245 seconds)
+2019-09-10 14:07:19	elsie273	ahub look up "relaxing pokemon music compilation"? ^^
+2019-09-10 14:17:41	ahub	heh :)
+2019-09-10 14:26:10	-->	macz (~macz@d207-216-213-126.bchsia.telus.net) has joined #reddit-gamedev
+2019-09-10 14:30:59	<--	macz (~macz@d207-216-213-126.bchsia.telus.net) has quit (Ping timeout: 268 seconds)
+2019-09-10 14:54:37	elsie273	no it's a serious suggestion, they're really good!
+2019-09-10 15:03:28	-->	macz (~macz@d207-216-213-126.bchsia.telus.net) has joined #reddit-gamedev
+2019-09-10 15:07:51	<--	macz (~macz@d207-216-213-126.bchsia.telus.net) has quit (Ping timeout: 246 seconds)

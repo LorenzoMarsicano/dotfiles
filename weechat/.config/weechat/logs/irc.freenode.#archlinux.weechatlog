@@ -19819,3 +19819,630 @@
 2019-07-23 17:51:19	<--	mcoffin (~mcoffin@unaffiliated/mcoffin) has quit (Quit: leaving)
 2019-07-23 17:51:33	howaboutsynergy	Well it's: -D_FORTIFY_SOURCE=2  (I just finished double checking), Namarrgon, Tom^ good try tho :D
 2019-07-23 17:51:36	-->	zro (~zro@wikimedia/zro) has joined #archlinux
+2019-09-10 09:36:12	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #archlinux
+2019-09-10 09:36:12	--	Topic for #archlinux is "Welcome to Arch Linux, Good Luck: https://archlinux.org | Rules: https://goo.gl/XWFreH | Pastebins: see !paste | https://i.imgflip.com/nwm8q.jpg"
+2019-09-10 09:36:12	--	Topic set by demize (kyrias@archlinux/developer/demize) on Sun, 01 Sep 2019 01:25:39
+2019-09-10 09:36:12	--	Channel #archlinux: 1702 nicks (3 ops, 0 voices, 1699 normals)
+2019-09-10 09:36:16	--	Channel created on Sun, 15 Feb 2004 06:08:31
+2019-09-10 09:36:32	-->	fyrgebraec (~enceladus@251.18.23.93.rev.sfr.net) has joined #archlinux
+2019-09-10 09:36:32	MrElendig	you could use uaccess instead
+2019-09-10 09:36:39	-->	docmax (~docmax@x4d0822e0.dyn.telefonica.de) has joined #archlinux
+2019-09-10 09:40:56	-->	mcquinn1 (~Thunderbi@p200300C54F028600E6B318FFFE448220.dip0.t-ipconnect.de) has joined #archlinux
+2019-09-10 09:41:23	Brocellous	I did not know about uaccess
+2019-09-10 09:41:30	Brocellous	looks appropriate
+2019-09-10 09:41:35	-->	EI24 (ac67587f@host-103-88-127.junet.se) has joined #archlinux
+2019-09-10 09:41:41	<--	valdar (~atarocch@mob-2-43-57-5.net.vodafone.it) has quit (Ping timeout: 276 seconds)
+2019-09-10 09:42:27	<--	mcquinn (~Thunderbi@p5482CC33.dip0.t-ipconnect.de) has quit (Ping timeout: 240 seconds)
+2019-09-10 09:42:27	--	mcquinn1 is now known as mcquinn
+2019-09-10 09:43:27	<--	h4rd3n3D (~weechat@gateway/tor-sasl/h4rd3n3d) has quit (Remote host closed the connection)
+2019-09-10 09:43:31	<--	h4rd3n3D_ (~weechat@gateway/tor-sasl/h4rd3n3d) has quit (Remote host closed the connection)
+2019-09-10 09:43:35	-->	h4rd3n3D1 (~weechat@gateway/tor-sasl/h4rd3n3d) has joined #archlinux
+2019-09-10 09:43:38	-->	h4rd3n3D (~weechat@gateway/tor-sasl/h4rd3n3d) has joined #archlinux
+2019-09-10 09:44:38	<--	seaglass (~seaglass@unaffiliated/seaglass) has quit (Quit: WeeChat 2.5)
+2019-09-10 09:44:43	-->	Jarcode (~SomeoneIs@172.103.221.91.cable.tpia.cipherkey.com) has joined #archlinux
+2019-09-10 09:45:09	<--	Standalone (~weissi199@git.derzer.at) has quit (Ping timeout: 246 seconds)
+2019-09-10 09:46:27	-->	johndoe231 (~johndoe@117.198.102.130) has joined #archlinux
+2019-09-10 09:47:04	<--	ElectricPrism (~ElectricP@unaffiliated/electricprism) has quit (Remote host closed the connection)
+2019-09-10 09:47:24	-->	infides (~infides@92.117.128.255) has joined #archlinux
+2019-09-10 09:49:44	-->	sigmundv (~sigmundv@178.167.200.123.threembb.ie) has joined #archlinux
+2019-09-10 09:49:44	<--	tulliana (~archman-o@manjaro/team/tulliana) has quit (Read error: Connection reset by peer)
+2019-09-10 09:50:46	<--	cnsunyour (~cnsunyour@2408:8207:18e9:3f70:7836:eff0:2639:24b6) has quit (Quit: WeeChat 2.6)
+2019-09-10 09:50:47	-->	Standalone (~weissi199@git.derzer.at) has joined #archlinux
+2019-09-10 09:50:55	post-factum	Foxboron: i'm phasing out btrfs wherever i can
+2019-09-10 09:51:18	Foxboron	post-factum: Never had a problem for years
+2019-09-10 09:51:28	Foxboron	my NAS at home runs btrfs with $insertLatestCompression
+2019-09-10 09:51:38	post-factum	with jpeg compression?
+2019-09-10 09:51:50	Foxboron	But it seems like a bug in relation to scrubing and quotas
+2019-09-10 09:52:10	-->	murray (~murray@dyndsl-089-166-159-131.ewe-ip-backbone.de) has joined #archlinux
+2019-09-10 09:53:08	-->	Makaveli7 (~Makaveli7@unaffiliated/makaveli7) has joined #archlinux
+2019-09-10 09:53:22	-->	audijo (~audijo@h2848197.stratoserver.net) has joined #archlinux
+2019-09-10 09:54:02	MrElendig	btrfs have saved me a few times
+2019-09-10 09:54:11	-->	valdar (~atarocch@wsip-24-120-55-69.lv.lv.cox.net) has joined #archlinux
+2019-09-10 09:55:03	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #archlinux
+2019-09-10 09:55:03	--	Topic for #archlinux is "Welcome to Arch Linux, Good Luck: https://archlinux.org | Rules: https://goo.gl/XWFreH | Pastebins: see !paste | https://i.imgflip.com/nwm8q.jpg"
+2019-09-10 09:55:03	--	Topic set by demize (kyrias@archlinux/developer/demize) on Sun, 01 Sep 2019 01:25:39
+2019-09-10 09:55:04	--	Channel #archlinux: 1708 nicks (3 ops, 0 voices, 1705 normals)
+2019-09-10 09:55:07	--	Channel created on Sun, 15 Feb 2004 06:08:31
+2019-09-10 09:55:32	MrElendig	and the issue did not show up in the smart tests the vps provider had set up
+2019-09-10 09:57:24	<--	Standalone (~weissi199@git.derzer.at) has quit (Ping timeout: 246 seconds)
+2019-09-10 09:59:26	<--	fedux (~fedux@2a02:8109:9a80:7cdc:ade1:cd9c:27f7:de1f) has quit (Quit: fedux)
+2019-09-10 09:59:36	<--	sklv1 (~sklv@gateway/tor-sasl/sklv) has quit (Ping timeout: 260 seconds)
+2019-09-10 10:00:03	-->	b0tanik (~b0tanik@62.216.35.158) has joined #archlinux
+2019-09-10 10:00:12	Hail_Spacecake	anyone know how to run a custom systemd service that starts/stops a docker image?
+2019-09-10 10:00:29	-->	Nightah (~Nightah@unaffiliated/nightah) has joined #archlinux
+2019-09-10 10:00:50	-->	sklv1 (~sklv@gateway/tor-sasl/sklv) has joined #archlinux
+2019-09-10 10:00:56	-->	cnsunyour (~cnsunyour@114.244.176.207) has joined #archlinux
+2019-09-10 10:01:20	-->	stitched_unicorn (~Red@fp83935c80.tkyc516.ap.nuro.jp) has joined #archlinux
+2019-09-10 10:03:04	<--	dadinn (~dadinn@188.172.153.77) has quit (Ping timeout: 264 seconds)
+2019-09-10 10:03:48	-->	Standalone (~weissi199@git.derzer.at) has joined #archlinux
+2019-09-10 10:05:05	MrElendig	systemctl start
+2019-09-10 10:05:05	<--	tdy (~tdy@unaffiliated/tdy) has quit (Ping timeout: 276 seconds)
+2019-09-10 10:05:11	MrElendig	or systemd-run
+2019-09-10 10:05:17	-->	fogobogo (~fogobogo@unaffiliated/fogobogo) has joined #archlinux
+2019-09-10 10:05:22	-->	fedux (~fedux@2a02:8109:9a80:7cdc:14d1:4ca0:1cd8:98b5) has joined #archlinux
+2019-09-10 10:07:33	<--	cmm11 (~cmm11@136.244.69.126) has quit (Read error: Connection reset by peer)
+2019-09-10 10:07:36	<--	valdar (~atarocch@wsip-24-120-55-69.lv.lv.cox.net) has quit (Remote host closed the connection)
+2019-09-10 10:08:25	FFY00-TP	so, I received my thinkpad x200t
+2019-09-10 10:08:37	FFY00-TP	turns out I wasn't scammed
+2019-09-10 10:09:00	FFY00-TP	it's not in the best shape but it's decent
+2019-09-10 10:09:11	-->	cmm11 (~cmm11@136.244.69.126) has joined #archlinux
+2019-09-10 10:11:58	-->	nycko123 (nycko123@gateway/vpn/protonvpn/nycko123) has joined #archlinux
+2019-09-10 10:12:08	EI24	got this "ERROR: Root device mounted successfully, but /sbin/init does not exist.Bailing out, you are on your own now. Good luck." when rebooting
+2019-09-10 10:12:16	<--	nycko123 (nycko123@gateway/vpn/protonvpn/nycko123) has left #archlinux
+2019-09-10 10:12:23	EI24	after installation and configuration
+2019-09-10 10:12:31	Namarrgon	the root= parameter in your bootloader config points at the wrong device
+2019-09-10 10:12:48	<--	slash__ (~slash_@030-245-128-083.dynamic.caiway.nl) has quit (Ping timeout: 246 seconds)
+2019-09-10 10:15:45	-->	alwyn (~alwyn@unaffiliated/alwyn) has joined #archlinux
+2019-09-10 10:16:27	<--	jason0597 (~jason0597@178-29-194.dynamic.cyta.gr) has quit (Ping timeout: 240 seconds)
+2019-09-10 10:16:28	<--	Warepire (~Warepire@unaffiliated/warepire) has quit (Read error: Connection reset by peer)
+2019-09-10 10:16:45	-->	Warepire (~Warepire@unaffiliated/warepire) has joined #archlinux
+2019-09-10 10:17:41	<--	Brocellous (~Brocellou@2600:8800:1e00:97d:9890:1fb3:fcff:deda) has quit (Quit: WeeChat 2.6)
+2019-09-10 10:19:23	-->	raster (raster@enlightenment/developer/raster) has joined #archlinux
+2019-09-10 10:19:55	-->	HuntsMan (~hunts@unaffiliated/huntsman) has joined #archlinux
+2019-09-10 10:21:20	-->	fetus_deletus (~Fetusdele@115.249.24.210) has joined #archlinux
+2019-09-10 10:21:58	MrElendig	EI24: using /dev/sd*?
+2019-09-10 10:22:12	horseface	why does my laptop broadcast its bluetooth name as chromelinux_#### and how can i change this?
+2019-09-10 10:22:21	horseface	why chromelinux though?
+2019-09-10 10:22:25	horseface	i am just wondering...
+2019-09-10 10:22:40	MrElendig	because that is what you configured?
+2019-09-10 10:22:44	horseface	no.
+2019-09-10 10:22:49	horseface	i never configured that.
+2019-09-10 10:22:53	horseface	i am using bluez...
+2019-09-10 10:23:12	MrElendig	`hostname`
+2019-09-10 10:23:25	horseface	no, my hostname is different to that...
+2019-09-10 10:23:34	-->	jason0597 (~jason0597@178-29-194.dynamic.cyta.gr) has joined #archlinux
+2019-09-10 10:23:44	MrElendig	enabled bt support in your browser?
+2019-09-10 10:24:00	<--	saltpepp3r3 (~saltpepp3@91.207.173.118) has quit (Ping timeout: 246 seconds)
+2019-09-10 10:24:46	<--	jason0597 (~jason0597@178-29-194.dynamic.cyta.gr) has quit (Remote host closed the connection)
+2019-09-10 10:24:56	MrElendig	you can easily change it in the bluez/bluetoothhcl config though
+2019-09-10 10:25:24	h4rd3n3D1	post-factum:  another btrfs fan here:  The last time I ran into serious data corruption was because I wasn't paying attention and a VM system update spun out of control and used up all my available SSD space.  System completely frozen, and all reboot attempts were unsuccessful.  Though I was doomed for sure, until I read:  https://btrfs.wiki.kernel.org/index.php/Restore.  `btrfs restore` works
+2019-09-10 10:25:25	MrElendig	less /etc/machine-info
+2019-09-10 10:25:26	h4rd3n3D1	very well
+2019-09-10 10:25:54	horseface	just because it isn't a chromebook or anything so i just found it weird...
+2019-09-10 10:25:56	h4rd3n3D1	*Thought
+2019-09-10 10:26:07	horseface	the basis behind it being called this chromelinux...
+2019-09-10 10:26:15	-->	saltpepp3r3 (~saltpepp3@91.207.173.118) has joined #archlinux
+2019-09-10 10:26:15	horseface	i will check.
+2019-09-10 10:26:27	<--	Standalone (~weissi199@git.derzer.at) has quit (Ping timeout: 240 seconds)
+2019-09-10 10:26:38	MrElendig	enabeling bt support in a chrome based browser might do that
+2019-09-10 10:26:42	post-factum	h4rd3n3D1: awesome
+2019-09-10 10:26:51	horseface	oh.
+2019-09-10 10:26:52	horseface	i see.
+2019-09-10 10:27:46	MrElendig	cat /var/lib/bluetooth/*/config
+2019-09-10 10:28:41	-->	freswa (~freswa@p200300C52F28F302240E34FC721D26CC.dip0.t-ipconnect.de) has joined #archlinux
+2019-09-10 10:28:42	-->	Hunts (~hunts@unaffiliated/huntsman) has joined #archlinux
+2019-09-10 10:29:16	horseface	you're right.
+2019-09-10 10:29:20	horseface	thank you.
+2019-09-10 10:29:27	horseface	i found it in /var/lib/bluetooth/*/config.
+2019-09-10 10:30:37	<--	Furai (~Furai@cookiehoster.furai.pl) has quit (Quit: WeeChat 2.6)
+2019-09-10 10:30:48	-->	vassie (~vassie@2a02:c7f:7ee5:cf00:1a8f:6f0a:9015:4f0) has joined #archlinux
+2019-09-10 10:31:36	-->	yunhao94 (~yunhao94@183.198.197.63) has joined #archlinux
+2019-09-10 10:31:37	-->	Standalone (~weissi199@git.derzer.at) has joined #archlinux
+2019-09-10 10:31:50	-->	TechnoJellyfish (jellyfish@gateway/vpn/mullvad/technojellyfish) has joined #archlinux
+2019-09-10 10:32:28	<--	HuntsMan (~hunts@unaffiliated/huntsman) has quit (Ping timeout: 264 seconds)
+2019-09-10 10:32:33	-->	tkrizek (~tkrizek@2001:67c:1220:80c:df:5350:68c3:aed5) has joined #archlinux
+2019-09-10 10:32:45	<--	johndoe231 (~johndoe@117.198.102.130) has quit (Ping timeout: 246 seconds)
+2019-09-10 10:33:23	<--	xenrox (~xenrox@unaffiliated/xenrox) has quit (Quit: wrong button)
+2019-09-10 10:33:53	-->	Furai (~Furai@cookiehoster.furai.pl) has joined #archlinux
+2019-09-10 10:35:03	<--	fyrgebraec (~enceladus@251.18.23.93.rev.sfr.net) has quit (Ping timeout: 245 seconds)
+2019-09-10 10:35:07	<--	stitched_unicorn (~Red@fp83935c80.tkyc516.ap.nuro.jp) has quit (Quit: stitched_unicorn)
+2019-09-10 10:35:38	<--	_1k5 (~mdl@ip4d159576.dynamic.kabel-deutschland.de) has quit (Ping timeout: 276 seconds)
+2019-09-10 10:36:20	-->	xenrox (~xenrox@unaffiliated/xenrox) has joined #archlinux
+2019-09-10 10:36:27	<--	Dave_Elec (~Dave@196.188.72.247) has quit (Ping timeout: 240 seconds)
+2019-09-10 10:36:36	<--	Standalone (~weissi199@git.derzer.at) has quit (Ping timeout: 246 seconds)
+2019-09-10 10:36:47	<--	vassie (~vassie@2a02:c7f:7ee5:cf00:1a8f:6f0a:9015:4f0) has quit (Quit: WeeChat 2.6)
+2019-09-10 10:38:09	<--	inglor (~quassel@141.0.156.136) has quit (Quit: https://quassel-irc.org - Chat comfortably. Anywhere.)
+2019-09-10 10:38:34	-->	inglor (~quassel@141.0.156.136) has joined #archlinux
+2019-09-10 10:39:10	-->	barchiesi (~barchiesi@unaffiliated/barchiesi) has joined #archlinux
+2019-09-10 10:40:12	<--	sklv1 (~sklv@gateway/tor-sasl/sklv) has quit (Ping timeout: 260 seconds)
+2019-09-10 10:40:49	-->	sklv1 (~sklv@gateway/tor-sasl/sklv) has joined #archlinux
+2019-09-10 10:40:53	<--	grumble (~grumble@freenode/staff/grumble) has quit (Ping timeout: 622 seconds)
+2019-09-10 10:41:25	lolok	i have installed all the kernels i intend to use, i have run grub-mkconfig, and all is good. do i ever need to run grub-mkconfig again? theres no pacman hook for it installed by default, and kernel updates dont seem to break anything, but ive seen many distros where its hooked to some kind of updates.
+2019-09-10 10:41:34	<--	killsushi (~killsushi@CPEf0f249442b03-CMf0f249442b00.cpe.net.cable.rogers.com) has quit (Quit: Leaving)
+2019-09-10 10:42:03	-->	fyrgebraec (~enceladus@92.104.23.93.rev.sfr.net) has joined #archlinux
+2019-09-10 10:43:02	-->	Standalone (~weissi199@git.derzer.at) has joined #archlinux
+2019-09-10 10:44:24	-->	johndoe231 (~johndoe@117.198.102.130) has joined #archlinux
+2019-09-10 10:44:35	-->	gunix (~gheorghe@cyberghost/gunix) has joined #archlinux
+2019-09-10 10:44:45	gunix	when will arch change the LTS from 4.19 to something else?
+2019-09-10 10:45:04	-->	Dave_Elec (~Dave@196.188.72.247) has joined #archlinux
+2019-09-10 10:45:18	-->	bitx8 (~tux@c83-254-139-15.bredband.comhem.se) has joined #archlinux
+2019-09-10 10:45:40	auscompgeek	when upstream does
+2019-09-10 10:46:00	gunix	auscompgeek:any idea when upstream will be a new LTS?
+2019-09-10 10:46:15	gunix	if it will be 5.3 or 5.4?
+2019-09-10 10:46:30	-->	sepehrdad (~sepehrdad@unaffiliated/sepehrdad) has joined #archlinux
+2019-09-10 10:46:31	-->	p3fr (~p3fr@dslb-088-075-168-121.088.075.pools.vodafone-ip.de) has joined #archlinux
+2019-09-10 10:46:53	demonicmaniac3	5.4
+2019-09-10 10:47:10	Namarrgon	lolok: the names of the kernel images don't change so unless you want to change something in the config you don't have to run grub-mkconfig again
+2019-09-10 10:47:28	lolok	thx
+2019-09-10 10:47:39	<--	Standalone (~weissi199@git.derzer.at) has quit (Ping timeout: 240 seconds)
+2019-09-10 10:47:55	<--	mcquinn (~Thunderbi@p200300C54F028600E6B318FFFE448220.dip0.t-ipconnect.de) has quit (Ping timeout: 276 seconds)
+2019-09-10 10:48:27	<--	p3fr (~p3fr@dslb-088-075-168-121.088.075.pools.vodafone-ip.de) has quit (Client Quit)
+2019-09-10 10:48:31	<--	Xeyame (~Xeyame@server-q7su72.xeya.me) has quit (Read error: Connection reset by peer)
+2019-09-10 10:51:48	<--	Hail_Spacecake (~weechat@lobsters/users/hailspacecake/x-84238744) has quit (Remote host closed the connection)
+2019-09-10 10:52:08	<--	Lord_of_Life (~Lord@unaffiliated/lord-of-life/x-0885362) has quit (Ping timeout: 245 seconds)
+2019-09-10 10:52:13	-->	Hail_Spacecake (~weechat@lobsters/users/hailspacecake/x-84238744) has joined #archlinux
+2019-09-10 10:52:44	-->	penguin1 (~penguin1@unaffiliated/penguin1) has joined #archlinux
+2019-09-10 10:52:55	-->	Standalone (~weissi199@git.derzer.at) has joined #archlinux
+2019-09-10 10:53:22	beest	didn't there used to be LTS release predictions at phb-crystal-ball or did i imagine it
+2019-09-10 10:54:15	<--	tabsterleir2 (~tabs@72.127.70.115.static.exetel.com.au) has quit (Read error: Connection reset by peer)
+2019-09-10 10:54:52	-->	Lord_of_Life (~Lord@unaffiliated/lord-of-life/x-0885362) has joined #archlinux
+2019-09-10 10:54:59	-->	sseneca (sseneca@gateway/vpn/mullvad/sseneca) has joined #archlinux
+2019-09-10 10:55:37	EI24	Nammarrgon, is should be options root=PARTUUID=(PARTUUID generated from blkid) no?
+2019-09-10 10:55:56	Namarrgon	that's one way, yes
+2019-09-10 10:56:07	Namarrgon	what exactly does it look like?
+2019-09-10 10:56:51	EI24	efi vmlinuz-linux
+2019-09-10 10:56:51	<--	gunix (~gheorghe@cyberghost/gunix) has left #archlinux ("WeeChat 2.5")
+2019-09-10 10:56:53	EI24	ops
+2019-09-10 10:56:53	-->	truthful_jackson (~truthful_@216.134.185.1) has joined #archlinux
+2019-09-10 10:57:05	-->	cottoneyejim (~cottoneye@46.33.206.36) has joined #archlinux
+2019-09-10 10:57:42	Namarrgon	post the whole config to a paste service
+2019-09-10 10:58:18	<--	bitx8 (~tux@c83-254-139-15.bredband.comhem.se) has quit (Quit: WeeChat 2.5)
+2019-09-10 10:58:40	EI24	efi /vmlinuz-linux         linux /vmlinuz-linux        initrd /initramfs-linux.img            options root=PARTUUID=xxxxxxxx-xxxx-xxxx-xxxxxxxxxxxx rw
+2019-09-10 10:59:10	Namarrgon	post the config as is
+2019-09-10 10:59:22	Namarrgon	don't type it out manually, you will introduce typos
+2019-09-10 11:00:05	-->	joe___ (~joe@2001:16b8:48e3:8500:b78c:d056:7338:79d4) has joined #archlinux
+2019-09-10 11:00:24	EI24	are linux and efi setting the samething?
+2019-09-10 11:02:16	-->	alkysteve (~alkysteve@cpc109817-linc13-2-0-cust334.12-1.cable.virginm.net) has joined #archlinux
+2019-09-10 11:02:17	<--	nextus (~nextus@80.251.112.197) has quit (Ping timeout: 276 seconds)
+2019-09-10 11:03:59	EI24	https://pastebin.com/mpRWS6yt
+2019-09-10 11:04:00	@phrik	Title: #archLinux.conf title Arch Linux efi /vmlinux-linux linux /vmlinuz-linux in - Pastebin.com (at pastebin.com)
+2019-09-10 11:04:01	@EMIYA	repasted ⇒ https://0x0.st/zJgo.txt
+2019-09-10 11:04:16	<--	freswa (~freswa@p200300C52F28F302240E34FC721D26CC.dip0.t-ipconnect.de) has quit (Ping timeout: 264 seconds)
+2019-09-10 11:04:20	EI24	though now the guid is different
+2019-09-10 11:04:45	EI24	Namarrgon, can you recommend another way
+2019-09-10 11:04:45	EI24	?
+2019-09-10 11:04:49	Namarrgon	don't add both eif _and_ linux
+2019-09-10 11:04:57	-->	stitched_unicorn (~Red@fp83935c80.tkyc516.ap.nuro.jp) has joined #archlinux
+2019-09-10 11:04:58	EI24	only linux?
+2019-09-10 11:05:00	Namarrgon	and post the blkid output
+2019-09-10 11:05:02	Namarrgon	yes
+2019-09-10 11:05:10	Namarrgon	'efi' is for general efi binaries
+2019-09-10 11:05:21	Namarrgon	it might or might not work with the kernel, i don't know
+2019-09-10 11:05:27	EI24	ok
+2019-09-10 11:05:28	<--	beest (~root@2601:480:4003:37e0::3c59) has quit (Ping timeout: 264 seconds)
+2019-09-10 11:05:53	EI24	also i realized that i had mounted the home partition at /mnt instead of /mnt/home
+2019-09-10 11:05:58	Namarrgon	and the name of the initramfs image is wrong
+2019-09-10 11:08:31	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #archlinux
+2019-09-10 11:08:31	--	Topic for #archlinux is "Welcome to Arch Linux, Good Luck: https://archlinux.org | Rules: https://goo.gl/XWFreH | Pastebins: see !paste | https://i.imgflip.com/nwm8q.jpg"
+2019-09-10 11:08:31	--	Topic set by demize (kyrias@archlinux/developer/demize) on Sun, 01 Sep 2019 01:25:39
+2019-09-10 11:08:31	--	Channel #archlinux: 1714 nicks (3 ops, 0 voices, 1711 normals)
+2019-09-10 11:08:33	--	Channel created on Sun, 15 Feb 2004 06:08:31
+2019-09-10 11:09:01	<--	stitched_unicorn (~Red@fp83935c80.tkyc516.ap.nuro.jp) has quit (Client Quit)
+2019-09-10 11:09:36	-->	StaphY (~staphy@185.189.51.65) has joined #archlinux
+2019-09-10 11:10:10	-->	dadinn (~dadinn@195.89.75.180) has joined #archlinux
+2019-09-10 11:11:21	-->	dandels (~dandels@unaffiliated/dandels) has joined #archlinux
+2019-09-10 11:12:14	-->	bitx8 (~tux@c83-254-139-15.bredband.comhem.se) has joined #archlinux
+2019-09-10 11:12:15	EI24	can't dump sense its on another computer
+2019-09-10 11:12:32	-->	Marenz (~marenz@178.19.221.38) has joined #archlinux
+2019-09-10 11:12:33	Namarrgon	it's not connected to the internet?
+2019-09-10 11:13:09	EI24	how do i dump from terminal then?
+2019-09-10 11:13:11	EI24	bash
+2019-09-10 11:13:14	Namarrgon	!ix
+2019-09-10 11:13:14	@phrik	<command to print output> |& curl -F 'f:1=<-' ix.io
+2019-09-10 11:13:22	<--	joe___ (~joe@2001:16b8:48e3:8500:b78c:d056:7338:79d4) has quit (Remote host closed the connection)
+2019-09-10 11:13:46	-->	Forsaken87 (~quassel@2a02:908:1861:340:3d1d:fa36:dbc:bfdf) has joined #archlinux
+2019-09-10 11:13:49	<--	chowbok (~chowbok@207.181.255.76) has quit (Quit: chowbok)
+2019-09-10 11:13:54	-->	joe___ (~joe@2001:16b8:48e3:8500:b78c:d056:7338:79d4) has joined #archlinux
+2019-09-10 11:14:24	--	joe___ is now known as joekamprad
+2019-09-10 11:14:31	<--	phos (~daniel@94-255-250-122.cust.bredband2.com) has quit (Quit: WeeChat 2.3)
+2019-09-10 11:15:06	<--	penguin1 (~penguin1@unaffiliated/penguin1) has quit (Quit: WeeChat 2.6)
+2019-09-10 11:16:19	-->	freswa (~freswa@p200300C52F28F3027842C8B2034ADC3F.dip0.t-ipconnect.de) has joined #archlinux
+2019-09-10 11:16:28	-->	chowbok (~chowbok@207.181.255.76) has joined #archlinux
+2019-09-10 11:18:33	<--	barchiesi (~barchiesi@unaffiliated/barchiesi) has quit (Remote host closed the connection)
+2019-09-10 11:20:26	<--	fyrgebraec (~enceladus@92.104.23.93.rev.sfr.net) has quit (Ping timeout: 240 seconds)
+2019-09-10 11:20:26	<--	Abitbol (~Abitbol@static-176-185-164-112.ftth.abo.bbox.fr) has quit (Read error: Connection reset by peer)
+2019-09-10 11:21:02	-->	Abitbol (~Abitbol@static-176-185-164-112.ftth.abo.bbox.fr) has joined #archlinux
+2019-09-10 11:21:29	-->	chozen_ (~chozen@209.159.234.75) has joined #archlinux
+2019-09-10 11:21:47	<--	hardfalcon_ (~hardfalco@2a01:c22:c025:bf03:544:4fc6:32eb:d11e) has quit (Ping timeout: 276 seconds)
+2019-09-10 11:22:10	<--	chowbok (~chowbok@207.181.255.76) has quit (Quit: chowbok)
+2019-09-10 11:22:20	<--	Nightah (~Nightah@unaffiliated/nightah) has quit (Quit: ZNC - https://znc.in)
+2019-09-10 11:22:33	-->	fyrgebraec (~enceladus@i16-les03-ntr-31-36-51-39.sfr.lns.abo.bbox.fr) has joined #archlinux
+2019-09-10 11:22:40	-->	nycko123 (nycko123@gateway/vpn/protonvpn/nycko123) has joined #archlinux
+2019-09-10 11:23:37	-->	cgundersson (~christian@195.216.38.78) has joined #archlinux
+2019-09-10 11:24:08	<--	chozen (~chozen@209.159.234.75) has quit (Ping timeout: 268 seconds)
+2019-09-10 11:25:56	EI24	i don't seem to have ix
+2019-09-10 11:26:02	<--	xqdzn (~xqdzn@180.243.251.75) has quit (Ping timeout: 240 seconds)
+2019-09-10 11:26:08	EI24	and cant find it with pacman
+2019-09-10 11:26:28	Namarrgon	ix is not a command, curl is
+2019-09-10 11:26:43	EI24	oh
+2019-09-10 11:26:44	Namarrgon	blkid |& curl -F 'f:1=<-' ix.io
+2019-09-10 11:27:10	<--	truthful_jackson (~truthful_@216.134.185.1) has quit (Quit: quit)
+2019-09-10 11:27:23	EI24	and where can i see the things i have pasted?
+2019-09-10 11:27:29	Namarrgon	it will return an URL
+2019-09-10 11:27:40	Namarrgon	if you did it correctl, an error otherwise
+2019-09-10 11:27:43	-->	mcquinn (~Thunderbi@p200300C54F028600E6B318FFFE448220.dip0.t-ipconnect.de) has joined #archlinux
+2019-09-10 11:28:53	EI24	i retruns a  > promt
+2019-09-10 11:29:01	--	stepnem_ is now known as stepnem
+2019-09-10 11:29:04	Namarrgon	then you got the quoting wrong
+2019-09-10 11:30:22	-->	WinterStar (WinterStar@gateway/vpn/mullvad/winterstar) has joined #archlinux
+2019-09-10 11:30:41	-->	truthful_jackson (~truthful_@216.134.185.1) has joined #archlinux
+2019-09-10 11:31:03	<--	joekamprad (~joe@2001:16b8:48e3:8500:b78c:d056:7338:79d4) has quit (Remote host closed the connection)
+2019-09-10 11:32:03	-->	joe___ (~joe@2001:16b8:48e3:8500:b78c:d056:7338:79d4) has joined #archlinux
+2019-09-10 11:33:28	-->	hardfalcon (~hardfalco@x-gn-ucopia.core.gelsen.net) has joined #archlinux
+2019-09-10 11:34:09	lolok	EI24 noticed in your last paste you have root mounted rw instead of ro, its my understanding this is not only not required for the initramfs, but also a bad idea, note that im not an expert, and this is probably not whats stopping you from booting anway.
+2019-09-10 11:35:19	EI24	whats the difference?
+2019-09-10 11:35:22	EI24	lolok
+2019-09-10 11:36:58	Namarrgon	https://bbs.archlinux.org/viewtopic.php?pid=1307895#p1307895
+2019-09-10 11:36:59	@phrik	Title: Root Partition Warning on Boot / Newbie Corner / Arch Linux Forums (at bbs.archlinux.org)
+2019-09-10 11:37:18	Namarrgon	lolok: ^
+2019-09-10 11:37:21	EI24	http://ix.io/1UIR
+2019-09-10 11:37:22	EI24	there
+2019-09-10 11:37:41	Namarrgon	what about the blkid output?
+2019-09-10 11:37:51	<--	woshty (~woshty@unaffiliated/woshty) has quit (Ping timeout: 264 seconds)
+2019-09-10 11:37:54	lolok	yes that link explains it much better than i could
+2019-09-10 11:38:28	EI24	Namarrgon, yes the guid is different than whats stated in the .conf file
+2019-09-10 11:38:36	-->	reber (~reber@unaffiliated/reber) has joined #archlinux
+2019-09-10 11:38:46	Namarrgon	post the output
+2019-09-10 11:38:57	Namarrgon	if it's wrong in your arch.conf then fix it
+2019-09-10 11:39:20	<--	cgundersson (~christian@195.216.38.78) has quit (Ping timeout: 276 seconds)
+2019-09-10 11:39:31	<--	evilmonads (~evilmonad@static.176.147.216.95.clients.your-server.de) has quit (Ping timeout: 258 seconds)
+2019-09-10 11:40:10	EI24	http://ix.io/1UIS
+2019-09-10 11:40:38	EI24	sda1 is esp
+2019-09-10 11:41:00	Namarrgon	what is on sda3?
+2019-09-10 11:41:32	<--	grosjean (~grosjean@unaffiliated/grosjean) has left #archlinux
+2019-09-10 11:41:45	EI24	root
+2019-09-10 11:41:50	EI24	sda4 home
+2019-09-10 11:41:53	EI24	sda2 swap
+2019-09-10 11:42:05	Namarrgon	then that is the correct PARTUUID in the config
+2019-09-10 11:42:17	<--	truthful_jackson (~truthful_@216.134.185.1) has quit (Quit: quit)
+2019-09-10 11:45:23	EI24	yes it worked.....
+2019-09-10 11:45:28	-->	woshty (~woshty@unaffiliated/woshty) has joined #archlinux
+2019-09-10 11:45:34	EI24	thanks!
+2019-09-10 11:45:47	EI24	afterlike 3 days
+2019-09-10 11:45:48	EI24	haha
+2019-09-10 11:46:15	<--	mcquinn (~Thunderbi@p200300C54F028600E6B318FFFE448220.dip0.t-ipconnect.de) has quit (Ping timeout: 264 seconds)
+2019-09-10 11:46:26	<--	hardfalcon (~hardfalco@x-gn-ucopia.core.gelsen.net) has quit (Ping timeout: 240 seconds)
+2019-09-10 11:47:08	<--	johndoe231 (~johndoe@117.198.102.130) has quit (Ping timeout: 276 seconds)
+2019-09-10 11:47:11	<--	saltpepp3r3 (~saltpepp3@91.207.173.118) has quit (Read error: Connection reset by peer)
+2019-09-10 11:48:02	<--	glguy (~glguy@freenode/staff/haskell.developer.glguy) has quit (Read error: Connection reset by peer)
+2019-09-10 11:48:42	<--	sepehrdad (~sepehrdad@unaffiliated/sepehrdad) has quit (Read error: Connection reset by peer)
+2019-09-10 11:48:49	-->	jkwki (~jkwki@p200300CD474F93001E1BB5FFFE7A47F7.dip0.t-ipconnect.de) has joined #archlinux
+2019-09-10 11:49:14	-->	sepehrdad (~sepehrdad@unaffiliated/sepehrdad) has joined #archlinux
+2019-09-10 11:49:32	<--	lilmike (~server@mtserver.mwtd.net) has quit (Quit: ZNC 1.7.4 - https://znc.in)
+2019-09-10 11:49:35	TechnoJellyfish	out of curiousity, what went wrong in the first place?
+2019-09-10 11:49:46	-->	glguy (~glguy@freenode/staff/haskell.developer.glguy) has joined #archlinux
+2019-09-10 11:50:08	-->	saltpepp3r3 (~saltpepp3@91.207.173.118) has joined #archlinux
+2019-09-10 11:50:36	<--	WinterStar (WinterStar@gateway/vpn/mullvad/winterstar) has quit (Quit: WeeChat 2.6)
+2019-09-10 11:50:58	<--	absolutejam3 (~absolutej@vrrp.core.bridgehead.infra.victoriaplum.com) has quit (Ping timeout: 246 seconds)
+2019-09-10 11:51:08	<--	JZA (~JZA@gateway/tor-sasl/jza) has quit (Ping timeout: 260 seconds)
+2019-09-10 11:51:21	-->	lilmike (~server@mtserver.mwtd.net) has joined #archlinux
+2019-09-10 11:52:17	-->	walzu (~walzu@91-152-70-50.elisa-laajakaista.fi) has joined #archlinux
+2019-09-10 11:52:32	-->	hardfalcon (~hardfalco@dyn-e11dbe236cf44450a5001000.eduroam.ipv6.ruhr-uni-bochum.de) has joined #archlinux
+2019-09-10 11:53:28	<--	gratidude (~gratidude@unaffiliated/gratidude) has quit (Quit: WeeChat 2.6)
+2019-09-10 11:53:34	-->	JZA (~JZA@gateway/tor-sasl/jza) has joined #archlinux
+2019-09-10 11:54:37	-->	mcquinn (~Thunderbi@p200300C54F4D7437E6B318FFFE448220.dip0.t-ipconnect.de) has joined #archlinux
+2019-09-10 11:54:41	-->	boru_ramen (~boru_rame@2a05:3e00:1:1001:c:52bb:eac6:272b) has joined #archlinux
+2019-09-10 11:56:15	-->	amcrae (~allanbrok@archlinux/developer/allan) has joined #archlinux
+2019-09-10 11:56:49	Namarrgon	!give EI24 cookie
+2019-09-10 11:56:50	@phrik	EI24: Namarrgon wanted you to have this cookie. 🍪
+2019-09-10 11:57:14	-->	outsidecontext (~outsideco@2a02:810b:c040:2b50:6ae4:9924:300a:874b) has joined #archlinux
+2019-09-10 11:57:18	<--	Newami (~Newami@ip174-68-64-138.sd.sd.cox.net) has quit (Read error: Connection reset by peer)
+2019-09-10 11:57:32	<--	oliverwiegers (~oliverwie@dslb-002-205-034-036.002.205.pools.vodafone-ip.de) has quit (Ping timeout: 276 seconds)
+2019-09-10 11:58:02	<--	fyrgebraec (~enceladus@i16-les03-ntr-31-36-51-39.sfr.lns.abo.bbox.fr) has quit (Ping timeout: 240 seconds)
+2019-09-10 11:58:14	<--	nycko123 (nycko123@gateway/vpn/protonvpn/nycko123) has left #archlinux ("nycko123's left the #archlinux")
+2019-09-10 11:58:19	EI24	TechnoJellyfish, messed up the bootlooter config files among other things
+2019-09-10 11:58:33	EI24	!give Namarrgon cookie
+2019-09-10 11:58:33	@phrik	Namarrgon: EI24 wanted you to have this cookie. 🍪
+2019-09-10 11:59:11	EI24	no you take it
+2019-09-10 11:59:14	EI24	i insist
+2019-09-10 11:59:19	-->	truthful_jackson (~truthful_@216.134.185.1) has joined #archlinux
+2019-09-10 11:59:28	-->	absolutejam3 (~absolutej@vrrp.core.bridgehead.infra.victoriaplum.com) has joined #archlinux
+2019-09-10 12:00:01	Namarrgon	no, i'll get fat
+2019-09-10 12:00:07	-->	chowbok (~chowbok@207.181.255.76) has joined #archlinux
+2019-09-10 12:00:11	-->	fyrgebraec (~enceladus@240.105.23.93.rev.sfr.net) has joined #archlinux
+2019-09-10 12:00:27	<--	callmepk (~callmepk@202.83.241.118) has quit (Read error: Connection reset by peer)
+2019-09-10 12:00:28	<--	nun (~nun@178.115.236.156.static.drei.at) has quit (Ping timeout: 245 seconds)
+2019-09-10 12:00:35	EI24	!give
+2019-09-10 12:00:36	@phrik	EI24: give <an alias on #archlinux, at least 2 arguments>
+2019-09-10 12:00:53	-->	Newami (~Newami@ip174-68-64-138.sd.sd.cox.net) has joined #archlinux
+2019-09-10 12:02:48	<--	gnurp (~gnurp@gateway/tor-sasl/gnurp) has quit (Ping timeout: 260 seconds)
+2019-09-10 12:04:28	EI24	!give zzorra cookie
+2019-09-10 12:04:28	@phrik	zzorra: EI24 wanted you to have this cookie. 🍪
+2019-09-10 12:06:27	-->	desmu (~desmu@2a02:908:391:8260:3c1:9333:2bd5:4202) has joined #archlinux
+2019-09-10 12:07:14	-->	Da_Coynul (~Da_Coynul@user-0c90srd.cable.mindspring.com) has joined #archlinux
+2019-09-10 12:07:45	<--	reductum (~weechat@cpe-104-32-77-28.socal.res.rr.com) has quit (Quit: WeeChat 2.6)
+2019-09-10 12:09:28	<--	truthful_jackson (~truthful_@216.134.185.1) has quit (Quit: quit)
+2019-09-10 12:09:51	-->	nextus (~nextus@188.164.208.2) has joined #archlinux
+2019-09-10 12:10:22	<--	Da_Coynul (~Da_Coynul@user-0c90srd.cable.mindspring.com) has quit (Client Quit)
+2019-09-10 12:11:06	-->	jrnas (~jrnas@unaffiliated/xedasx) has joined #archlinux
+2019-09-10 12:12:29	<--	knicklux (~knicklux@5.158.178.28) has quit (Remote host closed the connection)
+2019-09-10 12:13:32	<--	dandels (~dandels@unaffiliated/dandels) has quit (Ping timeout: 246 seconds)
+2019-09-10 12:13:43	-->	very_sneaky (~very_snea@221.121.132.89) has joined #archlinux
+2019-09-10 12:13:47	<--	fyrgebraec (~enceladus@240.105.23.93.rev.sfr.net) has quit (Ping timeout: 276 seconds)
+2019-09-10 12:14:33	-->	adikwok (~Thunderbi@114.124.205.199) has joined #archlinux
+2019-09-10 12:14:52	-->	meanmachine (~meanmachi@185.82.168.5) has joined #archlinux
+2019-09-10 12:14:54	-->	mcquinn1 (~Thunderbi@p5482CC33.dip0.t-ipconnect.de) has joined #archlinux
+2019-09-10 12:15:05	<--	mcquinn (~Thunderbi@p200300C54F4D7437E6B318FFFE448220.dip0.t-ipconnect.de) has quit (Ping timeout: 250 seconds)
+2019-09-10 12:15:05	--	mcquinn1 is now known as mcquinn
+2019-09-10 12:15:08	-->	airwind (~belovent@cr-01.anx09.lju.si.anexia-it.com) has joined #archlinux
+2019-09-10 12:15:33	-->	fyrgebraec (~enceladus@i16-les03-ntr-31-36-51-39.sfr.lns.abo.bbox.fr) has joined #archlinux
+2019-09-10 12:18:02	<--	nuc (~nuc@electra.zerofill.de) has quit (Quit: nuc)
+2019-09-10 12:18:18	<--	meanmachine (~meanmachi@185.82.168.5) has quit (Client Quit)
+2019-09-10 12:19:19	--	joe___ is now known as joekamprad
+2019-09-10 12:19:26	-->	shinboi (cherry@gateway/vpn/mullvad/shinboi) has joined #archlinux
+2019-09-10 12:20:12	-->	nuc (~nuc@electra.zerofill.de) has joined #archlinux
+2019-09-10 12:20:22	-->	oliverwiegers (~oliverwie@dslb-002-205-034-036.002.205.pools.vodafone-ip.de) has joined #archlinux
+2019-09-10 12:21:24	-->	johndoe231 (~johndoe@117.198.102.130) has joined #archlinux
+2019-09-10 12:21:35	<--	mcquinn (~Thunderbi@p5482CC33.dip0.t-ipconnect.de) has quit (Ping timeout: 246 seconds)
+2019-09-10 12:22:14	<--	bionade24 (~oskar@server2.oscloud.info) has quit (Quit: Apocalypsis Incoming!)
+2019-09-10 12:22:23	<--	nuc (~nuc@electra.zerofill.de) has quit (Remote host closed the connection)
+2019-09-10 12:22:37	-->	nuc (~nuc@electra.zerofill.de) has joined #archlinux
+2019-09-10 12:23:07	-->	rafasc (~rafasc@unaffiliated/rafasc) has joined #archlinux
+2019-09-10 12:23:29	-->	Nightah (~Nightah@unaffiliated/nightah) has joined #archlinux
+2019-09-10 12:23:34	<--	nuc (~nuc@electra.zerofill.de) has quit (Client Quit)
+2019-09-10 12:23:36	<--	jugs (~jugs@gateway/tor-sasl/jugs) has quit (Remote host closed the connection)
+2019-09-10 12:23:43	<--	mati89 (~mati89@gateway/tor-sasl/mati89) has quit (Remote host closed the connection)
+2019-09-10 12:23:58	-->	smb374 (~thomas@NCTU-Wireless-NAT219.nctu.edu.tw) has joined #archlinux
+2019-09-10 12:24:02	-->	jugs (~jugs@gateway/tor-sasl/jugs) has joined #archlinux
+2019-09-10 12:24:25	-->	nuc (~nuc@electra.zerofill.de) has joined #archlinux
+2019-09-10 12:24:33	-->	grumble (~grumble@freenode/staff/grumble) has joined #archlinux
+2019-09-10 12:26:20	<--	heitzmann (~heitzmann@s328a-1.fee.unicamp.br) has quit (Quit: WeeChat 2.6)
+2019-09-10 12:27:04	-->	Da_Coynul (~Da_Coynul@user-0c90srd.cable.mindspring.com) has joined #archlinux
+2019-09-10 12:27:16	--	xoan28667 is now known as xoan
+2019-09-10 12:28:21	<--	Hurlsworth (~tim@c-73-221-195-146.hsd1.wa.comcast.net) has quit (Ping timeout: 245 seconds)
+2019-09-10 12:28:56	<--	well_laid_lawn (~Jean-luc@c114-77-254-225.rochd21.qld.optusnet.com.au) has quit (Ping timeout: 246 seconds)
+2019-09-10 12:29:37	<--	jugs (~jugs@gateway/tor-sasl/jugs) has quit (Remote host closed the connection)
+2019-09-10 12:29:54	-->	jugs (~jugs@gateway/tor-sasl/jugs) has joined #archlinux
+2019-09-10 12:34:51	<--	Da_Coynul (~Da_Coynul@user-0c90srd.cable.mindspring.com) has quit (Quit: My MacBook Air has gone to sleep. ZZZzzz…)
+2019-09-10 12:37:56	-->	agarnier (~elgrec@193.51.236.40) has joined #archlinux
+2019-09-10 12:38:07	<--	fetus_deletus (~Fetusdele@115.249.24.210) has quit (Read error: Connection reset by peer)
+2019-09-10 12:38:28	-->	heitzmann (~heitzmann@s328a-1.fee.unicamp.br) has joined #archlinux
+2019-09-10 12:38:50	<--	SanskritFritz (~quassel@BC2434C7.catv.pool.telekom.hu) has quit (Ping timeout: 240 seconds)
+2019-09-10 12:38:56	-->	bionade24 (~oskar@server2.oscloud.info) has joined #archlinux
+2019-09-10 12:39:24	<--	adikwok (~Thunderbi@114.124.205.199) has quit (Quit: adikwok)
+2019-09-10 12:39:28	-->	Da_Coynul (~Da_Coynul@user-0c90srd.cable.mindspring.com) has joined #archlinux
+2019-09-10 12:41:13	<--	jaquila (~jaquila@x5f70ba34.dyn.telefonica.de) has quit (Ping timeout: 268 seconds)
+2019-09-10 12:41:41	<--	heitzmann (~heitzmann@s328a-1.fee.unicamp.br) has quit (Client Quit)
+2019-09-10 12:43:36	-->	heitzmann (~heitzmann@s328a-1.fee.unicamp.br) has joined #archlinux
+2019-09-10 12:43:43	<--	Da_Coynul (~Da_Coynul@user-0c90srd.cable.mindspring.com) has quit (Client Quit)
+2019-09-10 12:45:08	-->	dopey (~jmorgan@5.178.76.246) has joined #archlinux
+2019-09-10 12:45:23	<--	oatmealraisin (~ryan@2604:2000:14c5:c0d0:9d08:7649:d403:217f) has quit (Ping timeout: 246 seconds)
+2019-09-10 12:45:38	-->	gnurp (~gnurp@gateway/tor-sasl/gnurp) has joined #archlinux
+2019-09-10 12:46:41	-->	tulliana (~archman-o@manjaro/team/tulliana) has joined #archlinux
+2019-09-10 12:47:47	<--	rople (~rople@193-114-148-110.tpgi.com.au) has quit (Quit: rople)
+2019-09-10 12:47:47	<--	smb374 (~thomas@NCTU-Wireless-NAT219.nctu.edu.tw) has quit (Quit: WeeChat 2.6)
+2019-09-10 12:48:11	-->	rople (~rople@193-114-148-110.tpgi.com.au) has joined #archlinux
+2019-09-10 12:48:38	-->	smb374 (~thomas@NCTU-Wireless-NAT219.nctu.edu.tw) has joined #archlinux
+2019-09-10 12:50:15	<--	EI24 (ac67587f@host-103-88-127.junet.se) has quit (Ping timeout: 260 seconds)
+2019-09-10 12:51:33	<--	agarnier (~elgrec@193.51.236.40) has quit (Remote host closed the connection)
+2019-09-10 12:52:38	-->	agarnier (~elgrec@193.51.236.40) has joined #archlinux
+2019-09-10 12:52:46	-->	nun (~nun@178.115.236.156.static.drei.at) has joined #archlinux
+2019-09-10 12:52:48	-->	walterve (~walterve@37.228.243.110) has joined #archlinux
+2019-09-10 12:54:44	-->	nycko123 (~nycko123@unaffiliated/nycko123) has joined #archlinux
+2019-09-10 12:54:49	<--	smb374 (~thomas@NCTU-Wireless-NAT219.nctu.edu.tw) has quit (Quit: WeeChat 2.6)
+2019-09-10 12:56:14	-->	atomicity (~quassel@212.161.97.126) has joined #archlinux
+2019-09-10 12:56:35	<--	oliverwiegers (~oliverwie@dslb-002-205-034-036.002.205.pools.vodafone-ip.de) has quit (Ping timeout: 246 seconds)
+2019-09-10 12:57:06	-->	elichai2 (uid212594@gateway/web/irccloud.com/x-tqcxyncnqjqoqprn) has joined #archlinux
+2019-09-10 12:57:40	-->	truthful_jackson (~truthful_@216.134.185.1) has joined #archlinux
+2019-09-10 12:57:51	-->	enoq (~enoq@2a02:8388:6a87:b080:649f:9456:c1b1:28e4) has joined #archlinux
+2019-09-10 12:58:22	-->	mcquinn (~Thunderbi@p200300C54F028600E6B318FFFE448220.dip0.t-ipconnect.de) has joined #archlinux
+2019-09-10 13:00:32	-->	Hurlsworth (~tim@c-73-221-195-146.hsd1.wa.comcast.net) has joined #archlinux
+2019-09-10 13:00:35	<--	jkwki (~jkwki@p200300CD474F93001E1BB5FFFE7A47F7.dip0.t-ipconnect.de) has quit (Ping timeout: 276 seconds)
+2019-09-10 13:02:49	-->	captn3m0 (~captn3m0@49.207.50.226) has joined #archlinux
+2019-09-10 13:04:39	<--	wvffle (~wvffle@host-46-175-47-49.wtvk.pl) has quit (Ping timeout: 268 seconds)
+2019-09-10 13:08:01	-->	the_true_potato (~the_true_@ppp-2-86-118-54.home.otenet.gr) has joined #archlinux
+2019-09-10 13:13:44	<--	chap (~chap@unaffiliated/chap) has quit (Ping timeout: 246 seconds)
+2019-09-10 13:15:12	-->	nycex (~nycex@gateway/tor-sasl/nycex) has joined #archlinux
+2019-09-10 13:17:34	<--	Nightah (~Nightah@unaffiliated/nightah) has quit (Quit: ZNC - https://znc.in)
+2019-09-10 13:18:06	<--	truthful_jackson (~truthful_@216.134.185.1) has quit (Quit: quit)
+2019-09-10 13:18:26	-->	stitched_unicorn (~Red@fp83935c80.tkyc516.ap.nuro.jp) has joined #archlinux
+2019-09-10 13:19:11	rcf	!ping
+2019-09-10 13:19:11	@phrik	pong
+2019-09-10 13:20:05	-->	Martchus (~martchus@dslb-088-066-226-193.088.066.pools.vodafone-ip.de) has joined #archlinux
+2019-09-10 13:20:08	<--	Martchus_ (~martchus@ipservice-092-211-011-171.092.211.pools.vodafone-ip.de) has quit (Ping timeout: 244 seconds)
+2019-09-10 13:20:08	<--	MindlessDrone (~MindlessD@unaffiliated/mindlessdrone) has quit (Ping timeout: 244 seconds)
+2019-09-10 13:21:33	<--	nycko123 (~nycko123@unaffiliated/nycko123) has left #archlinux ("nycko123's left the #archlinux")
+2019-09-10 13:21:57	<--	the_true_potato (~the_true_@ppp-2-86-118-54.home.otenet.gr) has quit (Remote host closed the connection)
+2019-09-10 13:22:37	-->	d9k (~d9k@62-113-182-76.bb.dnainternet.fi) has joined #archlinux
+2019-09-10 13:23:53	<--	desmu (~desmu@2a02:908:391:8260:3c1:9333:2bd5:4202) has quit (Ping timeout: 246 seconds)
+2019-09-10 13:25:43	<--	niee (~user@MINE.THE.GAP.MEDOLINA.INFO) has quit (Ping timeout: 250 seconds)
+2019-09-10 13:25:44	-->	truthful_jackson (~truthful_@216.134.185.1) has joined #archlinux
+2019-09-10 13:25:45	<--	truthful_jackson (~truthful_@216.134.185.1) has quit (Client Quit)
+2019-09-10 13:25:46	<--	stitched_unicorn (~Red@fp83935c80.tkyc516.ap.nuro.jp) has quit (Quit: stitched_unicorn)
+2019-09-10 13:25:49	<--	mcquinn (~Thunderbi@p200300C54F028600E6B318FFFE448220.dip0.t-ipconnect.de) has quit (Remote host closed the connection)
+2019-09-10 13:27:20	<--	sepehrdad (~sepehrdad@unaffiliated/sepehrdad) has quit (Quit: Quit)
+2019-09-10 13:28:58	-->	stitched_unicorn (~Red@fp96f9995a.tkyc516.ap.nuro.jp) has joined #archlinux
+2019-09-10 13:30:56	<--	joekamprad (~joe@2001:16b8:48e3:8500:b78c:d056:7338:79d4) has quit (Quit: joekamprad)
+2019-09-10 13:31:24	-->	orbita (~orbita@172.111.215.38) has joined #archlinux
+2019-09-10 13:31:45	-->	berton (~berton@181.220.83.67) has joined #archlinux
+2019-09-10 13:32:09	-->	mcquinn (~Thunderbi@p200300C54F028600E6B318FFFE448220.dip0.t-ipconnect.de) has joined #archlinux
+2019-09-10 13:32:11	<--	alwyn (~alwyn@unaffiliated/alwyn) has quit (Quit: WeeChat 2.6)
+2019-09-10 13:32:22	<--	tabaqui1 (~tabaqui@31.44.93.25) has quit (Quit: WeeChat 2.5)
+2019-09-10 13:32:26	<--	johndoe231 (~johndoe@117.198.102.130) has quit (Ping timeout: 276 seconds)
+2019-09-10 13:33:05	-->	VadPerevad (~Unknown@95-37-73-181.dynamic.mts-nn.ru) has joined #archlinux
+2019-09-10 13:34:31	-->	shibboleth (~shibbolet@gateway/tor-sasl/shibboleth) has joined #archlinux
+2019-09-10 13:35:08	-->	tabaqui1 (~tabaqui@31.44.93.25) has joined #archlinux
+2019-09-10 13:35:59	<--	walterve (~walterve@37.228.243.110) has quit (Quit: leaving)
+2019-09-10 13:36:41	<--	Nefertiti (~Nefertiti@unaffiliated/nefertiti) has quit (Ping timeout: 245 seconds)
+2019-09-10 13:38:30	-->	cgundersson (~christian@195.216.38.78) has joined #archlinux
+2019-09-10 13:38:43	-->	desmu (~desmu@2a02:908:391:8260:3c1:9333:2bd5:4202) has joined #archlinux
+2019-09-10 13:39:00	-->	mac1202 (~mac@194.187.251.115) has joined #archlinux
+2019-09-10 13:41:02	<--	captn3m0 (~captn3m0@49.207.50.226) has quit (Ping timeout: 246 seconds)
+2019-09-10 13:42:02	<--	rople (~rople@193-114-148-110.tpgi.com.au) has quit (Quit: rople)
+2019-09-10 13:42:12	<--	sklv1 (~sklv@gateway/tor-sasl/sklv) has quit (Ping timeout: 260 seconds)
+2019-09-10 13:42:37	-->	sklv1 (~sklv@gateway/tor-sasl/sklv) has joined #archlinux
+2019-09-10 13:42:45	<--	goncalor (~goncalor@unaffiliated/goncalor) has quit (Read error: Connection reset by peer)
+2019-09-10 13:42:53	-->	rople (~rople@193-114-148-110.tpgi.com.au) has joined #archlinux
+2019-09-10 13:43:17	<--	mac1202 (~mac@194.187.251.115) has quit (Client Quit)
+2019-09-10 13:44:02	-->	tkrizek_ (~tkrizek@nat-1.nic.cz) has joined #archlinux
+2019-09-10 13:44:30	-->	goncalor (~goncalor@unaffiliated/goncalor) has joined #archlinux
+2019-09-10 13:45:29	-->	howaboutsynergy (~howabouts@5400E6B4.dsl.pool.telekom.hu) has joined #archlinux
+2019-09-10 13:46:15	howaboutsynergy	Hey, does anyone know how to reset the video mode of i915 for the kexec-ed kernel? I tried these kexec-kernel args but have no effect: irqpoll nr_cpus=1 reset_devices ipv6.disable=1 loglevel=9 i915.fastboot=0 i915.reset=1 i915.modeset=-1 i915.force_reset_modeset_test=true i915.verbose_state_checks=1 i915.enable_hangcheck=1 i915.error_capture=1
+2019-09-10 13:46:51	<--	tkrizek (~tkrizek@2001:67c:1220:80c:df:5350:68c3:aed5) has quit (Ping timeout: 264 seconds)
+2019-09-10 13:49:38	<--	cgundersson (~christian@195.216.38.78) has quit (Ping timeout: 240 seconds)
+2019-09-10 13:52:07	<--	petervaro (petervaro@gateway/vpn/protonvpn/petervaro) has quit (Ping timeout: 245 seconds)
+2019-09-10 13:54:21	-->	petervaro (petervaro@gateway/vpn/protonvpn/petervaro) has joined #archlinux
+2019-09-10 13:54:35	-->	jkwki (~jkwki@p200300CD474F93001E1BB5FFFE7A47F7.dip0.t-ipconnect.de) has joined #archlinux
+2019-09-10 13:55:45	-->	alwyn (~alwyn@unaffiliated/alwyn) has joined #archlinux
+2019-09-10 13:57:16	-->	tkrizek__ (~tkrizek@2001:67c:1220:80c:df:5350:68c3:aed5) has joined #archlinux
+2019-09-10 13:57:30	-->	limpc (~firewall@47-186-69-119.dlls.tx.frontiernet.net) has joined #archlinux
+2019-09-10 13:57:31	-->	cgundersson (~christian@195.216.38.78) has joined #archlinux
+2019-09-10 13:57:33	-->	alexozer (~alexozer@pool-173-49-130-2.phlapa.fios.verizon.net) has joined #archlinux
+2019-09-10 13:58:37	alwyn	welp I think I messed up somewhere. I used to use the 'old' interface names eth0/wlan0, and just now swapped to the new defaults, but now the boot process doesn't fully complete and X fails to start
+2019-09-10 13:59:18	alwyn	Maybe unrelated but very weird it's happening regardless. Trying to startx manually throws various errors
+2019-09-10 13:59:24	<--	rople (~rople@193-114-148-110.tpgi.com.au) has quit (Ping timeout: 246 seconds)
+2019-09-10 13:59:27	alwyn	..attempting to paste
+2019-09-10 13:59:41	limpc	that shouldnt stop x from starting
+2019-09-10 13:59:47	-->	oliverwiegers (~oliverwie@dslb-002-205-034-036.002.205.pools.vodafone-ip.de) has joined #archlinux
+2019-09-10 13:59:51	limpc	check logs
+2019-09-10 14:00:09	-->	Fischmiep (~Fischmiep@uhh-wlan-fo-134-100-17-12.rrz.uni-hamburg.de) has joined #archlinux
+2019-09-10 14:00:23	<--	tkrizek_ (~tkrizek@nat-1.nic.cz) has quit (Ping timeout: 276 seconds)
+2019-09-10 14:00:33	<--	stitched_unicorn (~Red@fp96f9995a.tkyc516.ap.nuro.jp) has quit (Quit: stitched_unicorn)
+2019-09-10 14:00:44	-->	nerosnm (~alrakis@cpc1-bath8-2-0-cust148.18-1.cable.virginm.net) has joined #archlinux
+2019-09-10 14:01:13	alwyn	!paste
+2019-09-10 14:01:14	@phrik	Paste short snippets (up to 3 lines) in channel. Please do NOT use pastebin.com or paste.ubuntu.com -- some good, sane paste services are http://ix.io, https://paste.rs, https://bpaste.net and https://gist.github.com. See !ix or !rs for an easy way to paste from a pipe.
+2019-09-10 14:01:21	alwyn	!ix
+2019-09-10 14:01:22	@phrik	<command to print output> |& curl -F 'f:1=<-' ix.io
+2019-09-10 14:02:39	alwyn	http://ix.io/1UJb
+2019-09-10 14:02:54	alwyn	I booted from the fallback kernel for now, but doesn't seem to help much :x
+2019-09-10 14:03:13	-->	_thelion_ (~matthias@194-96-25-18.hdsl.highway.telekom.at) has joined #archlinux
+2019-09-10 14:04:29	alwyn	http://ix.io/1UJc boot log \o/
+2019-09-10 14:04:35	<--	bablux (~bablux@mail.levis.name) has quit (Quit: ZNC - https://znc.in)
+2019-09-10 14:04:47	alwyn	Or well, journalctl --boot=0
+2019-09-10 14:05:04	-->	zanshin (~textual@ip-18-253.net.ksu.edu) has joined #archlinux
+2019-09-10 14:07:07	-->	andremiranda (~andremira@209.14.0.164) has joined #archlinux
+2019-09-10 14:07:17	--	andremiranda is now known as andr0x
+2019-09-10 14:07:19	-->	bablux (~bablux@mail.levis.name) has joined #archlinux
+2019-09-10 14:07:46	<--	andr0x (~andremira@209.14.0.164) has quit (Client Quit)
+2019-09-10 14:08:10	<--	saltpepp3r3 (~saltpepp3@91.207.173.118) has quit (Ping timeout: 268 seconds)
+2019-09-10 14:09:28	<--	VadPerevad (~Unknown@95-37-73-181.dynamic.mts-nn.ru) has quit (Ping timeout: 276 seconds)
+2019-09-10 14:09:46	<--	zanshin (~textual@ip-18-253.net.ksu.edu) has quit (Client Quit)
+2019-09-10 14:09:49	alwyn	brb, attempting reboot
+2019-09-10 14:09:52	<--	alwyn (~alwyn@unaffiliated/alwyn) has quit (Quit: WeeChat 2.6)
+2019-09-10 14:09:53	-->	saltpepp3r3 (~saltpepp3@91.207.173.118) has joined #archlinux
+2019-09-10 14:10:21	-->	zanshin (~textual@ip-18-253.net.ksu.edu) has joined #archlinux
+2019-09-10 14:12:26	<--	Ruuchan (~Ruuchan@unaffiliated/ruuchan) has quit (Ping timeout: 240 seconds)
+2019-09-10 14:17:48	--	piie is now known as piiE
+2019-09-10 14:17:51	-->	kerframil (kerframil@gentoo/user/kerframil) has joined #archlinux
+2019-09-10 14:18:03	<--	bablux (~bablux@mail.levis.name) has quit (Quit: ZNC - https://znc.in)
+2019-09-10 14:18:37	-->	alwyn (~alwyn@unaffiliated/alwyn) has joined #archlinux
+2019-09-10 14:19:12	<--	ajak (~ajak@207.181.32.32) has quit (Ping timeout: 245 seconds)
+2019-09-10 14:19:30	-->	sepehrdad (~sepehrdad@unaffiliated/sepehrdad) has joined #archlinux
+2019-09-10 14:19:31	alwyn	back
+2019-09-10 14:19:49	-->	sozuba (~sozuba@unaffiliated/sozuba) has joined #archlinux
+2019-09-10 14:20:13	-->	Daemondd (~Daemondd@46.163.54.54) has joined #archlinux
+2019-09-10 14:20:35	alwyn	Another interesting startx response: http://ix.io/1UJf, that looks like a likely cause, but how the heck did it happen :^)
+2019-09-10 14:20:49	-->	bablux (~bablux@mail.levis.name) has joined #archlinux
+2019-09-10 14:21:46	--	piiE is now known as piie
+2019-09-10 14:22:05	-->	orivej (~orivej@185.189.113.83) has joined #archlinux
+2019-09-10 14:22:27	Daemondd	-fno-pie
+2019-09-10 14:23:54	orbita	Hey, I want to have a computer display a webpage on the screen without user interation (it's a status screen). What's the best way to do that?
+2019-09-10 14:24:13	orbita	Like, do I need a window manager even?
+2019-09-10 14:24:47	-->	walterve (~walterve@37.228.243.110) has joined #archlinux
+2019-09-10 14:24:47	<--	Warepire (~Warepire@unaffiliated/warepire) has quit (Read error: Connection reset by peer)
+2019-09-10 14:25:07	demonicmaniac3	nop
+2019-09-10 14:25:27	demonicmaniac3	if it works with netsurf with its experimental js build you can also target the framebuffer directly even
+2019-09-10 14:25:27	<--	shibboleth (~shibbolet@gateway/tor-sasl/shibboleth) has quit (Remote host closed the connection)
+2019-09-10 14:25:31	-->	Warepire (~Warepire@unaffiliated/warepire) has joined #archlinux
+2019-09-10 14:25:47	<--	bablux (~bablux@mail.levis.name) has quit (Quit: ZNC - https://znc.in)
+2019-09-10 14:25:55	-->	shibboleth (~shibbolet@gateway/tor-sasl/shibboleth) has joined #archlinux
+2019-09-10 14:27:40	<--	mcquinn (~Thunderbi@p200300C54F028600E6B318FFFE448220.dip0.t-ipconnect.de) has quit (Ping timeout: 264 seconds)
+2019-09-10 14:28:06	-->	djapo (~archie@unaffiliated/djapo) has joined #archlinux
+2019-09-10 14:28:16	<--	piri (~piri@46.101.182.14) has quit (Remote host closed the connection)
+2019-09-10 14:28:30	-->	bablux (~bablux@mail.levis.name) has joined #archlinux
+2019-09-10 14:28:52	<--	orbita (~orbita@172.111.215.38) has quit (Ping timeout: 244 seconds)
+2019-09-10 14:29:05	alwyn	Okay, restarting sddm works :^)
+2019-09-10 14:29:21	-->	jumper149 (~jumper149@ip232.173.mip.uni-hannover.de) has joined #archlinux
+2019-09-10 14:30:25	<--	e2k (~e2k@dsl-hkibng32-54fb44-56.dhcp.inet.fi) has quit (Quit: Reboot)
+2019-09-10 14:30:39	-->	orbita (~orbita@nat-10s.physics.ox.ac.uk) has joined #archlinux
+2019-09-10 14:33:18	-->	e2k (~e2k@dsl-hkibng32-54fb44-56.dhcp.inet.fi) has joined #archlinux
+2019-09-10 14:34:15	<--	alwyn (~alwyn@unaffiliated/alwyn) has quit (Quit: brb)
+2019-09-10 14:36:13	<--	_ashbreeze_ (~mark@72-161-48-4.dyn.centurytel.net) has quit (Read error: No route to host)
+2019-09-10 14:36:36	-->	alwyn (~alwyn@unaffiliated/alwyn) has joined #archlinux
+2019-09-10 14:36:56	--	grumble is now known as \emph{grumble}
+2019-09-10 14:37:07	alwyn	Okay, so this is interesting. I can get around the problem I'm having by restarting sddm
+2019-09-10 14:37:09	<--	walterve (~walterve@37.228.243.110) has quit (Quit: leaving)
+2019-09-10 14:37:44	alwyn	I also tried disabling sddm and using gdm (and rebooting), but that doesn't appear to work either...
+2019-09-10 14:39:25	-->	diracon (~diracon@210.212.23.123) has joined #archlinux
+2019-09-10 14:39:39	<--	fyrgebraec (~enceladus@i16-les03-ntr-31-36-51-39.sfr.lns.abo.bbox.fr) has quit (Ping timeout: 240 seconds)
+2019-09-10 14:40:07	-->	hutch (~hutch@2600:8807:c080:a95:c4f6:35d4:c671:2c7a) has joined #archlinux
+2019-09-10 14:41:00	<--	sklv1 (~sklv@gateway/tor-sasl/sklv) has quit (Ping timeout: 260 seconds)
+2019-09-10 14:41:08	<--	shinboi (cherry@gateway/vpn/mullvad/shinboi) has quit (Quit: dfs)
+2019-09-10 14:41:27	-->	sklv1 (~sklv@gateway/tor-sasl/sklv) has joined #archlinux
+2019-09-10 14:43:52	-->	_ashbreeze_ (~mark@72-161-48-4.dyn.centurytel.net) has joined #archlinux
+2019-09-10 14:44:56	<--	e2k (~e2k@dsl-hkibng32-54fb44-56.dhcp.inet.fi) has quit (Quit: Reboot)
+2019-09-10 14:46:51	-->	e2k (~e2k@dsl-hkibng32-54fb44-56.dhcp.inet.fi) has joined #archlinux
+2019-09-10 14:50:50	-->	Ruuchan (~Ruuchan@unaffiliated/ruuchan) has joined #archlinux
+2019-09-10 14:52:06	-->	jaquila (~jaquila@x5f70ba34.dyn.telefonica.de) has joined #archlinux
+2019-09-10 14:53:02	<--	tulliana (~archman-o@manjaro/team/tulliana) has quit (Remote host closed the connection)
+2019-09-10 14:53:08	<--	oliverwiegers (~oliverwie@dslb-002-205-034-036.002.205.pools.vodafone-ip.de) has quit (Ping timeout: 246 seconds)
+2019-09-10 14:53:40	<--	cgundersson (~christian@195.216.38.78) has quit (Ping timeout: 244 seconds)
+2019-09-10 14:54:31	<--	therue (~rue@2001-b011-1000-1528-4b54-e499-0fb6-f1f6.dynamic-ip6.hinet.net) has quit (Quit: WeeChat 2.6)
+2019-09-10 14:54:47	-->	therue (~rue@2001-b011-1000-1528-4b54-e499-0fb6-f1f6.dynamic-ip6.hinet.net) has joined #archlinux
+2019-09-10 14:54:54	-->	shaarad (~shaarad@2401:4900:3283:684c:76a3:db44:288e:564e) has joined #archlinux
+2019-09-10 14:55:17	-->	Ruuchan_ (~Ruuchan@unaffiliated/ruuchan) has joined #archlinux
+2019-09-10 14:55:17	shaarad	Does anyone use sshguard here?
+2019-09-10 14:56:12	ayekat	!anyone
+2019-09-10 14:56:13	@phrik	Quite possibly. Why do you ask?
+2019-09-10 14:56:19	lolok	orbita while true ; do sleep 3 ; curl your.site | html2text ; done
+2019-09-10 14:57:10	shaarad	I wanted some recommendations in terms of what others config files look like
+2019-09-10 14:57:39	<--	Ruuchan (~Ruuchan@unaffiliated/ruuchan) has quit (Ping timeout: 240 seconds)
+2019-09-10 14:58:01	<--	Daemondd (~Daemondd@46.163.54.54) has quit (Remote host closed the connection)
+2019-09-10 14:58:22	shaarad	Are there any perf implications for getting a lot of IP addresses added to an iptables chain due to running it!
+2019-09-10 14:58:24	shaarad	? *
+2019-09-10 14:59:14	-->	mcquinn (~Thunderbi@p200300C54F4D7437E6B318FFFE448220.dip0.t-ipconnect.de) has joined #archlinux
+2019-09-10 15:01:58	lolok	if you want to secure ssh, you should be using whitelists instead of blacklists, and forcing the use of ssh keys instead of allowing password logins
+2019-09-10 15:02:33	<--	krabador (~krabador@unaffiliated/krabador) has quit (Remote host closed the connection)
+2019-09-10 15:02:43	shaarad	But I don't have a static IP to login to my server from
+2019-09-10 15:02:52	shaarad	Otherwise I can use whitelist
+2019-09-10 15:03:08	-->	dale6998 (~dale6998@98.11.97.28) has joined #archlinux
+2019-09-10 15:03:17	-->	thefallenrat (~thefallen@unaffiliated/thefallenrat) has joined #archlinux
+2019-09-10 15:03:25	-->	cgundersson (~christian@195.216.38.78) has joined #archlinux
+2019-09-10 15:03:41	-->	e^1 (~e^0@unaffiliated/e0/x-7387528) has joined #archlinux
+2019-09-10 15:04:02	<--	jptsrt (~jptsrt@163.172.174.81) has quit (Ping timeout: 240 seconds)
+2019-09-10 15:04:10	<--	howaboutsynergy (~howabouts@5400E6B4.dsl.pool.telekom.hu) has quit (Quit: Leaving)
+2019-09-10 15:04:46	-->	vicky_ (uid270243@gateway/web/irccloud.com/x-lhaghodtttzydcaj) has joined #archlinux
+2019-09-10 15:04:46	<--	vicky_ (uid270243@gateway/web/irccloud.com/x-lhaghodtttzydcaj) has quit (Client Quit)
+2019-09-10 15:04:48	<--	sklv1 (~sklv@gateway/tor-sasl/sklv) has quit (Ping timeout: 260 seconds)
+2019-09-10 15:04:53	Makaveli7	I thought you whitelist mac addresses?
+2019-09-10 15:05:02	<--	random_yanek (~random_ya@host-89-230-165-166.dynamic.mm.pl) has quit (Ping timeout: 244 seconds)
+2019-09-10 15:05:20	-->	sklv1 (~sklv@gateway/tor-sasl/sklv) has joined #archlinux
+2019-09-10 15:05:25	-->	vicky_ (uid270243@gateway/web/irccloud.com/x-gpqlnmmcjkuilzpg) has joined #archlinux
+2019-09-10 15:05:28	<--	pbb (~quassel@pbb4.pbb.lc) has quit (Quit: http://quassel-irc.org - Chat comfortably. Anywhere.)
+2019-09-10 15:06:00	<--	hyprcub (~hyprcub@unaffiliated/hyprcub) has quit (Quit: hyprcub)
+2019-09-10 15:06:18	-->	hyprcub (~hyprcub@unaffiliated/hyprcub) has joined #archlinux
+2019-09-10 15:06:58	-->	dandels (~dandels@unaffiliated/dandels) has joined #archlinux
+2019-09-10 15:08:08	-->	harrigan (~harrigan@ptr-93-89-242-235.ip.airwire.ie) has joined #archlinux
+2019-09-10 15:08:18	-->	igemnace (~igemnace@120.28.165.200) has joined #archlinux
+2019-09-10 15:08:20	lolok	maybe can do mac addresses, but i think that works only on lan and not across the internet, i assume all the ips are from the same subnet at least anyway, so you would whitelist your whole subnet, and even that might not be necessary, ssh keys are supposed to be secure by themselves, you would have to be a big target to be paranoid about someone
+2019-09-10 15:08:20	lolok	breaking them
+2019-09-10 15:08:24	<--	collector1871 (~user@public-gprs370371.centertel.pl) has quit (Read error: Connection reset by peer)
+2019-09-10 15:08:39	<--	cgundersson (~christian@195.216.38.78) has quit (Ping timeout: 276 seconds)
+2019-09-10 15:09:02	-->	collector1871 (~user@public-gprs370371.centertel.pl) has joined #archlinux
+2019-09-10 15:09:38	-->	agowa338 (~agowa338@2a00:c320::1:0:1009) has joined #archlinux
+2019-09-10 15:09:51	-->	RickDeckard (~tgburrin@152.179.78.138) has joined #archlinux
+2019-09-10 15:09:56	<--	heday (~fheday@dhcp0D4B.kent.ac.uk) has quit (Ping timeout: 276 seconds)
+2019-09-10 15:10:10	<--	Pupnik (~Pupnik@ppp118-209-114-46.bras1.mel11.internode.on.net) has quit (Remote host closed the connection)
+2019-09-10 15:10:18	<--	harrigan (~harrigan@ptr-93-89-242-235.ip.airwire.ie) has quit (Client Quit)
+2019-09-10 15:10:31	<--	shaarad (~shaarad@2401:4900:3283:684c:76a3:db44:288e:564e) has quit (Ping timeout: 276 seconds)
+2019-09-10 15:11:28	-->	harrigan (~harrigan@ptr-93-89-242-235.ip.airwire.ie) has joined #archlinux
+2019-09-10 15:11:42	<--	orivej (~orivej@185.189.113.83) has quit (Ping timeout: 245 seconds)
+2019-09-10 15:11:56	-->	random_yanek (~random_ya@87.116.229.147) has joined #archlinux
+2019-09-10 15:11:57	<--	harrigan (~harrigan@ptr-93-89-242-235.ip.airwire.ie) has quit (Remote host closed the connection)
+2019-09-10 15:12:13	<--	mcquinn (~Thunderbi@p200300C54F4D7437E6B318FFFE448220.dip0.t-ipconnect.de) has quit (Remote host closed the connection)
+2019-09-10 15:13:43	-->	harrigan (~harrigan@ptr-93-89-242-235.ip.airwire.ie) has joined #archlinux
+2019-09-10 15:15:03	<--	harrigan (~harrigan@ptr-93-89-242-235.ip.airwire.ie) has quit (Client Quit)
+2019-09-10 15:15:18	-->	\\Mr_C\\ (~mrc@cpe-75-187-160-45.neo.res.rr.com) has joined #archlinux
+2019-09-10 15:15:21	<--	\\Mr_C\\ (~mrc@cpe-75-187-160-45.neo.res.rr.com) has quit (Excess Flood)
+2019-09-10 15:16:04	<--	jaquila (~jaquila@x5f70ba34.dyn.telefonica.de) has quit (Ping timeout: 246 seconds)
+2019-09-10 15:16:13	-->	orivej (~orivej@185.189.113.83) has joined #archlinux
