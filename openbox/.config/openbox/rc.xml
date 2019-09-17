@@ -385,6 +385,11 @@
         <command>screenshot.sh</command>
       </action>
     </keybind>
+    <keybind key="A-p">
+        <action name="Execute">
+            <command> tdrop -ma -w -38 -x 18 -y 36 -s dropdown termite </command>
+        </action>
+    </keybind>
   </keyboard>
   <mouse>
     <dragThreshold>1</dragThreshold>

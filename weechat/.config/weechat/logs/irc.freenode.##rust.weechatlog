@@ -1,244 +1,422 @@
-2019-09-10 09:41:35	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined ##rust
-2019-09-10 09:41:35	--	Topic for ##rust is "Unofficial channel for the Rust programming language |  Playground https://play.rust-lang.org/ | Discord http://discord.gg/rust-lang | Forum https://users.rust-lang.org | Code of conduct: rust-lang.org/conduct.html | TL;DR: be nice and we'll get along just fine"
-2019-09-10 09:41:35	--	Topic set by Manishearth (~Manishear@wikipedia/Manishearth) on Mon, 13 May 2019 05:47:40
-2019-09-10 09:41:35	--	Channel ##rust: 520 nicks (2 ops, 0 voices, 518 normals)
-2019-09-10 09:41:37	--	Channel created on Tue, 30 Jul 2013 17:50:50
-2019-09-10 09:43:00	<--	libertyprime (~libertypr@client-173-016.guest.otago.ac.nz) has quit (Quit: leaving)
-2019-09-10 09:44:34	-->	libertyprime (~libertypr@client-173-016.guest.otago.ac.nz) has joined ##rust
-2019-09-10 09:55:04	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined ##rust
-2019-09-10 09:55:04	--	Topic for ##rust is "Unofficial channel for the Rust programming language |  Playground https://play.rust-lang.org/ | Discord http://discord.gg/rust-lang | Forum https://users.rust-lang.org | Code of conduct: rust-lang.org/conduct.html | TL;DR: be nice and we'll get along just fine"
-2019-09-10 09:55:04	--	Topic set by Manishearth (~Manishear@wikipedia/Manishearth) on Mon, 13 May 2019 05:47:40
-2019-09-10 09:55:04	--	Channel ##rust: 520 nicks (2 ops, 0 voices, 518 normals)
-2019-09-10 09:55:17	<--	NerdyPepper (~nerdypepp@106.51.110.63) has quit (Ping timeout: 258 seconds)
-2019-09-10 09:55:21	--	Channel created on Tue, 30 Jul 2013 17:50:50
-2019-09-10 10:00:03	M-ou-se	gbmor: src/bin/yourbinaryname/main.rs should work
-2019-09-10 10:00:15	M-ou-se	See https://doc.rust-lang.org/cargo/reference/manifest.html#the-project-layout
-2019-09-10 10:00:42	M-ou-se	"If your executable consists of more than just one source file, you might also use a directory inside src/bin containing a main.rs file which will be treated as an executable with a name of the parent directory."
-2019-09-10 10:06:04	<--	pknull (~pooky@184.103.28.136) has quit (Quit: Departing.)
-2019-09-10 10:07:25	-->	pknull (~pooky@184.103.28.136) has joined ##rust
-2019-09-10 10:08:39	-->	gierdo (~Dominik_G@185-196-123-9.dynamic.monzoon.net) has joined ##rust
-2019-09-10 10:12:19	<--	lovesegfault (~bemeurer@2600:1700:5f20:83e0::27) has quit (Quit: WeeChat 2.5)
-2019-09-10 10:13:31	-->	m0rphism (~m0rphism@149.172.82.115) has joined ##rust
-2019-09-10 10:13:33	-->	Kirjava (~cake@183.ip-51-254-223.eu) has joined ##rust
-2019-09-10 10:26:52	-->	aLeSD (~aLeSD@122.red-80-24-12.staticip.rima-tde.net) has joined ##rust
-2019-09-10 10:28:08	<--	pknull (~pooky@184.103.28.136) has quit (Quit: Departing.)
-2019-09-10 10:28:26	-->	pknull (~pooky@184.103.28.136) has joined ##rust
-2019-09-10 10:30:26	-->	djhworld (~djhworld@90.252.118.61) has joined ##rust
-2019-09-10 10:33:04	<--	red_stalker (~red_stalk@2620:10d:c090:180::570c) has quit (Ping timeout: 264 seconds)
-2019-09-10 10:42:01	crodjer	How can I experiment with `async/await`? When I run with `cargo +nightly` and futures preview with async-await , I get an error:
-2019-09-10 10:42:07	crodjer	compile_error!("The `async-await` feature requires the `nightly` feature as an explicit opt-in to unstable features");
-2019-09-10 10:43:09	<--	Yaniel (yaniel@unaffiliated/yaniel) has quit (Remote host closed the connection)
-2019-09-10 10:43:18	crodjer	This is trying to compile a simple `hello-world` cargo init project with just a new dependency.
-2019-09-10 10:46:42	-->	Yaniel (yaniel@unaffiliated/yaniel) has joined ##rust
-2019-09-10 10:50:21	-->	ave_milia (ave@gateway/vpn/privateinternetaccess/avemilia) has joined ##rust
-2019-09-10 10:52:08	<--	Lord_of_Life (~Lord@unaffiliated/lord-of-life/x-0885362) has quit (Ping timeout: 245 seconds)
-2019-09-10 10:54:52	-->	Lord_of_Life (~Lord@unaffiliated/lord-of-life/x-0885362) has joined ##rust
-2019-09-10 10:56:53	<--	meena (~eena@159.69.218.51) has quit (Quit: The Lounge - https://thelounge.chat)
-2019-09-10 10:57:17	-->	meena (~eena@159.69.218.51) has joined ##rust
-2019-09-10 10:57:37	-->	ellcs (~mantel@193.174.12.196) has joined ##rust
-2019-09-10 10:58:48	Faux	crodjer: With what code? It should work. Is your nightly new enough?
-2019-09-10 10:59:27	<--	meena (~eena@159.69.218.51) has quit (Client Quit)
-2019-09-10 10:59:46	-->	meena (~eena@159.69.218.51) has joined ##rust
-2019-09-10 11:00:25	<--	meena (~eena@159.69.218.51) has left ##rust
-2019-09-10 11:00:26	vorner	crodjer, You also need an `#![feature(async_await)]` attribute at the top of your main file to opt into that specific feature.
-2019-09-10 11:01:20	Faux	vorner: No, it's been stabilised. https://play.rust-lang.org/?version=nightly&mode=debug&edition=2018&gist=b7905eb67034f50e2c66f62a26c7e934
-2019-09-10 11:02:34	tjis	so this async_await stuff, is that just for futures2 or does it work with futures1 and therefore tokio as well?
-2019-09-10 11:02:57	<--	libertyprime (~libertypr@client-173-016.guest.otago.ac.nz) has quit (Ping timeout: 245 seconds)
-2019-09-10 11:03:12	Faux	There is a compatibility layer which people seem to use, but I personally think is not worth the effort for.
-2019-09-10 11:08:31	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined ##rust
-2019-09-10 11:08:31	--	Topic for ##rust is "Unofficial channel for the Rust programming language |  Playground https://play.rust-lang.org/ | Discord http://discord.gg/rust-lang | Forum https://users.rust-lang.org | Code of conduct: rust-lang.org/conduct.html | TL;DR: be nice and we'll get along just fine"
-2019-09-10 11:08:31	--	Topic set by Manishearth (~Manishear@wikipedia/Manishearth) on Mon, 13 May 2019 05:47:40
-2019-09-10 11:08:31	--	Channel ##rust: 523 nicks (2 ops, 0 voices, 521 normals)
-2019-09-10 11:08:47	--	Channel created on Tue, 30 Jul 2013 17:50:50
-2019-09-10 11:08:49	<--	nostoi (~nostoi@103.red-83-50-221.dynamicip.rima-tde.net) has quit (Quit: Verlassend)
-2019-09-10 11:12:58	<--	pknull (~pooky@184.103.28.136) has quit (Quit: Departing.)
-2019-09-10 11:13:28	-->	pknull (~pooky@184.103.28.136) has joined ##rust
-2019-09-10 11:14:00	Aorimn	is there a minimal example (e.g. a hello world) of this new async/await syntax somewhere?
-2019-09-10 11:15:03	Faux	https://rust-lang.github.io/async-book/01_getting_started/04_async_await_primer.html
-2019-09-10 11:15:42	Aorimn	I didn't know there was an async book, thanks!
-2019-09-10 11:15:49	Faux	Alas, incompatible with playground's futures implementation, probably because I skipped all the pages about aliasing dependencies.
-2019-09-10 11:16:58	j`ey	more than Futures, I want generators :(
-2019-09-10 11:17:50	-->	tsaka__ (~torstein@dslb-178-004-036-111.178.004.pools.vodafone-ip.de) has joined ##rust
-2019-09-10 11:18:36	<--	sdlarsen (~sdlarsen@77.68.185.196) has quit (Quit: WeeChat 2.6)
-2019-09-10 11:20:17	Faux	I always assumed it required the same level of compiler support, but haven't actually sat down and checked.
-2019-09-10 11:20:52	-->	thequux (~thequux@78-21-43-173.access.telenet.be) has joined ##rust
-2019-09-10 11:24:38	calops	don't we have generators in nightly?
-2019-09-10 11:24:45	-->	tollyx (~tollyx@151.236.202.129.c.fiberdirekt.net) has joined ##rust
-2019-09-10 11:25:32	Faux	Playground says yes.
-2019-09-10 11:29:52	j`ey	Yeah, I was just a bit weary about basing one of my important functions on them
-2019-09-10 11:32:31	-->	SisterFister (~SisterFis@catv-178-48-164-108.catv.broadband.hu) has joined ##rust
-2019-09-10 11:34:27	<--	thequux (~thequux@78-21-43-173.access.telenet.be) has quit (Read error: Connection reset by peer)
-2019-09-10 11:36:34	<--	cheakoirccloud (uid293319@gateway/web/irccloud.com/x-hbaxlfdihfkwymdx) has quit (Quit: Connection closed for inactivity)
-2019-09-10 11:49:37	-->	libertyprime (~libertypr@219-89-182-226-fibre.sparkbb.co.nz) has joined ##rust
-2019-09-10 11:56:30	-->	mawis (~matthias@2a02:810d:4bc0:7852:2efd:a1ff:febe:32a1) has joined ##rust
-2019-09-10 11:59:33	<--	PeterRabbit (~peter@2600:6c64:6180:86:83f:44da:1aa9:185) has quit (Read error: Connection reset by peer)
-2019-09-10 12:01:48	-->	PeterRabbit (~peter@2600:6c64:6180:86:1055:96d5:c49b:7bec) has joined ##rust
-2019-09-10 12:06:51	<--	mawis (~matthias@2a02:810d:4bc0:7852:2efd:a1ff:febe:32a1) has quit (Ping timeout: 250 seconds)
-2019-09-10 12:10:39	-->	mawis (~matthias@ipb21ba9d3.dynamic.kabel-deutschland.de) has joined ##rust
-2019-09-10 12:11:16	trimoq	hi, can someone tell me if there is a way to define the order of the execution of multiple procedural macros on a function? in particular, I want to add a parameter to a function with macro A and then generate code with macro B from a library, also including the output of macro A
-2019-09-10 12:12:59	<--	bpsecret (~bpsecret@unaffiliated/bpsecret) has quit (Ping timeout: 244 seconds)
-2019-09-10 12:15:08	-->	airwind (~belovent@cr-01.anx09.lju.si.anexia-it.com) has joined ##rust
-2019-09-10 12:18:33	<--	PeterRabbit (~peter@2600:6c64:6180:86:1055:96d5:c49b:7bec) has quit (Read error: Connection reset by peer)
-2019-09-10 12:18:53	-->	PeterRabbit (~peter@2600:6c64:6180:86:1055:96d5:c49b:7bec) has joined ##rust
-2019-09-10 12:18:56	-->	bpsecret (~bpsecret@unaffiliated/bpsecret) has joined ##rust
-2019-09-10 12:23:37	<--	est31 (~quassel@gateway/tor-sasl/est31) has quit (Remote host closed the connection)
-2019-09-10 12:23:48	-->	est31 (~quassel@gateway/tor-sasl/est31) has joined ##rust
-2019-09-10 12:24:13	-->	royal_screwup213 (d98a3b22@gateway/web/cgi-irc/kiwiirc.com/ip.217.138.59.34) has joined ##rust
-2019-09-10 12:24:42	M-ou-se	trimoq: i don't think there are any guarantees, but i'd guess they execute in the order they are mentioned in the attributes on that function.
-2019-09-10 12:28:01	trimoq	M-ou-se: thanks, good to know that there are no strong guarantess, perhaps what i try to achieve is a bad idea then. where is the best place to look such things up? (i am new to rust macros and have not found the "true" source of documentation)
-2019-09-10 12:29:23	M-ou-se	documentation about these things is always a bit... disapointing. maybe open an issue on the rust repo to ask if there are any guarantees, if you can't find it anywhere
-2019-09-10 12:30:54	M-ou-se	the RFC that introduced a feature might be a good place to find details on its rules
-2019-09-10 12:33:17	M-ou-se	might also be interesting to see if anybody is using multiple proc macro atributes on the same item anywhere in the wild. but it's a bit hard to grep for
-2019-09-10 12:36:23	-->	Tichodroma (~lutz@fsf/member/Tichodroma) has joined ##rust
-2019-09-10 12:36:45	trimoq	oh, the rfc is a nice idea, thanks, i will try my luck there
-2019-09-10 12:36:53	<--	pknull (~pooky@184.103.28.136) has quit (Quit: Departing.)
-2019-09-10 12:37:33	-->	pknull (~pooky@184.103.28.136) has joined ##rust
-2019-09-10 12:37:43	M-ou-se	the proc macro RFC doesn't look like the current state of proc macros at all. looks like a lot has changed since then :(
-2019-09-10 12:43:48	-->	user9 (984d0e22@leoseb.u-ga.fr) has joined ##rust
-2019-09-10 12:45:27	<--	fjellfras (~fjellfras@49.248.13.74) has quit (Quit: Leaving)
-2019-09-10 12:47:47	<--	rople (~rople@193-114-148-110.tpgi.com.au) has quit (Quit: rople)
-2019-09-10 12:48:12	-->	rople (~rople@193-114-148-110.tpgi.com.au) has joined ##rust
-2019-09-10 12:48:31	-->	happycoder (~happycode@14.139.185.114) has joined ##rust
-2019-09-10 12:50:05	<--	pknull (~pooky@184.103.28.136) has quit (Quit: Departing.)
-2019-09-10 12:50:34	-->	pknull (~pooky@184.103.28.136) has joined ##rust
-2019-09-10 12:53:14	<--	pknull (~pooky@184.103.28.136) has quit (Client Quit)
-2019-09-10 12:54:34	-->	pknull (~pooky@184.103.28.136) has joined ##rust
-2019-09-10 12:57:06	-->	elichai2 (uid212594@gateway/web/irccloud.com/x-tqcxyncnqjqoqprn) has joined ##rust
-2019-09-10 13:05:53	<--	happycoder (~happycode@14.139.185.114) has quit (Ping timeout: 268 seconds)
-2019-09-10 13:06:22	-->	happycoder (~happycode@14.139.185.114) has joined ##rust
-2019-09-10 13:16:07	<--	gierdo (~Dominik_G@185-196-123-9.dynamic.monzoon.net) has quit (Ping timeout: 258 seconds)
-2019-09-10 13:16:33	crodjer	Faux: I am working with simple hello world: https://play.rust-lang.org/?version=nightly&mode=debug&edition=2018&gist=7be6af1196730ed7ee30641b1af17ed2, with a futures preview dependency:
-2019-09-10 13:16:40	crodjer	```futures-preview = { version = "=0.3.0-alpha.18", features = ["async-await"] }```
-2019-09-10 13:18:08	<--	libertyprime (~libertypr@219-89-182-226-fibre.sparkbb.co.nz) has quit (Ping timeout: 276 seconds)
-2019-09-10 13:18:32	crodjer	This is how I am trying to build: `cargo +nightly build`
-2019-09-10 13:19:16	-->	libertyprime (~libertypr@101.98.42.91) has joined ##rust
-2019-09-10 13:25:04	-->	NerdyPepper (~nerdypepp@106.51.110.63) has joined ##rust
-2019-09-10 13:29:57	-->	haenous (~TheHaenou@134.19.179.179) has joined ##rust
-2019-09-10 13:32:02	royal_screwup213	is it just me or is it difficult to rust really hard to read? :(  I'm looking at this https://github.com/Geal/nom/commit/0b15ccde8de8248e8eda6858ef296c10d75d61a0 and i feel like it would take me a very long time to even come close to undetrstanding the snippet as a whole, let alone a file
-2019-09-10 13:32:52	Faux	nom is really pushing the limits of the language, on purpose, it's not typical rust code. The syntax there is pretty simple, but there's a load of stuff going on.
-2019-09-10 13:33:34	Faux	""There's a function, cut, parametised on I, O, E, and F; which returns a function from I to IResult; with restrictions on those types."
-2019-09-10 13:34:42	M-ou-se	would've been a bit more readable if they put all the restrictions after 'where', instead of putting some in the first <> part
-2019-09-10 13:34:50	Faux	Yeah.
-2019-09-10 13:35:17	Faux	Or if `type  CloneySlice = Clone + Slice<RangeTo<usize>>;` was allowed.
-2019-09-10 13:35:51	royal_screwup213	ah yeah, I understand those pieces invidiually...but making sense of of it as a whole i find pretty difficult haha. Like, why are these restriction there (and as the library user, should I care?)... Do you guys have any recommendations for getting better at rust? i've read the rust book and attempting a toy project involving requests and stuff :)
-2019-09-10 13:36:02	ilmari	evalr: type CloneySlice = impl Clone + Slice<RanteTo<usize>>;
-2019-09-10 13:36:06	--	Notice(evalr): error[E0405]: cannot find trait `Slice` in this scope
-2019-09-10 13:36:08	--	Notice(evalr): ~~~ Full output: https://play.rust-lang.org/?gist=e5f757f5e8a8196e364560e6a5fcfe4e&version=stable&mode=debug
-2019-09-10 13:36:26	Faux	evalr: type CloneySlice = impl Clone + Debug;
-2019-09-10 13:36:29	--	Notice(evalr): error[E0405]: cannot find trait `Debug` in this scope
-2019-09-10 13:36:31	--	Notice(evalr): ~~~ Full output: https://play.rust-lang.org/?gist=245e404677143719ea217ef46e1921eb&version=stable&mode=debug
-2019-09-10 13:36:35	ilmari	evalr: trait Slice<T> {} type CloneySlice = impl Clone + Slice<RangeTo<usize>>;
-2019-09-10 13:36:37	--	Notice(evalr): error[E0412]: cannot find type `RangeTo` in this scope
-2019-09-10 13:36:39	--	Notice(evalr): ~~~ Full output: https://play.rust-lang.org/?gist=d0a572de77aa85c2fe8e34842c7b580d&version=stable&mode=debug
-2019-09-10 13:36:44	ilmari	evalr: trait Slice<T> {} type CloneySlice = impl Clone + Slice<usize>;
-2019-09-10 13:36:47	--	Notice(evalr): error[E0562]: `impl Trait` not allowed outside of function and inherent method return types
-2019-09-10 13:36:47	j`ey	royal_screwup213: you cant understand why the restrictions are there without know what the code is doing
-2019-09-10 13:36:49	--	Notice(evalr): ~~~ Full output: https://play.rust-lang.org/?gist=5491c727d6a9d7cb10210eb08d2a3af8&version=stable&mode=debug
-2019-09-10 13:37:01	j`ey	royal_screwup213: as a library user, you probably shouldnt have to care
-2019-09-10 13:37:34	ilmari	ah, https://github.com/rust-lang/rust/issues/63063
-2019-09-10 13:38:04	ilmari	impl Trait in type aliases is still RFC: https://github.com/rust-lang/rfcs/pull/2515
-2019-09-10 13:38:12	Faux	I remember this issue from before `impl` so you had me going for a bit there. :)
-2019-09-10 13:38:14	royal_screwup213	hmm i see...it just feels like there's so much magic going on....i mean, sure, even in python/java when i'M using a lib I obviously don't understan all the internals. But I can definitely try to discern things step by step....with rust, I feel that would be pretty difficult
-2019-09-10 13:38:51	j`ey	royal_screwup213: just takes time to learn
-2019-09-10 13:38:58	Faux	java.util.Collections { public static <T extends Comparable<? super T>> void sort(List<T> list) { list.sort(null); } }
-2019-09-10 13:41:12	<--	baali (~baali@59.98.239.188) has quit (Ping timeout: 246 seconds)
-2019-09-10 13:42:02	<--	rople (~rople@193-114-148-110.tpgi.com.au) has quit (Quit: rople)
-2019-09-10 13:42:45	<--	goncalor (~goncalor@unaffiliated/goncalor) has quit (Read error: Connection reset by peer)
-2019-09-10 13:42:53	-->	rople (~rople@193-114-148-110.tpgi.com.au) has joined ##rust
-2019-09-10 13:44:30	-->	goncalor (~goncalor@unaffiliated/goncalor) has joined ##rust
-2019-09-10 13:45:33	eddyb	PSA: buffer your IO https://github.com/rust-lang/rust/pull/64344
-2019-09-10 13:46:09	eddyb	this was found after noticing that running more things in parallel made each of them slower. it was probably up in the millions of write syscalls to the kernel
-2019-09-10 13:47:06	eddyb	14:35 <Faux> Or if `type  CloneySlice = Clone + Slice<RangeTo<usize>>;` was allowed.
-2019-09-10 13:47:14	<--	happycoder (~happycode@14.139.185.114) has quit (Remote host closed the connection)
-2019-09-10 13:47:31	eddyb	evalr: trait Slice<T> {} trait CloneySlice = Clone + Slice<usize>;
-2019-09-10 13:47:33	--	Notice(evalr): error[E0658]: trait aliases are experimental
-2019-09-10 13:47:35	--	Notice(evalr): ~~~ Full output: https://play.rust-lang.org/?gist=add4c0c3fcf135c8076aa148a45cb7e7&version=stable&mode=debug
-2019-09-10 13:47:44	eddyb	it's unstable but it exists
-2019-09-10 13:47:52	Faux	eddyb: *nice* speedup.
-2019-09-10 13:47:57	eddyb	yes
-2019-09-10 13:48:01	eddyb	:D
-2019-09-10 13:49:56	eddyb	build.lyken.rs is such a beast, but -j48 has downsides
-2019-09-10 13:50:30	eddyb	like "murdering the kernel with `write!`s"
-2019-09-10 13:50:47	j`ey	eddyb: lol nice
-2019-09-10 13:51:06	eddyb	it also got worse at some point so something happened on the server, that I don't know yet
-2019-09-10 13:51:33	Faux	spectre? :)
-2019-09-10 13:51:45	eddyb	but as long as I don't peg it with silly IO it doesn't matter much
-2019-09-10 13:51:48	<--	royal_screwup213 (d98a3b22@gateway/web/cgi-irc/kiwiirc.com/ip.217.138.59.34) has quit (Remote host closed the connection)
-2019-09-10 13:52:15	eddyb	Faux: these tests got slower but others didn't. oh mitigations make syscalls specifically slower?
-2019-09-10 13:52:28	Faux	Yeah, the syscall overhead went up.
-2019-09-10 13:52:36	eddyb	right cause it has to trash stuff when crossing domains
-2019-09-10 13:52:52	eddyb	sorry, it's been a while, I've been shutting all of that out
-2019-09-10 13:54:25	-->	delYsid (~user@debian/developer/mlang) has joined ##rust
-2019-09-10 13:54:51	eddyb	now I'm just waiting for someone to introduce a RISC-V server line close to competitive with AMD and Intel
-2019-09-10 13:55:43	eddyb	Faux: oh right, also, this is an AMD 24-core 48-thread machine (EPYC? I forget)
-2019-09-10 13:56:05	Faux	Some of the things applied to them, too.
-2019-09-10 13:56:22	eddyb	so it wouldn't be affected in the exact same way as the Intel machines most other devs and CI use (AFAIK)
-2019-09-10 13:56:35	eddyb	Faux: right, and some things might be worse on them
-2019-09-10 13:56:38	Faux	vendor_id : AuthenticAMD
-2019-09-10 13:56:41	Faux	model name : AMD Opteron(tm) X3421 APU
-2019-09-10 13:56:43	Faux	bugs  : fxsave_leak sysret_ss_attrs null_seg spectre_v1 spectre_v2 spec_store_bypass
-2019-09-10 13:56:51	delYsid	Rust/Cargo newbie here: I am trying to depend on a crate (sonos) which depends on openssl, but apparently a too old version since it will not recognize the lib I have installed.  Is there a cargo trick to update a transient dependency somehow?
-2019-09-10 13:56:53	eddyb	less bugs but maybe slower with mitigations
-2019-09-10 13:57:18	eddyb	delYsid: only locally, AFAIK
-2019-09-10 13:57:33	delYsid	eddyb: Locally would be fine.
-2019-09-10 13:57:43	eddyb	something like `[patch.'crates-io']`, maybe?
-2019-09-10 13:57:47	Faux	https://doc.rust-lang.org/edition-guide/rust-2018/cargo-and-crates-io/replacing-dependencies-with-patch.html
-2019-09-10 13:57:54	eddyb	yeah that :D
-2019-09-10 13:58:38	eddyb	I'm at lunch rn otherwise I would've copy-pasted an example I have laying around
-2019-09-10 13:59:24	<--	rople (~rople@193-114-148-110.tpgi.com.au) has quit (Ping timeout: 246 seconds)
-2019-09-10 14:00:44	-->	nerosnm (~alrakis@cpc1-bath8-2-0-cust148.18-1.cable.virginm.net) has joined ##rust
-2019-09-10 14:07:51	-->	Kaivo (~Kaivo@ec2-35-182-108-102.ca-central-1.compute.amazonaws.com) has joined ##rust
-2019-09-10 14:09:08	-->	ytain (~ghfg@2607:f2c0:92f1:f300:69ae:a1ca:6cce:cee6) has joined ##rust
-2019-09-10 14:15:33	-->	sacredfrog (~ryan@dev.appthecloud.io) has joined ##rust
-2019-09-10 14:16:11	<--	esrse (~nil@175.126.171.165) has quit (Ping timeout: 268 seconds)
-2019-09-10 14:18:40	-->	Nahual (~Nahual@unaffiliated/nahual) has joined ##rust
-2019-09-10 14:28:06	-->	djapo (~archie@unaffiliated/djapo) has joined ##rust
-2019-09-10 14:34:05	<--	learningc (~learningc@mti-37-145.tm.net.my) has quit (Ping timeout: 268 seconds)
-2019-09-10 14:41:58	-->	shakes (shakes@gateway/vpn/privateinternetaccess/shakes) has joined ##rust
-2019-09-10 14:51:22	-->	gierdo (~Dominik_G@185-196-123-10.dynamic.monzoon.net) has joined ##rust
-2019-09-10 14:52:50	<--	Tichodroma (~lutz@fsf/member/Tichodroma) has quit (Ping timeout: 240 seconds)
-2019-09-10 14:55:03	-->	Tichodroma (~lutz@fsf/member/Tichodroma) has joined ##rust
-2019-09-10 14:59:56	-->	jenny-m (~jdm-@167.100.78.229) has joined ##rust
-2019-09-10 15:01:58	<--	PeterRabbit (~peter@2600:6c64:6180:86:1055:96d5:c49b:7bec) has quit (Read error: Connection reset by peer)
-2019-09-10 15:02:45	-->	PeterRabbit (~peter@2600:6c64:6180:86:1055:96d5:c49b:7bec) has joined ##rust
-2019-09-10 15:03:09	<--	fichtl (~hades@84-75-99-98.dclient.hispeed.ch) has quit (Read error: Connection reset by peer)
-2019-09-10 15:03:15	-->	npmccallum (~npmccallu@107-200-241-210.lightspeed.wlfrct.sbcglobal.net) has joined ##rust
-2019-09-10 15:05:55	sysKin	heh, this is my second evening of trying to learn how to use rust and I have to say, the difficulty of googling answers is starting to become frustrating
-2019-09-10 15:06:02	<--	shakes (shakes@gateway/vpn/privateinternetaccess/shakes) has quit (Ping timeout: 276 seconds)
-2019-09-10 15:06:23	j`ey	you can ask questions here too :P
-2019-09-10 15:06:23	ZirconiumX	sysKin: how do you mean?
-2019-09-10 15:06:34	ZirconiumX	For example, there's rustc --explain
-2019-09-10 15:06:46	Kinnison	sysKin: Until things start to click, it can be quite hard to know how to search.  Asking in places such as here will likely yield better results in the short term :D
-2019-09-10 15:06:56	sysKin	yeah I understand that.....
-2019-09-10 15:07:21	oherrala	sysKin: add "rustlang" to every google search and you might get better results
-2019-09-10 15:07:28	 *	Kinnison appreciates this is a pain.  Making sure you start out with small goals is also a good plan -- don't aim to write a spotify client as the first program you write in a new language :D
-2019-09-10 15:08:01	sysKin	and perhaps my first real project, which involves linking to a static c library, is not the best choice. but it's so hard for me to build a thing I don't need :)
-2019-09-10 15:08:06	j`ey	Kinnison: I see rustup works with musl hosts now, great!
-2019-09-10 15:08:16	tjis	take every compiler error personally and fight the borrow checker in anger until your will proves superior
-2019-09-10 15:08:26	Kinnison	j`ey: Yep, though the usual caveats of musl-is-not-tier-1 still apply :D
-2019-09-10 15:09:01	Kinnison	sysKin: Yeah, it can be a bit of a mental shift to appreciate that writing something you don't have a direct use for can be good to learn technique and to practice your new learning
-2019-09-10 15:09:02	la_mettrie	sysKin: hope you are reading Klabnik & Nichols - "The Rust Programming Language".  Keep on asking questions without reading that book is a bad idea
-2019-09-10 15:09:06	oherrala	Kinnison: yep, like procedural macros not working :)
-2019-09-10 15:09:12	-->	learningc (~learningc@121.122.76.45) has joined ##rust
-2019-09-10 15:09:22	Kinnison	sysKin: The first serious pile of code I wrote in Rust was a reimplementation of all my AdventOfCode solutions from a previous year
-2019-09-10 15:09:27	Kinnison	oherrala: Mmm :/
-2019-09-10 15:09:36	Kinnison	oherrala: or, sometimes, being linked to the wrong libgcc_s :-D
-2019-09-10 15:09:43	sysKin	la_mettrie: I did read it :) but actually my problems are not so much with the language right now
-2019-09-10 15:11:06	j`ey	sysKin: what are the problems?
-2019-09-10 15:11:26	oherrala	Kinnison: I rushed into testing rustup in Alpine last night to see if I could shave of gigabyte or two from our CI docker images. But couldn't yet figure out how to compile crates with proc macros. oh well.
-2019-09-10 15:11:33	sysKin	ok, perhaps you could just help a noob out here: I'm linking a static c library and after giving up on bindgen, I finally got the linker to actually see it. however now the lipnker can't find crt symbols called within (such as sprintf), so I'm trying to include crt
-2019-09-10 15:11:38	Kinnison	oherrala: :(
-2019-09-10 15:12:07	<--	NerdyPepper (~nerdypepp@106.51.110.63) has quit (Ping timeout: 245 seconds)
-2019-09-10 15:12:23	sysKin	and apparently (could be wrong) I'm supposed to add "-C target-feature=+crt-static" to rustc. ok. my problem is, google can't tell me *where* I add this
-2019-09-10 15:12:45	sysKin	it's probably so obvious they don't have to tell >_<
-2019-09-10 15:13:12	j`ey	how are you linking to it?
-2019-09-10 15:14:01	sysKin	the toolchain is windows msvc... otherwise I'm not sure what you're asking :)
-2019-09-10 15:14:18	oherrala	sysKin: I'm not sure if your solution is the right one, but you can put compiler flags into projects .cargo/config file
-2019-09-10 15:14:23	-->	NerdyPepper (~nerdypepp@122.172.125.104) has joined ##rust
-2019-09-10 15:14:37	ZirconiumX	You can't static link the CRT on Windows, as far as I know
-2019-09-10 15:14:39	j`ey	sysKin: as in, what are you doing to get the library linked against?
-2019-09-10 15:14:57	oherrala	sysKin: [target.<yourtarget>]\nrustflags = "<your flags>"\n
-2019-09-10 15:15:47	sysKin	j`ey: build.rs has println!("cargo:rustc-link-lib=static=libname");
-2019-09-10 15:15:50	oherrala	ZirconiumX: umh, we are using -Ctarget-feature=+crt-static for msvc :)
-2019-09-10 15:16:13	sysKin	come to think of it, the link.exe *is* being told to include msvcrt.lib
-2019-09-10 15:16:14	oherrala	ZirconiumX: works great and is required for including the visual c++ statically into binary.
+2019-09-13 09:06:12	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined ##rust
+2019-09-13 09:06:12	--	Topic for ##rust is "Unofficial channel for the Rust programming language |  Playground https://play.rust-lang.org/ | Discord http://discord.gg/rust-lang | Forum https://users.rust-lang.org | Code of conduct: rust-lang.org/conduct.html | TL;DR: be nice and we'll get along just fine"
+2019-09-13 09:06:12	--	Topic set by Manishearth (~Manishear@wikipedia/Manishearth) on Mon, 13 May 2019 05:47:40
+2019-09-13 09:06:12	--	Channel ##rust: 512 nicks (2 ops, 0 voices, 510 normals)
+2019-09-13 09:06:28	--	Channel created on Tue, 30 Jul 2013 17:50:50
+2019-09-13 09:09:11	-->	nerosnm (~alrakis@cpc1-bath8-2-0-cust148.18-1.cable.virginm.net) has joined ##rust
+2019-09-13 09:12:56	<--	SisterFister (~SisterFis@catv-178-48-164-108.catv.broadband.hu) has quit (Remote host closed the connection)
+2019-09-13 09:16:32	-->	airwind (~belovent@cr-01.anx09.lju.si.anexia-it.com) has joined ##rust
+2019-09-13 09:22:09	<--	wmealing (~wmealing@124.149.193.135) has quit (Quit: wmealing)
+2019-09-13 09:24:01	-->	tostr (~tostr@unaffiliated/tostr) has joined ##rust
+2019-09-13 09:25:52	-->	efm (~efm@vpn.tummy.com) has joined ##rust
+2019-09-13 09:29:32	-->	xvilka (~xvilka@unaffiliated/xvilka) has joined ##rust
+2019-09-13 09:30:21	xvilka	if someone wants to join translating all of Tectonic (modern fork of TeX/LaTeX engine) from C to Rust - see https://github.com/tectonic-typesetting/tectonic/issues/459
+2019-09-13 09:52:50	-->	ravenousmoose (~ravenousm@ptr-cud5aqfz6yldre36cip.18120a2.ip6.access.telenet.be) has joined ##rust
+2019-09-13 09:54:54	<--	pknull (~pooky@184.103.28.136) has quit (Quit: Departing.)
+2019-09-13 09:55:31	-->	pknull (~pooky@184.103.28.136) has joined ##rust
+2019-09-13 09:57:04	<--	ravenousmoose (~ravenousm@ptr-cud5aqfz6yldre36cip.18120a2.ip6.access.telenet.be) has quit (Ping timeout: 246 seconds)
+2019-09-13 09:59:31	-->	baali (~baali@117.214.177.6) has joined ##rust
+2019-09-13 10:00:40	<--	nerosnm (~alrakis@cpc1-bath8-2-0-cust148.18-1.cable.virginm.net) has quit (Ping timeout: 265 seconds)
+2019-09-13 10:33:30	-->	triptec (~triptec@h88-129-43-171.cust.a3fiber.se) has joined ##rust
+2019-09-13 10:40:54	-->	royal_screwup21 (5661e695@gateway/web/cgi-irc/kiwiirc.com/ip.86.97.230.149) has joined ##rust
+2019-09-13 10:44:33	<--	panicbit (~panicbit@p57ADE381.dip0.t-ipconnect.de) has quit (Ping timeout: 240 seconds)
+2019-09-13 10:44:56	<--	OmniMancer (~Paul@101.100.137.239) has quit (Quit: Leaving.)
+2019-09-13 10:45:40	-->	panicbit (~panicbit@p57ADE9A9.dip0.t-ipconnect.de) has joined ##rust
+2019-09-13 10:48:29	-->	frostschutz (~frostschu@55d4bb3e.access.ecotel.net) has joined ##rust
+2019-09-13 10:50:05	-->	vn971 (~quassel@2a02:7aa0:1619::bac5:9483) has joined ##rust
+2019-09-13 10:52:41	vn971	Hi. Suppose I want to call a function that returns Result. If it will return Err, I want to add some additional information to the stack trace, but still error out (either panic or return an enriched Err up to the caller).
+2019-09-13 10:52:44	vn971	How should I do that?
+2019-09-13 10:53:21	vn971	I know I can, for example, use .unwrap_or_else(|err| panic!("... reason: {}", err));
+2019-09-13 10:53:35	vn971	but that kinda transforms the err to a string. Is that OK?
+2019-09-13 10:53:45	vn971	(I feel that it's not.)
+2019-09-13 10:54:50	j`ey	well that panics, so you dont really pass a string anywhere
+2019-09-13 10:54:52	<--	Lord_of_Life (~Lord@unaffiliated/lord-of-life/x-0885362) has quit (Ping timeout: 245 seconds)
+2019-09-13 10:55:08	yrp	are you thinkign somethings going to catch the panic?
+2019-09-13 10:55:19	vn971	j`ey: ok, fair. What if I'd want to return a new Result though?
+2019-09-13 10:55:31	vn971	yrp: well the panic hook maybe?
+2019-09-13 10:56:07	j`ey	vn971: you can make your own struct MyError that wraps the error and includes extra info?
+2019-09-13 10:56:52	vn971	j`ey: how do I propermy lake it "include extra info", how does it work? Is it implementing Display?
+2019-09-13 10:57:06	-->	samrg472_ (~samrg472@gateway/tor-sasl/samrg472) has joined ##rust
+2019-09-13 10:57:37	vn971	on the JVM, you have Exception-s, which can have additional info, but also optionally point to another Exception as their "reason".
+2019-09-13 10:58:28	vn971	* sorry, "properly make it"
+2019-09-13 10:58:58	j`ey	vn971: yes Display, there's also source() which can return another error
+2019-09-13 10:59:09	j`ey	https://doc.rust-lang.org/std/error/trait.Error.html#method.source
+2019-09-13 10:59:09	-->	Lord_of_Life (~Lord@unaffiliated/lord-of-life/x-0885362) has joined ##rust
+2019-09-13 11:00:39	<--	samrg472 (~samrg472@gateway/tor-sasl/samrg472) has quit (Ping timeout: 260 seconds)
+2019-09-13 11:02:36	<--	bitwinery (~bruno@c-73-37-18-139.hsd1.wa.comcast.net) has quit (Quit: Leaving)
+2019-09-13 11:04:29	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined ##rust
+2019-09-13 11:09:06	-->	sysKin (~syskin@61-245-149-216.3df595.adl.nbn.aussiebb.net) has joined ##rust
+2019-09-13 11:12:55	-->	abhinits2046 (uid373731@gateway/web/irccloud.com/x-iaxmgsbinpjodykk) has joined ##rust
+2019-09-13 11:13:23	<--	abhinits2046 (uid373731@gateway/web/irccloud.com/x-iaxmgsbinpjodykk) has left ##rust
+2019-09-13 11:16:34	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Quit: Leaving)
+2019-09-13 11:17:58	<--	frostschutz (~frostschu@55d4bb3e.access.ecotel.net) has quit (Remote host closed the connection)
+2019-09-13 11:18:53	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined ##rust
+2019-09-13 11:20:29	-->	ravenousmoose (~ravenousm@ptr-cud5aqfz6yldre36cip.18120a2.ip6.access.telenet.be) has joined ##rust
+2019-09-13 11:24:55	<--	ravenousmoose (~ravenousm@ptr-cud5aqfz6yldre36cip.18120a2.ip6.access.telenet.be) has quit (Ping timeout: 246 seconds)
+2019-09-13 11:24:56	-->	ellcs (~mantel@193.174.12.196) has joined ##rust
+2019-09-13 11:27:19	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Remote host closed the connection)
+2019-09-13 11:27:42	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined ##rust
+2019-09-13 11:30:21	<--	happycoder (~happycode@14.139.185.114) has quit (Ping timeout: 246 seconds)
+2019-09-13 11:36:25	-->	happycoder (~happycode@14.139.185.114) has joined ##rust
+2019-09-13 11:45:00	-->	Tichodroma (~lutz@fsf/member/Tichodroma) has joined ##rust
+2019-09-13 11:51:21	<--	PeterRabbit (~peter@2600:6c64:6180:86:7547:7d6e:8024:e963) has quit (Read error: Connection reset by peer)
+2019-09-13 11:51:42	-->	PeterRabbit (~peter@2600:6c64:6180:86:7547:7d6e:8024:e963) has joined ##rust
+2019-09-13 11:56:52	-->	Ichorio (~Ichorio@2001:16b8:57ca:9600:8541:4cfa:2933:d307) has joined ##rust
+2019-09-13 11:57:26	-->	murla (~murla@146.120.13.152) has joined ##rust
+2019-09-13 11:59:49	voker57	vn971: consider using this suggested scheme https://docs.rs/failure/0.1.5/failure/
+2019-09-13 12:00:51	<--	BlackDex (~blackdex@ori.vyus.nl) has quit (Quit: ByeBye)
+2019-09-13 12:09:36	Faux	"error: proc-macro derive panicked" ruh roh!
+2019-09-13 12:11:48	Kinnison	ruhroh indeed
+2019-09-13 12:13:01	<--	bpsecret (~bpsecret@unaffiliated/bpsecret) has quit (Ping timeout: 276 seconds)
+2019-09-13 12:18:29	mstruebing	Is it recommended to `use` everything you need or is it more recommended to use the full qualifier i.e. `std::env::func()` instead of `use std::env` and `env::func()`?
+2019-09-13 12:19:00	-->	bpsecret (~bpsecret@unaffiliated/bpsecret) has joined ##rust
+2019-09-13 12:19:05	Kinnison	If I'm using it once in the entire file, I will use the full path
+2019-09-13 12:19:15	Kinnison	If I'm using a bunch of a module, I'll use the module and do the latter
+2019-09-13 12:19:20	Faux	The convention appears to be to `use` only if you are .. using the thing multiple times. This sucked in rust2015, so older code uses things everywhere in horrible ways.
+2019-09-13 12:19:36	Kinnison	if I only want one thing out of the module and am using it a lot, I use just the bit I want
+2019-09-13 12:20:35	<--	Tichodroma (~lutz@fsf/member/Tichodroma) has quit (Ping timeout: 246 seconds)
+2019-09-13 12:26:05	ilmari	if it's a really long path, I'll `use` it even if I'm only using it once, especially in a function signature that would otherwise fit on one line
+2019-09-13 12:26:22	ilmari	current case in point: `aws_lambda_events::event::sns::SnsEvent`
+2019-09-13 12:26:34	-->	jammm (~jamm@unaffiliated/jamm) has joined ##rust
+2019-09-13 12:27:07	<--	happycoder (~happycode@14.139.185.114) has quit (Ping timeout: 245 seconds)
+2019-09-13 12:29:03	-->	happycoder (~happycode@14.139.185.114) has joined ##rust
+2019-09-13 12:30:02	<--	jamm (~jamm@unaffiliated/jamm) has quit (Ping timeout: 240 seconds)
+2019-09-13 12:30:51	M-ou-se	depending on how generic the name is, i sometimes also 'use' things inside a function, instead of at file scope
+2019-09-13 12:32:53	-->	Tichodroma (~lutz@fsf/member/Tichodroma) has joined ##rust
+2019-09-13 12:35:45	-->	nepugia (~nephele@200116b864a863004b33f1ed1381bf81.dip.versatel-1u1.de) has joined ##rust
+2019-09-13 12:36:16	-->	BlackDex (~blackdex@ori.vyus.nl) has joined ##rust
+2019-09-13 12:38:05	nepugia	Hello, I am having problems with the prebuild nightly-x86_64-unknown-linux-musl on alpine linux (which is musl too), which is that i cannot compile some programms dou to this toolchain not supporting dynamic linking, what other options do i have?
+2019-09-13 12:38:38	nepugia	I did not find any concrete workarounds on the web (only partial fixes which i don't really know how i would use)
+2019-09-13 12:39:05	-->	jamm (~jamm@unaffiliated/jamm) has joined ##rust
+2019-09-13 12:39:10	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Quit: Leaving)
+2019-09-13 12:41:37	<--	jammm (~jamm@unaffiliated/jamm) has quit (Ping timeout: 240 seconds)
+2019-09-13 12:44:58	oherrala	nepugia: the workaround I found is not to use musl binaries to compile rust
+2019-09-13 12:45:42	nepugia	I have not compiled it myself, and i don't have glibc on my system either, setting up a chroot seams like a pretty expensive solution
+2019-09-13 12:47:35	oherrala	nepugia: I mean you can't really build anything with musl version of Rust. procedural macros don't work so many crates are out.
+2019-09-13 12:48:15	nepugia	hmm, i hope that will be fixed soon(tm) then, is there a prebuild statically linked glibc rust toolchain maybe?
+2019-09-13 12:49:32	oherrala	nepugia: AFAIK you can't have statically linked glibc
+2019-09-13 12:49:37	oherrala	that's why musl is used :)
+2019-09-13 12:50:17	nepugia	well, coinstalling glibc next to musl is something i would rather avoid :)
+2019-09-13 12:50:22	nepugia	i suppose a chroot it is then
+2019-09-13 12:51:32	<--	tostr (~tostr@unaffiliated/tostr) has quit (Ping timeout: 245 seconds)
+2019-09-13 12:52:50	oherrala	I would love to have someone tell me I'm wrong because I'd like to convert our build infrastructure to Alpine Linux
+2019-09-13 12:53:37	Faux	Proc macros work, don't they? I'm pretty sure I'm using that somewhere.
+2019-09-13 12:54:13	oherrala	Faux: not when using musl linked rust(c)
+2019-09-13 12:56:17	<--	happycoder (~happycode@14.139.185.114) has quit (Ping timeout: 245 seconds)
+2019-09-13 12:57:39	nepugia	Well, not everything doesn't work, just wanted to get started with piston and hit my head severall times on crates using the features thingy, thus i used nightly, but with the stable i was able to get for instance alacritty on my system fine
+2019-09-13 12:57:55	nepugia	though i dont know whether the stable version has any alpine linux specific patches i am unaware off
+2019-09-13 12:58:22	-->	user9 (984d0e22@leoseb.u-ga.fr) has joined ##rust
+2019-09-13 13:01:40	oherrala	This is the problem I'm facing: cannot produce proc-macro for `failure_derive v0.1.5` as the target `x86_64-unknown-linux-musl` does not support these crate types
+2019-09-13 13:01:59	-->	OmniMancer (~Paul@101.100.137.239) has joined ##rust
+2019-09-13 13:04:00	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined ##rust
+2019-09-13 13:04:45	-->	ytain (~ghfg@2607:f2c0:92f1:f300:ed6b:80ab:697e:76e0) has joined ##rust
+2019-09-13 13:05:27	j`ey	and that's because of dylibs, right?
+2019-09-13 13:06:36	Faux	Direct use of failure works, for the target (building from normal amd64): https://paste.debian.net/1100534/
+2019-09-13 13:06:52	Faux	..which is what I'm doing elsewhere and seemingly not having any problems.
+2019-09-13 13:07:02	oherrala	j`ey: I think so
+2019-09-13 13:07:19	oherrala	Faux: that's different thing
+2019-09-13 13:07:33	vn971	j`ey: voker57: thanks! Will look into it a bit later (now distracted with other work).
+2019-09-13 13:07:34	j`ey	Faux: your host is probably glibc?
+2019-09-13 13:07:46	Faux	Yeah.
+2019-09-13 13:07:58	oherrala	Faux; /opt/cargo/bin/rustc: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), statically linked, BuildID[sha1]=2208478b28b34d9fe2750b7939157da417d8918b, with debug_info, not stripped
+2019-09-13 13:08:09	j`ey	Faux: so the proc_macro is compiled for glibc
+2019-09-13 13:08:18	j`ey	when the host is musl, it doesnt work
+2019-09-13 13:08:31	Faux	Ew. :)
+2019-09-13 13:09:50	nepugia	guess i will get void linux in a chroot
+2019-09-13 13:14:02	oherrala	nepugia: why not docker?
+2019-09-13 13:15:05	nepugia	docker is not a linux?
+2019-09-13 13:17:59	oherrala	nepugia: https://en.wikipedia.org/wiki/Docker_%28software%29
+2019-09-13 13:18:10	nepugia	I know what docker is, docker is not a linux
+2019-09-13 13:18:51	oherrala	what?
+2019-09-13 13:19:09	nepugia	It is a tool to spin up linuxes using linux namespaces, but it isnt a linux in and of itself
+2019-09-13 13:19:10	avu	nepugia: oherrala meant 'docker instead of chroot', not 'docker instead of void linux'
+2019-09-13 13:19:14	nepugia	the same way Xen isnt linux
+2019-09-13 13:19:22	nepugia	avu, oh
+2019-09-13 13:19:27	oherrala	:D
+2019-09-13 13:19:30	nepugia	well, in that case, docker is overkill
+2019-09-13 13:19:32	nepugia	dont need it
+2019-09-13 13:20:01	oherrala	nepugia: dunno about overkill, but the easy way: docker run rust.. :)
+2019-09-13 13:20:41	nepugia	i just need a different namespace to run rust in, having to deal with docker is more complexity than i need :)
+2019-09-13 13:20:54	vn971	oherrala: docker also makes your system super-insecure if you allow your user to access the docker daemon.
+2019-09-13 13:23:03	oherrala	vn971: can you explain?
+2019-09-13 13:25:59	vn971	oherrala: if your normal user has access, then it means that any programs running on your behalf of your user have access to the daemon. Having access to the daemon is the same as having root on the host system. You can just run docker with mounted /etc/passwd and read passwords, or mount hard disks inside, etc etc.
+2019-09-13 13:26:17	vn971	* if your normal user has access to docker,..
+2019-09-13 13:27:02	avu	if you can read passwords from /etc/passwd, you managed to get docker running on a UNIX from the 70s or 80s :p
+2019-09-13 13:27:38	-->	tostr (~tostr@unaffiliated/tostr) has joined ##rust
+2019-09-13 13:28:19	<--	Stanley00 (~Stanley00@unaffiliated/stanley00) has quit (Quit: Leaving)
+2019-09-13 13:28:44	nepugia	funnily enough alpine linux does have passwords in /etc/passwd
+2019-09-13 13:28:48	nepugia	for some reason... :)
+2019-09-13 13:29:06	nepugia	or well, for one of my users it seams
+2019-09-13 13:29:25	nepugia	(well the hash i mean..)
+2019-09-13 13:29:26	-->	happycoder (~happycode@14.139.185.114) has joined ##rust
+2019-09-13 13:29:36	oherrala	vn971: ok, so how is chroot more secure?
+2019-09-13 13:29:51	nepugia	vn971, mount hard disks heh... i wonder why linux doesnt have something like freebsd securelevels
+2019-09-13 13:31:35	vn971	avu: oh right, it's not that simple. I forgot the exact details then, but there's a ton of ways to get root on host if you have access to docker daemon. Docker itself kinda says it, unwillingly, in the part that describes giving access to the daemon.
+2019-09-13 13:32:43	vn971	it was a bit more honest on that and there was a whole section describing the impact and why it can't be made secure, but then they decided to shrink/remove this part and there's only some small notice. Last time I checked at least. But the notice is still there.
+2019-09-13 13:33:49	vn971	oherrala: chroot still requires you to use `root`. It's just being made explicit. You know that anybody who runs chroots can also damage your system, so it should only be you.
+2019-09-13 13:34:14	vn971	(with docker, some people don't understand that having access to docker daemon == having root.)
+2019-09-13 13:35:51	vn971	nepugia: linux has namespaces still, which can be unshared. E.g. bubblewrap, or just `unshare` if you don't want to touch mount points.
+2019-09-13 13:35:53	oherrala	vn971: So Docker is super insecure because some people don't understand it?
+2019-09-13 13:36:25	oherrala	vn971: probably the same people who use sudo?
+2019-09-13 13:36:29	vn971	oherrala: whether docker is secure or not I don't know in detail, but _having access to docker daemon_ is the same as having root on your system.
+2019-09-13 13:36:56	nepugia	vn971, i honestly dont know how namespaces would protect you against someone mounting disk devices
+2019-09-13 13:37:06	lupine	best not to install docker, really
+2019-09-13 13:37:17	vn971	oherrala: comparing to sudo, docker is then a password-less sudo (in a sense that it can easily be abused to raise priveleges, in an automated way).
+2019-09-13 13:37:20	nepugia	best to install docker when it fits your usecase
+2019-09-13 13:37:27	lupine	its only purpose is to make capitalists happy
+2019-09-13 13:37:34	Faux	You can run container-like things, with safe mounting, inside user namespaces, if you're up for that kind of thing.
+2019-09-13 13:38:34	Faux	https://paste.debian.net/1100536/ this doesn't need root, and is enabled by default in e.g. ubuntu's kernels.
+2019-09-13 13:39:09	nepugia	namespaces are nice indeed
+2019-09-13 13:39:58	vorner	Unprivileged dockers don't have the physical devices visible in them, so you can't mount them. Also, you can run the docker daemon with user privileges.
+2019-09-13 13:40:07	<--	jamm (~jamm@unaffiliated/jamm) has quit (Ping timeout: 276 seconds)
+2019-09-13 13:40:33	vorner	But it has some (severe) limitations, so the defaults are to run it as a very privileged process.
+2019-09-13 13:42:11	-->	SisterFister (~SisterFis@catv-178-48-164-108.catv.broadband.hu) has joined ##rust
+2019-09-13 13:42:15	nepugia	ugh, getting a no such file or directory when running cargo in my chroot, would be super nice if it actually said /what/ it tries to run
+2019-09-13 13:42:26	nepugia	vorner, mknode?
+2019-09-13 13:42:29	j`ey	does -v help?
+2019-09-13 13:42:37	nepugia	s/e//
+2019-09-13 13:42:41	<--	goncalor (~goncalor@unaffiliated/goncalor) has quit (Read error: Connection reset by peer)
+2019-09-13 13:42:50	nepugia	j`ey, it does not :/
+2019-09-13 13:44:37	<--	ki9a (~ki9a@about/csharp/regular/ki9a) has quit (Ping timeout: 245 seconds)
+2019-09-13 13:44:40	-->	goncalor (~goncalor@unaffiliated/goncalor) has joined ##rust
+2019-09-13 13:47:21	nepugia	huh, the thing it cant execute is... cargo :)
+2019-09-13 13:47:34	nepugia	in the .rustup space somewhere... why that doesnt work i dont know
+2019-09-13 13:47:53	<--	SisterFister (~SisterFis@catv-178-48-164-108.catv.broadband.hu) has quit (Remote host closed the connection)
+2019-09-13 13:47:56	<--	MrFahrenheit (~zumbi@unaffiliated/rageofthou) has quit (Ping timeout: 245 seconds)
+2019-09-13 13:48:08	nepugia	ldd on that looks fine :/
+2019-09-13 13:49:24	<--	pknull (~pooky@184.103.28.136) has quit (Quit: Departing.)
+2019-09-13 13:49:42	-->	happycoder_ (~happycode@14.139.185.114) has joined ##rust
+2019-09-13 13:49:53	-->	pknull (~pooky@184.103.28.136) has joined ##rust
+2019-09-13 13:50:44	nepugia	hmm, i have /dev/shm and /proc and /sys mounted... did i miss something else linux wants normally?
+2019-09-13 13:51:20	vn971	vorner: but if you have access to the docker daemon, what stops you from starting a priveleged container?
+2019-09-13 13:52:47	vn971	nepugia: my advise: if you just want to isolate running of e.g. `rust`, take a look at bubblewrap. It's a tool that gives you full control over what's happening, and it's super-easy to get started with.
+2019-09-13 13:53:07	nepugia	full control? how would that work?
+2019-09-13 13:53:37	<--	pknull (~pooky@184.103.28.136) has quit (Client Quit)
+2019-09-13 13:53:49	nepugia	hmm, i dont need a sandbox really
+2019-09-13 13:53:52	vn971	nepugia: e.g. the simplest example:  `bwrap --unshare-all --ro-bind / / --tmpfs ~ bash`.  This will unshare all namespaces, bound `/` as read-only, hide your `~` completely and put you in a bash shell inside.
+2019-09-13 13:53:59	vorner	vn971, If the docker daemon already starts with user privileges, it is unable to start privileged containers.
+2019-09-13 13:54:16	-->	jamm (~jamm@unaffiliated/jamm) has joined ##rust
+2019-09-13 13:54:20	<--	happycoder (~happycode@14.139.185.114) has quit (Ping timeout: 268 seconds)
+2019-09-13 13:54:23	-->	pknull (~pooky@184.103.28.136) has joined ##rust
+2019-09-13 13:54:35	nepugia	vn971, what? how from that command is it implied that you want to hide ~?
+2019-09-13 13:54:44	vorner	https://docs.docker.com/engine/security/userns-remap/
+2019-09-13 13:54:50	vn971	vorner: so you are saying you have experience in running docker daemon from a normal user, do I hear you correctly?
+2019-09-13 13:55:07	nepugia	oh, you mount a tmpfs over it
+2019-09-13 13:55:09	vn971	again, *docker* *daemon* -- as user.
+2019-09-13 13:55:12	nepugia	but what if i just unmount it?
+2019-09-13 13:55:39	vn971	nepugia: inside the jail, there are no suid programs, no way to invoke root, no `sudo` that would work.
+2019-09-13 13:56:06	nepugia	how so? namespaces have root processes too...
+2019-09-13 13:56:18	nepugia	just that root means somethign slightly different
+2019-09-13 13:56:43	vn971	nepugia: I mean, if you run bubblewrap from non-root, then you will remain non-root.
+2019-09-13 13:56:59	vn971	vorner: in the last link you're clearly confusing docker daemon with programs that are running inside docker.
+2019-09-13 13:57:01	vorner	vn971, I think it starts with root itself. But it is not willing to start privileged containers and remaps all users (even 0/root) in the container onto UIDs that are non-root.
+2019-09-13 13:57:13	vn971	vorner: blease educate yourself on the difference, TBH...
+2019-09-13 13:58:02	nepugia	the programm seams to be setuid(0) so non-root isnt right i suppose
+2019-09-13 13:58:56	nepugia	welp, the entire toolchain doesnt seam to want to work in my void linux chroot
+2019-09-13 13:59:12	vn971	nepugia: it provides a limited subset of the so called user namespaces. It's setuid, it configures mount points, does unshares, and then strips off root rights and runs your actual thing without root again.
+2019-09-13 14:00:07	nepugia	i dont see why i would need that for my usecase
+2019-09-13 14:00:14	vn971	vorner: > But it is not willing to start privileged containers  -- I think this is an incorrect statement. The whole link is about which restricted containers can you run inside docker, not how you start `dockerd`.
+2019-09-13 14:00:23	nepugia	the only thing i want to do is confuse processes as to where they shall look for glibc, which works fine with chroot
+2019-09-13 14:00:58	vorner	vn971, Sorry, it's been a while since I looked into that thing. I need that crap (docker) in work, so I did do the research years ago and found the least evil way to run it on my system.
+2019-09-13 14:01:05	vn971	nepugia: well you could do `bwrap --bind /path/to/chroot / bash`
+2019-09-13 14:01:18	nepugia	i could then also just use chroot
+2019-09-13 14:02:08	vn971	vorner: yeah, it's actually a pain for many developers.. You kinda need to use docker and that's it. That's final. :/
+2019-09-13 14:02:08	vn971	What I personally did is then run `qemu` with a dockerd inside, and expose the dockerd port to the host system.
+2019-09-13 14:02:31	<--	raeken (~quassel@gate.reality-bytes.com) has quit (Remote host closed the connection)
+2019-09-13 14:02:52	nepugia	isnt the entire point of docker to use linux namespaces? running it in a vm kinda defeats the point of lightweight containers
+2019-09-13 14:03:29	<--	samrg472_ (~samrg472@gateway/tor-sasl/samrg472) has quit (Remote host closed the connection)
+2019-09-13 14:03:30	vn971	vorner: that requires a lot of work though. Installing another OS inside qemu, configuring docker inside the OS, expose the port through qemu, and finally set local environment variable DOCKER_HOST='tcp://127.0.0.1:2375'
+2019-09-13 14:03:40	-->	samrg472 (~samrg472@gateway/tor-sasl/samrg472) has joined ##rust
+2019-09-13 14:04:10	-->	djapo (~archie@unaffiliated/djapo) has joined ##rust
+2019-09-13 14:04:18	vn971	and if you need to access the containers created inside qemu, you need to pass all ports from inside qemu to host as well..
+2019-09-13 14:04:20	delYsid	Faux: what does "application/xml".parse() do in your sonos.rs PR?  I sort of fail to understand why this string would need "parsing", and what the call actually does.
+2019-09-13 14:04:23	vorner	And then it runs much slower and such… which is a PITA if develop for „bigger embedded“ (routers and such) and sometime needs to compile the whole damn system, or bigger C++ project.
+2019-09-13 14:04:47	<--	airwind (~belovent@cr-01.anx09.lju.si.anexia-it.com) has quit (Quit: airwind)
+2019-09-13 14:05:47	vn971	vorner: yes, of course. Then you lose all the speed that you could get from running docker natively, as if it'd be the case if dockerd could be made really secure. Basically you start to be like a MacOS or Windows user in that regard.
+2019-09-13 14:06:27	nepugia	execve("./rustc", ["./rustc"], 0x7ffbffffbd10 /* 12 vars */) = -1 ENOENT (No such file or directory)
+2019-09-13 14:06:40	nepugia	ugh, this is too annoying
+2019-09-13 14:06:58	nepugia	maybe ill just wait till the toolchain is fixed to properly support musl...
+2019-09-13 14:07:02	vn971	it's really a pity that dockerd has no option like `dockerd --restrict-priveleged`, which would forbid unrestricted mode, fordib mounting stuff from HOST, etc. Only run some public bullshit, allow copying if the invoked user itself has access to the files, etc.
+2019-09-13 14:07:06	-->	raeken (~quassel@gate.reality-bytes.com) has joined ##rust
+2019-09-13 14:07:57	vn971	nepugia: musl works just fine for a lot of people (including me). How do you run it?
+2019-09-13 14:08:08	vorner	Anyway, I'm pretty sure the unprivileged docker container is unable to do mknod or so and root inside (UID=0) is not really privileged with that setup. It's probably not 100% secure, but stuff like mounting things in use the privileges of the outside user, so if you want to mount something in, you actually have to make it something like word-readable.
+2019-09-13 14:08:30	nepugia	vn971, i just run alpine linux
+2019-09-13 14:09:15	nepugia	there the musl rust toolchain does not support dynamic linking which basically breaks all compiles i am interested in
+2019-09-13 14:09:26	nepugia	(no way to tell it to link those things statically either)
+2019-09-13 14:10:18	avu	vn971: you're absolutely right, I was just nitpicking, not disagreeing with you in general, sorry
+2019-09-13 14:10:42	vn971	vorner: luckily docker is still honest about the security properties, so read this: https://docs.docker.com/engine/reference/commandline/dockerd/
+2019-09-13 14:10:42	vn971	> Warning: Changing the default docker daemon binding to a TCP port or Unix docker user group will increase your security risks by allowing non-root users to gain root access on the host. Make sure you control access to docker. If you are binding to a TCP port, anyone with access to that port has full Docker access; so it is not advisable on an open network.
+2019-09-13 14:11:48	vn971	* relatively honest, as this crucial thing is only written somewhere in the middle, so many people do not know it.
+2019-09-13 14:13:21	nepugia	well, i give up on this... gues i wont be using rust then for now :/
+2019-09-13 14:13:52	vorner	Yes, but that note assumes that you also run without the user namespace mapping option. Then you can start a docker with `--privileged` and have a root. If you start docker with the user-ns and try that, you get „Error response from daemon: privileged mode is incompatible with user namespaces.“ and it won't run.
+2019-09-13 14:14:10	vorner	>  Potentially the most important security improvement is that, by default, container processes running as the root user will have expected administrative privilege (with some restrictions) inside the container but will effectively be mapped to an unprivileged uid on the host.
+2019-09-13 14:15:42	<--	djapo (~archie@unaffiliated/djapo) has quit (Ping timeout: 245 seconds)
+2019-09-13 14:16:35	Faux	delYsid: A header isn't necessarily a valid string, and they have chosen to call the conversion from a string into a HeaderThing a "parse".
+2019-09-13 14:16:46	<--	baali (~baali@117.214.177.6) has quit (Ping timeout: 246 seconds)
+2019-09-13 14:21:42	-->	djapo (~archie@unaffiliated/djapo) has joined ##rust
+2019-09-13 14:24:13	-->	Nahual (~Nahual@unaffiliated/nahual) has joined ##rust
+2019-09-13 14:32:34	<--	happycoder_ (~happycode@14.139.185.114) has quit (Ping timeout: 268 seconds)
+2019-09-13 14:33:14	vn971	vorner: you're again saying things about "--priveleged" _container_. Dockerd cannot be priveleged or not priveleged. It's the daemon.
+2019-09-13 14:33:51	vn971	You cannot run dockerd with user namespace mapping option, or anything of the like.
+2019-09-13 14:34:06	<--	fjellfras (~fjellfras@223.229.235.29) has quit (Quit: Leaving)
+2019-09-13 14:35:13	vn971	the quoted text and link below are for dockerd and its daemon. As the documentation correctly says, having access to the dockerd TCP port or docker group allows "non-root users to gain root access on the host".
+2019-09-13 14:37:29	vorner	No, I'm not saying that. I'm saying that if I run dockerd with the `--user-ns` *parameter*, it itself runs as root, yes, but refuses to start a container not mapped to your user. And the way to gain the root access to the host is by executing a privileged container and mapping the whole system into it or something such. It won't work with dockerd with the userns parameter, it'll refuse to do so.
+2019-09-13 14:37:44	-->	baali (~baali@59.98.237.150) has joined ##rust
+2019-09-13 14:37:46	-->	federico1 (~federico1@opensuse/member/Federico-Mena) has joined ##rust
+2019-09-13 14:37:46	vorner	Or are you aware of *other* ways to gain root on the host?
+2019-09-13 14:37:48	-->	tmager (~Thunderbi@146.115.18.74) has joined ##rust
+2019-09-13 14:40:43	vorner	(or, it won't refuse to map it, but the „root“ inside will have the same restrictions to access the system as your user has outside, so it'll be effectively useless to do the mapping)
+2019-09-13 14:40:55	<--	kunningd (~kunningdr@unaffiliated/kunningdruger) has quit (Ping timeout: 246 seconds)
+2019-09-13 14:41:26	-->	kunningd (~kunningdr@unaffiliated/kunningdruger) has joined ##rust
+2019-09-13 14:44:25	vorner	Ah, crap, there's a way through the command line maze to disable this enforcement as a user. That's stupid :-|.
+2019-09-13 14:44:44	vn971	vorner: ah, got it, there is a dockerd parameter as well indeed.
+2019-09-13 14:45:05	vn971	vorner: I thought so as well, but if you read further, they say it's still enforced.
+2019-09-13 14:46:57	<--	Ichorio (~Ichorio@2001:16b8:57ca:9600:8541:4cfa:2933:d307) has quit (Ping timeout: 245 seconds)
+2019-09-13 14:47:03	vorner	Just tried, it isn't. I'm running dockerd with the mapping enabled, but `docker run --userns=host --privileged` works :-|. And it even allows me things I wasn't allowed before.
+2019-09-13 14:48:17	vn971	ah right, --userns=host means to disable this thing... "Nice".
+2019-09-13 14:48:44	<--	djapo (~archie@unaffiliated/djapo) has quit (Ping timeout: 265 seconds)
+2019-09-13 14:49:05	vorner	But adding a parameter „Don't accept userns overrides“ to dockerd should technically be possible…
+2019-09-13 14:49:17	vn971	Well, there's a reason why people joke that the letter "s" in docker stands for "security".
+2019-09-13 14:49:52	<--	nepugia (~nephele@200116b864a863004b33f1ed1381bf81.dip.versatel-1u1.de) has quit (Ping timeout: 245 seconds)
+2019-09-13 14:52:27	-->	happycoder (~happycode@137.97.182.51) has joined ##rust
+2019-09-13 14:54:43	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Quit: Leaving)
+2019-09-13 14:59:45	-->	ki9a (~ki9a@about/csharp/regular/ki9a) has joined ##rust
+2019-09-13 15:06:01	<--	jamm (~jamm@unaffiliated/jamm) has quit (Read error: Connection reset by peer)
+2019-09-13 15:06:20	tjis	how would i run a bit of code only in debug mode?
+2019-09-13 15:06:58	<--	happycoder (~happycode@137.97.182.51) has quit (Read error: No route to host)
+2019-09-13 15:10:40	<--	lovesegfault (~bemeurer@4.16.192.242) has quit (Ping timeout: 246 seconds)
+2019-09-13 15:11:52	-->	happycoder (~happycode@2405:204:d209:7db6:b477:ef9c:9bc4:9df8) has joined ##rust
+2019-09-13 15:20:45	vn971	tjis: would this solve your problem?: https://doc.rust-lang.org/std/macro.cfg.html
+2019-09-13 15:21:35	tjis	perhaps. is debug/release mode something I can look up with cfg?
+2019-09-13 15:22:33	j`ey	debug_assertions is on for debug
+2019-09-13 15:22:55	tjis	neat. that'll work great then. thank you
+2019-09-13 15:23:12	<--	happycoder (~happycode@2405:204:d209:7db6:b477:ef9c:9bc4:9df8) has quit (Ping timeout: 245 seconds)
+2019-09-13 15:29:30	-->	mbestavr-rh (mbestavrre@nat/redhat/x-slukdxasyyfiefhe) has joined ##rust
+2019-09-13 15:30:12	raeken	https://podman.io/
+2019-09-13 15:30:16	-->	scain (~scain@2607:5300:60:233b::1) has joined ##rust
+2019-09-13 15:30:21	raeken	"What is Podman? Podman is a daemonless container engine for developing, managing, and running OCI Containers on your Linux System. Containers can either be run as root or in rootless mode. Simply put: `alias docker=podman`. More details here. "
+2019-09-13 15:30:26	-->	scunc (~scunc@183-140.its-is.uni.edu) has joined ##rust
+2019-09-13 15:30:44	-->	happycoder (~happycode@2405:204:d209:7db6:b477:ef9c:9bc4:9df8) has joined ##rust
+2019-09-13 15:32:53	<--	pknull (~pooky@184.103.28.136) has quit (Quit: Departing.)
+2019-09-13 15:33:31	-->	pknull (~pooky@184.103.28.136) has joined ##rust
+2019-09-13 15:34:52	vn971	raeken: it's only for those who want to enable "user namespaces" on their system though.
+2019-09-13 15:36:24	vn971	many people feel it's not secure enough. Though Linux started adding the corresponding flag by default since recently, so maybe it'll eventually be considered more stable by security-oriented folks.
+2019-09-13 15:36:32	<--	happycoder (~happycode@2405:204:d209:7db6:b477:ef9c:9bc4:9df8) has quit (Ping timeout: 245 seconds)
+2019-09-13 15:37:19	-->	stephaneyfx (~stephaney@192.157.123.229) has joined ##rust
+2019-09-13 15:38:40	<--	Proximyst (~Proximyst@116.203.198.234) has quit (Quit: Robbing a bank)
+2019-09-13 15:38:55	-->	Proximyst (~Proximyst@116.203.198.234) has joined ##rust
+2019-09-13 15:47:01	-->	jenny-m (~jdm-@75.98.19.133) has joined ##rust
+2019-09-13 15:47:10	<--	pknull (~pooky@184.103.28.136) has quit (Quit: Departing.)
+2019-09-13 15:48:02	-->	pknull (~pooky@184.103.28.136) has joined ##rust
+2019-09-13 15:48:20	vn971	raeken: but it looks awesome if you already have userns anyway!
+2019-09-13 15:52:43	-->	wmealing (~wmealing@124.149.193.135) has joined ##rust
+2019-09-13 16:04:12	-->	npmccallum (npmccallum@nat/redhat/x-dmeigpcjoibniuox) has joined ##rust
+2019-09-13 16:04:39	-->	npmccallum_ (npmccallum@nat/redhat/x-eaympaxdkzssviqq) has joined ##rust
+2019-09-13 16:04:49	<--	npmccallum (npmccallum@nat/redhat/x-dmeigpcjoibniuox) has quit (Read error: Connection reset by peer)
+2019-09-13 16:05:16	<--	npmccallum_ (npmccallum@nat/redhat/x-eaympaxdkzssviqq) has quit (Client Quit)
+2019-09-13 16:05:31	-->	npmccallum (npmccallum@nat/redhat/x-jwpayofinzbkhtbb) has joined ##rust
+2019-09-13 16:07:51	-->	AbedB (~AbedBhuty@bzq-79-178-21-93.red.bezeqint.net) has joined ##rust
+2019-09-13 16:09:09	<--	npmccallum (npmccallum@nat/redhat/x-jwpayofinzbkhtbb) has quit (Client Quit)
+2019-09-13 16:09:28	-->	npmccallum (npmccallum@nat/redhat/x-enlzokfuxnwxdyfg) has joined ##rust
+2019-09-13 16:12:17	<--	pknull (~pooky@184.103.28.136) has quit (Quit: Departing.)
+2019-09-13 16:12:34	-->	pknull (~pooky@184.103.28.136) has joined ##rust
+2019-09-13 16:16:12	<--	npmccallum (npmccallum@nat/redhat/x-enlzokfuxnwxdyfg) has quit (Remote host closed the connection)
+2019-09-13 16:16:12	la_mettrie	function_name(argument_name.struct_name.field_name)
+2019-09-13 16:16:18	-->	mindCrime__ (~mindCrime@216.85.170.148) has joined ##rust
+2019-09-13 16:16:29	<--	federico1 (~federico1@opensuse/member/Federico-Mena) has quit (Read error: Connection reset by peer)
+2019-09-13 16:16:33	la_mettrie	now if this field_name is Option<T> instead of ordinary field, how the syntax goes?
+2019-09-13 16:16:52	<--	SpaceManiac (~SpaceMani@2601:200:4400:ec::1006) has quit (Remote host closed the connection)
+2019-09-13 16:17:31	-->	SpaceManiac (~SpaceMani@c-67-172-121-111.hsd1.ca.comcast.net) has joined ##rust
+2019-09-13 16:17:47	-->	mindCrime_ (~mindCrime@216.85.170.148) has joined ##rust
+2019-09-13 16:18:23	Lumpio-	If you want to get the value out of the option and crash if it's not there it's either unwrap() or as_ref().unwrap() if you want a reference to it instead
+2019-09-13 16:18:36	-->	cloudhead (~cloudhead@160.230.205.35.bc.googleusercontent.com) has joined ##rust
+2019-09-13 16:18:37	Lumpio-	If you want to do something else if the value isn't there, I'd use a match statement to check
+2019-09-13 16:18:49	Lumpio-	(expression*)
+2019-09-13 16:19:23	j`ey	https://play.rust-lang.org/?version=stable&mode=debug&edition=2018&gist=c4ac5268e9bf2746a772b1d7aaf78cfe what's going wrong here?
+2019-09-13 16:19:46	Yaniel	if let can sometimes look better than match
+2019-09-13 16:19:52	Yaniel	and then there'
+2019-09-13 16:20:00	Yaniel	and then there is unwrap_or_else()
+2019-09-13 16:20:20	Lumpio-	Yeah if let is actually often nicer for options
+2019-09-13 16:21:03	-->	ravenousmoose (~ravenousm@ptr-cud5aqfz6yldre36cip.18120a2.ip6.access.telenet.be) has joined ##rust
+2019-09-13 16:21:32	<--	mindCrime__ (~mindCrime@216.85.170.148) has quit (Ping timeout: 265 seconds)
+2019-09-13 16:23:16	j`ey	Ah, it's because Input could be chosen by the caller, but I call it with a Vec
+2019-09-13 16:23:19	Lumpio-	j`ey: A caller could plausibly pass in something... yeah
+2019-09-13 16:23:23	Lumpio-	Something that is AsRef but not a Vec
+2019-09-13 16:23:34	j`ey	and you cant impl AsRef in Fn()
+2019-09-13 16:24:35	j`ey	and https://play.rust-lang.org/?version=stable&mode=debug&edition=2018&gist=010a0a94e574e7a09e91396ea5a30698 doesnt work
+2019-09-13 16:26:30	Lumpio-	I'm not sure what that last version is even trying to do
+2019-09-13 16:26:36	Lumpio-	Require Input to be Vec<u8>?
+2019-09-13 16:26:45	Lumpio-	At that point you might as well say Parser: Fn(Vec<u8>) -> Vec<u8>
+2019-09-13 16:26:58	j`ey	hm
+2019-09-13 16:27:08	j`ey	maybe I meant something like Vec<u8>: Into<Input>?
+2019-09-13 16:27:10	j`ey	or something
+2019-09-13 16:27:13	Lumpio-	However what comes to parsing bytes when I tried out tokio I really liked the Bytes type for parsing
+2019-09-13 16:27:18	Lumpio-	(The bytes crate isn't dependent on Tokio)
+2019-09-13 16:27:28	Lumpio-	Has a couple of convenience methods Vec doesn't
+2019-09-13 16:27:55	Yaniel	byteorder has some too
+2019-09-13 16:28:46	j`ey	I dont have the full context, not my code
+2019-09-13 16:31:17	Lumpio-	hm
+2019-09-13 16:32:49	j`ey	I think they wanted Parser to be able take either &[u8] or &Vec<u8> hence the use of AsRef
+2019-09-13 16:36:01	calops	but if you take &[u8], &Vec<u8> will work automatically
+2019-09-13 16:36:05	calops	no?
+2019-09-13 16:38:32	-->	SisterFister (~SisterFis@catv-178-48-164-108.catv.broadband.hu) has joined ##rust
+2019-09-13 16:38:48	j`ey	I asked why they went with AsRef, not heard back yet
+2019-09-13 16:39:41	tjis	j`ey: this is actually the pattern i'm following. is there a better way to accomplish something like that?
+2019-09-13 16:43:27	-->	kabeero (~quassel@unaffiliated/kabeero) has joined ##rust
+2019-09-13 16:44:26	<--	baali (~baali@59.98.237.150) has quit (Quit: Leaving.)
+2019-09-13 16:44:36	-->	baali (~baali@59.98.237.150) has joined ##rust
+2019-09-13 16:46:07	<--	kunningd (~kunningdr@unaffiliated/kunningdruger) has quit (Ping timeout: 245 seconds)
+2019-09-13 16:46:16	-->	kunningd (~kunningdr@unaffiliated/kunningdruger) has joined ##rust
+2019-09-13 16:47:01	-->	elichai2 (uid212594@gateway/web/irccloud.com/x-uoedvggqaregeizh) has joined ##rust
+2019-09-13 16:49:06	<--	baali (~baali@59.98.237.150) has quit (Client Quit)
+2019-09-13 16:54:37	<--	pknull (~pooky@184.103.28.136) has quit (Quit: Departing.)
+2019-09-13 16:55:08	-->	pknull (~pooky@184.103.28.136) has joined ##rust
+2019-09-13 16:57:13	<--	ziyourenxiang (~ziyourenx@unaffiliated/ziyourenxiang) has quit (Remote host closed the connection)
+2019-09-13 16:57:38	-->	ziyourenxiang (~ziyourenx@unaffiliated/ziyourenxiang) has joined ##rust
+2019-09-13 16:58:08	<--	pknull (~pooky@184.103.28.136) has quit (Client Quit)
+2019-09-13 16:58:38	-->	pknull (~pooky@184.103.28.136) has joined ##rust
+2019-09-13 16:58:49	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined ##rust
+2019-09-13 17:02:08	<--	stephaneyfx (~stephaney@192.157.123.229) has quit (Quit: Leaving)
+2019-09-13 17:04:43	<--	efm (~efm@vpn.tummy.com) has quit (Read error: Connection reset by peer)
+2019-09-13 17:05:45	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Remote host closed the connection)
+2019-09-13 17:06:06	-->	SiegeLord (~sl@c-73-158-78-36.hsd1.ca.comcast.net) has joined ##rust
+2019-09-13 17:06:10	-->	efm (~efm@vpn.tummy.com) has joined ##rust
+2019-09-13 17:06:49	<--	sysKin (~syskin@61-245-149-216.3df595.adl.nbn.aussiebb.net) has quit (Ping timeout: 240 seconds)
+2019-09-13 17:08:16	<--	murla (~murla@146.120.13.152) has quit (Ping timeout: 246 seconds)
+2019-09-13 17:08:25	<--	ziyourenxiang (~ziyourenx@unaffiliated/ziyourenxiang) has quit (Ping timeout: 265 seconds)
+2019-09-13 17:10:36	<--	jenny-m (~jdm-@75.98.19.133) has quit (Quit: Leaving...)
+2019-09-13 17:12:01	<--	tostr (~tostr@unaffiliated/tostr) has quit (Ping timeout: 276 seconds)
+2019-09-13 17:18:46	-->	murla (~murla@146.120.13.152) has joined ##rust
+2019-09-13 17:19:35	-->	analogue (~analogue@129.63.253.88) has joined ##rust
+2019-09-13 17:19:49	<--	ravenousmoose (~ravenousm@ptr-cud5aqfz6yldre36cip.18120a2.ip6.access.telenet.be) has quit (Ping timeout: 276 seconds)
+2019-09-13 17:21:12	<--	Tichodroma (~lutz@fsf/member/Tichodroma) has quit (Quit: leaving)
+2019-09-13 17:23:38	<--	SiegeLord (~sl@c-73-158-78-36.hsd1.ca.comcast.net) has quit (Quit: It's a joke, it's all a joke.)
+2019-09-13 17:24:08	-->	t7 (~tommo@2a00:23c5:1284:fc00:a171:8f14:2f0e:83cc) has joined ##rust
+2019-09-13 17:24:11	-->	zirpu (~allan@24.35.77.206) has joined ##rust
+2019-09-13 17:24:16	<--	zirpu (~allan@24.35.77.206) has quit (Client Quit)
+2019-09-13 17:26:52	-->	nico103 (~nico@24.28.108.183) has joined ##rust
+2019-09-13 17:28:15	-->	happycoder (~happycode@14.139.185.114) has joined ##rust
+2019-09-13 17:28:52	-->	Ichorio (~Ichorio@2001:16b8:57ca:9600:59de:cc68:6c74:976c) has joined ##rust
+2019-09-13 17:28:56	-->	zirpu (~allan@24.35.77.206) has joined ##rust
+2019-09-13 17:31:13	-->	mcoffin (~mcoffin@gateway/tor-sasl/mcoffin) has joined ##rust
+2019-09-13 17:35:01	<--	dozn_ (~dozn@S01069050ca3c43c3.vs.shawcable.net) has quit (Read error: Connection reset by peer)
+2019-09-13 17:35:13	<--	pie_ (~pie_@unaffiliated/pie-/x-0787662) has quit (Ping timeout: 240 seconds)
+2019-09-13 17:35:53	<--	zirpu (~allan@24.35.77.206) has quit (Quit: WeeChat 2.6)
+2019-09-13 17:36:08	-->	zirpu (~allan@24.35.77.206) has joined ##rust
+2019-09-13 17:39:02	<--	matthias_bgg_ (~mbgg@37.223.145.235) has quit (Ping timeout: 245 seconds)
+2019-09-13 17:40:25	-->	Oct (foobar@poulet.zoy.org) has joined ##rust
+2019-09-13 17:42:17	-->	jenny-m (~jdm-@corp-nat.fw1.untrust.tor1.mozilla.com) has joined ##rust
+2019-09-13 17:43:45	Oct	hello, I have a crate of mine, when I put foo="2.0.1" in my Cargo file, it fetches version "2.1.0", is this expected?
+2019-09-13 17:43:47	<--	pknull (~pooky@184.103.28.136) has quit (Quit: Departing.)
+2019-09-13 17:44:12	-->	pknull (~pooky@184.103.28.136) has joined ##rust
+2019-09-13 17:44:58	-->	baali (~baali@59.98.237.150) has joined ##rust
+2019-09-13 17:45:11	Faux	Yes, 2.0.1 means >=2.0.1 <3. https://doc.rust-lang.org/cargo/reference/specifying-dependencies.html
+2019-09-13 17:45:16	Oct	mm, this seems to be an expected semver behavior
+2019-09-13 17:45:23	Oct	thanks Faux :)
+2019-09-13 17:47:09	<--	pknull (~pooky@184.103.28.136) has quit (Client Quit)
+2019-09-13 17:47:43	-->	pknull (~pooky@184.103.28.136) has joined ##rust
+2019-09-13 17:47:47	<--	Ichorio (~Ichorio@2001:16b8:57ca:9600:59de:cc68:6c74:976c) has quit (Ping timeout: 245 seconds)
+2019-09-13 17:48:58	-->	mryandao_ (~mryandao@gateway/tor-sasl/mryandao) has joined ##rust
+2019-09-13 17:50:43	-->	nepugia (~nephele@200116b864a863004b33f1ed1381bf81.dip.versatel-1u1.de) has joined ##rust
+2019-09-13 17:51:19	<--	mryandao (~mryandao@gateway/tor-sasl/mryandao) has quit (Ping timeout: 260 seconds)
+2019-09-13 17:51:26	<--	ellcs (~mantel@193.174.12.196) has quit (Ping timeout: 265 seconds)

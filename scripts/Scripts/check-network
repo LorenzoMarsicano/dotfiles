@@ -14,7 +14,7 @@ while true; do
         if [[ $ID == e* ]]; then
             echo "$ethernet_connected" ; sleep 25
         else
-            echo "$wireless_connected" ; sleep 25
+            echo "$wireless_connected $(nmcli -g name connection show | awk  'NR==1')" ; sleep 25
         fi
     else
         echo "$disconnected" ; sleep 0.5

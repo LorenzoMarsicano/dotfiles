@@ -1,0 +1,77 @@
+2019-09-13 09:06:12	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #godotengine-devel
+2019-09-13 09:06:12	--	Topic for #godotengine-devel is "Godot Engine Developers | Tasks up for grabs: https://github.com/godotengine/godot/issues | ML: https://listengine.tuxfamily.org/godotengine.org/devel | Logs: http://godot.eska.me/irc-logs | Can't join from Matrix? https://frama.link/matrix-irc-needreggednick"
+2019-09-13 09:06:12	--	Topic set by Akien (~Akien@godotengine/akien) on Sun, 23 Sep 2018 17:02:58
+2019-09-13 09:06:12	--	Channel #godotengine-devel: 154 nicks (1 op, 0 voices, 153 normals)
+2019-09-13 09:06:25	--	Channel created on Tue, 23 Jun 2015 16:46:41
+2019-09-13 09:09:05	geequlim[m]	How can I define a macro with string value in scons ?
+2019-09-13 09:21:43	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #godotengine-devel
+2019-09-13 09:24:28	-->	bomb (~bomb@gateway/tor-sasl/bomb) has joined #godotengine-devel
+2019-09-13 09:31:37	<--	jeffyboh_ (~JeffyBoh@c-76-18-203-239.hsd1.fl.comcast.net) has quit (Ping timeout: 240 seconds)
+2019-09-13 09:34:54	-->	jeffyboh_ (~JeffyBoh@c-76-18-203-239.hsd1.fl.comcast.net) has joined #godotengine-devel
+2019-09-13 09:48:43	<--	chaosus89 (d58d8110@gateway/web/cgi-irc/kiwiirc.com/ip.213.141.129.16) has quit (Remote host closed the connection)
+2019-09-13 10:22:11	-->	ignaloidas (~ignaloida@84.15.43.98) has joined #godotengine-devel
+2019-09-13 10:38:16	-->	xakz (~XaMaD@229.ip-217-182-68.eu) has joined #godotengine-devel
+2019-09-13 10:54:26	-->	thc202 (~thc202@unaffiliated/thc202) has joined #godotengine-devel
+2019-09-13 11:10:34	<--	ignaloidas (~ignaloida@84.15.43.98) has quit (Remote host closed the connection)
+2019-09-13 11:14:17	-->	ignaloidas (~ignaloida@84.15.43.98) has joined #godotengine-devel
+2019-09-13 11:20:12	<--	Guest77265 (~winston_@2a04:4540:6c22:d200:151e:4e6e:9336:bb4f) has quit (Quit: Leaving)
+2019-09-13 11:20:25	-->	winston_ (~winston_@2a04:4540:6c22:d200:151e:4e6e:9336:bb4f) has joined #godotengine-devel
+2019-09-13 11:24:37	<--	winston_ (~winston_@2a04:4540:6c22:d200:151e:4e6e:9336:bb4f) has quit (Client Quit)
+2019-09-13 11:51:21	<--	ignaloidas (~ignaloida@84.15.43.98) has quit (Ping timeout: 265 seconds)
+2019-09-13 12:43:38	-->	dddddd (~dddddd@unaffiliated/dddddd) has joined #godotengine-devel
+2019-09-13 12:56:34	-->	Yeldham (~michael@138.118.198.33) has joined #godotengine-devel
+2019-09-13 13:36:23	-->	slndr (~slndr@unaffiliated/slndr) has joined #godotengine-devel
+2019-09-13 13:39:32	Xrayez[m]	geequlim: those are dictionary that you need to pass into CPPDEFINES afaik: env_module.Append(CPPDEFINES={ 'MY_MACRO' : 'string_value' })
+2019-09-13 13:50:41	-->	nemerle_ (~nemerle@89.31.64.133) has joined #godotengine-devel
+2019-09-13 13:58:39	<--	bomb (~bomb@gateway/tor-sasl/bomb) has quit (Quit: ...)
+2019-09-13 14:08:01	<--	slndr (~slndr@unaffiliated/slndr) has quit (Ping timeout: 246 seconds)
+2019-09-13 14:22:15	-->	slndr (~slndr@unaffiliated/slndr) has joined #godotengine-devel
+2019-09-13 14:24:10	-->	DigiDigi (~DigiDigi@2605:a000:1508:a0d0:c0d3:a6da:fc07:712a) has joined #godotengine-devel
+2019-09-13 14:36:39	<--	slndr (~slndr@unaffiliated/slndr) has quit (Ping timeout: 265 seconds)
+2019-09-13 14:44:53	reduz	moorning
+2019-09-13 14:45:32	reduz	Mux213: i suppose it needs to be combined with a faster way to generate the irradiance cubemaps, which is why I combine moving to the paper described in point 2
+2019-09-13 14:49:02	<--	jeffyboh_ (~JeffyBoh@c-76-18-203-239.hsd1.fl.comcast.net) has quit (Ping timeout: 245 seconds)
+2019-09-13 14:50:17	-->	slndr (~slndr@unaffiliated/slndr) has joined #godotengine-devel
+2019-09-13 14:51:08	reduz	Heh, barely anything is working
+2019-09-13 14:51:14	reduz	https://usercontent.irccloud-cdn.com/file/BI0f00Aq/image.png
+2019-09-13 14:51:24	reduz	but most should be
+2019-09-13 14:51:42	reduz	so at least now I have nice roadmap for the weekend, make this demo work again perfectly
+2019-09-13 14:54:40	Groud	You're close to be done :)
+2019-09-13 14:56:31	reduz	i want to think that, but still missing so much
+2019-09-13 14:57:24	reduz	the last three difficult parts will be GI Probes (which will need to work different), lightmapping (which also needs to work different, and based on jfons work), and particles (yet again, will work different)
+2019-09-13 14:58:36	reduz	and next week I need to fix skinning in Godot 3.x so the guys can keep improving things
+2019-09-13 14:59:19	reduz	so that leaves me with less than around 3 weeks to do that, which is probably not as much
+2019-09-13 14:59:38	reduz	I will try to get GIProbes to work at least so we can have something looking nice for Poland
+2019-09-13 14:59:56	Groud	that would be good :)
+2019-09-13 15:07:34	puthre	what happens in poland?
+2019-09-13 15:08:58	vnen	puthre: https://gic.gd/
+2019-09-13 15:09:58	<--	slndr (~slndr@unaffiliated/slndr) has quit (Ping timeout: 246 seconds)
+2019-09-13 15:11:05	puthre	wow, nice
+2019-09-13 15:17:32	Keetz	Also https://godotengine.org/events
+2019-09-13 15:17:36	-->	MoosePrime (~moose@207.44.22.117) has joined #godotengine-devel
+2019-09-13 15:24:07	-->	slndr (~slndr@unaffiliated/slndr) has joined #godotengine-devel
+2019-09-13 15:42:07	<--	Yeldham (~michael@138.118.198.33) has quit (Remote host closed the connection)
+2019-09-13 15:42:12	-->	YeldhamDev (~michael@138.118.198.34) has joined #godotengine-devel
+2019-09-13 16:00:39	<--	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has quit (Quit: WeeChat 1.9.1)
+2019-09-13 16:05:16	<--	slndr (~slndr@unaffiliated/slndr) has quit (Ping timeout: 246 seconds)
+2019-09-13 16:13:31	-->	slndr (~slndr@unaffiliated/slndr) has joined #godotengine-devel
+2019-09-13 16:15:44	<--	YeldhamDev (~michael@138.118.198.34) has quit (Ping timeout: 265 seconds)
+2019-09-13 16:15:44	-->	Yeldham (michael@gateway/vpn/protonvpn/yeldham) has joined #godotengine-devel
+2019-09-13 16:45:17	<--	slndr (~slndr@unaffiliated/slndr) has quit (Ping timeout: 245 seconds)
+2019-09-13 16:59:04	-->	slndr (~slndr@unaffiliated/slndr) has joined #godotengine-devel
+2019-09-13 17:00:32	<--	vnen (~vnen@unaffiliated/vnen) has quit (Remote host closed the connection)
+2019-09-13 17:00:32	<--	jahd (~jahd2602@191.101.3.230) has quit (Remote host closed the connection)
+2019-09-13 17:00:32	<--	Dmat (~Dmat@191.101.3.230) has quit (Remote host closed the connection)
+2019-09-13 17:01:35	-->	Dmat (~Dmat@191.101.3.230) has joined #godotengine-devel
+2019-09-13 17:01:35	-->	jahd (~jahd2602@191.101.3.230) has joined #godotengine-devel
+2019-09-13 17:01:52	-->	vnen (~vnen@unaffiliated/vnen) has joined #godotengine-devel
+2019-09-13 17:10:04	<--	slndr (~slndr@unaffiliated/slndr) has quit (Ping timeout: 276 seconds)
+2019-09-13 17:12:16	<--	mrcdk (~mrcdk@180-200-39-46.usuarios.innovasur.com) has quit (Read error: Connection reset by peer)
+2019-09-13 17:12:54	<--	Keetz (~Keetz@152.115.73.146) has quit (Ping timeout: 268 seconds)
+2019-09-13 17:20:33	<--	rkieley (~rkieley@24.222.88.212) has quit (Read error: Connection reset by peer)
+2019-09-13 17:20:46	-->	rkieley (~rkieley@24.222.88.212) has joined #godotengine-devel
+2019-09-13 17:24:00	-->	slndr (~slndr@unaffiliated/slndr) has joined #godotengine-devel
+2019-09-13 17:24:14	-->	Kodr (4a0fbff4@ipagstaticip-e874f248-ccd1-445f-e2e0-af3e68b5c661.sdsl.bell.ca) has joined #godotengine-devel
+2019-09-13 17:35:29	-->	Bakenshake (041098ba@4.16.152.186) has joined #godotengine-devel
+2019-09-13 17:52:52	<--	nemerle_ (~nemerle@89.31.64.133) has quit (Quit: Konversation terminated!)
+2019-09-13 17:55:17	-->	bomb (~bomb@gateway/tor-sasl/bomb) has joined #godotengine-devel
