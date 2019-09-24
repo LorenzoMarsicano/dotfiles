@@ -2,7 +2,6 @@ sw_volume: 92
 audio_device_state:1:alsa for audio soundcard
 audio_device_state:1:my_fifo
 state: stop
-current: 0
 random: 1
 repeat: 0
 single: 0
@@ -11,18 +10,4 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:Warframe - We All Lift Together.mp3
-1:HDD/Emerson, Lake & Palmer - The Very Best Of Emerson, Lake & Palmer (2000) 320 vtwin88cube/01. Lucky Man.mp3
-2:HDD/Emerson, Lake & Palmer - The Very Best Of Emerson, Lake & Palmer (2000) 320 vtwin88cube/02. Knife Edge.mp3
-3:HDD/Emerson, Lake & Palmer - The Very Best Of Emerson, Lake & Palmer (2000) 320 vtwin88cube/03. From The Beginning.mp3
-4:HDD/Emerson, Lake & Palmer - The Very Best Of Emerson, Lake & Palmer (2000) 320 vtwin88cube/04. Trilogy.mp3
-5:HDD/Emerson, Lake & Palmer - The Very Best Of Emerson, Lake & Palmer (2000) 320 vtwin88cube/05. Jerusalem.mp3
-6:HDD/Emerson, Lake & Palmer - The Very Best Of Emerson, Lake & Palmer (2000) 320 vtwin88cube/06. Toccata.mp3
-7:HDD/Emerson, Lake & Palmer - The Very Best Of Emerson, Lake & Palmer (2000) 320 vtwin88cube/07. Karn Evil 9 1st Impression Pt. 1.mp3
-8:HDD/Emerson, Lake & Palmer - The Very Best Of Emerson, Lake & Palmer (2000) 320 vtwin88cube/08. Still... You Turn Me On.mp3
-9:HDD/Emerson, Lake & Palmer - The Very Best Of Emerson, Lake & Palmer (2000) 320 vtwin88cube/09. Pirates.mp3
-10:HDD/Emerson, Lake & Palmer - The Very Best Of Emerson, Lake & Palmer (2000) 320 vtwin88cube/10. Fanfare For The Common Man.mp3
-11:HDD/Emerson, Lake & Palmer - The Very Best Of Emerson, Lake & Palmer (2000) 320 vtwin88cube/11. C'est La Vie (Live).mp3
-12:HDD/Emerson, Lake & Palmer - The Very Best Of Emerson, Lake & Palmer (2000) 320 vtwin88cube/12. Peter Gunn Theme (Live).mp3
-13:HDD/Emerson, Lake & Palmer - The Very Best Of Emerson, Lake & Palmer (2000) 320 vtwin88cube/13. The Hut Of Baba YagaThe Great Gates Of Kiev (Live).mp3
 playlist_end

@@ -1,0 +1,3 @@
+loadbin /home/lorenzo/Code/Zerynth/repos/vm/vm_branch/build/synergy_pks5d9/r19.09.16_97d170e1550eee4afc0af065b78cda302a97674c/zerynth.bin, 0x0
+r
+exit

@@ -87,7 +87,7 @@ scroll-down = i3wm-wsprev
 
 ;== Module Location ========================================================
 
-modules-left = arch workspaces terminal firefox thunar thunderbird
+modules-left = arch workspaces terminal firefox thunar thunderbird telegram
 modules-center = battery
 modules-right = mpd volume network date powermenu
  
@@ -124,7 +124,7 @@ scroll-down = i3wm-wsprev
 
 ;== Module Location ========================================================
 
-modules-left = arch workspaces terminal firefox thunar thunderbird
+modules-left = arch workspaces terminal firefox thunar thunderbird telegram
 modules-center = battery
 modules-right = mpd volume network date powermenu
  

@@ -38,39 +38,83 @@ hyperlinks = true
 # "off", "left" or "right"
 #scrollbar = off
 
+# Dracula theme for termite
+# https://github.com/dracula/termite
+# Copyright 2013-present, All rights reserved
+# Code licensed under the MIT license
+
 [colors]
-# If both of these are unset, cursor falls back to the foreground color,
-# and cursor_foreground falls back to the background color.
-#cursor = #dcdccc
-#cursor_foreground = #dcdccc
+# special
+foreground      = #f8f8f2
+foreground_bold = #f8f8f2
+cursor          = #f8f8f2
+background      = #282a36
 
-#foreground = #dcdccc
-#foreground_bold = #ffffff
-#background = #3f3f3f
+# black
+color0  = #000000
+color8  = #4d4d4d
 
-# 20% background transparency (requires a compositor)
-#background = rgba(63, 63, 63, 0.8)
+# red
+color1  = #ff5555
+color9  = #ff6e67
 
-# If unset, will reverse foreground and background
-highlight = #2f2f2f
+# green
+color2  = #50fa7b
+color10 = #5af78e
 
-# Colors from color0 to color254 can be set
-color0 = #021614
-color1 = #825c5f
-color2 = #6c013e
-color3 = #950357
-color4 = #430527
-color5 = #b4206c
-color6 = #cc0277
-color7 = #d92f83
-color8 = #f45999
-color9 = #fd75ab
-color10 = #972b5f
-color11 = #fc9bb9
-color12 = #d4568a
-color13 = #ba607b
-color14 = #a57f7c
-color15 = #a7466c
+# yellow
+color3  = #f1fa8c
+color11 = #f4f99d
+
+# blue
+color4  = #bd93f9
+color12 = #caa9fa
+
+# magenta
+color5  = #ff79c6
+color13 = #ff92d0
+
+# cyan
+color6  = #8be9fd
+color14 = #9aedfe
+
+# white
+color7  = #bfbfbf
+color15 = #e6e6e6
+
+# [colors]
+# # If both of these are unset, cursor falls back to the foreground color,
+# # and cursor_foreground falls back to the background color.
+# #cursor = #dcdccc
+# #cursor_foreground = #dcdccc
+# 
+# #foreground = #dcdccc
+# #foreground_bold = #ffffff
+# #background = #3f3f3f
+# 
+# # 20% background transparency (requires a compositor)
+# #background = rgba(63, 63, 63, 0.8)
+# 
+# # If unset, will reverse foreground and background
+# highlight = #2f2f2f
+# 
+# # Colors from color0 to color254 can be set
+# color0 = #021614
+# color1 = #825c5f
+# color2 = #6c013e
+# color3 = #950357
+# color4 = #430527
+# color5 = #b4206c
+# color6 = #cc0277
+# color7 = #d92f83
+# color8 = #f45999
+# color9 = #fd75ab
+# color10 = #972b5f
+# color11 = #fc9bb9
+# color12 = #d4568a
+# color13 = #ba607b
+# color14 = #a57f7c
+# color15 = #a7466c
 
 [hints]
 #font = Monospace 12

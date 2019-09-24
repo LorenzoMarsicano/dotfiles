@@ -1,6 +1,6 @@
 execute pathogen#infect()
 set title
-colorscheme wal 
+colorscheme dracula 
 set nocompatible
 set modelines=0
 set filetype=on

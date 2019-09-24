@@ -1,0 +1,3 @@
+#!/bin/bash
+
+JLinkExe -If swd -device "R7FS5D97C" -speed "4000" -autoconnect 1 -CommanderScript $1

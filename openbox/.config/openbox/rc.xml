@@ -387,7 +387,7 @@
     </keybind>
     <keybind key="A-p">
         <action name="Execute">
-            <command> tdrop -ma -w -38 -x 18 -y 36 -s dropdown termite </command>
+            <command> tdrop -f "--title=dropdown" -ma -w -38 -x 18 -y 36 -s dropdown termite </command>
         </action>
     </keybind>
   </keyboard>
