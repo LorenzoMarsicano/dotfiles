@@ -342,7 +342,7 @@
     </keybind>
     <keybind key="XF86AudioPlay">
       <action name="Execute">
-        <command>mpc toggle</command>
+        <command>play_and_stop</command>
       </action>
     </keybind>
     <keybind key="XF86AudioPrev">
@@ -352,7 +352,7 @@
     </keybind>
     <keybind key="XF86AudioNext">
       <action name="Execute">
-        <command>mpc next</command>
+        <command>next_song</command>
       </action>
     </keybind>
     <!-- Audio control -->

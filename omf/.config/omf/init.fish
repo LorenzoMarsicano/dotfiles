@@ -24,6 +24,8 @@ alias n="nnn"
 alias cal="cal -m"
 alias vim="nvim"
 alias v="nvim"
+alias :q="exit"
+alias :x="exit"
 
 #------------------------------------------------------------------------------------------------------------
 set -g -x GOPATH /home/lorenzo/Code/go/
