@@ -271,3 +271,93 @@
 2019-09-13 17:51:36	<--	krychu (~krychu@2a02:1205:5008:5790:c62:18fc:de44:418b) has quit (Client Quit)
 2019-09-13 17:55:17	-->	bomb (~bomb@gateway/tor-sasl/bomb) has joined #reddit-gamedev
 2019-09-13 17:55:17	--	Mode #reddit-gamedev [+v bomb] by ChanServ
+2019-10-17 11:12:42	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-10-17 11:12:42	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-10-17 11:12:42	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-10-17 11:12:42	--	Channel #reddit-gamedev: 68 nicks (0 ops, 15 voices, 53 normals)
+2019-10-17 11:12:46	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-10-17 11:21:11	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-10-17 11:21:11	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-10-17 11:21:11	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-10-17 11:21:11	--	Channel #reddit-gamedev: 68 nicks (0 ops, 15 voices, 53 normals)
+2019-10-17 11:21:16	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-10-17 11:23:17	-->	terminx (~terminx@198.8.81.214) has joined #reddit-gamedev
+2019-10-17 11:23:17	--	Mode #reddit-gamedev [+v terminx] by ChanServ
+2019-10-17 11:25:50	yuken	Alright so
+2019-10-17 11:25:56	yuken	I legitimately have no clue how _scrolling_ works for GUIs.
+2019-10-17 11:26:59	+zebbiz_pi	You use the scroll wheel
+2019-10-17 11:27:46	yuken	yes ya dummy but how are they implemented? the only way I can reasonably think of is: render mask + ignore things outside of view
+2019-10-17 11:27:58	yuken	and have all child elements be relative to that element
+2019-10-17 11:31:34	R2robot	lol
+2019-10-17 11:32:34	R2robot	is there no existing gui lib you can use
+2019-10-17 11:32:41	R2robot	there must be hundreds
+2019-10-17 11:33:51	yuken	R2robot, none that will integrate smoothly with what I'm doing
+2019-10-17 11:34:02	yuken	and also I want to write my own.
+2019-10-17 11:34:25	R2robot	i suspect the 2nd sentence it the actual answer :P
+2019-10-17 11:34:29	yuken	nop
+2019-10-17 11:34:32	R2robot	but oh well
+2019-10-17 11:34:36	R2robot	nothing new about that
+2019-10-17 11:35:13	yuken	Getting any GUI lib to function nicely with Raylib bindings is gonna be a pain in the ass.
+2019-10-17 11:36:47	R2robot	even the raylib gui?
+2019-10-17 11:37:18	R2robot	https://github.com/raysan5/raygui
+2019-10-17 11:37:19	yuken	Unless you wanna write bindings for me
+2019-10-17 11:37:34	R2robot	in what?
+2019-10-17 11:37:38	yuken	Rust.
+2019-10-17 11:37:48	R2robot	blech
+2019-10-17 11:38:35	R2robot	https://github.com/buckle2000/raygui
+2019-10-17 11:39:12	yuken	looks terribad
+2019-10-17 11:39:17	R2robot	lol
+2019-10-17 11:39:22	R2robot	3s review
+2019-10-17 11:54:26	-->	elsie273 (~Android@213.205.194.39) has joined #reddit-gamedev
+2019-10-17 12:05:01	<--	Cleroth (uid185040@gateway/web/irccloud.com/x-hcurnxjddwohufug) has quit (Quit: Connection closed for inactivity)
+2019-10-17 12:18:38	-->	Snoras_ (~Snoras@gateway/tor-sasl/snoras) has joined #reddit-gamedev
+2019-10-17 12:18:56	<--	Snoras (~Snoras@gateway/tor-sasl/snoras) has quit (Ping timeout: 260 seconds)
+2019-10-17 12:19:02	--	Snoras_ is now known as Snoras
+2019-10-17 12:28:10	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #reddit-gamedev
+2019-10-17 12:28:19	elsie273	so last night i was working on a thing
+2019-10-17 12:28:30	elsie273	and i got a load of crashes related to my hashmap
+2019-10-17 12:28:39	elsie273	and i was like, oh no, i thought i fixed this
+2019-10-17 12:28:58	elsie273	and thought, maybe i just didn't pull the latest version into this project
+2019-10-17 12:29:25	elsie273	i copied the version from my local copy of the repo with the hashmap and everything worked
+2019-10-17 12:29:50	elsie273	and then i looked again and realised those changes hadn't been committed
+2019-10-17 12:30:03	elsie273	and they've just been sitting on my pc since like august
+2019-10-17 12:30:43	elsie273	and i just got super lucky to copy from there instead of doing a refresh pull, lucky to have not just deleted/overwritten that file at some point
+2019-10-17 12:31:09	elsie273	past me wrote the fixes better than present me would so i probably would have been screwed
+2019-10-17 12:46:06	+zebbiz_pi	elsie273: Nice
+2019-10-17 12:46:30	+zebbiz_pi	FOrgetting to commit or push is easy
+2019-10-17 12:49:40	elsie273	it's not something i would usually forget
+2019-10-17 12:50:11	elsie273	on the plus side ecs systems going over multiple components in a way i like is nearly done
+2019-10-17 12:50:31	elsie273	i decided to ditch efficiency for now and just make the interface how i want it
+2019-10-17 13:00:01	-->	Uhfgood (~Uhfgood@072-186-048-053.res.spectrum.com) has joined #reddit-gamedev
+2019-10-17 13:15:36	-->	DrGonzo (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has joined #reddit-gamedev
+2019-10-17 13:19:08	<--	Snoras (~Snoras@gateway/tor-sasl/snoras) has quit (Ping timeout: 260 seconds)
+2019-10-17 13:34:25	-->	Snoras (~Snoras@gateway/tor-sasl/snoras) has joined #reddit-gamedev
+2019-10-17 13:50:03	elsie273	Jonas wuu2?
+2019-10-17 14:08:34	yuken	idk if I can manage to write an entire GUI library, I might just have to use C so I can use Raygui.,
+2019-10-17 14:35:10	elsie273	yuken imgui?
+2019-10-17 14:35:33	yuken	elsie273, wat
+2019-10-17 14:35:50	yuken	I'm using Raylib, which has an official GUI library.
+2019-10-17 14:36:28	elsie273	yuken one of the most popular gui libraries: https://github.com/ocornut/imgui
+2019-10-17 14:36:34	yuken	I know that
+2019-10-17 14:37:17	elsie273	"i might just have to use c"
+2019-10-17 14:37:27	elsie273	what does you mean?
+2019-10-17 14:37:38	yuken	Either I have to switch to C(++), or I have to write bindings, elsie273
+2019-10-17 14:37:51	elsie273	oh
+2019-10-17 14:37:56	+zebbiz_pi	elsie273: yuken is currently working in Rust
+2019-10-17 14:38:06	elsie273	oh
+2019-10-17 14:38:12	yuken	So those are the 3 options, I'm tryying to figure out which is best.
+2019-10-17 14:38:14	elsie273	lots of things have rust bindings
+2019-10-17 14:38:19	elsie273	doesn't imgui?
+2019-10-17 14:38:27	yuken	No clue, probably?
+2019-10-17 14:39:41	elsie273	at least four different attempts: https://github.com/ocornut/imgui/wiki/Bindings
+2019-10-17 14:41:38	yuken	Getting any of that to work well with Raylib is gonna be a pain in the ass, elsie273
+2019-10-17 14:45:02	elsie273	it shouldn't be so bad
+2019-10-17 14:45:31	elsie273	the point of imgui is that you just pass it your gl context and it works
+2019-10-17 14:45:49	+zebbiz_pi	yuken: Considering you want to do most of the work yourself, everything will be a pita :P
+2019-10-17 14:47:04	yuken	elsie273, 1/4 of those bindings seem to do that o-o
+2019-10-17 14:47:17	yuken	1/3*
+2019-10-17 14:48:27	elsie273	sounds like you just want to complain. do the work or use gamemaker
+2019-10-17 14:48:58	R2robot	yuken: are you the guy that was working on fog of war?
+2019-10-17 14:49:18	yuken	elsie273, well I have no clue how to do a lot of what I'm tryna do here, like scrolling containers
+2019-10-17 14:50:22	 *	R2robot still thinks you should start with something MUCH smaller and simpler
+2019-10-17 14:50:31	R2robot	even 2d

@@ -75,3 +75,26 @@
 2019-09-13 17:35:29	-->	Bakenshake (041098ba@4.16.152.186) has joined #godotengine-devel
 2019-09-13 17:52:52	<--	nemerle_ (~nemerle@89.31.64.133) has quit (Quit: Konversation terminated!)
 2019-09-13 17:55:17	-->	bomb (~bomb@gateway/tor-sasl/bomb) has joined #godotengine-devel
+2019-10-17 11:12:42	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #godotengine-devel
+2019-10-17 11:12:42	--	Topic for #godotengine-devel is "Godot Engine Developers | Tasks up for grabs: https://github.com/godotengine/godot/issues | ML: https://listengine.tuxfamily.org/godotengine.org/devel | Logs: http://godot.eska.me/irc-logs | Can't join from Matrix? https://frama.link/matrix-irc-needreggednick"
+2019-10-17 11:12:42	--	Topic set by Akien (~Akien@godotengine/akien) on Sun, 23 Sep 2018 17:02:58
+2019-10-17 11:12:42	--	Channel #godotengine-devel: 151 nicks (1 op, 0 voices, 150 normals)
+2019-10-17 11:12:56	--	Channel created on Tue, 23 Jun 2015 16:46:41
+2019-10-17 11:19:14	<--	pieq (~pieq@canonical/oem/pieq) has quit (Remote host closed the connection)
+2019-10-17 11:19:37	-->	pieq (~pieq@canonical/oem/pieq) has joined #godotengine-devel
+2019-10-17 11:21:11	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #godotengine-devel
+2019-10-17 11:21:11	--	Topic for #godotengine-devel is "Godot Engine Developers | Tasks up for grabs: https://github.com/godotengine/godot/issues | ML: https://listengine.tuxfamily.org/godotengine.org/devel | Logs: http://godot.eska.me/irc-logs | Can't join from Matrix? https://frama.link/matrix-irc-needreggednick"
+2019-10-17 11:21:11	--	Topic set by Akien (~Akien@godotengine/akien) on Sun, 23 Sep 2018 17:02:58
+2019-10-17 11:21:11	--	Channel #godotengine-devel: 151 nicks (1 op, 0 voices, 150 normals)
+2019-10-17 11:21:26	--	Channel created on Tue, 23 Jun 2015 16:46:41
+2019-10-17 11:42:39	-->	dddddd (~dddddd@unaffiliated/dddddd) has joined #godotengine-devel
+2019-10-17 12:02:57	<--	pieq (~pieq@canonical/oem/pieq) has quit (Quit: Leaving)
+2019-10-17 12:28:10	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #godotengine-devel
+2019-10-17 12:37:02	-->	Yeldham (~michael@138.118.198.35) has joined #godotengine-devel
+2019-10-17 12:58:39	-->	YeldhamDev (michael@gateway/vpn/protonvpn/yeldham) has joined #godotengine-devel
+2019-10-17 12:59:06	<--	Yeldham (~michael@138.118.198.35) has quit (Ping timeout: 268 seconds)
+2019-10-17 13:19:36	<--	est31 (~quassel@gateway/tor-sasl/est31) has quit (Ping timeout: 260 seconds)
+2019-10-17 13:33:58	<--	dddddd (~dddddd@unaffiliated/dddddd) has quit (Remote host closed the connection)
+2019-10-17 13:35:16	-->	est31 (~quassel@gateway/tor-sasl/est31) has joined #godotengine-devel
+2019-10-17 13:56:21	-->	MoosePrime (~moose@207.44.22.117) has joined #godotengine-devel
+2019-10-17 14:30:42	-->	ignaloidas (~ignaloida@158.129.26.113) has joined #godotengine-devel

@@ -11,3 +11,25 @@
 2019-09-13 17:56:06		perl: scripts unloaded
 2019-09-13 17:56:06		python: scripts unloaded
 2019-09-13 17:56:06		fifo: pipe closed
+2019-10-17 11:12:24		python: stdout/stderr (?):   File "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py", line 47
+2019-10-17 11:12:24		python: stdout/stderr (?):     print "This script must be run under WeeChat."
+2019-10-17 11:12:24		python: stdout/stderr (?):                                                  ^
+2019-10-17 11:12:24		python: stdout/stderr (?): SyntaxError: Missing parentheses in call to 'print'. Did you mean print("This script must be run under WeeChat.")?
+2019-10-17 11:12:24	=!=	python: unable to parse file "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py"
+2019-10-17 11:12:24		python scripts loaded: buffer_autoclose, colorize_nicks, go
+2019-10-17 11:12:24		perl scripts loaded: iset
+2019-10-17 11:12:24		script: downloading list of scripts...
+2019-10-17 11:12:24		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, xfer
+2019-10-17 11:12:25		script: 362 scripts for WeeChat 2.6
+2019-10-17 11:20:37		perl: scripts unloaded
+2019-10-17 11:20:37		python: scripts unloaded
+2019-10-17 11:20:37		fifo: pipe closed
+2019-10-17 11:20:57		python: stdout/stderr (?):   File "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py", line 47
+2019-10-17 11:20:57		python: stdout/stderr (?):     print "This script must be run under WeeChat."
+2019-10-17 11:20:57		python: stdout/stderr (?):                                                  ^
+2019-10-17 11:20:57		python: stdout/stderr (?): SyntaxError: Missing parentheses in call to 'print'. Did you mean print("This script must be run under WeeChat.")?
+2019-10-17 11:20:57	=!=	python: unable to parse file "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py"
+2019-10-17 11:20:57		python scripts loaded: buffer_autoclose, colorize_nicks, go
+2019-10-17 11:20:57		perl scripts loaded: iset
+2019-10-17 11:20:57		script: 362 scripts for WeeChat 2.6
+2019-10-17 11:20:57		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, xfer

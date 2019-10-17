@@ -420,3 +420,301 @@
 2019-09-13 17:50:43	-->	nepugia (~nephele@200116b864a863004b33f1ed1381bf81.dip.versatel-1u1.de) has joined ##rust
 2019-09-13 17:51:19	<--	mryandao (~mryandao@gateway/tor-sasl/mryandao) has quit (Ping timeout: 260 seconds)
 2019-09-13 17:51:26	<--	ellcs (~mantel@193.174.12.196) has quit (Ping timeout: 265 seconds)
+2019-10-17 11:12:42	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined ##rust
+2019-10-17 11:12:42	--	Topic for ##rust is "Unofficial channel for the Rust programming language |  Playground https://play.rust-lang.org/ | Discord http://discord.gg/rust-lang | Forum https://users.rust-lang.org | Code of conduct: rust-lang.org/conduct.html | TL;DR: be nice and we'll get along just fine"
+2019-10-17 11:12:42	--	Topic set by Manishearth (~Manishear@wikipedia/Manishearth) on Mon, 13 May 2019 05:47:40
+2019-10-17 11:12:42	--	Channel ##rust: 560 nicks (2 ops, 0 voices, 558 normals)
+2019-10-17 11:12:58	--	Channel created on Tue, 30 Jul 2013 17:50:50
+2019-10-17 11:15:56	<--	toppler (~user@mtop.default.momentoftop.uk0.bigv.io) has quit (Ping timeout: 246 seconds)
+2019-10-17 11:17:03	-->	cats3d_ (~quassel@c-73-202-78-90.hsd1.ca.comcast.net) has joined ##rust
+2019-10-17 11:17:32	-->	ev4rist3 (~phoenix@x4db76dde.dyn.telefonica.de) has joined ##rust
+2019-10-17 11:18:52	Xatenev	hmm, I'd like to know more about how vlang.org does their memory safety
+2019-10-17 11:18:54	Xatenev	but i dont find a lot of info
+2019-10-17 11:19:13	Xatenev	err
+2019-10-17 11:19:14	Xatenev	vlang.io
+2019-10-17 11:19:40	<--	DTEIT (DTEIT@nat/redhat/x-aqsmvoilvodamjix) has quit (Quit: ZNC 1.7.4 - https://znc.in)
+2019-10-17 11:19:46	<--	cats3d_ (~quassel@c-73-202-78-90.hsd1.ca.comcast.net) has quit (Quit: http://quassel-irc.org - Chat comfortably. Anywhere.)
+2019-10-17 11:20:07	-->	cats3d_ (~quassel@c-73-202-78-90.hsd1.ca.comcast.net) has joined ##rust
+2019-10-17 11:21:11	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined ##rust
+2019-10-17 11:21:11	--	Topic for ##rust is "Unofficial channel for the Rust programming language |  Playground https://play.rust-lang.org/ | Discord http://discord.gg/rust-lang | Forum https://users.rust-lang.org | Code of conduct: rust-lang.org/conduct.html | TL;DR: be nice and we'll get along just fine"
+2019-10-17 11:21:11	--	Topic set by Manishearth (~Manishear@wikipedia/Manishearth) on Mon, 13 May 2019 05:47:40
+2019-10-17 11:21:11	--	Channel ##rust: 560 nicks (2 ops, 0 voices, 558 normals)
+2019-10-17 11:21:11	-->	DTEIT (DTEIT@nat/redhat/x-qaruolhwehlnrqss) has joined ##rust
+2019-10-17 11:21:22	Faux	It looks like a DSL for C, so presumably just inserts bounds checks, null checks, etc., and doesn't have pointer areithemereatic?
+2019-10-17 11:21:28	--	Channel created on Tue, 30 Jul 2013 17:50:50
+2019-10-17 11:22:14	Xatenev	Faux, have you looked at the vlang.io?
+2019-10-17 11:22:21	Xatenev	DSL sounds as if you looked at vlang.org, i misstyped that
+2019-10-17 11:23:21	Xatenev	yeah no pointer arithmetic
+2019-10-17 11:23:26	Xatenev	atleast i dont find it in the dos
+2019-10-17 11:23:27	Xatenev	docs*
+2019-10-17 11:24:13	-->	t7 (~tommo@2a00:23c5:1284:fc00:3d29:e556:f917:896b) has joined ##rust
+2019-10-17 11:24:16	-->	toppler (~user@mtop.default.momentoftop.uk0.bigv.io) has joined ##rust
+2019-10-17 11:24:55	-->	_Vi (~vi@2001:470:7bd6:1000::2) has joined ##rust
+2019-10-17 11:25:04	-->	fsasm (~fsasm@62-178-93-7.cable.dynamic.surfer.at) has joined ##rust
+2019-10-17 11:25:18	Xatenev	I do like that you only have to declare a parameter as a reference and the compiler figures out for you whether it should pass a reference or the actual object
+2019-10-17 11:25:19	Faux	https://paste.debian.net/1107619/ there's the output for the "json" example on their homepage, after running it through clang-format.
+2019-10-17 11:25:19	Xatenev	thats cool
+2019-10-17 11:26:36	<--	baali (~baali@59.97.69.245) has quit (Ping timeout: 268 seconds)
+2019-10-17 11:31:19	Xatenev	Faux, It can do both it seems
+2019-10-17 11:31:39	Xatenev	Does V use LLVM?
+2019-10-17 11:31:39	Xatenev	No. V compiles directly to machine code. and V can also emit human readable C, which can then be compiled to run on any platform.
+2019-10-17 11:31:50	Yaniel	*eventually
+2019-10-17 11:32:16	Faux	Without looking, I am almost certain that they are generating C, then immediately running it through gcc (or clang, but they have decided llvm is evil).
+2019-10-17 11:32:47	Xatenev	Faux, only for production builds because they don't have their own optimizer I think...
+2019-10-17 11:32:50	-->	JWatkins (~quassel@unaffiliated/jwatkins) has joined ##rust
+2019-10-17 11:32:52	Xatenev	atleast thats what I can read out of their docs
+2019-10-17 11:33:04	Yaniel	oh, they actually have something that works now?
+2019-10-17 11:33:17	-->	xsoultartar (~xsoultart@2001:268:c0a4:817:6cb6:711e:ac2c:ed33) has joined ##rust
+2019-10-17 11:33:18	Yaniel	last time it was brought up all they had was plans and broken code
+2019-10-17 11:33:32	j`ey	it can generate C, ish
+2019-10-17 11:33:37	<--	xsoultartar (~xsoultart@2001:268:c0a4:817:6cb6:711e:ac2c:ed33) has quit (Max SendQ exceeded)
+2019-10-17 11:33:42	Yaniel	and IIRC it was indeed going through C
+2019-10-17 11:33:55	Faux	faux@astoria:~/clone/v% strace -yy -ff -eexecve ./v examples/json.v  2>&1 | fgrep 'cc"'
+2019-10-17 11:33:57	Faux	[pid 15715] execve("/var/tmp/tcc/bin/tcc", ["/var/tmp/tcc/bin/tcc", "-std=gnu11", "-w", "-Werror=impl
+2019-10-17 11:34:08	-->	xsoultartar (~xsoultart@2001:268:c0a4:817:6cb6:711e:ac2c:ed33) has joined ##rust
+2019-10-17 11:34:10	Faux	Insecure use of temp paths, good job.
+2019-10-17 11:34:33	<--	xsoultartar (~xsoultart@2001:268:c0a4:817:6cb6:711e:ac2c:ed33) has quit (Max SendQ exceeded)
+2019-10-17 11:35:03	-->	xsoultartar (~xsoultart@2001:268:c0a4:817:6cb6:711e:ac2c:ed33) has joined ##rust
+2019-10-17 11:35:24	<--	xsoultartar (~xsoultart@2001:268:c0a4:817:6cb6:711e:ac2c:ed33) has quit (Max SendQ exceeded)
+2019-10-17 11:35:43	Xatenev	Faux, why insecure?
+2019-10-17 11:35:53	-->	xsoultartar (~xsoultart@2001:268:c0a4:817:6cb6:711e:ac2c:ed33) has joined ##rust
+2019-10-17 11:36:18	<--	xsoultartar (~xsoultart@2001:268:c0a4:817:6cb6:711e:ac2c:ed33) has quit (Max SendQ exceeded)
+2019-10-17 11:36:42	Faux	Writing to a predictable path in a directory others control (such as /tmp or /var/tmp) is a classic security vulnerability (except on kernels with the hardening turned on).
+2019-10-17 11:36:47	-->	xsoultartar (~xsoultart@2001:268:c0a4:817:6cb6:711e:ac2c:ed33) has joined ##rust
+2019-10-17 11:37:13	<--	xsoultartar (~xsoultart@2001:268:c0a4:817:6cb6:711e:ac2c:ed33) has quit (Max SendQ exceeded)
+2019-10-17 11:37:41	-->	xsoultartar (~xsoultart@2001:268:c0a4:817:6cb6:711e:ac2c:ed33) has joined ##rust
+2019-10-17 11:38:04	Xatenev	I don't understand how a security vulnerability can result from that
+2019-10-17 11:38:19	<--	toppler (~user@mtop.default.momentoftop.uk0.bigv.io) has quit (Ping timeout: 268 seconds)
+2019-10-17 11:38:39	-->	rrooij (~rrooij@unaffiliated/rroij) has joined ##rust
+2019-10-17 11:40:14	-->	pedro4 (~pedro4@134.19.179.179) has joined ##rust
+2019-10-17 11:40:31	Faux	CWE-377. Simplest case is the attacker creates a symlink from /tmp/temp.txt to /etc/shadow, and root opens and writes to it, and now the system is dead.
+2019-10-17 11:41:13	Xatenev	who is the attacker in that case :O
+2019-10-17 11:41:20	Faux	Me, a non-root user on the box.
+2019-10-17 11:41:59	Xatenev	so what you are saying is i replace /var/tmp/tcc/bin/tcc with a file called temp.txt
+2019-10-17 11:42:04	Xatenev	or well a symlink
+2019-10-17 11:42:24	Xatenev	well thats not possible
+2019-10-17 11:42:29	Xatenev	because of the access rights of the directory `tcc`
+2019-10-17 11:42:40	Xatenev	writing is not permitted
+2019-10-17 11:42:43	Xatenev	so i dont understand ur example :(
+2019-10-17 11:43:04	Faux	The simplest attack does not apply to directories, no. Go read the docs on the classic CWE.
+2019-10-17 11:43:36	-->	user9 (984d0e74@dcm-info-22.u-ga.fr) has joined ##rust
+2019-10-17 11:44:27	Xatenev	I have read CWE-377 and i dont understand how it applies in this case :/
+2019-10-17 11:44:40	Faux	It might not, but it almost certainly does.
+2019-10-17 11:45:09	Xatenev	from what I understand it would only if the generated tcc directory would be writeable by `Other`
+2019-10-17 11:45:19	Xatenev	otherwise its to be expected that it contains the expected files.
+2019-10-17 11:45:54	Faux	I am not doing a security review of a random project beyond pointing out that it would automatically, immediately fail any automatic security scanner.
+2019-10-17 11:46:09	Xatenev	:)
+2019-10-17 11:46:11	mixi	what does it do if the directory already exists with different permissions/owner than it expects?
+2019-10-17 11:46:20	-->	toppler (~user@mtop.default.momentoftop.uk0.bigv.io) has joined ##rust
+2019-10-17 11:46:25	j`ey	oh it's using tcc now, cool
+2019-10-17 11:46:44	mixi	and if it goes the extra mile to check permissions/owner: does it do it in a racy way?
+2019-10-17 11:46:57	-->	baali (~baali@59.98.234.75) has joined ##rust
+2019-10-17 11:48:20	Faux	You can probably do that safely now on linux, with mkdirat(2) and friends.
+2019-10-17 11:48:33	Faux	Not that anyone would ever bother.
+2019-10-17 11:52:36	Faux	Haha, if it can't run /var/tmp/tcc it .. just uses gcc.
+2019-10-17 11:53:27	Xatenev	Faux, lol
+2019-10-17 11:53:28	Xatenev	^^
+2019-10-17 11:56:00	Faux	So, the Makefile has the vuln, it runs "rm -rf /var/tmp/tcc". If you "ln -s /home /var/tmp/tcc" and then someone else runs 'make', they lose their homedir.
+2019-10-17 11:56:51	Xatenev	oh yeah
+2019-10-17 11:56:54	Xatenev	thats no good
+2019-10-17 11:57:30	Faux	Hardened distros, including Ubuntu, ship with YAMA enabled, which should block that, but I didn't test it.
+2019-10-17 11:58:01	<--	Edu4rdSHL (~edu4rdshl@fsf/member/edu4rdshl) has quit (Quit: Leaving)
+2019-10-17 11:58:32	<--	tomboy64 (~tomboy64@gateway/tor-sasl/tomboy64) has quit (Remote host closed the connection)
+2019-10-17 11:58:33	Yaniel	ahh the classic "well then just delete... everything?"
+2019-10-17 11:58:58	mixi	i'm pretty sure rm -rf doesn't follow symlinks
+2019-10-17 11:59:12	Yaniel	a lot of fun was had when steam had a similar bug
+2019-10-17 11:59:36	mixi	it would be different if the command was "rm -rf /var/tmp/tcc/" (note the trailing slash)
+2019-10-17 11:59:54	<--	toppler (~user@mtop.default.momentoftop.uk0.bigv.io) has quit (Ping timeout: 268 seconds)
+2019-10-17 11:59:59	-->	Edu4rdSHL (~edu4rdshl@fsf/member/edu4rdshl) has joined ##rust
+2019-10-17 12:00:04	Yaniel	I think the initial report was like "steam tried to update itself and now my / is empty"
+2019-10-17 12:00:05	Faux	mixi: *flips table*
+2019-10-17 12:00:34	Xatenev	mixi, It has a trailing slash.
+2019-10-17 12:00:39	-->	Mrbuck (~Mrbuck@ec2-34-202-1-168.compute-1.amazonaws.com) has joined ##rust
+2019-10-17 12:00:40	Faux	mixi: It is. But I wasn't aware of that, I only tested it.
+2019-10-17 12:02:43	Faux	That zsh tab completion thing, where it draws the /, then removes it if you press return, is now creeping me out.
+2019-10-17 12:03:53	<--	lord| (~solenodic@unaffiliated/solenodic) has quit (Ping timeout: 276 seconds)
+2019-10-17 12:07:20	Moongoodgirl	isn't like half the point of V that it compiles to C?
+2019-10-17 12:08:28	j`ey	Moongoodgirl: dont think so
+2019-10-17 12:08:46	-->	toppler (~user@mtop.default.momentoftop.uk0.bigv.io) has joined ##rust
+2019-10-17 12:09:58	Moongoodgirl	huh.
+2019-10-17 12:12:14	Yaniel	no, afaik that is more of a technical limitation for now
+2019-10-17 12:13:15	<--	Stanley00 (~Stanley00@unaffiliated/stanley00) has quit (Remote host closed the connection)
+2019-10-17 12:13:20	<--	rrooij (~rrooij@unaffiliated/rroij) has quit (Ping timeout: 265 seconds)
+2019-10-17 12:18:44	<--	xsoultartar (~xsoultart@2001:268:c0a4:817:6cb6:711e:ac2c:ed33) has quit (Quit: Leaving)
+2019-10-17 12:20:15	<--	toppler (~user@mtop.default.momentoftop.uk0.bigv.io) has quit (Ping timeout: 268 seconds)
+2019-10-17 12:22:50	elichai2	any way to make this work? https://play.rust-lang.org/?version=stable&mode=debug&edition=2018&gist=3e95d748642db2358022268dffe8654a
+2019-10-17 12:23:26	-->	Stanley00 (~Stanley00@unaffiliated/stanley00) has joined ##rust
+2019-10-17 12:26:29	-->	lord| (~solenodic@unaffiliated/solenodic) has joined ##rust
+2019-10-17 12:28:04	-->	toppler (~user@mtop.default.momentoftop.uk0.bigv.io) has joined ##rust
+2019-10-17 12:29:13	voker57	elichai2: https://play.rust-lang.org/?version=stable&mode=debug&edition=2018&gist=d3a673c9ecf84ddb003265fdee785b50
+2019-10-17 12:29:21	Mrbuck	play.rust is copy cat og plat.go ?
+2019-10-17 12:29:31	Mrbuck	coped from goland play ?
+2019-10-17 12:30:09	elichai2	voker57: hmm why?
+2019-10-17 12:30:16	voker57	why what?
+2019-10-17 12:30:38	Moongoodgirl	elichai2: Files track their position. After writing data, the position is after the data you just wrote.
+2019-10-17 12:30:56	Moongoodgirl	elichai2: If there wasn't any other data in the file, then you're at the end of the file, and read() returns empty.
+2019-10-17 12:31:44	Moongoodgirl	Mrbuck: well, it looks different :P
+2019-10-17 12:32:24	elichai2	Moongoodgirl: so why is it required even if I use the file descriptor itself?
+2019-10-17 12:32:47	Faux	The file descriptor tracks it, not Rust.
+2019-10-17 12:33:00	Moongoodgirl	elichai2: You're not using a raw file descriptor; you're using a Rust `File`.
+2019-10-17 12:33:01	Faux	POSIX baby.
+2019-10-17 12:33:12	elichai2	I know. just a sec :)
+2019-10-17 12:33:14	Moongoodgirl	But, yeah, this is an OS thing, not specific to Rust.
+2019-10-17 12:33:14	elichai2	Faux: ohh
+2019-10-17 12:33:41	Faux	One day we'll invent a file API people can actually use!
+2019-10-17 12:33:43	elichai2	i'll look into the seek implementation. thanks :)
+2019-10-17 12:33:44	Mrbuck	Moongoodgirl: ok and are you good girl  ?
+2019-10-17 12:34:07	 *	Moongoodgirl is a very good girl. Woof. :3
+2019-10-17 12:34:10	Mrbuck	I noticed even in rust conf many women
+2019-10-17 12:34:13	Mrbuck	I love it
+2019-10-17 12:34:31	Mrbuck	Rust is women language I think
+2019-10-17 12:34:38	Mrbuck	rustbook coauthor a woman
+2019-10-17 12:34:45	Moongoodgirl	/r/unnecessarilygendered
+2019-10-17 12:34:46	elichai2	yep :) it calls lseek64(3)
+2019-10-17 12:35:23	Moongoodgirl	If we were inventing a file API from scratch, would we still track position?
+2019-10-17 12:35:24	Mrbuck	Moongoodgirl:  is that redidt ?
+2019-10-17 12:35:35	voker57	probably because Mozilla is SJWs and using gender quotas
+2019-10-17 12:38:29	capitol	O_o
+2019-10-17 12:38:41	Moongoodgirl	Making a new file API without being tied to current POSIX would actually be quite nice.
+2019-10-17 12:39:04	Moongoodgirl	We could have handles to paths, which you could use to unlink a file without accidentally unlinking a different file if it got replaced.
+2019-10-17 12:39:16	<--	toppler (~user@mtop.default.momentoftop.uk0.bigv.io) has quit (Ping timeout: 240 seconds)
+2019-10-17 12:39:33	Faux	https://github.com/FauxFaux/tempfile-fast-rs/blob/cbfe975e52bc07a2e5bafcefd74d194e8a54613f/src/sponge.rs#L9 >.>
+2019-10-17 12:39:50	Moongoodgirl	And also the Linux thing where you can make an anonymous file on a given filesystem, and later make a link to it (or not)
+2019-10-17 12:40:32	Faux	¬_¬_¬
+2019-10-17 12:44:06	Yaniel	>handles to paths, which you could use to unlink a file without accidentally unlinking a different file if it got replaced
+2019-10-17 12:44:15	Yaniel	isn't this how linux file descriptors work, at least for file contents?
+2019-10-17 12:44:41	Yaniel	s/linux/unix/
+2019-10-17 12:45:28	Yaniel	also, a new file api that is not tied to posix is quite a relevant thing for redox, no?
+2019-10-17 12:46:08	Moongoodgirl	There's no funlink() though.
+2019-10-17 12:46:40	Yaniel	mm right, that would not make sense since hardlinks exist
+2019-10-17 12:46:47	Moongoodgirl	And you can't atomically replace a file only if it's a specific file that you expect.
+2019-10-17 12:46:48	Yaniel	so it'd have to track which one was used
+2019-10-17 12:47:03	Yaniel	right
+2019-10-17 12:47:44	-->	toppler (~user@mtop.default.momentoftop.uk0.bigv.io) has joined ##rust
+2019-10-17 12:48:42	Moongoodgirl	…or, heck, not even path handles, but just have variants of unlink() and rename() that take device and inode numbers.
+2019-10-17 12:49:01	Moongoodgirl	I think that covers all the use cases.
+2019-10-17 12:49:10	Yaniel	unlink that takes a file descriptor maybe?
+2019-10-17 12:49:18	Yaniel	since that points to the inode
+2019-10-17 12:50:55	Moongoodgirl	You need a path too though.
+2019-10-17 12:51:00	Moongoodgirl	…like you just pointed out. xD
+2019-10-17 12:51:05	Yaniel	...right
+2019-10-17 12:51:19	Yaniel	need more coffee
+2019-10-17 12:51:23	Yaniel	or more sleep
+2019-10-17 12:51:25	Yaniel	or both
+2019-10-17 12:52:26	Moongoodgirl	so like `extern "C" fn unlinki(path: *const c::char, device: c::int, inode: c::long)`
+2019-10-17 12:53:10	Moongoodgirl	`-> c::int`
+2019-10-17 12:53:44	Yaniel	or funlink_from(path, fd) -> int
+2019-10-17 12:53:57	Yaniel	if you want to check the contents of the file before removing you need the fd anyway
+2019-10-17 12:54:02	Moongoodgirl	true
+2019-10-17 12:54:15	Moongoodgirl	but if you only want to check metadata, you don't need to open the file
+2019-10-17 12:54:58	-->	rrooij (~rrooij@unaffiliated/rroij) has joined ##rust
+2019-10-17 12:55:22	Yaniel	unless you use fstat()
+2019-10-17 12:56:58	-->	osa1_ (~osa1@haskell/developer/osa1) has joined ##rust
+2019-10-17 12:57:23	Moongoodgirl	the point is, if you use stat() and unlinki(), you don't need to open()
+2019-10-17 12:57:35	Moongoodgirl	but if you use stat() and unlink_from(), you /do/ need to open()
+2019-10-17 13:02:09	<--	toppler (~user@mtop.default.momentoftop.uk0.bigv.io) has quit (Ping timeout: 265 seconds)
+2019-10-17 13:05:15	<--	osa1_ (~osa1@haskell/developer/osa1) has quit (Ping timeout: 240 seconds)
+2019-10-17 13:05:15	<--	zofrex (~zofrex@unaffiliated/zofrex) has quit (Read error: Connection reset by peer)
+2019-10-17 13:05:56	-->	zofrex (~zofrex@unaffiliated/zofrex) has joined ##rust
+2019-10-17 13:09:40	-->	toppler (~user@mtop.default.momentoftop.uk0.bigv.io) has joined ##rust
+2019-10-17 13:11:52	-->	pjs902 (~quassel@140.184.2.20) has joined ##rust
+2019-10-17 13:14:13	-->	crockwork (~crockwork@66.205.193.158) has joined ##rust
+2019-10-17 13:18:12	<--	samrg472 (~samrg472@gateway/tor-sasl/samrg472) has quit (Ping timeout: 260 seconds)
+2019-10-17 13:18:24	-->	dbohdan (~dbohdan@unaffiliated/dbohdan) has joined ##rust
+2019-10-17 13:18:40	<--	andreas31 (~andreas@gateway/tor-sasl/andreas303) has quit (Ping timeout: 260 seconds)
+2019-10-17 13:19:09	<--	lawlesseel (~lawlessee@gateway/tor-sasl/lawlesseel) has quit (Ping timeout: 260 seconds)
+2019-10-17 13:19:09	<--	braydonf (~braydon@gateway/tor-sasl/braydonf) has quit (Ping timeout: 260 seconds)
+2019-10-17 13:19:09	<--	mryandao (~mryandao@gateway/tor-sasl/mryandao) has quit (Ping timeout: 260 seconds)
+2019-10-17 13:19:09	<--	simlay1 (~simlay@gateway/tor-sasl/simlay) has quit (Ping timeout: 260 seconds)
+2019-10-17 13:19:35	-->	repo (~jokke@jokke.space) has joined ##rust
+2019-10-17 13:19:36	<--	est31 (~quassel@gateway/tor-sasl/est31) has quit (Ping timeout: 260 seconds)
+2019-10-17 13:19:37	repo	hi!
+2019-10-17 13:20:13	-->	AbedB_ (~AbedBhuty@bzq-79-183-67-120.red.bezeqint.net) has joined ##rust
+2019-10-17 13:20:14	repo	i'm playing around with wasm-bindgen and was wondering if there's any way to pass an array of strings to an exported rust function?
+2019-10-17 13:21:03	repo	i don't see it listed in the supported types but i thought asking won't hurt
+2019-10-17 13:21:13	Yaniel	there is a way to pass strings at least
+2019-10-17 13:21:13	j`ey	a Vec<String> might work?
+2019-10-17 13:21:34	repo	j`ey: thanks, i'll give it a go
+2019-10-17 13:22:24	repo	hmm
+2019-10-17 13:22:27	repo	the trait bound `std::boxed::Box<[std::string::String]>: wasm_bindgen::convert::traits::FromWasmAbi` is not satisfied: the trait `wasm_bindgen::convert::traits::FromWasmAbi` is not implemented for `std::boxed::Box<[std::string::String]>
+2019-10-17 13:23:00	<--	AbedB (~AbedBhuty@bzq-79-176-90-216.red.bezeqint.net) has quit (Ping timeout: 246 seconds)
+2019-10-17 13:23:46	<--	toppler (~user@mtop.default.momentoftop.uk0.bigv.io) has quit (Ping timeout: 268 seconds)
+2019-10-17 13:24:04	repo	or maybe it's an x-y problem... i'm trying to do fuzzy search on a list of elements. if i could have a growing vector stored in a struct i guess i could add the strings one by one (while storing them in this vector)
+2019-10-17 13:24:24	repo	but i'm a total rust noobie so..
+2019-10-17 13:24:33	j`ey	Vec<String> is a growing vector
+2019-10-17 13:25:06	Yaniel	[String; N] would be an array
+2019-10-17 13:25:11	Yaniel	fixed-size
+2019-10-17 13:25:21	Yaniel	compile-time fixed-size even
+2019-10-17 13:25:38	repo	yeah
+2019-10-17 13:25:43	repo	that wouldn't do
+2019-10-17 13:26:33	repo	thanks for the quick help! i'll be trying things out!
+2019-10-17 13:26:41	Yaniel	an api that provides an iterator over results in order of descending accuracy could be quite nice too
+2019-10-17 13:26:48	repo	yeah
+2019-10-17 13:26:55	repo	exactly what i was thinking about
+2019-10-17 13:27:31	repo	i'm pretty stoked about this whole wasm-bindgen thing. i had no clue how far along it already is
+2019-10-17 13:27:34	Yaniel	although that matters more if you are communicating over a network, in which case the wasm bridge is irrelevant anyway :D
+2019-10-17 13:30:39	-->	toppler (~user@mtop.default.momentoftop.uk0.bigv.io) has joined ##rust
+2019-10-17 13:32:32	-->	braydonf (~braydon@gateway/tor-sasl/braydonf) has joined ##rust
+2019-10-17 13:32:39	-->	samrg472 (~samrg472@gateway/tor-sasl/samrg472) has joined ##rust
+2019-10-17 13:33:23	-->	mryandao (~mryandao@gateway/tor-sasl/mryandao) has joined ##rust
+2019-10-17 13:33:33	-->	simlay (~simlay@gateway/tor-sasl/simlay) has joined ##rust
+2019-10-17 13:35:16	-->	est31 (~quassel@gateway/tor-sasl/est31) has joined ##rust
+2019-10-17 13:35:57	-->	horatiohb (~horatiohb@167.99.225.252) has joined ##rust
+2019-10-17 13:41:11	<--	Stanley00 (~Stanley00@unaffiliated/stanley00) has quit (Read error: Connection reset by peer)
+2019-10-17 13:43:16	<--	toppler (~user@mtop.default.momentoftop.uk0.bigv.io) has quit (Ping timeout: 240 seconds)
+2019-10-17 13:47:42	-->	AbedB__ (~AbedBhuty@bzq-79-182-102-149.red.bezeqint.net) has joined ##rust
+2019-10-17 13:48:47	-->	Stanley00 (~Stanley00@unaffiliated/stanley00) has joined ##rust
+2019-10-17 13:50:18	<--	AbedB_ (~AbedBhuty@bzq-79-183-67-120.red.bezeqint.net) has quit (Ping timeout: 245 seconds)
+2019-10-17 13:51:49	-->	toppler (~user@mtop.default.momentoftop.uk0.bigv.io) has joined ##rust
+2019-10-17 13:55:33	-->	frostschutz (~frostschu@55d4e7d2.access.ecotel.net) has joined ##rust
+2019-10-17 14:00:08	-->	rustico (~nbases@2800:40:28:19d:d4e1:bbd7:7b28:4ce0) has joined ##rust
+2019-10-17 14:02:34	-->	osa1_ (~osa1@haskell/developer/osa1) has joined ##rust
+2019-10-17 14:04:59	<--	toppler (~user@mtop.default.momentoftop.uk0.bigv.io) has quit (Ping timeout: 265 seconds)
+2019-10-17 14:05:13	-->	narispo (~narispo@37.167.10.175) has joined ##rust
+2019-10-17 14:06:51	<--	osa1 (~osa1@haskell/developer/osa1) has quit (Quit: osa1)
+2019-10-17 14:06:58	<--	osa1_ (~osa1@haskell/developer/osa1) has quit (Ping timeout: 245 seconds)
+2019-10-17 14:07:07	-->	osa1 (~osa1@haskell/developer/osa1) has joined ##rust
+2019-10-17 14:08:46	<--	Mrbuck (~Mrbuck@ec2-34-202-1-168.compute-1.amazonaws.com) has quit (Quit: .)
+2019-10-17 14:11:06	-->	Havohey (~Havohey@185.52.147.240) has joined ##rust
+2019-10-17 14:11:10	-->	EvilKhaosKat (~evilkhaos@134.17.27.127) has joined ##rust
+2019-10-17 14:13:45	-->	toppler (~user@mtop.default.momentoftop.uk0.bigv.io) has joined ##rust
+2019-10-17 14:16:44	-->	xj (~xj@pa49-197-89-21.pa.qld.optusnet.com.au) has joined ##rust
+2019-10-17 14:16:47	-->	federico1 (~federico1@opensuse/member/Federico-Mena) has joined ##rust
+2019-10-17 14:18:03	<--	EvilKhaosKat (~evilkhaos@134.17.27.127) has quit
+2019-10-17 14:21:52	-->	EvilKhaosKat (~evilkhaos@134.17.27.127) has joined ##rust
+2019-10-17 14:21:55	<--	xj (~xj@pa49-197-89-21.pa.qld.optusnet.com.au) has quit (Remote host closed the connection)
+2019-10-17 14:23:49	-->	royal_screwup21 (89de72f4@gateway/web/cgi-irc/kiwiirc.com/ip.137.222.114.244) has joined ##rust
+2019-10-17 14:23:59	-->	andreas31 (~andreas@gateway/tor-sasl/andreas303) has joined ##rust
+2019-10-17 14:27:17	<--	toppler (~user@mtop.default.momentoftop.uk0.bigv.io) has quit (Ping timeout: 268 seconds)
+2019-10-17 14:28:28	-->	ggVGc (~ggVGc@unaffiliated/walt) has joined ##rust
+2019-10-17 14:29:05	-->	jenny-m (~jdm-@69-196-166-55.dsl.teksavvy.com) has joined ##rust
+2019-10-17 14:29:37	<--	kurashu89 (~kurashu89@2601:c6:c100:b840:44af:99c:fc6:9ee4) has quit (Remote host closed the connection)
+2019-10-17 14:30:24	-->	kurashu89 (~kurashu89@2601:c6:c100:b840:31f1:76f2:8e22:614e) has joined ##rust
+2019-10-17 14:32:41	-->	__gotcha (~Thunderbi@plone/gotcha) has joined ##rust
+2019-10-17 14:35:09	-->	tmager (~Thunderbi@96.78.200.121) has joined ##rust
+2019-10-17 14:35:37	<--	cheakoirccloud (uid293319@gateway/web/irccloud.com/x-fmelhqwwrknkflgp) has quit (Quit: Connection closed for inactivity)
+2019-10-17 14:35:55	-->	toppler (~user@mtop.default.momentoftop.uk0.bigv.io) has joined ##rust
+2019-10-17 14:44:03	ZirconiumX	Rust semantics question. If I make a memory access in a function that is ultimately never used, is the compiler allowed to optimise out that memory access?
+2019-10-17 14:44:11	sfackler	yes
+2019-10-17 14:44:18	sfackler	unless you use volatile loads
+2019-10-17 14:44:27	Lumpio-	...in a function that's never used?
+2019-10-17 14:44:35	Lumpio-	Oooh or is it that the memory access is never used or
+2019-10-17 14:46:27	ZirconiumX	The memory access :P
+2019-10-17 14:46:27	<--	hexfive (~hexfive@50.35.80.237) has quit (Quit: WeeChat 2.6)
+2019-10-17 14:46:42	ZirconiumX	Say I'm populating a struct with data from a table, but don't use some of the fields of it
+2019-10-17 14:49:29	<--	toppler (~user@mtop.default.momentoftop.uk0.bigv.io) has quit (Ping timeout: 268 seconds)
+2019-10-17 14:50:20	-->	ytain (~ghfg@2607:f2c0:921d:7a00:bcb3:a156:de4f:3301) has joined ##rust
+2019-10-17 14:50:25	-->	xsoultartar (~xsoultart@2001:268:c0a4:817:784f:8cc0:dd:6f62) has joined ##rust
+2019-10-17 14:52:57	j`ey	that's a tricky case, since you may use them in other functions?
+2019-10-17 14:53:19	j`ey	(or if the struct is local only, then yes, they should be able to be removed)
+2019-10-17 14:55:29	vorner	Especially if you get a warning that the field is assigned but never used (I don't remember the exact wording), then I think rustc is allowed to both remove the write and the actual field from the structure.
+2019-10-17 14:57:08	Lumpio-	I smell an X-Y problem
+2019-10-17 14:57:18	Lumpio-	ZirconiumX: Why does it matter if it's optimized out or not
+2019-10-17 14:57:25	Lumpio-	Are you doing something funny or just wondering about performance
+2019-10-17 14:57:40	ZirconiumX	MMIO side effects, for example
+2019-10-17 14:57:47	ZirconiumX	Also in general performance
+2019-10-17 14:58:07	Lumpio-	For any sort of memory-mapped IO you should always use volatile accesses
+2019-10-17 14:58:21	Lumpio-	https://crates.io/crates/vcell there
+2019-10-17 14:59:12	ZirconiumX	I realise this
+2019-10-17 15:02:38	ZirconiumX	Having written a device support crate I feel relatively experienced on MMIO
+2019-10-17 15:04:50	Lumpio-	Well at any rate, I'm pretty sure the compile is allowed to optimize out anything that doesn't have side effects in the execution model it assumes

@@ -1385,3 +1385,695 @@
 2019-09-13 17:55:02	CyberShadow	From the webpage: "Nanos gigantum humeris insidentes: This project is dedicated to my European heritage. It is strictly to be understood as a statement against the saccarine "sweet" liberal lie of "multiculturalism" which is going to destroy Europe as we know it, in particular against the Merkel regime selling out Europe for nothing as we watch. #TeamWhite"
 2019-09-13 17:55:18	<--	cnsunyour (~cnsunyour@114.244.176.207) has quit (Ping timeout: 265 seconds)
 2019-09-13 17:55:34	melodykh3	Similar messages are in the actual program iirc, one sec let me bring up the source
+2019-10-17 11:12:41	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #archlinux
+2019-10-17 11:12:41	--	Topic for #archlinux is "Welcome to Arch Linux, Good Luck: https://archlinux.org | Rules: https://goo.gl/XWFreH | Pastebins: see !paste"
+2019-10-17 11:12:41	--	Topic set by phrik (~phrik@archlinux/bot/phrik) on Tue, 17 Sep 2019 02:30:53
+2019-10-17 11:12:42	--	Channel #archlinux: 1702 nicks (2 ops, 0 voices, 1700 normals)
+2019-10-17 11:12:44	--	Channel created on Sun, 15 Feb 2004 06:08:31
+2019-10-17 11:12:48	PsychoTron	but it did work before
+2019-10-17 11:14:36	-->	frezer-02 (~grzegorz@188.146.53.161.nat.umts.dynamic.t-mobile.pl) has joined #archlinux
+2019-10-17 11:14:37	PsychoTron	!paste
+2019-10-17 11:14:38	@phrik	Paste short snippets (up to 3 lines) in channel. Please do NOT use pastebin.com or paste.ubuntu.com -- some good, sane paste services are http://ix.io, https://paste.rs, https://bpaste.net and https://gist.github.com. See !ix or !rs for an easy way to paste from a pipe.
+2019-10-17 11:15:43	jamespharvey20	PsychoTron: could be time to report upstream, see https://support.mozilla.org/en-US/kb/firefox-crashes-troubleshoot-prevent-and-get-help#w_get-help-fixing-this-crash to submit report, link to their community support forum, and #mozilla might be of help too
+2019-10-17 11:15:44	-->	cottoneyejim (~cottoneye@37.122.178.182) has joined #archlinux
+2019-10-17 11:15:44	@phrik	Title: Firefox crashes - Troubleshoot, prevent and get help fixing crashes | Firefox Help (at support.mozilla.org)
+2019-10-17 11:16:03	jamespharvey20	PsychoTron: if it wasn't too long ago when it worked, you could try downgrading some versions, but probably too far back won't work with current dependencies
+2019-10-17 11:16:13	-->	mkoskar (~mkoskar@unaffiliated/mkoskar) has joined #archlinux
+2019-10-17 11:16:24	<--	frezer-02 (~grzegorz@188.146.53.161.nat.umts.dynamic.t-mobile.pl) has quit (Quit: Konversation terminated!)
+2019-10-17 11:17:03	-->	mcquinn1 (~Thunderbi@p5485F124.dip0.t-ipconnect.de) has joined #archlinux
+2019-10-17 11:17:29	jamespharvey20	they also recommend running memtest to rule out bad ram.  not a bad idea, but doesn't exactly sound like that to me.  if you run it, you need to run it a lot longer than expected to more highly trust a passing result.
+2019-10-17 11:17:33	PsychoTron	https://bpaste.net/show/6Yrw
+2019-10-17 11:17:34	@phrik	Title: show (at bpaste.net)
+2019-10-17 11:18:01	<--	egonsen (~egonsen@unaffiliated/egonsen) has quit (Quit: Leaving)
+2019-10-17 11:18:02	-->	freswa (~freswa@p200300C52F2C9700C8CCD02BA0B70FAC.dip0.t-ipconnect.de) has joined #archlinux
+2019-10-17 11:18:05	<--	mcquinn (~Thunderbi@p200300C54F3B1300E6B318FFFE448220.dip0.t-ipconnect.de) has quit (Quit: mcquinn)
+2019-10-17 11:18:05	--	mcquinn1 is now known as mcquinn
+2019-10-17 11:18:15	-->	frezer-02 (~grzegorz@188.146.53.161.nat.umts.dynamic.t-mobile.pl) has joined #archlinux
+2019-10-17 11:19:33	-->	Codaraxis_ (~Codaraxis@141.98.255.153) has joined #archlinux
+2019-10-17 11:20:19	<--	frezer-02 (~grzegorz@188.146.53.161.nat.umts.dynamic.t-mobile.pl) has quit (Client Quit)
+2019-10-17 11:20:32	jamespharvey20	PsychoTron: could also compile it in debug mode to get a backtrace, that could help upstream fix it
+2019-10-17 11:21:11	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #archlinux
+2019-10-17 11:21:11	--	Topic for #archlinux is "Welcome to Arch Linux, Good Luck: https://archlinux.org | Rules: https://goo.gl/XWFreH | Pastebins: see !paste"
+2019-10-17 11:21:11	--	Topic set by phrik (~phrik@archlinux/bot/phrik) on Tue, 17 Sep 2019 02:30:53
+2019-10-17 11:21:11	--	Channel #archlinux: 1703 nicks (2 ops, 0 voices, 1701 normals)
+2019-10-17 11:21:14	--	Channel created on Sun, 15 Feb 2004 06:08:31
+2019-10-17 11:21:30	-->	freswa (~freswa@p200300C52F2C9700C8CCD02BA0B70FAC.dip0.t-ipconnect.de) has joined #archlinux
+2019-10-17 11:21:50	<--	hrehf (~foo@195-154-105-157.rev.poneytelecom.eu) has quit (Read error: Connection reset by peer)
+2019-10-17 11:22:48	<--	spcckai (~androirc@unaffiliated/spcckai) has quit (Ping timeout: 245 seconds)
+2019-10-17 11:23:16	<--	Codaraxis__ (Codaraxis@gateway/vpn/mullvad/codaraxis) has quit (Ping timeout: 240 seconds)
+2019-10-17 11:24:07	-->	vuoto (~vuoto@customer-212-237-101-103.ip4.gigabit.dk) has joined #archlinux
+2019-10-17 11:25:33	-->	collector1871 (~user@public-gprs368185.centertel.pl) has joined #archlinux
+2019-10-17 11:25:54	gpp	i updated KDE last night, and now when I login i just get a blinking cursor top left
+2019-10-17 11:25:58	gpp	making me reboot
+2019-10-17 11:26:07	<--	absolutejam (~absolutej@vrrp.core.bridgehead.infra.victoriaplum.com) has quit (Read error: Connection reset by peer)
+2019-10-17 11:26:22	gpp	has anything major happened with KDE? cant find anything on the bbs
+2019-10-17 11:26:34	-->	absolutejam (~absolutej@213.249.128.34) has joined #archlinux
+2019-10-17 11:27:16	<--	_illy_ (~illyohs@69.219.180.229) has quit (Quit: WeeChat 2.6)
+2019-10-17 11:28:02	-->	orbita (~orbita@nat-misc-2.keble.ox.ac.uk) has joined #archlinux
+2019-10-17 11:28:09	-->	silentz0r (554a5c2a@unaffiliated/silentz0r) has joined #archlinux
+2019-10-17 11:29:10	<--	Hail_Spacecake (~weechat@lobsters/users/hailspacecake/x-84238744) has quit (Remote host closed the connection)
+2019-10-17 11:29:15	<--	enoq (~textual@84-115-64-25.wifi.dynamic.surfer.at) has quit (Ping timeout: 240 seconds)
+2019-10-17 11:29:39	-->	Hail_Spacecake (~weechat@lobsters/users/hailspacecake/x-84238744) has joined #archlinux
+2019-10-17 11:29:46	<--	cotko (~cotko@84-255-193-179.static.t-2.net) has quit (Ping timeout: 252 seconds)
+2019-10-17 11:29:59	-->	cotko (~cotko@89-212-138-82.static.t-2.net) has joined #archlinux
+2019-10-17 11:30:23	silentz0r	hello, not really an arch-related question but I've been using my monitor on my laptop at 1440p, 144Hz and I just got a desktop with an i9 and integrated graphics (630) and it doesn't seem to be capable of doing 1440p/144Hz desktop display. Am I doing something wrong or does that sound right?
+2019-10-17 11:31:03	-->	enoq (~textual@84-115-65-75.wifi.dynamic.surfer.at) has joined #archlinux
+2019-10-17 11:31:24	-->	maccraft123 (~maccraft1@unaffiliated/maccraft123) has joined #archlinux
+2019-10-17 11:32:39	-->	DrZingo (~DrZingo@unaffiliated/gritlin) has joined #archlinux
+2019-10-17 11:32:49	-->	JWatkins (~quassel@unaffiliated/jwatkins) has joined #archlinux
+2019-10-17 11:33:21	<--	revoltingPeasant (~joe@unaffiliated/th3-g0d5) has quit (Read error: Connection reset by peer)
+2019-10-17 11:33:30	-->	mcquinn1 (~Thunderbi@p5485F124.dip0.t-ipconnect.de) has joined #archlinux
+2019-10-17 11:33:33	-->	lothar_m (~lothar_m@90.252.227.117) has joined #archlinux
+2019-10-17 11:33:37	<--	mcquinn (~Thunderbi@p5485F124.dip0.t-ipconnect.de) has quit (Quit: mcquinn)
+2019-10-17 11:33:37	--	mcquinn1 is now known as mcquinn
+2019-10-17 11:34:04	<--	mcquinn (~Thunderbi@p5485F124.dip0.t-ipconnect.de) has quit (Client Quit)
+2019-10-17 11:34:16	<--	kiuma (~kiuma@151.14.213.10) has quit (Ping timeout: 264 seconds)
+2019-10-17 11:34:25	-->	mcquinn (~Thunderbi@p200300C54F3B1300E6B318FFFE448220.dip0.t-ipconnect.de) has joined #archlinux
+2019-10-17 11:35:12	ulteq	silentz0r: Did you connect the monitor via DisplayPort?
+2019-10-17 11:35:40	-->	kekXs__ (~keks@188.65.94.50) has joined #archlinux
+2019-10-17 11:36:01	silentz0r	ulteq: no, I've been using an HDMI cable that came with it and it worked fine on my laptop
+2019-10-17 11:36:25	-->	soft_cement (uid323143@gateway/web/irccloud.com/x-dsaxcyfjaugsejhf) has joined #archlinux
+2019-10-17 11:36:57	ulteq	silentz0r: Ok, if it's only 1080p, then yes.
+2019-10-17 11:37:20	-->	spcckai (~androirc@unaffiliated/spcckai) has joined #archlinux
+2019-10-17 11:37:44	silentz0r	ulteq: on my laptop it did 1440p/144hz
+2019-10-17 11:37:46	<--	cyphix_ (~cyphix@unaffiliated/cyphix) has quit (Quit: WeeChat 2.3)
+2019-10-17 11:37:54	ulteq	silentz0r: Did you try to mess around with xrandr?
+2019-10-17 11:38:04	<--	vuoto (~vuoto@customer-212-237-101-103.ip4.gigabit.dk) has quit (Quit: vuoto)
+2019-10-17 11:38:20	-->	cyphix_ (~cyphix@unaffiliated/cyphix) has joined #archlinux
+2019-10-17 11:39:27	-->	outsidecontext (sid327858@gateway/web/irccloud.com/x-qrzszvekydvebiek) has joined #archlinux
+2019-10-17 11:39:47	-->	kiuma (~kiuma@151.14.213.10) has joined #archlinux
+2019-10-17 11:40:03	silentz0r	ulteq: not yet, will do. I'm just wondering if it's possible that the desktop's integrated GPU cannot do 1440p/144Hz
+2019-10-17 11:41:33	<--	spcckai (~androirc@unaffiliated/spcckai) has quit (Ping timeout: 245 seconds)
+2019-10-17 11:43:47	<--	hke (~hke@virt.hanneseichblatt.de) has quit (Quit: Ping timeout (120 seconds))
+2019-10-17 11:44:06	-->	hke (~hke@virt.hanneseichblatt.de) has joined #archlinux
+2019-10-17 11:44:18	-->	TheFuzzball (~TheFuzzba@217.138.51.254) has joined #archlinux
+2019-10-17 11:44:18	<--	mcquinn (~Thunderbi@p200300C54F3B1300E6B318FFFE448220.dip0.t-ipconnect.de) has quit (Quit: mcquinn)
+2019-10-17 11:44:24	<--	freswa (~freswa@p200300C52F2C9700C8CCD02BA0B70FAC.dip0.t-ipconnect.de) has quit (Quit: freswa)
+2019-10-17 11:44:27	-->	mcquinn1 (~Thunderbi@p5485F124.dip0.t-ipconnect.de) has joined #archlinux
+2019-10-17 11:44:47	<--	piperswe4 (~piperswe@delta.piperswe.me) has quit (Quit: Ping timeout (120 seconds))
+2019-10-17 11:44:50	-->	al2o3-cr (~gr33n7007@unaffiliated/gr33n7007h) has joined #archlinux
+2019-10-17 11:45:08	<--	johskar (~johskar@h1.skartland.net) has quit (Ping timeout: 248 seconds)
+2019-10-17 11:45:18	-->	piperswe4 (~piperswe@delta.piperswe.me) has joined #archlinux
+2019-10-17 11:45:42	<--	mickdermack (~michael@core.recodex.at) has quit (Ping timeout: 246 seconds)
+2019-10-17 11:45:56	<--	saltpepp3r (~saltpepp3@91.207.173.118) has quit (Ping timeout: 240 seconds)
+2019-10-17 11:45:58	MrElendig	quite possible
+2019-10-17 11:46:04	MrElendig	specially if old hdmi
+2019-10-17 11:46:36	<--	ulteq (~archie@p57874C39.dip0.t-ipconnect.de) has quit (Ping timeout: 240 seconds)
+2019-10-17 11:46:38	<--	mrgnz (~majo@diaspora.trash-talk.de) has quit (Ping timeout: 252 seconds)
+2019-10-17 11:46:43	<--	fps (~tapas@fps.io) has quit (Ping timeout: 245 seconds)
+2019-10-17 11:46:48	--	mcquinn1 is now known as mcquinn
+2019-10-17 11:46:53	MrElendig	you need hdmi >= 2.0 for 144Hz
+2019-10-17 11:46:55	-->	ixil (~ixil@82.197.178.137) has joined #archlinux
+2019-10-17 11:47:10	MrElendig	(or running it in crippled mode on 1.4)
+2019-10-17 11:47:20	MrElendig	crippled being 4:2:2 which looks like shit
+2019-10-17 11:47:20	-->	johskar (~johskar@h1.skartland.net) has joined #archlinux
+2019-10-17 11:47:41	-->	mrgnz (~majo@136.243.32.126) has joined #archlinux
+2019-10-17 11:47:43	MrElendig	er.. 4:2:0 even for 144Hz, which looks even worse
+2019-10-17 11:47:50	<--	stormsz (599b373f@a89-155-55-63.cpe.netcabo.pt) has quit (Remote host closed the connection)
+2019-10-17 11:48:16	MrElendig	check the mobo docs for which hdmi version it supports, also, got dp output?
+2019-10-17 11:48:25	PsychoTron	https://crash-stats.mozilla.org/report/index/c2a1ff9e-cf55-4153-be78-5fa0e0191017
+2019-10-17 11:48:26	@phrik	Title: [@ libxul.so@0x504c2b5 | libxul.so@0x504c1eb | libxul.so@0x504c2af | libxul.so@0x4450050 | libxul.so@0x444fdd0 | libxul.so@0x4498978 | libxul.so@0x44987d3 | libxul.so@0x3963d0d | libxul.so@0x445a46f | libxul.so@0x4496cf0 | libxul.so@0x4493b18 | libxul.so@...] - Firefox 69.0.3 Crash Report - Report ID: c2a1ff9e-cf55-4153-be78-5fa0e0191017 (at crash-stats.mozilla.org)
+2019-10-17 11:48:32	MrElendig	silentz0r: ^
+2019-10-17 11:48:32	-->	saltpepp3r (~saltpepp3@91.207.173.118) has joined #archlinux
+2019-10-17 11:48:56	<--	stepnem (~stepnem@185.112.167.114) has quit (Ping timeout: 276 seconds)
+2019-10-17 11:49:46	PsychoTron	I think that's the most recent crash
+2019-10-17 11:50:18	<--	lacrymology (~lacrymolo@25.red-88-16-34.dynamicip.rima-tde.net) has quit (Ping timeout: 252 seconds)
+2019-10-17 11:50:24	-->	freswa (~freswa@p200300C52F2C9700C8CCD02BA0B70FAC.dip0.t-ipconnect.de) has joined #archlinux
+2019-10-17 11:50:29	<--	maccraft123 (~maccraft1@unaffiliated/maccraft123) has quit (Quit: WeeChat 2.6)
+2019-10-17 11:51:33	<--	dbacc (~daniel@p200300EF2F29C0005EE0C5FFFEC75484.dip0.t-ipconnect.de) has quit (Ping timeout: 245 seconds)
+2019-10-17 11:52:05	<--	quitman (~master@217-64-148-150.pool.ovpn.com) has quit (Ping timeout: 268 seconds)
+2019-10-17 11:52:05	gpp	where are the DE config files?
+2019-10-17 11:52:05	gpp	plasma dies on me when i log in
+2019-10-17 11:52:17	gpp	also not really sure what im looking for in journalctl
+2019-10-17 11:52:33	MrElendig	all over $HOME in the case of kde/plasma
+2019-10-17 11:52:46	MrElendig	because using .config in 2019 is too hard
+2019-10-17 11:52:47	<--	freswa (~freswa@p200300C52F2C9700C8CCD02BA0B70FAC.dip0.t-ipconnect.de) has quit (Client Quit)
+2019-10-17 11:52:56	gpp	I do see "cannot find a command for specified session: plasma"
+2019-10-17 11:53:08	MrElendig	pacman -Qkk 1>/dev/null
+2019-10-17 11:53:37	gpp	that does what exactly?
+2019-10-17 11:54:03	MrElendig	man pacman
+2019-10-17 11:54:14	<--	sQVe (~sQVe@unaffiliated/sqve) has quit (Quit: Bye!)
+2019-10-17 11:54:17	MrElendig	or is it the 1> bit that confuses you=
+2019-10-17 11:54:19	MrElendig	?
+2019-10-17 11:54:22	gpp	yes
+2019-10-17 11:54:26	PsychoTron	does memtest86+ appear in grub menu now that it is installed?
+2019-10-17 11:54:36	MrElendig	PsychoTron: if you make an entry for it
+2019-10-17 11:54:36	<--	alephZer0 (~alephZer0@187.175.46.95) has quit (Ping timeout: 240 seconds)
+2019-10-17 11:54:48	-->	dbacc (~daniel@p200300EF2F29C0005EE0C5FFFEC75484.dip0.t-ipconnect.de) has joined #archlinux
+2019-10-17 11:54:56	-->	amcrae (~allanbrok@archlinux/developer/allan) has joined #archlinux
+2019-10-17 11:55:00	MrElendig	https://mywiki.wooledge.org/BashGuide/InputAndOutput#Redirection
+2019-10-17 11:55:03	-->	palooka-jock (~mike@45.126.44.146) has joined #archlinux
+2019-10-17 11:55:26	MrElendig	-Qkk is quite spammy, only the stderr is interesting usually
+2019-10-17 11:55:33	MrElendig	(and -Qkkq is a bit too silent)
+2019-10-17 11:55:36	Namarrgon	PsychoTron: are you booting via uefi?
+2019-10-17 11:55:44	<--	vevais (~vevais@vevais.powered.by.lunarbnc.net) has quit (Quit: See you, space cowboy!)
+2019-10-17 11:55:48	gpp	yeah no errors regarding kde/plasma, just some old python2 stuff
+2019-10-17 11:55:55	gpp	also cowsay
+2019-10-17 11:56:00	PsychoTron	no, this machine does not have it
+2019-10-17 11:56:31	MrElendig	been playing with pip?
+2019-10-17 11:56:31	Namarrgon	PsychoTron: did you regenerate grub.cfg?
+2019-10-17 11:56:31	-->	stepnem (~stepnem@185.112.167.114) has joined #archlinux
+2019-10-17 11:56:31	PsychoTron	Namarrgon, not yet
+2019-10-17 11:56:41	gpp	nope
+2019-10-17 11:56:49	<--	remy^ (~remy@unaffiliated/remy/x-3943829) has quit (Quit: Leaving)
+2019-10-17 11:56:55	PsychoTron	I don't remember how to make the entry
+2019-10-17 11:57:14	Namarrgon	the memtest package comes with the netry but you have to regenerate the grub.cfg
+2019-10-17 11:57:18	jamespharvey20	think grub-mkconfig will detect it in bios mode
+2019-10-17 11:57:29	<--	enoq (~textual@84-115-65-75.wifi.dynamic.surfer.at) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2019-10-17 11:58:01	<--	Edu4rdSHL (~edu4rdshl@fsf/member/edu4rdshl) has quit (Quit: Leaving)
+2019-10-17 11:58:30	jamespharvey20	as long as the memtest passes at last overnight, maybe even longer, you'll probably need to file bugreport upstream, possibly ask in #mozilla, and possibly compile a debug version of firefox to give a backtrace with symbols.  i could be wrong, but i don't think this'll be easy for them to fix without quite a bit of involvement from you.
+2019-10-17 11:58:31	<--	utsushi (~user@gateway/tor-sasl/utsushi) has quit (Remote host closed the connection)
+2019-10-17 11:58:31	<--	JohnnyMnemonic (~jm@gateway/tor-sasl/johnnymnemonic) has quit (Remote host closed the connection)
+2019-10-17 11:58:48	-->	JohnnyMnemonic (~jm@gateway/tor-sasl/johnnymnemonic) has joined #archlinux
+2019-10-17 11:59:59	-->	Edu4rdSHL (~edu4rdshl@fsf/member/edu4rdshl) has joined #archlinux
+2019-10-17 12:00:08	-->	remy^ (~remy@unaffiliated/remy/x-3943829) has joined #archlinux
+2019-10-17 12:00:18	-->	pantato (~ql@144.202.95.43) has joined #archlinux
+2019-10-17 12:00:36	PsychoTron	thanks a bunch
+2019-10-17 12:00:56	PsychoTron	showed that the entry went there
+2019-10-17 12:01:06	jamespharvey20	although, i do wonder if since libc-2.30.so::__GI___clock_gettime is the bottommost in the crash if this could be some kind of locale misconfiguration or glibc error
+2019-10-17 12:01:26	jamespharvey20	what's your locale.conf contents?
+2019-10-17 12:01:28	<--	Tools (~Casper@an.alternative.hidden.network) has quit (Remote host closed the connection)
+2019-10-17 12:01:38	<--	gratidude (~gratidude@unaffiliated/gratidude) has quit (Quit: WeeChat 2.6)
+2019-10-17 12:01:41	-->	HerbY_NL2 (~HerbY_NL2@2001:67c:2564:518:9c11:b2da:774e:62e4) has joined #archlinux
+2019-10-17 12:02:22	<--	klotzhauer (~klotzhaue@ip5f5a6213.dynamic.kabel-deutschland.de) has quit (Ping timeout: 268 seconds)
+2019-10-17 12:03:39	-->	utsushi (~user@gateway/tor-sasl/utsushi) has joined #archlinux
+2019-10-17 12:03:53	<--	lord| (~solenodic@unaffiliated/solenodic) has quit (Ping timeout: 276 seconds)
+2019-10-17 12:03:53	<--	fogobogo_ (~fogobogo@unaffiliated/fogobogo) has quit (Ping timeout: 250 seconds)
+2019-10-17 12:04:36	<--	palooka-jock (~mike@45.126.44.146) has quit (Quit: WeeChat 1.9.1)
+2019-10-17 12:04:45	<--	queip (~queip@unaffiliated/rezurus) has quit (Ping timeout: 250 seconds)
+2019-10-17 12:04:51	-->	queip_ (~queip@unaffiliated/rezurus) has joined #archlinux
+2019-10-17 12:04:57	-->	fogobogo (~fogobogo@unaffiliated/fogobogo) has joined #archlinux
+2019-10-17 12:05:08	-->	palooka-jock (~mike@45.126.44.146) has joined #archlinux
+2019-10-17 12:05:37	--	queip_ is now known as queip
+2019-10-17 12:06:00	jamespharvey20	i've found a few bugreports of non-firefox packages with that same libc function, and those turned out to be not bugs of libc, so i'm guessing it's still firefox here, but can't say for sure
+2019-10-17 12:06:30	-->	flapjack0811 (flapjack08@nat/intel/x-qdahzsztzkqnasro) has joined #archlinux
+2019-10-17 12:07:00	<--	flapjack0811 (flapjack08@nat/intel/x-qdahzsztzkqnasro) has quit (Client Quit)
+2019-10-17 12:07:07	-->	vevais (~vevais@vevais.powered.by.lunarbnc.net) has joined #archlinux
+2019-10-17 12:07:18	jamespharvey20	^ PsychoTron
+2019-10-17 12:07:35	-->	Tools (~Casper@an.alternative.hidden.network) has joined #archlinux
+2019-10-17 12:08:03	<--	Codaraxis_ (~Codaraxis@141.98.255.153) has quit (Ping timeout: 240 seconds)
+2019-10-17 12:09:33	-->	Ploppz (51f6f0a7@gateway/web/cgi-irc/kiwiirc.com/ip.81.246.240.167) has joined #archlinux
+2019-10-17 12:09:35	<--	mkoskar (~mkoskar@unaffiliated/mkoskar) has quit (Read error: Connection reset by peer)
+2019-10-17 12:09:36	gpp	still cant figure out why kde throws me back into a blinking cursor
+2019-10-17 12:11:02	<--	jirido (~jirido@217.64.127.195) has quit (Remote host closed the connection)
+2019-10-17 12:12:19	jjk96	gpp: does the command "plasma" exist?
+2019-10-17 12:12:58	jjk96	what DM are you using?
+2019-10-17 12:13:37	<--	smb374 (~thomas@2001:288:4001:d800:bc8b:4bec:63a0:2bcb) has quit (Quit: WeeChat 2.6)
+2019-10-17 12:14:09	amosbird	oh man, this keyboard keeps resetting the delay and rate after I did xset r rate 200 30
+2019-10-17 12:14:16	amosbird	is there a way to prevent that?
+2019-10-17 12:14:22	PsychoTron	==> finished: 5408 packages removed (disk space saved: 26.84 GiB) xD
+2019-10-17 12:14:42	perrier-jouet	is it possible to change one key so that it behaves like another key ? my "windows key" is 133 Super_L NoSymbol Super_L, and I have 'FN" key 134 Super_R NoSymbol Super_R, I wanted the FN key to be like the key 133, I did xmodmap -e "keycode 134=Super_L NoSymbol Super_L" and it did not work
+2019-10-17 12:14:57	<--	tsdh (~user@j289989.servers.jiffybox.net) has quit (Quit: Goodbye guys!)
+2019-10-17 12:15:16	-->	aglenday (~ashley@2001:44b8:31fe:db00:9266:642d:374a:150f) has joined #archlinux
+2019-10-17 12:16:03	-->	juicy_1n_0nly1 (~asus@45.56.150.28) has joined #archlinux
+2019-10-17 12:16:13	<--	juicy_1n_0nly1 (~asus@45.56.150.28) has left #archlinux
+2019-10-17 12:18:15	-->	vinosec (~Monokuai@194.95.154.90) has joined #archlinux
+2019-10-17 12:18:24	<--	icebit_ (~marco@159.65.87.172) has quit (Ping timeout: 268 seconds)
+2019-10-17 12:18:42	<--	NorthwestVegan (~Northwest@gateway/tor-sasl/northwestvegan) has quit (Remote host closed the connection)
+2019-10-17 12:21:01	well_laid_lawn	try spaces around the = sign
+2019-10-17 12:21:04	-->	spcckai (~androirc@unaffiliated/spcckai) has joined #archlinux
+2019-10-17 12:21:04	<--	absolutejam (~absolutej@213.249.128.34) has quit (Ping timeout: 265 seconds)
+2019-10-17 12:21:27	well_laid_lawn	xmodmap -e 'keycode 66 = '
+2019-10-17 12:21:46	well_laid_lawn	is one I hae here
+2019-10-17 12:21:55	well_laid_lawn	is one I have here
+2019-10-17 12:22:57	<--	futunebot (~futunebot@ti0578q160-0622.bb.online.no) has quit (Ping timeout: 250 seconds)
+2019-10-17 12:23:24	well_laid_lawn	that makes capslock do nothing
+2019-10-17 12:23:31	perrier-jouet	well_laid_lawn: I tried with the space it did not work, I have a corsair k55 keyboard
+2019-10-17 12:23:56	well_laid_lawn	the type of keyboard shoildn't matter
+2019-10-17 12:24:12	perrier-jouet	xmodmap -e 'keycode 134 = Super_L NoSymbol Super_L'
+2019-10-17 12:24:18	perrier-jouet	it did not work
+2019-10-17 12:24:41	<--	Gnea (~gnea@unaffiliated/gnea) has quit (Ping timeout: 250 seconds)
+2019-10-17 12:24:49	-->	Gnea (~gnea@unaffiliated/gnea) has joined #archlinux
+2019-10-17 12:24:57	perrier-jouet	well_laid_lawn:what I want to do is have a second "Windows" key on the right side of the keybord, instead I have a "FN" labeled key
+2019-10-17 12:25:01	-->	stitched_unicorn (~Red@fpa446c89f.tkyc516.ap.nuro.jp) has joined #archlinux
+2019-10-17 12:25:39	-->	NorthwestVegan (~Northwest@gateway/tor-sasl/northwestvegan) has joined #archlinux
+2019-10-17 12:25:49	-->	lord| (~solenodic@unaffiliated/solenodic) has joined #archlinux
+2019-10-17 12:26:10	well_laid_lawn	try making the FN key be nothing first
+2019-10-17 12:26:48	<--	ener2 (~quassel@gate.bach.cz) has quit (Quit: https://quassel-irc.org - Chat comfortably. Anywhere.)
+2019-10-17 12:27:13	-->	mkoskar (~mkoskar@unaffiliated/mkoskar) has joined #archlinux
+2019-10-17 12:27:22	-->	krabador (~krabador@unaffiliated/krabador) has joined #archlinux
+2019-10-17 12:27:30	well_laid_lawn	or - yyou can't have two keys be the same
+2019-10-17 12:28:24	well_laid_lawn	I might be wrong abou that
+2019-10-17 12:28:37	perrier-jouet	xmodmap -e '' like this ?
+2019-10-17 12:28:52	perrier-jouet	xmodmap -e 'keycode 134 = ' like this ?
+2019-10-17 12:29:11	well_laid_lawn	yep
+2019-10-17 12:29:46	perrier-jouet	did not work
+2019-10-17 12:31:44	well_laid_lawn	what does xev report about it ?
+2019-10-17 12:33:19	<--	cottoneyejim (~cottoneye@37.122.178.182) has quit (Quit: cottoneyejim)
+2019-10-17 12:34:58	-->	Leion1 (~Thunderbi@117.160.143.138) has joined #archlinux
+2019-10-17 12:35:05	<--	Leion (~Thunderbi@117.160.143.138) has quit (Ping timeout: 265 seconds)
+2019-10-17 12:35:05	--	Leion1 is now known as Leion
+2019-10-17 12:36:16	-->	absolutejam (~absolutej@154.62.128.42) has joined #archlinux
+2019-10-17 12:36:18	perrier-jouet	nothing
+2019-10-17 12:36:42	perrier-jouet	133 Super_L
+2019-10-17 12:36:44	<--	djustice (470cd774@71-12-215-116.dhcp.spbg.sc.charter.com) has quit (Remote host closed the connection)
+2019-10-17 12:37:01	-->	argo (~argo@unaffiliated/argo) has joined #archlinux
+2019-10-17 12:37:28	perrier-jouet	well_laid_lawn:xev for windows key gives 133 Super_L but for FN it gives nothing
+2019-10-17 12:37:31	perrier-jouet	a ghost key
+2019-10-17 12:37:50	rcf	Probably cannot remap it, then.
+2019-10-17 12:38:06	well_laid_lawn	after setting it to nothing did you set it to Super_L ?
+2019-10-17 12:38:22	-->	freswa (~freswa@exchange.betterbits.de) has joined #archlinux
+2019-10-17 12:38:52	<--	argo (~argo@unaffiliated/argo) has quit (Client Quit)
+2019-10-17 12:39:23	perrier-jouet	yes
+2019-10-17 12:39:24	-->	freeman42x (~freeman42@2a02:8084:e80:9580:2c64:ea33:4850:9137) has joined #archlinux
+2019-10-17 12:39:38	<--	zer0downtime (~jikistro@77.252.63.249) has quit (Ping timeout: 276 seconds)
+2019-10-17 12:39:48	perrier-jouet	the colors work perfect I have rgb keyboard corsair k55 but FN key is ghost key
+2019-10-17 12:40:15	-->	curvv (~quetzlcoa@unaffiliated/curvv) has joined #archlinux
+2019-10-17 12:40:49	<--	krabador (~krabador@unaffiliated/krabador) has quit (Quit: Leaving)
+2019-10-17 12:41:23	well_laid_lawn	you need tto remoe the modifier first
+2019-10-17 12:41:33	<--	queip (~queip@unaffiliated/rezurus) has quit (Ping timeout: 245 seconds)
+2019-10-17 12:41:43	well_laid_lawn	xmodmap -e 'remove mod4 = Super_R'
+2019-10-17 12:42:02	well_laid_lawn	https://askubuntu.com/questions/137172/how-to-remap-superleft-key-to-control-key should help
+2019-10-17 12:42:03	@phrik	Title: keyboard layout - How to remap Super(left) key to control key - Ask Ubuntu (at askubuntu.com)
+2019-10-17 12:42:28	<--	TheFuzzball (~TheFuzzba@217.138.51.254) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-10-17 12:42:57	-->	ulteq (~archie@p57874C39.dip0.t-ipconnect.de) has joined #archlinux
+2019-10-17 12:43:43	<--	silentz0r (554a5c2a@unaffiliated/silentz0r) has quit (Remote host closed the connection)
+2019-10-17 12:44:05	-->	queip (~queip@unaffiliated/rezurus) has joined #archlinux
+2019-10-17 12:44:16	perrier-jouet	then I issue the change ?
+2019-10-17 12:44:41	-->	tkrizek__ (~tkrizek@2001:67c:1220:8b4:e0:992d:6ef3:c42) has joined #archlinux
+2019-10-17 12:44:54	perrier-jouet	it did not work either thanks for the help and your time
+2019-10-17 12:45:21	well_laid_lawn	luck
+2019-10-17 12:45:52	<--	stitched_unicorn (~Red@fpa446c89f.tkyc516.ap.nuro.jp) has quit (Quit: stitched_unicorn)
+2019-10-17 12:46:56	<--	tkrizek_ (~tkrizek@nat-1.nic.cz) has quit (Ping timeout: 240 seconds)
+2019-10-17 12:47:27	horseface	does anybody know what the cause of these errors are? https://bpaste.net/raw/TJZW
+2019-10-17 12:47:59	horseface	it only happens when my external hdd is connected and they are displayed immediately after i boot my computer.
+2019-10-17 12:50:51	<--	hitori (~hitori@unaffiliated/hitori) has quit (Quit: WeeChat 2.4)
+2019-10-17 12:51:15	<--	sil3nt (~sil3nt@mh-esr1-74-215-178-171.fuse.net) has quit (Ping timeout: 240 seconds)
+2019-10-17 12:51:46	-->	TheFuzzball (~TheFuzzba@217.138.51.254) has joined #archlinux
+2019-10-17 12:52:22	-->	hitori (~hitori@unaffiliated/hitori) has joined #archlinux
+2019-10-17 12:55:31	<--	HerbY_NL2 (~HerbY_NL2@2001:67c:2564:518:9c11:b2da:774e:62e4) has quit (Quit: Leaving)
+2019-10-17 12:55:34	rcf	horseface: related to https://en.wikipedia.org/wiki/SCSI_Enclosure_Services -- if it still works, and you don't plan on using sg_ses to monitor, it's probably fine.
+2019-10-17 12:55:35	@phrik	Title: SCSI Enclosure Services - Wikipedia (at en.wikipedia.org)
+2019-10-17 12:56:08	<--	tropf (~hannes@wf0191.dip.tu-dresden.de) has quit (Ping timeout: 245 seconds)
+2019-10-17 12:56:11	gpp	jjk96: `plasma` does not exist
+2019-10-17 12:56:15	gpp	using kde
+2019-10-17 12:56:20	-->	Leion1 (~Thunderbi@117.160.143.138) has joined #archlinux
+2019-10-17 12:56:28	<--	Leion (~Thunderbi@117.160.143.138) has quit (Ping timeout: 264 seconds)
+2019-10-17 12:56:28	--	Leion1 is now known as Leion
+2019-10-17 12:56:31	gpp	jjk96: but i cant find where plasma is being called from when i login
+2019-10-17 12:57:01	gpp	i've tried setting `exec /usr/bin/startplasma-x11` in my .xinitrc
+2019-10-17 12:57:05	gpp	but that did nothing
+2019-10-17 12:57:30	jjk96	Okay, so you're using startx, and no display manager
+2019-10-17 12:57:30	-->	tropf (~hannes@wf0191.dip.tu-dresden.de) has joined #archlinux
+2019-10-17 12:58:00	horseface	i see, thanks rcf.
+2019-10-17 12:58:03	-->	jkwki (~jkwki@p200300CD47215A001E1BB5FFFE7A47F7.dip0.t-ipconnect.de) has joined #archlinux
+2019-10-17 12:58:46	jjk96	gpp: Or are you using a DM?
+2019-10-17 12:59:18	gpp	jjk96: i use GDM
+2019-10-17 12:59:21	endre	!yaourt
+2019-10-17 12:59:22	@phrik	Not supported here
+2019-10-17 12:59:52	<--	ulteq (~archie@p57874C39.dip0.t-ipconnect.de) has quit (Quit: WeeChat 2.6)
+2019-10-17 13:00:04	gpp	GDM works fine. i type my password in, choose kde/plasma, and then i get a blank screen with a blinking cursor top left :/
+2019-10-17 13:00:13	gpp	i find that i have to reboot
+2019-10-17 13:00:16	-->	HerbY_NL2 (~HerbY_NL2@2001:67c:2564:518:9c11:b2da:774e:62e4) has joined #archlinux
+2019-10-17 13:00:21	gpp	xfce is working though lol
+2019-10-17 13:00:38	jjk96	Okay, if you use GDM, then changing .xinitrc is no use
+2019-10-17 13:00:40	<--	TheFuzzball (~TheFuzzba@217.138.51.254) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-10-17 13:00:46	gpp	jjk96: ah right
+2019-10-17 13:00:51	<--	yokel (~yokel@unaffiliated/contempt) has quit (Ping timeout: 240 seconds)
+2019-10-17 13:00:56	<--	gigetoo (~gigetoo@c83-250-41-185.bredband.comhem.se) has quit (Ping timeout: 240 seconds)
+2019-10-17 13:01:10	<--	spcckai (~androirc@unaffiliated/spcckai) has quit (Remote host closed the connection)
+2019-10-17 13:01:14	jjk96	Are you trying to start the wayland or x11 version?
+2019-10-17 13:01:22	gpp	x11
+2019-10-17 13:01:24	<--	Kevlar_Noir (~lexou@73.70.197.77.rev.sfr.net) has quit (Quit: Konversation terminated!)
+2019-10-17 13:02:07	-->	raster (raster@enlightenment/developer/raster) has joined #archlinux
+2019-10-17 13:04:27	-->	gigetoo (~gigetoo@c83-250-41-185.bredband.comhem.se) has joined #archlinux
+2019-10-17 13:05:04	-->	TheFuzzball (~TheFuzzba@217.138.51.254) has joined #archlinux
+2019-10-17 13:06:03	<--	user844842 (user@gateway/vpn/mullvad/user844842) has quit (Ping timeout: 240 seconds)
+2019-10-17 13:06:17	<--	freeman42x (~freeman42@2a02:8084:e80:9580:2c64:ea33:4850:9137) has quit (Ping timeout: 276 seconds)
+2019-10-17 13:07:01	-->	spcckai (~androirc@unaffiliated/spcckai) has joined #archlinux
+2019-10-17 13:08:14	-->	dandels (~dandels@unaffiliated/dandels) has joined #archlinux
+2019-10-17 13:08:47	-->	mcquinn1 (~Thunderbi@p5482C2B4.dip0.t-ipconnect.de) has joined #archlinux
+2019-10-17 13:08:51	<--	cotko (~cotko@89-212-138-82.static.t-2.net) has quit (Ping timeout: 240 seconds)
+2019-10-17 13:08:56	horseface	rcf i cannot find that package in the repos... sg_ses...
+2019-10-17 13:08:56	horseface	is that a package?
+2019-10-17 13:08:58	-->	cotko_ (~cotko@84-255-193-179.static.t-2.net) has joined #archlinux
+2019-10-17 13:09:14	rcf	Part of sg3_utils
+2019-10-17 13:09:56	horseface	oh awesome, thanks.
+2019-10-17 13:10:25	<--	archwizard56 (~quassel@ec2-54-191-32-35.us-west-2.compute.amazonaws.com) has quit (Quit: No Ping reply in 180 seconds.)
+2019-10-17 13:10:44	-->	yokel (~yokel@unaffiliated/contempt) has joined #archlinux
+2019-10-17 13:11:31	<--	C0rn3j (5ab2bf9d@157.191.broadband11.iol.cz) has quit (Remote host closed the connection)
+2019-10-17 13:11:33	<--	horseface (horseface@gateway/vpn/mullvad/horseface) has quit (Quit: Leaving.)
+2019-10-17 13:11:53	-->	archwizard56 (~quassel@ec2-54-191-32-35.us-west-2.compute.amazonaws.com) has joined #archlinux
+2019-10-17 13:12:40	<--	mcquinn (~Thunderbi@p5485F124.dip0.t-ipconnect.de) has quit (Ping timeout: 268 seconds)
+2019-10-17 13:12:41	--	mcquinn1 is now known as mcquinn
+2019-10-17 13:13:25	-->	horseface (horseface@gateway/vpn/mullvad/horseface) has joined #archlinux
+2019-10-17 13:14:13	-->	crockwork (~crockwork@66.205.193.158) has joined #archlinux
+2019-10-17 13:15:08	<--	grazzolini (grazzolini@archlinux/developer/grazzolini) has quit (Ping timeout: 268 seconds)
+2019-10-17 13:16:47	-->	AntiComposite (~AntiCompo@wikipedia/AntiCompositeNumber) has joined #archlinux
+2019-10-17 13:17:54	<--	cd80 (bf3@gateway/vpn/privateinternetaccess/emul16) has quit (Quit: leaving)
+2019-10-17 13:18:15	-->	charlie5 (~rod@pa49-181-239-9.pa.nsw.optusnet.com.au) has joined #archlinux
+2019-10-17 13:18:36	MrElendig	journalctl -b -u gdm
+2019-10-17 13:18:40	<--	Hail_Spacecake (~weechat@lobsters/users/hailspacecake/x-84238744) has quit (Ping timeout: 260 seconds)
+2019-10-17 13:18:40	<--	CatzCraft (~zoey@gateway/tor-sasl/catzcraft) has quit (Ping timeout: 260 seconds)
+2019-10-17 13:18:40	<--	bitdex (~bitdex@gateway/tor-sasl/bitdex) has quit (Ping timeout: 260 seconds)
+2019-10-17 13:18:40	<--	chaky (~chaky@gateway/tor-sasl/chaky) has quit (Ping timeout: 260 seconds)
+2019-10-17 13:18:40	<--	andreas31 (~andreas@gateway/tor-sasl/andreas303) has quit (Ping timeout: 260 seconds)
+2019-10-17 13:18:40	<--	JZA (~JZA@gateway/tor-sasl/jza) has quit (Ping timeout: 260 seconds)
+2019-10-17 13:18:41	<--	klotz (~cyberklot@gateway/tor-sasl/klotz) has quit (Ping timeout: 260 seconds)
+2019-10-17 13:18:41	<--	BazookaTooth (~bob@gateway/tor-sasl/bazookatooth) has quit (Ping timeout: 260 seconds)
+2019-10-17 13:18:41	<--	vetr (~vetr@gateway/tor-sasl/vetr) has quit (Ping timeout: 260 seconds)
+2019-10-17 13:18:42	MrElendig	or -b -1
+2019-10-17 13:19:08	<--	utsushi (~user@gateway/tor-sasl/utsushi) has quit (Ping timeout: 260 seconds)
+2019-10-17 13:19:08	<--	JohnnyMnemonic (~jm@gateway/tor-sasl/johnnymnemonic) has quit (Ping timeout: 260 seconds)
+2019-10-17 13:19:08	<--	Hello71 (~Hello71@gateway/tor-sasl/hello71) has quit (Ping timeout: 260 seconds)
+2019-10-17 13:19:08	<--	noctavian (~noctavian@gateway/tor-sasl/noctavian) has quit (Ping timeout: 260 seconds)
+2019-10-17 13:19:08	<--	Adcock (~Adcock@gateway/tor-sasl/adcock) has quit (Ping timeout: 260 seconds)
+2019-10-17 13:19:09	<--	gxt (~gxt@gateway/tor-sasl/gxt) has quit (Ping timeout: 260 seconds)
+2019-10-17 13:19:09	<--	lawlesseel (~lawlessee@gateway/tor-sasl/lawlesseel) has quit (Ping timeout: 260 seconds)
+2019-10-17 13:19:09	<--	clueminati (~clueminat@gateway/tor-sasl/clueminati) has quit (Ping timeout: 260 seconds)
+2019-10-17 13:19:09	<--	KaseiWang (~KaseiWang@gateway/tor-sasl/kaseiwang) has quit (Ping timeout: 260 seconds)
+2019-10-17 13:19:09	<--	mojisun (~weechat@gateway/tor-sasl/mojisun) has quit (Ping timeout: 260 seconds)
+2019-10-17 13:19:09	<--	mryandao (~mryandao@gateway/tor-sasl/mryandao) has quit (Ping timeout: 260 seconds)
+2019-10-17 13:19:09	<--	jugs (~jugs@gateway/tor-sasl/jugs) has quit (Ping timeout: 260 seconds)
+2019-10-17 13:19:09	<--	nonsocial (~nonsocial@gateway/tor-sasl/nonsocial) has quit (Ping timeout: 260 seconds)
+2019-10-17 13:19:09	<--	purist (~purist@gateway/tor-sasl/purist) has quit (Ping timeout: 260 seconds)
+2019-10-17 13:19:27	<--	kiuma (~kiuma@151.14.213.10) has quit (Ping timeout: 268 seconds)
+2019-10-17 13:19:36	<--	NorthwestVegan (~Northwest@gateway/tor-sasl/northwestvegan) has quit (Ping timeout: 260 seconds)
+2019-10-17 13:19:36	<--	h4rd3n3D (~weechat@gateway/tor-sasl/h4rd3n3d) has quit (Ping timeout: 260 seconds)
+2019-10-17 13:19:36	<--	_aeris_ (~aeris@april/board/aeris) has quit (Ping timeout: 260 seconds)
+2019-10-17 13:19:36	<--	melpy (~melpy@gateway/tor-sasl/melpy) has quit (Ping timeout: 260 seconds)
+2019-10-17 13:21:51	-->	promach (~phung@2001:e68:542d:6eab:4cf6:e3cf:9d12:16c8) has joined #archlinux
+2019-10-17 13:22:13	promach	For https://aur.archlinux.org/packages/8188eu-dkms-git/ , why I have this error https://paste.ubuntu.com/p/ZJkTdP9BSj/ ?
+2019-10-17 13:22:14	@phrik	Title: AUR (en) - 8188eu-dkms-git (at aur.archlinux.org)
+2019-10-17 13:22:39	<--	agregory (~agregory@c-98-207-150-231.hsd1.ca.comcast.net) has quit (Quit: leaving)
+2019-10-17 13:23:04	-->	krabador (~krabador@unaffiliated/krabador) has joined #archlinux
+2019-10-17 13:25:11	mkoskar	promach: on what fs are you building it?
+2019-10-17 13:26:52	jamespharvey20	promach: what does "ls -ld /run/media/phung/227A-F47D/8188eu-dkms-git" and "ls -l /run/media/phung/227A-F47D/8188eu-dkms-git" show for ownership?  if anything's not phung, "chown phung:phung --recursive /run/media/phung/227A-F47D/8188eu-dkms-git"
+2019-10-17 13:27:10	<--	jcrypt (~jcrypt@2600:1f18:6738:e280::5) has quit (Quit: WeeChat 2.4)
+2019-10-17 13:28:22	-->	Pupnik (~Pupnik@ppp118-209-254-133.bras2.mel11.internode.on.net) has joined #archlinux
+2019-10-17 13:28:39	jamespharvey20	although my bet is mkoskar has it, that looks like a fat uuid.  anyways, i'm gone for hours so won't be here for followups
+2019-10-17 13:29:26	jamespharvey20	(fat doesn't have permisisons/ownership for individual files)
+2019-10-17 13:30:48	<--	vevais (~vevais@vevais.powered.by.lunarbnc.net) has quit (Quit: See you, space cowboy!)
+2019-10-17 13:31:07	-->	jcrypt (~jcrypt@dax.jcrypt.io) has joined #archlinux
+2019-10-17 13:31:09	-->	atrament666 (~atrament@cpc95006-newt38-2-0-cust73.19-3.cable.virginm.net) has joined #archlinux
+2019-10-17 13:31:32	-->	vevais (~vevais@vevais.powered.by.lunarbnc.net) has joined #archlinux
+2019-10-17 13:32:07	mkoskar	I think it's "doesn't support symlinks" case here
+2019-10-17 13:32:24	<--	StathisA (~StathisA@unaffiliated/stathisa) has quit (Ping timeout: 268 seconds)
+2019-10-17 13:32:42	-->	noctavian (~noctavian@gateway/tor-sasl/noctavian) has joined #archlinux
+2019-10-17 13:32:44	-->	JZA (~JZA@gateway/tor-sasl/jza) has joined #archlinux
+2019-10-17 13:32:47	-->	_aeris_ (~aeris@april/board/aeris) has joined #archlinux
+2019-10-17 13:32:56	<--	Leion (~Thunderbi@117.160.143.138) has quit (Ping timeout: 276 seconds)
+2019-10-17 13:33:08	perrier-jouet	MrElendig:hello
+2019-10-17 13:33:20	<--	X-dark (~X-dark@unaffiliated/x-dark) has quit (Read error: Connection reset by peer)
+2019-10-17 13:33:23	-->	mryandao (~mryandao@gateway/tor-sasl/mryandao) has joined #archlinux
+2019-10-17 13:33:25	-->	KaseiWang (~KaseiWang@gateway/tor-sasl/kaseiwang) has joined #archlinux
+2019-10-17 13:33:27	perrier-jouet	MrElendig: is it possible to have two keys on keyboard behave the same ?
+2019-10-17 13:33:36	-->	purist (~purist@gateway/tor-sasl/purist) has joined #archlinux
+2019-10-17 13:33:41	perrier-jouet	I tried with xmodmap and it did not work
+2019-10-17 13:33:49	-->	StathisA (~StathisA@unaffiliated/stathisa) has joined #archlinux
+2019-10-17 13:34:08	-->	mcquinn1 (~Thunderbi@p5485F124.dip0.t-ipconnect.de) has joined #archlinux
+2019-10-17 13:34:23	-->	Leion (~Thunderbi@117.160.143.138) has joined #archlinux
+2019-10-17 13:34:27	<--	cotko_ (~cotko@84-255-193-179.static.t-2.net) has quit (Ping timeout: 240 seconds)
+2019-10-17 13:34:27	-->	cotko (~cotko@89-212-138-82.static.t-2.net) has joined #archlinux
+2019-10-17 13:34:49	-->	X-dark (~X-dark@unaffiliated/x-dark) has joined #archlinux
+2019-10-17 13:34:56	perrier-jouet	like this xmodmap -e 'keycode 134 = Super_L NoSymbol Super_L' to mimick the 133 keycode wich is the windos key
+2019-10-17 13:35:14	-->	utsushi (~user@gateway/tor-sasl/utsushi) has joined #archlinux
+2019-10-17 13:35:23	promach	mkoskar: jamespharvey20: this is on FAT16
+2019-10-17 13:35:30	-->	BazookaTooth (~bob@gateway/tor-sasl/bazookatooth) has joined #archlinux
+2019-10-17 13:35:38	-->	JohnnyMnemonic (~jm@gateway/tor-sasl/johnnymnemonic) has joined #archlinux
+2019-10-17 13:36:00	-->	nonsocial (~nonsocial@gateway/tor-sasl/nonsocial) has joined #archlinux
+2019-10-17 13:36:04	-->	chaky (~chaky@gateway/tor-sasl/chaky) has joined #archlinux
+2019-10-17 13:36:12	-->	clueminati (~clueminat@gateway/tor-sasl/clueminati) has joined #archlinux
+2019-10-17 13:36:21	-->	gxt (~gxt@gateway/tor-sasl/gxt) has joined #archlinux
+2019-10-17 13:37:16	<--	mcquinn (~Thunderbi@p5482C2B4.dip0.t-ipconnect.de) has quit (Ping timeout: 240 seconds)
+2019-10-17 13:37:17	--	mcquinn1 is now known as mcquinn
+2019-10-17 13:37:26	promach	problem solved by using ext4 system
+2019-10-17 13:37:38	-->	Hello71 (~Hello71@gateway/tor-sasl/hello71) has joined #archlinux
+2019-10-17 13:38:11	-->	kl86 (3edb10ca@bzq-62-219-16-202.dcenter.bezeqint.net) has joined #archlinux
+2019-10-17 13:38:44	<--	krator44 (~krator44@unaffiliated/krator44) has quit (Read error: Connection reset by peer)
+2019-10-17 13:39:14	-->	krator44 (~krator44@unaffiliated/krator44) has joined #archlinux
+2019-10-17 13:39:31	-->	cd80 (bf3@gateway/vpn/privateinternetaccess/emul16) has joined #archlinux
+2019-10-17 13:39:33	<--	horseface (horseface@gateway/vpn/mullvad/horseface) has quit (Quit: Leaving.)
+2019-10-17 13:40:09	<--	krator44 (~krator44@unaffiliated/krator44) has quit (Max SendQ exceeded)
+2019-10-17 13:40:43	-->	klotz (~cyberklot@gateway/tor-sasl/klotz) has joined #archlinux
+2019-10-17 13:40:43	-->	krator44 (~krator44@unaffiliated/krator44) has joined #archlinux
+2019-10-17 13:41:10	-->	mojisun (~weechat@gateway/tor-sasl/mojisun) has joined #archlinux
+2019-10-17 13:41:24	-->	horseface (horseface@gateway/vpn/mullvad/horseface) has joined #archlinux
+2019-10-17 13:41:43	<--	horseface (horseface@gateway/vpn/mullvad/horseface) has quit (Remote host closed the connection)
+2019-10-17 13:41:57	-->	horseface (horseface@gateway/vpn/mullvad/horseface) has joined #archlinux
+2019-10-17 13:41:58	<--	HerbY_NL2 (~HerbY_NL2@2001:67c:2564:518:9c11:b2da:774e:62e4) has quit (Quit: Leaving)
+2019-10-17 13:42:29	<--	kl86 (3edb10ca@bzq-62-219-16-202.dcenter.bezeqint.net) has left #archlinux
+2019-10-17 13:42:34	-->	kerframil (kerframil@gentoo/user/kerframil) has joined #archlinux
+2019-10-17 13:43:27	-->	NorthwestVegan (~Northwest@gateway/tor-sasl/northwestvegan) has joined #archlinux
+2019-10-17 13:45:15	<--	krabador (~krabador@unaffiliated/krabador) has quit (Quit: Leaving)
+2019-10-17 13:45:17	<--	resurtm (~resurtm@5.104.156.51) has quit (Remote host closed the connection)
+2019-10-17 13:45:24	<--	soft_cement (uid323143@gateway/web/irccloud.com/x-dsaxcyfjaugsejhf) has quit (Quit: Connection closed for inactivity)
+2019-10-17 13:45:27	<--	[0x00] (~0x00@pool-108-30-215-173.nycmny.fios.verizon.net) has quit (Remote host closed the connection)
+2019-10-17 13:45:41	-->	resurtm (~resurtm@5.104.156.51) has joined #archlinux
+2019-10-17 13:45:42	-->	[0x00] (~0x00@pool-108-30-215-173.nycmny.fios.verizon.net) has joined #archlinux
+2019-10-17 13:45:46	-->	berton (~berton@181.220.83.67) has joined #archlinux
+2019-10-17 13:46:10	<--	fweht (uid344711@gateway/web/irccloud.com/x-azxylyjqfrbqmbah) has quit (Quit: Connection closed for inactivity)
+2019-10-17 13:47:28	<--	berton (~berton@181.220.83.67) has quit (Remote host closed the connection)
+2019-10-17 13:48:33	-->	berton (~berton@181.220.83.67) has joined #archlinux
+2019-10-17 13:50:06	-->	segurb (~segurb@unaffiliated/segurb) has joined #archlinux
+2019-10-17 13:50:07	-->	redp (~redp@67-207-104-238.static.wiline.com) has joined #archlinux
+2019-10-17 13:51:43	-->	StathisA_ (~StathisA@unaffiliated/stathisa) has joined #archlinux
+2019-10-17 13:52:37	-->	rebtoor (~rebtoor@unaffiliated/rebtoor) has joined #archlinux
+2019-10-17 13:53:50	<--	resurtm (~resurtm@5.104.156.51) has quit (Remote host closed the connection)
+2019-10-17 13:53:59	<--	StathisA (~StathisA@unaffiliated/stathisa) has quit (Ping timeout: 268 seconds)
+2019-10-17 13:54:00	--	StathisA_ is now known as StathisA
+2019-10-17 13:54:24	-->	resurtm (~resurtm@5.104.156.51) has joined #archlinux
+2019-10-17 13:54:58	<--	redp (~redp@67-207-104-238.static.wiline.com) has quit (Ping timeout: 252 seconds)
+2019-10-17 13:55:33	-->	frostschutz (~frostschu@55d4e7d2.access.ecotel.net) has joined #archlinux
+2019-10-17 13:55:51	<--	LysergicDreams (~Lysergia@141.193.5.26) has quit (Ping timeout: 268 seconds)
+2019-10-17 13:55:51	-->	urodna (~urodna@unaffiliated/urodna) has joined #archlinux
+2019-10-17 13:57:00	<--	Chocobozzz (~florian@cpy.re) has quit (Remote host closed the connection)
+2019-10-17 13:57:27	-->	LysergicDreams (~Lysergia@141.193.5.26) has joined #archlinux
+2019-10-17 13:58:38	-->	orivej (~orivej@185.189.113.83) has joined #archlinux
+2019-10-17 13:58:38	<--	charlie5 (~rod@pa49-181-239-9.pa.nsw.optusnet.com.au) has quit (Read error: No route to host)
+2019-10-17 14:00:52	-->	Daisu (~Daisu@92.184.97.16) has joined #archlinux
+2019-10-17 14:00:56	-->	ulteq (~archie@p57874C39.dip0.t-ipconnect.de) has joined #archlinux
+2019-10-17 14:02:21	-->	jugs (~jugs@gateway/tor-sasl/jugs) has joined #archlinux
+2019-10-17 14:05:12	-->	Chocobozzz (~florian@cpy.re) has joined #archlinux
+2019-10-17 14:06:31	devoika	y device is faulty.
+2019-10-17 14:06:31	devoika	17.0845 < lolok> do you have to use the newest iso to install arch or will the usb i brunt a few months ago still be fine?
+2019-10-17 14:06:34	devoika	17.0845 < kode54> what the fuck
+2019-10-17 14:06:36	devoika	17.0845 < kode54> "GRUB_DISABLE_LINUX_UUID=true"
+2019-10-17 14:06:39	devoika	17.0846 < grawity> "a few months ago" should still do the job, but ideally that's as old as you go
+2019-10-17 14:06:42	devoika	17.0846 < kode54> they have that set in their grub config
+2019-10-17 14:06:44	devoika	17.0846 < lolok> thx
+2019-10-17 14:06:47	devoika	17.0846 < grawity> since there are occassional changes like adding hooks or adding zstd-compressed packages
+2019-10-17 14:06:49	--	Mode #archlinux [+o Namarrgon] by ChanServ
+2019-10-17 14:06:50	devoika	17.0846 < grawity> (e.g. see yesterday's news post)
+2019-10-17 14:06:52	<--	devoika (~arthur@109.136.183.217) has quit (Quit: leaving)
+2019-10-17 14:06:53	<--	Namarrgon has kicked devopsdeluxe (devopsdeluxe)
+2019-10-17 14:06:55	<--	Leion (~Thunderbi@117.160.143.138) has quit (Ping timeout: 265 seconds)
+2019-10-17 14:06:56	@Namarrgon	woops
+2019-10-17 14:08:04	demonicmaniac3	hahahaha
+2019-10-17 14:08:11	-->	alexozer (~alexozer@pool-173-49-130-2.phlapa.fios.verizon.net) has joined #archlinux
+2019-10-17 14:08:27	demonicmaniac3	send him an invite?
+2019-10-17 14:09:43	-->	CC0422 (~CC0422@151.47.20.78) has joined #archlinux
+2019-10-17 14:10:51	-->	JeffJohnson (~fho@unaffiliated/jeffjohnson) has joined #archlinux
+2019-10-17 14:11:25	-->	fogobogo_ (~fogobogo@unaffiliated/fogobogo) has joined #archlinux
+2019-10-17 14:11:54	-->	Hail_Spacecake (~weechat@lobsters/users/hailspacecake/x-84238744) has joined #archlinux
+2019-10-17 14:12:16	-->	user844842 (user@gateway/vpn/mullvad/user844842) has joined #archlinux
+2019-10-17 14:13:08	-->	hazaardinari (~qqqq@117.203.246.41) has joined #archlinux
+2019-10-17 14:13:12	-->	andril (~andril@2601:586:8480:a0:6af8:a94:20e9:f5a1) has joined #archlinux
+2019-10-17 14:13:30	hazaardinari	hey my archiso doesnt detect a western digital ssd
+2019-10-17 14:14:02	hazaardinari	in the bios it says controller type: nvme, controller interface:  PCIe
+2019-10-17 14:14:20	@Namarrgon	_your_ archiso?
+2019-10-17 14:14:20	<--	fogobogo (~fogobogo@unaffiliated/fogobogo) has quit (Ping timeout: 268 seconds)
+2019-10-17 14:14:32	--	Mode #archlinux [-o Namarrgon] by Namarrgon
+2019-10-17 14:14:41	hazaardinari	well, the archiso i flashed
+2019-10-17 14:14:52	Namarrgon	is the controller set to AHCI or RAID?
+2019-10-17 14:15:09	hazaardinari	it says non raid in the bios
+2019-10-17 14:15:24	hazaardinari	oh and the ssd has a windows install and an efi partiion
+2019-10-17 14:15:28	hazaardinari	partition
+2019-10-17 14:15:30	hazaardinari	esp
+2019-10-17 14:15:35	Namarrgon	find the setting that lets you set it to AHCI
+2019-10-17 14:15:44	hazaardinari	it doesnt let me change it
+2019-10-17 14:15:54	hazaardinari	and will that erase the drive?
+2019-10-17 14:16:05	Namarrgon	no, it will not erase the drive
+2019-10-17 14:16:16	<--	yunhao94_ (~yunhao94@183.198.196.184) has quit (Ping timeout: 240 seconds)
+2019-10-17 14:17:15	<--	ajak (~ajak@207.181.32.32) has quit (Remote host closed the connection)
+2019-10-17 14:17:18	-->	kiuma (~kiuma@151.14.213.10) has joined #archlinux
+2019-10-17 14:17:28	promach	Namarrgon: I have installed the out-of-tree wifi driver, compiled using other arch linux system
+2019-10-17 14:17:40	promach	however, I still could not use wifi-menu
+2019-10-17 14:17:51	-->	rafasc (~rafasc@unaffiliated/rafasc) has joined #archlinux
+2019-10-17 14:17:57	promach	I need wifi to send the printenv output for old account
+2019-10-17 14:18:01	Namarrgon	does "ip link" list the interfae?
+2019-10-17 14:18:05	Namarrgon	*face
+2019-10-17 14:18:13	<--	atrament666 (~atrament@cpc95006-newt38-2-0-cust73.19-3.cable.virginm.net) has quit (Ping timeout: 245 seconds)
+2019-10-17 14:18:13	<--	spcckai (~androirc@unaffiliated/spcckai) has quit (Ping timeout: 250 seconds)
+2019-10-17 14:18:42	promach	Namarrgon: "ip link" returns nothing
+2019-10-17 14:18:50	Namarrgon	nothing?
+2019-10-17 14:18:53	promach	yes
+2019-10-17 14:19:21	post-factum	even loopback?
+2019-10-17 14:19:22	-->	yunhao94_ (~yunhao94@183.198.196.184) has joined #archlinux
+2019-10-17 14:19:36	promach	no loopback as well
+2019-10-17 14:19:50	promach	just a newline
+2019-10-17 14:19:58	Namarrgon	please stop using your broken use account
+2019-10-17 14:20:01	Namarrgon	*user
+2019-10-17 14:20:15	promach	let me try the other user account
+2019-10-17 14:20:57	promach	Namarrgon: nothing for "ip link" on the other user account as well
+2019-10-17 14:20:58	promach	why ?
+2019-10-17 14:21:04	<--	horseface (horseface@gateway/vpn/mullvad/horseface) has quit (Quit: Leaving.)
+2019-10-17 14:21:06	Namarrgon	and as root?
+2019-10-17 14:21:18	<--	well_laid_lawn (~Jean-luc@c114-77-254-225.rochd21.qld.optusnet.com.au) has quit (Read error: Connection reset by peer)
+2019-10-17 14:21:39	hazaardinari	Namarrgon: this? : https://ibb.co/NrHmx4M
+2019-10-17 14:21:40	@phrik	Title: Snapchat-31078158 — imgbb.com (at ibb.co)
+2019-10-17 14:21:43	-->	infides (~infides@92.117.137.38) has joined #archlinux
+2019-10-17 14:21:52	promach	Namarrgon: nothing for "ip link" on the root account as well
+2019-10-17 14:21:58	Namarrgon	hazaardinari: yes, that looks about right
+2019-10-17 14:22:01	-->	CatzCraft (~zoey@gateway/tor-sasl/catzcraft) has joined #archlinux
+2019-10-17 14:22:03	-->	h4rd3n3D (~weechat@gateway/tor-sasl/h4rd3n3d) has joined #archlinux
+2019-10-17 14:22:10	Namarrgon	promach: uname -r
+2019-10-17 14:22:40	promach	"uname -r" on root account ?
+2019-10-17 14:22:45	-->	well_laid_lawn (~Jean-luc@c114-77-254-225.rochd21.qld.optusnet.com.au) has joined #archlinux
+2019-10-17 14:22:53	Namarrgon	whatever works
+2019-10-17 14:23:03	-->	horseface (horseface@gateway/vpn/mullvad/horseface) has joined #archlinux
+2019-10-17 14:23:10	hazaardinari	ok i would like to fucking thank you
+2019-10-17 14:23:20	Namarrgon	does windows still boot?
+2019-10-17 14:23:27	-->	sledgeha1mer (~sledgeham@unaffiliated/sledgehammer) has joined #archlinux
+2019-10-17 14:23:33	-->	andreas31 (~andreas@gateway/tor-sasl/andreas303) has joined #archlinux
+2019-10-17 14:23:38	hazaardinari	i spent 5 hours in several irc's trying to get this fucking ssd detected
+2019-10-17 14:23:45	-->	MinusGix (~MinusGix@2001:5b0:246b:a418:edce:8829:13d6:ecdd) has joined #archlinux
+2019-10-17 14:24:12	-->	agregory (~agregory@c-98-207-150-231.hsd1.ca.comcast.net) has joined #archlinux
+2019-10-17 14:24:18	hazaardinari	hang on
+2019-10-17 14:24:56	<--	sledgehammer (~sledgeham@unaffiliated/sledgehammer) has quit (Ping timeout: 240 seconds)
+2019-10-17 14:24:58	hazaardinari	nope
+2019-10-17 14:25:00	promach	Namarrgon: root account and the two user accounts return "5.3.6-arch1-1-ARCH"
+2019-10-17 14:25:14	Namarrgon	hazaardinari: switch back, install the ahci driver in windows first, then switch to ahci
+2019-10-17 14:25:21	-->	Noti (~steffan@194.44.236.118) has joined #archlinux
+2019-10-17 14:25:29	hazaardinari	ok
+2019-10-17 14:25:39	<--	SteffanW (~steffan@185.2.243.3) has quit (Ping timeout: 246 seconds)
+2019-10-17 14:25:40	hazaardinari	god i'm literally shitting myself
+2019-10-17 14:25:48	hazaardinari	ok it booted
+2019-10-17 14:25:56	hazaardinari	earlier i got bsod's
+2019-10-17 14:26:02	hazaardinari	said unable to locate boot device
+2019-10-17 14:26:04	hazaardinari	or something
+2019-10-17 14:26:20	hazaardinari	where do i get the ahci drivers?
+2019-10-17 14:27:21	Namarrgon	either from MS or intel
+2019-10-17 14:28:39	-->	jlamur (~jlamur@14.199.23.93.rev.sfr.net) has joined #archlinux
+2019-10-17 14:30:14	<--	hazaardinari (~qqqq@117.203.246.41) has quit (Disconnected by services)
+2019-10-17 14:30:24	jlamur	Hey! I've got a problem trying to install grub with uefi
+2019-10-17 14:30:38	jlamur	It seems like something is modifying my boot entries
+2019-10-17 14:30:59	-->	hazaardinari (~qqqq@117.203.246.41) has joined #archlinux
+2019-10-17 14:31:58	hazaardinari	so i dont have to update the bios or anything?
+2019-10-17 14:32:19	jlamur	`efibootmgr -v` shows correct values, but when I reboot, my computer doesn't want to boot on my new GRUB entry. If I re-run `efiboomgr -v` (via the arch iso), there is no file name and the VenHw value is set to an unknown uuid.
+2019-10-17 14:32:40	-->	dfstorm (~dfstorm@unaffiliated/dfstorm) has joined #archlinux
+2019-10-17 14:32:52	<--	CC0422 (~CC0422@151.47.20.78) has quit (Quit: -a- IRC for Android 2.1.55)
+2019-10-17 14:33:23	promach	Namarrgon: should I fix the wifi issue ?
+2019-10-17 14:33:36	<--	resurtm (~resurtm@5.104.156.51) has quit (Remote host closed the connection)
+2019-10-17 14:33:49	promach	because I think I could just pipe the printenv output to a file and then transfer it to another computer
+2019-10-17 14:33:55	-->	resurtm (~resurtm@5.104.156.51) has joined #archlinux
+2019-10-17 14:34:14	<--	user844842 (user@gateway/vpn/mullvad/user844842) has quit (Read error: Connection reset by peer)
+2019-10-17 14:34:18	Namarrgon	promach: if not even the lo is listend then you have bigger problems
+2019-10-17 14:34:50	hazaardinari	um i have no clue where to look for the driver
+2019-10-17 14:35:12	Namarrgon	you should try your favorite search engine, this is a common issue
+2019-10-17 14:35:20	-->	agowa338 (~agowa338@2a00:c320::1:0:1011) has joined #archlinux
+2019-10-17 14:35:23	hazaardinari	i dont know what to google
+2019-10-17 14:35:31	hazaardinari	am i looking for drivers of the ssd?
+2019-10-17 14:35:34	Namarrgon	now you're just trolling
+2019-10-17 14:35:39	-->	user844842 (user@gateway/vpn/mullvad/user844842) has joined #archlinux
+2019-10-17 14:35:41	-->	nycex (~nycex@gateway/tor-sasl/nycex) has joined #archlinux
+2019-10-17 14:35:56	hazaardinari	its a western digital drive, will i get something from there?
+2019-10-17 14:36:10	Namarrgon	what did i tell you to do?
+2019-10-17 14:36:23	-->	quitman (~master@217-64-148-150.pool.ovpn.com) has joined #archlinux
+2019-10-17 14:36:28	hazaardinari	"install the achi driver in windows"
+2019-10-17 14:36:36	Namarrgon	now type that into google
+2019-10-17 14:36:37	<--	collector1871 (~user@public-gprs368185.centertel.pl) has quit (Remote host closed the connection)
+2019-10-17 14:37:13	MrElendig	windows probably comes with the needed driver if it is win10
+2019-10-17 14:37:24	MrElendig	which is the only windows version you should use un 2019
+2019-10-17 14:37:36	MrElendig	in*
+2019-10-17 14:37:40	hazaardinari	it is 10
+2019-10-17 14:38:29	hazaardinari	well then it should have the driver?
+2019-10-17 14:38:56	MrElendig	usually yes
+2019-10-17 14:39:24	hazaardinari	but it doesnt because windows wont boot in ahci
+2019-10-17 14:39:36	<--	tropf (~hannes@wf0191.dip.tu-dresden.de) has quit (Ping timeout: 240 seconds)
+2019-10-17 14:40:10	MrElendig	probably not due to the driver
+2019-10-17 14:40:39	-->	maccraft123 (~maccraft1@unaffiliated/maccraft123) has joined #archlinux
+2019-10-17 14:40:44	hazaardinari	what else could be the issue?
+2019-10-17 14:40:59	MrElendig	if it is an actual nvme, then you should use nvme mode though
+2019-10-17 14:41:36	hazaardinari	well it says controller type: nvme, controller interface: PCIe
+2019-10-17 14:42:44	MrElendig	on the arch iso, ls /dev/nvme*
+2019-10-17 14:43:18	MrElendig	also zgrep NVME /proc/config
+2019-10-17 14:43:25	MrElendig	also zgrep NVME /proc/config.gz*
+2019-10-17 14:43:38	<--	alexozer (~alexozer@pool-173-49-130-2.phlapa.fios.verizon.net) has quit (Quit: WeeChat 2.6)
+2019-10-17 14:43:52	hazaardinari	with ahci mode or intel rst pentium ..?
+2019-10-17 14:44:13	hazaardinari	because it doesnt get detected in fdisk when i boot with the intel thing
+2019-10-17 14:44:14	MrElendig	native mode, not rapid storage/similar
+2019-10-17 14:44:26	hazaardinari	by native you mean default?
+2019-10-17 14:45:07	MrElendig	ahci is quite a bit slower than nvme mode
+2019-10-17 14:45:44	MrElendig	firmware often mislables anything that isn't raid as ahci though
+2019-10-17 14:46:00	hazaardinari	ok when i set it to ahci i see another menu entry appear in the bios by the name of nvme
+2019-10-17 14:46:02	hazaardinari	something
+2019-10-17 14:46:40	hazaardinari	i'm in intel's rst mode and i cant see the nvme
+2019-10-17 14:46:47	hazaardinari	/dev/nvme not found
+2019-10-17 14:47:05	MrElendig	disable rapid storage mode, it is broken af
+2019-10-17 14:47:12	hazaardinari	i agree
+2019-10-17 14:47:32	MrElendig	it's just fakeraid 2.0
+2019-10-17 14:47:43	<--	TheFuzzball (~TheFuzzba@217.138.51.254) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-10-17 14:48:06	hazaardinari	but wheni disable rst i can't boot int windows
+2019-10-17 14:48:11	MrElendig	if windows is installed on rst you might have a bad tine
+2019-10-17 14:48:14	MrElendig	time*
+2019-10-17 14:48:17	MrElendig	aka just reinstall windows
+2019-10-17 14:48:33	MrElendig	using rst on a single disk just makes no sense anyway
+2019-10-17 14:48:33	hazaardinari	huh
+2019-10-17 14:48:42	-->	tjbp (~tom@78.141.197.43) has joined #archlinux
+2019-10-17 14:48:58	MrElendig	you can sort of use rst from gnu/linux too, but it is a bit of a pain
+2019-10-17 14:49:01	codedmart	I have a new laptop 1920x1080 display, and an external monitor 3840x2160. Can I scale them independently? Everything is small on the external?
+2019-10-17 14:49:16	MrElendig	easiest/best is to just reinstall windows
+2019-10-17 14:49:31	MrElendig	codedmart: sort of
+2019-10-17 14:49:43	MrElendig	codedmart: works the least bad with wayland, but different dpi is just a pain
+2019-10-17 14:49:58	hazaardinari	so wipe the drive, set it to ahci, install windows there
+2019-10-17 14:50:12	PsychoTron	is firefox 65 version ok?
+2019-10-17 14:50:21	hazaardinari	no 69 is better
+2019-10-17 14:50:32	PsychoTron	does not work
+2019-10-17 14:50:38	MrElendig	mdadm --assemble --scan
+2019-10-17 14:50:47	MrElendig	see if it sees teh drive now
+2019-10-17 14:50:54	PsychoTron	hazaardinari, keeps crashing
+2019-10-17 14:51:01	MrElendig	won't show as /dev/nvme of course
+2019-10-17 14:51:08	MrElendig	PsychoTron: try nightly binary?
+2019-10-17 14:51:09	hazaardinari	i can't wipe windows rn
+2019-10-17 14:51:44	MrElendig	hazaardinari: what did mdadm say?
+2019-10-17 14:52:24	hazaardinari	i have to run that in archiso?
+2019-10-17 14:52:28	hazaardinari	on rst or ahci?
+2019-10-17 14:52:33	MrElendig	the former
+2019-10-17 14:52:34	codedmart	MrElendig: I tried a number of different xrandr commands with --fb and --panning from online reading but all resulted in oddities.
+2019-10-17 14:52:48	-->	Adcock (~Adcock@gateway/tor-sasl/adcock) has joined #archlinux
+2019-10-17 14:53:16	-->	lacrymology (~lacrymolo@static-119-49-228-77.ipcom.comunitel.net) has joined #archlinux
+2019-10-17 14:53:18	<--	PsychoTron (~PsychoTro@2001:999:63:21b3:f576:adc:a9d6:7de6) has quit (Remote host closed the connection)
+2019-10-17 14:53:43	<--	killsushi (~killsushi@2607:fea8:3b80:b21:1f4:6a92:6cf9:503a) has quit (Quit: Leaving)
+2019-10-17 14:53:57	-->	kikiji (~kikiji@2a01:cb11:d2:e400:8e07:e0b0:af33:2496) has joined #archlinux
+2019-10-17 14:54:24	MrElendig	codedmart: which wm/de?
+2019-10-17 14:54:29	-->	zer0downtime (~jikistro@77.252.63.249) has joined #archlinux
+2019-10-17 14:54:35	hazaardinari	em archiso is stuck on sha256 validated now
+2019-10-17 14:54:53	codedmart	Well I tried in gnome and herbstluftwm.
+2019-10-17 14:55:05	codedmart	The results varied a bit between them.
+2019-10-17 14:55:47	MrElendig	gnome only does per monitor scaling with wayland
+2019-10-17 14:55:51	hazaardinari	MrElendig: no arrays found in config file or automatically
+2019-10-17 14:55:52	<--	kikiji (~kikiji@2a01:cb11:d2:e400:8e07:e0b0:af33:2496) has quit (Client Quit)
+2019-10-17 14:56:20	codedmart	MrElendig: if I choose 200% on one monitor in gnome in the settings it applies it to both.
+2019-10-17 14:56:55	<--	xace (~noname@unaffiliated/xace) has quit (Remote host closed the connection)
+2019-10-17 14:57:36	-->	TheFuzzball (~TheFuzzba@217.138.51.254) has joined #archlinux
+2019-10-17 14:57:40	<--	horseface (horseface@gateway/vpn/mullvad/horseface) has quit (Quit: Leaving.)
+2019-10-17 14:57:46	MrElendig	are you running wayland?
+2019-10-17 14:57:56	codedmart	Hmm... I remember seeing an option on my other laptop about gnome, gnome xorg. I only see one option upon gdm.
+2019-10-17 14:58:04	jlamur	My efi boot options of are automatically changed from `HD(1,GPT,<correct_partition_uuid>,0x800,0x100000)/File(\EFI\GRUB\grubx64.efi)` to `VenHw(99e275e7-75a0-4b37-a2e6-c5385e6c00cb)` at each reboot. Any idea why?
+2019-10-17 14:58:36	codedmart	So maybe not? I would rather use X though since I rarely use gnome and mostly use herbstluftwm or xmonad.
+2019-10-17 14:58:41	<--	kiuma (~kiuma@151.14.213.10) has quit (Remote host closed the connection)
+2019-10-17 14:58:58	MrElendig	codedmart: nvidia?
+2019-10-17 14:59:23	codedmart	Yup
+2019-10-17 15:00:27	<--	KH405 (~KH405@37.72.169.195) has quit (Quit: Ping timeout (120 seconds))
+2019-10-17 15:00:28	<--	kraem (~kraem@62.63.192.110) has quit (Ping timeout: 245 seconds)
+2019-10-17 15:00:34	MrElendig	then you are not running on wayland
+2019-10-17 15:00:41	codedmart	Ah I see
+2019-10-17 15:00:44	codedmart	OK
+2019-10-17 15:00:51	-->	horseface (horseface@gateway/vpn/mullvad/horseface) has joined #archlinux
+2019-10-17 15:01:11	-->	kikiji (~kikiji@2a01:cb11:d2:e400:b92a:5e2:cd17:caf4) has joined #archlinux
+2019-10-17 15:01:18	hazaardinari	so my only option is to get rid of rst?
+2019-10-17 15:01:20	<--	linduxed (~linduxed@155.4.60.131) has quit (Ping timeout: 276 seconds)
+2019-10-17 15:01:29	<--	fishguts_ (~fishguts@121-200-12-43.79c80c.syd.nbn.aussiebb.net) has quit (Quit: leaving)
+2019-10-17 15:01:59	<--	stoffepojken (stoffe@h-148-185.A328.priv.bahnhof.se) has quit (Ping timeout: 276 seconds)
+2019-10-17 15:02:04	-->	fishguts (~fishguts@121-200-12-43.79c80c.syd.nbn.aussiebb.net) has joined #archlinux
+2019-10-17 15:02:34	<--	kikiji (~kikiji@2a01:cb11:d2:e400:b92a:5e2:cd17:caf4) has quit (Client Quit)
+2019-10-17 15:03:16	MrElendig	it is the best option
+2019-10-17 15:03:43	fishguts	Hi. If the zen kernel patchset includes the MuQSS scheduler which is authored by CK, how can there be a 5.3 release of the zen kernel when there hasn't been a 5.3 release of the ck patchset? Do they port the scheduler to the new kernel independently?
+2019-10-17 15:03:47	MrElendig	specially if you are currently on a oem installed copy of windows, with the assosiate malware
+2019-10-17 15:03:49	MrElendig	:p
+2019-10-17 15:04:05	MrElendig	fishguts: they ported it themself?
+2019-10-17 15:04:22	-->	kikiji (~kikiji@2a01:cb11:d2:e400:b92a:5e2:cd17:caf4) has joined #archlinux
+2019-10-17 15:04:25	MrElendig	you can look at their git log and see what they did
+2019-10-17 15:04:27	<--	absolutejam (~absolutej@154.62.128.42) has quit (Ping timeout: 240 seconds)
+2019-10-17 15:04:52	hazaardinari	but muh free windows

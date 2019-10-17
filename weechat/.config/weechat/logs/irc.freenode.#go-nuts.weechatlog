@@ -901,3 +901,115 @@
 2019-09-13 17:51:44	<--	imsky (~textual@unaffiliated/imsky) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
 2019-09-13 17:54:11	-->	d9k (~d9k@178-55-208-82.bb.dnainternet.fi) has joined #go-nuts
 2019-09-13 17:55:18	<--	cnsunyour (~cnsunyour@114.244.176.207) has quit (Ping timeout: 265 seconds)
+2019-10-17 11:12:42	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #go-nuts
+2019-10-17 11:12:42	--	Topic for #go-nuts is "golang.org | known issues: golang.org/issue | https://freenode.logbot.info/go-nuts | don't ask to ask, just ask | don't solve problems you don't have | did you check your errors?"
+2019-10-17 11:12:42	--	Topic set by skelterjohn (sid13218@gateway/web/irccloud.com/x-gfctwrngwpjcjgtp) on Tue, 18 Jun 2019 19:13:21
+2019-10-17 11:12:42	--	Channel #go-nuts: 768 nicks (0 ops, 3 voices, 765 normals)
+2019-10-17 11:12:42	--	PvNotice(ChanServ): Please follow the Go Community Code of Conduct when chatting here. See https://golang.org/conduct
+2019-10-17 11:12:50	--	Channel created on Mon, 09 Nov 2009 19:22:37
+2019-10-17 11:15:18	-->	AlexJakeGreen (~green@89.22.6.3) has joined #go-nuts
+2019-10-17 11:18:02	-->	freswa (~freswa@p200300C52F2C9700C8CCD02BA0B70FAC.dip0.t-ipconnect.de) has joined #go-nuts
+2019-10-17 11:20:06	<--	AlexJakeGreen (~green@89.22.6.3) has quit (Client Quit)
+2019-10-17 11:21:11	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #go-nuts
+2019-10-17 11:21:11	--	Topic for #go-nuts is "golang.org | known issues: golang.org/issue | https://freenode.logbot.info/go-nuts | don't ask to ask, just ask | don't solve problems you don't have | did you check your errors?"
+2019-10-17 11:21:11	--	Topic set by skelterjohn (sid13218@gateway/web/irccloud.com/x-gfctwrngwpjcjgtp) on Tue, 18 Jun 2019 19:13:21
+2019-10-17 11:21:11	--	Channel #go-nuts: 768 nicks (0 ops, 3 voices, 765 normals)
+2019-10-17 11:21:11	--	PvNotice(ChanServ): Please follow the Go Community Code of Conduct when chatting here. See https://golang.org/conduct
+2019-10-17 11:21:20	--	Channel created on Mon, 09 Nov 2009 19:22:37
+2019-10-17 11:21:30	-->	freswa (~freswa@p200300C52F2C9700C8CCD02BA0B70FAC.dip0.t-ipconnect.de) has joined #go-nuts
+2019-10-17 11:23:05	-->	highimscott (~highimsco@c-73-203-100-56.hsd1.co.comcast.net) has joined #go-nuts
+2019-10-17 11:23:39	<--	pmezard (~pmezard@lfbn-1-7733-248.w92-167.abo.wanadoo.fr) has quit (Quit: Reconnecting)
+2019-10-17 11:23:50	-->	pmezard (~pmezard@lfbn-1-7733-248.w92-167.abo.wanadoo.fr) has joined #go-nuts
+2019-10-17 11:25:34	<--	kamee (~progart@217.76.11.229) has quit (Read error: Connection reset by peer)
+2019-10-17 11:26:07	<--	absolutejam (~absolutej@vrrp.core.bridgehead.infra.victoriaplum.com) has quit (Read error: Connection reset by peer)
+2019-10-17 11:26:37	<--	dxtr (~dxtr@fsfe/dxtr) has quit (Ping timeout: 240 seconds)
+2019-10-17 11:26:44	-->	absolutejam (~absolutej@213.249.128.34) has joined #go-nuts
+2019-10-17 11:27:16	<--	highimscott (~highimsco@c-73-203-100-56.hsd1.co.comcast.net) has quit (Ping timeout: 240 seconds)
+2019-10-17 11:33:17	-->	xsoultartar (~xsoultart@2001:268:c0a4:817:6cb6:711e:ac2c:ed33) has joined #go-nuts
+2019-10-17 11:33:37	<--	xsoultartar (~xsoultart@2001:268:c0a4:817:6cb6:711e:ac2c:ed33) has quit (Max SendQ exceeded)
+2019-10-17 11:34:08	-->	xsoultartar (~xsoultart@2001:268:c0a4:817:6cb6:711e:ac2c:ed33) has joined #go-nuts
+2019-10-17 11:34:33	<--	xsoultartar (~xsoultart@2001:268:c0a4:817:6cb6:711e:ac2c:ed33) has quit (Max SendQ exceeded)
+2019-10-17 11:35:03	-->	xsoultartar (~xsoultart@2001:268:c0a4:817:6cb6:711e:ac2c:ed33) has joined #go-nuts
+2019-10-17 11:35:24	<--	xsoultartar (~xsoultart@2001:268:c0a4:817:6cb6:711e:ac2c:ed33) has quit (Max SendQ exceeded)
+2019-10-17 11:35:43	-->	kamee (~progart@217.76.11.104) has joined #go-nuts
+2019-10-17 11:35:53	-->	xsoultartar (~xsoultart@2001:268:c0a4:817:6cb6:711e:ac2c:ed33) has joined #go-nuts
+2019-10-17 11:36:18	<--	xsoultartar (~xsoultart@2001:268:c0a4:817:6cb6:711e:ac2c:ed33) has quit (Max SendQ exceeded)
+2019-10-17 11:36:47	-->	xsoultartar (~xsoultart@2001:268:c0a4:817:6cb6:711e:ac2c:ed33) has joined #go-nuts
+2019-10-17 11:37:13	<--	xsoultartar (~xsoultart@2001:268:c0a4:817:6cb6:711e:ac2c:ed33) has quit (Max SendQ exceeded)
+2019-10-17 11:37:41	-->	xsoultartar (~xsoultart@2001:268:c0a4:817:6cb6:711e:ac2c:ed33) has joined #go-nuts
+2019-10-17 11:40:54	-->	__alex (~alex@217.110.54.179) has joined #go-nuts
+2019-10-17 11:43:36	-->	user9 (984d0e74@dcm-info-22.u-ga.fr) has joined #go-nuts
+2019-10-17 11:43:48	-->	dxtr (~dxtr@fsfe/dxtr) has joined #go-nuts
+2019-10-17 11:44:24	<--	freswa (~freswa@p200300C52F2C9700C8CCD02BA0B70FAC.dip0.t-ipconnect.de) has quit (Quit: freswa)
+2019-10-17 11:50:24	-->	freswa (~freswa@p200300C52F2C9700C8CCD02BA0B70FAC.dip0.t-ipconnect.de) has joined #go-nuts
+2019-10-17 11:52:47	<--	freswa (~freswa@p200300C52F2C9700C8CCD02BA0B70FAC.dip0.t-ipconnect.de) has quit (Client Quit)
+2019-10-17 11:58:01	<--	Edu4rdSHL (~edu4rdshl@fsf/member/edu4rdshl) has quit (Quit: Leaving)
+2019-10-17 11:59:59	-->	Edu4rdSHL (~edu4rdshl@fsf/member/edu4rdshl) has joined #go-nuts
+2019-10-17 12:00:15	-->	plutoniix (~q@175.176.222.7) has joined #go-nuts
+2019-10-17 12:03:38	<--	sagax (~sagax_nb@213.138.71.146) has quit (Ping timeout: 245 seconds)
+2019-10-17 12:11:39	<--	kamee (~progart@217.76.11.104) has quit (Read error: Connection reset by peer)
+2019-10-17 12:13:16	<--	matej58 (~Thunderbi@203.118.39.154) has quit (Remote host closed the connection)
+2019-10-17 12:17:37	-->	pipqw (~pqzx@unaffiliated/pqzx) has joined #go-nuts
+2019-10-17 12:18:44	<--	xsoultartar (~xsoultart@2001:268:c0a4:817:6cb6:711e:ac2c:ed33) has quit (Quit: Leaving)
+2019-10-17 12:21:04	<--	absolutejam (~absolutej@213.249.128.34) has quit (Ping timeout: 265 seconds)
+2019-10-17 12:29:37	-->	Mrbuck (~Mrbuck@ec2-34-202-1-168.compute-1.amazonaws.com) has joined #go-nuts
+2019-10-17 12:29:42	Mrbuck	Hi nuts
+2019-10-17 12:32:32	-->	tristianc (~tristianc@198.199.206.194) has joined #go-nuts
+2019-10-17 12:36:26	-->	absolutejam (~absolutej@154.62.128.42) has joined #go-nuts
+2019-10-17 12:37:07	-->	jcajka (~jcajka@ip-78-45-65-107.net.upcbroadband.cz) has joined #go-nuts
+2019-10-17 12:38:11	<--	yuciyuar (~textual@unaffiliated/yuciyuar) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-10-17 12:38:22	-->	freswa (~freswa@exchange.betterbits.de) has joined #go-nuts
+2019-10-17 12:42:56	<--	pipqw (~pqzx@unaffiliated/pqzx) has quit (Ping timeout: 240 seconds)
+2019-10-17 12:44:27	<--	tristianc (~tristianc@198.199.206.194) has quit (Ping timeout: 240 seconds)
+2019-10-17 12:57:40	<--	widelec-BB (widelec@s1.ct8.pl) has quit (Remote host closed the connection)
+2019-10-17 13:09:20	<--	encod3 (~encod3@89.20.162.146.static.ef-service.nl) has quit (K-Lined)
+2019-10-17 13:10:13	-->	sagax (~sagax_nb@213.138.71.146) has joined #go-nuts
+2019-10-17 13:10:25	<--	archwizard56 (~quassel@ec2-54-191-32-35.us-west-2.compute.amazonaws.com) has quit (Quit: No Ping reply in 180 seconds.)
+2019-10-17 13:11:53	-->	archwizard56 (~quassel@ec2-54-191-32-35.us-west-2.compute.amazonaws.com) has joined #go-nuts
+2019-10-17 13:16:11	<--	chargen (~chargen@2a02:2e02:9ee0:7100:922:fc89:55a0:e00e) has quit (Quit: BBL)
+2019-10-17 13:18:40	<--	rabbitear_g (~rabbitear@gateway/tor-sasl/rabbitearg/x-03735317) has quit (Ping timeout: 260 seconds)
+2019-10-17 13:19:36	<--	gst (~gst@gateway/tor-sasl/gst) has quit (Ping timeout: 260 seconds)
+2019-10-17 13:32:47	-->	joanna89 (~joanna89@140.207.170.146) has joined #go-nuts
+2019-10-17 13:33:32	-->	rabbitear_g (~rabbitear@gateway/tor-sasl/rabbitearg/x-03735317) has joined #go-nuts
+2019-10-17 13:36:07	-->	gst (~gst@gateway/tor-sasl/gst) has joined #go-nuts
+2019-10-17 13:38:49	<--	ct16k (~ryan@5-12-246-154.residential.rdsnet.ro) has quit (Read error: Connection reset by peer)
+2019-10-17 13:40:08	-->	chargen (~chargen@2a02:2e02:9ee0:7100:4143:2241:47e6:3abb) has joined #go-nuts
+2019-10-17 13:41:33	<--	joanna89 (~joanna89@140.207.170.146) has quit (Ping timeout: 245 seconds)
+2019-10-17 13:46:57	<--	ilyaigpetrov (uid343524@gateway/web/irccloud.com/x-dklxwkonnrnsdaql) has quit (Quit: Connection closed for inactivity)
+2019-10-17 13:50:57	<--	velco (velco@nat/arm/x-sbvkrkhdwllzkyji) has quit (Remote host closed the connection)
+2019-10-17 13:53:28	<--	plutoniix (~q@175.176.222.7) has quit (Quit: Leaving)
+2019-10-17 13:53:38	-->	jlebrech (~jlebrech@5.2.197.53) has joined #go-nuts
+2019-10-17 13:55:33	-->	frostschutz (~frostschu@55d4e7d2.access.ecotel.net) has joined #go-nuts
+2019-10-17 13:58:21	-->	cdby (~cdby@unaffiliated/cdby) has joined #go-nuts
+2019-10-17 14:01:11	-->	EvilKhaosKat (~evilkhaos@134.17.27.127) has joined #go-nuts
+2019-10-17 14:01:45	<--	EvilKhaosKat (~evilkhaos@134.17.27.127) has left #go-nuts
+2019-10-17 14:07:31	<--	kyrylo (~kyrylo@subtle/user/kyrylo) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-10-17 14:08:46	<--	Mrbuck (~Mrbuck@ec2-34-202-1-168.compute-1.amazonaws.com) has quit (Quit: .)
+2019-10-17 14:10:51	-->	JeffJohnson (~fho@unaffiliated/jeffjohnson) has joined #go-nuts
+2019-10-17 14:11:13	-->	st8less (~st8less@inet-167-224-197-181.isp.ozarksgo.net) has joined #go-nuts
+2019-10-17 14:11:36	-->	EvilKhaosKat (~evilkhaos@134.17.27.127) has joined #go-nuts
+2019-10-17 14:18:03	<--	EvilKhaosKat (~evilkhaos@134.17.27.127) has quit
+2019-10-17 14:21:54	-->	EvilKhaosKat (~evilkhaos@134.17.27.127) has joined #go-nuts
+2019-10-17 14:23:50	-->	royal_screwup21 (89de72f4@gateway/web/cgi-irc/kiwiirc.com/ip.137.222.114.244) has joined #go-nuts
+2019-10-17 14:23:56	<--	brendan- (~Brendan@c-73-141-252-152.hsd1.pa.comcast.net) has quit (Ping timeout: 240 seconds)
+2019-10-17 14:24:48	<--	m1sdirection (~m1sdirect@146.115.42.10) has quit (Ping timeout: 265 seconds)
+2019-10-17 14:26:35	-->	brendan- (~Brendan@2601:4a:401:1210:50ba:f154:f53c:c049) has joined #go-nuts
+2019-10-17 14:29:45	<--	meain (~plank@14.98.113.114) has quit (Ping timeout: 268 seconds)
+2019-10-17 14:39:01	-->	absc (~abiscuola@176.9.150.19) has joined #go-nuts
+2019-10-17 14:46:27	<--	hexfive (~hexfive@50.35.80.237) has quit (Quit: WeeChat 2.6)
+2019-10-17 14:46:55	<--	st8less (~st8less@inet-167-224-197-181.isp.ozarksgo.net) has quit (Quit: WeeChat 2.4)
+2019-10-17 14:48:42	-->	tjbp (~tom@78.141.197.43) has joined #go-nuts
+2019-10-17 14:50:25	-->	xsoultartar (~xsoultart@2001:268:c0a4:817:784f:8cc0:dd:6f62) has joined #go-nuts
+2019-10-17 14:51:40	<--	brendan- (~Brendan@2601:4a:401:1210:50ba:f154:f53c:c049) has quit (Ping timeout: 264 seconds)
+2019-10-17 14:57:26	amitizle	Hey all, more of a style question: are you waiting for external services (external to your go app) to be ready on boot/periodically? Like Redis, DB etc. If so, how are you implementing it?
+2019-10-17 14:57:43	-->	meain (~plank@14.98.113.114) has joined #go-nuts
+2019-10-17 14:59:34	ezdiy	retry/backoff with queued requests, or propagate the failures
+2019-10-17 15:00:28	<--	kraem (~kraem@62.63.192.110) has quit (Ping timeout: 245 seconds)
+2019-10-17 15:00:31	ezdiy	ie if its a web app, it "hangs" until db connects, or just straight spits error message if the connection failures propagate
+2019-10-17 15:01:39	amitizle	Cool, thanks, and how are you managing the queued requests? I mean do you have any specific cutoff where you just drop the requests?
+2019-10-17 15:01:59	<--	realtime_ (~realtime@unaffiliated/realtime) has quit (Ping timeout: 250 seconds)
+2019-10-17 15:03:05	ezdiy	yes, usually there's a cutoff when the queue overflows, or the backoff goes up to some threshold
+2019-10-17 15:03:40	<--	mrig (~mrig@unaffiliated/mrig) has quit (Ping timeout: 268 seconds)
+2019-10-17 15:04:05	ezdiy	it's often tuned to "mask" things like reboot of the db server, but can't do much more beyond that
+2019-10-17 15:04:25	-->	mrig (~mrig@unaffiliated/mrig) has joined #go-nuts
+2019-10-17 15:04:27	<--	absolutejam (~absolutej@154.62.128.42) has quit (Ping timeout: 240 seconds)

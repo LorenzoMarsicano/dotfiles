@@ -199,3 +199,52 @@
 2019-09-13 17:49:12	<--	krychu (~krychu@2a02:1205:5008:5790:c62:18fc:de44:418b) has quit (Client Quit)
 2019-09-13 17:50:36	-->	krychu (~krychu@2a02:1205:5008:5790:c62:18fc:de44:418b) has joined #SDL
 2019-09-13 17:50:48	<--	krychu (~krychu@2a02:1205:5008:5790:c62:18fc:de44:418b) has quit (Client Quit)
+2019-10-17 11:12:42	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #SDL
+2019-10-17 11:12:42	--	Topic for #SDL is "Official SDL Channel http://www.libsdl.org/ | You must identify with NickServ to join/talk"
+2019-10-17 11:12:42	--	Topic set by akawaka (~akawaka@2605:e000:1701:40f8:211:32ff:fe51:9639) on Wed, 01 Aug 2018 18:04:39
+2019-10-17 11:12:42	--	Channel #SDL: 87 nicks (1 op, 0 voices, 86 normals)
+2019-10-17 11:12:42	--	PvNotice(ChanServ): Welcome to #sdl - The Offical Simple DirectMedia Layer Channel
+2019-10-17 11:12:42	--	URL for #SDL: http://www.libsdl.org/
+2019-10-17 11:12:52	--	Channel created on Sun, 26 Nov 2006 07:42:43
+2019-10-17 11:21:11	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #SDL
+2019-10-17 11:21:11	--	Topic for #SDL is "Official SDL Channel http://www.libsdl.org/ | You must identify with NickServ to join/talk"
+2019-10-17 11:21:11	--	Topic set by akawaka (~akawaka@2605:e000:1701:40f8:211:32ff:fe51:9639) on Wed, 01 Aug 2018 18:04:39
+2019-10-17 11:21:11	--	Channel #SDL: 87 nicks (1 op, 0 voices, 86 normals)
+2019-10-17 11:21:11	--	PvNotice(ChanServ): Welcome to #sdl - The Offical Simple DirectMedia Layer Channel
+2019-10-17 11:21:11	--	URL for #SDL: http://www.libsdl.org/
+2019-10-17 11:21:22	--	Channel created on Sun, 26 Nov 2006 07:42:43
+2019-10-17 11:29:54	-->	RebelCoder (~RebelCode@93.186.158.197) has joined #SDL
+2019-10-17 11:32:56	-->	zap0 (~zap0@14-201-222-143.tpgi.com.au) has joined #SDL
+2019-10-17 11:41:59	J_L_P	Game optimizations are about done.  HTML5/WebGL version of game runs full speed on a Raspberry Pi 3b+
+2019-10-17 11:45:47	J_L_P	does RPi 3b+ even have WebGL ?  If not, it's falling back to HTML5 Canvas
+2019-10-17 11:55:21	DuClare	Which browser did you test with
+2019-10-17 11:56:46	J_L_P	DuClare - I think it's Chromium
+2019-10-17 11:58:20	<--	mokafolio (~mokafolio@mokafolio.powered.by.lunarbnc.net) has quit (Quit: Bye Bye!)
+2019-10-17 11:59:49	J_L_P	default browser for Raspbian OS
+2019-10-17 12:00:23	-->	mokafolio (~mokafolio@mokafolio.powered.by.lunarbnc.net) has joined #SDL
+2019-10-17 12:02:02	DuClare	You should try another browser too
+2019-10-17 12:02:06	DuClare	Firefox preferrably
+2019-10-17 12:03:00	DuClare	My expreicence with older raspis is that there can be dramatic differences in performance across browser engines
+2019-10-17 12:03:53	<--	fogobogo_ (~fogobogo@unaffiliated/fogobogo) has quit (Ping timeout: 250 seconds)
+2019-10-17 12:04:57	-->	fogobogo (~fogobogo@unaffiliated/fogobogo) has joined #SDL
+2019-10-17 12:05:43	J_L_P	DuClare - I want the RPi browser to be slow - I test optimizations in it
+2019-10-17 12:11:48	DuClare	So like I said, try firefox too.  Maybe it is slower.  Or maybe the optimizations don't have the same effect they have on chrome
+2019-10-17 12:16:42	-->	r0b0c0rp (~r0b0c0rp@dsl-dhcp-conrtxxahrg-209-169-68-144.consolidated.net) has joined #SDL
+2019-10-17 12:17:34	<--	r0b0c0rp (~r0b0c0rp@dsl-dhcp-conrtxxahrg-209-169-68-144.consolidated.net) has quit (Remote host closed the connection)
+2019-10-17 12:38:21	<--	zap0 (~zap0@14-201-222-143.tpgi.com.au) has quit (Quit: zap0)
+2019-10-17 12:40:32	<--	J_L_P (2d38943c@gateway/web/cgi-irc/kiwiirc.com/ip.45.56.148.60) has quit (Ping timeout: 252 seconds)
+2019-10-17 12:42:04	<--	RebelCoder (~RebelCode@93.186.158.197) has quit (Remote host closed the connection)
+2019-10-17 12:43:17	-->	RebelCoder (~RebelCode@93.186.158.197) has joined #SDL
+2019-10-17 12:58:46	<--	RebelCoder (~RebelCode@93.186.158.197) has quit (Ping timeout: 265 seconds)
+2019-10-17 13:18:40	<--	ArRay_ (~ArRay_@gateway/tor-sasl/array/x-42000387) has quit (Ping timeout: 260 seconds)
+2019-10-17 13:18:54	-->	J_L_P (2d29865a@gateway/web/cgi-irc/kiwiirc.com/ip.45.41.134.90) has joined #SDL
+2019-10-17 13:27:48	<--	J_L_P (2d29865a@gateway/web/cgi-irc/kiwiirc.com/ip.45.41.134.90) has quit (Ping timeout: 245 seconds)
+2019-10-17 13:32:38	-->	ArRay_ (~ArRay_@gateway/tor-sasl/array/x-42000387) has joined #SDL
+2019-10-17 13:38:44	<--	krator44 (~krator44@unaffiliated/krator44) has quit (Read error: Connection reset by peer)
+2019-10-17 13:38:56	<--	Elysion (~Elysion@ppp118-210-188-92.adl-adc-lon-bras34.tpg.internode.on.net) has quit (Read error: Connection reset by peer)
+2019-10-17 13:39:13	-->	krator44 (~krator44@unaffiliated/krator44) has joined #SDL
+2019-10-17 13:39:42	-->	Elysion (~Elysion@ppp118-210-188-92.adl-adc-lon-bras34.tpg.internode.on.net) has joined #SDL
+2019-10-17 13:40:09	<--	krator44 (~krator44@unaffiliated/krator44) has quit (Max SendQ exceeded)
+2019-10-17 13:40:43	-->	krator44 (~krator44@unaffiliated/krator44) has joined #SDL
+2019-10-17 14:11:25	-->	fogobogo_ (~fogobogo@unaffiliated/fogobogo) has joined #SDL
+2019-10-17 14:14:20	<--	fogobogo (~fogobogo@unaffiliated/fogobogo) has quit (Ping timeout: 268 seconds)

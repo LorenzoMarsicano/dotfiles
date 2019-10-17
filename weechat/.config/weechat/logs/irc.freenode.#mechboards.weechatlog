@@ -52,3 +52,72 @@
 2019-09-13 16:58:49	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #Mechboards
 2019-09-13 17:05:45	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Remote host closed the connection)
 2019-09-13 17:20:58	<--	cottoneyejim (~cottoneye@46.33.206.36) has quit (Quit: cottoneyejim)
+2019-10-17 11:12:41	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #Mechboards
+2019-10-17 11:12:41	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2019-10-17 11:12:41	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 10:38:51
+2019-10-17 11:12:41	--	Channel #Mechboards: 129 nicks (0 ops, 0 voices, 129 normals)
+2019-10-17 11:12:42	--	Channel created on Thu, 21 Feb 2013 05:50:48
+2019-10-17 11:15:24	switchy	mads-, heh, more the opposite
+2019-10-17 11:15:42	-->	cottoneyejim (~cottoneye@37.122.178.182) has joined #Mechboards
+2019-10-17 11:18:14	yourfate	mads-: you can just solder them without tape I find
+2019-10-17 11:18:23	yourfate	I just put solder on one of the pads
+2019-10-17 11:18:42	yourfate	hold the led there, heat up the solder blob thatps there
+2019-10-17 11:18:50	yourfate	then solder the other pads, resolder the first one, done
+2019-10-17 11:20:08	yourfate	I generally prefer smd soldering to tht, as I don't have to keep bending stuff, flipping the board, trim ends etc
+2019-10-17 11:21:10	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #Mechboards
+2019-10-17 11:21:10	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2019-10-17 11:21:10	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 10:38:51
+2019-10-17 11:21:11	--	Channel #Mechboards: 130 nicks (0 ops, 0 voices, 130 normals)
+2019-10-17 11:21:11	--	Channel created on Thu, 21 Feb 2013 05:50:48
+2019-10-17 11:29:58	-->	mmaker (~mmaker@mmaker.pw) has joined #Mechboards
+2019-10-17 11:34:08	armin	 apropos desoldering
+2019-10-17 11:34:21	armin	got a used (looks like new) g80-1800
+2019-10-17 11:34:30	armin	i really consider replacing all switches
+2019-10-17 11:34:48	armin	kailh box brown come to mind
+2019-10-17 11:35:45	armin	would be a pain in the butt to do, but i reckon the end result would be PRETTY nice
+2019-10-17 11:42:24	mads-	armin: Do it. Share my suffering
+2019-10-17 11:43:44	mads-	yourfate: Maybe I should try that. I feel like I have gotten my technique to work now.
+2019-10-17 11:43:50	mads-	smd has been a pain for me
+2019-10-17 11:43:57	armin	mads-: hahaha :-)
+2019-10-17 11:44:35	armin	my father told me when i was a child "smd isn't hard, you just have to get used to it."
+2019-10-17 11:45:02	mads-	Sounds about right.
+2019-10-17 11:45:10	mads-	And have some decent tools for it
+2019-10-17 11:58:32	<--	xelxebar (~xelxebar@gateway/tor-sasl/xelxebar) has quit (Read error: Connection reset by peer)
+2019-10-17 11:59:47	-->	xelxebar (~xelxebar@gateway/tor-sasl/xelxebar) has joined #Mechboards
+2019-10-17 12:05:49	day	i think if you are good at tht then smd is a lot slower
+2019-10-17 12:06:10	day	i still prefer smd for the reasons yourfate mentioned
+2019-10-17 12:19:12	yourfate	mads-: I usually start by tinning one pad for every component on the board
+2019-10-17 12:19:28	yourfate	then sort the compoents on one side of the board, all facing the right way
+2019-10-17 12:19:35	yourfate	and then go to town
+2019-10-17 12:19:41	yourfate	I did one ergodash half in about 20 min
+2019-10-17 12:19:50	yourfate	if even that long
+2019-10-17 12:33:19	<--	cottoneyejim (~cottoneye@37.122.178.182) has quit (Quit: cottoneyejim)
+2019-10-17 12:37:02	<--	xcm (~xcm@ipa210.225.tellas.gr) has quit (Remote host closed the connection)
+2019-10-17 12:38:51	-->	xcm (~xcm@ipa210.225.tellas.gr) has joined #Mechboards
+2019-10-17 13:00:51	<--	yokel (~yokel@unaffiliated/contempt) has quit (Ping timeout: 240 seconds)
+2019-10-17 13:00:56	<--	gigetoo (~gigetoo@c83-250-41-185.bredband.comhem.se) has quit (Ping timeout: 240 seconds)
+2019-10-17 13:04:35	-->	gigetoo (~gigetoo@c83-250-41-185.bredband.comhem.se) has joined #Mechboards
+2019-10-17 13:10:45	-->	yokel (~yokel@unaffiliated/contempt) has joined #Mechboards
+2019-10-17 13:17:44	<--	xelxebar (~xelxebar@gateway/tor-sasl/xelxebar) has quit (Ping timeout: 260 seconds)
+2019-10-17 13:19:08	<--	mord0d (~mord0d@gateway/tor-sasl/mord0d) has quit (Ping timeout: 260 seconds)
+2019-10-17 13:23:42	<--	ShinyRice (~ShinyRice@2001:720:1014:f410:fc15:6a01:6aee:7cbf) has quit (Quit: ShinyRice)
+2019-10-17 13:32:24	<--	StathisA (~StathisA@unaffiliated/stathisa) has quit (Ping timeout: 268 seconds)
+2019-10-17 13:32:40	-->	xelxebar (~xelxebar@gateway/tor-sasl/xelxebar) has joined #Mechboards
+2019-10-17 13:33:48	-->	StathisA (~StathisA@unaffiliated/stathisa) has joined #Mechboards
+2019-10-17 13:35:32	-->	mord0d (~mord0d@gateway/tor-sasl/mord0d) has joined #Mechboards
+2019-10-17 13:51:43	-->	StathisA_ (~StathisA@unaffiliated/stathisa) has joined #Mechboards
+2019-10-17 13:53:59	<--	StathisA (~StathisA@unaffiliated/stathisa) has quit (Ping timeout: 268 seconds)
+2019-10-17 13:54:00	--	StathisA_ is now known as StathisA
+2019-10-17 13:54:03	<--	xcm (~xcm@ipa210.225.tellas.gr) has quit (Remote host closed the connection)
+2019-10-17 13:55:51	-->	xcm (~xcm@ipa210.225.tellas.gr) has joined #Mechboards
+2019-10-17 14:02:53	<--	xcm (~xcm@ipa210.225.tellas.gr) has quit (Killed (orwell.freenode.net (Nickname regained by services)))
+2019-10-17 14:04:17	-->	xcm (~xcm@ipa210.225.tellas.gr) has joined #Mechboards
+2019-10-17 14:09:42	-->	veam (uid157194@gateway/web/irccloud.com/x-vbhdvtyjicrqmoqw) has joined #Mechboards
+2019-10-17 14:18:42	-->	ShinyRice (~ShinyRice@2001:720:1014:f410:fc15:6a01:6aee:7cbf) has joined #Mechboards
+2019-10-17 14:18:51	<--	ShinyRice (~ShinyRice@2001:720:1014:f410:fc15:6a01:6aee:7cbf) has quit (Client Quit)
+2019-10-17 14:21:18	-->	ShinyRice (~ShinyRice@2001:720:1014:f410:fc15:6a01:6aee:7cbf) has joined #Mechboards
+2019-10-17 14:45:41	<--	ShinyRice (~ShinyRice@2001:720:1014:f410:fc15:6a01:6aee:7cbf) has quit (Quit: ShinyRice)
+2019-10-17 14:48:43	<--	figuinhas (~pirilauam@194-79-86-23.static.net.novis.pt) has quit (Remote host closed the connection)
+2019-10-17 14:49:07	-->	figuinhas (~pirilauam@194-79-86-23.static.net.novis.pt) has joined #Mechboards
+2019-10-17 14:52:37	-->	ShinyRice (~ShinyRice@2001:720:1014:f410:fc15:6a01:6aee:7cbf) has joined #Mechboards
+2019-10-17 14:54:51	<--	ShinyRice (~ShinyRice@2001:720:1014:f410:fc15:6a01:6aee:7cbf) has quit (Client Quit)

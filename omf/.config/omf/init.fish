@@ -1,6 +1,6 @@
 set -xg EDITOR nvim
 
-cat ~/.cache/wal/sequences &  
+#cat ~/.cache/wal/sequences &  
 
 #---------------------------------- EXPORT-----------------------------------------------------------------
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$HOME/Code/go/bin:$PATH:$HOME/Scripts"

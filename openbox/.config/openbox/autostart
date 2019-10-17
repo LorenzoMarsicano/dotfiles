@@ -7,3 +7,4 @@ pkill redshift-gtk &
 redshift-gtk &
 mpd ~/.config/mpd/mpd.conf
 compton &
+syncthing-gtk &
