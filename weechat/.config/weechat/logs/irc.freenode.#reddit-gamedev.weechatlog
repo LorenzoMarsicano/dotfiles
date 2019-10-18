@@ -361,3 +361,228 @@
 2019-10-17 14:49:18	yuken	elsie273, well I have no clue how to do a lot of what I'm tryna do here, like scrolling containers
 2019-10-17 14:50:22	 *	R2robot still thinks you should start with something MUCH smaller and simpler
 2019-10-17 14:50:31	R2robot	even 2d
+2019-10-17 15:10:07	+carefish	i still think that yuken should just get started with whatever he wants to make
+2019-10-17 15:10:17	+carefish	rather than doubt a 'found path' and not deciding to pick anything :p
+2019-10-17 15:10:34	yuken	That's what I'm doing carefish, I'm trying to figure out how scrolling stuff works in GUI stuff. and trying to get a cursor up for text stuff.
+2019-10-17 15:13:11	+carefish	why not work on your game first
+2019-10-17 15:13:20	+carefish	ui stuff can be added while working on the game
+2019-10-17 15:13:52	yuken	Because getting the GUI to work is probably the most important part of the game.
+2019-10-17 15:14:06	yuken	it's first and foremost a MUD, with the text-based roleplaying that comes with a MUD.
+2019-10-17 15:16:28	+carefish	hmmkay
+2019-10-17 15:17:16	yuken	Right now, I'm just trying to get text input (copy, pasting, cursor, selection) and scrollable containers (with text wrapping too).
+2019-10-17 15:17:28	yuken	and scrolling is what I don't get.
+2019-10-17 15:18:28	+carefish	scrolling like scrollbar or scrolling like scrolling text
+2019-10-17 15:19:19	yuken	The former. So I could have a big text box that lets you scroll through (because players may be submitting/saving large bodies of text for various reasons)
+2019-10-17 15:19:29	yuken	or scrolling through different GUI stuff, like... a list of players.
+2019-10-17 15:19:55	+Jonas___	elsie273, I'm jealous of you making progress on ECS
+2019-10-17 15:20:08	+Jonas___	it's been years since I worked on mine
+2019-10-17 15:20:20	+carefish	so scrollbar requires you to set up a clipping mask yuken
+2019-10-17 15:20:31	+carefish	and a contentmask
+2019-10-17 15:20:34	+Jonas___	instead I'm now worrying about how to do event driven microservices for real-time high availability web services
+2019-10-17 15:20:41	+Jonas___	it's not really ECS at all :|
+2019-10-17 15:20:48	+carefish	the content mask is the thing that goes up and down, the clipping mask stays in-place
+2019-10-17 15:20:48	yuken	carefish, I can setup masks (probably), that shouldn't be too hard.
+2019-10-17 15:20:55	yuken	oh oh oh
+2019-10-17 15:21:09	+carefish	i'm using 'content' because it could be anything with this approach. images and whatnot should work too
+2019-10-17 15:21:18	yuken	I can render every container onto a separate texture, and then have that "content" mask just be coordinates on that texture (a rectangle)
+2019-10-17 15:21:21	yuken	and scroll like that?
+2019-10-17 15:21:26	+carefish	yar
+2019-10-17 15:22:00	yuken	thanks carefish, I was trying to figure out how I'd do it, that's all I wanted to know :P
+2019-10-17 15:22:00	+carefish	though i wouldn't mess with putting all of it on a single texture
+2019-10-17 15:22:09	+carefish	that's overcomplicating what you are aiming to achieve
+2019-10-17 15:22:11	yuken	er
+2019-10-17 15:22:15	yuken	every container onto its own texture.
+2019-10-17 15:22:31	+carefish	so then you have a container with multilpe containers each their own texture
+2019-10-17 15:22:51	yuken	hmm
+2019-10-17 15:23:03	+carefish	it's "smart" to try and draw everything on one texture... but since you don't have anything working yet just start with whatever you can get to work first
+2019-10-17 15:23:39	+carefish	which almost always leads to a suboptimal way of doing things, but at least it will give you a much better vantage point than you have now
+2019-10-17 15:28:50	-->	mukunda (mukunda@adsl-074-188-206-086.sip.asm.bellsouth.net) has joined #reddit-gamedev
+2019-10-17 15:31:03	-->	bomb (~bomb@gateway/tor-sasl/bomb) has joined #reddit-gamedev
+2019-10-17 15:31:03	--	Mode #reddit-gamedev [+v bomb] by ChanServ
+2019-10-17 15:34:49	R2robot	make games, not tools :D
+2019-10-17 15:35:11	R2robot	later on, if you're bored, make some tools
+2019-10-17 15:37:54	elsie273	make what makes you happy
+2019-10-17 15:39:33	+carefish	what i like to do i usually need permission for first
+2019-10-17 15:39:51	+bomb	i want to make Duke Nukem 3D mod using Eduke32
+2019-10-17 15:55:49	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-10-17 15:55:49	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-10-17 15:55:49	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-10-17 15:55:49	--	Channel #reddit-gamedev: 73 nicks (0 ops, 16 voices, 57 normals)
+2019-10-17 15:55:52	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-10-17 15:58:42	-->	edwardly (~edwardly@pool-96-246-31-44.nycmny.fios.verizon.net) has joined #reddit-gamedev
+2019-10-17 15:58:42	<--	edwardly (~edwardly@pool-96-246-31-44.nycmny.fios.verizon.net) has quit (Changing host)
+2019-10-17 15:58:42	-->	edwardly (~edwardly@unaffiliated/edwardly) has joined #reddit-gamedev
+2019-10-17 16:02:19	<--	edwardly (~edwardly@unaffiliated/edwardly) has quit (Read error: Connection reset by peer)
+2019-10-17 16:04:51	R2robot	elsie273: of course.  I'm talking about the dozens of people that come through gamedev channels with super lofty goals and little to no experience.  Get frustrated and quit.   See it FAR too often.  So rather than blindly feed them down this path, I'd rather encourage them to take a step back and rethink the approach to get to the end goal.
+2019-10-17 16:05:52	+bomb	R2robot: you see frustration, i see opportunity. just sell them your gamedevs services!
+2019-10-17 16:06:04	R2robot	=/
+2019-10-17 16:06:44	-->	edwardly (~edwardly@pool-96-246-31-44.nycmny.fios.verizon.net) has joined #reddit-gamedev
+2019-10-17 16:06:44	<--	edwardly (~edwardly@pool-96-246-31-44.nycmny.fios.verizon.net) has quit (Changing host)
+2019-10-17 16:06:44	-->	edwardly (~edwardly@unaffiliated/edwardly) has joined #reddit-gamedev
+2019-10-17 16:15:22	+carefish	R2robot: hehe, i think i agree with you here. i've advised many people to first try out something in a simpler way
+2019-10-17 16:16:06	+carefish	ie: instead of going C++ with SDL2, start with unity3d or anyother engine that allows you to be quickly visually reinforced with your learning and progress
+2019-10-17 16:16:24	+bomb	like making an open world VR MMORPG for PS5
+2019-10-17 16:16:36	+carefish	once you get the feel for what programming is, try to take on harder things... like C++ with SDL2
+2019-10-17 16:16:43	yuken	R2robot, I have decent experience, just never released a product.
+2019-10-17 16:16:43	R2robot	yeah
+2019-10-17 16:16:52	yuken	R2robot, and I'm not trying to make some masterful product, just a simple 2D MUD.
+2019-10-17 16:17:05	+carefish	i strongly believe that that's the core strength of those 'simpler' engines (game maker, unity, godot, probably others)
+2019-10-17 16:17:08	R2robot	yuken: games are hard. :)
+2019-10-17 16:17:15	yuken	well duh, enver said it was easy
+2019-10-17 16:17:18	yuken	but I ain't making Half-Life 4.
+2019-10-17 16:17:38	+carefish	to help fledgling programmers/hobbyists learn programming/scripting by SHOWING the result rather than working TO the result
+2019-10-17 16:17:47	R2robot	I often tell people to make breakout.  You learn all about gamedev from such a simple game. AND you learn how difficult it is to finish a game.
+2019-10-17 16:17:59	yuken	I've made Breakout & Snake before. And full games.
+2019-10-17 16:18:11	R2robot	links?
+2019-10-17 16:18:14	+carefish	i remember being somewhat dissapointed it took me a couple of days to get a simple sprite to render with lazyfoo's tutorials (i didn't know anything about C++ or build systems or whatnot at the time)
+2019-10-17 16:18:16	yuken	Just never... released any, and they've all been lost to time because when I made these games
+2019-10-17 16:18:19	yuken	I didn't bother to back anything up.
+2019-10-17 16:18:31	+carefish	R2robot: i think breakout is still 'complex' though
+2019-10-17 16:18:37	+carefish	imo pong is a better start
+2019-10-17 16:18:41	R2robot	yeah
+2019-10-17 16:18:53	+carefish	pong also gives you a springboard to move to breakout
+2019-10-17 16:19:21	R2robot	yep
+2019-10-17 16:19:26	R2robot	sound advice :D
+2019-10-17 16:19:37	+carefish	and going back to that memory, i also remember it took me 15 minutes to get not only a sprite to show in unity, but i could make it jump and collide with things and not really worry about 'how' that all worked
+2019-10-17 16:20:16	+bomb	just give your kids Qbasic64 for extreme productivity
+2019-10-17 16:20:36	+carefish	though i started with Flash games, moved to XNA, tried C++ with SDL, found out i couldn't learn opengl due to study stress, had to switch to unity3d to actually make something
+2019-10-17 16:20:51	+bomb	you were making Flash games?
+2019-10-17 16:21:06	+carefish	i still think XNA, even though it's dead af, is a good starting point for many people which are more 'code oriented'
+2019-10-17 16:21:19	+bomb	like, using Flash-the-program, or something like Flixel, FlashPunk, etc.?
+2019-10-17 16:21:38	+carefish	it's super unlikely you'll hit performance problems with XNA, and it will be relatively easy to remove/reduce perf eaters
+2019-10-17 16:21:43	+carefish	all of it bomb
+2019-10-17 16:21:54	+carefish	i used to have the flash editor hooked to flashdevelop
+2019-10-17 16:22:04	+carefish	or just a plain flashdevelop project that spat out an swf
+2019-10-17 16:22:10	+bomb	also, if you liked XNA, you'd just enjoy MonoGame or FNA as well
+2019-10-17 16:22:25	+bomb	HaxeFlixel with Haxedevelop <3
+2019-10-17 16:22:40	+carefish	i haven't used FNA/monogame since by then i was already busy with unity3d and some haxe projects
+2019-10-17 16:22:54	+carefish	imo haxe is fucking amazing at what it does, it's such a shame people scoff at it
+2019-10-17 16:23:08	elsie273	yuken has been in this channel with stuff for a long time
+2019-10-17 16:23:19	elsie273	yuken didn't you make a networked 2d platformer?
+2019-10-17 16:24:35	+bomb	carefish: Haxe guys are working on a new VM. it's gonna make porting game to all platforms easier
+2019-10-17 16:24:42	+carefish	hehe
+2019-10-17 16:24:46	+carefish	that's awesome
+2019-10-17 16:24:49	yuken	elsie273, I didn't do the networking, that was made in an engine that handled networking for me.
+2019-10-17 16:24:54	+bomb	yeah. no hxcpp hackery anymore
+2019-10-17 16:25:03	+carefish	i was fine with hxcpp hackery
+2019-10-17 16:25:09	+carefish	it worked, and worked performantly
+2019-10-17 16:25:39	+carefish	what i really liked, although at the time i didn't have enough knowledge to properly use it.... is to have haxe spit out the source code humanreadable
+2019-10-17 16:26:12	+carefish	so you could learn and see how haxe use(d/s?) SDL under the hood to help you do a lot of things)
+2019-10-17 16:26:47	yuken	I think the GUI and networking portions of this game are gonna be the hardest parts tbh
+2019-10-17 16:27:01	+bomb	carefish: i mean, hxcpp is nice. but when it doesn't work, you're screwed
+2019-10-17 16:27:13	+bomb	it was really difficult to debug last time i tried many years ago
+2019-10-17 16:27:18	+bomb	during NME days, IIRC
+2019-10-17 16:28:33	+carefish	hehe yeah
+2019-10-17 16:28:40	+carefish	i remember the split between openfl and nme
+2019-10-17 16:29:06	+carefish	still though, haxe is pretty darn cool. it's too bad i don't have an active use for it
+2019-10-17 16:29:25	+bomb	because you don't do web games anymore?
+2019-10-17 16:29:49	+carefish	nope
+2019-10-17 16:32:56	elsie273	yuken but you still made something was my point
+2019-10-17 16:33:03	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #reddit-gamedev
+2019-10-17 16:33:12	elsie273	it doesn't matter if you wrote the networking
+2019-10-17 16:33:38	elsie273	everyone is writing things with tools that do half the everything for them. it's fine
+2019-10-17 16:34:56	 *	R2robot has also been in the channel a long time
+2019-10-17 16:35:02	R2robot	lurking -_-
+2019-10-17 16:36:44	yuken	elsie273, then yes, although I never finished that one :P
+2019-10-17 16:37:00	+carefish	bomb: the thing i would think about using haxe for... is port old flash apps (not games) to a native model, like hxcpp
+2019-10-17 16:37:03	R2robot	lol
+2019-10-17 16:38:30	+carefish	IIRC one of VMWare's tools is still Flash based
+2019-10-17 16:38:39	+carefish	i would most definitely try to port that away from flash
+2019-10-17 16:39:00	-->	ImQ009 (~ImQ009@unaffiliated/imq009) has joined #reddit-gamedev
+2019-10-17 16:39:03	R2robot	O_o
+2019-10-17 16:39:40	yuken	carefish, ESXI's web GUI was until recently
+2019-10-17 16:39:45	yuken	whhich may be what you're thinking about (it isn't anymore)
+2019-10-17 16:40:01	+carefish	you'd think that
+2019-10-17 16:40:17	+carefish	i know of several companies still stuck with the flash thing due to licensing/can't easily phase it out/etc
+2019-10-17 16:40:29	yuken	das silly
+2019-10-17 16:41:10	+carefish	at least one of those companies refuses to use the new thing till it's been out for a while
+2019-10-17 16:48:38	<--	enrio (~nanoz@unaffiliated/nanoz) has quit (Ping timeout: 245 seconds)
+2019-10-17 16:55:08	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Quit: Leaving)
+2019-10-17 17:16:20	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #reddit-gamedev
+2019-10-17 17:16:44	-->	Chevluh (~Chev@238.49.77.83.dynamic.wline.res.cust.swisscom.ch) has joined #reddit-gamedev
+2019-10-17 17:17:18	-->	guest45 (63e30bfe@CPE788df7e7edf3-CM788df7e7edf0.cpe.net.cable.rogers.com) has joined #reddit-gamedev
+2019-10-17 17:17:51	guest45	was fortnite virtual reality?
+2019-10-17 17:29:06	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Quit: Leaving)
+2019-10-17 17:42:37	yuken	no
+2019-10-17 17:47:16	guest45	i can see an argument for it, despite the lack of immersive computing interface
+2019-10-17 17:47:36	<--	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has quit (Quit: WeeChat 1.9.1)
+2019-10-17 17:48:05	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #reddit-gamedev
+2019-10-17 17:48:34	-->	macz (~macz@162.221.202.202) has joined #reddit-gamedev
+2019-10-18 08:05:44	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-10-18 08:05:44	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-10-18 08:05:44	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-10-18 08:05:44	--	Channel #reddit-gamedev: 67 nicks (0 ops, 13 voices, 54 normals)
+2019-10-18 08:05:49	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-10-18 08:25:28	-->	krychu (~krychu@213.242.84.161) has joined #reddit-gamedev
+2019-10-18 08:33:16	<--	DerHase (~Dave@catv-80-99-217-218.catv.broadband.hu) has quit (Ping timeout: 265 seconds)
+2019-10-18 09:23:57	-->	DrAwesomeClaws (~DrAwesome@c-75-68-71-41.hsd1.ct.comcast.net) has joined #reddit-gamedev
+2019-10-18 09:23:57	--	Mode #reddit-gamedev [+v DrAwesomeClaws] by ChanServ
+2019-10-18 09:24:50	+DrAwesomeClaws	has anyone in here who watches anime watched Sound and Fury yet?  Curious as to what those who actually watch this stuff think.
+2019-10-18 09:27:37	Syrinxos	Good morning! ^^
+2019-10-18 09:36:50	+Jonas___	haven't even heard of it, DrAwesomeClaws
+2019-10-18 09:36:56	+Jonas___	morning Syrinxos
+2019-10-18 09:37:23	+DrAwesomeClaws	Jonas___, country artist sturgill simpson teamed up with some japanese guys to make an anime for his synth wave disco rock album
+2019-10-18 09:37:37	+Jonas___	haha, that explains it
+2019-10-18 09:37:42	+DrAwesomeClaws	it's on netflix
+2019-10-18 09:37:46	+Jonas___	the official trailer gave me that kind of vibe
+2019-10-18 09:38:06	+DrAwesomeClaws	my favorite album of the decade
+2019-10-18 09:38:12	+DrAwesomeClaws	possibly century, too early to tell though
+2019-10-18 09:38:49	+Jonas___	I'll have to listen to the album
+2019-10-18 09:39:31	+DrAwesomeClaws	the anime is just the album as well. No dialog, just music with crazy cartoons
+2019-10-18 09:39:37	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #reddit-gamedev
+2019-10-18 09:40:37	+DrAwesomeClaws	it wont make me start watching anime, but i think im gonna buy some japanese tools
+2019-10-18 09:42:54	+Jonas___	perturbator, that's one of the bands it reminded me of
+2019-10-18 09:43:11	+Jonas___	though I haven't heard the actual songs so it may be way different
+2019-10-18 09:43:23	+DrAwesomeClaws	oh, and hi Syrinxos
+2019-10-18 09:43:33	+Jonas___	that and carpenter brut, which seems appropriate for your hobby
+2019-10-18 09:44:49	+DrAwesomeClaws	Perturbator is different, but there's certainly some crossover
+2019-10-18 09:45:40	+DrAwesomeClaws	sound and fury spotlights the synth as well, with a twangy guitar rock and/or disco background
+2019-10-18 09:46:58	+DrAwesomeClaws	Perturbator makes me feel like im in a montage in an 80s movie
+2019-10-18 09:47:01	+DrAwesomeClaws	that's not a bad thing
+2019-10-18 10:07:23	IkeKrull	show us on the doll where you where peturbated
+2019-10-18 10:09:40	+DrAwesomeClaws	so i've been using deezer for music streaming lately
+2019-10-18 10:09:43	+DrAwesomeClaws	and it's pretty good
+2019-10-18 10:09:50	+DrAwesomeClaws	but im thinking of unsubscribing for one reason
+2019-10-18 10:10:02	-->	elsie273 (~Android@213.205.194.12) has joined #reddit-gamedev
+2019-10-18 10:10:05	+Jonas___	is it the name?
+2019-10-18 10:10:18	+DrAwesomeClaws	when you click the album art it doesn't show it larger.  For that you have to click the stupid "..." menu and choose "zoom in on album"
+2019-10-18 10:10:30	+Jonas___	an unforgivable sin
+2019-10-18 10:10:37	+DrAwesomeClaws	it's fucking rediculous
+2019-10-18 10:11:04	+Jonas___	just send their support/feedback an angry message about how stupid it is and how they are bad people for not having fixed it
+2019-10-18 10:11:19	+Jonas___	that's what I do when I have to use a service that has a ridiculous restriction
+2019-10-18 10:11:29	+DrAwesomeClaws	they'll probably tell me it works if i don't use the shitty unmaintained wine aur package
+2019-10-18 10:11:30	+Jonas___	makes me feel better and gives them at least a chance to get feedback on the issue
+2019-10-18 10:11:35	+Jonas___	oh
+2019-10-18 10:12:08	+DrAwesomeClaws	actually i think it's maintained, haha. But there's a good chance it's somehow my fault
+2019-10-18 10:12:09	+DrAwesomeClaws	but still
+2019-10-18 10:12:27	+Jonas___	elsie273, a faster valgrind-ish huh?  I remember writing an AI in my game and making it time-stepped just for the purposes of being able to test a "playthrough" in valgrind, as it was way too slow to even play otherwise
+2019-10-18 10:12:52	+Jonas___	making the game physics + AI time-stepped, I should say
+2019-10-18 10:14:10	+DrAwesomeClaws	i forgot valgrind was a think that exists
+2019-10-18 10:14:22	+DrAwesomeClaws	just spent 2 minutes wondering why i knew that word
+2019-10-18 10:16:22	+DrAwesomeClaws	i should do the oscp test for fun.  I paid for the labs and stuff long ago then just never took the test because i lose interest after i actually learn something
+2019-10-18 10:16:45	+DrAwesomeClaws	but i think that's when i was using valgrind a lot
+2019-10-18 10:18:03	+Jonas___	oscp huh, we've got a hacker harry in our midst
+2019-10-18 10:18:13	+DrAwesomeClaws	you should refer to me as Mr Robot
+2019-10-18 10:18:21	+Jonas___	I'm glad I have my IRC mask on so I don't get superhacked
+2019-10-18 10:18:58	IkeKrull	i can see your ip address is 127.0.0.1! i'm hacking you *right now* youre gonna be pwned so hard..
+2019-10-18 10:19:10	+Jonas___	looks like an interesting course tho
+2019-10-18 10:19:12	+DrAwesomeClaws	shit, i didn't know there was another hacker in here
+2019-10-18 10:19:26	+Jonas___	IkeKrull, don't hack that, that's where I keep all my files
+2019-10-18 10:20:12	+DrAwesomeClaws	oscp is good shit.  The cert actually requires you be able to do stuff.  No multiple choice bullshit
+2019-10-18 10:20:48	+DrAwesomeClaws	test is: they give you a big fake corporate network and you have 24 hours to comprimise it.  Then 24 hours to write a pen test report boring paper
+2019-10-18 10:20:54	+Jonas___	yeah, that's what seems appealing, it might actually teach me a thing
+2019-10-18 10:21:15	+DrAwesomeClaws	and the labs are simulated networks.  Down to network traffic happening in real time and stuff
+2019-10-18 10:21:42	+Jonas___	that's cool
+2019-10-18 10:22:08	+Jonas___	do you get to access a similar network for practice, or is it a simulated live scenario that you only get to do once?
+2019-10-18 10:22:33	+DrAwesomeClaws	yes, the labs are similar to what you'll see in the main test
+2019-10-18 10:22:49	+DrAwesomeClaws	different networks/vulns and stuff
+2019-10-18 10:23:06	+DrAwesomeClaws	but each is basically a big, super detailed ctf with many systems
+2019-10-18 10:25:36	+Jonas___	sounds like a lot of fun
+2019-10-18 10:25:46	+Jonas___	I wish I could say I would have the time to invest in getting to know it
+2019-10-18 10:26:20	+Jonas___	then again it would probably not be a very useful skill for me, in a job setting I have other things I'm a lot better at than pentesting
+2019-10-18 10:27:36	+DrAwesomeClaws	i'd like to get back into that stuff, but it's also not very relevant for me atm
+2019-10-18 10:28:08	+DrAwesomeClaws	though i fear someday i'll be kidnapped by terrorists and won't be able to hack them to save the world if i don't brush up sometime soon
+2019-10-18 10:28:36	+Jonas___	you'll have to fall back to building a fusion powered iron man suit to blow them up
+2019-10-18 10:28:48	+DrAwesomeClaws	i've been going down a category theory rabbit hole
+2019-10-18 10:29:00	+DrAwesomeClaws	that's a good idea
+2019-10-18 10:29:20	+DrAwesomeClaws	https://www.youtube.com/user/DrBartosz/videos  this dudes lectures are good

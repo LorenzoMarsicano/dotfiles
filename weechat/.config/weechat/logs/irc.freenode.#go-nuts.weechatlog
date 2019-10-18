@@ -1013,3 +1013,273 @@
 2019-10-17 15:04:05	ezdiy	it's often tuned to "mask" things like reboot of the db server, but can't do much more beyond that
 2019-10-17 15:04:25	-->	mrig (~mrig@unaffiliated/mrig) has joined #go-nuts
 2019-10-17 15:04:27	<--	absolutejam (~absolutej@154.62.128.42) has quit (Ping timeout: 240 seconds)
+2019-10-17 15:05:25	amitizle	Cool ezdiy, thanks! That's interesting.
+2019-10-17 15:05:43	-->	absolutejam (~absolutej@vrrp.core.bridgehead.infra.victoriaplum.com) has joined #go-nuts
+2019-10-17 15:06:10	-->	kraem (~kraem@62.63.192.110) has joined #go-nuts
+2019-10-17 15:09:36	<--	royal_screwup21 (89de72f4@gateway/web/cgi-irc/kiwiirc.com/ip.137.222.114.244) has quit (Remote host closed the connection)
+2019-10-17 15:13:32	<--	mrig (~mrig@unaffiliated/mrig) has quit (Ping timeout: 268 seconds)
+2019-10-17 15:18:01	-->	shady_traveller (~shady_tra@80.169.46.234) has joined #go-nuts
+2019-10-17 15:18:34	-->	mrig (~mrig@unaffiliated/mrig) has joined #go-nuts
+2019-10-17 15:24:15	<--	DanyC (~DanyC@185.65.25.74) has quit (Remote host closed the connection)
+2019-10-17 15:24:54	<--	absc (~abiscuola@176.9.150.19) has quit (Quit: Leaving)
+2019-10-17 15:24:59	<--	pupskuchen (~pupskuche@unaffiliated/pupskuchen) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2019-10-17 15:25:38	<--	jtux (~jtux@p5DF5FC60.dip0.t-ipconnect.de) has quit (Read error: Connection timed out)
+2019-10-17 15:26:17	-->	jtux (~jtux@p5DF5FC60.dip0.t-ipconnect.de) has joined #go-nuts
+2019-10-17 15:27:33	-->	highimscott (~highimsco@c-73-203-100-56.hsd1.co.comcast.net) has joined #go-nuts
+2019-10-17 15:27:53	-->	agent_white (~agent_whi@unaffiliated/agent-white/x-6197888) has joined #go-nuts
+2019-10-17 15:28:20	<--	Lieuwex (~lieuwex@lieuwe.xyz) has quit (Quit: ZNC 1.8.x-git-100-458ce602 - https://znc.in)
+2019-10-17 15:32:32	<--	highimscott (~highimsco@c-73-203-100-56.hsd1.co.comcast.net) has quit (Ping timeout: 276 seconds)
+2019-10-17 15:33:55	-->	DanyC (~DanyC@185.65.25.74) has joined #go-nuts
+2019-10-17 15:39:29	<--	mrig (~mrig@unaffiliated/mrig) has quit (Quit: WeeChat 2.6)
+2019-10-17 15:43:07	-->	st8less (~st8less@inet-167-224-197-181.isp.ozarksgo.net) has joined #go-nuts
+2019-10-17 15:43:09	<--	andlabs (~pietro@ool-44c660e7.dyn.optonline.net) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-10-17 15:43:39	<--	lluad_ (~lluad@217.173.105.122) has quit (Ping timeout: 240 seconds)
+2019-10-17 15:43:55	-->	mrig (~mrig@unaffiliated/mrig) has joined #go-nuts
+2019-10-17 15:44:34	<--	jtux (~jtux@p5DF5FC60.dip0.t-ipconnect.de) has quit (Read error: Connection timed out)
+2019-10-17 15:45:57	-->	jtux (~jtux@p5DF5FC60.dip0.t-ipconnect.de) has joined #go-nuts
+2019-10-17 15:46:47	-->	tatmantech (~jimtron@65-36-123-194.dyn.grandenetworks.net) has joined #go-nuts
+2019-10-17 15:55:49	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #go-nuts
+2019-10-17 15:55:49	--	Topic for #go-nuts is "golang.org | known issues: golang.org/issue | https://freenode.logbot.info/go-nuts | don't ask to ask, just ask | don't solve problems you don't have | did you check your errors?"
+2019-10-17 15:55:49	--	Topic set by skelterjohn (sid13218@gateway/web/irccloud.com/x-gfctwrngwpjcjgtp) on Tue, 18 Jun 2019 19:13:21
+2019-10-17 15:55:49	--	Channel #go-nuts: 767 nicks (0 ops, 3 voices, 764 normals)
+2019-10-17 15:55:49	--	PvNotice(ChanServ): Please follow the Go Community Code of Conduct when chatting here. See https://golang.org/conduct
+2019-10-17 15:55:56	--	Channel created on Mon, 09 Nov 2009 19:22:37
+2019-10-17 15:58:53	<--	EvilKhaosKat (~evilkhaos@134.17.27.127) has quit (Remote host closed the connection)
+2019-10-17 16:01:31	-->	twobitsprite (~isaac@8.42.18.10) has joined #go-nuts
+2019-10-17 16:03:14	-->	andlabs (~pietro@2607:fb90:2ed0:c1c1:946f:ac12:9ec1:7edc) has joined #go-nuts
+2019-10-17 16:03:47	<--	jackkdev (~jackkdev@vmi253696.contaboserver.net) has quit (Quit: The Lounge - https://thelounge.chat)
+2019-10-17 16:04:01	<--	agent_white (~agent_whi@unaffiliated/agent-white/x-6197888) has quit (Quit: brb)
+2019-10-17 16:05:59	-->	xkapastel (uid17782@gateway/web/irccloud.com/x-vermlaznttyhlpvc) has joined #go-nuts
+2019-10-17 16:15:19	-->	highimscott (~highimsco@c-73-203-100-56.hsd1.co.comcast.net) has joined #go-nuts
+2019-10-17 16:19:53	<--	schaeffer (~schaeffer@unaffiliated/simcity2000) has quit (Quit: well, bye)
+2019-10-17 16:20:39	<--	highimscott (~highimsco@c-73-203-100-56.hsd1.co.comcast.net) has quit (Remote host closed the connection)
+2019-10-17 16:21:13	-->	agent_white (~agent_whi@unaffiliated/agent-white/x-6197888) has joined #go-nuts
+2019-10-17 16:21:23	-->	jgoody (~jgoody@ec2-34-197-209-79.compute-1.amazonaws.com) has joined #go-nuts
+2019-10-17 16:22:03	<--	sword865 (uid208942@gateway/web/irccloud.com/x-lhgfmpmtyaryvyjs) has quit (Quit: Connection closed for inactivity)
+2019-10-17 16:24:31	-->	skywlkr (~skywlkr@unaffiliated/skywlkr) has joined #go-nuts
+2019-10-17 16:24:37	<--	absolutejam (~absolutej@vrrp.core.bridgehead.infra.victoriaplum.com) has quit (Ping timeout: 240 seconds)
+2019-10-17 16:25:16	-->	royal_screwup21 (89de72f4@gateway/web/cgi-irc/kiwiirc.com/ip.137.222.114.244) has joined #go-nuts
+2019-10-17 16:25:49	howell	Does anyone have any strategies for organizing mocks in a way that they're ignored by coverage?
+2019-10-17 16:25:53	-->	tuskkk____ (uid18470@gateway/web/irccloud.com/x-pxqeifevvkmvqkxc) has joined #go-nuts
+2019-10-17 16:26:26	howell	I could just throw them all into the _test.go files, but I'm afraid that will have a tendency to create messy files
+2019-10-17 16:28:31	-->	jackkdev (~jackkdev@cpc81077-colc8-2-0-cust203.7-4.cable.virginm.net) has joined #go-nuts
+2019-10-17 16:28:55	-->	troulouliou_div2 (~troulouli@unaffiliated/troulouliou-div2/x-0271439) has joined #go-nuts
+2019-10-17 16:29:07	-->	alza (uid49753@gateway/web/irccloud.com/x-xgpbvlavrwklqeia) has joined #go-nuts
+2019-10-17 16:29:28	-->	plutoniix (~q@125.24.67.98) has joined #go-nuts
+2019-10-17 16:30:28	<--	mrig (~mrig@unaffiliated/mrig) has quit (Ping timeout: 265 seconds)
+2019-10-17 16:31:21	-->	mrig (~mrig@unaffiliated/mrig) has joined #go-nuts
+2019-10-17 16:31:22	<--	royal_screwup21 (89de72f4@gateway/web/cgi-irc/kiwiirc.com/ip.137.222.114.244) has quit (Remote host closed the connection)
+2019-10-17 16:32:22	-->	absolutejam (~absolutej@vrrp.core.bridgehead.infra.victoriaplum.com) has joined #go-nuts
+2019-10-17 16:34:18	<--	nindustries (~nindustri@unaffiliated/nindustries) has quit (Remote host closed the connection)
+2019-10-17 16:34:52	-->	nindustries (~nindustri@unaffiliated/nindustries) has joined #go-nuts
+2019-10-17 16:38:31	-->	Tv` (uid62079@gateway/web/irccloud.com/x-tcpqtagxyulaicae) has joined #go-nuts
+2019-10-17 16:41:09	-->	brandly (~brandly@c-24-61-240-6.hsd1.ma.comcast.net) has joined #go-nuts
+2019-10-17 16:45:14	-->	lluad_ (~lluad@2a02:8084:2861:3f80:188b:46bb:56ad:6a40) has joined #go-nuts
+2019-10-17 16:45:57	<--	skywlkr (~skywlkr@unaffiliated/skywlkr) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-10-17 16:46:35	-->	kyrylo (~kyrylo@subtle/user/kyrylo) has joined #go-nuts
+2019-10-17 16:47:09	<--	chargen (~chargen@2a02:2e02:9ee0:7100:4143:2241:47e6:3abb) has quit (Quit: BBL)
+2019-10-17 16:48:38	<--	enrio (~nanoz@unaffiliated/nanoz) has quit (Ping timeout: 245 seconds)
+2019-10-17 16:50:45	-->	skywlkr (~skywlkr@unaffiliated/skywlkr) has joined #go-nuts
+2019-10-17 16:52:13	<--	nindustries (~nindustri@unaffiliated/nindustries) has quit (Ping timeout: 265 seconds)
+2019-10-17 16:57:43	<--	skywlkr (~skywlkr@unaffiliated/skywlkr) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-10-17 16:58:37	<--	zwarag (~zwarag@213-229-37-28.static.upcbusiness.at) has quit (Ping timeout: 240 seconds)
+2019-10-17 16:59:37	<--	meain (~plank@14.98.113.114) has quit (Ping timeout: 240 seconds)
+2019-10-17 17:00:19	sztanpet	meaning you have the mocks in your non-test "main" package?
+2019-10-17 17:00:54	sztanpet	if so, there is no reason for that
+2019-10-17 17:01:54	-->	juztin (~juztin@2607:fb90:f34:4ce1:d000:f798:fdd0:c905) has joined #go-nuts
+2019-10-17 17:04:02	-->	skywlkr (~skywlkr@unaffiliated/skywlkr) has joined #go-nuts
+2019-10-17 17:04:16	-->	ken^arok (~ken^arok@39.109.214.120) has joined #go-nuts
+2019-10-17 17:05:45	-->	KingGranite (~wmudge@172.110.61.29) has joined #go-nuts
+2019-10-17 17:05:47	-->	Smigwell (40644e4f@dhcp-64-100-78-79.cisco.com) has joined #go-nuts
+2019-10-17 17:06:33	<--	AquaL1te (~AquaL1te@unaffiliated/aqual1te) has quit (Quit: leaving)
+2019-10-17 17:07:29	marlinc	Hey there so I'm using protobufs with gRPC and this is all nice. Now what I'm doing is converting protobufs to/from 'nicer' go structs with fancy methods and stuff. Now this causes a lot of boilerplate code and I was wondering what other people do
+2019-10-17 17:08:26	<--	juztin (~juztin@2607:fb90:f34:4ce1:d000:f798:fdd0:c905) has quit (Remote host closed the connection)
+2019-10-17 17:09:49	<--	andlabs (~pietro@2607:fb90:2ed0:c1c1:946f:ac12:9ec1:7edc) has quit (Ping timeout: 250 seconds)
+2019-10-17 17:13:17	<--	Cyrus (~Cyrus@unaffiliated/cyrus) has quit (Ping timeout: 240 seconds)
+2019-10-17 17:14:54	-->	Cyrus (~Cyrus@unaffiliated/cyrus) has joined #go-nuts
+2019-10-17 17:15:01	<--	absolutejam (~absolutej@vrrp.core.bridgehead.infra.victoriaplum.com) has quit (Ping timeout: 268 seconds)
+2019-10-17 17:15:06	<--	jtux (~jtux@p5DF5FC60.dip0.t-ipconnect.de) has quit (Quit: Leaving.)
+2019-10-17 17:15:33	-->	juztin (~juztin@internal.mediciventures.com) has joined #go-nuts
+2019-10-17 17:18:11	<--	DanyC (~DanyC@185.65.25.74) has quit (Read error: Connection reset by peer)
+2019-10-17 17:18:51	<--	Smigwell (40644e4f@dhcp-64-100-78-79.cisco.com) has quit (Ping timeout: 260 seconds)
+2019-10-17 17:20:30	lupine	solution, as ever: insert an os.Pipe()
+2019-10-17 17:20:46	lupine	I guess I could cancel the whole context after a timeout instead
+2019-10-17 17:20:55	-->	funeral (~Funeral@2a01:79d:b7df:4bd8:f3d4:5e09:6ffa:eb73) has joined #go-nuts
+2019-10-17 17:21:12	-->	DanyC (~DanyC@185.65.25.74) has joined #go-nuts
+2019-10-17 17:21:52	Wessie	lupine: can't you just call r.Body.Close after a set period
+2019-10-17 17:27:30	<--	xsoultartar (~xsoultart@2001:268:c0a4:817:784f:8cc0:dd:6f62) has quit (Quit: Leaving)
+2019-10-17 17:27:35	<--	Kaivo (~Kaivo@ec2-35-182-108-102.ca-central-1.compute.amazonaws.com) has quit (Ping timeout: 276 seconds)
+2019-10-17 17:30:08	lupine	hmmmm, let's find out
+2019-10-17 17:31:33	<--	Tichodroma (~lutz@fsf/member/Tichodroma) has quit (Quit: leaving)
+2019-10-17 17:32:18	lupine	I'm always a little uncertain about the semantics of Close() and Read() combined
+2019-10-17 17:32:46	Wessie	depends on the implementation, network stuff generally interrupts
+2019-10-17 17:33:10	-->	zwarag (~zwarag@91.213.77.200) has joined #go-nuts
+2019-10-17 17:35:12	Tv`	marlinc: it's pretty much a choice between that or writing business logic with pb wire message (which is worse)
+2019-10-17 17:36:00	lupine	yeah, that's the thing. one of my tests is using a HTTP socket, the other a fake reader that is uninterruptible. one test is good, the other bad.
+2019-10-17 17:37:11	Tv`	lupine: context gives plenty of power for cancellations; to actually cancel, your underlying data sources need to support it too
+2019-10-17 17:37:53	Tv`	lupine: net/http has a server-wide request reading timeout, not much more. there's an open issue
+2019-10-17 17:38:36	lupine	grumble grumble
+2019-10-17 17:39:35	Tv`	https://github.com/golang/go/issues/16100   and  https://blog.cloudflare.com/the-complete-guide-to-golang-net-http-timeouts/
+2019-10-17 17:39:42	-->	nibble_zero (~nibble_ze@94.250.171.94) has joined #go-nuts
+2019-10-17 17:40:14	Tv`	the server-wide stuff ruins streaming, SSE, large files etc
+2019-10-17 17:41:09	-->	cyberlard (~cyberlard@unaffiliated/jludwig) has joined #go-nuts
+2019-10-17 17:41:32	Tv`	you could do something funky like read in a separate goroutine and panic the handler after a timeout
+2019-10-17 17:41:54	Wessie	or if you're in control if the fake-reader make it support interrupts
+2019-10-17 17:43:06	<--	plutoniix (~q@125.24.67.98) has quit (Quit: Leaving)
+2019-10-17 17:43:11	Tv`	the original question was about reading Request.Body though
+2019-10-17 17:43:27	Wessie	yeah, and closing the body works in that case :)
+2019-10-17 17:43:30	Tv`	yes
+2019-10-17 17:43:43	Tv`	(assuming it's documented....)
+2019-10-17 17:43:53	Wessie	(no)
+2019-10-17 17:44:16	Tv`	yeah then that doesn't sound great
+2019-10-17 17:45:23	Tv`	and relying on body ending with error shortly after the handler panics is also not documented, but at least it sounds reasonable
+2019-10-17 17:46:58	Tv`	cue brad's blue sky ng rewrite...
+2019-10-17 17:46:59	Wessie	does it, feels like closing an io.ReadCloser is reasonable too in that case
+2019-10-17 17:47:48	<--	DanyC (~DanyC@185.65.25.74) has quit (Ping timeout: 265 seconds)
+2019-10-17 17:47:50	-->	chripell (chripell@nat/google/x-pchbkjundkecymgg) has joined #go-nuts
+2019-10-17 17:47:55	Wessie	and the panic probably does the exact same thing anyway, calling Close on the body by nature of the handling having ended
+2019-10-17 17:47:57	Tv`	i fear assumptions that are broken by NopCloser
+2019-10-17 17:48:34	<--	skywlkr (~skywlkr@unaffiliated/skywlkr) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-10-17 17:48:46	Wessie	you do have to start worrying about middleware doing funny things to your body, if you are into that kind of stuff
+2019-10-17 17:49:02	<--	casaca (~nut@209.222.10.61) has quit (Ping timeout: 276 seconds)
+2019-10-17 17:49:06	Tv`	that's where the panic way is nice
+2019-10-17 17:49:17	<--	pepee (~pepee@unaffiliated/pepee) has quit (Quit: bye $IRC)
+2019-10-17 17:50:01	-->	casaca (~nut@209.222.10.61) has joined #go-nuts
+2019-10-17 17:50:10	<--	ken^arok (~ken^arok@39.109.214.120) has quit (Ping timeout: 268 seconds)
+2019-10-18 08:05:44	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #go-nuts
+2019-10-18 08:05:44	--	Topic for #go-nuts is "golang.org | known issues: golang.org/issue | https://freenode.logbot.info/go-nuts | don't ask to ask, just ask | don't solve problems you don't have | did you check your errors?"
+2019-10-18 08:05:44	--	Topic set by skelterjohn (sid13218@gateway/web/irccloud.com/x-gfctwrngwpjcjgtp) on Tue, 18 Jun 2019 19:13:21
+2019-10-18 08:05:45	--	Channel #go-nuts: 758 nicks (0 ops, 3 voices, 755 normals)
+2019-10-18 08:05:45	--	PvNotice(ChanServ): Please follow the Go Community Code of Conduct when chatting here. See https://golang.org/conduct
+2019-10-18 08:05:53	--	Channel created on Mon, 09 Nov 2009 19:22:37
+2019-10-18 08:07:07	<--	jcajka (~jcajka@ip-78-45-65-107.net.upcbroadband.cz) has quit (Quit: Leaving)
+2019-10-18 08:10:17	<--	tartarsauce (~xsoultart@133.91.253.129) has quit (Ping timeout: 240 seconds)
+2019-10-18 08:10:39	<--	alex_pa (~alex_pa@125.25.51.99) has quit (Quit: Leaving)
+2019-10-18 08:11:48	-->	karakedi (~eAC53C340@unaffiliated/orphan) has joined #go-nuts
+2019-10-18 08:12:27	<--	Kvasya_ (~Kvasya@shpd-95-53-219-225.vologda.ru) has quit (Ping timeout: 250 seconds)
+2019-10-18 08:13:41	<--	drap3r (~drap3r@c-73-15-142-51.hsd1.ca.comcast.net) has quit (Remote host closed the connection)
+2019-10-18 08:17:35	-->	mrig (~mrig@unaffiliated/mrig) has joined #go-nuts
+2019-10-18 08:17:48	-->	jimtron (~jimtron@65-36-123-194.dyn.grandenetworks.net) has joined #go-nuts
+2019-10-18 08:26:53	<--	Tv` (uid62079@gateway/web/irccloud.com/x-tcpqtagxyulaicae) has quit (Quit: Connection closed for inactivity)
+2019-10-18 08:27:50	<--	wgr (~wgr@2001:1284:f016:830b:96de:80ff:fef7:4152) has quit (Quit: wgr)
+2019-10-18 08:33:31	-->	Tichodroma (~lutz@fsf/member/Tichodroma) has joined #go-nuts
+2019-10-18 08:38:19	-->	sw1nn (~sw1nn@2a00:23c6:238c:f900:e084:44ec:eddc:2cf8) has joined #go-nuts
+2019-10-18 08:39:23	-->	pupskuchen (~pupskuche@unaffiliated/pupskuchen) has joined #go-nuts
+2019-10-18 08:40:02	<--	jrwren (~jrwren@about/csharp/regular/jrwren) has quit (Ping timeout: 265 seconds)
+2019-10-18 08:40:03	-->	drap3r (~drap3r@c-73-15-142-51.hsd1.ca.comcast.net) has joined #go-nuts
+2019-10-18 08:41:01	-->	AquaL1te (~AquaL1te@unaffiliated/aqual1te) has joined #go-nuts
+2019-10-18 08:57:17	<--	moser (~moser@113.119.69.241) has quit (Ping timeout: 240 seconds)
+2019-10-18 08:59:17	<--	drap3r (~drap3r@c-73-15-142-51.hsd1.ca.comcast.net) has quit (Remote host closed the connection)
+2019-10-18 08:59:33	-->	chargen (~chargen@2a02:2e02:9ee0:7100:4143:2241:47e6:3abb) has joined #go-nuts
+2019-10-18 08:59:44	<--	nikivi (~nikivi@nikivi.powered.by.lunarbnc.net) has quit (Quit: Free ZNC ~ Powered by LunarBNC: https://LunarBNC.net)
+2019-10-18 09:01:04	<--	Edu4rdSHL (~edu4rdshl@fsf/member/edu4rdshl) has quit (Read error: Connection reset by peer)
+2019-10-18 09:01:21	<--	plutoniix (~q@175.176.222.7) has quit (Quit: Leaving)
+2019-10-18 09:02:08	<--	kamee (~progart@5.77.178.222) has quit (Ping timeout: 246 seconds)
+2019-10-18 09:02:11	-->	moser (~moser@113.119.69.241) has joined #go-nuts
+2019-10-18 09:03:18	-->	xkapastel (uid17782@gateway/web/irccloud.com/x-nehmxeqwsfakpgqq) has joined #go-nuts
+2019-10-18 09:03:21	-->	nikivi (~nikivi@nikivi.powered.by.lunarbnc.net) has joined #go-nuts
+2019-10-18 09:04:21	-->	Edu4rdSHL (~edu4rdshl@fsf/member/edu4rdshl) has joined #go-nuts
+2019-10-18 09:06:31	-->	jrwren (~jrwren@about/csharp/regular/jrwren) has joined #go-nuts
+2019-10-18 09:10:19	<--	dzintars (~dzintars@mail.oswee.com) has quit (Read error: Connection reset by peer)
+2019-10-18 09:11:27	-->	Kvasya_ (~Kvasya@shpd-95-53-219-225.vologda.ru) has joined #go-nuts
+2019-10-18 09:13:07	<--	hwm4rgs (~hwm4rgs@unaffiliated/hwm4rgs) has quit (Ping timeout: 250 seconds)
+2019-10-18 09:15:55	-->	drap3r (~drap3r@c-73-15-142-51.hsd1.ca.comcast.net) has joined #go-nuts
+2019-10-18 09:16:11	-->	ken^arok (~ken^arok@116.51.23.222) has joined #go-nuts
+2019-10-18 09:19:36	-->	encod3 (~encod3@144.178.76.42.static.ef-service.nl) has joined #go-nuts
+2019-10-18 09:21:10	<--	drap3r (~drap3r@c-73-15-142-51.hsd1.ca.comcast.net) has quit (Remote host closed the connection)
+2019-10-18 09:26:46	-->	shady_traveller (~shady_tra@80.169.46.234) has joined #go-nuts
+2019-10-18 09:32:29	-->	return0e (~return0e@host86-151-42-190.range86-151.btcentralplus.com) has joined #go-nuts
+2019-10-18 09:35:38	<--	johanhenselmans_ (~localadmi@pretsense.xs4all.nl) has quit (Read error: Connection reset by peer)
+2019-10-18 09:36:16	-->	drap3r (~drap3r@c-73-15-142-51.hsd1.ca.comcast.net) has joined #go-nuts
+2019-10-18 09:36:44	-->	absolutejam1 (~absolutej@154.62.128.42) has joined #go-nuts
+2019-10-18 09:36:56	-->	velco (~velco@cpc92724-cmbg20-2-0-cust20.5-4.cable.virginm.net) has joined #go-nuts
+2019-10-18 09:37:08	<--	return0e (~return0e@host86-151-42-190.range86-151.btcentralplus.com) has quit (Ping timeout: 246 seconds)
+2019-10-18 09:37:25	<--	velco (~velco@cpc92724-cmbg20-2-0-cust20.5-4.cable.virginm.net) has quit (Remote host closed the connection)
+2019-10-18 09:37:44	-->	velco (~velco@cpc92724-cmbg20-2-0-cust20.5-4.cable.virginm.net) has joined #go-nuts
+2019-10-18 09:38:12	<--	velco (~velco@cpc92724-cmbg20-2-0-cust20.5-4.cable.virginm.net) has quit (Remote host closed the connection)
+2019-10-18 09:38:29	-->	velco (~velco@cpc92724-cmbg20-2-0-cust20.5-4.cable.virginm.net) has joined #go-nuts
+2019-10-18 09:38:59	<--	velco (~velco@cpc92724-cmbg20-2-0-cust20.5-4.cable.virginm.net) has quit (Remote host closed the connection)
+2019-10-18 09:39:20	-->	velco (~velco@cpc92724-cmbg20-2-0-cust20.5-4.cable.virginm.net) has joined #go-nuts
+2019-10-18 09:39:21	-->	kamee (~progart@5.77.254.89) has joined #go-nuts
+2019-10-18 09:39:21	<--	kamee (~progart@5.77.254.89) has quit (Client Quit)
+2019-10-18 09:39:47	<--	velco (~velco@cpc92724-cmbg20-2-0-cust20.5-4.cable.virginm.net) has quit (Remote host closed the connection)
+2019-10-18 09:40:05	-->	velco (~velco@cpc92724-cmbg20-2-0-cust20.5-4.cable.virginm.net) has joined #go-nuts
+2019-10-18 09:40:34	<--	velco (~velco@cpc92724-cmbg20-2-0-cust20.5-4.cable.virginm.net) has quit (Remote host closed the connection)
+2019-10-18 09:40:54	-->	velco (~velco@cpc92724-cmbg20-2-0-cust20.5-4.cable.virginm.net) has joined #go-nuts
+2019-10-18 09:41:21	<--	velco (~velco@cpc92724-cmbg20-2-0-cust20.5-4.cable.virginm.net) has quit (Remote host closed the connection)
+2019-10-18 09:41:39	-->	velco (~velco@cpc92724-cmbg20-2-0-cust20.5-4.cable.virginm.net) has joined #go-nuts
+2019-10-18 09:41:59	-->	kamee (~progart@5.77.254.89) has joined #go-nuts
+2019-10-18 09:41:59	<--	kamee (~progart@5.77.254.89) has quit (Client Quit)
+2019-10-18 09:42:09	<--	velco (~velco@cpc92724-cmbg20-2-0-cust20.5-4.cable.virginm.net) has quit (Remote host closed the connection)
+2019-10-18 09:42:09	-->	kamee (~progart@5.77.254.89) has joined #go-nuts
+2019-10-18 09:42:09	<--	kamee (~progart@5.77.254.89) has quit (Client Quit)
+2019-10-18 09:42:19	-->	kamee (~progart@5.77.254.89) has joined #go-nuts
+2019-10-18 09:42:19	<--	kamee (~progart@5.77.254.89) has quit (Client Quit)
+2019-10-18 09:42:25	-->	velco (~velco@cpc92724-cmbg20-2-0-cust20.5-4.cable.virginm.net) has joined #go-nuts
+2019-10-18 09:42:29	-->	kamee (~progart@5.77.254.89) has joined #go-nuts
+2019-10-18 09:42:29	<--	kamee (~progart@5.77.254.89) has quit (Client Quit)
+2019-10-18 09:42:39	-->	kamee (~progart@5.77.254.89) has joined #go-nuts
+2019-10-18 09:42:39	<--	kamee (~progart@5.77.254.89) has quit (Client Quit)
+2019-10-18 09:42:56	<--	velco (~velco@cpc92724-cmbg20-2-0-cust20.5-4.cable.virginm.net) has quit (Remote host closed the connection)
+2019-10-18 09:43:15	-->	velco (~velco@cpc92724-cmbg20-2-0-cust20.5-4.cable.virginm.net) has joined #go-nuts
+2019-10-18 09:43:43	<--	velco (~velco@cpc92724-cmbg20-2-0-cust20.5-4.cable.virginm.net) has quit (Remote host closed the connection)
+2019-10-18 09:44:00	-->	velco (~velco@cpc92724-cmbg20-2-0-cust20.5-4.cable.virginm.net) has joined #go-nuts
+2019-10-18 09:44:31	<--	velco (~velco@cpc92724-cmbg20-2-0-cust20.5-4.cable.virginm.net) has quit (Remote host closed the connection)
+2019-10-18 09:44:38	-->	quax (demon@dim13.org) has joined #go-nuts
+2019-10-18 09:44:49	-->	velco (~velco@cpc92724-cmbg20-2-0-cust20.5-4.cable.virginm.net) has joined #go-nuts
+2019-10-18 09:44:57	<--	ganbold (~ganbold@66.85.186.234) has quit (Remote host closed the connection)
+2019-10-18 09:45:18	<--	velco (~velco@cpc92724-cmbg20-2-0-cust20.5-4.cable.virginm.net) has quit (Remote host closed the connection)
+2019-10-18 09:45:34	-->	velco (~velco@cpc92724-cmbg20-2-0-cust20.5-4.cable.virginm.net) has joined #go-nuts
+2019-10-18 09:46:05	<--	velco (~velco@cpc92724-cmbg20-2-0-cust20.5-4.cable.virginm.net) has quit (Remote host closed the connection)
+2019-10-18 09:46:24	-->	velco (~velco@cpc92724-cmbg20-2-0-cust20.5-4.cable.virginm.net) has joined #go-nuts
+2019-10-18 09:46:40	<--	jimtron (~jimtron@65-36-123-194.dyn.grandenetworks.net) has quit (Remote host closed the connection)
+2019-10-18 09:46:53	<--	velco (~velco@cpc92724-cmbg20-2-0-cust20.5-4.cable.virginm.net) has quit (Remote host closed the connection)
+2019-10-18 09:49:01	<--	titouan (~titouan@163.172.184.222) has quit (Remote host closed the connection)
+2019-10-18 09:50:15	-->	titouan (~titouan@163.172.184.222) has joined #go-nuts
+2019-10-18 09:50:19	-->	S4ren (~S4ren@2a00:23c6:318a:ed00:55de:5104:64ff:177d) has joined #go-nuts
+2019-10-18 09:51:09	-->	_ADN_ (~ADN@212.183.131.194) has joined #go-nuts
+2019-10-18 09:52:38	-->	DanyC (~DanyC@185.65.25.74) has joined #go-nuts
+2019-10-18 09:53:50	<--	DanyC (~DanyC@185.65.25.74) has quit (Remote host closed the connection)
+2019-10-18 09:56:55	-->	Jackneill (~Jackneill@unaffiliated/jackneill) has joined #go-nuts
+2019-10-18 09:57:42	<--	zkanda (~zkanda@104.248.156.209) has quit (Quit: The Lounge - https://thelounge.chat)
+2019-10-18 10:00:58	-->	lluad (~lluad@37.228.251.105) has joined #go-nuts
+2019-10-18 10:01:26	<--	drap3r (~drap3r@c-73-15-142-51.hsd1.ca.comcast.net) has quit (Remote host closed the connection)
+2019-10-18 10:02:43	<--	nikivi (~nikivi@nikivi.powered.by.lunarbnc.net) has quit (Read error: Connection reset by peer)
+2019-10-18 10:02:47	<--	lluad (~lluad@37.228.251.105) has quit (Quit: lluad)
+2019-10-18 10:03:28	-->	nikivi (~nikivi@nikivi.powered.by.lunarbnc.net) has joined #go-nuts
+2019-10-18 10:03:57	<--	Edu4rdSHL (~edu4rdshl@fsf/member/edu4rdshl) has quit (Quit: Leaving)
+2019-10-18 10:04:58	-->	Edu4rdSHL (~edu4rdshl@fsf/member/edu4rdshl) has joined #go-nuts
+2019-10-18 10:05:36	<--	absolutejam1 (~absolutej@154.62.128.42) has quit (Ping timeout: 240 seconds)
+2019-10-18 10:12:28	-->	aLeSD (~aLeSD@139.47.115.104) has joined #go-nuts
+2019-10-18 10:12:39	aLeSD	hi all
+2019-10-18 10:13:15	aLeSD	I am in a monorepo and I'd like to share some code between 2 project. Which is the good way to archive it ?
+2019-10-18 10:14:33	iivvoo	I'm in a klein bottle and I can't get in
+2019-10-18 10:16:48	aLeSD	lol
+2019-10-18 10:17:05	aLeSD	ok Do I have to create a standalone module ?
+2019-10-18 10:18:34	aLeSD	maybe a local import
+2019-10-18 10:21:32	-->	lluad_ (~lluad@217.173.105.122) has joined #go-nuts
+2019-10-18 10:21:33	-->	Sina (uid230776@gateway/web/irccloud.com/x-iihqasgzajijcwta) has joined #go-nuts
+2019-10-18 10:22:02	aLeSD	I am getting "local import in non-local package"
+2019-10-18 10:22:19	-->	velco (~velco@cpc92724-cmbg20-2-0-cust20.5-4.cable.virginm.net) has joined #go-nuts
+2019-10-18 10:22:53	sztanpet	not sure what monorepo has to do with your problem
+2019-10-18 10:23:27	sztanpet	you share code through packages, packages have an import path, you import said path
+2019-10-18 10:24:45	-->	DanyC (~DanyC@185.65.25.74) has joined #go-nuts
+2019-10-18 10:26:32	<--	nikivi (~nikivi@nikivi.powered.by.lunarbnc.net) has quit (Quit: Free ZNC ~ Powered by LunarBNC: https://LunarBNC.net)
+2019-10-18 10:26:42	<--	Kvasya_ (~Kvasya@shpd-95-53-219-225.vologda.ru) has quit (Ping timeout: 268 seconds)
+2019-10-18 10:26:50	<--	velco (~velco@cpc92724-cmbg20-2-0-cust20.5-4.cable.virginm.net) has quit (Ping timeout: 246 seconds)
+2019-10-18 10:27:24	sztanpet	also, maybe https://vyskocilm.github.io/blog/go-111-modules-monorepo-and-shared-code/
+2019-10-18 10:28:29	-->	nikivi (~nikivi@nikivi.powered.by.lunarbnc.net) has joined #go-nuts
+2019-10-18 10:29:12	aLeSD	sztanpet, thanks!
+2019-10-18 10:29:45	<--	nindustries (~nindustri@unaffiliated/nindustries) has quit (Ping timeout: 265 seconds)
+2019-10-18 10:29:45	-->	kamee (~progart@31.7.162.99) has joined #go-nuts
+2019-10-18 10:29:50	<--	nikivi (~nikivi@nikivi.powered.by.lunarbnc.net) has quit (Read error: Connection reset by peer)
+2019-10-18 10:30:18	-->	nikivi (~nikivi@nikivi.powered.by.lunarbnc.net) has joined #go-nuts
+2019-10-18 10:34:38	<--	epony (epony@unaffiliated/epony) has quit (Ping timeout: 245 seconds)
+2019-10-18 10:34:42	-->	nindustries (~nindustri@unaffiliated/nindustries) has joined #go-nuts
+2019-10-18 10:36:33	<--	girafe (~girafe@lfbn-1-7953-111.w90-112.abo.wanadoo.fr) has quit (Read error: Connection reset by peer)
+2019-10-18 10:39:03	<--	DanyC (~DanyC@185.65.25.74) has quit (Ping timeout: 245 seconds)
+2019-10-18 10:48:56	-->	return0e (~return0e@host86-151-42-190.range86-151.btcentralplus.com) has joined #go-nuts
+2019-10-18 10:51:14	<--	moser (~moser@113.119.69.241) has quit (Ping timeout: 240 seconds)
+2019-10-18 10:51:49	aLeSD	sztanpet, can't get it. Do I have to create a go.mod on the root of my project
+2019-10-18 10:51:50	aLeSD	?
+2019-10-18 10:53:48	-->	absolutejam2 (~absolutej@154.62.128.42) has joined #go-nuts

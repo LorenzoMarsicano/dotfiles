@@ -262,3 +262,180 @@
 2019-10-17 11:21:05	--	CTCP reply to freenode-connect: VERSION WeeChat 2.6 (Sep 16 2019 01:07:53)
 2019-10-17 11:21:11	--	#rust: ##rust :Forwarding to another channel
 2019-10-17 11:21:11	--	NickServ (NickServ@services.): You are already logged in as Syrinxos.
+2019-10-17 15:55:32	--	irc: connecting to server chat.freenode.net/6667...
+2019-10-17 15:55:32	--	irc: connected to chat.freenode.net/6667 (91.217.189.42)
+2019-10-17 15:55:32	--	sinisalo.freenode.net: *** Looking up your hostname...
+2019-10-17 15:55:32	--	sinisalo.freenode.net: *** Checking Ident
+2019-10-17 15:55:32	--	sinisalo.freenode.net: *** Found your hostname
+2019-10-17 15:55:41	--	sinisalo.freenode.net: *** No Ident response
+2019-10-17 15:55:41	--	irc: client capability, server supports: extended-join multi-prefix identify-msg account-notify sasl
+2019-10-17 15:55:41	--	irc: client capability, requesting: sasl
+2019-10-17 15:55:41	--	irc: client capability, enabled: sasl
+2019-10-17 15:55:42	--	You are now logged in as Syrinxos. (Syrinxos!syrinxos@93-34-1-84.ip47.fastwebnet.it)
+2019-10-17 15:55:42	--	SASL authentication successful
+2019-10-17 15:55:42	--	Welcome to the freenode Internet Relay Chat Network Syrinxos
+2019-10-17 15:55:42	--	MSG(nickserv): identify *********
+2019-10-17 15:55:42	--	Your host is sinisalo.freenode.net[91.217.189.42/6667], running version ircd-seven-1.1.7
+2019-10-17 15:55:42	--	This server was created Tue Aug 21 2018 at 18:43:36 UTC
+2019-10-17 15:55:42	--	sinisalo.freenode.net ircd-seven-1.1.7 DOQRSZaghilopsuwz CFILMPQSbcefgijklmnopqrstuvz bkloveqjfI
+2019-10-17 15:55:42	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstuz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode STATUSMSG=@+ CALLERID=g CASEMAPPING=rfc1459 :are supported by this server
+2019-10-17 15:55:42	--	CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 DEAF=D FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: EXTBAN=$,ajrxz CLIENTVER=3.0 WHOX KNOCK ETRACE :are supported by this server
+2019-10-17 15:55:42	--	SAFELIST ELIST=CTU CPRIVMSG CNOTICE :are supported by this server
+2019-10-17 15:55:42	--	There are 99 users and 86688 invisible on 31 servers
+2019-10-17 15:55:42	--	34 :IRC Operators online
+2019-10-17 15:55:42	--	15 :unknown connection(s)
+2019-10-17 15:55:42	--	49716 :channels formed
+2019-10-17 15:55:42	--	I have 7520 clients and 1 servers
+2019-10-17 15:55:42	--	7520 12000 :Current local users 7520, max 12000
+2019-10-17 15:55:42	--	86787 94773 :Current global users 86787, max 94773
+2019-10-17 15:55:42	--	Highest connection count: 12001 (12000 clients) (784418 connections received)
+2019-10-17 15:55:42	--	- sinisalo.freenode.net Message of the Day - 
+2019-10-17 15:55:42	--	- Welcome to sinisalo.freenode.net in Stockholm, SE.
+2019-10-17 15:55:42	--	- Thanks to http://www.portlane.com/ for sponsoring
+2019-10-17 15:55:42	--	- this server!
+2019-10-17 15:55:42	--	-  
+2019-10-17 15:55:42	--	-  
+2019-10-17 15:55:42	--	- SINISALO, (ANNA) JOHANNA (1958-), a Finnish science fiction
+2019-10-17 15:55:42	--	- and fantasy novelist and a script writer. Her novel 'Not
+2019-10-17 15:55:42	--	- Before Sundown' (orig. 'Ennen päivänlaskua ei voi'
+2019-10-17 15:55:42	--	- published in Finnish in 2000, when it also won the biggest
+2019-10-17 15:55:42	--	- literature award of Finland) was awarded The James Tiptree
+2019-10-17 15:55:42	--	- Jr. award in 2004.  She was nominated for a Nebula award in
+2019-10-17 15:55:42	--	- 2009 for her short story Baby Doll.  Their most recent work
+2019-10-17 15:55:42	--	- includes screenwriting for the film 'Iron Sky'.
+2019-10-17 15:55:42	--	-  
+2019-10-17 15:55:42	--	- Welcome to freenode - supporting the free and open source
+2019-10-17 15:55:42	--	- software communities since 1998.
+2019-10-17 15:55:42	--	-  
+2019-10-17 15:55:42	--	- By connecting to freenode you indicate that you have read and
+2019-10-17 15:55:42	--	- accept our policies and guidelines as set out on https://freenode.net
+2019-10-17 15:55:42	--	-  
+2019-10-17 15:55:42	--	- In the event that you observe behaviour that contravenes our policies,
+2019-10-17 15:55:42	--	- please notify a volunteer staff member via private message, or send us an
+2019-10-17 15:55:42	--	- e-mail to complaints@freenode.net -- we will do our best to address the
+2019-10-17 15:55:42	--	- situation within a reasonable period of time, and we may request further
+2019-10-17 15:55:42	--	- information or, as appropriate, involve other parties such as channel operators 
+2019-10-17 15:55:42	--	- Group Contacts representing an on-topic group.
+2019-10-17 15:55:42	--	-  
+2019-10-17 15:55:42	--	- freenode runs an open proxy scanner.
+2019-10-17 15:55:42	--	-  
+2019-10-17 15:55:42	--	- If you are looking for assistance, you may be able to find a list of 
+2019-10-17 15:55:42	--	- volunteer staff on '/stats p' (shows only on-call staff) or by joining 
+2019-10-17 15:55:42	--	- #freenode and using the '/who freenode/staff/*' command. You may message
+2019-10-17 15:55:42	--	- any of us at any time. Please note that freenode predominantly provides 
+2019-10-17 15:55:42	--	- assistance via private message, and while we have a network channel the 
+2019-10-17 15:55:42	--	- primary venue for support requests is via private message to a member 
+2019-10-17 15:55:42	--	- of the volunteer staff team.
+2019-10-17 15:55:42	--	-  
+2019-10-17 15:55:42	--	- From time to time, volunteer staff may send server-wide notices relating to
+2019-10-17 15:55:42	--	- the project, or the communities that we host. The majority of such notices
+2019-10-17 15:55:42	--	- will be sent as wallops, and you can '/mode <yournick> +w' to ensure that you
+2019-10-17 15:55:42	--	- do not miss them. Important messages relating to the freenode project, including
+2019-10-17 15:55:42	--	- notices of upcoming maintenance and other scheduled downtime will be issued as
+2019-10-17 15:55:42	--	- global notices.
+2019-10-17 15:55:42	--	-  
+2019-10-17 15:55:43	--	- Representing an on-topic project? Don't forget to register, more information
+2019-10-17 15:55:43	--	- can be found on the https://freenode.net website under "Group Registration".
+2019-10-17 15:55:43	--	-  
+2019-10-17 15:55:43	--	- Thank you also to our server sponsors for the sustained support in keeping the
+2019-10-17 15:55:43	--	- network going for close to two decades.
+2019-10-17 15:55:43	--	-  
+2019-10-17 15:55:43	--	- Thank you to all of our attendees, sponsors, speakers, exhibitors, helpers,
+2019-10-17 15:55:43	--	- and everyone else who made this year's freenode #live conference amazing.
+2019-10-17 15:55:43	--	- https://freenode.net/news/live-2018
+2019-10-17 15:55:43	--	-  
+2019-10-17 15:55:43	--	- Thank you for using freenode!
+2019-10-17 15:55:43	--	End of /MOTD command.
+2019-10-17 15:55:43	--	User mode [+i] by Syrinxos
+2019-10-17 15:55:43	--	freenode-connect (frigg@freenode/utility-bot/frigg): Welcome to freenode. To protect the network all new connections will be scanned for vulnerabilities. This will not harm your computer, and vulnerable hosts will be notified.
+2019-10-17 15:55:43	--	CTCP requested by freenode-connect: VERSION
+2019-10-17 15:55:43	--	CTCP reply to freenode-connect: VERSION WeeChat 2.6 (Sep 16 2019 01:07:53)
+2019-10-17 15:55:49	--	#rust: ##rust :Forwarding to another channel
+2019-10-17 15:55:49	--	NickServ (NickServ@services.): You are already logged in as Syrinxos.
+2019-10-18 08:05:28	--	irc: connecting to server chat.freenode.net/6667...
+2019-10-18 08:05:28	--	irc: connected to chat.freenode.net/6667 (185.30.166.37)
+2019-10-18 08:05:28	--	orwell.freenode.net: *** Looking up your hostname...
+2019-10-18 08:05:28	--	orwell.freenode.net: *** Checking Ident
+2019-10-18 08:05:28	--	orwell.freenode.net: *** Found your hostname
+2019-10-18 08:05:37	--	orwell.freenode.net: *** No Ident response
+2019-10-18 08:05:37	--	irc: client capability, server supports: extended-join tls multi-prefix identify-msg account-notify chghost sasl cap-notify away-notify
+2019-10-18 08:05:37	--	irc: client capability, requesting: sasl
+2019-10-18 08:05:37	--	irc: client capability, enabled: sasl
+2019-10-18 08:05:37	--	You are now logged in as Syrinxos. (Syrinxos!syrinxos@93-34-1-84.ip47.fastwebnet.it)
+2019-10-18 08:05:37	--	SASL authentication successful
+2019-10-18 08:05:38	--	Welcome to the freenode Internet Relay Chat Network Syrinxos
+2019-10-18 08:05:38	--	MSG(nickserv): identify *********
+2019-10-18 08:05:38	--	Your host is orwell.freenode.net[185.30.166.37/6667], running version ircd-seven-1.1.8
+2019-10-18 08:05:38	--	This server was created Sun Sep 8 2019 at 20:18:33 UTC
+2019-10-18 08:05:38	--	orwell.freenode.net ircd-seven-1.1.8 DOQRSZaghilopsuwz CFILMPQSbcefgijklmnopqrstuvz bkloveqjfI
+2019-10-18 08:05:38	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstuz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode STATUSMSG=@+ CALLERID=g CASEMAPPING=rfc1459 :are supported by this server
+2019-10-18 08:05:38	--	CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 DEAF=D FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: EXTBAN=$,ajrxz CLIENTVER=3.0 KNOCK CPRIVMSG CNOTICE :are supported by this server
+2019-10-18 08:05:38	--	SAFELIST ELIST=CTU ETRACE WHOX :are supported by this server
+2019-10-18 08:05:38	--	There are 94 users and 82734 invisible on 31 servers
+2019-10-18 08:05:38	--	35 :IRC Operators online
+2019-10-18 08:05:38	--	22 :unknown connection(s)
+2019-10-18 08:05:38	--	49260 :channels formed
+2019-10-18 08:05:38	--	I have 7013 clients and 1 servers
+2019-10-18 08:05:38	--	7013 7745 :Current local users 7013, max 7745
+2019-10-18 08:05:38	--	82828 92604 :Current global users 82828, max 92604
+2019-10-18 08:05:38	--	Highest connection count: 7746 (7745 clients) (517101 connections received)
+2019-10-18 08:05:38	--	- orwell.freenode.net Message of the Day - 
+2019-10-18 08:05:38	--	- Welcome to orwell.freenode.net in Amsterdam, NL.
+2019-10-18 08:05:38	--	- Thanks to http://www.hyperfilter.com/ for sponsoring
+2019-10-18 08:05:38	--	- this server!
+2019-10-18 08:05:38	--	-  
+2019-10-18 08:05:38	--	- ORWELL, GEORGE [1903 - 1950] Born in India, his mother
+2019-10-18 08:05:38	--	- moved him to England when he was one year old, and it
+2019-10-18 08:05:38	--	- was in England where he was educated and spent most of
+2019-10-18 08:05:38	--	- his life.  Orwell is perhaps best known for his novels
+2019-10-18 08:05:38	--	- Nineteen Eighty-Four and Animal Farm.
+2019-10-18 08:05:38	--	-  
+2019-10-18 08:05:38	--	-  
+2019-10-18 08:05:38	--	- Welcome to freenode - supporting the free and open source
+2019-10-18 08:05:38	--	- software communities since 1998.
+2019-10-18 08:05:38	--	-  
+2019-10-18 08:05:38	--	- By connecting to freenode you indicate that you have read and
+2019-10-18 08:05:38	--	- accept our policies and guidelines as set out on https://freenode.net
+2019-10-18 08:05:38	--	-  
+2019-10-18 08:05:38	--	- In the event that you observe behaviour that contravenes our policies,
+2019-10-18 08:05:38	--	- please notify a volunteer staff member via private message, or send us an
+2019-10-18 08:05:38	--	- e-mail to complaints@freenode.net -- we will do our best to address the
+2019-10-18 08:05:38	--	- situation within a reasonable period of time, and we may request further
+2019-10-18 08:05:38	--	- information or, as appropriate, involve other parties such as channel operators 
+2019-10-18 08:05:38	--	- Group Contacts representing an on-topic group.
+2019-10-18 08:05:38	--	-  
+2019-10-18 08:05:38	--	- freenode runs an open proxy scanner.
+2019-10-18 08:05:38	--	-  
+2019-10-18 08:05:38	--	- If you are looking for assistance, you may be able to find a list of 
+2019-10-18 08:05:38	--	- volunteer staff on '/stats p' (shows only on-call staff) or by joining 
+2019-10-18 08:05:38	--	- #freenode and using the '/who freenode/staff/*' command. You may message
+2019-10-18 08:05:38	--	- any of us at any time. Please note that freenode predominantly provides 
+2019-10-18 08:05:38	--	- assistance via private message, and while we have a network channel the 
+2019-10-18 08:05:38	--	- primary venue for support requests is via private message to a member 
+2019-10-18 08:05:38	--	- of the volunteer staff team.
+2019-10-18 08:05:38	--	-  
+2019-10-18 08:05:38	--	- From time to time, volunteer staff may send server-wide notices relating to
+2019-10-18 08:05:38	--	- the project, or the communities that we host. The majority of such notices
+2019-10-18 08:05:38	--	- will be sent as wallops, and you can '/mode <yournick> +w' to ensure that you
+2019-10-18 08:05:38	--	- do not miss them. Important messages relating to the freenode project, including
+2019-10-18 08:05:38	--	- notices of upcoming maintenance and other scheduled downtime will be issued as
+2019-10-18 08:05:38	--	- global notices.
+2019-10-18 08:05:38	--	-  
+2019-10-18 08:05:38	--	- Representing an on-topic project? Don't forget to register, more information
+2019-10-18 08:05:38	--	- can be found on the https://freenode.net website under "Group Registration".
+2019-10-18 08:05:38	--	-  
+2019-10-18 08:05:38	--	- Thank you also to our server sponsors for the sustained support in keeping the
+2019-10-18 08:05:38	--	- network going for close to two decades.
+2019-10-18 08:05:38	--	-  
+2019-10-18 08:05:38	--	- Thank you to all of our attendees, sponsors, speakers, exhibitors, helpers,
+2019-10-18 08:05:38	--	- and everyone else who made this year's freenode #live conference amazing.
+2019-10-18 08:05:38	--	- https://freenode.net/news/live-2018
+2019-10-18 08:05:38	--	-  
+2019-10-18 08:05:38	--	- Thank you for using freenode!
+2019-10-18 08:05:38	--	End of /MOTD command.
+2019-10-18 08:05:38	--	User mode [+i] by Syrinxos
+2019-10-18 08:05:39	--	freenode-connect (frigg@freenode/utility-bot/frigg): Welcome to freenode. To protect the network all new connections will be scanned for vulnerabilities. This will not harm your computer, and vulnerable hosts will be notified.
+2019-10-18 08:05:39	--	CTCP requested by freenode-connect: VERSION
+2019-10-18 08:05:39	--	CTCP reply to freenode-connect: VERSION WeeChat 2.6 (Sep 16 2019 01:07:53)
+2019-10-18 08:05:45	--	#rust: ##rust :Forwarding to another channel
+2019-10-18 08:05:45	--	NickServ (NickServ@services.): You are already logged in as Syrinxos.

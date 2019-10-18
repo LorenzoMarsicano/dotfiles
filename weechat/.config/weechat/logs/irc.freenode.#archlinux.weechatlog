@@ -2077,3 +2077,1028 @@
 2019-10-17 15:04:25	MrElendig	you can look at their git log and see what they did
 2019-10-17 15:04:27	<--	absolutejam (~absolutej@154.62.128.42) has quit (Ping timeout: 240 seconds)
 2019-10-17 15:04:52	hazaardinari	but muh free windows
+2019-10-17 15:05:25	-->	stoffepojken (stoffe@h-148-185.A328.priv.bahnhof.se) has joined #archlinux
+2019-10-17 15:05:27	-->	samhh (~sam@90.240.233.29) has joined #archlinux
+2019-10-17 15:05:29	demonicmaniac3	fishguts: muqss isn't set in the config
+2019-10-17 15:05:32	-->	absolutejam (~absolutej@vrrp.core.bridgehead.infra.victoriaplum.com) has joined #archlinux
+2019-10-17 15:05:40	demonicmaniac3	zen isn't "just" muqss
+2019-10-17 15:05:58	-->	kraem (~kraem@62.63.192.110) has joined #archlinux
+2019-10-17 15:06:37	-->	linduxed (~linduxed@155.4.60.131) has joined #archlinux
+2019-10-17 15:06:53	<--	tkrizek__ (~tkrizek@2001:67c:1220:8b4:e0:992d:6ef3:c42) has quit (Remote host closed the connection)
+2019-10-17 15:07:06	-->	tkrizek__ (~tkrizek@2001:67c:1220:80c:df:5350:68c3:aed5) has joined #archlinux
+2019-10-17 15:07:36	<--	transacid (~transacid@pdpc/supporter/professional/transacid) has quit (Ping timeout: 240 seconds)
+2019-10-17 15:07:38	fishguts	MrElendig: I couldn't see anything about the scheduler at a glance so thought I'd ask. Just out of curiosity really.
+2019-10-17 15:08:43	demonicmaniac3	fishguts: see https://git.archlinux.org/svntogit/packages.git/commit/trunk?h=packages/linux-zen&id=8e19f99e00d652380028182ae07fd352b5365c9a and friends
+2019-10-17 15:08:44	@phrik	Title: svntogit/packages.git - Git clone of the 'packages' repository (at git.archlinux.org)
+2019-10-17 15:08:53	demonicmaniac3	muqss is not set
+2019-10-17 15:09:05	-->	joshuaBPMan (~user@72.12.220.132) has joined #archlinux
+2019-10-17 15:09:21	-->	igemnace (~igemnace@49.151.240.60) has joined #archlinux
+2019-10-17 15:09:42	 *	hazaardinari cries in intel
+2019-10-17 15:10:37	-->	xace (~noname@unaffiliated/xace) has joined #archlinux
+2019-10-17 15:10:44	fishguts	demonicmaniac3: Oh I see, so they don't include the muqss scheduler by default, hence them happily releasing a 5.3 patchset without the scheduler being ported to 5.3 yet. Thanks.
+2019-10-17 15:11:03	-->	icebit_ (~marco@159.65.87.172) has joined #archlinux
+2019-10-17 15:11:19	demonicmaniac3	yup
+2019-10-17 15:11:28	<--	Cerpin (~Cerpin@64.121.117.111) has quit (Quit: leaving)
+2019-10-17 15:13:07	post-factum	fishguts: use BMQ and pf-kernel instead :)
+2019-10-17 15:13:08	perrier-jouet	I have suddenly sound stopping music and a high pitch note sound
+2019-10-17 15:14:43	post-factum	perrier-jouet: don't worry, it is just someone connected to your machine through NSA backdoor
+2019-10-17 15:15:39	post-factum	-ck is overhyped especially given Con doesn't give much shit about it
+2019-10-17 15:15:50	post-factum	at least, not anymore
+2019-10-17 15:16:07	post-factum	and preempt_rt is coming
+2019-10-17 15:16:16	<--	hazaardinari (~qqqq@117.203.246.41) has quit (Quit: WeeChat 2.6)
+2019-10-17 15:17:42	<--	eblip (~eblip@unaffiliated/eblip) has quit (Quit: WeeChat 1.6)
+2019-10-17 15:18:03	demonicmaniac3	i will continue to use 300hz and voluntary preempt
+2019-10-17 15:18:07	demonicmaniac3	give me all the throughput
+2019-10-17 15:18:30	-->	gffa (~unknown@unaffiliated/gffa) has joined #archlinux
+2019-10-17 15:19:24	-->	spcckai (~androirc@unaffiliated/spcckai) has joined #archlinux
+2019-10-17 15:19:51	-->	Cerpin (~Cerpin@64.121.117.111) has joined #archlinux
+2019-10-17 15:19:58	fishguts	post-factum: Okay, I will look into the scheduler. I chose ck initially because the schedular did seem to have a very tangible benefit re responsiveness (although I did not confirm with testing) and there are build provided by Graysky targeting my architecture. How much of a benefit the latter provides I don't know however. Thanks for the suggestion.
+2019-10-17 15:20:15	<--	mcquinn (~Thunderbi@p5485F124.dip0.t-ipconnect.de) has quit (Ping timeout: 246 seconds)
+2019-10-17 15:20:37	<--	andril (~andril@2601:586:8480:a0:6af8:a94:20e9:f5a1) has quit (Ping timeout: 250 seconds)
+2019-10-17 15:20:39	fishguts	You mean Con Kolivas is less involved in the development of the patchset nowadays?
+2019-10-17 15:21:03	-->	hazaardinari (~qqqq@117.203.246.41) has joined #archlinux
+2019-10-17 15:21:05	post-factum	he's got other life priorities, which is perfectly understandable
+2019-10-17 15:21:26	hazaardinari	http://ix.io/1YX4
+2019-10-17 15:21:27	 *	post-factum hands new pipes to demonicmaniac3
+2019-10-17 15:21:28	fishguts	Certainly. "Life" priorities being a good descriptor.
+2019-10-17 15:21:49	-->	gAb1 (~chazy@139.47.97.170) has joined #archlinux
+2019-10-17 15:22:00	-->	eblip (~eblip@unaffiliated/eblip) has joined #archlinux
+2019-10-17 15:23:18	-->	grazzolini (grazzolini@archlinux/developer/grazzolini) has joined #archlinux
+2019-10-17 15:23:20	-->	revoltingPeasant (~joe@unaffiliated/th3-g0d5) has joined #archlinux
+2019-10-17 15:24:55	-->	Desetude (~Desetude@unaffiliated/desetude) has joined #archlinux
+2019-10-17 15:25:17	<--	Desetude (~Desetude@unaffiliated/desetude) has quit (Client Quit)
+2019-10-17 15:25:20	-->	mcquinn (~Thunderbi@p200300C54F3B1300E6B318FFFE448220.dip0.t-ipconnect.de) has joined #archlinux
+2019-10-17 15:25:25	-->	Desetude (~Desetude@unaffiliated/desetude) has joined #archlinux
+2019-10-17 15:25:38	<--	replicant_ (~rotten@168.196.201.207) has quit (Quit: [BX] Reserve your copy of BitchX-1.2.1-410-gb9803e6 for the PalmPilot today!)
+2019-10-17 15:25:57	hazaardinari	help please?
+2019-10-17 15:26:16	<--	Adcock (~Adcock@gateway/tor-sasl/adcock) has quit (Remote host closed the connection)
+2019-10-17 15:26:55	Khorne	hazaardinari: with what?
+2019-10-17 15:27:12	demonicmaniac3	fishguts: always keep in mind if you use prebuilt binaries that that doesn't necessarily say anything about a patchset or a scheduler
+2019-10-17 15:27:20	hazaardinari	http://ix.io/1YX4
+2019-10-17 15:27:26	hazaardinari	filelight wont launch
+2019-10-17 15:27:28	demonicmaniac3	fishguts: graysky might simply have built a kernel with 1000hz instead of 300hz defaults etcppo
+2019-10-17 15:27:34	-->	Adcock (~Adcock@gateway/tor-sasl/adcock) has joined #archlinux
+2019-10-17 15:27:48	Khorne	hazaardinari: install the things it complains about
+2019-10-17 15:27:53	-->	agent_white (~agent_whi@unaffiliated/agent-white/x-6197888) has joined #archlinux
+2019-10-17 15:28:38	-->	transacid (~transacid@pdpc/supporter/professional/transacid) has joined #archlinux
+2019-10-17 15:29:49	-->	freeman42x (~freeman42@109.255.60.165) has joined #archlinux
+2019-10-17 15:29:58	-->	nepoxx[m] (nepoxxmatr@gateway/shell/matrix.org/x-dinzjqtuufddzkxv) has joined #archlinux
+2019-10-17 15:30:04	fishguts	demonicmaniac3: You mean I theoretically can't confirm the exact patches of the prebuilt binary?
+2019-10-17 15:30:43	<--	ShadowKyogre (7358dd25f8@gateway/shell/jabberfr/x-idfpnhcmqxvfkovn) has left #archlinux
+2019-10-17 15:30:50	fishguts	I'm personally happy to trust the description of the binary as "featuring Con Kolivas' MuQSS (formerly known as Brain Fuck Scheduler) and CK patchsets!"
+2019-10-17 15:31:21	demonicmaniac3	fishguts: i mean check the actual config that was used to build the kernel for other differences
+2019-10-17 15:31:26	codedmart	I am also noticing that in the tty after boot there is no blinking cursor. I can type fine, but I don't see any cursor.
+2019-10-17 15:31:33	-->	RickDeckard (~tgburrin@108.60.152.194) has joined #archlinux
+2019-10-17 15:31:46	demonicmaniac3	muqss or cfs will behave both very differently with a 100 or 300 or 1000hz kernel and voluntary preempt or forced preemptible etc
+2019-10-17 15:31:49	-->	chap (~chap@unaffiliated/chap) has joined #archlinux
+2019-10-17 15:32:02	<--	ulteq (~archie@p57874C39.dip0.t-ipconnect.de) has quit (Read error: Connection reset by peer)
+2019-10-17 15:32:49	fishguts	Okay. I'll do some reading.
+2019-10-17 15:32:55	-->	tuutu (~kikiji@2a01:cb11:d2:e400:8e07:e0b0:af33:2496) has joined #archlinux
+2019-10-17 15:33:24	fishguts	post-factum: Apologies if this is inflammatory, but what does this comment mean? https://news.ycombinator.com/item?id=19646324
+2019-10-17 15:33:26	@phrik	Title: https://cchalpha.blogspot.com/2019/03/bmq-scheduler-call-out-for-testing.html?m=... | Hacker News (at news.ycombinator.com)
+2019-10-17 15:33:28	--	piie is now known as piiE
+2019-10-17 15:33:42	<--	semeion (~semeion@unaffiliated/semeion) has quit (Read error: Connection reset by peer)
+2019-10-17 15:33:53	promach	Namarrgon: no loopback  ==   bigger problem  ?
+2019-10-17 15:33:59	-->	Kevlar_Noir (~lexou@73.70.197.77.rev.sfr.net) has joined #archlinux
+2019-10-17 15:34:10	-->	semeion (~semeion@unaffiliated/semeion) has joined #archlinux
+2019-10-17 15:34:24	post-factum	fishguts: no idea what they were talking about, sorry
+2019-10-17 15:35:01	<--	Kevlar_Noir (~lexou@73.70.197.77.rev.sfr.net) has quit (Client Quit)
+2019-10-17 15:35:18	<--	spcckai (~androirc@unaffiliated/spcckai) has quit (Ping timeout: 245 seconds)
+2019-10-17 15:35:25	-->	Kevlar_Noir (~lexou@73.70.197.77.rev.sfr.net) has joined #archlinux
+2019-10-17 15:35:44	<--	Pupnik (~Pupnik@ppp118-209-254-133.bras2.mel11.internode.on.net) has quit (Remote host closed the connection)
+2019-10-17 15:36:12	<--	humachine (~sysad@122.165.168.88) has quit (Quit: Leaving.)
+2019-10-17 15:37:01	<--	hazaardinari (~qqqq@117.203.246.41) has quit (Quit: WeeChat 2.6)
+2019-10-17 15:38:13	-->	krabador (~krabador@unaffiliated/krabador) has joined #archlinux
+2019-10-17 15:40:20	<--	revoltingPeasant (~joe@unaffiliated/th3-g0d5) has quit (Ping timeout: 276 seconds)
+2019-10-17 15:41:17	<--	saltpepp3r (~saltpepp3@91.207.173.118) has quit (Ping timeout: 268 seconds)
+2019-10-17 15:43:19	-->	saltpepp3r (~saltpepp3@91.207.173.118) has joined #archlinux
+2019-10-17 15:43:45	<--	Daisu (~Daisu@92.184.97.16) has quit (Ping timeout: 268 seconds)
+2019-10-17 15:46:00	-->	KH405 (~KH405@87.101.92.171) has joined #archlinux
+2019-10-17 15:55:48	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #archlinux
+2019-10-17 15:55:48	--	Topic for #archlinux is "Welcome to Arch Linux, Good Luck: https://archlinux.org | Rules: https://goo.gl/XWFreH | Pastebins: see !paste"
+2019-10-17 15:55:48	--	Topic set by phrik (~phrik@archlinux/bot/phrik) on Tue, 17 Sep 2019 02:30:53
+2019-10-17 15:55:49	--	Channel #archlinux: 1713 nicks (2 ops, 0 voices, 1711 normals)
+2019-10-17 15:55:50	--	Channel created on Sun, 15 Feb 2004 06:08:31
+2019-10-17 15:56:28	<--	queip (~queip@unaffiliated/rezurus) has quit (Ping timeout: 264 seconds)
+2019-10-17 15:56:29	-->	queip_ (~queip@unaffiliated/rezurus) has joined #archlinux
+2019-10-17 15:57:27	--	queip_ is now known as queip
+2019-10-17 15:57:56	<--	chap (~chap@unaffiliated/chap) has quit (Ping timeout: 268 seconds)
+2019-10-17 15:59:34	-->	twodee23_ (~johndoe@117.198.102.130) has joined #archlinux
+2019-10-17 16:00:00	<--	onnex (hytonen6@linux-ssh1.cc.tut.fi) has quit (Remote host closed the connection)
+2019-10-17 16:00:45	<--	Makaveli7 (~Makaveli7@unaffiliated/makaveli7) has quit (Quit: WeeChat 2.6)
+2019-10-17 16:01:47	<--	maccraft123 (~maccraft1@unaffiliated/maccraft123) has quit (Ping timeout: 250 seconds)
+2019-10-17 16:02:03	-->	spcckai (~androirc@unaffiliated/spcckai) has joined #archlinux
+2019-10-17 16:03:12	<--	freeman42x (~freeman42@109.255.60.165) has quit (Remote host closed the connection)
+2019-10-17 16:04:01	<--	agent_white (~agent_whi@unaffiliated/agent-white/x-6197888) has quit (Quit: brb)
+2019-10-17 16:04:14	gAb1	is there a recommended way for copying/cloning a running arch installation into another drive?
+2019-10-17 16:04:22	gAb1	or just copy everything?
+2019-10-17 16:04:25	-->	freeman42x (~freeman42@109.255.60.165) has joined #archlinux
+2019-10-17 16:04:31	-->	freeman42xx (~freeman42@109.255.60.165) has joined #archlinux
+2019-10-17 16:05:09	<--	freeman42xx (~freeman42@109.255.60.165) has quit (Client Quit)
+2019-10-17 16:05:12	<--	josephos (~josephos@2a00:1028:96cc:b6fa:a21e:bff:fe0a:bc32) has quit (Quit: WeeChat 2.5)
+2019-10-17 16:05:57	<--	raijin (~raijin@unaffiliated/raijin) has quit (Ping timeout: 268 seconds)
+2019-10-17 16:05:58	-->	TauIs2Pi- (~TauIs2Pi@unaffiliated/cfillion) has joined #archlinux
+2019-10-17 16:06:16	<--	TauIs2Pi (~TauIs2Pi@unaffiliated/cfillion) has quit (Ping timeout: 246 seconds)
+2019-10-17 16:06:24	<--	Pryka (~Pryka@unaffiliated/pryka) has quit (Quit: Pryka)
+2019-10-17 16:06:29	-->	raijin (~raijin@unaffiliated/raijin) has joined #archlinux
+2019-10-17 16:06:51	<--	kikiji (~kikiji@2a01:cb11:d2:e400:b92a:5e2:cd17:caf4) has quit (Remote host closed the connection)
+2019-10-17 16:07:14	-->	redp (~redp@52.144.25.5) has joined #archlinux
+2019-10-17 16:07:16	HEX0	gAb1: rsync
+2019-10-17 16:07:54	gAb1	i'll have to read the man pages
+2019-10-17 16:07:56	<--	jlamur (~jlamur@14.199.23.93.rev.sfr.net) has quit (Read error: Connection reset by peer)
+2019-10-17 16:08:18	<--	callmepk (~callmepk@42-98-226-058.static.netvigator.com) has quit (Read error: Connection reset by peer)
+2019-10-17 16:09:06	-->	WinterStar (WinterStar@gateway/vpn/mullvad/winterstar) has joined #archlinux
+2019-10-17 16:09:33	<--	chris64 (~chris@unaffiliated/chris64) has quit (Quit: leaving)
+2019-10-17 16:10:29	-->	cottoneyejim (~cottoneye@46.161.96.58) has joined #archlinux
+2019-10-17 16:10:33	<--	cottoneyejim (~cottoneye@46.161.96.58) has quit (Client Quit)
+2019-10-17 16:10:49	-->	niki (~Niki@62.44.138.47) has joined #archlinux
+2019-10-17 16:11:30	-->	alexozer (~alexozer@pool-173-49-130-2.phlapa.fios.verizon.net) has joined #archlinux
+2019-10-17 16:11:30	-->	cottoneyejim (~cottoneye@46.161.96.58) has joined #archlinux
+2019-10-17 16:11:49	gAb1	HEX0: do i need to exclude directories? suchs as dev?
+2019-10-17 16:11:55	gAb1	and tmp, etc?
+2019-10-17 16:13:35	-->	pheoxy (~pheoxy@118.209.161.72) has joined #archlinux
+2019-10-17 16:13:38	<--	igemnace (~igemnace@49.151.240.60) has quit (Read error: Connection reset by peer)
+2019-10-17 16:13:40	HEX0	tmp is cleared on reboots so
+2019-10-17 16:13:52	HEX0	gAb1: copy pasta :P https://wiki.archlinux.org/index.php/Rsync#Full_system_backup
+2019-10-17 16:13:52	@phrik	Title: rsync - ArchWiki (at wiki.archlinux.org)
+2019-10-17 16:14:03	<--	sprocklem (~sprocklem@unaffiliated/sprocklem) has quit (Ping timeout: 240 seconds)
+2019-10-17 16:14:13	gAb1	lol
+2019-10-17 16:14:36	-->	ShadowKyogre (7358dd25f8@gateway/shell/jabberfr/x-idfpnhcmqxvfkovn) has joined #archlinux
+2019-10-17 16:14:38	-->	collector1871 (~user@public-gprs368185.centertel.pl) has joined #archlinux
+2019-10-17 16:14:42	HEX0	I used that one liner in the past for backups
+2019-10-17 16:15:02	gAb1	nice, that's exactly what i was looking for
+2019-10-17 16:15:09	gAb1	but i'll update first
+2019-10-17 16:15:33	gAb1	what was the command for initialize the keyring the first time --init and something else
+2019-10-17 16:15:52	gAb1	i'm getting signature errors for all packages error: krb5: signature from "Levente Polyak (anthraxx) <levente@leventepolyak.net>" is unknown trust
+2019-10-17 16:16:22	-->	cdown (~cdown@163.114.130.128) has joined #archlinux
+2019-10-17 16:16:23	HEX0	pacman-key --init
+2019-10-17 16:16:24	gAb1	i'm gonna bookmark the wiki article this time, i always forget about it
+2019-10-17 16:16:29	<--	pheoxy (~pheoxy@118.209.161.72) has quit (Client Quit)
+2019-10-17 16:16:35	gAb1	yes but there's another command after that one
+2019-10-17 16:16:43	gAb1	because that one doesn't fix it
+2019-10-17 16:16:45	gAb1	alone
+2019-10-17 16:16:46	<--	ken2634 (~ken2634@104-52-69-13.lightspeed.chrlnc.sbcglobal.net) has quit (Quit: ken2634)
+2019-10-17 16:17:02	HEX0	populate?
+2019-10-17 16:17:05	HEX0	https://wiki.archlinux.org/index.php/Pacman/Package_signing#Initializing_the_keyring
+2019-10-17 16:17:05	gAb1	yes
+2019-10-17 16:17:05	-->	ken2634 (~ken2634@104-52-69-13.lightspeed.chrlnc.sbcglobal.net) has joined #archlinux
+2019-10-17 16:17:05	@phrik	Title: pacman/Package signing - ArchWiki (at wiki.archlinux.org)
+2019-10-17 16:17:06	-->	pheoxy (~pheoxy@118.209.161.72) has joined #archlinux
+2019-10-17 16:17:40	<--	joshuaBPMan (~user@72.12.220.132) has quit (Ping timeout: 268 seconds)
+2019-10-17 16:18:54	<--	MindlessDrone (~MindlessD@unaffiliated/mindlessdrone) has quit (Ping timeout: 268 seconds)
+2019-10-17 16:18:55	-->	Yomi (~yomi@ip68-109-112-37.ri.ri.cox.net) has joined #archlinux
+2019-10-17 16:19:09	-->	thelounge04 (463d57ca@gateway/web/thelounge/ip.70.61.87.202) has joined #archlinux
+2019-10-17 16:19:23	thelounge04	Anyone have any guidance on getting external monitors to work on nvidia bumblebee?
+2019-10-17 16:19:41	<--	horseface (horseface@gateway/vpn/mullvad/horseface) has quit (Quit: Leaving.)
+2019-10-17 16:19:53	<--	thelounge04 (463d57ca@gateway/web/thelounge/ip.70.61.87.202) has quit (Client Quit)
+2019-10-17 16:20:05	<--	ShadowKyogre (7358dd25f8@gateway/shell/jabberfr/x-idfpnhcmqxvfkovn) has left #archlinux
+2019-10-17 16:20:35	-->	pulecz (~pulecz@62.209.223.226) has joined #archlinux
+2019-10-17 16:20:35	-->	lazlev (~lazlev@i59F5F5AE.versanet.de) has joined #archlinux
+2019-10-17 16:21:07	<--	jugs (~jugs@gateway/tor-sasl/jugs) has quit (Remote host closed the connection)
+2019-10-17 16:21:08	-->	ShadowKyogre (7358dd25f8@gateway/shell/jabberfr/x-idfpnhcmqxvfkovn) has joined #archlinux
+2019-10-17 16:21:09	<--	vinosec (~Monokuai@194.95.154.90) has quit (Quit: WeeChat 2.6)
+2019-10-17 16:21:13	-->	agent_white (~agent_whi@unaffiliated/agent-white/x-6197888) has joined #archlinux
+2019-10-17 16:21:34	pulecz	hi, I am on macos and I wanan use arch, running 'qemu-system-x86_64 -cdrom archlinux-2019.10.01-x86_64.iso -drive file=testimg.qcow2' booting up and getting "Kernel panic - not syncing: No working init found."
+2019-10-17 16:21:34	-->	MindlessDrone (~MindlessD@unaffiliated/mindlessdrone) has joined #archlinux
+2019-10-17 16:21:40	pulecz	https://bbs.archlinux.org/viewtopic.php?id=235975
+2019-10-17 16:21:41	@phrik	Title: [SOLVED] "Kernel panic - not syncing: No working init found." / Newbie Corner / Arch Linux Forums (at bbs.archlinux.org)
+2019-10-17 16:22:12	pulecz	thought its no space or smthing, so provided a drive, same result
+2019-10-17 16:22:20	pulecz	maybe there needs to be some partitions on that drive
+2019-10-17 16:22:35	<--	transacid (~transacid@pdpc/supporter/professional/transacid) has quit (Ping timeout: 250 seconds)
+2019-10-17 16:22:47	-->	davor_ (~davor@unaffiliated/davor) has joined #archlinux
+2019-10-17 16:22:55	pulecz	have 8GB ram free, so not the issue there, afaik if qemu does not have enough ram it will say so
+2019-10-17 16:23:04	HEX0	pulecz: qemu and qcow? is this a VM?
+2019-10-17 16:23:46	grazzolini	thelinuxguy: what do you mean by that? usually the nvidia card has no outputs.
+2019-10-17 16:24:02	pulecz	yeah, qemu for VM
+2019-10-17 16:24:04	-->	jugs (~jugs@gateway/tor-sasl/jugs) has joined #archlinux
+2019-10-17 16:24:04	grazzolini	sorry
+2019-10-17 16:24:15	pulecz	I can use raw, shouldn't matter, no?
+2019-10-17 16:24:37	<--	absolutejam (~absolutej@vrrp.core.bridgehead.infra.victoriaplum.com) has quit (Ping timeout: 240 seconds)
+2019-10-17 16:24:48	pulecz	oh, lol found it
+2019-10-17 16:24:51	-->	chap (~chap@unaffiliated/chap) has joined #archlinux
+2019-10-17 16:24:58	pulecz	qemu by default uses only 128mb ram
+2019-10-17 16:25:39	-->	ulteq (~archie@p57874C39.dip0.t-ipconnect.de) has joined #archlinux
+2019-10-17 16:25:41	<--	davor (~davor@unaffiliated/davor) has quit (Ping timeout: 268 seconds)
+2019-10-17 16:25:41	--	davor_ is now known as davor
+2019-10-17 16:25:49	gAb1	is pacman-key --init supposed to take a long time to complete?
+2019-10-17 16:26:00	HEX0	yeah
+2019-10-17 16:26:36	gAb1	it's been at it for 5 minutes now
+2019-10-17 16:26:56	<--	cdown (~cdown@163.114.130.128) has quit (Remote host closed the connection)
+2019-10-17 16:27:05	HEX0	you can CTRL C and but it might take 5+ minutes again :P
+2019-10-17 16:28:04	-->	cdown (~cdown@163.114.130.128) has joined #archlinux
+2019-10-17 16:28:09	-->	esd_ (~vid@unaffiliated/esd) has joined #archlinux
+2019-10-17 16:28:15	esd_	is there a way to connect mpd to deezer?
+2019-10-17 16:28:15	pulecz	maybe check the process via htop?
+2019-10-17 16:28:23	ulteq	I solved the performance issue I had with "parallel -j 16 convert -resize 224x224 '{}' 'output/{/.}.jpg' ::: input/*"
+2019-10-17 16:28:52	<--	hns (hannes@irc-out.lrr.0xef.de) has quit (Quit: WeeChat 2.3)
+2019-10-17 16:28:55	-->	troulouliou_div2 (~troulouli@unaffiliated/troulouliou-div2/x-0271439) has joined #archlinux
+2019-10-17 16:29:10	ulteq	I thought 'parallel' was the issue, but it is 'convert' that is slow.
+2019-10-17 16:29:14	<--	PMunch (~PMunch@vpn.dualog.com) has quit (Remote host closed the connection)
+2019-10-17 16:29:17	<--	hke (~hke@virt.hanneseichblatt.de) has quit (Quit: The Lounge - https://thelounge.github.io)
+2019-10-17 16:29:22	-->	horseface (horseface@gateway/vpn/mullvad/horseface) has joined #archlinux
+2019-10-17 16:29:39	<--	horseface (horseface@gateway/vpn/mullvad/horseface) has quit (Remote host closed the connection)
+2019-10-17 16:29:50	-->	SteffanW (~steffan@185.2.243.3) has joined #archlinux
+2019-10-17 16:29:54	-->	horseface (horseface@gateway/vpn/mullvad/horseface) has joined #archlinux
+2019-10-17 16:30:00	-->	hns (hannes@irc-out.lrr.0xef.de) has joined #archlinux
+2019-10-17 16:30:05	ulteq	And running multiple instances of 'convert' in parallel seems to be especially bad.
+2019-10-17 16:30:22	-->	replicant_ (~rotten@168.196.201.207) has joined #archlinux
+2019-10-17 16:30:28	<--	yunhao94_ (~yunhao94@183.198.196.184) has quit (Ping timeout: 265 seconds)
+2019-10-17 16:30:47	ulteq	'PIL' with a standard threadpool is so much faster. OMG
+2019-10-17 16:31:14	<--	Noti (~steffan@194.44.236.118) has quit (Ping timeout: 268 seconds)
+2019-10-17 16:31:23	ulteq	50 x faster than 'parallel convert ...' :facepalm:
+2019-10-17 16:31:49	-->	YellowJedi (~YellowJed@146.232.65.240) has joined #archlinux
+2019-10-17 16:32:06	kerframil	ulteq: watch out for OpenMP too. for convert to use OpenMP may run counter to the goal of forking multiple instances to further your throughput.
+2019-10-17 16:32:12	-->	absolutejam (~absolutej@vrrp.core.bridgehead.infra.victoriaplum.com) has joined #archlinux
+2019-10-17 16:32:13	-->	xlx (~xlx@unaffiliated/xlx) has joined #archlinux
+2019-10-17 16:32:37	-->	runawayfive (~nope@unaffiliated/runawayfive) has joined #archlinux
+2019-10-17 16:32:52	kerframil	ulteq: you can use -limit thread 1 to be sure.
+2019-10-17 16:33:03	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #archlinux
+2019-10-17 16:33:38	-->	ajak (~ajak@207.181.32.32) has joined #archlinux
+2019-10-17 16:33:52	-->	jlamur (~jlamur@93.23.249.219) has joined #archlinux
+2019-10-17 16:33:59	-->	sdoubleyou (~sdoubleyo@unaffiliated/sdouble25) has joined #archlinux
+2019-10-17 16:34:14	<--	Tazmain (~Tazmain@unaffiliated/tazmain) has quit (Quit: Leaving)
+2019-10-17 16:34:15	-->	hke (~hke@virt.hanneseichblatt.de) has joined #archlinux
+2019-10-17 16:34:38	-->	transacid (~transacid@pdpc/supporter/professional/transacid) has joined #archlinux
+2019-10-17 16:35:09	<--	Dan39 (~dan@unaffiliated/dan39) has quit (Ping timeout: 250 seconds)
+2019-10-17 16:35:36	-->	Daisu (~Daisu@92.184.97.170) has joined #archlinux
+2019-10-17 16:35:45	-->	werew (d94d5250@gateway/web/cgi-irc/kiwiirc.com/ip.217.77.82.80) has joined #archlinux
+2019-10-17 16:35:57	ulteq	kerframil: Like this '"parallel -j 16 convert -limit thread 1 -resize 224x224 '{}' 'output/{/.}.jpg' ::: input/*'?
+2019-10-17 16:36:28	demonicmaniac3	have you tried it without parallel to make use of openmp instead and do conversions of a single image multithreaded?
+2019-10-17 16:36:44	-->	alexozer_ (~alexozer@2607:fb90:3d6:bda1:aa52:9493:c815:7885) has joined #archlinux
+2019-10-17 16:36:55	kerframil	ulteq: yeah.
+2019-10-17 16:37:00	<--	lothar_m (~lothar_m@90.252.227.117) has quit (Quit: WeeChat 2.7-dev)
+2019-10-17 16:37:10	kerframil	ulteq: I say that as someone using convert in a heavily parallelised fashion in production. here, it was more effective just to build it without openmp support. it's worth a try, anyway.
+2019-10-17 16:37:43	demonicmaniac3	fwiw pil is faster because it doesn't use q16 but q8 only
+2019-10-17 16:37:45	-->	queip_ (~queip@unaffiliated/rezurus) has joined #archlinux
+2019-10-17 16:37:53	-->	herbert_cyborg (~herbert_c@50-47-128-22.evrt.wa.frontiernet.net) has joined #archlinux
+2019-10-17 16:38:03	<--	queip (~queip@unaffiliated/rezurus) has quit (Ping timeout: 240 seconds)
+2019-10-17 16:38:04	-->	Leion (~Thunderbi@223.88.91.173) has joined #archlinux
+2019-10-17 16:38:04	demonicmaniac3	if you want it fast and don't have 16+ threads on your cpu just make a q8 imagemagick with openmp and do a for loop instead of parallel
+2019-10-17 16:38:26	<--	redp (~redp@52.144.25.5) has quit (Ping timeout: 240 seconds)
+2019-10-17 16:38:37	ulteq	kerframil: '-limit thread 1' doesn't change the speed at all for me
+2019-10-17 16:38:50	<--	alexozer (~alexozer@pool-173-49-130-2.phlapa.fios.verizon.net) has quit (Ping timeout: 276 seconds)
+2019-10-17 16:38:51	kerframil	ulteq: oh well.
+2019-10-17 16:39:00	-->	ImQ009 (~ImQ009@unaffiliated/imq009) has joined #archlinux
+2019-10-17 16:39:01	--	queip_ is now known as queip
+2019-10-17 16:39:17	<--	infides (~infides@92.117.137.38) has quit (Ping timeout: 240 seconds)
+2019-10-17 16:40:46	--	piiE is now known as piie
+2019-10-17 16:40:52	kerframil	ulteq: I can achieve full CPU saturation here (32 logical cores) using bash alone to fork imagemagick. the images I have to work with are pretty small, though, and I'm not I/O bottlenecked either.
+2019-10-17 16:41:09	-->	infides (~infides@92.117.137.38) has joined #archlinux
+2019-10-17 16:41:30	demonicmaniac3	ImageMagick typically divides the work so that each thread processes 64 rows of pixels
+2019-10-17 16:41:34	kerframil	demonicmaniac3 has a point. a q8 build would certainly be faster.
+2019-10-17 16:41:37	<--	krabador (~krabador@unaffiliated/krabador) has quit (Quit: Leaving)
+2019-10-17 16:41:44	-->	masterkorp (~masterkor@178.62.249.11) has joined #archlinux
+2019-10-17 16:41:48	masterkorp	hello everyone
+2019-10-17 16:42:03	demonicmaniac3	so for 32 threads you'd need fairly large images to saturate them with openmp yeah
+2019-10-17 16:42:06	masterkorp	Can anyone share to me an example PKGBUILD for a rust file ?
+2019-10-17 16:42:16	kerframil	demonicmaniac3: yes, that explains a great deal.
+2019-10-17 16:42:25	demonicmaniac3	plus not all algorithms actually can be threaded nicely
+2019-10-17 16:42:33	-->	krabador (~krabador@unaffiliated/krabador) has joined #archlinux
+2019-10-17 16:43:26	demonicmaniac3	ofc the other issue is if you run 32 instances of imagemagick q16 on 10+ megapixel images your ram gets full extremely quickly
+2019-10-17 16:44:28	Xiretza	masterkorp: does this help? https://wiki.archlinux.org/index.php/Rust_package_guidelines
+2019-10-17 16:44:29	@phrik	Title: Rust package guidelines - ArchWiki (at wiki.archlinux.org)
+2019-10-17 16:45:00	kerframil	demonicmaniac3: indeed. that was the other concern.
+2019-10-17 16:45:22	kerframil	demonicmaniac3: having predictable resource usage for a single instance, that is.
+2019-10-17 16:45:45	kerframil	I'd give it another shake if I had images large enough for it to plausibly pay off.
+2019-10-17 16:45:51	mpan	A side note: imagemagic is also known for performing many operations in a very inefficient manner. E.g. mean over many images is calculated by first loading them all in memory and then calculating mean. So you may hog your memory with imagemagick even if you do not see the obvious reason for that.
+2019-10-17 16:47:17	<--	alexozer_ (~alexozer@2607:fb90:3d6:bda1:aa52:9493:c815:7885) has quit (Ping timeout: 276 seconds)
+2019-10-17 16:47:17	<--	s00pcan (~chris@75-133-56-178.dhcp.trcy.mi.charter.com) has quit (Ping timeout: 250 seconds)
+2019-10-17 16:48:32	demonicmaniac3	image downscaling is also a prime example of something you would use gpgpu for
+2019-10-17 16:49:03	demonicmaniac3	if you have the vram you can even do a single batch upload into vram and then do it all parallel pretty much simultaenously
+2019-10-17 16:49:03	ulteq	I have a folder of ~ 34000 images, total size is ~ 150 GiB
+2019-10-17 16:49:07	-->	alexozer_ (~alexozer@pool-173-49-130-2.phlapa.fios.verizon.net) has joined #archlinux
+2019-10-17 16:49:09	-->	s00pcan (~chris@104.254.90.84) has joined #archlinux
+2019-10-17 16:49:10	demonicmaniac3	ouch
+2019-10-17 16:49:19	<--	BDiamond (~quassel@modemcable049.1-202-24.mc.videotron.ca) has quit (Ping timeout: 265 seconds)
+2019-10-17 16:49:20	-->	chris64 (~chris@unaffiliated/chris64) has joined #archlinux
+2019-10-17 16:49:53	<--	chap (~chap@unaffiliated/chap) has quit (Ping timeout: 250 seconds)
+2019-10-17 16:49:59	demonicmaniac3	ulteq: keep in mind a single q16 4k² image is 130mbish already with q16 plus all the scaling and overhead
+2019-10-17 16:50:04	ulteq	"parallel -j 16 convert -resize 224x224 '{}' 'output/{/.}.jpg' ::: input/*" takes ~ 35 minutes and does not saturate my cpu
+2019-10-17 16:50:08	demonicmaniac3	assume at least 200 to 300mb per image for imagemagick
+2019-10-17 16:50:39	mpan	ulteq: it may saturate your memory bandwidth, though.
+2019-10-17 16:51:06	-->	redp (~redp@67-207-104-238.static.wiline.com) has joined #archlinux
+2019-10-17 16:51:40	kerframil	yes, it seems probable that you have an I/O limitation there somewhere.
+2019-10-17 16:51:43	demonicmaniac3	if pil is so much faster i'd just use pil if i was you
+2019-10-17 16:51:59	ulteq	pil does the same task in less than 1 minute
+2019-10-17 16:52:11	demonicmaniac3	could also give graphicsmagick a try but i doubt it's gonna beat pil
+2019-10-17 16:52:12	<--	tulliana (~archman-o@manjaro/team/tulliana) has quit (Remote host closed the connection)
+2019-10-17 16:52:23	<--	Yomi (~yomi@ip68-109-112-37.ri.ri.cox.net) has quit (Quit: WeeChat 2.6)
+2019-10-17 16:52:34	ulteq	I didn't expect convert to be that slow compared to pil
+2019-10-17 16:52:46	demonicmaniac3	well as we said imagemagick defaults to q16
+2019-10-17 16:52:55	demonicmaniac3	that's at least factor 5 to 10 slower there already than pil
+2019-10-17 16:53:11	<--	raijin (~raijin@unaffiliated/raijin) has quit (Ping timeout: 265 seconds)
+2019-10-17 16:53:14	kerframil	and the arch build is definitely employing that default.
+2019-10-17 16:53:37	demonicmaniac3	plus don't underestimate the overhead of launching imagemagick each time
+2019-10-17 16:53:56	kerframil	yeah. although, perl is pretty fast at forking.
+2019-10-17 16:53:59	ulteq	I think that overhead might be the main reason why it is so slow
+2019-10-17 16:54:00	-->	raijin (~raijin@unaffiliated/raijin) has joined #archlinux
+2019-10-17 16:54:06	masterkorp	Xiretza: thank it will
+2019-10-17 16:54:24	ulteq	convert is 10x slower on a single image
+2019-10-17 16:54:28	kerframil	I highly doubt that parallel is responsible for the overhead. I can smash it here with bash, and bash is way slower than perl.
+2019-10-17 16:54:42	ulteq	no, parallel is not the issue
+2019-10-17 16:55:04	ulteq	How can I share an ipython project in here?
+2019-10-17 16:55:06	ulteq	bpaste?
+2019-10-17 16:55:08	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Quit: Leaving)
+2019-10-17 16:55:32	-->	agregory (~agregory@c-98-207-150-231.hsd1.ca.comcast.net) has joined #archlinux
+2019-10-17 16:56:05	demonicmaniac3	kerframil: it is overhead when you launch imagemagick binary anew 10000000 times vs having a python interpreter open and pil using c extensions anyways
+2019-10-17 16:56:17	kerframil	demonicmaniac3: sure.
+2019-10-17 16:57:04	kerframil	demonicmaniac3: you'd be truly horrified as to how the production image scaler works here. it's not under my charge, though.
+2019-10-17 16:57:10	<--	krabador (~krabador@unaffiliated/krabador) has quit (Quit: Leaving)
+2019-10-17 16:57:27	demonicmaniac3	:)
+2019-10-17 16:57:50	kerframil	it spawns sh instances to pump, because launching a sub-process from java is so expensive. and that's not even the worst of it.
+2019-10-17 16:58:05	-->	Velgor (~Velgor@HSI-KBW-109-193-081-230.hsi7.kabel-badenwuerttemberg.de) has joined #archlinux
+2019-10-17 16:58:10	kerframil	I wish I could change it but it's futile.
+2019-10-17 16:58:39	ulteq	This is my test environment: https://bpaste.net/show/ceSA
+2019-10-17 16:58:40	@phrik	Title: show (at bpaste.net)
+2019-10-17 16:58:43	kerframil	at least I got them to stop running it as root. yes, root.
+2019-10-17 16:58:51	kerframil	I kid you not.
+2019-10-17 16:58:55	-->	fusion809 (~fusion809@2001:8003:f1a2:ed00:b879:3662:b157:48b2) has joined #archlinux
+2019-10-17 16:59:10	-->	andril (~andril@2601:586:8480:a0:6af8:a94:20e9:f5a1) has joined #archlinux
+2019-10-17 16:59:40	<--	Velgor (~Velgor@HSI-KBW-109-193-081-230.hsi7.kabel-badenwuerttemberg.de) has quit (Max SendQ exceeded)
+2019-10-17 16:59:57	-->	zxhello (~zx@159.224.41.193) has joined #archlinux
+2019-10-17 17:00:13	<--	redp (~redp@67-207-104-238.static.wiline.com) has quit (Ping timeout: 268 seconds)
+2019-10-17 17:00:30	<--	Ploppz (51f6f0a7@gateway/web/cgi-irc/kiwiirc.com/ip.81.246.240.167) has quit (Ping timeout: 252 seconds)
+2019-10-17 17:00:35	ulteq	"random.shuffle(filelist)" is just a dirty trick to spread the work more evenly across the workers, ".../input" is sitting on a fast ssd
+2019-10-17 17:00:35	-->	deviantfero (~deviantfe@ip168-243-230-189.intercom.com.sv) has joined #archlinux
+2019-10-17 17:00:40	<--	purpleidea (~james@unaffiliated/purpleidea) has quit (Ping timeout: 264 seconds)
+2019-10-17 17:02:38	ulteq	I googled a bit for '-limit thread 1' and found lots of "does not work" threads
+2019-10-17 17:03:04	kerframil	noted. I compiled without openmp anyway.
+2019-10-17 17:03:32	ulteq	My 'pip' version even benefits from hyperthreading
+2019-10-17 17:03:37	kerframil	I recall that graphicsmagick could be reliably controlled by way of an environment variable. this was a few years ago, now, so my memory is a bit fuzzy.
+2019-10-17 17:03:50	ulteq	Makes it another 25% faster
+2019-10-17 17:05:09	<--	raijin (~raijin@unaffiliated/raijin) has quit (Ping timeout: 268 seconds)
+2019-10-17 17:05:13	-->	mtn (~mtn@unaffiliated/mtn) has joined #archlinux
+2019-10-17 17:05:57	<--	sigmundv (sigmundv@nat/ibm/x-fpnurcwfhogemngi) has quit (Ping timeout: 240 seconds)
+2019-10-17 17:05:57	<--	fyrgebraec (~enceladus@195.25.86.166) has quit (Ping timeout: 240 seconds)
+2019-10-17 17:05:57	<--	Warepire (~Warepire@unaffiliated/warepire) has quit (Read error: Connection reset by peer)
+2019-10-17 17:06:30	<--	WinterStar (WinterStar@gateway/vpn/mullvad/winterstar) has quit (Quit: WeeChat 2.6)
+2019-10-17 17:06:38	-->	Warepire (~Warepire@unaffiliated/warepire) has joined #archlinux
+2019-10-17 17:07:02	<--	agarnier (~elgrec@193.51.236.40) has quit (Quit: Leaving)
+2019-10-17 17:07:57	<--	SteffanW (~steffan@185.2.243.3) has quit (Quit: Konversation terminated!)
+2019-10-17 17:08:50	<--	jkwki (~jkwki@p200300CD47215A001E1BB5FFFE7A47F7.dip0.t-ipconnect.de) has quit (Quit: WeeChat 2.6)
+2019-10-17 17:09:32	<--	nycex (~nycex@gateway/tor-sasl/nycex) has quit (Remote host closed the connection)
+2019-10-17 17:09:44	-->	binTrl (~binaryTra@115.96.124.137) has joined #archlinux
+2019-10-17 17:10:08	-->	Velgor (~Velgor@HSI-KBW-109-193-081-230.hsi7.kabel-badenwuerttemberg.de) has joined #archlinux
+2019-10-17 17:10:48	ulteq	I'm very happy with my new solution! 'PIL' -> resize into /tmp/, 'keras' flow_from_directory from /tmp/ ... lightning-fast!
+2019-10-17 17:11:06	<--	ShadowKyogre (7358dd25f8@gateway/shell/jabberfr/x-idfpnhcmqxvfkovn) has left #archlinux
+2019-10-17 17:11:13	-->	lordkek (~Thunderbi@kevanhill.plus.com) has joined #archlinux
+2019-10-17 17:11:19	ulteq	I went down from 46 minutes to 3 minutes
+2019-10-17 17:12:26	<--	twodee23_ (~johndoe@117.198.102.130) has quit (Ping timeout: 240 seconds)
+2019-10-17 17:12:32	-->	PoPpiLLs (~PoPpiLLs@2602:306:cfb5:aaf0::48) has joined #archlinux
+2019-10-17 17:12:38	-->	jkwki (~jkwki@p200300CD47215A001E1BB5FFFE7A47F7.dip0.t-ipconnect.de) has joined #archlinux
+2019-10-17 17:13:10	<--	pantato (~ql@144.202.95.43) has quit (Ping timeout: 268 seconds)
+2019-10-17 17:13:24	<--	agowa338 (~agowa338@2a00:c320::1:0:1011) has quit (Remote host closed the connection)
+2019-10-17 17:13:47	-->	agowa338 (~agowa338@2a00:c320::1:0:1011) has joined #archlinux
+2019-10-17 17:14:26	<--	transacid (~transacid@pdpc/supporter/professional/transacid) has quit (Ping timeout: 240 seconds)
+2019-10-17 17:15:01	<--	absolutejam (~absolutej@vrrp.core.bridgehead.infra.victoriaplum.com) has quit (Ping timeout: 268 seconds)
+2019-10-17 17:15:57	-->	drmbls (~drmbls@78-56-83-14.static.zebra.lt) has joined #archlinux
+2019-10-17 17:16:15	<--	resurtm (~resurtm@5.104.156.51) has quit (Ping timeout: 268 seconds)
+2019-10-17 17:16:20	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #archlinux
+2019-10-17 17:17:29	<--	Signaltonsalat (~dickbutt@ip4d14742d.dynamic.kabel-deutschland.de) has quit (Ping timeout: 268 seconds)
+2019-10-17 17:17:57	-->	Signaltonsalat (~dickbutt@ip4d14742d.dynamic.kabel-deutschland.de) has joined #archlinux
+2019-10-17 17:18:40	<--	pheoxy (~pheoxy@118.209.161.72) has quit (Quit: The Lounge - https://thelounge.chat)
+2019-10-17 17:18:43	<--	well_laid_lawn (~Jean-luc@c114-77-254-225.rochd21.qld.optusnet.com.au) has quit (Ping timeout: 268 seconds)
+2019-10-17 17:19:12	-->	pheoxy (~pheoxy@118.209.161.72) has joined #archlinux
+2019-10-17 17:19:55	<--	Adcock (~Adcock@gateway/tor-sasl/adcock) has quit (Quit: WeeChat 2.6)
+2019-10-17 17:19:56	--	schlitznase is now known as schlitz_away
+2019-10-17 17:20:55	-->	funeral (~Funeral@2a01:79d:b7df:4bd8:f3d4:5e09:6ffa:eb73) has joined #archlinux
+2019-10-17 17:22:20	andril	o/
+2019-10-17 17:23:25	<--	RickDeckard (~tgburrin@108.60.152.194) has quit (Remote host closed the connection)
+2019-10-17 17:23:41	<--	pheoxy (~pheoxy@118.209.161.72) has quit (Client Quit)
+2019-10-17 17:23:48	<--	jkwki (~jkwki@p200300CD47215A001E1BB5FFFE7A47F7.dip0.t-ipconnect.de) has quit (Ping timeout: 246 seconds)
+2019-10-17 17:23:53	-->	PsychoTron (~PsychoTro@2001:999:42:c818:4a03:35dc:21e3:1d74) has joined #archlinux
+2019-10-17 17:24:08	PsychoTron	can someone help me with locales?
+2019-10-17 17:24:30	PsychoTron	ccsm says: "locale.Error: unsupported locale setting"
+2019-10-17 17:25:05	PsychoTron	how do I know which setting?
+2019-10-17 17:25:21	<--	mrpotatoes (~mrpotatoe@ip-94-113-67-102.net.upcbroadband.cz) has quit (Quit: WeeChat 2.6)
+2019-10-17 17:25:56	ulteq	demonicmaniac3, kerframil: I had a bug in my python script. The actual speedup is around 20x. Very close to your estimate.
+2019-10-17 17:26:19	-->	RickDeckard (~tgburrin@108.60.152.194) has joined #archlinux
+2019-10-17 17:26:28	HEX0	PsychoTron: ccsm?
+2019-10-17 17:26:40	<--	gffa (~unknown@unaffiliated/gffa) has quit (Quit: quit)
+2019-10-17 17:26:46	<--	xlx (~xlx@unaffiliated/xlx) has quit (Quit: Leaving...)
+2019-10-17 17:26:48	PsychoTron	setting util for compiz
+2019-10-17 17:26:58	-->	ShadowKyogre (7358dd25f8@gateway/shell/jabberfr/x-idfpnhcmqxvfkovn) has joined #archlinux
+2019-10-17 17:27:02	PsychoTron	locale: Cannot set LC_CTYPE to default locale: No such file or directory
+2019-10-17 17:27:02	PsychoTron	locale: Cannot set LC_MESSAGES to default locale: No such file or directory
+2019-10-17 17:27:02	PsychoTron	locale: Cannot set LC_ALL to default locale: No such file or directory
+2019-10-17 17:27:20	PsychoTron	LC_CTYPE="en_FI.UTF-8"
+2019-10-17 17:27:28	-->	pheoxy (~pheoxy@118.209.161.72) has joined #archlinux
+2019-10-17 17:27:31	PsychoTron	LC_MESSAGES="en_FI.UTF-8"
+2019-10-17 17:27:35	-->	xlx (~xlx@unaffiliated/xlx) has joined #archlinux
+2019-10-17 17:27:43	HEX0	PsychoTron: did you generate locales?
+2019-10-17 17:27:44	PsychoTron	LC_ALL=
+2019-10-17 17:27:56	-->	mittak (~mittak@p200300F6C3C8BC00626720FFFE7AEEAE.dip0.t-ipconnect.de) has joined #archlinux
+2019-10-17 17:27:57	<--	herbert_cyborg (~herbert_c@50-47-128-22.evrt.wa.frontiernet.net) has quit (Quit: WeeChat 2.6)
+2019-10-17 17:28:00	PsychoTron	whats the command?
+2019-10-17 17:28:06	PsychoTron	locales.gen?
+2019-10-17 17:28:07	kerframil	ulteq: that's impressive.
+2019-10-17 17:28:23	<--	lead_pipe23 (~Lead@38.29.184.213) has quit (Quit: Bye)
+2019-10-17 17:28:26	kerframil	PsychoTron: https://wiki.archlinux.org/index.php/Locale
+2019-10-17 17:28:27	@phrik	Title: Locale - ArchWiki (at wiki.archlinux.org)
+2019-10-17 17:28:44	HEX0	PsychoTron: https://wiki.archlinux.org/index.php/Installation_guide#Localization
+2019-10-17 17:28:45	@phrik	Title: Installation guide - ArchWiki (at wiki.archlinux.org)
+2019-10-17 17:29:06	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Quit: Leaving)
+2019-10-17 17:29:23	ayekat	there is no en_FI locale, though
+2019-10-17 17:30:42	mittak	kde is duolingual. parts of it are english, other parts are in the language set in preferences. is this due to 5.17 not being localized yet or something else?
+2019-10-17 17:32:18	<--	ShadowKyogre (7358dd25f8@gateway/shell/jabberfr/x-idfpnhcmqxvfkovn) has left #archlinux
+2019-10-17 17:33:18	<--	arza (~arza@qutebrowser/dev/arza) has quit (Quit: Quit)
+2019-10-17 17:33:47	<--	Ruuchan (~Ruuchan@unaffiliated/ruuchan) has quit (Ping timeout: 265 seconds)
+2019-10-17 17:34:14	<--	Leion (~Thunderbi@223.88.91.173) has quit (Quit: Leion)
+2019-10-17 17:35:30	PsychoTron	locale.conf only has one setting?
+2019-10-17 17:35:42	PsychoTron	where are the others defined?
+2019-10-17 17:36:24	<--	jcrypt (~jcrypt@dax.jcrypt.io) has quit (Ping timeout: 246 seconds)
+2019-10-17 17:36:31	MrElendig	PsychoTron: post locale and locale -a output
+2019-10-17 17:36:41	-->	arza (arza@qutebrowser/dev/arza) has joined #archlinux
+2019-10-17 17:36:56	-->	ShadowKyogre (7358dd25f8@gateway/shell/jabberfr/x-idfpnhcmqxvfkovn) has joined #archlinux
+2019-10-17 17:37:25	<--	ulteq (~archie@p57874C39.dip0.t-ipconnect.de) has quit (Quit: WeeChat 2.6)
+2019-10-17 17:37:26	HEX0	http://dpaste.com/150548W
+2019-10-17 17:37:28	@phrik	Title: dpaste: 150548W: /etc/locale.conf, by hex0 (at dpaste.com)
+2019-10-17 17:38:12	PsychoTron	!paste
+2019-10-17 17:38:13	@phrik	Paste short snippets (up to 3 lines) in channel. Please do NOT use pastebin.com or paste.ubuntu.com -- some good, sane paste services are http://ix.io, https://paste.rs, https://bpaste.net and https://gist.github.com. See !ix or !rs for an easy way to paste from a pipe.
+2019-10-17 17:38:18	--	piie is now known as piiE
+2019-10-17 17:38:37	<--	cotko (~cotko@89-212-138-82.static.t-2.net) has quit (Ping timeout: 265 seconds)
+2019-10-17 17:39:13	PsychoTron	https://bpaste.net/show/XYok
+2019-10-17 17:39:14	@phrik	Title: show (at bpaste.net)
+2019-10-17 17:39:26	<--	TheFuzzball (~TheFuzzba@217.138.51.254) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-10-17 17:39:30	-->	maccraft123 (~maccraft1@unaffiliated/maccraft123) has joined #archlinux
+2019-10-17 17:39:38	-->	ulteq (~archie@p57874C39.dip0.t-ipconnect.de) has joined #archlinux
+2019-10-17 17:39:46	--	piiE is now known as piie
+2019-10-17 17:39:53	ayekat	wth is en_FI
+2019-10-17 17:40:12	PsychoTron	how do I fix this?
+2019-10-17 17:40:16	<--	YellowJedi (~YellowJed@146.232.65.240) has quit (Read error: Connection reset by peer)
+2019-10-17 17:40:26	PsychoTron	where are the settings?
+2019-10-17 17:40:35	ayekat	oooh... are you running KDE, which likes to compose fantasy locales?
+2019-10-17 17:40:47	PsychoTron	not any more
+2019-10-17 17:40:56	PsychoTron	it was too heavy
+2019-10-17 17:41:07	-->	TheFuzzball (~TheFuzzba@217.138.51.254) has joined #archlinux
+2019-10-17 17:41:09	-->	cyberlard (~cyberlard@unaffiliated/jludwig) has joined #archlinux
+2019-10-17 17:41:28	 *	ayekat .oO(something something finish metal music)
+2019-10-17 17:41:38	--	fogobogo_ is now known as fogobogo
+2019-10-17 17:41:45	earnestly	finish
+2019-10-17 17:42:03	teraflops	Vodka
+2019-10-17 17:42:05	ayekat	eh... yeah
+2019-10-17 17:42:11	HEX0	PsychoTron: paste locale.conf  and  output of locale-gen
+2019-10-17 17:42:22	<--	ajak (~ajak@207.181.32.32) has quit (Remote host closed the connection)
+2019-10-17 17:42:32	ayekat	the output of locale-gen will be that it regenerates all the locales, though :-}
+2019-10-17 17:42:45	MrElendig	fix your locale.conf
+2019-10-17 17:42:47	<--	dfstorm (~dfstorm@unaffiliated/dfstorm) has quit (Remote host closed the connection)
+2019-10-17 17:42:53	-->	jathan (~jathan@200.39.241.171) has joined #archlinux
+2019-10-17 17:42:57	HEX0	ayekat: maybe it doesn't generate though
+2019-10-17 17:43:12	ayekat	HEX0: maybe
+2019-10-17 17:43:21	ayekat	I prefer checking first (i.e. look at what's in locale.gen)
+2019-10-17 17:43:29	MrElendig	PsychoTron: you wrote en_FI.utf8 instead of fi_FI.utf8 in it
+2019-10-17 17:44:04	<--	ShadowKyogre (7358dd25f8@gateway/shell/jabberfr/x-idfpnhcmqxvfkovn) has left #archlinux
+2019-10-17 17:44:17	PsychoTron	just tell me where the file is located?
+2019-10-17 17:44:27	<--	HuntsMan (~hunts@unaffiliated/huntsman) has quit (Ping timeout: 246 seconds)
+2019-10-17 17:44:27	MrElendig	if you want your messages in english then set LC_MESSAGES to en_GB.utf8 and LANG to fi_FI.utf8
+2019-10-17 17:44:30	PsychoTron	# cat locale.conf
+2019-10-17 17:44:30	PsychoTron	LANG=en_GB.UTF-8
+2019-10-17 17:44:40	MrElendig	PsychoTron: so you didn't read the url give to you?
+2019-10-17 17:44:44	<--	mittak (~mittak@p200300F6C3C8BC00626720FFFE7AEEAE.dip0.t-ipconnect.de) has quit (Quit: WeeChat 2.6)
+2019-10-17 17:44:58	MrElendig	hmm, override in HOME?
+2019-10-17 17:45:01	PsychoTron	half way trought
+2019-10-17 17:45:09	<--	puxavida (~comptekki@129.123.57.23) has quit (Remote host closed the connection)
+2019-10-17 17:45:21	-->	raijin (~raijin@unaffiliated/raijin) has joined #archlinux
+2019-10-17 17:45:32	MrElendig	grep -R LANG ~
+2019-10-17 17:46:21	-->	panikovsky (~panikovsk@109.165.24.134) has joined #archlinux
+2019-10-17 17:46:56	-->	ShadowKyogre (7358dd25f8@gateway/shell/jabberfr/x-idfpnhcmqxvfkovn) has joined #archlinux
+2019-10-17 17:47:37	-->	chripell (chripell@nat/google/x-pchbkjundkecymgg) has joined #archlinux
+2019-10-17 17:48:01	<--	Daisu (~Daisu@92.184.97.170) has quit (Quit: WeeChat 2.6)
+2019-10-17 17:48:08	PsychoTron	lxqt has some locale file
+2019-10-17 17:48:18	-->	puxavida (~comptekki@129.123.57.23) has joined #archlinux
+2019-10-17 17:49:21	<--	chris64 (~chris@unaffiliated/chris64) has quit (Quit: leaving)
+2019-10-17 17:49:24	MrElendig	change the language in whatever gui lxqt provides then
+2019-10-17 17:49:33	MrElendig	if you are running lxqt
+2019-10-17 17:49:33	PsychoTron	I need a smoke..
+2019-10-17 17:49:44	MrElendig	you need to stop smoking :p
+2019-10-17 17:50:14	<--	ulteq (~archie@p57874C39.dip0.t-ipconnect.de) has quit (Quit: WeeChat 2.6)
+2019-10-17 17:50:17	<--	TheFuzzball (~TheFuzzba@217.138.51.254) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-10-17 17:50:45	<--	MarcinWieczorek (~marcin@212.182.24.81) has quit (Quit: ZNC 1.7.4 - https://znc.in)
+2019-10-17 17:51:00	-->	Lord_of_Life_ (~Lord@unaffiliated/lord-of-life/x-0885362) has joined #archlinux
+2019-10-17 17:51:17	-->	stitched_unicorn (~Red@ai126250039232.11.tss.access-internet.ne.jp) has joined #archlinux
+2019-10-18 08:05:44	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #archlinux
+2019-10-18 08:05:44	--	Topic for #archlinux is "Welcome to Arch Linux, Good Luck: https://archlinux.org | Rules: https://goo.gl/XWFreH | Pastebins: see !paste"
+2019-10-18 08:05:44	--	Topic set by phrik (~phrik@archlinux/bot/phrik) on Tue, 17 Sep 2019 02:30:53
+2019-10-18 08:05:44	--	Channel #archlinux: 1676 nicks (2 ops, 0 voices, 1674 normals)
+2019-10-18 08:05:47	--	Channel created on Sun, 15 Feb 2004 06:08:31
+2019-10-18 08:07:12	-->	tsal (~tsal@i59F4AF25.versanet.de) has joined #archlinux
+2019-10-18 08:07:36	amosbird	rcf: intel
+2019-10-18 08:08:00	<--	Kevlar_Noir (~lexou@73.70.197.77.rev.sfr.net) has quit (Quit: Konversation terminated!)
+2019-10-18 08:08:27	chieta	the mouse could move the pointer but pressing the left/right click button didn't give effect ayekat
+2019-10-18 08:09:43	-->	kageru (~kageru@2a04:4540:6f00:7c00:6e05:ff3e:d3dc:6765) has joined #archlinux
+2019-10-18 08:10:16	<--	abhixec (~abhixec@73.92.49.6) has quit (Remote host closed the connection)
+2019-10-18 08:10:39	<--	alex_pa (~alex_pa@125.25.51.99) has quit (Quit: Leaving)
+2019-10-18 08:10:48	b1tninja	shows a cross makes me think of the empty Xserver
+2019-10-18 08:10:54	b1tninja	where you have no wm
+2019-10-18 08:13:07	<--	LostInWeb (~quassel@2a03:4000:15:1f2::9) has quit (Ping timeout: 252 seconds)
+2019-10-18 08:13:41	<--	WinterStar (WinterStar@gateway/vpn/mullvad/winterstar) has quit (Quit: WeeChat 2.6)
+2019-10-18 08:14:04	<--	_aeris (~aeris@april/board/aeris) has quit (Remote host closed the connection)
+2019-10-18 08:14:07	-->	spcckai (~androirc@unaffiliated/spcckai) has joined #archlinux
+2019-10-18 08:14:36	-->	_aeris_ (~aeris@april/board/aeris) has joined #archlinux
+2019-10-18 08:14:53	-->	Tobbi (~Tobbi@supertux/tobbi) has joined #archlinux
+2019-10-18 08:15:33	rcf	amosbird: you probably want VAAPI then.
+2019-10-18 08:16:15	--	piiE is now known as piie
+2019-10-18 08:16:41	amosbird	rcf: hmm, what do you mean
+2019-10-18 08:16:53	rcf	amosbird: VDPAU is only really used by nvidia.
+2019-10-18 08:17:03	<--	Hail_Spacecake (~weechat@lobsters/users/hailspacecake/x-84238744) has left #archlinux
+2019-10-18 08:17:37	amosbird	rcf: so what changes should I make to use VAAPI?
+2019-10-18 08:17:46	rcf	What application is this?
+2019-10-18 08:18:10	amosbird	vlc
+2019-10-18 08:18:22	-->	Nightah (~Nightah@unaffiliated/nightah) has joined #archlinux
+2019-10-18 08:18:26	amosbird	hmm, there isn't a systemwide setting?
+2019-10-18 08:19:28	rcf	Install the appropriate package as indicated in https://wiki.archlinux.org/index.php/Hardware_video_acceleration#Intel
+2019-10-18 08:19:29	@phrik	Title: Hardware video acceleration - ArchWiki (at wiki.archlinux.org)
+2019-10-18 08:20:17	<--	Tobbi (~Tobbi@supertux/tobbi) has quit (Ping timeout: 268 seconds)
+2019-10-18 08:21:09	rcf	Then (if it is not automatically being used) set it according to https://wiki.archlinux.org/index.php/VLC_media_player#Hardware_video_acceleration
+2019-10-18 08:21:10	@phrik	Title: VLC media player - ArchWiki (at wiki.archlinux.org)
+2019-10-18 08:21:46	-->	resurtm (~resurtm@5.104.156.51) has joined #archlinux
+2019-10-18 08:22:44	-->	Kowa (~kowalczyk@cm-84.208.172.134.getinternet.no) has joined #archlinux
+2019-10-18 08:22:55	-->	zalt_ (~lambda443@unaffiliated/lambda443) has joined #archlinux
+2019-10-18 08:23:30	<--	chieta (91ef85cc@ns3098869.ip-145-239-133.eu) has quit (Remote host closed the connection)
+2019-10-18 08:23:55	-->	sQVe (~sQVe@unaffiliated/sqve) has joined #archlinux
+2019-10-18 08:24:01	-->	Noti (~steffan@185.2.243.3) has joined #archlinux
+2019-10-18 08:25:18	amosbird	thanks. It's not picking VAAPI, have to set it manually
+2019-10-18 08:25:24	amosbird	there is also one with -drm
+2019-10-18 08:25:52	amosbird	btw, I guess I should install this one ?  HD Graphics series starting from Broadwell (~2015) and newer are supported by intel-media-driver.       CPU is i5-8250U
+2019-10-18 08:27:17	-->	beest (~root@2601:480:4003:37e0::76f2) has joined #archlinux
+2019-10-18 08:27:35	-->	HerbY_NL2 (~HerbY_NL2@2001:67c:2564:518:1198:3613:e42e:4db6) has joined #archlinux
+2019-10-18 08:30:21	<--	HerbY_NL2 (~HerbY_NL2@2001:67c:2564:518:1198:3613:e42e:4db6) has quit (Client Quit)
+2019-10-18 08:30:26	-->	chieta (2d4c6f18@45.76.111.24) has joined #archlinux
+2019-10-18 08:30:56	-->	PMunch (~PMunch@vpn.dualog.com) has joined #archlinux
+2019-10-18 08:31:19	-->	HerbY_NL2 (~HerbY_NL2@2001:67c:2564:518:1198:3613:e42e:4db6) has joined #archlinux
+2019-10-18 08:31:21	chieta	sorry for disconnection
+2019-10-18 08:31:35	-->	Pupnik (~Pupnik@ppp118-209-254-133.bras2.mel11.internode.on.net) has joined #archlinux
+2019-10-18 08:31:57	-->	bernard_ (~bernard@b2b-78-94-192-5.unitymedia.biz) has joined #archlinux
+2019-10-18 08:32:23	-->	gxt_ (~gxt@gateway/tor-sasl/gxt) has joined #archlinux
+2019-10-18 08:32:33	chieta	b1tninja ayekat afaik the box sleep accidentalyy then i login then the cross pointer appear... it solved after i login and logout the lxqt
+2019-10-18 08:32:34	--	schlitz_away is now known as schlitznase
+2019-10-18 08:32:42	<--	mkoskar (~mkoskar@unaffiliated/mkoskar) has quit (Quit: mkoskar)
+2019-10-18 08:32:42	chieta	the pointer become an arrow again
+2019-10-18 08:33:03	-->	WinterStar (WinterStar@gateway/vpn/mullvad/winterstar) has joined #archlinux
+2019-10-18 08:33:09	-->	Tobbi (~Tobbi@supertux/tobbi) has joined #archlinux
+2019-10-18 08:33:09	-->	Synthead (~Synthead@2607:fb90:8377:21e5:1d67:dd49:bc82:6010) has joined #archlinux
+2019-10-18 08:33:26	-->	mahoff_ (~mahoff@unaffiliated/mahoff) has joined #archlinux
+2019-10-18 08:33:28	<--	HerbY_NL2 (~HerbY_NL2@2001:67c:2564:518:1198:3613:e42e:4db6) has quit (Client Quit)
+2019-10-18 08:33:36	-->	LostInWeb (~quassel@2a03:4000:15:1f2::9) has joined #archlinux
+2019-10-18 08:33:44	-->	Codaraxis__ (Codaraxis@gateway/vpn/mullvad/codaraxis) has joined #archlinux
+2019-10-18 08:34:01	Synthead	I did an upgrade on a system with an atom 330 cpu and it won't boot :(  The display says something about an irq bug when booting the kernel, then halts
+2019-10-18 08:34:36	Synthead	that irq message has been displayed for a while and hasn't seemed to cause issues though
+2019-10-18 08:34:43	ayekat	chieta: usually the WM (or some DE component) should set the cursor icon - but the xprop error you've pasted above indicates something might be blocking it from setting the icon
+2019-10-18 08:34:51	-->	poljar1 (~poljar@93-143-162-51.adsl.net.t-com.hr) has joined #archlinux
+2019-10-18 08:34:51	Namarrgon	Synthead: which packages were upgraded?
+2019-10-18 08:35:01	Synthead	Namarrgon: everything, -Syu style
+2019-10-18 08:35:04	ayekat	then again, if one cannot set the cursor icon, it should still continue to work (button clicks etc)
+2019-10-18 08:35:32	b1tninja	!give kernelcheck chieta
+2019-10-18 08:35:33	@phrik	kernelcheck: Is that a question?
+2019-10-18 08:35:38	b1tninja	fml
+2019-10-18 08:36:05	chieta	ayekat i did this before $ nohup unclutter -idle 2 &
+2019-10-18 08:36:14	<--	mahoff (~mahoff@unaffiliated/mahoff) has quit (Ping timeout: 252 seconds)
+2019-10-18 08:36:42	ayekat	that might be related
+2019-10-18 08:37:09	<--	Kilroo (~Kilroo@71.71.105.78) has quit (Ping timeout: 250 seconds)
+2019-10-18 08:37:19	<--	WinterStar (WinterStar@gateway/vpn/mullvad/winterstar) has quit (Client Quit)
+2019-10-18 08:37:24	<--	h4rd3n3D (~weechat@gateway/tor-sasl/h4rd3n3d) has quit (Ping timeout: 260 seconds)
+2019-10-18 08:37:37	Synthead	Namarrgon: linux 4.19.4.arch1-1 is installed now
+2019-10-18 08:37:37	<--	Codaraxis_ (~Codaraxis@ip68-5-175-208.oc.oc.cox.net) has quit (Ping timeout: 265 seconds)
+2019-10-18 08:37:57	Synthead	I can boot an arch install from usb and chroot
+2019-10-18 08:38:00	Namarrgon	what is that?
+2019-10-18 08:38:10	<--	poljar (~poljar@78-1-48-100.adsl.net.t-com.hr) has quit (Ping timeout: 268 seconds)
+2019-10-18 08:38:11	Synthead	even after a mkinitcpio -p linux, it still doesn't boot
+2019-10-18 08:38:14	Namarrgon	was /boot not mounted when you updated or why is it that old?
+2019-10-18 08:38:28	<--	Tobbi (~Tobbi@supertux/tobbi) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-10-18 08:38:34	Synthead	oh hold up
+2019-10-18 08:38:59	Synthead	wasn't in the chroot :D  I'm on 5.3.6.arch1-1
+2019-10-18 08:39:00	<--	jusss (~user@unaffiliated/jusss) has quit (Quit: ERC (IRC client for Emacs 26.1))
+2019-10-18 08:39:26	-->	rebtoor (~rebtoor@unaffiliated/rebtoor) has joined #archlinux
+2019-10-18 08:39:32	<--	kageru (~kageru@2a04:4540:6f00:7c00:6e05:ff3e:d3dc:6765) has quit (Ping timeout: 276 seconds)
+2019-10-18 08:40:03	Synthead	I'm booting off lvm2 and a mdadm raid
+2019-10-18 08:40:06	Synthead	maybe it matters?
+2019-10-18 08:40:07	Namarrgon	you're still running the iso's kernel in the chroot
+2019-10-18 08:40:28	Namarrgon	post the messages that you get when you boot the system
+2019-10-18 08:40:31	Synthead	sure, but I should be able to do a mkinitcpio in a chroot, yeah?
+2019-10-18 08:40:46	Namarrgon	sure
+2019-10-18 08:42:33	-->	djapo (~archie@unaffiliated/djapo) has joined #archlinux
+2019-10-18 08:42:44	Synthead	Namarrgon: this is all that happens: https://i.imgur.com/uAU4FTz.jpg
+2019-10-18 08:43:39	<--	bug2000 (~bug2000@unaffiliated/bug2000) has quit (Ping timeout: 250 seconds)
+2019-10-18 08:44:13	al2o3-cr	Synthead: are you in a loft?
+2019-10-18 08:44:32	Synthead	this machine lives in the attic
+2019-10-18 08:44:32	-->	palasso (~palasso@unaffiliated/palasso) has joined #archlinux
+2019-10-18 08:44:57	al2o3-cr	thought so :)
+2019-10-18 08:45:12	-->	Zum0 (~bje@128.0.15.189) has joined #archlinux
+2019-10-18 08:45:23	<--	zxhello (~zx@159.224.41.193) has quit (Ping timeout: 250 seconds)
+2019-10-18 08:45:43	Synthead	the fallback image does the same thing, btw
+2019-10-18 08:46:37	-->	mcquinn (~Thunderbi@p200300C54F3B1300E6B318FFFE448220.dip0.t-ipconnect.de) has joined #archlinux
+2019-10-18 08:47:57	-->	vinosec (~Monokuai@194.95.154.90) has joined #archlinux
+2019-10-18 08:48:26	-->	WinterStar (WinterStar@gateway/vpn/mullvad/winterstar) has joined #archlinux
+2019-10-18 08:49:25	-->	Hail_Spacecake (~weechat@lobsters/users/hailspacecake/x-84238744) has joined #archlinux
+2019-10-18 08:51:04	b1tninja	are you the person that asked about dd'ing to eeprom
+2019-10-18 08:51:20	Synthead	me? no
+2019-10-18 08:51:23	Synthead	haha
+2019-10-18 08:51:30	<--	benl90 (~ben@180.247.112.61) has left #archlinux ("Leaving")
+2019-10-18 08:51:38	<--	rebtoor (~rebtoor@unaffiliated/rebtoor) has quit (Ping timeout: 246 seconds)
+2019-10-18 08:51:49	 *	b1tninja wants to press the button
+2019-10-18 08:52:03	Synthead	:D
+2019-10-18 08:52:12	Synthead	it's just a joke
+2019-10-18 08:52:12	-->	earnestly (~Earnestly@unaffiliated/earnestly) has joined #archlinux
+2019-10-18 08:52:19	<--	_Dark_ (~Dark@unaffiliated/notdark) has quit (Quit: ZNC 1.7.4 - https://znc.in)
+2019-10-18 08:52:24	Synthead	there's a sticker on the back that says "farts" too
+2019-10-18 08:52:39	Synthead	I wanted to see how long it took a coworker to find it when I worked in an office
+2019-10-18 08:53:04	Synthead	I think I might have found something
+2019-10-18 08:53:10	Synthead	it's a raid 1
+2019-10-18 08:53:16	-->	_Dark_ (~Dark@unaffiliated/notdark) has joined #archlinux
+2019-10-18 08:53:17	<--	WinterStar (WinterStar@gateway/vpn/mullvad/winterstar) has quit (Ping timeout: 240 seconds)
+2019-10-18 08:53:33	b1tninja	maybe update your bios
+2019-10-18 08:53:33	Synthead	and the drives are formatted with gpt
+2019-10-18 08:53:44	Synthead	the system is really old, atom 330
+2019-10-18 08:53:46	b1tninja	not the problem
+2019-10-18 08:53:55	Synthead	the message is non-fatal
+2019-10-18 08:53:55	-->	zer0downtime (~jikistro@77.252.63.221) has joined #archlinux
+2019-10-18 08:54:30	Synthead	I wonder if it's trying to boot using uefi
+2019-10-18 08:54:42	Synthead	my first partition is having trouble mounting
+2019-10-18 08:54:47	b1tninja	whats in dmesg
+2019-10-18 08:55:05	Synthead	I can't get to dmesg, it just stops with the initrd
+2019-10-18 08:55:07	<--	BillyZane2 (BillyZane@gateway/vpn/privateinternetaccess/billyzane) has quit (Remote host closed the connection)
+2019-10-18 08:55:36	schlitznase	Synthead: can you remove the "quiet" in the kernelparameters
+2019-10-18 08:55:38	-->	WinterStar (WinterStar@gateway/vpn/mullvad/winterstar) has joined #archlinux
+2019-10-18 08:55:44	schlitznase	so we have more output
+2019-10-18 08:56:00	-->	atrament666 (~atrament@cpc95006-newt38-2-0-cust73.19-3.cable.virginm.net) has joined #archlinux
+2019-10-18 08:56:05	-->	dendazen (~dendazen@pool-72-76-93-243.nwrknj.fios.verizon.net) has joined #archlinux
+2019-10-18 08:56:06	<--	atrament666 (~atrament@cpc95006-newt38-2-0-cust73.19-3.cable.virginm.net) has quit (Max SendQ exceeded)
+2019-10-18 08:56:15	<--	tinywrkb (~tinywrkb@tinywrkb.powered.by.lunarbnc.net) has quit (Quit: Free ZNC ~ Powered by LunarBNC: https://LunarBNC.net)
+2019-10-18 08:56:26	<--	deviantfero (~deviantfe@ip168-243-230-189.intercom.com.sv) has quit (Ping timeout: 276 seconds)
+2019-10-18 08:56:31	Synthead	schlitznase: I am not using quiet
+2019-10-18 08:56:50	-->	atrament666 (~atrament@cpc95006-newt38-2-0-cust73.19-3.cable.virginm.net) has joined #archlinux
+2019-10-18 08:57:11	-->	tinywrkb (~tinywrkb@tinywrkb.powered.by.lunarbnc.net) has joined #archlinux
+2019-10-18 08:57:14	<--	Ketchup901 (~Ketchup@unaffiliated/ketchup901) has quit (Ping timeout: 240 seconds)
+2019-10-18 08:57:19	<--	tenthirteen (~ten13@unaffiliated/tenthirteen) has quit (Read error: Connection reset by peer)
+2019-10-18 08:57:27	<--	queip (~queip@unaffiliated/rezurus) has quit (Quit: bye, freenode)
+2019-10-18 08:57:29	-->	cotko (~cotko@89-212-138-82.static.t-2.net) has joined #archlinux
+2019-10-18 08:57:37	b1tninja	oh, ok. when you said it wasn't fatal
+2019-10-18 08:57:40	-->	deviantfero (~deviantfe@ip168-243-230-189.intercom.com.sv) has joined #archlinux
+2019-10-18 08:57:41	b1tninja	i thought you were getting a console
+2019-10-18 08:57:47	Synthead	ah, nah
+2019-10-18 08:57:56	Synthead	that message has appeared for years
+2019-10-18 08:57:57	b1tninja	it looks like it doesn't even get to initialize the memory segments
+2019-10-18 08:58:06	b1tninja	update your bios
+2019-10-18 08:58:14	Synthead	no updates are available
+2019-10-18 08:58:23	b1tninja	what motherboard is this
+2019-10-18 08:58:24	-->	CiaoSen (~Jura@b2b-94-79-150-186.unitymedia.biz) has joined #archlinux
+2019-10-18 08:58:30	Synthead	it's an atom 330
+2019-10-18 08:58:37	b1tninja	thats cpu no? or is it soc
+2019-10-18 08:58:52	Synthead	ah
+2019-10-18 08:58:55	Synthead	I can get it from the bios
+2019-10-18 08:59:08	<--	vevais (~vevais@vevais.powered.by.lunarbnc.net) has quit (Quit: See you, space cowboy!)
+2019-10-18 08:59:35	schlitznase	Synthead: then use loglevel=7 :)
+2019-10-18 09:00:16	b1tninja	did you ever have a working os on this system
+2019-10-18 09:00:21	Synthead	it's one of these: https://i.imgur.com/3L0Uw0W.png intel D945GCLF2
+2019-10-18 09:00:22	<--	zalt_ (~lambda443@unaffiliated/lambda443) has quit (Ping timeout: 268 seconds)
+2019-10-18 09:00:32	Synthead	yeah it's worked fine for years
+2019-10-18 09:00:36	<--	krator44 (~krator44@unaffiliated/krator44) has quit (Read error: Connection reset by peer)
+2019-10-18 09:00:40	-->	vevais (~vevais@vevais.powered.by.lunarbnc.net) has joined #archlinux
+2019-10-18 09:00:40	Synthead	this just happened from an upgrade
+2019-10-18 09:00:43	<--	dendazen (~dendazen@pool-72-76-93-243.nwrknj.fios.verizon.net) has quit (Ping timeout: 245 seconds)
+2019-10-18 09:00:57	<--	malSet (~malSet@cpe-173-89-212-155.columbus.res.rr.com) has quit (Read error: Connection reset by peer)
+2019-10-18 09:01:04	<--	Edu4rdSHL (~edu4rdshl@fsf/member/edu4rdshl) has quit (Read error: Connection reset by peer)
+2019-10-18 09:01:11	b1tninja	neat
+2019-10-18 09:01:44	b1tninja	do you have a live environment, archiso?
+2019-10-18 09:02:01	<--	tinywrkb (~tinywrkb@tinywrkb.powered.by.lunarbnc.net) has quit (Client Quit)
+2019-10-18 09:02:02	-->	queip (~queip@unaffiliated/rezurus) has joined #archlinux
+2019-10-18 09:02:33	-->	malSet (~malSet@cpe-173-89-212-155.columbus.res.rr.com) has joined #archlinux
+2019-10-18 09:02:50	<--	tsal (~tsal@i59F4AF25.versanet.de) has quit (Ping timeout: 240 seconds)
+2019-10-18 09:02:58	Synthead	schlitznase: loglevel=7 https://i.imgur.com/Y9aOlz7.jpg
+2019-10-18 09:03:32	Synthead	b1tninja: yeah, I got a usb msd that I can boot an arch installer from
+2019-10-18 09:04:06	Amigant	evolution gmail calendar has hit daily quota
+2019-10-18 09:04:21	-->	Edu4rdSHL (~edu4rdshl@fsf/member/edu4rdshl) has joined #archlinux
+2019-10-18 09:04:25	-->	krator44 (~krator44@unaffiliated/krator44) has joined #archlinux
+2019-10-18 09:04:52	-->	gmpreussner (~j3rky@cpe-172-74-96-150.nc.res.rr.com) has joined #archlinux
+2019-10-18 09:04:59	-->	Forsaken87 (~quassel@2a02:908:1861:340:3d1d:fa36:dbc:bfdf) has joined #archlinux
+2019-10-18 09:05:04	schlitznase	does another kernel boot ?
+2019-10-18 09:05:18	b1tninja	i see some sort of security stuff
+2019-10-18 09:05:19	schlitznase	currently 5.3.6, right ?
+2019-10-18 09:05:21	b1tninja	can i blame that?
+2019-10-18 09:05:56	Synthead	ah, that's why the first partition is weird: I'm using a bios boot partition to make gpt work with mbr
+2019-10-18 09:06:00	-->	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has joined #archlinux
+2019-10-18 09:06:09	Synthead	I don't think this really matters, though
+2019-10-18 09:06:12	Synthead	or does it?
+2019-10-18 09:06:14	<--	krator44 (~krator44@unaffiliated/krator44) has quit (Max SendQ exceeded)
+2019-10-18 09:06:19	-->	tsal (~tsal@i59F5F2AE.versanet.de) has joined #archlinux
+2019-10-18 09:06:26	<--	CiaoSen (~Jura@b2b-94-79-150-186.unitymedia.biz) has quit (Ping timeout: 240 seconds)
+2019-10-18 09:06:28	b1tninja	idk man thats a pretty strange error
+2019-10-18 09:06:33	Synthead	schlitznase: yeah, the live usb msd boots fine
+2019-10-18 09:06:43	Synthead	the kernel prior to this one booted
+2019-10-18 09:06:45	b1tninja	i would do things like reset bios to default/clear cmos
+2019-10-18 09:06:51	b1tninja	reseat ram
+2019-10-18 09:06:56	b1tninja	verify secureeboot is off
+2019-10-18 09:07:00	b1tninja	try other kernels
+2019-10-18 09:07:01	Synthead	b1tninja: I don't have any crazy security stuff set up
+2019-10-18 09:07:05	schlitznase	"I'm using a bios boot partition to make gpt work with mbr" <-- did that work for once ?
+2019-10-18 09:07:10	b1tninja	what the heck is LSM/yama
+2019-10-18 09:07:13	Synthead	this system doesn't support secureboot
+2019-10-18 09:07:26	Synthead	schlitznase: yeah, everything was working prior to this upgrade
+2019-10-18 09:07:31	b1tninja	there was a message about apic timer failing but I dont think that matters much
+2019-10-18 09:07:54	b1tninja	that is too low for my limbo
+2019-10-18 09:08:53	Synthead	just re-seated the ram, let's see
+2019-10-18 09:08:55	-->	krator44 (~krator44@unaffiliated/krator44) has joined #archlinux
+2019-10-18 09:08:56	schlitznase	can you try to downgrad to the last kernel used ?
+2019-10-18 09:09:05	Synthead	I'm sure the last kernel works
+2019-10-18 09:09:12	Synthead	I was running it before the upgrade
+2019-10-18 09:09:24	-->	ph0x (~ph0x@static-74-41-114-178.dsl1.kgm.az.frontiernet.net) has joined #archlinux
+2019-10-18 09:09:28	Synthead	re-seating the ram didn't do anything
+2019-10-18 09:09:32	schlitznase	is it the new kernel for sure, or is it some other package?
+2019-10-18 09:09:35	b1tninja	if thats the case, you may want to file a bug, give dmidecode to the kernel mailing list maybe
+2019-10-18 09:09:57	schlitznase	that's why you should try the last kernel, without downgrading the whole system :)
+2019-10-18 09:10:17	Synthead	schlitznase: yeah it's the latest kernel from core
+2019-10-18 09:10:27	-->	Trashlord (~trash@wikipedia/Sentient-Planet) has joined #archlinux
+2019-10-18 09:10:43	Synthead	last as in, the last one before the upgrade, or the second newest kernel?
+2019-10-18 09:11:01	Namarrgon	which version was that?
+2019-10-18 09:11:15	-->	Ketchup901 (~Ketchup@unaffiliated/ketchup901) has joined #archlinux
+2019-10-18 09:11:46	ph0x	the website states "Official logos and artwork are also available directly from the repositories. Currently, these packages are:
+2019-10-18 09:11:49	ph0x	archlinux-artwork - official logos, icons and CD labels"
+2019-10-18 09:12:00	ph0x	can someone point me to this package in the repos
+2019-10-18 09:12:03	ph0x	o.0
+2019-10-18 09:12:20	b1tninja	https://aur.archlinux.org/packages/archlinux-artwork
+2019-10-18 09:12:21	@phrik	Title: AUR (en) - archlinux-artwork (at aur.archlinux.org)
+2019-10-18 09:12:21	schlitznase	Synthead: the last working kernel
+2019-10-18 09:12:33	Synthead	let me check the pacman log
+2019-10-18 09:12:43	Synthead	I'm getting a chroot going
+2019-10-18 09:12:59	b1tninja	perhaps as a quick fix, install linux-lts
+2019-10-18 09:13:05	-->	sigmundv (~sigmundv@92.251.178.180.threembb.ie) has joined #archlinux
+2019-10-18 09:13:27	schlitznase	to downgrade the kernel you'll probably finde the package in /var/cache/pacman/pkg/
+2019-10-18 09:13:31	-->	rebtoor (~rebtoor@unaffiliated/rebtoor) has joined #archlinux
+2019-10-18 09:13:31	b1tninja	or pacman -U /var/cache/pacman/pkg/linux-oldone-.xz
+2019-10-18 09:13:33	<--	djapo (~archie@unaffiliated/djapo) has quit (Ping timeout: 250 seconds)
+2019-10-18 09:13:35	-->	Esmil (esmil@hapy.0x90.dk) has joined #archlinux
+2019-10-18 09:13:42	ph0x	why isnt it in the pacman repos
+2019-10-18 09:13:43	ph0x	?
+2019-10-18 09:13:49	b1tninja	no idea
+2019-10-18 09:14:00	b1tninja	source=("${pkgname}-${pkgver}.tar.gz::https://sources.archlinux.org/other/artwork/${pkgname}-${pkgver}.tar.gz")
+2019-10-18 09:14:04	Esmil	Hmm.. bison fails for me: bison: error while loading shared libraries: libtextstyle.so.0: cannot open shared object file: No such file or directory
+2019-10-18 09:14:06	Namarrgon	it used to be, then it was dropped
+2019-10-18 09:14:11	ph0x	it links to the artwork below, if anything using the aur is MORE work than that
+2019-10-18 09:14:16	<--	BobbyJr2 (~BobbyJr@robsworld.plus.com) has quit (Ping timeout: 240 seconds)
+2019-10-18 09:14:23	Synthead	Namarrgon, schlitznase: the last working kernel was 5.1.15.arch1-1
+2019-10-18 09:14:24	Namarrgon	Esmil: install gettext
+2019-10-18 09:14:44	Esmil	Namarrgon: alright, but that should be fixed though right?
+2019-10-18 09:14:45	Namarrgon	Synthead: does the current lts kernel work?
+2019-10-18 09:15:00	Synthead	Namarrgon: I can try
+2019-10-18 09:15:01	b1tninja	https://sources.archlinux.org/other/artwork/
+2019-10-18 09:15:02	@phrik	Title: Index of /other/artwork/ (at sources.archlinux.org)
+2019-10-18 09:15:02	ph0x	when that happens Esmil, search for what package provides that lib
+2019-10-18 09:15:14	ph0x	pacman -F or the archlinux website
+2019-10-18 09:15:16	Namarrgon	Esmil: is this a new install?
+2019-10-18 09:15:17	<--	inkbottle (~inkbottle@aaubervilliers-654-1-155-244.w86-212.abo.wanadoo.fr) has quit (Ping timeout: 240 seconds)
+2019-10-18 09:15:35	Esmil	Namarrgon: no this is two different machines that I just updated
+2019-10-18 09:15:37	-->	fyrgebraec (~enceladus@150.106.23.93.rev.sfr.net) has joined #archlinux
+2019-10-18 09:15:42	-->	inkbottle (~inkbottle@aaubervilliers-654-1-88-115.w86-212.abo.wanadoo.fr) has joined #archlinux
+2019-10-18 09:15:42	ph0x	I guess it's from someone missing a dep
+2019-10-18 09:15:51	ph0x	remember to install using --asdeps
+2019-10-18 09:15:51	Namarrgon	Esmil: where did your gettext package go then?
+2019-10-18 09:16:00	Esmil	ph0x: exactly. I shouldn't have to hunt for dependencies
+2019-10-18 09:16:14	ph0x	then fix it
+2019-10-18 09:16:31	ph0x	someone had to make arch, you realize that?
+2019-10-18 09:16:38	Esmil	i was hoping someone here knows who to poke
+2019-10-18 09:16:46	Namarrgon	file a bugreport against bison
+2019-10-18 09:17:18	<--	Esmil (esmil@hapy.0x90.dk) has left #archlinux
+2019-10-18 09:17:24	Amigant	heh
+2019-10-18 09:18:05	ph0x	"I shouldn't HAVE to make my own linux distro" Judd Vinet... probably
+2019-10-18 09:19:24	 *	b1tninja googles them
+2019-10-18 09:19:26	-->	amcrae (~allanbrok@archlinux/developer/allan) has joined #archlinux
+2019-10-18 09:19:30	Amigant	shame
+2019-10-18 09:20:00	b1tninja	distrowatch guy?
+2019-10-18 09:20:14	b1tninja	oh
+2019-10-18 09:20:16	Amigant	esmil or judd?
+2019-10-18 09:20:16	b1tninja	creator of archlinux
+2019-10-18 09:20:19	Amigant	yep
+2019-10-18 09:20:46	b1tninja	now i knokw who to CC
+2019-10-18 09:21:10	ph0x	IIRC he wanted slack, but also wanted dependancy handling
+2019-10-18 09:21:15	ph0x	(dont we all)
+2019-10-18 09:21:20	b1tninja	oh god
+2019-10-18 09:21:37	b1tninja	thank jebus for agregory
+2019-10-18 09:21:40	ph0x	I used slack when I was like 12
+2019-10-18 09:21:45	ph0x	what a PITA
+2019-10-18 09:21:53	ph0x	not a humble brag either
+2019-10-18 09:22:01	b1tninja	i stopped using it when slack7 came out, because it was a dvd
+2019-10-18 09:22:01	-->	cdown (~cdown@rrcs-24-103-44-77.nyc.biz.rr.com) has joined #archlinux
+2019-10-18 09:22:05	b1tninja	and i had 56k
+2019-10-18 09:22:08	ph0x	right
+2019-10-18 09:22:29	ph0x	when we got cable, the cable guy was both amazed and confused I used Red Hat
+2019-10-18 09:22:35	b1tninja	lol
+2019-10-18 09:22:43	ph0x	He was like... that's what I use.
+2019-10-18 09:22:43	<--	rebtoor (~rebtoor@unaffiliated/rebtoor) has quit (Remote host closed the connection)
+2019-10-18 09:22:46	Synthead	Namarrgon: the lts kernel doesn't work
+2019-10-18 09:23:01	b1tninja	when nerds meet
+2019-10-18 09:23:07	ph0x	compile your own kernel
+2019-10-18 09:23:12	-->	rebtoor (~rebtoor@unaffiliated/rebtoor) has joined #archlinux
+2019-10-18 09:23:12	b1tninja	"not everyone is retarded!?"
+2019-10-18 09:23:23	ph0x	that always confuses me too
+2019-10-18 09:23:49	b1tninja	maaaan
+2019-10-18 09:23:59	b1tninja	what sort of fucked up thing did you do to this poor system
+2019-10-18 09:24:11	b1tninja	did you try the cmos reset? is the clock accurate?
+2019-10-18 09:24:23	Synthead	I just -Syu'ed it
+2019-10-18 09:24:27	-->	Tazmain (~Tazmain@unaffiliated/tazmain) has joined #archlinux
+2019-10-18 09:24:36	Synthead	I am not sure about the clock, but I could check the bios
+2019-10-18 09:24:43	ph0x	try dd if=/dev/null of=sector 1
+2019-10-18 09:24:51	ph0x	and start over
+2019-10-18 09:24:58	ph0x	:)
+2019-10-18 09:24:58	b1tninja	are you really able to boot an old kernel right now?
+2019-10-18 09:25:03	Synthead	I'm going to attempt downgrading the kernel to the one I know works
+2019-10-18 09:25:08	b1tninja	therefore proving its the kernel
+2019-10-18 09:25:16	Synthead	b1tninja: that's what I'm going to try now
+2019-10-18 09:25:25	Synthead	the live usb system works
+2019-10-18 09:25:29	b1tninja	k
+2019-10-18 09:25:31	ph0x	I accidently dev/nulled the whole thing
+2019-10-18 09:25:32	b1tninja	thats good enough
+2019-10-18 09:25:33	schlitznase	Synthead: try to downgrad to the 5.1.15.arch1-1 Kernel to be sure, that the Kernel itself is the issue or some configuration after the upgrade ...
+2019-10-18 09:25:47	-->	malmalmal (~malmalmal@137.101.197.196) has joined #archlinux
+2019-10-18 09:25:53	b1tninja	does the cpu microcode live in linux-firmware?
+2019-10-18 09:26:01	b1tninja	or guess not
+2019-10-18 09:26:01	Synthead	schlitznase: maybe there's a new initcpio hook or something?
+2019-10-18 09:26:02	<--	zer0downtime (~jikistro@77.252.63.221) has quit (Ping timeout: 240 seconds)
+2019-10-18 09:26:34	b1tninja	you aren't getting to the initrd i dont think
+2019-10-18 09:27:01	schlitznase	pacman -U /var/cache/packman/pgk/linux-5.1.15.arch1-1-x86_64.pkg.tar.xz
+2019-10-18 09:27:20	b1tninja	--sysroot /mnt
+2019-10-18 09:27:30	b1tninja	or something
+2019-10-18 09:27:45	b1tninja	guess just chroot in
+2019-10-18 09:28:05	amosbird	hello, is there any tool that can lower the PC's fan volumn?
+2019-10-18 09:28:14	amosbird	it's somehow too loud
+2019-10-18 09:28:15	-->	r3pek (~r3pek@unaffiliated/r3pek) has joined #archlinux
+2019-10-18 09:28:31	Synthead	yeah I have a chroot going with sys, dev, and proc bind mounted
+2019-10-18 09:28:31	ph0x	I can't get w3m to display images
+2019-10-18 09:28:36	schlitznase	amosbird: first step, clean it from dust
+2019-10-18 09:28:40	ph0x	can it not handle svg?
+2019-10-18 09:28:42	b1tninja	and boot
+2019-10-18 09:29:01	ph0x	amosbird: is it an HP
+2019-10-18 09:29:04	ph0x	or compaq?
+2019-10-18 09:29:05	amosbird	schlitznase: it's not that loud
+2019-10-18 09:29:16	amosbird	just need to lower it for night time
+2019-10-18 09:29:18	ph0x	"It's too loud"
+2019-10-18 09:29:24	amosbird	somehow
+2019-10-18 09:29:25	ph0x	"It's not that loud!"
+2019-10-18 09:29:55	ph0x	clean it, then make sure it's mounted well
+2019-10-18 09:29:57	b1tninja	!aw https://wiki.archlinux.org/index.php/Fan_speed_control
+2019-10-18 09:29:59	@phrik	b1tninja: No results found.
+2019-10-18 09:30:03	b1tninja	oups
+2019-10-18 09:30:03	ph0x	maybe dampen the mounts somehow
+2019-10-18 09:30:20	ph0x	get a better fan
+2019-10-18 09:30:30	ph0x	turn the fan off (don't)
+2019-10-18 09:30:30	amosbird	that works for any fan?
+2019-10-18 09:30:44	Synthead	I like noctua fans
+2019-10-18 09:30:48	ph0x	suspend the computer
+2019-10-18 09:30:59	b1tninja	cpu gov too
+2019-10-18 09:31:00	amosbird	hmm, actually there is a fan connected to the PC body
+2019-10-18 09:31:01	amosbird	not on the CPU
+2019-10-18 09:31:04	amosbird	funny
+2019-10-18 09:31:04	ph0x	hibernate the computer
+2019-10-18 09:31:23	ph0x	you can cut THAT fan off, usually
+2019-10-18 09:31:26	ph0x	safely I mean
+2019-10-18 09:31:28	Synthead	okay, here goes the old kernel
+2019-10-18 09:31:43	-->	mkoskar (~mkoskar@unaffiliated/mkoskar) has joined #archlinux
+2019-10-18 09:31:52	Synthead	yeah it boots fine
+2019-10-18 09:32:06	b1tninja	wow
+2019-10-18 09:32:28	b1tninja	well it seems too weird that linux and linux-lts would have the same bug
+2019-10-18 09:32:34	Synthead	yeah I agree
+2019-10-18 09:32:43	Synthead	maybe some patch made it in that was backported?
+2019-10-18 09:32:45	b1tninja	so im thinking the boot method may be something to consider
+2019-10-18 09:32:57	Synthead	boot method?
+2019-10-18 09:33:07	b1tninja	or nevermind, you just booted it from disk etc?
+2019-10-18 09:33:11	Synthead	yeah
+2019-10-18 09:33:13	b1tninja	k
+2019-10-18 09:33:29	-->	stitched_unicorn (~Red@ai126250039232.11.tss.access-internet.ne.jp) has joined #archlinux
+2019-10-18 09:33:35	<--	stitched_unicorn (~Red@ai126250039232.11.tss.access-internet.ne.jp) has quit (Client Quit)
+2019-10-18 09:33:39	b1tninja	well seems worth reporting to kernel mailing list
+2019-10-18 09:33:54	Synthead	yeah I'll gather some more info and all that
+2019-10-18 09:34:18	Synthead	it's getting late so I'll make sure to file a bug report later
+2019-10-18 09:34:34	b1tninja	nice
+2019-10-18 09:35:47	<--	atrament666 (~atrament@cpc95006-newt38-2-0-cust73.19-3.cable.virginm.net) has quit (Quit: Leaving.)
+2019-10-18 09:36:16	-->	Synthbread (~Synthead@50.35.78.83) has joined #archlinux
+2019-10-18 09:36:18	schlitznase	uhm just asking: you added the lts-kernel at the bootloader, right?
+2019-10-18 09:36:25	Synthbread	thanks so much for the help, all!
+2019-10-18 09:36:34	-->	absolutejam1 (~absolutej@154.62.128.42) has joined #archlinux
+2019-10-18 09:36:41	Synthbread	schlitznase: yeah, for the kernel and initrd
+2019-10-18 09:37:42	amosbird	hmm, any night-sleep mode ?
+2019-10-18 09:38:10	-->	fethio (~fethi@a89-154-32-46.cpe.netcabo.pt) has joined #archlinux
+2019-10-18 09:38:16	Namarrgon	Synthbread: did you get it to boot?
+2019-10-18 09:38:26	<--	Abbott (~Abbott@unaffiliated/abbott) has quit (Ping timeout: 240 seconds)
+2019-10-18 09:38:27	Synthbread	Namarrgon: with the downgraded kernel, yeah
+2019-10-18 09:38:40	Namarrgon	that's not a fix
+2019-10-18 09:38:53	Synthbread	Namarrgon: it's not
+2019-10-18 09:38:53	-->	HerbY_NL2 (~HerbY_NL2@2001:67c:2564:518:e156:74d6:74c:1bb) has joined #archlinux
+2019-10-18 09:39:02	Synthbread	I'll file a bug report soon
+2019-10-18 09:39:03	<--	Synthead (~Synthead@2607:fb90:8377:21e5:1d67:dd49:bc82:6010) has quit (Ping timeout: 264 seconds)
+2019-10-18 09:39:11	schlitznase	amosbird: no. a fan got a reason to run. so either, the fan is crap, it's not properly mounted, or your system is at high load
+2019-10-18 09:40:34	Synthbread	I'm gonna brush my teeth and head to bed
+2019-10-18 09:40:43	Synthbread	thanks again for all the help! <3
+2019-10-18 09:40:46	-->	Abbott (~Abbott@unaffiliated/abbott) has joined #archlinux
+2019-10-18 09:41:54	-->	agarnier (~elgrec@193.51.236.40) has joined #archlinux
+2019-10-18 09:41:54	<--	Warepire (~Warepire@unaffiliated/warepire) has quit (Read error: Connection reset by peer)
+2019-10-18 09:42:01	<--	Synthbread (~Synthead@50.35.78.83) has quit (Quit: Leaving)
+2019-10-18 09:42:26	-->	atrament666 (~atrament@cpc95006-newt38-2-0-cust73.19-3.cable.virginm.net) has joined #archlinux
+2019-10-18 09:42:26	schlitznase	amosbird: which fan are we talking about ?
+2019-10-18 09:42:33	<--	atrament666 (~atrament@cpc95006-newt38-2-0-cust73.19-3.cable.virginm.net) has quit (Max SendQ exceeded)
+2019-10-18 09:42:33	-->	Warepire (~Warepire@unaffiliated/warepire) has joined #archlinux
+2019-10-18 09:43:17	-->	abhixec (~abhixec@73.92.49.6) has joined #archlinux
+2019-10-18 09:43:26	-->	atrament666 (~atrament@cpc95006-newt38-2-0-cust73.19-3.cable.virginm.net) has joined #archlinux
+2019-10-18 09:43:33	<--	atrament666 (~atrament@cpc95006-newt38-2-0-cust73.19-3.cable.virginm.net) has quit (Max SendQ exceeded)
+2019-10-18 09:44:13	-->	atrament666 (~atrament@cpc95006-newt38-2-0-cust73.19-3.cable.virginm.net) has joined #archlinux
+2019-10-18 09:44:32	<--	cdown (~cdown@rrcs-24-103-44-77.nyc.biz.rr.com) has quit (Ping timeout: 276 seconds)
+2019-10-18 09:46:50	<--	sudoforge (~sudoforge@cpepool9bcmts2-177.sanbrunocable.com) has quit (Ping timeout: 240 seconds)
+2019-10-18 09:46:52	<--	rcf (rcf@iceland.sdf.org) has quit (Quit: WeeChat 2.4)
+2019-10-18 09:47:09	<--	tigrmesh (~tigrmesh@archlinux/op/tigrmesh) has quit (Ping timeout: 276 seconds)
+2019-10-18 09:47:23	<--	queip (~queip@unaffiliated/rezurus) has quit (Ping timeout: 245 seconds)
+2019-10-18 09:48:57	<--	ph0x (~ph0x@static-74-41-114-178.dsl1.kgm.az.frontiernet.net) has quit (Ping timeout: 240 seconds)
+2019-10-18 09:49:02	-->	tigrmesh (~tigrmesh@archlinux/op/tigrmesh) has joined #archlinux
+2019-10-18 09:49:06	-->	rcf (rcf@iceland.sdf.org) has joined #archlinux
+2019-10-18 09:49:33	-->	Gnea (~gnea@unaffiliated/gnea) has joined #archlinux
+2019-10-18 09:50:06	<--	frenchbeard (~Nope@2a01cb0890100600fa5971fffe917e81.ipv6.abo.wanadoo.fr) has quit (Ping timeout: 246 seconds)
+2019-10-18 09:50:56	<--	fethio (~fethi@a89-154-32-46.cpe.netcabo.pt) has quit (Ping timeout: 268 seconds)
+2019-10-18 09:51:19	-->	queip (~queip@unaffiliated/rezurus) has joined #archlinux
+2019-10-18 09:53:08	-->	zxhello (~zx@159.224.41.193) has joined #archlinux
+2019-10-18 09:53:38	<--	quitman (~master@217-64-148-150.pool.ovpn.com) has quit (Ping timeout: 240 seconds)
+2019-10-18 09:53:53	<--	_McGuyver (mcguyver@unaffiliated/mcguyver) has quit (Quit: Leaving)
+2019-10-18 09:54:33	<--	Adbray (~Adbray@2600:6c48:6f7f:d764:f46f:f727:44de:4ccf) has quit (Quit: Ah! By Brain!)
+2019-10-18 09:55:36	-->	JellyPi101 (~rooster@2a02:2f04:13f:a500:5c86:a55f:f979:9ca2) has joined #archlinux
+2019-10-18 09:56:35	-->	tdy (~tdy@unaffiliated/tdy) has joined #archlinux
+2019-10-18 09:56:55	-->	Jackneill (~Jackneill@unaffiliated/jackneill) has joined #archlinux
+2019-10-18 09:56:56	-->	_McGuyver (mcguyver@unaffiliated/mcguyver) has joined #archlinux
+2019-10-18 09:57:24	-->	stitched_unicorn (~Red@ai126250039232.11.tss.access-internet.ne.jp) has joined #archlinux
+2019-10-18 09:59:04	<--	peanutbutter144 (quassel@2a01:7e00::f03c:91ff:fe9d:2a7e) has quit (Quit: https://quassel-irc.org - Chat comfortably. Anywhere.)
+2019-10-18 10:00:18	<--	czer00 (~czer00@2601:580:c281:58b0::56ff) has quit (Ping timeout: 245 seconds)
+2019-10-18 10:00:58	-->	TheFuzzball (~TheFuzzba@217.138.51.254) has joined #archlinux
+2019-10-18 10:02:14	-->	czer00 (~czer00@c-73-46-147-254.hsd1.fl.comcast.net) has joined #archlinux
+2019-10-18 10:02:26	<--	iam730 (~iam730@c-24-6-215-59.hsd1.ca.comcast.net) has quit (Ping timeout: 240 seconds)
+2019-10-18 10:02:34	-->	zer0downtime (~jikistro@77.252.63.221) has joined #archlinux
+2019-10-18 10:02:56	<--	gmpreussner (~j3rky@cpe-172-74-96-150.nc.res.rr.com) has quit (Ping timeout: 240 seconds)
+2019-10-18 10:03:44	-->	gmpreussner (~j3rky@cpe-172-74-96-150.nc.res.rr.com) has joined #archlinux
+2019-10-18 10:03:57	<--	Edu4rdSHL (~edu4rdshl@fsf/member/edu4rdshl) has quit (Quit: Leaving)
+2019-10-18 10:04:08	<--	saltpepp3r (~saltpepp3@91.207.173.118) has quit (Ping timeout: 265 seconds)
+2019-10-18 10:04:58	-->	Edu4rdSHL (~edu4rdshl@fsf/member/edu4rdshl) has joined #archlinux
+2019-10-18 10:05:12	-->	kts (~kts@103.73.237.7) has joined #archlinux
+2019-10-18 10:05:36	<--	absolutejam1 (~absolutej@154.62.128.42) has quit (Ping timeout: 240 seconds)
+2019-10-18 10:05:57	-->	nickel8448 (~rahul@2a02:8084:26e3:5580:e2b6:c3bb:53c4:2e59) has joined #archlinux
+2019-10-18 10:05:59	-->	saltpepp3r (~saltpepp3@91.207.173.118) has joined #archlinux
+2019-10-18 10:06:53	-->	tenthirteen (~ten13@unaffiliated/tenthirteen) has joined #archlinux
+2019-10-18 10:09:22	-->	kri404 (~kri-404@90.199.234.48) has joined #archlinux
+2019-10-18 10:10:54	<--	bernard_ (~bernard@b2b-78-94-192-5.unitymedia.biz) has quit (Quit: bernard_)
+2019-10-18 10:11:00	<--	ilikeyou (uid389024@gateway/web/irccloud.com/x-mvhoktrxctosfxwz) has quit (Quit: Connection closed for inactivity)
+2019-10-18 10:11:51	<--	mkoskar (~mkoskar@unaffiliated/mkoskar) has quit (Read error: Connection reset by peer)
+2019-10-18 10:11:55	<--	chieta (2d4c6f18@45.76.111.24) has quit (Remote host closed the connection)
+2019-10-18 10:12:59	-->	mkoskar (~mkoskar@unaffiliated/mkoskar) has joined #archlinux
+2019-10-18 10:13:03	-->	zalt_ (~lambda443@unaffiliated/lambda443) has joined #archlinux
+2019-10-18 10:15:04	<--	clueminati (~clueminat@gateway/tor-sasl/clueminati) has quit (Remote host closed the connection)
+2019-10-18 10:15:44	<--	saltpepp3r (~saltpepp3@91.207.173.118) has quit (Ping timeout: 276 seconds)
+2019-10-18 10:15:56	-->	redp (~redp@67-207-104-238.static.wiline.com) has joined #archlinux
+2019-10-18 10:16:15	-->	h4rd3n3D (~weechat@gateway/tor-sasl/h4rd3n3d) has joined #archlinux
+2019-10-18 10:17:28	-->	saltpepp3r (~saltpepp3@91.207.173.118) has joined #archlinux
+2019-10-18 10:18:11	<--	csauve (~csauve@node-1w7jr9srsxg2w4915gm8txc1w.ipv6.telus.net) has quit (Quit: WeeChat 2.6)
+2019-10-18 10:19:07	<--	kerberizer (~luchesar@wikipedia/Iliev) has quit (Ping timeout: 265 seconds)
+2019-10-18 10:20:30	<--	atrament666 (~atrament@cpc95006-newt38-2-0-cust73.19-3.cable.virginm.net) has quit (Quit: Leaving.)
+2019-10-18 10:22:23	<--	redp (~redp@67-207-104-238.static.wiline.com) has quit (Ping timeout: 268 seconds)
+2019-10-18 10:23:00	<--	deviantfero (~deviantfe@ip168-243-230-189.intercom.com.sv) has quit (Ping timeout: 268 seconds)
+2019-10-18 10:23:14	<--	kts (~kts@103.73.237.7) has quit (Quit: Konversation terminated!)
+2019-10-18 10:25:07	<--	JellyPi101 (~rooster@2a02:2f04:13f:a500:5c86:a55f:f979:9ca2) has quit (Ping timeout: 252 seconds)
+2019-10-18 10:26:07	-->	kerberizer (~luchesar@wikipedia/Iliev) has joined #archlinux
+2019-10-18 10:26:33	-->	revoltingPeasant (~joe@unaffiliated/th3-g0d5) has joined #archlinux
+2019-10-18 10:27:21	<--	b0tanik (~b0tanik@188.163.73.194) has quit (Quit: Lost terminal)
+2019-10-18 10:28:08	-->	tkrizek (~tkrizek@2001:67c:1220:80c:df:5350:68c3:aed5) has joined #archlinux
+2019-10-18 10:29:36	<--	vevais (~vevais@vevais.powered.by.lunarbnc.net) has quit (Quit: See you, space cowboy!)
+2019-10-18 10:29:41	<--	WinterStar (WinterStar@gateway/vpn/mullvad/winterstar) has quit (Quit: WeeChat 2.6)
+2019-10-18 10:30:13	-->	vevais (~vevais@vevais.powered.by.lunarbnc.net) has joined #archlinux
+2019-10-18 10:30:22	-->	kelnoky (~shao@ip1f12842e.dynamic.kabel-deutschland.de) has joined #archlinux
+2019-10-18 10:30:26	-->	mircea (~mircea@unaffiliated/free-beard/x-6152516) has joined #archlinux
+2019-10-18 10:30:58	-->	tichun (~tichun@2a00:f41:4896:9131:583e:74ff:fe53:3af0) has joined #archlinux
+2019-10-18 10:32:45	<--	mircea (~mircea@unaffiliated/free-beard/x-6152516) has quit (Client Quit)
+2019-10-18 10:33:17	-->	mircea (~mircea@unaffiliated/free-beard/x-6152516) has joined #archlinux
+2019-10-18 10:34:38	<--	epony (epony@unaffiliated/epony) has quit (Ping timeout: 245 seconds)
+2019-10-18 10:34:56	<--	tichun (~tichun@2a00:f41:4896:9131:583e:74ff:fe53:3af0) has quit (Quit: tichun)
+2019-10-18 10:35:47	-->	tichun (~tichun@2a00:f41:4896:9131:583e:74ff:fe53:3af0) has joined #archlinux
+2019-10-18 10:36:01	<--	mircea (~mircea@unaffiliated/free-beard/x-6152516) has quit (Client Quit)
+2019-10-18 10:37:03	-->	tareef (~tareefdev@88.254.246.232) has joined #archlinux
+2019-10-18 10:37:20	-->	davor_ (~davor@unaffiliated/davor) has joined #archlinux
+2019-10-18 10:37:22	-->	free_beard (~free_bear@unaffiliated/free-beard/x-6152516) has joined #archlinux
+2019-10-18 10:37:37	<--	davor (~davor@unaffiliated/davor) has quit (Ping timeout: 250 seconds)
+2019-10-18 10:37:37	--	davor_ is now known as davor
+2019-10-18 10:39:01	<--	h4rd3n3D (~weechat@gateway/tor-sasl/h4rd3n3d) has quit (Remote host closed the connection)
+2019-10-18 10:40:05	<--	kri404 (~kri-404@90.199.234.48) has quit (Quit: Leaving)
+2019-10-18 10:41:01	<--	al2o3-cr (~gr33n7007@unaffiliated/gr33n7007h) has quit (Ping timeout: 246 seconds)
+2019-10-18 10:41:09	-->	efexos (71c7f98e@113.199.249.142) has joined #archlinux
+2019-10-18 10:41:47	<--	kelnoky (~shao@ip1f12842e.dynamic.kabel-deutschland.de) has quit (Quit: WeeChat 2.6)
+2019-10-18 10:41:58	-->	cotko_ (~cotko@84-255-193-179.static.t-2.net) has joined #archlinux
+2019-10-18 10:41:58	<--	cotko (~cotko@89-212-138-82.static.t-2.net) has quit (Ping timeout: 245 seconds)
+2019-10-18 10:42:11	<--	efexos (71c7f98e@113.199.249.142) has left #archlinux
+2019-10-18 10:42:30	-->	samhh (~sam@90.240.224.84) has joined #archlinux
+2019-10-18 10:42:37	-->	tgy (~valentin@2001:41d0:a:2158::1) has joined #archlinux
+2019-10-18 10:43:59	<--	andyrtr (~andyrtr@archlinux/developer/andyrtr) has quit (Quit: ZNC 1.7.5 - https://znc.in)
+2019-10-18 10:44:50	-->	andyrtr (~andyrtr@archlinux/developer/andyrtr) has joined #archlinux
+2019-10-18 10:45:34	-->	clueminati (~clueminat@gateway/tor-sasl/clueminati) has joined #archlinux
+2019-10-18 10:45:39	<--	beest (~root@2601:480:4003:37e0::76f2) has quit (Ping timeout: 264 seconds)
+2019-10-18 10:46:03	-->	pulecz (~pulecz@46-13-60-154.customers.tmcz.cz) has joined #archlinux
+2019-10-18 10:46:05	<--	iterati (~vangelis@ppp079167060133.access.hol.gr) has quit (Quit: Leaving.)
+2019-10-18 10:46:11	-->	CiaoSen (~Jura@b2b-94-79-150-186.unitymedia.biz) has joined #archlinux
+2019-10-18 10:46:34	-->	h4rd3n3D (~weechat@gateway/tor-sasl/h4rd3n3d) has joined #archlinux
+2019-10-18 10:47:40	-->	mkoskar_ (~mkoskar@unaffiliated/mkoskar) has joined #archlinux
+2019-10-18 10:48:54	<--	mkoskar (~mkoskar@unaffiliated/mkoskar) has quit (Ping timeout: 268 seconds)
+2019-10-18 10:52:50	-->	absolutejam1 (~absolutej@vrrp.core.bridgehead.infra.victoriaplum.com) has joined #archlinux
+2019-10-18 10:52:57	--	mkoskar_ is now known as mkoskar
+2019-10-18 10:53:12	<--	h4rd3n3D (~weechat@gateway/tor-sasl/h4rd3n3d) has quit (Ping timeout: 260 seconds)
+2019-10-18 10:53:38	-->	absolutejam2 (~absolutej@154.62.128.42) has joined #archlinux
+2019-10-18 10:53:50	<--	zalt_ (~lambda443@unaffiliated/lambda443) has quit (Ping timeout: 268 seconds)
+2019-10-18 10:54:56	--	ghost-of-afos is now known as afos

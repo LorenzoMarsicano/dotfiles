@@ -1,4 +1,20 @@
-execute pathogen#infect()
+call plug#begin('~/dotfiles/nvim/.config/nvim/plugged')
+
+Plug 'scrooloose/nerdtree'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --no-bash' }
+Plug 'junegunn/fzf.vim'
+Plug 'itchyny/lightline.vim'
+Plug 'majutsushi/tagbar'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'ryanoasis/vim-devicons'
+Plug 'easymotion/vim-easymotion'
+Plug 'airblade/vim-gitgutter'
+Plug 'kshenoy/vim-signature'
+Plug 'dracula/vim', { 'as': 'dracula' }
+
+call plug#end()
+
 set title
 colorscheme dracula 
 set nocompatible

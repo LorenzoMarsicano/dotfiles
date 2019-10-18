@@ -248,3 +248,51 @@
 2019-10-17 13:40:43	-->	krator44 (~krator44@unaffiliated/krator44) has joined #SDL
 2019-10-17 14:11:25	-->	fogobogo_ (~fogobogo@unaffiliated/fogobogo) has joined #SDL
 2019-10-17 14:14:20	<--	fogobogo (~fogobogo@unaffiliated/fogobogo) has quit (Ping timeout: 268 seconds)
+2019-10-17 15:55:49	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #SDL
+2019-10-17 15:55:49	--	Topic for #SDL is "Official SDL Channel http://www.libsdl.org/ | You must identify with NickServ to join/talk"
+2019-10-17 15:55:49	--	Topic set by akawaka (~akawaka@2605:e000:1701:40f8:211:32ff:fe51:9639) on Wed, 01 Aug 2018 18:04:39
+2019-10-17 15:55:49	--	Channel #SDL: 86 nicks (1 op, 0 voices, 85 normals)
+2019-10-17 15:55:49	--	PvNotice(ChanServ): Welcome to #sdl - The Offical Simple DirectMedia Layer Channel
+2019-10-17 15:55:49	--	URL for #SDL: http://www.libsdl.org/
+2019-10-17 15:55:58	--	Channel created on Sun, 26 Nov 2006 07:42:43
+2019-10-17 16:00:19	-->	superzazu (~superzazu@2a01:cb1c:3c5:6000:e060:3ecc:ad79:46ce) has joined #SDL
+2019-10-17 16:24:45	-->	J_L_P (d18c251f@gateway/web/cgi-irc/kiwiirc.com/ip.209.140.37.31) has joined #SDL
+2019-10-17 16:25:04	J_L_P	Damn... lost Internet - using limited WiFi now
+2019-10-17 16:25:35	J_L_P	had a bad storm last night - called the Internet company, they come tomorrow
+2019-10-17 16:28:34	blast007	J_L_P: if you're curious if you have webgl acceleration, in Chrome, the internal URL chrome://gpu will tell you about the hardware acceleration, and in Firefox, about:support will also list info about WebGL and some other acceleration info
+2019-10-17 16:39:00	-->	ImQ009 (~ImQ009@unaffiliated/imq009) has joined #SDL
+2019-10-17 16:39:28	J_L_P	blast007 - "WebGL: Hardware accelerated but at reduced performance" / "WebGL2: Unavailable"
+2019-10-17 16:39:55	J_L_P	Raspbian 3 on RPi 3b+ using Chromium
+2019-10-17 16:41:26	<--	oldlaptop (~quassel@45.63.78.126) has quit (Ping timeout: 276 seconds)
+2019-10-17 16:45:44	J_L_P	says also: HTML5 Canvas is software only - no hardware acceleration
+2019-10-17 16:46:03	J_L_P	getting about 10 Frames Per Second on the RPi
+2019-10-17 17:24:58	<--	J_L_P (d18c251f@gateway/web/cgi-irc/kiwiirc.com/ip.209.140.37.31) has quit (Remote host closed the connection)
+2019-10-17 17:26:37	-->	[Relic] (~Relic]@2602:306:33a3:6d30:1cd5:dd1:35d4:f3bf) has joined #SDL
+2019-10-17 17:30:01	-->	J_L_P (d18c251f@gateway/web/cgi-irc/kiwiirc.com/ip.209.140.37.31) has joined #SDL
+2019-10-17 17:36:21	-->	oldlaptop (~quassel@45.63.78.126) has joined #SDL
+2019-10-17 17:41:38	--	fogobogo_ is now known as fogobogo
+2019-10-17 17:49:17	<--	J_L_P (d18c251f@gateway/web/cgi-irc/kiwiirc.com/ip.209.140.37.31) has quit (Ping timeout: 240 seconds)
+2019-10-17 17:50:45	<--	MarcinWieczorek (~marcin@212.182.24.81) has quit (Quit: ZNC 1.7.4 - https://znc.in)
+2019-10-18 08:05:45	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #SDL
+2019-10-18 08:05:45	--	Topic for #SDL is "Official SDL Channel http://www.libsdl.org/ | You must identify with NickServ to join/talk"
+2019-10-18 08:05:45	--	Topic set by akawaka (~akawaka@2605:e000:1701:40f8:211:32ff:fe51:9639) on Wed, 01 Aug 2018 18:04:39
+2019-10-18 08:05:45	--	Channel #SDL: 85 nicks (1 op, 0 voices, 84 normals)
+2019-10-18 08:05:45	--	PvNotice(ChanServ): Welcome to #sdl - The Offical Simple DirectMedia Layer Channel
+2019-10-18 08:05:45	--	URL for #SDL: http://www.libsdl.org/
+2019-10-18 08:05:55	--	Channel created on Sun, 26 Nov 2006 07:42:43
+2019-10-18 08:11:42	<--	bitwinery (~bitwinery@c-73-37-18-139.hsd1.wa.comcast.net) has quit (Quit: Leaving)
+2019-10-18 08:14:47	-->	YuGiOhJCJ (~YuGiOhJCJ@gateway/tor-sasl/yugiohjcj) has joined #SDL
+2019-10-18 08:14:55	-->	Tobbi (~Tobbi@supertux/tobbi) has joined #SDL
+2019-10-18 08:20:17	<--	Tobbi (~Tobbi@supertux/tobbi) has quit (Ping timeout: 268 seconds)
+2019-10-18 08:25:14	-->	krychu (~krychu@213.242.84.161) has joined #SDL
+2019-10-18 08:32:53	-->	Tobbi (~Tobbi@supertux/tobbi) has joined #SDL
+2019-10-18 08:38:28	<--	Tobbi (~Tobbi@supertux/tobbi) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-10-18 08:56:14	<--	mokafolio (~mokafolio@mokafolio.powered.by.lunarbnc.net) has quit (Quit: Bye Bye!)
+2019-10-18 08:57:18	-->	mokafolio (~mokafolio@mokafolio.powered.by.lunarbnc.net) has joined #SDL
+2019-10-18 08:59:34	<--	mokafolio (~mokafolio@mokafolio.powered.by.lunarbnc.net) has quit (Client Quit)
+2019-10-18 09:00:36	<--	krator44 (~krator44@unaffiliated/krator44) has quit (Read error: Connection reset by peer)
+2019-10-18 09:03:18	-->	mokafolio (~mokafolio@mokafolio.powered.by.lunarbnc.net) has joined #SDL
+2019-10-18 09:04:25	-->	krator44 (~krator44@unaffiliated/krator44) has joined #SDL
+2019-10-18 09:06:14	<--	krator44 (~krator44@unaffiliated/krator44) has quit (Max SendQ exceeded)
+2019-10-18 09:08:55	-->	krator44 (~krator44@unaffiliated/krator44) has joined #SDL
+2019-10-18 09:14:10	-->	ahub (~ahub@2a02-8431-0c23-da01-e6b3-18ff-fe7a-7920.rev.sfr.net) has joined #SDL

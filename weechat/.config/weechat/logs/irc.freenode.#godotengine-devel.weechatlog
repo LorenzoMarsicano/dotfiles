@@ -98,3 +98,42 @@
 2019-10-17 13:35:16	-->	est31 (~quassel@gateway/tor-sasl/est31) has joined #godotengine-devel
 2019-10-17 13:56:21	-->	MoosePrime (~moose@207.44.22.117) has joined #godotengine-devel
 2019-10-17 14:30:42	-->	ignaloidas (~ignaloida@158.129.26.113) has joined #godotengine-devel
+2019-10-17 15:31:03	-->	bomb (~bomb@gateway/tor-sasl/bomb) has joined #godotengine-devel
+2019-10-17 15:43:33	<--	ignaloidas (~ignaloida@158.129.26.113) has quit (Remote host closed the connection)
+2019-10-17 15:46:27	jimbzy	Hi, all.
+2019-10-17 15:55:49	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #godotengine-devel
+2019-10-17 15:55:49	--	Topic for #godotengine-devel is "Godot Engine Developers | Tasks up for grabs: https://github.com/godotengine/godot/issues | ML: https://listengine.tuxfamily.org/godotengine.org/devel | Logs: http://godot.eska.me/irc-logs | Can't join from Matrix? https://frama.link/matrix-irc-needreggednick"
+2019-10-17 15:55:49	--	Topic set by Akien (~Akien@godotengine/akien) on Sun, 23 Sep 2018 17:02:58
+2019-10-17 15:55:49	--	Channel #godotengine-devel: 153 nicks (1 op, 0 voices, 152 normals)
+2019-10-17 15:56:01	-->	chaosus89 (d58d8110@gateway/web/cgi-irc/kiwiirc.com/ip.213.141.129.16) has joined #godotengine-devel
+2019-10-17 15:56:02	--	Channel created on Tue, 23 Jun 2015 16:46:41
+2019-10-17 16:00:36	-->	ignaloidas (~ignaloida@158.129.11.9) has joined #godotengine-devel
+2019-10-17 16:54:23	<--	Sipaha (~Sipaha@46.236.156.184) has quit (Quit: Going offline, see ya! 8=з)
+2019-10-17 16:54:23	<--	aws27 (~awsumpwne@wnpgmb014uw-ad04-202-9.dynamic.bellmts.net) has quit (Read error: Connection reset by peer)
+2019-10-17 17:12:30	<--	est31 (~quassel@gateway/tor-sasl/est31) has quit (Remote host closed the connection)
+2019-10-17 17:13:11	-->	est31 (~quassel@gateway/tor-sasl/est31) has joined #godotengine-devel
+2019-10-17 17:23:38	<--	PJB3005 (~PJB3005@2a02:2c40:200:b407::1:c3c3) has quit (Ping timeout: 245 seconds)
+2019-10-17 17:34:51	-->	frazerclews[m] (frazerclew@gateway/shell/matrix.org/x-ipcarmiokbmlsxuo) has joined #godotengine-devel
+2019-10-17 17:35:16	frazerclews[m]	Hi
+2019-10-17 17:35:39	jimbzy	Yo
+2019-10-17 17:36:17	qbieshay	o/
+2019-10-17 17:43:36	<--	ignaloidas (~ignaloida@158.129.11.9) has quit (Read error: Connection reset by peer)
+2019-10-17 17:47:36	<--	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has quit (Quit: WeeChat 1.9.1)
+2019-10-17 17:48:05	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #godotengine-devel
+2019-10-17 17:49:24	-->	Sipaha (~Sipaha@46.236.156.184) has joined #godotengine-devel
+2019-10-18 08:05:45	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #godotengine-devel
+2019-10-18 08:05:45	--	Topic for #godotengine-devel is "Godot Engine Developers | Tasks up for grabs: https://github.com/godotengine/godot/issues | ML: https://listengine.tuxfamily.org/godotengine.org/devel | Logs: http://godot.eska.me/irc-logs | Can't join from Matrix? https://frama.link/matrix-irc-needreggednick"
+2019-10-18 08:05:45	--	Topic set by Akien (~Akien@godotengine/akien) on Sun, 23 Sep 2018 17:02:58
+2019-10-18 08:05:45	--	Channel #godotengine-devel: 149 nicks (1 op, 0 voices, 148 normals)
+2019-10-18 08:05:59	--	Channel created on Tue, 23 Jun 2015 16:46:41
+2019-10-18 08:09:51	<--	ahungry` (~user@99-40-9-245.lightspeed.livnmi.sbcglobal.net) has quit (Remote host closed the connection)
+2019-10-18 08:23:00	-->	chaosus89 (d58d8110@gateway/web/cgi-irc/kiwiirc.com/ip.213.141.129.16) has joined #godotengine-devel
+2019-10-18 08:34:53	-->	vrav (~vr@2601:602:9480:174a::2cd) has joined #godotengine-devel
+2019-10-18 08:37:20	-->	Keetz (~Keetz@152.115.73.146) has joined #godotengine-devel
+2019-10-18 09:39:37	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #godotengine-devel
+2019-10-18 09:56:13	<--	dddddd (~dddddd@unaffiliated/dddddd) has quit (Remote host closed the connection)
+2019-10-18 10:13:26	<--	awsumpwner27 (~awsumpwne@wnpgmb0805w-ad05-202-9.dynamic.bellmts.net) has quit (Read error: Connection reset by peer)
+2019-10-18 10:22:52	-->	thc202 (~thc202@unaffiliated/thc202) has joined #godotengine-devel
+2019-10-18 10:23:14	<--	jeffyboh_ (~JeffyBoh@c-76-18-203-239.hsd1.fl.comcast.net) has quit (Ping timeout: 240 seconds)
+2019-10-18 10:26:26	-->	awsumpwner27 (~awsumpwne@wnpgmb0805w-ad05-202-9.dynamic.bellmts.net) has joined #godotengine-devel
+2019-10-18 10:37:56	-->	jiaox99 (9f99b83c@nat-fefw.eqx-sin.ea.com) has joined #godotengine-devel

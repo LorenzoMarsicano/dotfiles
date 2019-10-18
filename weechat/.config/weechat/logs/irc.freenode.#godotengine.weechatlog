@@ -137,3 +137,127 @@
 2019-10-17 14:25:14	<--	hoopsman (~IceChat9@2405:204:9485:7ce5:1c63:9eb1:7332:d4d) has quit (Quit: Some folks are wise, and some otherwise.)
 2019-10-17 14:26:44	<--	tischbein (4d6ff7a7@77.111.247.167) has quit (Remote host closed the connection)
 2019-10-17 14:30:42	-->	ignaloidas (~ignaloida@158.129.26.113) has joined #godotengine
+2019-10-17 15:09:19	-->	Base_64_argument (~Base_64_a@78-32-58-241.static.enta.net) has joined #godotengine
+2019-10-17 15:09:24	-->	madpinger (~madpinger@216.211.145.137) has joined #godotengine
+2019-10-17 15:09:24	<--	madpinger (~madpinger@216.211.145.137) has quit (Changing host)
+2019-10-17 15:09:24	-->	madpinger (~madpinger@fu/coder/madpinger) has joined #godotengine
+2019-10-17 15:31:03	-->	bomb (~bomb@gateway/tor-sasl/bomb) has joined #godotengine
+2019-10-17 15:41:17	<--	saltpepp3r (~saltpepp3@91.207.173.118) has quit (Ping timeout: 268 seconds)
+2019-10-17 15:43:21	-->	saltpepp3r (~saltpepp3@91.207.173.118) has joined #godotengine
+2019-10-17 15:43:33	<--	ignaloidas (~ignaloida@158.129.26.113) has quit (Remote host closed the connection)
+2019-10-17 15:46:27	jimbzy	Hi, all.
+2019-10-17 15:55:49	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #godotengine
+2019-10-17 15:55:49	--	Topic for #godotengine is "Godot Engine | https://godotengine.org | GitHub: https://github.com/godotengine/godot | Docs: https://docs.godotengine.org | Discord: https://discord.gg/zH7NUgz | Don't ask if you can ask, just ask! :) | Interested in engine development? Join #godotengine-devel | Want to help with the documentation? Join #godotengine-doc"
+2019-10-17 15:55:49	--	Topic set by Calinou (~quassel@fsf/member/calinou) on Mon, 25 Feb 2019 00:45:33
+2019-10-17 15:55:49	--	Channel #godotengine: 259 nicks (1 op, 0 voices, 258 normals)
+2019-10-17 15:56:00	--	Channel created on Tue, 11 Feb 2014 08:43:18
+2019-10-17 16:00:36	-->	ignaloidas (~ignaloida@158.129.11.9) has joined #godotengine
+2019-10-17 16:03:53	-->	psymin (~psymin@69.146.8.222) has joined #godotengine
+2019-10-17 16:06:10	bomb	yo jimbzy
+2019-10-17 16:06:31	jimbzy	Hey bomb, what's up?
+2019-10-17 16:06:53	bomb	jimbzy: seen a vid two days ago reminded me of you
+2019-10-17 16:07:23	jimbzy	Oh boy...  Hehe
+2019-10-17 16:08:09	bomb	wanna see it?
+2019-10-17 16:12:00	jimbzy	Sure
+2019-10-17 16:12:56	bomb	https://www.youtube.com/watch?v=Vh9y_-hQ7uI
+2019-10-17 16:16:34	jimbzy	Hah!
+2019-10-17 16:18:07	bomb	oops, wrong video
+2019-10-17 16:18:09	bomb	jimbzy: https://www.youtube.com/watch?v=x4im3M9IFcI
+2019-10-17 16:21:04	jimbzy	I like those little machine tools.  I wonder if that's one of those 3-in-1 Lathe/Mill/Press combos.
+2019-10-17 16:25:12	jimbzy	bomb: https://www.youtube.com/watch?v=Im2dROxKDh0 that's more of my speed.  I learned almost everything I know about large-scale forging from Mr. Lund.
+2019-10-17 16:26:38	bomb	jimbzy: oh, do you also have that big ass auto hammer?
+2019-10-17 16:28:04	jimbzy	Nothing that size, but I had a 65kg that did what I needed.
+2019-10-17 16:32:07	jimbzy	Blacksmithing was fun back in the day, but it just turned into another pyramid scheme/hustle.  People selling $200 hammers to other blacksmiths and charging them an arm and a leg for 'classes'.  I couldn't do it so I moved on.
+2019-10-17 16:42:54	-->	Beliar (~Beliar@2a02:8108:9640:6c42:f09b:d923:8845:9ace) has joined #godotengine
+2019-10-17 16:43:56	<--	kriskrop1 (~kriskropd@108-81-178-201.lightspeed.gnvlsc.sbcglobal.net) has quit (Quit: kriskrop1)
+2019-10-17 16:47:09	<--	chargen (~chargen@2a02:2e02:9ee0:7100:4143:2241:47e6:3abb) has quit (Quit: BBL)
+2019-10-17 16:51:47	-->	Roughy (~mdaw45ns@188.126.203.127) has joined #godotengine
+2019-10-17 16:54:23	<--	Sipaha (~Sipaha@46.236.156.184) has quit (Quit: Going offline, see ya! 8=з)
+2019-10-17 16:57:33	Nello	are those $200 hammer sellers pushing the craft forward or are they cashing in?
+2019-10-17 16:58:04	<--	smelly (~quassel@162.212.158.84) has quit (Ping timeout: 246 seconds)
+2019-10-17 17:00:25	jimbzy	Nello: Well, considering they're all copying the same couple of designs, I'd say the latter :p
+2019-10-17 17:03:07	jimbzy	All you gotta do is lookup "rounding hammer" and you'll see scores of hammers that all look like one blacksmith's hammer.  The originator, Brian Brazeal, is a pretty good dude who used forging a hammer to teach highly efficient forging and striking techniques.
+2019-10-17 17:03:55	zellfaze	This Solenoid Boxer engine video is neat.
+2019-10-17 17:13:26	Nello	2 days of training has prepared me for this https://docs.godotengine.org/en/latest/getting_started/step_by_step/your_first_game.html
+2019-10-17 17:13:29	Nello	wish me luck
+2019-10-17 17:14:22	zellfaze	Good luck!
+2019-10-17 17:19:48	-->	smelly (~quassel@162.212.158.84) has joined #godotengine
+2019-10-17 17:21:17	Nello	"Why 2D? 3D games are much more complex than 2D ones. You should stick to 2D until you have a good understanding of the game development process." but i wanna make 3d games :(
+2019-10-17 17:21:24	jimbzy	Hahaha
+2019-10-17 17:21:27	jimbzy	https://www.youtube.com/watch?v=vbiNndfNNKI
+2019-10-17 17:21:42	jimbzy	Kinda got sidetracked by bomb's video and it led me that one.
+2019-10-17 17:22:52	jimbzy	The fun doesn't start until around the 2 minute mark
+2019-10-17 17:23:16	Nello	yeah i just got there geeze that guy got out of there quick
+2019-10-17 17:24:08	jimbzy	Old man was probably sitting in the cab waiting for his helpers NOT to wuss out hehehe
+2019-10-17 17:27:24	-->	clemo (~Thunderbi@2a02:8388:6500:7900:90dc:a03c:67b9:8c63) has joined #godotengine
+2019-10-17 17:27:25	jimbzy	My older brother is a heavy mechanic and he built a machine just for stopping runaways.  It uses a CO2 tank with a solenoid valve that's operated by a tachometer.  If an engine goes above the set RPM's it automatically releases the CO2 directly into the intake and chokes the engine out.
+2019-10-17 17:28:39	Nello	you'd get more views on YT if you let it blow
+2019-10-17 17:30:01	jimbzy	I wouldn't want to see a 15L diesel engine blow up.
+2019-10-17 17:34:08	-->	kimamb (~kimamb__@62.97.173.88) has joined #godotengine
+2019-10-17 17:35:03	jimbzy	That's a really neat little project, btw, Nello.
+2019-10-17 17:35:23	jimbzy	I actually built it and installed it on my son's tablet and he loves it.
+2019-10-17 17:37:56	Nello	:D i'm gonna do it the tryhard way and replace the assets with custom ones
+2019-10-17 17:38:15	Nello	i figure i'll need to anyway when i make my own game may as well start learning now
+2019-10-17 17:43:36	<--	ignaloidas (~ignaloida@158.129.11.9) has quit (Read error: Connection reset by peer)
+2019-10-17 17:47:36	<--	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has quit (Quit: WeeChat 1.9.1)
+2019-10-17 17:48:05	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #godotengine
+2019-10-17 17:49:24	-->	Sipaha (~Sipaha@46.236.156.184) has joined #godotengine
+2019-10-17 17:51:00	-->	Lord_of_Life_ (~Lord@unaffiliated/lord-of-life/x-0885362) has joined #godotengine
+2019-10-18 08:05:45	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #godotengine
+2019-10-18 08:05:45	--	Topic for #godotengine is "Godot Engine | https://godotengine.org | GitHub: https://github.com/godotengine/godot | Docs: https://docs.godotengine.org | Discord: https://discord.gg/zH7NUgz | Don't ask if you can ask, just ask! :) | Interested in engine development? Join #godotengine-devel | Want to help with the documentation? Join #godotengine-doc"
+2019-10-18 08:05:45	--	Topic set by Calinou (~quassel@fsf/member/calinou) on Mon, 25 Feb 2019 00:45:33
+2019-10-18 08:05:45	--	Channel #godotengine: 253 nicks (1 op, 0 voices, 252 normals)
+2019-10-18 08:05:57	--	Channel created on Tue, 11 Feb 2014 08:43:18
+2019-10-18 08:06:24	DarkUranium	I'm not even sure if Godot is the right choice for my project. Due to the ... rather unique requirements.
+2019-10-18 08:09:51	<--	ahungry` (~user@99-40-9-245.lightspeed.livnmi.sbcglobal.net) has quit (Remote host closed the connection)
+2019-10-18 08:10:40	<--	lunarkitty (~lunar@2601:603:c00:7660:1a66:c7ff:fe28:51f0) has quit (Quit: WeeChat 2.3)
+2019-10-18 08:11:42	<--	bitwinery (~bitwinery@c-73-37-18-139.hsd1.wa.comcast.net) has quit (Quit: Leaving)
+2019-10-18 08:15:23	-->	Tobbi (~Tobbi@supertux/tobbi) has joined #godotengine
+2019-10-18 08:16:17	-->	riiski (uid210120@gateway/web/irccloud.com/x-femvsgcrxewhocqp) has joined #godotengine
+2019-10-18 08:20:17	<--	Tobbi (~Tobbi@supertux/tobbi) has quit (Ping timeout: 268 seconds)
+2019-10-18 08:33:13	-->	Tobbi (~Tobbi@supertux/tobbi) has joined #godotengine
+2019-10-18 08:34:53	-->	vrav (~vr@2601:602:9480:174a::2cd) has joined #godotengine
+2019-10-18 08:35:14	vrav	hey i'm just starting with GDNative C++, is there any reason why for example vec2.x wouldn't work?
+2019-10-18 08:35:30	vrav	i can do Godot::print(vec2) and it prints but Godot::print(vec2.x) is blank
+2019-10-18 08:37:20	-->	Keetz (~Keetz@152.115.73.146) has joined #godotengine
+2019-10-18 08:38:28	<--	Tobbi (~Tobbi@supertux/tobbi) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-10-18 08:41:15	vrav	oh huh print doesn't take floats at all
+2019-10-18 08:42:05	<--	andersmmg (~andersmmg@207.50.144.18) has quit (Remote host closed the connection)
+2019-10-18 08:48:20	-->	Romlok (~mel@26.51-175-167.customer.lyse.net) has joined #godotengine
+2019-10-18 08:52:09	vrav	Godot::print(String(std::to_string(pos.x).c_str()));
+2019-10-18 08:52:18	vrav	much more complicated than my initial assumption
+2019-10-18 08:56:46	-->	Hairic16 (6dad9dbd@d157-189.icpnet.pl) has joined #godotengine
+2019-10-18 08:59:33	-->	chargen (~chargen@2a02:2e02:9ee0:7100:4143:2241:47e6:3abb) has joined #godotengine
+2019-10-18 09:28:26	<--	hamishtpb (~weechat@44.92.187.81.in-addr.arpa) has quit (Ping timeout: 240 seconds)
+2019-10-18 09:32:08	-->	hamishtpb (~weechat@44.92.187.81.in-addr.arpa) has joined #godotengine
+2019-10-18 09:39:37	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #godotengine
+2019-10-18 09:56:13	<--	dddddd (~dddddd@unaffiliated/dddddd) has quit (Remote host closed the connection)
+2019-10-18 10:04:08	<--	saltpepp3r (~saltpepp3@91.207.173.118) has quit (Ping timeout: 265 seconds)
+2019-10-18 10:06:02	-->	saltpepp3r (~saltpepp3@91.207.173.118) has joined #godotengine
+2019-10-18 10:07:41	houkime	vrav, you're probably forgetting to transform it to godot strings or sth
+2019-10-18 10:08:17	<--	hamishtpb (~weechat@44.92.187.81.in-addr.arpa) has quit (Ping timeout: 246 seconds)
+2019-10-18 10:08:42	Calinou	vrav: there's itos() and rtos() to convert integers and reals (floats) to strings in Godot, not sure if you can use that in GDNative
+2019-10-18 10:09:12	Calinou	in Godot's codebase, you could do print_line(rtos(vec2.x))
+2019-10-18 10:10:56	houkime	vrav at least in C API tutorial there is a section about making an actual godot "variant" from string https://github.com/godotengine/godot-docs/blob/2f9ffbb5513925ebf30a222d9e9c0aa790f57f55/tutorials/plugins/gdnative/gdnative-c-example.rst
+2019-10-18 10:12:12	houkime	Calinou, as i understand (maybe incorrect) GDNative is not really the same as using  C++ from the codebase.
+2019-10-18 10:12:18	Calinou	that's true
+2019-10-18 10:15:44	<--	saltpepp3r (~saltpepp3@91.207.173.118) has quit (Ping timeout: 276 seconds)
+2019-10-18 10:15:48	-->	hamishtpb (~weechat@44.92.187.81.in-addr.arpa) has joined #godotengine
+2019-10-18 10:17:32	-->	saltpepp3r (~saltpepp3@91.207.173.118) has joined #godotengine
+2019-10-18 10:18:46	houkime	As i understood the thing is to interface your own functions and possibly 3rd party libraries with a special limited API which kind of wraps your functions in a gdscript-like form. So you can't really use C++/C classes directly in output but need to translate everything into things gdscript can see.
+2019-10-18 10:21:59	-->	nibzau (~nibzau@194.223.5.113) has joined #godotengine
+2019-10-18 10:22:52	-->	thc202 (~thc202@unaffiliated/thc202) has joined #godotengine
+2019-10-18 10:23:14	<--	jeffyboh_ (~JeffyBoh@c-76-18-203-239.hsd1.fl.comcast.net) has quit (Ping timeout: 240 seconds)
+2019-10-18 10:24:03	houkime	and the same goes for inputs, including the fact that you're given a limited set of engine function pointers that you're allowed to call, i presume your abilities are limited to be the same as those of gdscript.
+2019-10-18 10:26:51	<--	nibzau (~nibzau@194.223.5.113) has quit (Ping timeout: 265 seconds)
+2019-10-18 10:31:06	houkime	So, in this example as I (probably incorectly) may suggest, what happens is that vec2 is a Godot class that prints normally because it was taken care of by a special c ++ wrapper.
+2019-10-18 10:31:28	houkime	but std::string on the other hand is a raw C++ class
+2019-10-18 10:32:48	houkime	so trying to Godot::print it might not work.
+2019-10-18 10:33:39	houkime	vec2.x might also happen to be a raw c++ float
+2019-10-18 10:34:39	houkime	If that's the case, the problem is in the implementation of Godot::print that lacks needed polymorphism.
+2019-10-18 10:35:41	Calinou	GDScript doesn't have polymorphism, that might hinder it
+2019-10-18 10:35:49	Calinou	unless there's a way to fix it only in the C++ bindings
+2019-10-18 10:37:23	-->	jiaox99 (9f99b83c@nat-fefw.eqx-sin.ea.com) has joined #godotengine
+2019-10-18 10:43:49	houkime	print that is in raw C API cannot print standard C things and needs variants to be explicitly constructed by the programmer. So if there are implicit conversions going on and failing they are probably in c++ bindings.
+2019-10-18 10:47:14	houkime	or i am terribly misunderstanding something... which is quite possible.
+2019-10-18 10:49:15	<--	Hairic16 (6dad9dbd@d157-189.icpnet.pl) has quit (Remote host closed the connection)

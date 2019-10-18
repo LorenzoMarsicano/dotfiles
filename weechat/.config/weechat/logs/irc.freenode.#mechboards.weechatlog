@@ -121,3 +121,103 @@
 2019-10-17 14:49:07	-->	figuinhas (~pirilauam@194-79-86-23.static.net.novis.pt) has joined #Mechboards
 2019-10-17 14:52:37	-->	ShinyRice (~ShinyRice@2001:720:1014:f410:fc15:6a01:6aee:7cbf) has joined #Mechboards
 2019-10-17 14:54:51	<--	ShinyRice (~ShinyRice@2001:720:1014:f410:fc15:6a01:6aee:7cbf) has quit (Client Quit)
+2019-10-17 15:23:29	-->	ShinyRice (~ShinyRice@2001:720:1014:f410:fc15:6a01:6aee:7cbf) has joined #Mechboards
+2019-10-17 15:55:48	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #Mechboards
+2019-10-17 15:55:48	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2019-10-17 15:55:48	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 10:38:51
+2019-10-17 15:55:48	--	Channel #Mechboards: 130 nicks (0 ops, 0 voices, 130 normals)
+2019-10-17 15:55:49	--	Channel created on Thu, 21 Feb 2013 05:50:48
+2019-10-17 16:10:29	-->	cottoneyejim (~cottoneye@46.161.96.58) has joined #Mechboards
+2019-10-17 16:10:33	<--	cottoneyejim (~cottoneye@46.161.96.58) has quit (Client Quit)
+2019-10-17 16:11:30	-->	cottoneyejim (~cottoneye@46.161.96.58) has joined #Mechboards
+2019-10-17 16:16:53	-->	cars (~cars@unaffiliated/cars) has joined #Mechboards
+2019-10-17 16:25:06	simonpatapon	blitzkraft: you figured you filesystem trouble?
+2019-10-17 16:26:58	<--	ShinyRice (~ShinyRice@2001:720:1014:f410:fc15:6a01:6aee:7cbf) has quit (Quit: ShinyRice)
+2019-10-17 16:33:08	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #Mechboards
+2019-10-17 16:36:45	blitzkraft	I waited long enough, it's not my problem anymore.
+2019-10-17 16:37:06	blitzkraft	I haven't solved it though.
+2019-10-17 16:47:15	<--	cars (~cars@unaffiliated/cars) has quit (Quit: cars)
+2019-10-17 16:47:33	-->	cars (~cars@unaffiliated/cars) has joined #Mechboards
+2019-10-17 16:50:51	-->	ShinyRice (~ShinyRice@2001:720:1014:f410:fc15:6a01:6aee:7cbf) has joined #Mechboards
+2019-10-17 16:52:52	<--	mord0d (~mord0d@gateway/tor-sasl/mord0d) has quit (Ping timeout: 260 seconds)
+2019-10-17 16:53:16	eising	damn it. I have cleaned up my desk, got rid of most cables, and now I really realize that I need one of those fancy coiled cables
+2019-10-17 16:54:13	<--	xcm (~xcm@ipa210.225.tellas.gr) has quit (Remote host closed the connection)
+2019-10-17 16:55:08	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Quit: Leaving)
+2019-10-17 16:56:01	-->	xcm (~xcm@ipa210.225.tellas.gr) has joined #Mechboards
+2019-10-17 16:56:44	simonpatapon	me too eising
+2019-10-17 16:57:10	simonpatapon	tell me about where you will source it
+2019-10-17 16:57:35	eising	no you tell me ;P
+2019-10-17 16:58:53	-->	mord0d (~mord0d@gateway/tor-sasl/mord0d) has joined #Mechboards
+2019-10-17 17:00:51	-->	deviantfero (~deviantfe@ip168-243-230-189.intercom.com.sv) has joined #Mechboards
+2019-10-17 17:01:27	blitzkraft	/r/mk wiki; lists all the sellers and categorizes them by the continent/country.
+2019-10-17 17:01:42	blitzkraft	It also has the instructions to make your own coiled cables.
+2019-10-17 17:16:25	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #Mechboards
+2019-10-17 17:21:12	simonpatapon	figuring how long i will need is the question
+2019-10-17 17:21:31	simonpatapon	i plug keyboard and future numpad to monitors
+2019-10-17 17:21:38	simonpatapon	https://i.imgur.com/C3qY09P.jpg
+2019-10-17 17:22:02	simonpatapon	i'd like coiled with aviator connector
+2019-10-17 17:22:26	thykka	feeling adventurous, I see
+2019-10-17 17:22:32	thykka	:-)
+2019-10-17 17:23:01	simonpatapon	why you say adventurous
+2019-10-17 17:23:39	blitzkraft	Ok - i need your weechat config. and setup.
+2019-10-17 17:23:53	blitzkraft	How did you get SMS in there?
+2019-10-17 17:24:01	simonpatapon	yes
+2019-10-17 17:24:08	simonpatapon	with bitlbeeà
+2019-10-17 17:24:19	na_th_an	is that gnome?
+2019-10-17 17:24:21	simonpatapon	and pulsesms-libpurple
+2019-10-17 17:24:30	simonpatapon	yes its gnome
+2019-10-17 17:24:39	blitzkraft	Neat. I need to find out how.
+2019-10-17 17:24:47	simonpatapon	are you used to bitlbee
+2019-10-17 17:24:51	blitzkraft	Also, the tree view- I need that too.
+2019-10-17 17:25:10	blitzkraft	I am using bitlbee. I use it with steam, gchat and at one point facebook too.
+2019-10-17 17:25:27	simonpatapon	ok so you have it compiled with libpurple
+2019-10-17 17:25:29	thykka	simonpatapon, just referring to the popular meme on r/mk https://i.redd.it/xsaj7wwyb5q31.jpg
+2019-10-17 17:25:42	simonpatapon	https://github.com/EionRobb/purple-pulsesms
+2019-10-17 17:25:48	simonpatapon	here's the module
+2019-10-17 17:26:16	simonpatapon	thykka: exactluy lol
+2019-10-17 17:26:31	simonpatapon	bitlbee is the beats
+2019-10-17 17:26:38	blitzkraft	my bitlbee is not compiled with libpurple.
+2019-10-17 17:26:39	simonpatapon	beast*
+2019-10-17 17:27:22	keveloper	simonpatapon: does pulsesms have to be your default sms app for this to work?
+2019-10-17 17:27:30	simonpatapon	compile it with --purple=1
+2019-10-17 17:27:35	simonpatapon	yes it needs to
+2019-10-17 17:27:38	keveloper	oof
+2019-10-17 17:27:57	simonpatapon	then plenty of other IM gateway
+2019-10-17 17:28:11	simonpatapon	slack.com, sms, matrix, discord etc..
+2019-10-17 17:29:06	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Quit: Leaving)
+2019-10-17 17:29:09	simonpatapon	blitzkraft: for buflist tree, just get the one you like from https://github.com/weechat/weechat/wiki/buflist
+2019-10-17 17:30:09	blitzkraft	slack and matrix I'm familiar with, but your config seems to have covered a lot more that I want to.
+2019-10-17 17:31:22	simonpatapon	i'm amazed by weechat/bitlbee
+2019-10-17 17:31:30	simonpatapon	running on a 128mb ram VPS
+2019-10-17 17:31:38	simonpatapon	68 buffers (0 merged): 49 channels, 13 servers, 2 queries, 1 relay, 1 perl, 1 fset, 1 core; 1 windows
+2019-10-17 17:36:45	blitzkraft	Neat. VPS for staying connected everywhere?
+2019-10-17 17:37:14	simonpatapon	yes
+2019-10-17 17:37:45	simonpatapon	/set  buflist.format.indent
+2019-10-17 17:37:46	simonpatapon	"${if:${merged}?${if:${buffer.prev_buffer.number}!=${buffer.number}?│┌:${if:${buffer.next_buffer.number}==${buffer.number}?│├:${if:${buffer.next_buffer.name}=~^server||${buffer.next_buffer.number}<0?└┴:├┴}}}:${if:${buffer.active}>0?${if:${buffer.next_buffer.name}=~^server?└:${if:${buffer.next_buffer.number}>0?├:└}}:${if:${buffer.next_buffer.name}=~^server? :│}}}─"
+2019-10-17 17:37:51	simonpatapon	would be the same as me
+2019-10-17 17:38:43	blitzkraft	Neat. Could you post to a paste bin, so I can steal it from you?
+2019-10-17 17:41:01	simonpatapon	https://pastebin.com/qu4wNn3K
+2019-10-17 17:41:33	simonpatapon	maybey just save what you got before
+2019-10-17 17:42:58	blitzkraft	Got it. I'll save before paste. Thank you.
+2019-10-17 17:43:43	simonpatapon	i used to tweak then just quit to discard changes
+2019-10-17 17:43:50	<--	audron (~audron@static.82.85.201.138.clients.your-server.de) has quit (Ping timeout: 276 seconds)
+2019-10-17 17:43:50	simonpatapon	but on new version quits save
+2019-10-17 17:44:18	-->	audron (~audron@static.82.85.201.138.clients.your-server.de) has joined #Mechboards
+2019-10-18 08:05:44	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #Mechboards
+2019-10-18 08:05:44	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2019-10-18 08:05:44	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 10:38:51
+2019-10-18 08:05:44	--	Channel #Mechboards: 131 nicks (0 ops, 0 voices, 131 normals)
+2019-10-18 08:05:45	--	Channel created on Thu, 21 Feb 2013 05:50:48
+2019-10-18 08:56:26	<--	deviantfero (~deviantfe@ip168-243-230-189.intercom.com.sv) has quit (Ping timeout: 276 seconds)
+2019-10-18 08:56:28	<--	joesventek (~smoon@joesventek.powered.by.lunarbnc.net) has quit (Quit: Quit)
+2019-10-18 08:57:28	-->	ShinyRice (~ShinyRice@94.143.72.131) has joined #Mechboards
+2019-10-18 08:57:48	-->	joesventek (~smoon@joesventek.powered.by.lunarbnc.net) has joined #Mechboards
+2019-10-18 08:57:55	-->	deviantfero (~deviantfe@ip168-243-230-189.intercom.com.sv) has joined #Mechboards
+2019-10-18 09:32:19	Syrinxos	'morning ^^
+2019-10-18 09:38:12	<--	ShinyRice (~ShinyRice@94.143.72.131) has quit (Read error: Connection reset by peer)
+2019-10-18 09:41:12	-->	ShinyRice (~ShinyRice@2001:720:1014:f410:fc15:6a01:6aee:7cbf) has joined #Mechboards
+2019-10-18 10:07:38	<--	OERIAS (~OERIAS@47.137.234.210) has quit (Ping timeout: 240 seconds)
+2019-10-18 10:22:09	<--	joesventek (~smoon@joesventek.powered.by.lunarbnc.net) has quit (Read error: Connection reset by peer)
+2019-10-18 10:22:49	-->	joesventek (~smoon@joesventek.powered.by.lunarbnc.net) has joined #Mechboards
+2019-10-18 10:23:00	<--	deviantfero (~deviantfe@ip168-243-230-189.intercom.com.sv) has quit (Ping timeout: 268 seconds)
+2019-10-18 10:46:40	-->	MrFahrenheit (~zumbi@unaffiliated/rageofthou) has joined #Mechboards

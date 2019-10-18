@@ -718,3 +718,203 @@
 2019-10-17 14:59:12	ZirconiumX	I realise this
 2019-10-17 15:02:38	ZirconiumX	Having written a device support crate I feel relatively experienced on MMIO
 2019-10-17 15:04:50	Lumpio-	Well at any rate, I'm pretty sure the compile is allowed to optimize out anything that doesn't have side effects in the execution model it assumes
+2019-10-17 15:05:26	-->	samhh (~sam@90.240.233.29) has joined ##rust
+2019-10-17 15:05:41	Lumpio-	And the model does not assume that a memory location might be an IO register
+2019-10-17 15:05:44	ZirconiumX	Which is why it doesn't hurt to know what that execution model is
+2019-10-17 15:06:14	<--	jenny-m (~jdm-@69-196-166-55.dsl.teksavvy.com) has quit (Remote host closed the connection)
+2019-10-17 15:06:23	Lumpio-	I wonder if it's documented anywhere
+2019-10-17 15:06:26	-->	lauromoura__ (~lauromour@2804:7f5:f380:8d0e:cdec:5eac:d0db:6467) has joined ##rust
+2019-10-17 15:06:33	Lumpio-	Seeing how sparse the documentation on internals is I bet you'll have to dig into LLVM's documentation
+2019-10-17 15:07:15	<--	narispo (~narispo@37.167.10.175) has quit (Ping timeout: 240 seconds)
+2019-10-17 15:07:53	Lumpio-	But I'm fairly sure, just like any other compiler, it has the "memory access doesn't have side effects, and unless told otherwise, memory doesn't change unless my thread changes it" assumption because otherwise it couldn't do many nice optimizations
+2019-10-17 15:08:00	Lumpio-	Wonder if there's aformal name for that
+2019-10-17 15:08:55	<--	lauromoura (~lauromour@2804:7f5:f380:de2c:a599:e1d3:3e9d:92b4) has quit (Ping timeout: 250 seconds)
+2019-10-17 15:09:36	<--	royal_screwup21 (89de72f4@gateway/web/cgi-irc/kiwiirc.com/ip.137.222.114.244) has quit (Remote host closed the connection)
+2019-10-17 15:13:13	<--	jokoon (~jokoon@unaffiliated/jokoon) has quit (Read error: Connection reset by peer)
+2019-10-17 15:24:54	nerdypepper	i am trying to iterate over a byte array, generated with `as_bytes`, and find the sum over it with `.iter().sum()` but this results in a panic
+2019-10-17 15:24:59	<--	pupskuchen (~pupskuche@unaffiliated/pupskuchen) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2019-10-17 15:25:25	nerdypepper	is this because the size of a u8 is not enough for the sum?
+2019-10-17 15:25:35	-->	samrg472_ (~samrg472@gateway/tor-sasl/samrg472) has joined ##rust
+2019-10-17 15:25:56	Kinnison	Probably yes
+2019-10-17 15:26:04	<--	samrg472 (~samrg472@gateway/tor-sasl/samrg472) has quit (Ping timeout: 260 seconds)
+2019-10-17 15:26:06	nerdypepper	why does the sum of a [u8] have to be of type u8, is there any way i can specify the sum to be a, say u32?
+2019-10-17 15:26:07	Kinnison	.iter().map(|b| b as usize).sum()
+2019-10-17 15:26:09	Kinnison	might do better
+2019-10-17 15:26:11	nerdypepper	ahhh
+2019-10-17 15:26:16	Kinnison	(guessing)
+2019-10-17 15:26:16	nerdypepper	gotcha
+2019-10-17 15:26:33	nerdypepper	i was thinking along the lines of `.sum::<i32>()` or something
+2019-10-17 15:27:41	nerdypepper	thanks again Kinnison :D
+2019-10-17 15:27:50	Kinnison	No problem :D
+2019-10-17 15:31:47	-->	toppler (~user@mtop.default.momentoftop.uk0.bigv.io) has joined ##rust
+2019-10-17 15:32:48	<--	_Vi (~vi@2001:470:7bd6:1000::2) has quit (Ping timeout: 245 seconds)
+2019-10-17 15:33:11	-->	unreal (~unreal@unaffiliated/unreal) has joined ##rust
+2019-10-17 15:38:31	oherrala	even better to use .iter().map(usize::from).sum() if possible
+2019-10-17 15:39:04	oherrala	since "b as usize" can lead to funny bugs if someone someday changes what type b is
+2019-10-17 15:39:46	Kinnison	true
+2019-10-17 15:40:37	-->	narispo (~narispo@37.167.97.1) has joined ##rust
+2019-10-17 15:41:28	<--	efm (~efm@vpn.tummy.com) has quit (Read error: Connection reset by peer)
+2019-10-17 15:45:31	<--	__gotcha (~Thunderbi@plone/gotcha) has quit (Ping timeout: 265 seconds)
+2019-10-17 15:46:11	<--	toppler (~user@mtop.default.momentoftop.uk0.bigv.io) has quit (Ping timeout: 276 seconds)
+2019-10-17 15:55:49	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined ##rust
+2019-10-17 15:55:49	--	Topic for ##rust is "Unofficial channel for the Rust programming language |  Playground https://play.rust-lang.org/ | Discord http://discord.gg/rust-lang | Forum https://users.rust-lang.org | Code of conduct: rust-lang.org/conduct.html | TL;DR: be nice and we'll get along just fine"
+2019-10-17 15:55:49	--	Topic set by Manishearth (~Manishear@wikipedia/Manishearth) on Mon, 13 May 2019 05:47:40
+2019-10-17 15:55:49	--	Channel ##rust: 578 nicks (2 ops, 0 voices, 576 normals)
+2019-10-17 15:56:04	--	Channel created on Tue, 30 Jul 2013 17:50:50
+2019-10-17 15:58:53	<--	EvilKhaosKat (~evilkhaos@134.17.27.127) has quit (Remote host closed the connection)
+2019-10-17 16:05:37	<--	toppler (~user@mtop.default.momentoftop.uk0.bigv.io) has quit (Ping timeout: 240 seconds)
+2019-10-17 16:05:57	<--	danieldg (~me@about/networking/240.0.0.0/danieldg) has quit (Ping timeout: 240 seconds)
+2019-10-17 16:09:55	-->	danieldg (~me@about/networking/240.0.0.0/danieldg) has joined ##rust
+2019-10-17 16:11:50	<--	nokdoot (~nokdoot@211.205.207.39) has quit (Remote host closed the connection)
+2019-10-17 16:12:26	<--	narispo (~narispo@37.167.97.1) has quit (Read error: Connection reset by peer)
+2019-10-17 16:12:48	-->	narispo (~narispo@89.227.232.106) has joined ##rust
+2019-10-17 16:14:04	-->	toppler (~user@mtop.default.momentoftop.uk0.bigv.io) has joined ##rust
+2019-10-17 16:17:35	-->	efm (~efm@c-71-56-234-252.hsd1.co.comcast.net) has joined ##rust
+2019-10-17 16:20:01	<--	OmniMancer (~Paul@101.100.137.239) has quit (Quit: Leaving.)
+2019-10-17 16:21:02	-->	osa1_ (~osa1@haskell/developer/osa1) has joined ##rust
+2019-10-17 16:23:14	<--	efm (~efm@c-71-56-234-252.hsd1.co.comcast.net) has quit (Ping timeout: 276 seconds)
+2019-10-17 16:25:16	-->	royal_screwup21 (89de72f4@gateway/web/cgi-irc/kiwiirc.com/ip.137.222.114.244) has joined ##rust
+2019-10-17 16:25:33	-->	_Vi (~vi@2001:470:7bd6:1000::2) has joined ##rust
+2019-10-17 16:29:05	<--	toppler (~user@mtop.default.momentoftop.uk0.bigv.io) has quit (Ping timeout: 276 seconds)
+2019-10-17 16:30:18	<--	ytain (~ghfg@2607:f2c0:921d:7a00:bcb3:a156:de4f:3301) has quit (Ping timeout: 245 seconds)
+2019-10-17 16:30:57	<--	fsasm (~fsasm@62-178-93-7.cable.dynamic.surfer.at) has quit (Ping timeout: 240 seconds)
+2019-10-17 16:31:22	<--	royal_screwup21 (89de72f4@gateway/web/cgi-irc/kiwiirc.com/ip.137.222.114.244) has quit (Remote host closed the connection)
+2019-10-17 16:33:03	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined ##rust
+2019-10-17 16:33:21	-->	ytain (~ghfg@2607:f2c0:9220:2f00:ed18:befc:1f8a:d5cb) has joined ##rust
+2019-10-17 16:34:48	tjis	is it possible to use a dedicated documentation file, rather than a documentation comment? such as for module-wide documentation
+2019-10-17 16:35:25	Faux	Not afaik. You can put nearly nothing except comments in your mod.rs, though, which is common.
+2019-10-17 16:35:50	-->	toppler (~user@mtop.default.momentoftop.uk0.bigv.io) has joined ##rust
+2019-10-17 16:36:20	Kinnison	https://github.com/rust-lang/rust/issues/44732
+2019-10-17 16:36:25	Kinnison	tracking issue for external docs ^^^
+2019-10-17 16:39:26	tjis	I'm just mildly annoyed by having to prepend each line with ///
+2019-10-17 16:41:09	-->	brandly (~brandly@c-24-61-240-6.hsd1.ma.comcast.net) has joined ##rust
+2019-10-17 16:47:23	<--	osa1_ (~osa1@haskell/developer/osa1) has quit (Ping timeout: 245 seconds)
+2019-10-17 16:47:53	<--	toppler (~user@mtop.default.momentoftop.uk0.bigv.io) has quit (Ping timeout: 268 seconds)
+2019-10-17 16:48:39	<--	pinkieval (~progval@pdpc/supporter/student/progval) has quit (Quit: We're here, we're queer, connection reset by peer.)
+2019-10-17 16:49:02	-->	pinkieval (~progval@pdpc/supporter/student/progval) has joined ##rust
+2019-10-17 16:49:28	-->	flaviodesousa (~flaviodes@213.187.85.4) has joined ##rust
+2019-10-17 16:52:52	faern	/! if it's a module comment.
+2019-10-17 16:52:59	faern	//! *
+2019-10-17 16:53:29	faern	tjis: Or would you also want to lift out the comments for functions/methods/types out of the code? That would be very hard to follow IMO.
+2019-10-17 16:53:58	faern	If you have a decent IDE it will just auto-fill the comment start when you hit enter if you are already on a comment line.
+2019-10-17 16:55:08	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Quit: Leaving)
+2019-10-17 16:55:56	-->	toppler (~user@mtop.default.momentoftop.uk0.bigv.io) has joined ##rust
+2019-10-17 16:59:42	-->	gkmngrgn (~gkmngrgn@2a02:8109:a180:1590:b85c:ed2f:d3af:899a) has joined ##rust
+2019-10-17 17:01:35	<--	gkmngrgn (~gkmngrgn@2a02:8109:a180:1590:b85c:ed2f:d3af:899a) has quit (Client Quit)
+2019-10-17 17:07:37	<--	toppler (~user@mtop.default.momentoftop.uk0.bigv.io) has quit (Ping timeout: 240 seconds)
+2019-10-17 17:08:38	-->	AbedB_ (~AbedBhuty@bzq-79-182-93-240.red.bezeqint.net) has joined ##rust
+2019-10-17 17:08:43	-->	jenny-m (~jdm-@CPE688f2e0836e3-CM688f2e0836e0.cpe.net.cable.rogers.com) has joined ##rust
+2019-10-17 17:10:19	-->	SiegeLord (~sl@c-73-158-78-36.hsd1.ca.comcast.net) has joined ##rust
+2019-10-17 17:11:59	<--	AbedB__ (~AbedBhuty@bzq-79-182-102-149.red.bezeqint.net) has quit (Ping timeout: 276 seconds)
+2019-10-17 17:12:30	<--	est31 (~quassel@gateway/tor-sasl/est31) has quit (Remote host closed the connection)
+2019-10-17 17:13:11	-->	est31 (~quassel@gateway/tor-sasl/est31) has joined ##rust
+2019-10-17 17:13:44	-->	daum (~daum@50-201-134-18-static.hfc.comcastbusiness.net) has joined ##rust
+2019-10-17 17:14:30	--	c-c is now known as Cuckooo
+2019-10-17 17:15:09	--	Cuckooo is now known as Cuckoo
+2019-10-17 17:15:16	<--	Cuckoo (csmr@hilla.kapsi.fi) has quit (Disconnected by services)
+2019-10-17 17:15:42	tjis	faern: no you're right, I meant ##!
+2019-10-17 17:15:44	tjis	err
+2019-10-17 17:15:46	tjis	/!
+2019-10-17 17:15:48	tjis	///!
+2019-10-17 17:15:50	tjis	goddammit
+2019-10-17 17:15:51	Faux	////!!!!
+2019-10-17 17:15:59	-->	toppler (~user@mtop.default.momentoftop.uk0.bigv.io) has joined ##rust
+2019-10-17 17:16:20	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined ##rust
+2019-10-17 17:16:21	tjis	anyway, yes, module level comments which can easily be multiple paragraphs
+2019-10-17 17:16:39	-->	gwillen (~gwillen@unaffiliated/gwillen) has joined ##rust
+2019-10-17 17:16:47	daum	hi guys - i have a questoin on using hype in getting query string parameters, i tried let params: HashMap<_, _> = Url::parse(&req.uri().to_string()).unwrap().query_pairs().into_owned().collect(), but req.uri() isn't guaranteed to be a full url (often has /) any suggestions on how to get the params?  Not sure if this is appropriate channel to ask
+2019-10-17 17:16:48	Faux	My IDE inserts the appropriate comment when you press return.
+2019-10-17 17:20:20	-->	climbingturtle (~climbingt@c213-89-14-151.bredband.comhem.se) has joined ##rust
+2019-10-17 17:24:08	tjis	daum: req.uri().query() gets you the query string itself, but as a string. there's other crates to do that though
+2019-10-17 17:24:58	daum	tjis, any specific one you'd recommend?  just trying to get a couple of parameters for a specific use case where speed/performance is very important
+2019-10-17 17:25:54	<--	ellcs (~mantel@212.12.60.67) has quit (Ping timeout: 246 seconds)
+2019-10-17 17:25:55	<--	SiegeLord (~sl@c-73-158-78-36.hsd1.ca.comcast.net) has quit (Quit: It's a joke, it's all a joke.)
+2019-10-17 17:26:08	<--	rrooij (~rrooij@unaffiliated/rroij) has quit (Quit: WeeChat 2.6)
+2019-10-17 17:27:30	<--	toppler (~user@mtop.default.momentoftop.uk0.bigv.io) has quit (Ping timeout: 265 seconds)
+2019-10-17 17:27:30	<--	xsoultartar (~xsoultart@2001:268:c0a4:817:784f:8cc0:dd:6f62) has quit (Quit: Leaving)
+2019-10-17 17:27:35	<--	Kaivo (~Kaivo@ec2-35-182-108-102.ca-central-1.compute.amazonaws.com) has quit (Ping timeout: 276 seconds)
+2019-10-17 17:27:59	<--	osa1 (~osa1@haskell/developer/osa1) has quit (Ping timeout: 268 seconds)
+2019-10-17 17:29:02	-->	efm (~efm@vpn.tummy.com) has joined ##rust
+2019-10-17 17:29:06	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Quit: Leaving)
+2019-10-17 17:33:07	tjis	I think any crate for query string parsing will do just fine and not where your speed concerns are likely going to be
+2019-10-17 17:33:33	daum	thanks!
+2019-10-17 17:36:48	-->	toppler (~user@mtop.default.momentoftop.uk0.bigv.io) has joined ##rust
+2019-10-17 17:38:13	-->	stephaneyfx (~stephaney@184.68.160.234) has joined ##rust
+2019-10-17 17:45:39	-->	pepper_chico (~pepper_ch@gateway/tor-sasl/pepperchico/x-70212520) has joined ##rust
+2019-10-17 17:46:02	<--	Remavas (Remavas@gateway/shell/xshellz/x-tnjqtzxbnyefjxtd) has quit (Ping timeout: 240 seconds)
+2019-10-17 17:47:27	-->	Remavas (Remavas@gateway/shell/xshellz/x-hpbxjxofnqivytga) has joined ##rust
+2019-10-17 17:49:38	<--	toppler (~user@mtop.default.momentoftop.uk0.bigv.io) has quit (Ping timeout: 240 seconds)
+2019-10-17 17:51:00	-->	Lord_of_Life_ (~Lord@unaffiliated/lord-of-life/x-0885362) has joined ##rust
+2019-10-18 08:05:45	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined ##rust
+2019-10-18 08:05:45	--	Topic for ##rust is "Unofficial channel for the Rust programming language |  Playground https://play.rust-lang.org/ | Discord http://discord.gg/rust-lang | Forum https://users.rust-lang.org | Code of conduct: rust-lang.org/conduct.html | TL;DR: be nice and we'll get along just fine"
+2019-10-18 08:05:45	--	Topic set by Manishearth (~Manishear@wikipedia/Manishearth) on Mon, 13 May 2019 05:47:40
+2019-10-18 08:05:45	--	Channel ##rust: 558 nicks (2 ops, 0 voices, 556 normals)
+2019-10-18 08:06:01	--	Channel created on Tue, 30 Jul 2013 17:50:50
+2019-10-18 08:06:36	-->	fsasm (~fsasm@62-178-93-7.cable.dynamic.surfer.at) has joined ##rust
+2019-10-18 08:07:12	-->	tsal (~tsal@i59F4AF25.versanet.de) has joined ##rust
+2019-10-18 08:10:17	<--	tartarsauce (~xsoultart@133.91.253.129) has quit (Ping timeout: 240 seconds)
+2019-10-18 08:11:42	<--	bitwinery (~bitwinery@c-73-37-18-139.hsd1.wa.comcast.net) has quit (Quit: Leaving)
+2019-10-18 08:14:28	-->	toppler (~user@mtop.default.momentoftop.uk0.bigv.io) has joined ##rust
+2019-10-18 08:17:42	<--	nickmass (~nickmass@nickmass.com) has quit (Quit: Quitting)
+2019-10-18 08:19:11	-->	nickmass (~nickmass@nickmass.com) has joined ##rust
+2019-10-18 08:19:24	-->	marusich (~marusich@unaffiliated/marusich) has joined ##rust
+2019-10-18 08:22:31	-->	david2 (~david2@212-186-25-215.cable.dynamic.surfer.at) has joined ##rust
+2019-10-18 08:26:53	-->	nokdoot (~nokdoot@211.205.207.39) has joined ##rust
+2019-10-18 08:31:13	-->	m0rphism (~m0rphism@149.172.82.115) has joined ##rust
+2019-10-18 08:32:50	<--	toppler (~user@mtop.default.momentoftop.uk0.bigv.io) has quit (Ping timeout: 240 seconds)
+2019-10-18 08:35:42	<--	rustacean (~whateverg@128.106.166.91) has quit (Ping timeout: 268 seconds)
+2019-10-18 08:39:40	-->	pupskuchen (~pupskuche@unaffiliated/pupskuchen) has joined ##rust
+2019-10-18 08:39:51	<--	SiGe (~SiGe@unaffiliated/sige) has quit (Remote host closed the connection)
+2019-10-18 08:42:07	-->	toppler (~user@mtop.default.momentoftop.uk0.bigv.io) has joined ##rust
+2019-10-18 08:42:33	-->	djapo (~archie@unaffiliated/djapo) has joined ##rust
+2019-10-18 08:42:40	<--	SiegeLord (~SiegeLord@c-73-158-78-36.hsd1.ca.comcast.net) has quit (Read error: Connection reset by peer)
+2019-10-18 08:46:38	-->	CodesInChaos (~cic@unaffiliated/codesinchaos) has joined ##rust
+2019-10-18 08:52:43	-->	SiGe (~SiGe@unaffiliated/sige) has joined ##rust
+2019-10-18 08:52:50	<--	baali (~baali@59.98.234.75) has quit (Ping timeout: 240 seconds)
+2019-10-18 08:57:17	<--	SiGe (~SiGe@unaffiliated/sige) has quit (Ping timeout: 268 seconds)
+2019-10-18 08:58:17	<--	toppler (~user@mtop.default.momentoftop.uk0.bigv.io) has quit (Ping timeout: 246 seconds)
+2019-10-18 08:59:44	<--	nikivi (~nikivi@nikivi.powered.by.lunarbnc.net) has quit (Quit: Free ZNC ~ Powered by LunarBNC: https://LunarBNC.net)
+2019-10-18 09:01:04	<--	Edu4rdSHL (~edu4rdshl@fsf/member/edu4rdshl) has quit (Read error: Connection reset by peer)
+2019-10-18 09:02:50	<--	tsal (~tsal@i59F4AF25.versanet.de) has quit (Ping timeout: 240 seconds)
+2019-10-18 09:02:58	-->	SiGe (~SiGe@unaffiliated/sige) has joined ##rust
+2019-10-18 09:03:21	-->	nikivi (~nikivi@nikivi.powered.by.lunarbnc.net) has joined ##rust
+2019-10-18 09:04:21	-->	Edu4rdSHL (~edu4rdshl@fsf/member/edu4rdshl) has joined ##rust
+2019-10-18 09:06:19	-->	tsal (~tsal@i59F5F2AE.versanet.de) has joined ##rust
+2019-10-18 09:08:05	-->	toppler (~user@mtop.default.momentoftop.uk0.bigv.io) has joined ##rust
+2019-10-18 09:11:54	-->	zxq9 (~zxq9@FL1-119-244-161-173.okn.mesh.ad.jp) has joined ##rust
+2019-10-18 09:13:33	<--	djapo (~archie@unaffiliated/djapo) has quit (Ping timeout: 250 seconds)
+2019-10-18 09:20:18	-->	__gotcha (~Thunderbi@plone/gotcha) has joined ##rust
+2019-10-18 09:26:21	-->	pedro4 (~pedro4@134.19.179.179) has joined ##rust
+2019-10-18 09:27:30	<--	toppler (~user@mtop.default.momentoftop.uk0.bigv.io) has quit (Ping timeout: 268 seconds)
+2019-10-18 09:35:10	-->	toppler (~user@mtop.default.momentoftop.uk0.bigv.io) has joined ##rust
+2019-10-18 09:36:10	-->	CodesInChaos_ (~cic@unaffiliated/codesinchaos) has joined ##rust
+2019-10-18 09:38:02	<--	__gotcha (~Thunderbi@plone/gotcha) has quit (Ping timeout: 265 seconds)
+2019-10-18 09:39:59	<--	CodesInChaos (~cic@unaffiliated/codesinchaos) has quit (Ping timeout: 276 seconds)
+2019-10-18 09:44:49	<--	t8 (~tommo@2a00:23c5:1284:fc00:e553:9ca:505b:9c6b) has quit (Quit: Konversation terminated!)
+2019-10-18 09:48:28	<--	toppler (~user@mtop.default.momentoftop.uk0.bigv.io) has quit (Ping timeout: 268 seconds)
+2019-10-18 09:54:43	-->	ionelmc (uid20175@python/site-packages/ionelmc) has joined ##rust
+2019-10-18 09:56:50	-->	toppler (~user@mtop.default.momentoftop.uk0.bigv.io) has joined ##rust
+2019-10-18 10:02:43	<--	nikivi (~nikivi@nikivi.powered.by.lunarbnc.net) has quit (Read error: Connection reset by peer)
+2019-10-18 10:03:02	-->	javashin (~javashin@unaffiliated/javashin) has joined ##rust
+2019-10-18 10:03:27	-->	nikivi (~nikivi@nikivi.powered.by.lunarbnc.net) has joined ##rust
+2019-10-18 10:03:57	<--	Edu4rdSHL (~edu4rdshl@fsf/member/edu4rdshl) has quit (Quit: Leaving)
+2019-10-18 10:04:58	-->	Edu4rdSHL (~edu4rdshl@fsf/member/edu4rdshl) has joined ##rust
+2019-10-18 10:09:26	<--	toppler (~user@mtop.default.momentoftop.uk0.bigv.io) has quit (Ping timeout: 268 seconds)
+2019-10-18 10:12:29	-->	aLeSD (~aLeSD@139.47.115.104) has joined ##rust
+2019-10-18 10:16:54	-->	toppler (~user@mtop.default.momentoftop.uk0.bigv.io) has joined ##rust
+2019-10-18 10:21:12	-->	finwevi (~quassel@2a01:e0a:157:80a0:216:3eff:fe5e:6c7b) has joined ##rust
+2019-10-18 10:22:51	<--	Stanley00 (~Stanley00@unaffiliated/stanley00) has quit (Remote host closed the connection)
+2019-10-18 10:26:32	<--	nikivi (~nikivi@nikivi.powered.by.lunarbnc.net) has quit (Quit: Free ZNC ~ Powered by LunarBNC: https://LunarBNC.net)
+2019-10-18 10:28:29	-->	nikivi (~nikivi@nikivi.powered.by.lunarbnc.net) has joined ##rust
+2019-10-18 10:29:50	<--	nikivi (~nikivi@nikivi.powered.by.lunarbnc.net) has quit (Read error: Connection reset by peer)
+2019-10-18 10:30:18	-->	nikivi (~nikivi@nikivi.powered.by.lunarbnc.net) has joined ##rust
+2019-10-18 10:32:20	-->	jokoon (~jokoon@unaffiliated/jokoon) has joined ##rust
+2019-10-18 10:33:01	-->	Stanley00 (~Stanley00@unaffiliated/stanley00) has joined ##rust
+2019-10-18 10:34:06	<--	toppler (~user@mtop.default.momentoftop.uk0.bigv.io) has quit (Ping timeout: 268 seconds)
+2019-10-18 10:36:25	-->	__gotcha (~Thunderbi@plone/gotcha) has joined ##rust
+2019-10-18 10:41:49	<--	lovesegfault (~bemeurer@2600:1700:5f20:83e0::35) has quit (Quit: WeeChat 2.6)
+2019-10-18 10:42:30	-->	samhh (~sam@90.240.224.84) has joined ##rust
+2019-10-18 10:44:10	-->	toppler (~user@mtop.default.momentoftop.uk0.bigv.io) has joined ##rust
+2019-10-18 10:46:41	-->	MrFahrenheit (~zumbi@unaffiliated/rageofthou) has joined ##rust
+2019-10-18 10:46:56	<--	javashin (~javashin@unaffiliated/javashin) has quit (Remote host closed the connection)
+2019-10-18 10:47:24	-->	ellcs (~mantel@212.12.60.67) has joined ##rust
