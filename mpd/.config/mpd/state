@@ -1,8 +1,10 @@
-sw_volume: 92
+sw_volume: 100
 audio_device_state:1:alsa for audio soundcard
 audio_device_state:1:my_fifo
-state: stop
-random: 1
+state: pause
+current: 7
+time: 0.751000
+random: 0
 repeat: 0
 single: 0
 consume: 0
@@ -10,4 +12,17 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
+0:Pigeons Playing Ping Pong - Psycology/Pigeons Playing Ping Pong - Psychology - 01 F.U..flac
+1:Pigeons Playing Ping Pong - Psycology/Pigeons Playing Ping Pong - Psychology - 02 Melting Lights.flac
+2:Pigeons Playing Ping Pong - Psycology/Pigeons Playing Ping Pong - Psychology - 03 Julia.flac
+3:Pigeons Playing Ping Pong - Psycology/Pigeons Playing Ping Pong - Psychology - 04 Schwanthem.flac
+4:Pigeons Playing Ping Pong - Psycology/Pigeons Playing Ping Pong - Psychology - 05 Zydeko.flac
+5:Pigeons Playing Ping Pong - Psycology/Pigeons Playing Ping Pong - Psychology - 06 Time To Ride.flac
+6:Pigeons Playing Ping Pong - Psycology/Pigeons Playing Ping Pong - Psychology - 07 Sunny Day.flac
+7:Pigeons Playing Ping Pong - Psycology/Pigeons Playing Ping Pong - Psychology - 08 Moonwalk.flac
+8:Pigeons Playing Ping Pong - Psycology/Pigeons Playing Ping Pong - Psychology - 09 Horizon.flac
+9:Pigeons Playing Ping Pong - Psycology/Pigeons Playing Ping Pong - Psychology - 10 Lightning.flac
+10:Pigeons Playing Ping Pong - Psycology/Pigeons Playing Ping Pong - Psychology - 11 White Night.flac
+11:Pigeons Playing Ping Pong - Psycology/Pigeons Playing Ping Pong - Psychology - 12 Live Life.flac
+12:Pigeons Playing Ping Pong - Psycology/Pigeons Playing Ping Pong - Psychology - 13 Upfunk.flac
 playlist_end

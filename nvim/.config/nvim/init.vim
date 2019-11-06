@@ -1,9 +1,9 @@
 call plug#begin('~/dotfiles/nvim/.config/nvim/plugged')
 
 Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --no-bash' }
 Plug 'junegunn/fzf.vim'
-Plug 'itchyny/lightline.vim'
 Plug 'majutsushi/tagbar'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -12,6 +12,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'airblade/vim-gitgutter'
 Plug 'kshenoy/vim-signature'
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
@@ -60,6 +61,7 @@ set hlsearch
 nnoremap <leader><space> :noh<cr>
 
 nmap <leader>m :!make<cr>
+:nmap ,p o<ESC>p
 
 set wrap
 set formatoptions=qrn1

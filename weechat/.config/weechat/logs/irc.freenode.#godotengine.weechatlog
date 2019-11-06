@@ -261,3 +261,1745 @@
 2019-10-18 10:43:49	houkime	print that is in raw C API cannot print standard C things and needs variants to be explicitly constructed by the programmer. So if there are implicit conversions going on and failing they are probably in c++ bindings.
 2019-10-18 10:47:14	houkime	or i am terribly misunderstanding something... which is quite possible.
 2019-10-18 10:49:15	<--	Hairic16 (6dad9dbd@d157-189.icpnet.pl) has quit (Remote host closed the connection)
+2019-10-18 10:56:15	<--	thc202 (~thc202@unaffiliated/thc202) has quit (Ping timeout: 250 seconds)
+2019-10-18 10:57:12	-->	thc202 (~thc202@unaffiliated/thc202) has joined #godotengine
+2019-10-18 11:03:50	<--	RoderickHossack (ae7fe6d7@174.127.230.215) has quit (Remote host closed the connection)
+2019-10-18 11:09:48	houkime	or one more possibilty is that vec2.x is not of the type one could expect.
+2019-10-18 11:10:52	houkime	i.e. not a float but also not a variant
+2019-10-18 11:13:56	-->	xakz (~XaMaD@229.ip-217-182-68.eu) has joined #godotengine
+2019-10-18 11:15:20	-->	maveerik (~1@178.127.91.6) has joined #godotengine
+2019-10-18 11:16:37	<--	captain_morgan20 (~morgan@135.84.101.8) has quit (Ping timeout: 250 seconds)
+2019-10-18 11:17:00	-->	captain_morgan20 (~morgan@135.84.101.43) has joined #godotengine
+2019-10-18 11:26:22	houkime	oh, noticed .c_str() so it is probably not c++ string vrav tries to Godot::print.
+2019-10-18 11:31:35	houkime	the raw C API is here https://github.com/GodotNativeTools/godot_headers/blob/master/gdnative_api_struct.gen.h
+2019-10-18 11:32:15	houkime	in godot_gdnative_core_api_struct
+2019-10-18 11:35:10	houkime	and "print" actually consumes godot_string like that void (*godot_print)(const godot_string *p_message);
+2019-10-18 11:37:51	houkime	(it is a function pointer because the whole API is distributed as a struct of  function pointers)
+2019-10-18 11:39:38	houkime	no polymorphism, no nothing, whatever happens with conversions of basillions of possible inputs to godot_string is all in c++ bindings somewhere.
+2019-10-18 12:06:39	houkime	and here are declarations of these conversions https://github.com/GodotNativeTools/godot-cpp/blob/master/include/core/String.hpp
+2019-10-18 12:11:38	<--	Salabasama (~mustafa@68-118-84-232.dhcp.kgpt.tn.charter.com) has quit (Ping timeout: 240 seconds)
+2019-10-18 12:13:22	<--	jiaox99 (9f99b83c@nat-fefw.eqx-sin.ea.com) has quit (Remote host closed the connection)
+2019-10-18 12:13:38	<--	zellfaze (~zellfaze@c-69-255-224-26.hsd1.md.comcast.net) has quit (Ping timeout: 240 seconds)
+2019-10-18 12:20:00	houkime	One can notice that there is no conversion from float, and also that char* is used which is probably why vrav used .c_str()
+2019-10-18 12:21:08	-->	clemo (~Thunderbi@84-112-100-201.cable.dynamic.surfer.at) has joined #godotengine
+2019-10-18 12:24:26	<--	Jyhem_laptop (~libs@2a01:cb10:294:aa00:9061:751d:2498:972a) has quit (Ping timeout: 276 seconds)
+2019-10-18 12:28:16	-->	Uhfgood (~Uhfgood@2603:9000:b10b:c00:4491:41ac:e810:a9b1) has joined #godotengine
+2019-10-18 12:33:49	houkime	and implementations of conversions are here https://github.com/GodotNativeTools/godot-cpp/blob/master/src/core/String.cpp
+2019-10-18 12:36:58	houkime	and here is Godot:: print https://github.com/GodotNativeTools/godot-cpp/blob/master/src/core/GodotGlobal.cpp#L43
+2019-10-18 12:41:29	<--	ignaloidas (~ignaloida@158.129.26.113) has quit (Remote host closed the connection)
+2019-10-18 12:42:49	-->	Yeldham (~michael@138.118.198.38) has joined #godotengine
+2019-10-18 12:44:30	houkime	and this cast is actually a bit strange if one thinks about it. One picks a reference from a value which was passed and then casts the reference into a pointer to godot_string... emmm... my low level programming might not be up to the task to tell what this will _actually_ do.
+2019-10-18 12:46:04	<--	clemo (~Thunderbi@84-112-100-201.cable.dynamic.surfer.at) has quit (Ping timeout: 268 seconds)
+2019-10-18 12:50:07	-->	Jyhem_laptop (~libs@lneuilly-657-1-22-93.w90-63.abo.wanadoo.fr) has joined #godotengine
+2019-10-18 12:54:57	houkime	ok, now i am not sure that proper conversions are even triggered at all because of this incantation.
+2019-10-18 13:01:56	<--	aombk (~aombk@unaffiliated/aombk) has quit (Read error: Connection reset by peer)
+2019-10-18 13:05:56	-->	rkieley (~rkieley@24.222.88.212) has joined #godotengine
+2019-10-18 13:15:23	-->	YeldhamDev (michael@gateway/vpn/protonvpn/yeldham) has joined #godotengine
+2019-10-18 13:15:53	<--	Yeldham (~michael@138.118.198.38) has quit (Ping timeout: 246 seconds)
+2019-10-18 13:28:13	-->	aombk (~aombk@unaffiliated/aombk) has joined #godotengine
+2019-10-18 13:32:26	--	karroffel2 is now known as karroffel
+2019-10-18 13:41:42	-->	qolq (~qolq@112.205.223.30) has joined #godotengine
+2019-10-18 13:42:36	<--	saltpepp3r (~saltpepp3@91.207.173.118) has quit (Ping timeout: 265 seconds)
+2019-10-18 13:44:22	-->	saltpepp3r (~saltpepp3@91.207.173.118) has joined #godotengine
+2019-10-18 13:47:23	-->	bomb (~bomb@gateway/tor-sasl/bomb) has joined #godotengine
+2019-10-18 13:50:52	houkime	just in case, found this to even further confirm my suspicions of that this thing most probably does not do what it is supposed to do https://stackoverflow.com/questions/24182343/type-conversion-with-pointers
+2019-10-18 13:54:03	<--	the_al (~al@unaffiliated/the-al/x-0324965) has quit (Ping timeout: 264 seconds)
+2019-10-18 13:56:01	-->	the_al (~al@unaffiliated/the-al/x-0324965) has joined #godotengine
+2019-10-18 13:56:49	houkime	hmm, oh. i am batman again.
+2019-10-18 13:57:55	houkime	so basically what happens is that there are two things that are supposed to be similar
+2019-10-18 13:58:36	houkime	String from String.hpp which is a cpp class wrapping godot_string.
+2019-10-18 13:59:12	houkime	and then godot_string itself.
+2019-10-18 13:59:29	houkime	aaaaand there is no explicit conversion between the two!
+2019-10-18 14:00:52	houkime	Instead what is done is that you "convert" one from another via reinterpreting a pointer to String as a pointer to godot_string.
+2019-10-18 14:02:29	houkime	is this some kind of a widely known wrapping tech? Because it is not evident what provisions there are to ensure that this yields correct results.
+2019-10-18 14:05:17	<--	YeldhamDev (michael@gateway/vpn/protonvpn/yeldham) has quit (Ping timeout: 240 seconds)
+2019-10-18 14:05:44	-->	YeldhamDev (~michael@138.118.198.38) has joined #godotengine
+2019-10-18 14:06:23	-->	nibzau (~nibzau@194.223.5.113) has joined #godotengine
+2019-10-18 14:07:43	houkime	basically this needs for memory layout for a c++ String (as defined in String.hpp) object to be exactly the same as for C godot_string type. Which is far from being guaranteed as far as i understand.
+2019-10-18 14:12:33	<--	nibzau (~nibzau@194.223.5.113) has quit (Ping timeout: 250 seconds)
+2019-10-18 14:20:50	<--	YeldhamDev (~michael@138.118.198.38) has quit (Ping timeout: 240 seconds)
+2019-10-18 14:21:17	-->	YeldhamDev (michael@gateway/vpn/protonvpn/yeldham) has joined #godotengine
+2019-10-18 14:35:46	houkime	although compiler is not allowed to reorder member variables, the offset and inter-member padding are pretty mach arbitrary.
+2019-10-18 14:36:02	houkime	*much
+2019-10-18 14:36:07	houkime	need to sleep.
+2019-10-18 14:36:10	houkime	bye
+2019-10-18 14:40:56	<--	houkime (~houkime@gateway/tor-sasl/houkime) has quit (Ping timeout: 260 seconds)
+2019-10-18 14:57:17	-->	Sagirou (602148a6@96-33-72-166.dhcp.ahvl.nc.charter.com) has joined #godotengine
+2019-10-18 14:57:33	Sagirou	Good morning.
+2019-10-18 14:58:55	bomb	o/
+2019-10-18 15:10:36	-->	zellfaze (~zellfaze@c-98-233-177-196.hsd1.md.comcast.net) has joined #godotengine
+2019-10-18 15:14:27	-->	dddddd (~dddddd@unaffiliated/dddddd) has joined #godotengine
+2019-10-18 15:21:55	-->	joakim (88a3cb05@136.163.203.5) has joined #godotengine
+2019-10-18 15:23:45	joakim	Hello everyone! I was just wondering how stop rigidbodies-boxes being "squishy". My aim is to stack boxes ontop och each other. Any suggestions? :)
+2019-10-18 15:30:49	<--	joakim (88a3cb05@136.163.203.5) has quit (Remote host closed the connection)
+2019-10-18 15:37:24	-->	biliogadafr (~bilio@46.53.249.26) has joined #godotengine
+2019-10-18 15:46:08	<--	biliogadafr (~bilio@46.53.249.26) has quit (Ping timeout: 245 seconds)
+2019-10-18 15:57:02	-->	psymin (~psymin@69.146.8.222) has joined #godotengine
+2019-10-18 16:02:55	jimbzy	Hi, all.
+2019-10-18 16:03:56	bomb	yo jimbzy you gotta play this game
+2019-10-18 16:04:01	bomb	https://www.toggl.com/startup-simulator/
+2019-10-18 16:04:50	jimbzy	That's ate up, bomb
+2019-10-18 16:05:10	-->	MoosePrime (~moose@207.44.22.117) has joined #godotengine
+2019-10-18 16:06:03	<--	riiski (uid210120@gateway/web/irccloud.com/x-femvsgcrxewhocqp) has quit (Quit: Connection closed for inactivity)
+2019-10-18 16:06:19	-->	reber (~reber@unaffiliated/reber) has joined #godotengine
+2019-10-18 16:07:43	<--	Keetz (~Keetz@152.115.73.146) has quit (Quit: Leaving)
+2019-10-18 16:09:51	jimbzy	chrome://dino/ <---That's the only game I need thanks to my crappy ISP :P
+2019-10-18 16:12:37	-->	ignaloidas (~ignaloida@88-119-96-91.static.zebra.lt) has joined #godotengine
+2019-10-18 16:13:57	bomb	heh
+2019-10-18 16:14:20	<--	bomb (~bomb@gateway/tor-sasl/bomb) has quit (Quit: reb00t)
+2019-10-18 16:29:23	Nello	bomb just did a driveby with that game i didn't have time to give him my middling review
+2019-10-18 16:29:48	jimbzy	bomb is bomb.
+2019-10-18 16:30:06	Nello	he's here for a good time not for a long time
+2019-10-18 16:30:42	jimbzy	^_^
+2019-10-18 16:31:14	Nello	juan calling out unity for the price increase https://twitter.com/reduzio/status/1184973985550946306
+2019-10-18 16:31:58	jimbzy	Crap...  I can barely afford Godot as it is...  ;)
+2019-10-18 16:33:17	Nello	i'm gonna have to sell my "Your first game" on steam if I'm gonna afford those prices
+2019-10-18 16:36:10	-->	Roughy (~mdaw45ns@188.126.203.127) has joined #godotengine
+2019-10-18 16:36:36	Nello	i want to follow krita on twitter but all they do is retweet art made using krita and they do it like 7x/day
+2019-10-18 16:36:46	Nello	i don't want my feed filled with that i want krita news
+2019-10-18 16:37:16	jimbzy	I can't handle twitter.  I tried it and it just made me angry.
+2019-10-18 16:38:17	-->	Zeioth (~Zeioth@92.59.21.18) has joined #godotengine
+2019-10-18 16:40:07	Nello	i like it so far but i'm only follow godotengine and blender_org because they talk about themselves or things directly related to themselves
+2019-10-18 16:41:08	Nello	if you're willing to not get guilted into following something you don't care about then imo twitter is great
+2019-10-18 16:41:40	jimbzy	Yeah, I just don't have the time I guess.
+2019-10-18 16:41:58	Nello	oh
+2019-10-18 16:41:59	jimbzy	I've had a FB account for years, but I only have 12 friends, and I know all of them in person.
+2019-10-18 16:42:24	Nello	i dont have personal social media i made the twitter to post progress
+2019-10-18 16:44:06	Nello	i think the worst thing about wanting to contribute to an open source project is that you gotta fix/improve/change someone else's work a lot of the time
+2019-10-18 16:44:33	jimbzy	That's like the whole point hehehe
+2019-10-18 16:44:55	Nello	yeah but like... some people have weird egos about it you know what i mean?
+2019-10-18 16:45:09	jimbzy	Yeah, I do.
+2019-10-18 16:45:31	Nello	like how people try to adopt wikipedia articles and police any changes
+2019-10-18 16:45:31	jimbzy	You could just fork something and work on it yourself.  If you fix something send it upstream and it is what it is.
+2019-10-18 16:46:35	Nello	once i get competent i'd like to propose a big change to the "your first game" part of the docs but I'm not sure if it's someone's baby and I'd be offending them for suggesting it
+2019-10-18 16:47:40	jimbzy	Honestly?  It was probably created by someone who drew the short straw ;)
+2019-10-18 16:47:52	jimbzy	Like "Crap...  I gotta throw something out there.."
+2019-10-18 16:48:15	Nello	that's the dream, that nobody cares about it or that it's on the bottom of a "to be updated" list
+2019-10-18 16:49:15	jimbzy	Don't be afraid to jump in there and get dirty.
+2019-10-18 16:49:44	Nello	maybe not yet since i'm sitting here rereading the code so i'm not just a copy pasting caveman dev
+2019-10-18 16:50:17	Nello	they get you to do a lot with minimal explanation of what you're doing. i need to make a flow chart
+2019-10-18 16:51:56	Nello	actually im gonna do that. i don't know how it all connects so i'll put it down on paper
+2019-10-18 16:53:21	jimbzy	Yeah
+2019-10-18 16:53:27	jimbzy	A lot is assumed
+2019-10-21 09:25:20	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #godotengine
+2019-10-21 09:25:20	--	Topic for #godotengine is "Godot Engine | https://godotengine.org | GitHub: https://github.com/godotengine/godot | Docs: https://docs.godotengine.org | Discord: https://discord.gg/zH7NUgz | Don't ask if you can ask, just ask! :) | Interested in engine development? Join #godotengine-devel | Want to help with the documentation? Join #godotengine-doc"
+2019-10-21 09:25:20	--	Topic set by Calinou (~quassel@fsf/member/calinou) on Mon, 25 Feb 2019 00:45:33
+2019-10-21 09:25:20	--	Channel #godotengine: 250 nicks (1 op, 0 voices, 249 normals)
+2019-10-21 09:25:32	--	Channel created on Tue, 11 Feb 2014 08:43:18
+2019-10-21 09:36:02	<--	Technipion (~Thunderbi@p200300F933C29DE39C5FF35A63949809.dip0.t-ipconnect.de) has quit (Remote host closed the connection)
+2019-10-21 09:42:32	<--	Ijatsu (6d00c7cf@gateway/web/cgi-irc/kiwiirc.com/ip.109.0.199.207) has quit (Remote host closed the connection)
+2019-10-21 09:54:11	-->	Technipion (~Thunderbi@p200300F933C29D549C5FF35A63949809.dip0.t-ipconnect.de) has joined #godotengine
+2019-10-21 09:54:55	<--	chargen (~chargen@2a02:2e02:9ee0:7100:7dc2:8364:b503:6b8a) has quit (Quit: BBL)
+2019-10-21 09:56:05	-->	chargen (~chargen@47.228.106.212.dynamic.jazztel.es) has joined #godotengine
+2019-10-21 09:59:28	-->	xakz (~XaMaD@229.ip-217-182-68.eu) has joined #godotengine
+2019-10-21 10:05:22	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #godotengine
+2019-10-21 10:18:07	<--	chargen (~chargen@47.228.106.212.dynamic.jazztel.es) has quit (Quit: BBL)
+2019-10-21 10:20:54	-->	chargen (~chargen@2a02:2e02:9ee0:7100:7dc2:8364:b503:6b8a) has joined #godotengine
+2019-10-21 10:25:50	<--	chargen (~chargen@2a02:2e02:9ee0:7100:7dc2:8364:b503:6b8a) has quit (Quit: BBL)
+2019-10-21 10:27:04	-->	chargen (~chargen@47.228.106.212.dynamic.jazztel.es) has joined #godotengine
+2019-10-21 10:31:28	-->	thc202 (~thc202@unaffiliated/thc202) has joined #godotengine
+2019-10-21 10:36:33	<--	Salabasama (~mustafa@68-118-84-232.dhcp.kgpt.tn.charter.com) has quit (Ping timeout: 265 seconds)
+2019-10-21 11:34:26	<--	maveerik (~1@mm-15-34-85-93.mgts.dynamic.pppoe.byfly.by) has quit (Ping timeout: 246 seconds)
+2019-10-21 11:41:26	<--	hamishtpb (~weechat@44.92.187.81.in-addr.arpa) has quit (Ping timeout: 276 seconds)
+2019-10-21 11:47:49	-->	hamishtpb (~weechat@44.92.187.81.in-addr.arpa) has joined #godotengine
+2019-10-21 12:06:24	-->	novigard (249ad2a7@36.154.210.167) has joined #godotengine
+2019-10-21 12:53:09	-->	maveerik (~1@mm-15-34-85-93.mgts.dynamic.pppoe.byfly.by) has joined #godotengine
+2019-10-21 13:00:35	<--	rople (rople@gateway/vpn/privateinternetaccess/rople) has quit (Ping timeout: 265 seconds)
+2019-10-21 13:03:55	<--	Tobbi (~Tobbi@supertux/tobbi) has quit (Read error: Connection reset by peer)
+2019-10-21 13:05:04	-->	Yeldham (~michael@138.118.198.35) has joined #godotengine
+2019-10-21 13:09:30	<--	novigard (249ad2a7@36.154.210.167) has quit (Remote host closed the connection)
+2019-10-21 13:13:01	-->	Uhfgood (~Uhfgood@072-186-048-053.res.spectrum.com) has joined #godotengine
+2019-10-21 13:19:39	-->	YeldhamDev (michael@gateway/vpn/protonvpn/yeldham) has joined #godotengine
+2019-10-21 13:20:21	<--	Yeldham (~michael@138.118.198.35) has quit (Ping timeout: 268 seconds)
+2019-10-21 13:21:40	-->	regakakobigman (~regakakob@c-73-174-187-176.hsd1.pa.comcast.net) has joined #godotengine
+2019-10-21 13:26:32	Calinou	Nello: "abstract class" is likely a more accurate term, as that's generally the term used in OOP
+2019-10-21 13:26:40	Calinou	(a class that can't be instantiated)
+2019-10-21 13:26:45	Calinou	Light would be an example
+2019-10-21 13:56:07	<--	maveerik (~1@mm-15-34-85-93.mgts.dynamic.pppoe.byfly.by) has quit (Read error: Connection reset by peer)
+2019-10-21 14:07:27	-->	Zeioth (~Zeioth@92.59.21.18) has joined #godotengine
+2019-10-21 14:18:05	<--	xakz (~XaMaD@229.ip-217-182-68.eu) has quit (Ping timeout: 276 seconds)
+2019-10-21 14:19:27	-->	xakz (~XaMaD@pdb29-1-78-218-225-2.fbx.proxad.net) has joined #godotengine
+2019-10-21 14:21:51	-->	chinu (0e8bec42@14.139.236.66) has joined #godotengine
+2019-10-21 14:31:43	-->	ignaloidas (~ignaloida@158.129.26.113) has joined #godotengine
+2019-10-21 14:36:48	-->	Sipaha (~Sipaha@46.236.156.184) has joined #godotengine
+2019-10-21 14:39:31	-->	xakz_ (~XaMaD@229.ip-217-182-68.eu) has joined #godotengine
+2019-10-21 14:43:26	<--	xakz (~XaMaD@pdb29-1-78-218-225-2.fbx.proxad.net) has quit (Ping timeout: 276 seconds)
+2019-10-21 14:47:42	yuken	Is there anything notable that GDScript can't do that you'd expect other languages to do, and  vice-versa?
+2019-10-21 14:51:13	-->	biliogadafr (~bilio@46.53.249.26) has joined #godotengine
+2019-10-21 14:53:06	dreamsComeTrue[m	you ask in terms of language syntax/features/performance/design?
+2019-10-21 14:53:48	dreamsComeTrue[m	you ask in terms of language syntax/features/performance/design?
+2019-10-21 14:53:51	dreamsComeTrue[m	you ask in terms of language syntax/features/performance/design?
+2019-10-21 14:54:17	DarkUranium	yuken, it can't brew coffee!
+2019-10-21 14:57:54	chinu	'=D
+2019-10-21 14:59:39	DarkUranium	Unlike HTCPCP/1.0 (hey, a language within a protocol is still a language!)
+2019-10-21 15:14:25	<--	chinu (0e8bec42@14.139.236.66) has quit (Remote host closed the connection)
+2019-10-21 15:15:07	Technipion	I guess GDScript isn't quite like Python or else you could do `from universe import game; game.launch_finished_version()` :)
+2019-10-21 15:16:11	DarkUranium	gdscript -m universe.game
+2019-10-21 15:21:46	yuken	Hmm. I've got no clue how to start networking with Godot.
+2019-10-21 15:26:32	Technipion	https://docs.godotengine.org/en/3.1/tutorials/networking/ you're welcome
+2019-10-21 15:30:02	<--	ignaloidas (~ignaloida@158.129.26.113) has quit (Ping timeout: 240 seconds)
+2019-10-21 15:31:18	yuken	How do I actually make use of a Server version of Godot? Like, checking "if server_version: do whatever"
+2019-10-21 15:34:13	<--	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has quit (Quit: WeeChat 1.9.1)
+2019-10-21 15:39:23	jimbzy	Technipion: Hah!
+2019-10-21 15:40:00	jimbzy	Unfortunately, though, your game only works with python 3.x.x and not 3.x.x so....
+2019-10-21 15:41:13	Technipion	jimbzy: Oh, you're right :(
+2019-10-21 15:41:39	-->	ignaloidas (~ignaloida@158.129.11.9) has joined #godotengine
+2019-10-21 15:41:45	Technipion	jumbzy: And obviously it won't work with pypy. Who needs performance anyways...
+2019-10-21 15:42:17	jimbzy	Hehehe
+2019-10-21 15:42:43	-->	Roughy (~mdaw45ns@188.126.200.178) has joined #godotengine
+2019-10-21 15:43:43	jimbzy	Don't get me wrong, I loves me some python when performance isn't the primary concern.
+2019-10-21 15:44:27	<--	Technipion (~Thunderbi@p200300F933C29D549C5FF35A63949809.dip0.t-ipconnect.de) has quit (Remote host closed the connection)
+2019-10-21 15:53:45	-->	Technipion (~Thunderbi@p200300F933C29D540CDDF0081324BB18.dip0.t-ipconnect.de) has joined #godotengine
+2019-10-21 15:54:28	<--	Technipion (~Thunderbi@p200300F933C29D540CDDF0081324BB18.dip0.t-ipconnect.de) has quit (Remote host closed the connection)
+2019-10-21 15:58:45	-->	kimamb (~kimamb__@62.97.173.88) has joined #godotengine
+2019-10-21 16:01:37	-->	psymin (~psymin@69.146.8.222) has joined #godotengine
+2019-10-21 16:01:52	<--	hamishtpb (~weechat@44.92.187.81.in-addr.arpa) has quit (Quit: WeeChat 2.6-rc1)
+2019-10-21 16:02:12	-->	hamishtpb (~weechat@44.92.187.81.in-addr.arpa) has joined #godotengine
+2019-10-21 16:02:27	-->	Technipion (~Thunderbi@p200300F933C29D54494D15F566045DB7.dip0.t-ipconnect.de) has joined #godotengine
+2019-10-21 16:03:01	jimbzy	I feel a cluster headache coming on.
+2019-10-21 16:05:59	<--	biliogadafr (~bilio@46.53.249.26) has quit (Ping timeout: 250 seconds)
+2019-10-21 16:07:47	jimbzy	I told my wife that and she said "If I had a head that looked like that and it didn't hurt I'd be worried."  :(
+2019-10-21 16:12:13	-->	wyattb (wyattb@gateway/vpn/nordvpn/wyattb) has joined #godotengine
+2019-10-21 16:17:39	-->	MoosePrime (~moose@207.44.22.117) has joined #godotengine
+2019-10-21 16:26:35	<--	YeldhamDev (michael@gateway/vpn/protonvpn/yeldham) has quit (Ping timeout: 268 seconds)
+2019-10-21 16:27:30	-->	Lord_of_Life (~Lord@unaffiliated/lord-of-life/x-0885362) has joined #godotengine
+2019-10-21 16:29:27	-->	YeldhamDev (~michael@138.118.198.35) has joined #godotengine
+2019-10-21 16:37:02	-->	Yeldham (michael@gateway/vpn/protonvpn/yeldham) has joined #godotengine
+2019-10-21 16:37:41	<--	YeldhamDev (~michael@138.118.198.35) has quit (Ping timeout: 268 seconds)
+2019-10-21 16:38:30	<--	Sipaha (~Sipaha@46.236.156.184) has quit (Quit: Going offline, see ya! 8=з)
+2019-10-21 16:47:40	-->	Sipaha (~Sipaha@46.236.156.184) has joined #godotengine
+2019-10-21 16:52:37	<--	Zeioth (~Zeioth@92.59.21.18) has quit (Remote host closed the connection)
+2019-10-21 16:56:53	-->	Zeioth (~Zeioth@92.59.21.18) has joined #godotengine
+2019-10-21 16:58:17	<--	mrcdk (~mrcdk@180-200-39-46.usuarios.innovasur.com) has quit (Read error: Connection reset by peer)
+2019-10-21 17:02:53	Nello	sounds like she loves or hates you
+2019-10-21 17:03:54	jimbzy	Both
+2019-10-21 17:04:14	jimbzy	We live in a state of mutual hated tempered by lust.
+2019-10-21 17:04:19	jimbzy	hatred
+2019-10-21 17:08:48	<--	HicksD (~q@bernard.stupidbeard.uk) has quit (Quit: HicksD)
+2019-10-21 17:09:00	-->	HicksD (~q@bernard.stupidbeard.uk) has joined #godotengine
+2019-10-21 17:13:39	-->	capefeather (~capefeath@tnhlon4048w-lp140-06-70-29-102-236.dsl.bell.ca) has joined #godotengine
+2019-10-21 17:14:55	yuken	Hmm. Well, I still dunno how to figure out if I'm running the headless/server version of Godot.
+2019-10-21 17:15:27	Nello	isnt it a separate download?
+2019-10-21 17:15:32	jimbzy	That's a joke, btw, Nello  ;)
+2019-10-21 17:15:33	yuken	Yes.
+2019-10-21 17:16:38	Nello	jimbzy, i figured :)
+2019-10-21 17:19:36	yuken	Hmm. Networking in Godot seems like it's gonna be annoying.
+2019-10-21 17:22:14	Nello	did the tutorial not help?
+2019-10-21 17:22:50	yuken	No no, it did, it just seems that using the high-level networking is gonna be annoying.
+2019-10-21 17:22:56	yuken	Can I even send bytes?
+2019-10-21 17:27:48	-->	jaggzi (~jaggz@unaffiliated/jaggz) has joined #godotengine
+2019-10-21 17:29:17	<--	jaggz (~jaggz@unaffiliated/jaggz) has quit (Ping timeout: 240 seconds)
+2019-10-21 17:29:17	--	jaggzi is now known as jaggz
+2019-10-21 17:30:02	-->	Romlok (~mel@26.51-175-167.customer.lyse.net) has joined #godotengine
+2019-10-21 17:31:01	<--	Lord_of_Life (~Lord@unaffiliated/lord-of-life/x-0885362) has quit (Quit: Laa shay'a waqi'un moutlaq bale kouloun moumkine)
+2019-10-21 17:32:02	-->	Lord_of_Life (~Lord@unaffiliated/lord-of-life/x-0885362) has joined #godotengine
+2019-10-21 17:32:18	-->	anllucah (b368f2aa@179.104.242.170) has joined #godotengine
+2019-10-21 17:33:19	<--	anllucah (b368f2aa@179.104.242.170) has quit (Remote host closed the connection)
+2019-10-21 17:33:59	<--	Sipaha (~Sipaha@46.236.156.184) has quit (Quit: Going offline, see ya! 8=з)
+2019-10-21 17:35:30	-->	dddddd (~dddddd@unaffiliated/dddddd) has joined #godotengine
+2019-10-21 17:35:38	yuken	Hmm. GDScript seems annoying, I might use C#.
+2019-10-21 17:36:07	-->	Lord_of_Life_ (~Lord@unaffiliated/lord-of-life/x-0885362) has joined #godotengine
+2019-10-21 17:36:07	Nello	you just gotta steer into it i'll be fine
+2019-10-21 17:36:21	Nello	i come from php and c++ and it took a sec to adjust to gdscript
+2019-10-21 17:36:24	Nello	but i'm lovin it
+2019-10-21 17:36:36	Nello	https://docs.godotengine.org/en/3.1/getting_started/scripting/gdscript/gdscript_basics.html#match
+2019-10-21 17:37:03	<--	Lord_of_Life (~Lord@unaffiliated/lord-of-life/x-0885362) has quit (Ping timeout: 265 seconds)
+2019-10-21 17:37:08	yuken	I... do not really like it, Nello
+2019-10-21 17:37:31	Nello	how dare you
+2019-10-21 17:37:35	-->	RawDumpling (~RawDumpli@78-61-219-24.static.zebra.lt) has joined #godotengine
+2019-10-21 17:38:15	<--	Lord_of_Life_ (~Lord@unaffiliated/lord-of-life/x-0885362) has quit (Remote host closed the connection)
+2019-10-21 17:38:18	Nello	i have days of experience with this language so clearly i know best
+2019-10-21 17:38:19	yuken	Classes are weird, I have to import files
+2019-10-21 17:39:17	<--	RawDumpling (~RawDumpli@78-61-219-24.static.zebra.lt) has quit (Remote host closed the connection)
+2019-10-21 17:39:54	-->	RawDumpling (~RawDumpli@78-61-219-24.static.zebra.lt) has joined #godotengine
+2019-10-21 17:39:57	-->	Lord_of_Life (~Lord@unaffiliated/lord-of-life/x-0885362) has joined #godotengine
+2019-10-21 17:40:55	<--	RawDumpling (~RawDumpli@78-61-219-24.static.zebra.lt) has quit (Remote host closed the connection)
+2019-10-21 17:43:58	-->	wyattb__ (~wyattb@static-71-127-241-93.nwrknj.fios.verizon.net) has joined #godotengine
+2019-10-21 17:44:38	<--	Lord_of_Life (~Lord@unaffiliated/lord-of-life/x-0885362) has quit (Client Quit)
+2019-10-21 17:45:03	<--	wyattb (wyattb@gateway/vpn/nordvpn/wyattb) has quit (Ping timeout: 264 seconds)
+2019-10-21 17:47:57	<--	b1101 (~b1101@fsf/member/b1101) has quit (Remote host closed the connection)
+2019-10-21 17:52:08	yuken	Okay, so... I can't even figure out how to use a class located in another file.
+2019-10-21 17:53:08	wyattb__	did you use load() command
+2019-10-21 17:53:29	yuken	nope.
+2019-10-21 17:58:28	wyattb__	look thru here https://docs.godotengine.org/en/latest/getting_started/step_by_step/resources.html
+2019-10-22 09:05:17	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #godotengine
+2019-10-22 09:05:17	--	Topic for #godotengine is "Godot Engine | https://godotengine.org | GitHub: https://github.com/godotengine/godot | Docs: https://docs.godotengine.org | Discord: https://discord.gg/zH7NUgz | Don't ask if you can ask, just ask! :) | Interested in engine development? Join #godotengine-devel | Want to help with the documentation? Join #godotengine-doc"
+2019-10-22 09:05:17	--	Topic set by Calinou (~quassel@fsf/member/calinou) on Mon, 25 Feb 2019 00:45:33
+2019-10-22 09:05:17	--	Channel #godotengine: 252 nicks (1 op, 0 voices, 251 normals)
+2019-10-22 09:05:30	--	Channel created on Tue, 11 Feb 2014 08:43:18
+2019-10-22 09:06:02	<--	chargen (~chargen@2a02:2e02:9ee0:7100:f463:a573:8f41:c96e) has quit (Quit: BBL)
+2019-10-22 09:06:46	-->	chargen (~chargen@2a02:2e02:9ee0:7100:f463:a573:8f41:c96e) has joined #godotengine
+2019-10-22 09:18:13	<--	zingo_ (uid365808@gateway/web/irccloud.com/x-juezkvwhkvbnazzb) has quit (Quit: Connection closed for inactivity)
+2019-10-22 09:56:10	<--	TheRockPenguin (uid303691@gateway/web/irccloud.com/x-voidmgdhsgrgqrla) has quit (Quit: Connection closed for inactivity)
+2019-10-22 10:02:34	-->	paramite (paramite@nat/redhat/x-bwbmkmfrglozmywp) has joined #godotengine
+2019-10-22 10:07:24	<--	xakz (~XaMaD@229.ip-217-182-68.eu) has quit (Ping timeout: 265 seconds)
+2019-10-22 10:14:30	-->	kubecz3k_irc (~kubecz3k_@87.204.191.95) has joined #godotengine
+2019-10-22 10:15:46	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #godotengine
+2019-10-22 10:39:19	-->	thc202 (~thc202@unaffiliated/thc202) has joined #godotengine
+2019-10-22 10:40:13	<--	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has quit (Quit: WeeChat 1.9.1)
+2019-10-22 10:50:39	-->	kubecz3k_irc_ (~kubecz3k_@87.204.190.191) has joined #godotengine
+2019-10-22 10:53:24	-->	MuAdd (a5e7af44@165.231.175.68) has joined #godotengine
+2019-10-22 10:54:07	<--	kubecz3k_irc (~kubecz3k_@87.204.191.95) has quit (Ping timeout: 268 seconds)
+2019-10-22 10:54:07	--	kubecz3k_irc_ is now known as kubecz3k_irc
+2019-10-22 10:55:11	<--	kubecz3k_irc (~kubecz3k_@87.204.190.191) has quit (Client Quit)
+2019-10-22 10:55:29	-->	kubecz3k_irc (~kubecz3k_@87.204.190.191) has joined #godotengine
+2019-10-22 10:55:37	<--	kubecz3k_irc (~kubecz3k_@87.204.190.191) has quit (Client Quit)
+2019-10-22 10:59:03	-->	gef3233 (c1910ec2@193.145.14.194) has joined #godotengine
+2019-10-22 10:59:50	<--	Jyhem_laptop (~libs@2a01:cb10:294:aa00:9061:751d:2498:972a) has quit (Quit: Konversation terminated!)
+2019-10-22 11:00:18	gef3233	Hi all, I have a question about binding external libraries. I want to compile GNU Grep and bundle it with my app to do full text search. How can I make sure this will work in my Android, Windows and Linux ports?
+2019-10-22 11:00:26	gef3233	I'm currently developing on linux
+2019-10-22 11:01:56	<--	Kamilion (kamilion@botters/Kamilion) has quit (Quit: I am kamilion. But you knew that, didn't you.)
+2019-10-22 11:01:58	<--	gpg (gpg@2600:3c00::f03c:91ff:fee5:1ed2) has quit (Remote host closed the connection)
+2019-10-22 11:08:44	-->	gpg (~gpg@li1112-215.members.linode.com) has joined #godotengine
+2019-10-22 11:08:57	-->	Kamilion (kamilion@botters/Kamilion) has joined #godotengine
+2019-10-22 11:11:49	<--	ycjung (~hallabada@141.223.107.7) has quit (Quit: WeeChat 2.6)
+2019-10-22 11:12:15	-->	ycjung (~hallabada@141.223.107.7) has joined #godotengine
+2019-10-22 11:27:00	-->	maveerik (~1@mm-15-34-85-93.mgts.dynamic.pppoe.byfly.by) has joined #godotengine
+2019-10-22 11:28:41	-->	jello_pudding (~jello_pud@2601:600:9f80:7780::9bbc) has joined #godotengine
+2019-10-22 11:33:37	<--	jello_pudding (~jello_pud@2601:600:9f80:7780::9bbc) has quit (Remote host closed the connection)
+2019-10-22 11:35:59	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #godotengine
+2019-10-22 11:53:15	<--	MuAdd (a5e7af44@165.231.175.68) has quit (Remote host closed the connection)
+2019-10-22 11:54:51	<--	mrcdk (~mrcdk@180-200-39-46.usuarios.innovasur.com) has quit (Read error: Connection reset by peer)
+2019-10-22 11:56:03	<--	ycjung (~hallabada@141.223.107.7) has quit (Quit: WeeChat 2.6)
+2019-10-22 11:56:38	-->	ycjung (~hallabada@141.223.107.7) has joined #godotengine
+2019-10-22 12:01:02	-->	MuAdd (a5e7af44@165.231.175.68) has joined #godotengine
+2019-10-22 12:07:28	-->	mrcdk (~mrcdk@180-200-39-46.usuarios.innovasur.com) has joined #godotengine
+2019-10-22 12:32:14	-->	Jyhem_laptop (~libs@2a01:cb10:294:aa00:113c:1694:a60b:1d18) has joined #godotengine
+2019-10-22 12:32:53	-->	Uhfgood (~Uhfgood@2603:9000:b10b:c00:b888:f84:ae7:f76c) has joined #godotengine
+2019-10-22 12:33:10	<--	gef3233 (c1910ec2@193.145.14.194) has quit (Remote host closed the connection)
+2019-10-22 12:52:53	-->	TheRockPenguin (uid303691@gateway/web/irccloud.com/x-mkxxugdrigqrpkdp) has joined #godotengine
+2019-10-22 13:09:47	bojidar_bg	gef3233: if you can wrap the library so that all system access operations (reading/writing files, etc.) pass through Godot, it should work on all platforms Godot supports
+2019-10-22 13:09:52	bojidar_bg	otherwise, you might need to have things such as a POSIX adaptation layer for windows
+2019-10-22 13:10:21	bojidar_bg	note that you have to compile the GDNative library for each of the platforms regardless of what you do, so if doesn't compile, it won't work either
+2019-10-22 13:10:22	bojidar_bg	(alright, Android and Linux might share the .so file, but windows would require a .dll)
+2019-10-22 13:14:04	DarkUranium	Compiling grep just for that sounds like both overkill *and* a bad idea, though.
+2019-10-22 13:14:15	DarkUranium	Plus there's potentially the license issue (depending on what you're doing)
+2019-10-22 13:15:00	DarkUranium	What you probably want is something like libpcre. Or one of a myriad of other regex libraries.
+2019-10-22 13:19:02	yuken	Huh, I wonder why I can't build Godot...
+2019-10-22 13:20:41	yuken	Seems like my error is "Project/ProjectExtensions.cs(2,7): error CS0246: The type or namespace name `DotNet' could not be found. Are you missing an assembly reference? [/home/jason/godot/modules/mono/editor/GodotSharpTools/GodotSharpTools.csproj]" when trying to compile 3.1 with mono, huh.
+2019-10-22 13:24:02	-->	biliogadafr (~bilio@46.53.248.20) has joined #godotengine
+2019-10-22 13:26:51	<--	maveerik (~1@mm-15-34-85-93.mgts.dynamic.pppoe.byfly.by) has quit (Ping timeout: 240 seconds)
+2019-10-22 13:28:25	-->	wyattb (~wyattb@pool-100-8-240-65.nwrknj.fios.verizon.net) has joined #godotengine
+2019-10-22 13:28:35	-->	Technipion (~Thunderbi@p200300F933C29DA2ECDCCB230C42149F.dip0.t-ipconnect.de) has joined #godotengine
+2019-10-22 13:29:13	yuken	Huh, looks like it considered the DotNet.Glob package it has, but does not have... a "valid identity"
+2019-10-22 13:29:19	-->	wyattb_ (~wyattb@199.58.187.144) has joined #godotengine
+2019-10-22 13:30:37	-->	kubecz3k_irc (~kubecz3k_@37-128-24-1.adsl.inetia.pl) has joined #godotengine
+2019-10-22 13:30:53	<--	rople (rople@gateway/vpn/privateinternetaccess/rople) has quit (Ping timeout: 265 seconds)
+2019-10-22 13:31:13	Technipion	Guys I have a "brush" (3D model) and a "canvas" (plane) in a 3D Godot scene. The brush can be controlled by the user. How can I make the brush "draw" some paint on the canvas? Any ideas?
+2019-10-22 13:32:59	<--	wyattb (~wyattb@pool-100-8-240-65.nwrknj.fios.verizon.net) has quit (Ping timeout: 250 seconds)
+2019-10-22 13:38:00	yuken	Looks like copying the provided DotNet.Glob dll to Releases in modules/mono/editor/GodotSharpTools and into one of my system library folders did the trick, but that's kinda... confusing if that's a problem on my end, or something screwed up with the 3.1 branch on GitHub.
+2019-10-22 13:41:14	wyattb_	Technipion:  I am sure you googled something like:  godot drawing on canvas with "brush". No answers here?
+2019-10-22 13:41:54	-->	atari83 (~Thunderbi@37.202.237.5) has joined #godotengine
+2019-10-22 13:42:31	Technipion	wyattb_: I only found 2D stuff, but my problem is in 3D.
+2019-10-22 13:43:02	DarkUranium	Only sort of. You can't put 3D stuff into 2D. You need to "make" it 2D one way or another (i.e. project).
+2019-10-22 13:43:24	DarkUranium	This is then the same general technique as is used for shadow mapping.
+2019-10-22 13:44:45	-->	maveerik (~1@mm-15-34-85-93.mgts.dynamic.pppoe.byfly.by) has joined #godotengine
+2019-10-22 13:46:40	<--	alpha_one_x86 (~user@2803:1920::2:10) has quit (Quit: Leaving)
+2019-10-22 13:50:09	Technipion	DarkUranium: I am looking for something like the Dynamic Paint modifier in Blender. Can I abuse shadow mapping for that?
+2019-10-22 13:50:40	-->	Zeioth (~Zeioth@92.59.21.18) has joined #godotengine
+2019-10-22 13:50:42	<--	Salabasama (~mustafa@68-118-84-232.dhcp.kgpt.tn.charter.com) has quit (Ping timeout: 265 seconds)
+2019-10-22 13:53:42	Technipion	DarkUranium: Nevermind I found something useful https://github.com/Bauxitedev/godot-texture-painter
+2019-10-22 13:54:06	DarkUranium	Neat.
+2019-10-22 13:54:38	DarkUranium	And I don't know enough about Godot to answer the question. In fact, I know very little about it --- but I do know a thing or two about graphics dev.
+2019-10-22 14:00:46	-->	MoosePrime (~moose@207.44.22.117) has joined #godotengine
+2019-10-22 14:03:56	<--	ycjung (~hallabada@141.223.107.7) has quit (Quit: WeeChat 2.6)
+2019-10-22 14:15:58	<--	Technipion (~Thunderbi@p200300F933C29DA2ECDCCB230C42149F.dip0.t-ipconnect.de) has quit (Quit: Technipion)
+2019-10-22 14:17:44	-->	Yeldham (~michael@138.118.198.37) has joined #godotengine
+2019-10-22 14:18:03	-->	ycjung (~hallabada@141.223.107.7) has joined #godotengine
+2019-10-22 14:28:23	-->	bomb (~bomb@gateway/tor-sasl/bomb) has joined #godotengine
+2019-10-22 14:37:20	-->	YeldhamDev (michael@gateway/vpn/protonvpn/yeldham) has joined #godotengine
+2019-10-22 14:37:35	<--	Yeldham (~michael@138.118.198.37) has quit (Ping timeout: 265 seconds)
+2019-10-22 14:38:38	<--	chargen (~chargen@2a02:2e02:9ee0:7100:f463:a573:8f41:c96e) has quit (Ping timeout: 245 seconds)
+2019-10-22 14:41:28	-->	chargen (~chargen@2a02:2e02:9ee0:7100:f463:a573:8f41:c96e) has joined #godotengine
+2019-10-22 15:02:44	yuken	Huh, I built Godot myself and it appears to be crashing, that's... odd.
+2019-10-22 15:05:07	-->	regakakobigman (~regakakob@c-73-174-187-176.hsd1.pa.comcast.net) has joined #godotengine
+2019-10-22 15:07:26	<--	polisummer[m] (polisummer@gateway/shell/matrix.org/x-lmjzkkapwyjwbnke) has quit (Remote host closed the connection)
+2019-10-22 15:07:26	<--	HER0_01 (her0matrix@gateway/shell/matrix.org/x-rwbnymdizqdawhzq) has quit (Remote host closed the connection)
+2019-10-22 15:07:27	<--	zicho[m] (zichomatri@gateway/shell/matrix.org/x-qbtxqyawymwtmvpf) has quit (Remote host closed the connection)
+2019-10-22 15:07:30	<--	LionUCS[m] (lionucsmat@gateway/shell/matrix.org/x-mgzvcgqrqszsuzrz) has quit (Remote host closed the connection)
+2019-10-22 15:07:30	<--	OuTopos[m] (outoposmat@gateway/shell/matrix.org/x-vdiklbrvvudpipxx) has quit (Remote host closed the connection)
+2019-10-22 15:07:30	<--	nolan_d (nolanthewo@gateway/shell/matrix.org/x-lfikweupolwsfdap) has quit (Write error: Connection reset by peer)
+2019-10-22 15:07:31	<--	Hugo[m] (hugomatrix@gateway/shell/matrix.org/x-iabdswkchlronsea) has quit (Write error: Connection reset by peer)
+2019-10-22 15:07:32	<--	IronicallySerio (ironically@gateway/shell/matrix.org/x-yvwuplhebwnjaedq) has quit (Remote host closed the connection)
+2019-10-22 15:07:32	<--	Cobra[scoen_SCO] (scotsleedp@gateway/shell/matrix.org/x-bcbzdkvvtzlynxba) has quit (Remote host closed the connection)
+2019-10-22 15:07:33	<--	nilsirl[m] (nilsirlmat@gateway/shell/matrix.org/x-frtkssyahmsazggk) has quit (Write error: Connection reset by peer)
+2019-10-22 15:07:35	<--	Xananax[m] (xananaxmut@gateway/shell/matrix.org/x-wpwgqelkoxcppkby) has quit (Write error: Connection reset by peer)
+2019-10-22 15:07:35	<--	Mux213 (mux213matr@gateway/shell/matrix.org/x-gduxwystoizybgbn) has quit (Write error: Connection reset by peer)
+2019-10-22 15:07:36	<--	fales[m] (falesmatri@gateway/shell/matrix.org/x-oambedvlmqgbrjsq) has quit (Write error: Connection reset by peer)
+2019-10-22 15:07:37	<--	noonereally[m] (noonereall@gateway/shell/matrix.org/x-byjvbqbkxvgolrsx) has quit (Write error: Connection reset by peer)
+2019-10-22 15:07:39	<--	Groud (groudmatri@gateway/shell/matrix.org/x-euellueyhjfgseko) has quit (Read error: Connection reset by peer)
+2019-10-22 15:07:41	<--	iamactuallycthul (iamactuall@gateway/shell/matrix.org/x-ybfyltbbeqdudvbi) has quit (Remote host closed the connection)
+2019-10-22 15:07:42	<--	dreamsComeTrue[m (dreamscome@gateway/shell/matrix.org/x-oqrdelecsgsyupcq) has quit (Remote host closed the connection)
+2019-10-22 15:07:43	<--	Alexwbc[m] (alexwbcmat@gateway/shell/matrix.org/x-bcfoofmevhommwnv) has quit (Read error: Connection reset by peer)
+2019-10-22 15:07:43	<--	imadlo (czlowiekim@gateway/shell/matrix.org/x-ciqjkcusgpstixie) has quit (Read error: Connection reset by peer)
+2019-10-22 15:07:43	<--	qbieshay (qbieshayma@gateway/shell/matrix.org/x-rewxugmjoeccobfn) has quit (Write error: Connection reset by peer)
+2019-10-22 15:07:45	<--	Hinsbart[m] (hinsbartma@gateway/shell/matrix.org/x-slcxpfznheumbwbn) has quit (Remote host closed the connection)
+2019-10-22 15:07:45	<--	Xrayez[m] (xrayezmatr@gateway/shell/matrix.org/x-giyeqqndpdsmowct) has quit (Remote host closed the connection)
+2019-10-22 15:07:46	<--	cuibonobo (cuibonobom@gateway/shell/matrix.org/x-dcgbczuqjwqnesaf) has quit (Write error: Connection reset by peer)
+2019-10-22 15:07:48	<--	nigre-dique[m] (nigre-diqu@gateway/shell/matrix.org/x-ujodwenyqbkkdsdw) has quit (Read error: Connection reset by peer)
+2019-10-22 15:07:48	<--	wabadump[m] (wabadumpma@gateway/shell/matrix.org/x-aeetlmwfcnibezrx) has quit (Remote host closed the connection)
+2019-10-22 15:07:48	<--	ajweeks[m] (ajweeksmat@gateway/shell/matrix.org/x-iiqchlwqxlmphhib) has quit (Read error: Connection reset by peer)
+2019-10-22 15:07:49	<--	raymoo[m] (raymoomatr@gateway/shell/matrix.org/x-kxpfinkuzgtnsfan) has quit (Remote host closed the connection)
+2019-10-22 15:07:49	<--	M18[m] (apaolillom@gateway/shell/matrix.org/x-zxiowweysdbqhsii) has quit (Remote host closed the connection)
+2019-10-22 15:07:49	<--	Dandellion[m] (dandellion@gateway/shell/matrix.org/x-rrnabeeekiypjzog) has quit (Remote host closed the connection)
+2019-10-22 15:07:49	<--	azagaya (pablofonov@gateway/shell/matrix.org/x-qygeqjirtbzwpenj) has quit (Remote host closed the connection)
+2019-10-22 15:07:50	<--	kubecz3k[m] (kubecz3kma@gateway/shell/matrix.org/x-yarxhcrdrkbriatz) has quit (Remote host closed the connection)
+2019-10-22 15:07:50	<--	minraws (swarnimmat@gateway/shell/matrix.org/x-lzmtxniuuzoyidsd) has quit (Read error: Connection reset by peer)
+2019-10-22 15:07:50	<--	atorresm (atorresmma@gateway/shell/matrix.org/x-agasgfqxhgvmvstu) has quit (Read error: Connection reset by peer)
+2019-10-22 15:07:51	<--	Matrix8967[m] (matrix8967@gateway/shell/matrix.org/x-lqqbukxankkiapbh) has quit (Remote host closed the connection)
+2019-10-22 15:07:51	<--	bruvzg[m] (bruvzgmatr@gateway/shell/matrix.org/x-urzlkoppdkghzlfr) has quit (Write error: Connection reset by peer)
+2019-10-22 15:07:51	<--	fry-[m] (fry-matrix@gateway/shell/matrix.org/x-jcmegbmsiuzfnqay) has quit (Write error: Connection reset by peer)
+2019-10-22 15:07:52	<--	pixeltrik[m] (pixeltrikm@gateway/shell/matrix.org/x-pvdponpaprvaqqkb) has quit (Write error: Broken pipe)
+2019-10-22 15:07:53	<--	danielp3344 (danielp334@gateway/shell/matrix.org/x-xujuyafhbpwhgwvr) has quit (Remote host closed the connection)
+2019-10-22 15:07:53	<--	alexholly[m] (alexhollym@gateway/shell/matrix.org/x-qtlbaizoveyjbbuv) has quit (Write error: Connection reset by peer)
+2019-10-22 15:07:54	<--	iriodus[m] (iriodusmat@gateway/shell/matrix.org/x-nwmlqnvpnqvayzon) has quit (Remote host closed the connection)
+2019-10-22 15:07:54	<--	cobradabest[m] (fiakuroama@gateway/shell/matrix.org/x-pbzbgnsqplywkzyc) has quit (Remote host closed the connection)
+2019-10-22 15:07:55	<--	rjBadger (rjbadgerma@gateway/shell/matrix.org/x-vzgfmahrjdmleobn) has quit (Read error: Connection reset by peer)
+2019-10-22 15:07:55	<--	rxlecky[m] (rxlmatrixo@gateway/shell/matrix.org/x-nousechitsbbzmaa) has quit (Remote host closed the connection)
+2019-10-22 15:07:55	<--	Lief[m] (liefswanso@gateway/shell/matrix.org/x-zefppitehtdisoki) has quit (Remote host closed the connection)
+2019-10-22 15:07:55	<--	andnovar[m] (andnovarub@gateway/shell/matrix.org/x-bkatvkkplklaqylf) has quit (Remote host closed the connection)
+2019-10-22 15:07:56	<--	anoa (andrewmamo@gateway/shell/matrix.org/x-sgsusapurxilgzim) has quit (Write error: Connection reset by peer)
+2019-10-22 15:07:56	<--	Przmk[m] (soifmatrix@gateway/shell/matrix.org/x-lsoatmfzwjtnsbvp) has quit (Remote host closed the connection)
+2019-10-22 15:07:56	<--	theduriel[m] (thedurielm@gateway/shell/matrix.org/x-yvvczekswntxavxa) has quit (Write error: Connection reset by peer)
+2019-10-22 15:07:57	<--	karroffel_irc (karroffelc@gateway/shell/matrix.org/x-qscxehkbqdnmsgel) has quit (Write error: Connection reset by peer)
+2019-10-22 15:07:58	<--	anthyg[m] (anthygamor@gateway/shell/matrix.org/x-nbooslxunfxzvlef) has quit (Write error: Connection reset by peer)
+2019-10-22 15:07:58	<--	Saracen[m] (saracenmat@gateway/shell/matrix.org/x-zyqchgdtiebrdtjc) has quit (Write error: Connection reset by peer)
+2019-10-22 15:07:58	<--	neospark314[m] (neospark31@gateway/shell/matrix.org/x-tdwcdszuwpyvgrzb) has quit (Write error: Connection reset by peer)
+2019-10-22 15:07:58	<--	eoinoneill[m] (theyokaima@gateway/shell/matrix.org/x-wjjwifpdwtyargep) has quit (Write error: Connection reset by peer)
+2019-10-22 15:07:58	<--	Alzter[m] (alztermatr@gateway/shell/matrix.org/x-wslauznfnebhwyff) has quit (Write error: Connection reset by peer)
+2019-10-22 15:07:59	<--	homer666[m] (homer666ma@gateway/shell/matrix.org/x-dgjqkclfwquhguew) has quit (Remote host closed the connection)
+2019-10-22 15:07:59	<--	djiamnot[m] (djiamnotma@gateway/shell/matrix.org/x-gaohejjixvsehjtx) has quit (Remote host closed the connection)
+2019-10-22 15:07:59	<--	minielchi[m] (minielchim@gateway/shell/matrix.org/x-auzetmymvjrgcueg) has quit (Remote host closed the connection)
+2019-10-22 15:08:00	<--	bojidar_bg (bojidar-bg@gateway/shell/matrix.org/x-yjnoylperxfjjjsh) has quit (Remote host closed the connection)
+2019-10-22 15:08:00	<--	lertsenem (lertsenemm@gateway/shell/matrix.org/x-wkockvyjkqlmpjpi) has quit (Read error: Connection reset by peer)
+2019-10-22 15:08:00	<--	Tobbi[m] (tobbimatri@gateway/shell/matrix.org/x-wmcxqogldkpzplro) has quit (Remote host closed the connection)
+2019-10-22 15:08:00	<--	albfan[m] (albfanmatr@gateway/shell/matrix.org/x-gtnmzgzognnqgxle) has quit (Read error: Connection reset by peer)
+2019-10-22 15:08:00	<--	TMM (tmmmatrixo@fsf/member/pdpc.professional.tmm) has quit (Remote host closed the connection)
+2019-10-22 15:08:00	<--	Paulb23 (paulb23mat@gateway/shell/matrix.org/x-adsmkbinmfimaazr) has quit (Remote host closed the connection)
+2019-10-22 15:08:00	<--	pablodp606[m] (pablodp606@gateway/shell/matrix.org/x-yppxyjjzupkrwigm) has quit (Remote host closed the connection)
+2019-10-22 15:10:02	<--	Sipaha (~Sipaha@static-user-46-236-156-184.tomtelnet.ru) has quit (Remote host closed the connection)
+2019-10-22 15:11:53	-->	Sipaha (~Sipaha@static-user-46-236-156-184.tomtelnet.ru) has joined #godotengine
+2019-10-22 15:28:19	wyattb_	Anyone here using Limechat IRC? I am trying to figure out how to include the username when responding to them in the message
+2019-10-22 15:28:52	bomb	you type it
+2019-10-22 15:28:58	wyattb_	Of course  I can use copy/paste. But is there shortcut
+2019-10-22 15:29:15	bomb	you can type first few letters and press <tab> key
+2019-10-22 15:29:30	wyattb_	bomb: you are the bomb!
+2019-10-22 15:29:39	bomb	:)
+2019-10-22 15:30:31	<--	kubecz3k_irc (~kubecz3k_@37-128-24-1.adsl.inetia.pl) has quit (Quit: kubecz3k_irc)
+2019-10-22 15:30:56	-->	kubecz3k_irc (~kubecz3k_@37-128-24-1.adsl.inetia.pl) has joined #godotengine
+2019-10-22 15:31:09	-->	dddddd (~dddddd@unaffiliated/dddddd) has joined #godotengine
+2019-10-22 15:31:56	DarkUranium	wyattb_, that works in ... literally every client I've ever tried, BTW (just in case you ever switch)
+2019-10-22 15:32:05	DarkUranium	And I've tried a ton.
+2019-10-22 15:32:16	wyattb_	Thanks DarkUranium
+2019-10-22 15:33:09	bomb	dahlia is right
+2019-10-22 15:33:33	-->	biliogadafr1 (~bilio@46.53.248.20) has joined #godotengine
+2019-10-22 15:34:05	<--	saltpepp3r (~saltpepp3@91.207.173.118) has quit (Ping timeout: 268 seconds)
+2019-10-22 15:35:06	<--	kubecz3k_irc (~kubecz3k_@37-128-24-1.adsl.inetia.pl) has quit (Client Quit)
+2019-10-22 15:35:11	<--	biliogadafr (~bilio@46.53.248.20) has quit (Ping timeout: 276 seconds)
+2019-10-22 15:35:20	-->	kubecz3k_irc (~kubecz3k_@37-128-24-1.adsl.inetia.pl) has joined #godotengine
+2019-10-22 15:35:46	-->	saltpepp3r (~saltpepp3@91.207.173.118) has joined #godotengine
+2019-10-22 15:38:05	<--	ycjung (~hallabada@141.223.107.7) has quit (Quit: WeeChat 2.6)
+2019-10-22 15:46:11	<--	Sipaha (~Sipaha@static-user-46-236-156-184.tomtelnet.ru) has quit (Quit: Going offline, see ya! 8=з)
+2019-10-22 16:01:53	atari83	https://www.youtube.com/watch?v=dUt3L3fLFt4
+2019-10-22 16:02:27	-->	psymin (~psymin@69.146.8.222) has joined #godotengine
+2019-10-22 16:03:13	<--	biliogadafr1 (~bilio@46.53.248.20) has quit (Ping timeout: 245 seconds)
+2019-10-22 16:06:11	-->	kubecz3k_irc_ (~kubecz3k_@159-205-72-128.adsl.inetia.pl) has joined #godotengine
+2019-10-22 16:06:45	<--	kubecz3k_irc_ (~kubecz3k_@159-205-72-128.adsl.inetia.pl) has quit (Client Quit)
+2019-10-22 16:08:00	<--	kubecz3k_irc (~kubecz3k_@37-128-24-1.adsl.inetia.pl) has quit (Ping timeout: 268 seconds)
+2019-10-22 16:09:31	<--	alexandre9099 (~alexandre@unaffiliated/alexandre9099) has quit (Quit: ZNC 1.7.5 - https://znc.in)
+2019-10-22 16:11:54	-->	alexandre9099 (~alexandre@unaffiliated/alexandre9099) has joined #godotengine
+2019-10-22 16:14:15	<--	wyattb_ (~wyattb@199.58.187.144) has quit (Remote host closed the connection)
+2019-10-22 16:16:25	yuken	Hmm. With tiles here, I'm noticing lines around the tiles, can't figure out why.
+2019-10-22 16:21:03	-->	kimamb (~kimamb__@62.97.173.88) has joined #godotengine
+2019-10-22 16:45:27	<--	MuAdd (a5e7af44@165.231.175.68) has quit (Ping timeout: 260 seconds)
+2019-10-22 16:54:29	<--	paramite (paramite@nat/redhat/x-bwbmkmfrglozmywp) has quit (Ping timeout: 276 seconds)
+2019-10-22 16:55:35	yuken	Okay, so my... CollisionPolygon2D seems to be all sorts of messed up, despite it just being a square? What the heck is this now.
+2019-10-22 16:55:50	yuken	"Vector2[] TempVecs = {new Vector2(0f, 0f), new Vector2(0f, 32f), new Vector2(32f, 32f), new Vector2(32f, 0f)};" should just be a 32x32 square, no?
+2019-10-22 16:56:50	yuken	Unless... I need to shift it to eh left because it's starting out from my center...
+2019-10-22 17:00:53	-->	wyattb (~wyattb@192.200.24.12) has joined #godotengine
+2019-10-22 17:02:36	-->	Kelzorz (~Kelzorz@67.6.16.88) has joined #godotengine
+2019-10-22 17:15:48	-->	Roughy (~mdaw45ns@188.126.200.178) has joined #godotengine
+2019-10-22 17:24:53	<--	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has quit (Quit: WeeChat 1.9.1)
+2019-10-22 17:36:25	<--	mrcdk (~mrcdk@180-200-39-46.usuarios.innovasur.com) has quit (Read error: Connection reset by peer)
+2019-10-22 17:42:29	<--	TheRockPenguin (uid303691@gateway/web/irccloud.com/x-mkxxugdrigqrpkdp) has quit (Quit: Connection closed for inactivity)
+2019-10-22 17:45:21	-->	biliogadafr (~bilio@46.53.248.20) has joined #godotengine
+2019-10-22 17:46:36	<--	daela__ (~daela@24-217-251-202.dhcp.stls.mo.charter.com) has quit (Quit: Leaving)
+2019-10-22 17:46:43	-->	ignaloidas (~ignaloida@158.129.11.9) has joined #godotengine
+2019-10-22 17:46:51	-->	daela (~daela@24-217-251-202.dhcp.stls.mo.charter.com) has joined #godotengine
+2019-10-22 17:51:27	-->	Romlok (~mel@26.51-175-167.customer.lyse.net) has joined #godotengine
+2019-10-23 10:06:11	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #godotengine
+2019-10-23 10:06:11	--	Topic for #godotengine is "Godot Engine | https://godotengine.org | GitHub: https://github.com/godotengine/godot | Docs: https://docs.godotengine.org | Discord: https://discord.gg/zH7NUgz | Don't ask if you can ask, just ask! :) | Interested in engine development? Join #godotengine-devel | Want to help with the documentation? Join #godotengine-doc"
+2019-10-23 10:06:11	--	Topic set by Calinou (~quassel@fsf/member/calinou) on Mon, 25 Feb 2019 00:45:33
+2019-10-23 10:06:11	--	Channel #godotengine: 253 nicks (1 op, 0 voices, 252 normals)
+2019-10-23 10:06:24	--	Channel created on Tue, 11 Feb 2014 08:43:18
+2019-10-23 10:29:07	-->	Overkill (~overkill9@69-165-200-34.cable.teksavvy.com) has joined #godotengine
+2019-10-23 10:32:15	<--	Overkilll (~overkill9@69-165-200-34.cable.teksavvy.com) has quit (Ping timeout: 250 seconds)
+2019-10-23 10:44:04	-->	thc202 (~thc202@unaffiliated/thc202) has joined #godotengine
+2019-10-23 11:03:01	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #godotengine
+2019-10-23 11:03:01	--	Topic for #godotengine is "Godot Engine | https://godotengine.org | GitHub: https://github.com/godotengine/godot | Docs: https://docs.godotengine.org | Discord: https://discord.gg/zH7NUgz | Don't ask if you can ask, just ask! :) | Interested in engine development? Join #godotengine-devel | Want to help with the documentation? Join #godotengine-doc"
+2019-10-23 11:03:01	--	Topic set by Calinou (~quassel@fsf/member/calinou) on Mon, 25 Feb 2019 00:45:33
+2019-10-23 11:03:01	--	Channel #godotengine: 255 nicks (1 op, 0 voices, 254 normals)
+2019-10-23 11:03:13	--	Channel created on Tue, 11 Feb 2014 08:43:18
+2019-10-23 11:06:22	-->	greedom (~greedom@2001:16b8:2e03:cf00:eee4:f0ee:4ae5:4698) has joined #godotengine
+2019-10-23 11:13:33	-->	Overkilll (~overkill9@69-165-200-34.cable.teksavvy.com) has joined #godotengine
+2019-10-23 11:14:03	<--	Overkill (~overkill9@69-165-200-34.cable.teksavvy.com) has quit (Disconnected by services)
+2019-10-23 11:32:15	-->	maveerik (~1@93.84.162.104) has joined #godotengine
+2019-10-23 11:49:14	-->	dddddd (~dddddd@unaffiliated/dddddd) has joined #godotengine
+2019-10-23 11:56:58	<--	greedom (~greedom@2001:16b8:2e03:cf00:eee4:f0ee:4ae5:4698) has quit (Quit: Konversation terminated!)
+2019-10-23 11:57:27	-->	greedom (~greedom@2001:16b8:2e03:cf00:eee4:f0ee:4ae5:4698) has joined #godotengine
+2019-10-23 12:04:10	<--	greedom (~greedom@2001:16b8:2e03:cf00:eee4:f0ee:4ae5:4698) has quit (Quit: Konversation terminated!)
+2019-10-23 12:05:01	-->	greedom (~greedom@2001:16b8:2e03:cf00:eee4:f0ee:4ae5:4698) has joined #godotengine
+2019-10-23 12:09:34	<--	Ijatsu (6d00c7cf@gateway/web/cgi-irc/kiwiirc.com/ip.109.0.199.207) has quit (Remote host closed the connection)
+2019-10-23 12:11:25	-->	Technipion (~Thunderbi@p200300F933C29DACC1D202D74BFD5CB2.dip0.t-ipconnect.de) has joined #godotengine
+2019-10-23 12:29:11	-->	Uhfgood (~Uhfgood@2603:9000:b10b:c00:8d84:1188:fd33:6146) has joined #godotengine
+2019-10-23 12:59:07	<--	Technipion (~Thunderbi@p200300F933C29DACC1D202D74BFD5CB2.dip0.t-ipconnect.de) has quit (Quit: Technipion)
+2019-10-23 13:07:13	--	Cahaan_ is now known as Cahaan
+2019-10-23 13:14:13	-->	bomb (~bomb@gateway/tor-sasl/bomb) has joined #godotengine
+2019-10-23 13:19:07	-->	Yeldham (~michael@138.118.198.37) has joined #godotengine
+2019-10-23 13:27:07	-->	dilling (~dilling@89.150.129.195) has joined #godotengine
+2019-10-23 13:34:50	-->	Sipaha (~Sipaha@46.236.156.184) has joined #godotengine
+2019-10-23 13:43:13	<--	greedom (~greedom@2001:16b8:2e03:cf00:eee4:f0ee:4ae5:4698) has quit (Remote host closed the connection)
+2019-10-23 13:43:57	-->	greedom (~greedom@2001:16b8:2e03:cf00:eee4:f0ee:4ae5:4698) has joined #godotengine
+2019-10-23 14:06:29	-->	atari83 (~Thunderbi@37.202.237.5) has joined #godotengine
+2019-10-23 14:13:33	<--	greedom (~greedom@2001:16b8:2e03:cf00:eee4:f0ee:4ae5:4698) has quit (Quit: Konversation terminated!)
+2019-10-23 14:14:25	-->	greedom (~greedom@2001:16b8:2e03:cf00:eee4:f0ee:4ae5:4698) has joined #godotengine
+2019-10-23 14:18:11	-->	ignaloidas (~ignaloida@158.129.26.113) has joined #godotengine
+2019-10-23 14:28:35	-->	goiko (~goiko@p5DEB7DB1.dip0.t-ipconnect.de) has joined #godotengine
+2019-10-23 14:28:35	<--	goiko (~goiko@p5DEB7DB1.dip0.t-ipconnect.de) has quit (Changing host)
+2019-10-23 14:28:35	-->	goiko (~goiko@unaffiliated/goiko) has joined #godotengine
+2019-10-23 14:30:11	<--	Yeldham (~michael@138.118.198.37) has quit (Ping timeout: 265 seconds)
+2019-10-23 14:30:12	-->	YeldhamDev (michael@gateway/vpn/protonvpn/yeldham) has joined #godotengine
+2019-10-23 15:00:26	<--	CGxEiji (~Thunderbi@130.158.166.128) has quit (Read error: Connection reset by peer)
+2019-10-23 15:03:02	-->	nobi081 (~norbert@2a02:8071:228a:5400:9d80:a25d:9f47:62bf) has joined #godotengine
+2019-10-23 15:03:40	<--	b1101 (~b1101@fsf/member/b1101) has quit (Remote host closed the connection)
+2019-10-23 15:05:09	-->	regakakobigman (~regakakob@c-73-174-187-176.hsd1.pa.comcast.net) has joined #godotengine
+2019-10-23 15:05:38	nobi081	how can I set collision shapes for single tiles when they are part of an autotile set?
+2019-10-23 15:10:31	<--	bomb (~bomb@gateway/tor-sasl/bomb) has quit (Quit: ...)
+2019-10-23 15:13:24	-->	b1101 (~b1101@fsf/member/b1101) has joined #godotengine
+2019-10-23 15:31:55	<--	ignaloidas (~ignaloida@158.129.26.113) has quit (Remote host closed the connection)
+2019-10-23 15:32:19	-->	ignaloidas (~ignaloida@158.129.26.113) has joined #godotengine
+2019-10-23 15:45:57	<--	ignaloidas (~ignaloida@158.129.26.113) has quit (Ping timeout: 240 seconds)
+2019-10-23 15:46:19	-->	ignaloidas (~ignaloida@158.129.26.113) has joined #godotengine
+2019-10-23 15:55:01	<--	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has quit (Quit: WeeChat 1.9.1)
+2019-10-23 15:55:48	-->	Roughy (~mdaw45ns@188.126.200.178) has joined #godotengine
+2019-10-23 16:00:52	-->	wyattb_ (wyattb@gateway/vpn/nordvpn/wyattb) has joined #godotengine
+2019-10-23 16:02:46	-->	MoosePrime (~moose@207.44.22.117) has joined #godotengine
+2019-10-23 16:05:49	-->	psymin (~psymin@69.146.8.222) has joined #godotengine
+2019-10-23 16:15:35	-->	kimamb (~kimamb__@62.97.173.88) has joined #godotengine
+2019-10-23 16:15:58	-->	Max69400 (5c9a47cd@lputeaux-657-1-81-205.w92-154.abo.wanadoo.fr) has joined #godotengine
+2019-10-23 16:27:18	<--	Max69400 (5c9a47cd@lputeaux-657-1-81-205.w92-154.abo.wanadoo.fr) has quit (Remote host closed the connection)
+2019-10-23 16:33:48	-->	Yeldham (michael@gateway/vpn/protonvpn/yeldham) has joined #godotengine
+2019-10-23 16:33:55	<--	YeldhamDev (michael@gateway/vpn/protonvpn/yeldham) has quit (Ping timeout: 265 seconds)
+2019-10-23 16:48:51	-->	capefeather (~capefeath@tnhlon4048w-lp140-06-70-29-102-236.dsl.bell.ca) has joined #godotengine
+2019-10-23 17:07:26	<--	greedom (~greedom@2001:16b8:2e03:cf00:eee4:f0ee:4ae5:4698) has quit (Quit: Konversation terminated!)
+2019-10-23 17:13:27	-->	Romlok (~mel@26.51-175-167.customer.lyse.net) has joined #godotengine
+2019-10-23 17:18:07	<--	Sipaha (~Sipaha@46.236.156.184) has quit (Quit: Going offline, see ya! 8=з)
+2019-10-23 17:19:57	-->	cautiouspotato (~cautiousp@115.99.16.93) has joined #godotengine
+2019-10-23 17:24:26	<--	cautiouspotato (~cautiousp@115.99.16.93) has quit (Client Quit)
+2019-10-23 17:29:02	-->	bomb (~bomb@gateway/tor-sasl/bomb) has joined #godotengine
+2019-10-23 17:35:11	<--	thc202 (~thc202@unaffiliated/thc202) has quit (Ping timeout: 276 seconds)
+2019-10-23 17:49:30	<--	Overkilll (~overkill9@69-165-200-34.cable.teksavvy.com) has quit (Read error: Connection reset by peer)
+2019-10-23 17:50:31	<--	chargen (~chargen@2a02:2e02:9ee0:7100:f463:a573:8f41:c96e) has quit (Quit: BBL)
+2019-10-23 17:55:01	-->	Overkill (~overkill9@69-165-200-34.cable.teksavvy.com) has joined #godotengine
+2019-10-23 17:58:20	-->	zingo_ (uid365808@gateway/web/irccloud.com/x-yqbvynxzdhakoodg) has joined #godotengine
+2019-10-23 18:01:37	<--	mtj_ (mason@2400:8902::f03c:91ff:fe93:b7f1) has quit (Quit: http://quassel-irc.org - Chat comfortably. Anywhere.)
+2019-10-24 10:39:40	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #godotengine
+2019-10-24 10:39:40	--	Topic for #godotengine is "Godot Engine | https://godotengine.org | GitHub: https://github.com/godotengine/godot | Docs: https://docs.godotengine.org | Discord: https://discord.gg/zH7NUgz | Don't ask if you can ask, just ask! :) | Interested in engine development? Join #godotengine-devel | Want to help with the documentation? Join #godotengine-doc"
+2019-10-24 10:39:40	--	Topic set by Calinou (~quassel@fsf/member/calinou) on Mon, 25 Feb 2019 00:45:33
+2019-10-24 10:39:40	--	Channel #godotengine: 255 nicks (1 op, 0 voices, 254 normals)
+2019-10-24 10:39:52	--	Channel created on Tue, 11 Feb 2014 08:43:18
+2019-10-24 10:51:46	-->	maveerik (~1@93.84.162.104) has joined #godotengine
+2019-10-24 10:57:20	<--	Razor34 (56fd83f2@lfbn-1-1264-242.w86-253.abo.wanadoo.fr) has quit (Remote host closed the connection)
+2019-10-24 11:14:27	<--	Tobbi (~Tobbi@supertux/tobbi) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-10-24 11:15:08	-->	sickbrick (8d8a37dc@141-138-55-220.dsl.iskon.hr) has joined #godotengine
+2019-10-24 11:15:24	<--	sickbrick (8d8a37dc@141-138-55-220.dsl.iskon.hr) has quit (Remote host closed the connection)
+2019-10-24 11:19:35	-->	hamishtpb (~weechat@2001:8b0:cbdb:84b6:6ab8:dd2c:b6c:8b4a) has joined #godotengine
+2019-10-24 11:20:07	jaggz	https://www.youtube.com/watch?v=ioAZgnSh7X4 Blender Conference 2019 - LIVE - Livestream
+2019-10-24 11:34:36	<--	houkime_ (~houkime@gateway/tor-sasl/houkime) has quit (Ping timeout: 260 seconds)
+2019-10-24 11:39:40	-->	bobtest (53a2f0de@83-162-240-222.ip.xs4all.nl) has joined #godotengine
+2019-10-24 12:04:36	<--	Hinsbart[m] (hinsbartma@gateway/shell/matrix.org/x-yfbwrblydqzmhzmb) has left #godotengine ("Kicked by @appservice-irc:matrix.org  : 30 day idle timeout.")
+2019-10-24 12:07:02	<--	alexholly[m] (alexhollym@gateway/shell/matrix.org/x-pemlbaohivnzgvcy) has quit (Quit: 30 day idle timeout.)
+2019-10-24 12:18:06	<--	homer666[m] (homer666ma@gateway/shell/matrix.org/x-kwpnmzwstetxsbtx) has quit (Quit: 30 day idle timeout.)
+2019-10-24 12:25:16	<--	bobtest (53a2f0de@83-162-240-222.ip.xs4all.nl) has quit (Remote host closed the connection)
+2019-10-24 12:27:21	-->	madmiraal (~Thunderbi@2001:984:a3d7:1:950e:7cd3:198d:9dda) has joined #godotengine
+2019-10-24 12:30:34	<--	wabadump[m] (wabadumpma@gateway/shell/matrix.org/x-jutitaqfdxsozdqe) has quit (Quit: 30 day idle timeout.)
+2019-10-24 12:50:28	<--	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has quit (Ping timeout: 265 seconds)
+2019-10-24 12:51:56	<--	Jyhem_laptop (~libs@2a01:cb10:294:aa00:2cbb:e05f:c8f3:61cb) has quit (Ping timeout: 252 seconds)
+2019-10-24 12:52:12	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #godotengine
+2019-10-24 13:13:48	-->	rkieley (~rkieley@24.222.88.212) has joined #godotengine
+2019-10-24 13:14:58	-->	greedom (~greedom@2001:16b8:2edf:d200:1482:1bd8:e503:b1ce) has joined #godotengine
+2019-10-24 13:17:18	-->	Jyhem_laptop (~libs@lneuilly-657-1-22-93.w90-63.abo.wanadoo.fr) has joined #godotengine
+2019-10-24 13:18:44	<--	rkieley (~rkieley@24.222.88.212) has quit (Remote host closed the connection)
+2019-10-24 13:18:52	-->	rkieley (~rkieley@blk-222-88-212.eastlink.ca) has joined #godotengine
+2019-10-24 13:19:23	<--	rkieley (~rkieley@blk-222-88-212.eastlink.ca) has quit (Remote host closed the connection)
+2019-10-24 13:22:30	-->	rkieley (~rkieley@blk-222-88-212.eastlink.ca) has joined #godotengine
+2019-10-24 13:31:41	-->	Razor59 (56fd83f2@lfbn-1-1264-242.w86-253.abo.wanadoo.fr) has joined #godotengine
+2019-10-24 13:31:56	-->	Cahaan (~Cahaan@109.133.183.154) has joined #godotengine
+2019-10-24 13:55:29	-->	Yeldham (~michael@138.118.198.35) has joined #godotengine
+2019-10-24 13:57:11	<--	madmiraal (~Thunderbi@2001:984:a3d7:1:950e:7cd3:198d:9dda) has quit (Ping timeout: 250 seconds)
+2019-10-24 14:07:01	-->	YeldhamDev (michael@gateway/vpn/protonvpn/yeldham) has joined #godotengine
+2019-10-24 14:08:12	<--	Yeldham (~michael@138.118.198.35) has quit (Ping timeout: 268 seconds)
+2019-10-24 14:12:52	-->	ignaloidas (~ignaloida@158.129.26.113) has joined #godotengine
+2019-10-24 14:24:21	-->	Sipaha (~Sipaha@46.236.156.184) has joined #godotengine
+2019-10-24 14:28:51	<--	Sipaha (~Sipaha@46.236.156.184) has quit (Client Quit)
+2019-10-24 14:29:27	Calinou	Nello: to see the spread, you need to change the linear velocity property
+2019-10-24 14:29:32	Calinou	so that it can actually move towards a direction
+2019-10-24 14:49:44	-->	Sipaha (~Sipaha@static-user-46-236-156-184.tomtelnet.ru) has joined #godotengine
+2019-10-24 14:57:17	<--	escaron (escaron@base48.cz) has left #godotengine ("WeeChat 2.4")
+2019-10-24 15:06:38	-->	regakakobigman (~regakakob@c-73-174-187-176.hsd1.pa.comcast.net) has joined #godotengine
+2019-10-24 15:08:21	-->	psymin (~psymin@69.146.8.222) has joined #godotengine
+2019-10-24 15:10:50	-->	madmiraal (~Thunderbi@83-162-240-222.ip.xs4all.nl) has joined #godotengine
+2019-10-24 15:17:41	-->	Callmerick (c1326e48@193.50.110.72) has joined #godotengine
+2019-10-24 15:20:35	-->	Sam (6830b931@104-48-185-49.lightspeed.tukrga.sbcglobal.net) has joined #godotengine
+2019-10-24 15:20:59	--	Sam is now known as Guest48234
+2019-10-24 15:22:22	Guest48234	When I try and use my custom build of Godot with Creature Animation module to export using custom templates, Godot crashes on the scene with the CreatureGodot node. It does this without any errors. Is there a way to force Godot to show all errors?
+2019-10-24 15:22:51	Calinou	Guest48234: I guess you need to compile a build with debug symbols, run it in a terminal and do the thing until it crashes
+2019-10-24 15:22:59	Calinou	you'll get a backtrace which tells you where the error comes from
+2019-10-24 15:23:50	Guest48234	To compile with debug symbols, you just check the checkbox at the bottom when exporting? Or is there another place to set Godot to do that? Thanks for responding so quickly!
+2019-10-24 15:27:52	Calinou	Guest48234: no, you need to recompile the export template and specify it as a custom template
+2019-10-24 15:28:05	Calinou	if you just use a "debug" export template, it may not contain enough debugging symbols to give you an accurate backtrace
+2019-10-24 15:28:42	Calinou	still, have you tried runnig it in a terminal? If you're on Windows, you'll see a command prompt appear automatically when starting the debug export template, but this won't be the case on macOS and Linux
+2019-10-24 15:28:52	Calinou	running*
+2019-10-24 15:29:26	Guest48234	When I run it in the terminal, once I get to the scene with the custom node the terminal and the game just close.
+2019-10-24 15:29:45	Guest48234	I'll try compiling a new debug template like you suggested.
+2019-10-24 15:31:40	Guest48234	It doesn't crash in the Editor btw...just fyi. So, it must be some sort of build error. I think it's the json file required by Creature. I put *.json in the list of included resources to export but that didn't help. Hopefully I can get a good error with the new template.
+2019-10-24 15:31:43	<--	Sipaha (~Sipaha@static-user-46-236-156-184.tomtelnet.ru) has quit (Quit: Going offline, see ya! 8=з)
+2019-10-24 15:32:12	Callmerick	Hey everyone,
+2019-10-24 15:34:35	<--	Jyhem_laptop (~libs@lneuilly-657-1-22-93.w90-63.abo.wanadoo.fr) has quit (Ping timeout: 246 seconds)
+2019-10-24 15:35:51	Callmerick	I have a question, I'm working on task scheduling and I wanted to check out how does Godot handle different tasks (AI / Graphism / Audio) and how it manages to schedule at bests. The issue that I have is the number of different implementation on threads and which ones are made to handle the editor and which ones are actually in game dynamic
+2019-10-24 15:35:51	Callmerick	scheduling. Does anyone already looked into it? Is there a way to get a full task graph of an execution for example. (Sort of profiling but way more precise)
+2019-10-24 15:38:14	Calinou	Guest48234: to double-check whether the .json file is included in the exported data, try exporting a ZIP from the Export dialog
+2019-10-24 15:38:22	Calinou	you can then open it with an archive manager and check the contents that are effectively exported
+2019-10-24 15:38:33	Calinou	(use the "Export ZIP/PCK" button)
+2019-10-24 15:41:09	Guest48234	yea, the json is in there. maybe it's something else. I'll have to redo the debug export template
+2019-10-24 15:41:16	Guest48234	thanks for your help
+2019-10-24 15:42:42	Calinou	you're welcome :)
+2019-10-24 15:46:14	-->	Jyhem_laptop (~libs@lneuilly-657-1-22-93.w90-63.abo.wanadoo.fr) has joined #godotengine
+2019-10-24 15:48:47	-->	atari83 (~Thunderbi@37.202.237.5) has joined #godotengine
+2019-10-24 15:53:50	<--	Guest48234 (6830b931@104-48-185-49.lightspeed.tukrga.sbcglobal.net) has quit (Remote host closed the connection)
+2019-10-24 15:54:29	<--	YeldhamDev (michael@gateway/vpn/protonvpn/yeldham) has quit (Quit: Konversation terminated!)
+2019-10-24 16:00:08	-->	MoosePrime (~moose@207.44.22.117) has joined #godotengine
+2019-10-24 16:07:15	<--	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has quit (Quit: WeeChat 1.9.1)
+2019-10-24 16:21:27	-->	Roughy (~mdaw45ns@188.126.200.178) has joined #godotengine
+2019-10-24 16:24:15	yuken	I'm gonna try my hand at writing code for Godot, and I think the first thing I'm gonna try to do is fix headless/server stuff on the Mono/C# build. Is there any info on _why_ server/headless builds don't work properly?
+2019-10-24 16:24:19	yuken	or am I going in blind?
+2019-10-24 16:26:36	<--	Soni (~quassel@unaffiliated/soniex2) has left #godotengine ("http://quassel-irc.org - Chat comfortably. Anywhere.")
+2019-10-24 16:47:23	-->	dddddd (~dddddd@unaffiliated/dddddd) has joined #godotengine
+2019-10-24 17:01:37	-->	kimamb (~kimamb__@62.97.173.88) has joined #godotengine
+2019-10-24 17:07:35	<--	mrcdk (~mrcdk@180-200-39-46.usuarios.innovasur.com) has quit (Read error: Connection reset by peer)
+2019-10-24 17:24:15	-->	madpinger (~madpinger@fu/coder/madpinger) has joined #godotengine
+2019-10-24 17:27:47	Calinou	yuken: you could join #godotengine-devel and ask there, but note that neikeq isn't in the channel currently (he's the one who does most of the C# stuff)
+2019-10-24 17:30:35	<--	Callmerick (c1326e48@193.50.110.72) has quit (Remote host closed the connection)
+2019-10-24 17:49:59	-->	Romlok (~mel@26.51-175-167.customer.lyse.net) has joined #godotengine
+2019-10-24 17:52:13	<--	chargen (~chargen@2a02:2e02:9ee0:7100:79b7:147c:f759:39f) has quit (Quit: BBL)
+2019-10-24 17:58:11	-->	biliogadafr (~bilio@46.53.248.20) has joined #godotengine
+2019-10-24 18:00:54	-->	Beliar (~Beliar@2a02:8108:9640:6c42:a5a2:be4d:450e:b513) has joined #godotengine
+2019-10-25 09:01:51	--	irc: disconnected from server
+2019-10-25 09:02:23	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #godotengine
+2019-10-25 09:02:23	--	Topic for #godotengine is "Godot Engine | https://godotengine.org | GitHub: https://github.com/godotengine/godot | Docs: https://docs.godotengine.org | Discord: https://discord.gg/zH7NUgz | Don't ask if you can ask, just ask! :) | Interested in engine development? Join #godotengine-devel | Want to help with the documentation? Join #godotengine-doc"
+2019-10-25 09:02:23	--	Topic set by Calinou (~quassel@fsf/member/calinou) on Mon, 25 Feb 2019 00:45:33
+2019-10-25 09:02:23	--	Channel #godotengine: 246 nicks (1 op, 0 voices, 245 normals)
+2019-10-25 09:02:43	--	Channel created on Tue, 11 Feb 2014 08:43:18
+2019-10-25 09:02:50	-->	madmiraal (~Thunderbi@2001:984:a3d7:1:950e:7cd3:198d:9dda) has joined #godotengine
+2019-10-25 09:06:30	-->	Tobbi (~Tobbi@supertux/tobbi) has joined #godotengine
+2019-10-25 09:06:43	-->	xakz (~XaMaD@229.ip-217-182-68.eu) has joined #godotengine
+2019-10-25 09:10:25	<--	ignaloidas (~ignaloida@158.129.26.113) has quit (Remote host closed the connection)
+2019-10-25 09:24:39	<--	Tobbi (~Tobbi@supertux/tobbi) has quit (Ping timeout: 252 seconds)
+2019-10-25 09:25:04	-->	chargen (~chargen@2a02:2e02:9ee0:7100:11:bc4a:2672:ac62) has joined #godotengine
+2019-10-25 09:38:33	-->	odino (~odino3@2a02:1205:c6b3:cef0:6489:9db7:8bda:e7f3) has joined #godotengine
+2019-10-25 09:45:27	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #godotengine
+2019-10-25 09:45:27	--	Topic for #godotengine is "Godot Engine | https://godotengine.org | GitHub: https://github.com/godotengine/godot | Docs: https://docs.godotengine.org | Discord: https://discord.gg/zH7NUgz | Don't ask if you can ask, just ask! :) | Interested in engine development? Join #godotengine-devel | Want to help with the documentation? Join #godotengine-doc"
+2019-10-25 09:45:27	--	Topic set by Calinou (~quassel@fsf/member/calinou) on Mon, 25 Feb 2019 00:45:33
+2019-10-25 09:45:27	--	Channel #godotengine: 249 nicks (1 op, 0 voices, 248 normals)
+2019-10-25 09:45:38	--	Channel created on Tue, 11 Feb 2014 08:43:18
+2019-10-25 10:54:48	-->	thc202 (~thc202@unaffiliated/thc202) has joined #godotengine
+2019-10-25 10:58:56	-->	IcyDiamond (~evert@2a01:4f8:1c1c:17b7::1) has joined #godotengine
+2019-10-25 11:02:33	-->	paramite (~paramite@nat-155.starnet.cz) has joined #godotengine
+2019-10-25 11:12:55	-->	greedom (~greedom@2001:16b8:2e2a:9700:dbe9:9574:1ed6:db8f) has joined #godotengine
+2019-10-25 11:13:44	-->	maveerik (~1@93.84.162.104) has joined #godotengine
+2019-10-25 11:15:37	<--	captain_morgan20 (~morgan@135.84.101.43) has quit (Ping timeout: 240 seconds)
+2019-10-25 11:16:34	-->	captain_morgan20 (~morgan@135.84.101.44) has joined #godotengine
+2019-10-25 11:21:40	<--	paramite (~paramite@nat-155.starnet.cz) has quit (Ping timeout: 264 seconds)
+2019-10-25 12:14:49	<--	Salabasama (~mustafa@68-118-84-232.dhcp.kgpt.tn.charter.com) has quit (Read error: Connection reset by peer)
+2019-10-25 12:15:24	-->	Salabasama (~mustafa@68-118-84-232.dhcp.kgpt.tn.charter.com) has joined #godotengine
+2019-10-25 12:18:38	-->	Jummit (52cfeeab@muedsl-82-207-238-171.citykom.de) has joined #godotengine
+2019-10-25 12:30:47	-->	atari83 (~Thunderbi@37.202.237.5) has joined #godotengine
+2019-10-25 12:32:06	<--	greedom (~greedom@2001:16b8:2e2a:9700:dbe9:9574:1ed6:db8f) has quit (Remote host closed the connection)
+2019-10-25 12:32:51	-->	greedom (~greedom@2001:16b8:2e2a:9700:dbe9:9574:1ed6:db8f) has joined #godotengine
+2019-10-25 12:37:03	-->	ignaloidas (~ignaloida@158.129.26.113) has joined #godotengine
+2019-10-25 12:38:06	<--	lisac (~lisac@178.220.253.71) has quit (Ping timeout: 268 seconds)
+2019-10-25 12:39:22	-->	lisac (~lisac@93-87-101-73.dynamic.isp.telekom.rs) has joined #godotengine
+2019-10-25 12:40:25	<--	Jummit (52cfeeab@muedsl-82-207-238-171.citykom.de) has quit (Remote host closed the connection)
+2019-10-25 12:51:29	Nello	i made an fps monitor with control nodes and draw_polygon :) https://streamable.com/3no9n
+2019-10-25 13:00:39	-->	Yeldham (~michael@138.118.198.37) has joined #godotengine
+2019-10-25 13:15:01	-->	Jummit (52cfeeab@muedsl-82-207-238-171.citykom.de) has joined #godotengine
+2019-10-25 13:28:06	<--	zingo_ (uid365808@gateway/web/irccloud.com/x-wbqmqpbklultnmfm) has quit (Quit: Connection closed for inactivity)
+2019-10-25 13:41:09	<--	Salabasama (~mustafa@68-118-84-232.dhcp.kgpt.tn.charter.com) has quit (Read error: Connection reset by peer)
+2019-10-25 13:48:51	<--	deniska (~denis@unaffiliated/deniska) has quit (Ping timeout: 240 seconds)
+2019-10-25 13:50:10	<--	b1101 (~b1101@fsf/member/b1101) has quit (Remote host closed the connection)
+2019-10-25 13:50:53	Nello	turns out ^ didn't actually work because after it filled up the x axis it would go out of bounds. fixed that and set it to update using a timer node instead of every 60 frames because that was dumb
+2019-10-25 13:51:30	-->	b1101 (~b1101@fsf/member/b1101) has joined #godotengine
+2019-10-25 13:55:39	<--	Smjert (~Smjert@unaffiliated/smjert) has quit (Quit: ZNC 1.6.1 - http://znc.in)
+2019-10-25 13:56:54	-->	Smjert (~Smjert@unaffiliated/smjert) has joined #godotengine
+2019-10-25 14:01:15	-->	YeldhamDev (michael@gateway/vpn/protonvpn/yeldham) has joined #godotengine
+2019-10-25 14:01:20	<--	Yeldham (~michael@138.118.198.37) has quit (Ping timeout: 268 seconds)
+2019-10-25 14:10:04	<--	dryw (2d2cccf8@45.44.204.248) has quit (Remote host closed the connection)
+2019-10-25 14:22:30	-->	barab4 (59a4230e@35-14.dsl.iskon.hr) has joined #godotengine
+2019-10-25 14:22:32	-->	deniska (~denis@unaffiliated/deniska) has joined #godotengine
+2019-10-25 15:08:08	-->	wyattb (~wyattb@static-71-127-241-93.nwrknj.fios.verizon.net) has joined #godotengine
+2019-10-25 15:08:33	<--	wyattb (~wyattb@static-71-127-241-93.nwrknj.fios.verizon.net) has quit (Read error: Connection reset by peer)
+2019-10-25 15:10:17	-->	wyattb_ (~wyattb@static-71-127-241-93.nwrknj.fios.verizon.net) has joined #godotengine
+2019-10-25 15:11:09	<--	wyattb_ (~wyattb@static-71-127-241-93.nwrknj.fios.verizon.net) has quit (Read error: Connection reset by peer)
+2019-10-25 15:11:15	-->	wyattb (~wyattb@static-71-127-241-93.nwrknj.fios.verizon.net) has joined #godotengine
+2019-10-25 15:11:38	Nello	if i mix up play and play scene one more time i'm going to bed
+2019-10-25 15:15:23	-->	wyattb_ (~wyattb@176.113.72.46) has joined #godotengine
+2019-10-25 15:17:36	Calinou	Nello: see also https://github.com/Calinou/godot-sponza/blob/master/scripts/frame_time_graph.gd :)
+2019-10-25 15:17:45	Calinou	(press F3 to toggle it in the Sponza demo)
+2019-10-25 15:18:42	<--	wyattb (~wyattb@static-71-127-241-93.nwrknj.fios.verizon.net) has quit (Ping timeout: 265 seconds)
+2019-10-25 15:28:55	-->	capefeather (~capefeath@tnhlon4048w-lp140-06-70-29-102-236.dsl.bell.ca) has joined #godotengine
+2019-10-25 15:29:38	Nello	Calinou, it was much easier to copy/paste your code than it was to make mine :^) although i had to comment out the gradient stuff because i didn't have the resource
+2019-10-25 15:30:15	<--	Jummit (52cfeeab@muedsl-82-207-238-171.citykom.de) has quit (Ping timeout: 260 seconds)
+2019-10-25 15:30:31	Calinou	the gradient is included in the repository as a .tres file, you could copy it too
+2019-10-25 15:30:39	Calinou	I prefer moving stuff like this to resources, so it can be edited visually
+2019-10-25 15:30:42	Calinou	(and it's less code required)
+2019-10-25 15:32:24	Nello	i want to share mine but after seeing yours i feel like i should improve it lol
+2019-10-25 15:34:57	jimbzy	Just import Calinou's and call it a day ;)
+2019-10-25 15:35:52	-->	MoosePrime (~moose@207.44.22.117) has joined #godotengine
+2019-10-25 15:37:40	jimbzy	I fell asleep on the couch around 7:30 last night and now I'm pretty sure my spine is shaped like a sigma :(
+2019-10-25 15:49:21	-->	dddddd (~dddddd@unaffiliated/dddddd) has joined #godotengine
+2019-10-25 15:51:03	-->	wyattb (~wyattb@104.140.242.251) has joined #godotengine
+2019-10-25 15:51:49	-->	wyattb__ (~wyattb@static-71-127-241-93.nwrknj.fios.verizon.net) has joined #godotengine
+2019-10-25 15:51:50	<--	wyattb (~wyattb@104.140.242.251) has quit (Read error: Connection reset by peer)
+2019-10-25 15:53:41	-->	psymin (~psymin@69.146.8.222) has joined #godotengine
+2019-10-25 15:54:37	<--	wyattb_ (~wyattb@176.113.72.46) has quit (Ping timeout: 240 seconds)
+2019-10-25 15:58:18	-->	Roughy (~mdaw45ns@188.126.200.178) has joined #godotengine
+2019-10-25 16:10:17	-->	Jummit (52cfeeab@muedsl-82-207-238-171.citykom.de) has joined #godotengine
+2019-10-25 16:11:40	<--	drp (~drp@96.75.220.111.dyn.wbroadband.net.au) has quit (Quit: Leaving)
+2019-10-25 16:13:07	-->	paramite (~paramite@nat-155.starnet.cz) has joined #godotengine
+2019-10-25 16:18:25	<--	barab4 (59a4230e@35-14.dsl.iskon.hr) has left #godotengine
+2019-10-25 16:22:48	-->	Kelzorz (~Kelzorz@67.6.16.88) has joined #godotengine
+2019-10-25 16:25:09	<--	wyattb__ (~wyattb@static-71-127-241-93.nwrknj.fios.verizon.net) has quit (Remote host closed the connection)
+2019-10-25 16:25:39	-->	wyattb (~wyattb@static-71-127-241-93.nwrknj.fios.verizon.net) has joined #godotengine
+2019-10-25 16:29:53	<--	wyattb (~wyattb@static-71-127-241-93.nwrknj.fios.verizon.net) has quit (Read error: Connection reset by peer)
+2019-10-25 16:30:54	-->	wyattb_ (~wyattb@23.81.234.13) has joined #godotengine
+2019-10-25 16:32:51	-->	wyattb__ (~wyattb@static-71-127-241-93.nwrknj.fios.verizon.net) has joined #godotengine
+2019-10-25 16:33:51	-->	wyattb___ (~wyattb@199.58.187.153) has joined #godotengine
+2019-10-25 16:35:33	<--	wyattb_ (~wyattb@23.81.234.13) has quit (Ping timeout: 265 seconds)
+2019-10-25 16:36:51	<--	wyattb__ (~wyattb@static-71-127-241-93.nwrknj.fios.verizon.net) has quit (Ping timeout: 240 seconds)
+2019-10-25 16:58:05	<--	chargen (~chargen@2a02:2e02:9ee0:7100:11:bc4a:2672:ac62) has quit (Quit: BBL)
+2019-10-25 16:58:56	-->	Romlok (~mel@26.51-175-167.customer.lyse.net) has joined #godotengine
+2019-10-25 16:59:09	-->	Yeldham (michael@gateway/vpn/protonvpn/yeldham) has joined #godotengine
+2019-10-25 16:59:28	<--	YeldhamDev (michael@gateway/vpn/protonvpn/yeldham) has quit (Ping timeout: 264 seconds)
+2019-10-25 17:08:03	Nello	jimbzy, never! mostly because i think his does something different than mine
+2019-10-25 17:08:31	Nello	i think that one shows how long it takes to render the frame and mine shows fps
+2019-10-25 17:08:31	-->	kimamb (~kimamb__@62.97.173.88) has joined #godotengine
+2019-10-25 17:10:12	-->	Zeioth (~Zeioth@113.pool80-102-112.dynamic.orange.es) has joined #godotengine
+2019-10-25 17:10:41	Nello	I wish pastebin had gdscript syntax highlighting :(
+2019-10-25 17:10:58	jimbzy	I think my FPS thingy just updates with _physics_process() because I'm super lazy like that.
+2019-10-25 17:12:36	Calinou	GitHub Gist supports GDScript highlighting
+2019-10-25 17:12:41	Calinou	you need to be logged in to upload gists now, though
+2019-10-25 17:13:22	jimbzy	Calinou: Any screenshots of your theme updates?
+2019-10-25 17:16:32	wyattb___	Morning. Question with debugger. Is it supposed to step into empty/blank lines as well?
+2019-10-25 17:17:06	Nello	neat it worked :D Calinou, https://gist.github.com/NelloDev/b40e0521258922860961b4be534f9792
+2019-10-25 17:25:04	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #godotengine
+2019-10-25 17:25:04	--	Topic for #godotengine is "Godot Engine | https://godotengine.org | GitHub: https://github.com/godotengine/godot | Docs: https://docs.godotengine.org | Discord: https://discord.gg/zH7NUgz | Don't ask if you can ask, just ask! :) | Interested in engine development? Join #godotengine-devel | Want to help with the documentation? Join #godotengine-doc"
+2019-10-25 17:25:04	--	Topic set by Calinou (~quassel@fsf/member/calinou) on Mon, 25 Feb 2019 00:45:33
+2019-10-25 17:25:04	--	Channel #godotengine: 263 nicks (1 op, 0 voices, 262 normals)
+2019-10-25 17:25:16	--	Channel created on Tue, 11 Feb 2014 08:43:18
+2019-10-25 17:29:32	-->	Callmerick (c1326e48@193.50.110.72) has joined #godotengine
+2019-10-25 17:29:53	<--	Callmerick (c1326e48@193.50.110.72) has quit (Remote host closed the connection)
+2019-10-25 17:32:25	Nello	wyattb___, you're right i do have to step into empty lines/comments
+2019-10-25 17:34:31	<--	mrcdk (~mrcdk@180-200-39-46.usuarios.innovasur.com) has quit (Read error: Connection reset by peer)
+2019-10-25 17:34:34	wyattb___	Nello: I guess that 99% sure was a bad bet :)
+2019-10-25 17:34:41	--	TidB is now known as Overwatch
+2019-10-25 17:35:19	Nello	i'm glad i left that 1% wiggle room
+2019-10-25 17:35:39	--	Overwatch is now known as TidB
+2019-10-25 17:37:04	wyattb___	Nello: I think I'll play lotto today. I am 99% sure I will lose.
+2019-10-25 17:37:56	Nello	i like those odds
+2019-10-25 17:38:13	jimbzy	http://o-m-f-g.wtf/nuts.mp4
+2019-10-25 17:39:05	Nello	i like that you sped up the return trip
+2019-10-25 17:39:15	Nello	it was too slow back in the archer days
+2019-10-25 17:39:24	jimbzy	It's always been the same speed.  I'm just getting better at recording it ;)
+2019-10-25 17:40:38	Nello	are you sure? you showed me like v0.0.0001 and it ws sloooow
+2019-10-25 17:41:19	-->	dryw (2d2cccf8@45.44.204.248) has joined #godotengine
+2019-10-25 17:41:19	jimbzy	Yep.
+2019-10-25 17:42:10	jimbzy	Same Tween.  Trans_Lin with Ease_In
+2019-10-25 17:42:51	Nello	really cause i even mentioned that it needed some easing and i don't remember you saying it had it
+2019-10-25 17:43:00	Nello	maybe it was just a really bad recording
+2019-10-25 17:43:18	jimbzy	Yeah it was with that peek program.  I switched to a different recorder and switched to mp4
+2019-10-25 17:45:52	jimbzy	I've been using the same tween since I added the camera.  It could also be that I shortened the playing field and I'm not maxing out distance.
+2019-10-25 17:47:30	Nello	it mustve been the recording because it's a pretty minor easing
+2019-10-25 17:50:13	jimbzy	Yeah.  Anywho, I guess I'm going to run around and spend some money I don't have :D
+2019-10-25 17:50:22	jimbzy	I'll be back in a while.
+2019-10-25 17:50:33	Nello	good luck irl!
+2019-10-28 09:59:47	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #godotengine
+2019-10-28 09:59:47	--	Topic for #godotengine is "Godot Engine | https://godotengine.org | GitHub: https://github.com/godotengine/godot | Docs: https://docs.godotengine.org | Discord: https://discord.gg/zH7NUgz | Don't ask if you can ask, just ask! :) | Interested in engine development? Join #godotengine-devel | Want to help with the documentation? Join #godotengine-doc"
+2019-10-28 09:59:47	--	Topic set by Calinou (~quassel@fsf/member/calinou) on Mon, 25 Feb 2019 00:45:33
+2019-10-28 09:59:47	--	Channel #godotengine: 254 nicks (1 op, 0 voices, 253 normals)
+2019-10-28 09:59:59	--	Channel created on Tue, 11 Feb 2014 08:43:18
+2019-10-28 10:20:15	-->	thc202 (~thc202@unaffiliated/thc202) has joined #godotengine
+2019-10-28 10:34:41	-->	madmiraal (~Thunderbi@2001:984:a3d7:1:bc19:72e6:f95b:d875) has joined #godotengine
+2019-10-28 10:53:26	<--	ibrahn (~ibrahn@cpc108193-wake9-2-0-cust51.17-1.cable.virginm.net) has quit (Ping timeout: 268 seconds)
+2019-10-28 11:06:53	-->	ibrahn (~ibrahn@cpc108193-wake9-2-0-cust51.17-1.cable.virginm.net) has joined #godotengine
+2019-10-28 11:18:38	Nello	how should i structure this data: i have objects with the variables identifier, group and location. i often get an object by its identifier, i often select a bunch of objects by group, i sometimes move objects to different groups when the location changes
+2019-10-28 11:20:31	-->	mr_rcollins (~mr_rcolli@104.131.67.140) has joined #godotengine
+2019-10-28 11:26:07	Nello	[[identifier, group, location], ...] but my highest use cases both mean iterating through the entire array
+2019-10-28 11:29:22	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #godotengine
+2019-10-28 11:30:57	Nello	{identifier: [group, location]} i guess
+2019-10-28 11:31:03	<--	rople (rople@gateway/vpn/privateinternetaccess/rople) has quit (Ping timeout: 268 seconds)
+2019-10-28 11:42:37	Nello	i went with {identifier: {group: value, location: value}} cause identifier[location] looked better than identifier[1]
+2019-10-28 11:50:51	-->	maveerik (~1@93.84.169.63) has joined #godotengine
+2019-10-28 12:06:09	-->	odino (~odino3@2a02:1205:c6b3:cef0:483b:be89:9f17:f01e) has joined #godotengine
+2019-10-28 12:20:31	-->	Yeldham (~michael@138.118.198.39) has joined #godotengine
+2019-10-28 12:29:00	<--	Ijatsu (6d00c7cf@gateway/web/cgi-irc/kiwiirc.com/ip.109.0.199.207) has quit (Remote host closed the connection)
+2019-10-28 12:34:06	-->	YeldhamDev (michael@gateway/vpn/protonvpn/yeldham) has joined #godotengine
+2019-10-28 12:34:15	<--	Yeldham (~michael@138.118.198.39) has quit (Ping timeout: 264 seconds)
+2019-10-28 12:45:40	<--	testman (~testman@cpe-92-37-19-70.dynamic.amis.net) has quit (Ping timeout: 268 seconds)
+2019-10-28 12:57:09	<--	Salabasama (~mustafa@68-118-84-232.dhcp.kgpt.tn.charter.com) has quit (Ping timeout: 252 seconds)
+2019-10-28 13:13:57	<--	mceier (~mceier@89-68-132-187.dynamic.chello.pl) has quit (Ping timeout: 240 seconds)
+2019-10-28 13:21:14	<--	jeffyboh (~JeffyBoh@c-76-18-203-239.hsd1.fl.comcast.net) has quit (Ping timeout: 240 seconds)
+2019-10-28 13:21:15	-->	Sipaha (~Sipaha@46.236.156.184) has joined #godotengine
+2019-10-28 13:27:18	-->	mceier (~mceier@89-68-132-187.dynamic.chello.pl) has joined #godotengine
+2019-10-28 13:28:57	<--	YeldhamDev (michael@gateway/vpn/protonvpn/yeldham) has quit (Ping timeout: 265 seconds)
+2019-10-28 13:39:47	-->	atari83 (~Thunderbi@37.202.226.238) has joined #godotengine
+2019-10-28 13:46:04	<--	chargen (~chargen@2a02:2e02:9ee0:7100:a4a2:18d7:295d:d779) has quit (Quit: BBL)
+2019-10-28 13:54:30	-->	dddddd (~dddddd@unaffiliated/dddddd) has joined #godotengine
+2019-10-28 13:55:45	-->	chargen (~chargen@2a02:2e02:9ee0:7100:bca4:4021:7b43:aae5) has joined #godotengine
+2019-10-28 13:58:13	<--	karroffel (~karroffel@ip-178-203-190-17.hsi10.unitymediagroup.de) has quit (Read error: Connection reset by peer)
+2019-10-28 13:58:28	-->	YeldhamDev (~michael@138.118.198.38) has joined #godotengine
+2019-10-28 13:58:39	-->	karroffel (~karroffel@ip-178-203-190-17.hsi10.unitymediagroup.de) has joined #godotengine
+2019-10-28 14:06:27	<--	Einlander (~Einlander@108-197-18-137.lightspeed.cicril.sbcglobal.net) has quit (Ping timeout: 268 seconds)
+2019-10-28 14:07:04	-->	Einlander (~Einlander@108-197-18-137.lightspeed.cicril.sbcglobal.net) has joined #godotengine
+2019-10-28 14:08:16	-->	testman (~testman@cpe-92-37-19-70.dynamic.amis.net) has joined #godotengine
+2019-10-28 14:09:01	<--	harrydog07 (~m@96.79.4.90) has quit (Quit: harrydog07)
+2019-10-28 14:10:10	<--	testman (~testman@cpe-92-37-19-70.dynamic.amis.net) has quit (Client Quit)
+2019-10-28 14:10:41	-->	testman (~testman@cpe-92-37-19-70.dynamic.amis.net) has joined #godotengine
+2019-10-28 14:11:00	<--	YeldhamDev (~michael@138.118.198.38) has quit (Ping timeout: 265 seconds)
+2019-10-28 14:11:02	-->	Yeldham (michael@gateway/vpn/protonvpn/yeldham) has joined #godotengine
+2019-10-28 14:20:59	Nello	it's a million times easier using nested dicts and it's saved me 30 lines of code i'm so happy (this concludes the story of me figuring out a data structure)
+2019-10-28 14:28:14	<--	Sipaha (~Sipaha@46.236.156.184) has quit (Quit: Going offline, see ya! 8=з)
+2019-10-28 14:41:54	-->	capefeather (~capefeath@tnhlon4048w-lp140-06-70-29-102-236.dsl.bell.ca) has joined #godotengine
+2019-10-28 14:44:19	-->	MoosePrime (~moose@207.44.22.117) has joined #godotengine
+2019-10-28 14:55:00	-->	biliogadafr (~bilio@46.53.248.20) has joined #godotengine
+2019-10-28 14:58:24	<--	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has quit (Quit: WeeChat 1.9.1)
+2019-10-28 15:05:27	<--	biliogadafr (~bilio@46.53.248.20) has quit (Ping timeout: 264 seconds)
+2019-10-28 15:08:29	-->	psymin (~psymin@69.146.8.222) has joined #godotengine
+2019-10-28 15:08:30	-->	regakakobigman (~regakakob@c-73-174-187-176.hsd1.pa.comcast.net) has joined #godotengine
+2019-10-28 15:18:59	<--	Taoki (~MirceaKit@93.113.162.37) has quit (Quit: http://www.furaffinity.net/user/mircea/)
+2019-10-28 15:27:37	<--	atari83 (~Thunderbi@37.202.226.238) has quit (Quit: atari83)
+2019-10-28 15:39:07	<--	saltpepp3r (~saltpepp3@91.207.173.118) has quit (Ping timeout: 250 seconds)
+2019-10-28 15:41:24	-->	saltpepp3r (~saltpepp3@91.207.173.118) has joined #godotengine
+2019-10-28 15:41:39	-->	Taoki (~MirceaKit@93.113.162.37) has joined #godotengine
+2019-10-28 15:41:46	<--	Taoki (~MirceaKit@93.113.162.37) has quit (Remote host closed the connection)
+2019-10-28 15:42:14	-->	Taoki (~MirceaKit@93.113.162.37) has joined #godotengine
+2019-10-28 15:42:25	<--	Taoki (~MirceaKit@93.113.162.37) has quit (Client Quit)
+2019-10-28 15:43:01	<--	PaulMaidment (56048023@cpc120268-heme13-2-0-cust34.9-1.cable.virginm.net) has quit (Remote host closed the connection)
+2019-10-28 15:45:21	-->	Roughy (~mdaw45ns@188.126.200.178) has joined #godotengine
+2019-10-28 15:56:56	-->	PaulMaidment (~paulmaidm@cpc120268-heme13-2-0-cust34.9-1.cable.virginm.net) has joined #godotengine
+2019-10-28 15:57:25	-->	Taoki (~MirceaKit@93.113.162.37) has joined #godotengine
+2019-10-28 15:57:26	<--	PaulMaidment (~paulmaidm@cpc120268-heme13-2-0-cust34.9-1.cable.virginm.net) has left #godotengine
+2019-10-28 15:58:34	<--	madmiraal (~Thunderbi@2001:984:a3d7:1:bc19:72e6:f95b:d875) has quit (Quit: madmiraal)
+2019-10-28 16:01:39	<--	mrcdk (~mrcdk@180-200-39-46.usuarios.innovasur.com) has quit (Read error: Connection reset by peer)
+2019-10-28 16:17:13	--	Jyhem_laptop_ is now known as Jyhem_laptop
+2019-10-28 16:27:46	--	irc: disconnected from server
+2019-10-28 16:35:48	-->	Syrinxos (~syrinxos@93-34-1-82.ip47.fastwebnet.it) has joined #godotengine
+2019-10-28 16:35:48	--	Topic for #godotengine is "Godot Engine | https://godotengine.org | GitHub: https://github.com/godotengine/godot | Docs: https://docs.godotengine.org | Discord: https://discord.gg/zH7NUgz | Don't ask if you can ask, just ask! :) | Interested in engine development? Join #godotengine-devel | Want to help with the documentation? Join #godotengine-doc"
+2019-10-28 16:35:48	--	Topic set by Calinou (~quassel@fsf/member/calinou) on Mon, 25 Feb 2019 00:45:33
+2019-10-28 16:35:48	--	Channel #godotengine: 258 nicks (1 op, 0 voices, 257 normals)
+2019-10-28 16:36:08	--	Channel created on Tue, 11 Feb 2014 08:43:18
+2019-10-28 16:42:46	bomb	Nello: are you in gdscript?
+2019-10-28 16:45:40	Nello	bomb, yeah i am
+2019-10-28 16:49:15	<--	saltpepp3r (~saltpepp3@91.207.173.118) has quit (Ping timeout: 240 seconds)
+2019-10-28 16:51:22	-->	saltpepp3r (~saltpepp3@91.207.173.118) has joined #godotengine
+2019-10-28 17:09:46	-->	neikeq (~neikeq@2a01:c50e:8f08:100:8cb2:3cbc:2634:8d7d) has joined #godotengine
+2019-10-28 17:26:20	-->	Romlok (~mel@26.51-175-167.customer.lyse.net) has joined #godotengine
+2019-10-28 17:45:15	-->	Beliar (~Beliar@2a02:8108:9640:6c42:1550:63f7:778a:135b) has joined #godotengine
+2019-10-29 09:21:40	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #godotengine
+2019-10-29 09:21:40	--	Topic for #godotengine is "Godot Engine | https://godotengine.org | GitHub: https://github.com/godotengine/godot | Docs: https://docs.godotengine.org | Discord: https://discord.gg/zH7NUgz | Don't ask if you can ask, just ask! :) | Interested in engine development? Join #godotengine-devel | Want to help with the documentation? Join #godotengine-doc"
+2019-10-29 09:21:40	--	Topic set by Calinou (~quassel@fsf/member/calinou) on Mon, 25 Feb 2019 00:45:33
+2019-10-29 09:21:40	--	Channel #godotengine: 252 nicks (1 op, 0 voices, 251 normals)
+2019-10-29 09:21:51	--	Channel created on Tue, 11 Feb 2014 08:43:18
+2019-10-29 09:29:14	-->	Khap (bf22b987@191.34.185.135) has joined #godotengine
+2019-10-29 09:31:06	<--	Khap (bf22b987@191.34.185.135) has quit (Remote host closed the connection)
+2019-10-29 09:55:06	-->	Tobbi (~Tobbi@supertux/tobbi) has joined #godotengine
+2019-10-29 10:09:00	-->	RangerVermelho (bbb525cc@187.181.37.204) has joined #godotengine
+2019-10-29 10:11:46	RangerVermelho	Hi, good morning guys! i trying to find a answer about shader, tried discord and reddit without success... if anyone could help me about i really appreciate. I found a shader for volumetric light on nvidia page. Is a really small piece of code but, i dont know how to use this shader, what node i use this
+2019-10-29 10:12:00	RangerVermelho	https://developer.nvidia.com/gpugems/GPUGems3/gpugems3_ch13.html
+2019-10-29 10:12:19	RangerVermelho	here's on this github has frag and vertex:
+2019-10-29 10:12:26	RangerVermelho	https://github.com/daanvanhasselt/lensflare/tree/master/bin/data/shaders
+2019-10-29 10:13:31	Nello	hey RangerVermelho, someone else may come along with a better answer but there's a whole section of the docs dedicated to migrating shaders to the godot shader language
+2019-10-29 10:13:34	Nello	https://godot.readthedocs.io/en/3.1/tutorials/shading/migrating_to_godot_shader_language.html
+2019-10-29 10:13:47	Nello	i'm new to the engine and gamedev in general so all i can do is link docs :P
+2019-10-29 10:15:01	RangerVermelho	Hi Nello! Thanks for the help! Welcome :D  Docs really helpfull, i converted shader with this, but i dont find how to use this shader, because is not a "material" shader
+2019-10-29 10:18:09	Nello	oh no if it's not in the docs then it's beyond me! i'm sure someone will stop by so hang around
+2019-10-29 10:19:03	-->	Zeioth (~Zeioth@113.pool80-102-112.dynamic.orange.es) has joined #godotengine
+2019-10-29 10:21:46	-->	thc202 (~thc202@unaffiliated/thc202) has joined #godotengine
+2019-10-29 10:26:07	RangerVermelho	oh i found about on docs... what a stupid i'm :(
+2019-10-29 10:26:26	RangerVermelho	is the next topic on docs
+2019-10-29 10:26:35	RangerVermelho	https://godot.readthedocs.io/en/3.1/tutorials/shading/advanced_postprocessing.htm
+2019-10-29 10:27:24	Nello	:D
+2019-10-29 10:27:57	Nello	so that's what you need?
+2019-10-29 10:34:22	--	StraToN9 is now known as StraToN
+2019-10-29 10:44:16	RangerVermelho	yeah! thanks for help
+2019-10-29 10:46:47	<--	RangerVermelho (bbb525cc@187.181.37.204) has quit (Remote host closed the connection)
+2019-10-29 10:54:52	<--	Tobbi (~Tobbi@supertux/tobbi) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-10-29 10:55:40	<--	paramite (~paramite@nat-155.starnet.cz) has quit (Remote host closed the connection)
+2019-10-29 10:55:51	-->	paramite (~paramite@nat-155.starnet.cz) has joined #godotengine
+2019-10-29 10:57:32	-->	paramite|clone (~paramite@37-48-22-134.nat.epc.tmcz.cz) has joined #godotengine
+2019-10-29 10:57:47	<--	paramite (~paramite@nat-155.starnet.cz) has quit (Read error: No route to host)
+2019-10-29 10:58:56	-->	paramite (~paramite@nat-155.starnet.cz) has joined #godotengine
+2019-10-29 11:01:57	<--	paramite|clone (~paramite@37-48-22-134.nat.epc.tmcz.cz) has quit (Ping timeout: 240 seconds)
+2019-10-29 11:12:25	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #godotengine
+2019-10-29 11:50:46	<--	monwarez_ (~monwarez@46.101.100.169) has quit (Quit: ZNC 1.7.5 - https://znc.in)
+2019-10-29 11:51:16	-->	monwarez (~monwarez@2a03:b0c0:3:d0::4ce8:d001) has joined #godotengine
+2019-10-29 11:55:16	Nello	@jimbzy, the world is not ready https://i.imgur.com/Gi8hQi5.png
+2019-10-29 11:56:31	-->	maveerik (~1@93.84.169.63) has joined #godotengine
+2019-10-29 12:00:49	-->	romuva (~D@78-56-108-189.static.zebra.lt) has joined #godotengine
+2019-10-29 12:04:13	<--	Sipaha (~Sipaha@46.236.156.184) has quit (Quit: Going offline, see ya! 8=з)
+2019-10-29 12:07:59	<--	mceier (~mceier@89-68-132-187.dynamic.chello.pl) has quit (Ping timeout: 268 seconds)
+2019-10-29 12:28:15	-->	Technipion (~Thunderbi@p200300F933C29DB784DB2BADDFBFF2B0.dip0.t-ipconnect.de) has joined #godotengine
+2019-10-29 12:31:44	-->	bomb (~bomb@gateway/tor-sasl/bomb) has joined #godotengine
+2019-10-29 12:32:12	-->	thisdevtest42 (b1259b18@177.37.155.24) has joined #godotengine
+2019-10-29 12:34:18	-->	Yeldham (~michael@138.118.198.38) has joined #godotengine
+2019-10-29 12:35:00	thisdevtest42	someone knows what is wrong here? https://privatebin.net/?3d84c5ad3836282a#2UfmqfwD5L2qmQbj2e9nyT3ZYvETL3ATp1U9Bn3jAV2a
+2019-10-29 12:35:17	thisdevtest42	gives me this error: Invalid set index 'text' (on base: 'Label') with value of type 'GDScriptFunctionState'.
+2019-10-29 12:39:33	-->	mceier (~mceier@89-68-132-187.dynamic.chello.pl) has joined #godotengine
+2019-10-29 12:47:39	<--	Salabasama (~mustafa@68-118-84-232.dhcp.kgpt.tn.charter.com) has quit (Ping timeout: 240 seconds)
+2019-10-29 12:48:41	<--	rople (rople@gateway/vpn/privateinternetaccess/rople) has quit (Ping timeout: 265 seconds)
+2019-10-29 12:51:45	<--	ignaloidas (~ignaloida@158.129.26.113) has quit (Ping timeout: 268 seconds)
+2019-10-29 12:51:55	Nello	thisdevtest42, "Calling yield() will immediately return from the current function, with the current frozen state of the same function as the return value. Calling resume on this resulting object will continue execution and return whatever the function returns. Once resumed, the state object becomes invalid"
+2019-10-29 12:52:00	Nello	https://docs.godotengine.org/en/3.1/getting_started/scripting/gdscript/gdscript_basics.html
+2019-10-29 12:53:53	-->	YeldhamDev (michael@gateway/vpn/protonvpn/yeldham) has joined #godotengine
+2019-10-29 12:54:00	<--	Yeldham (~michael@138.118.198.38) has quit (Ping timeout: 265 seconds)
+2019-10-29 13:00:06	<--	romuva (~D@78-56-108-189.static.zebra.lt) has quit (Quit: Leaving.)
+2019-10-29 13:09:08	-->	regakakobigman (~regakakob@c-73-174-187-176.hsd1.pa.comcast.net) has joined #godotengine
+2019-10-29 13:09:35	<--	mceier (~mceier@89-68-132-187.dynamic.chello.pl) has quit (Ping timeout: 276 seconds)
+2019-10-29 13:14:21	thisdevtest42	Thank you, I can make it work now
+2019-10-29 13:33:35	-->	ignaloidas (~ignaloida@158.129.26.113) has joined #godotengine
+2019-10-29 13:38:35	<--	thisdevtest42 (b1259b18@177.37.155.24) has quit (Remote host closed the connection)
+2019-10-29 13:49:27	-->	romuva (~D@78-56-108-189.static.zebra.lt) has joined #godotengine
+2019-10-29 13:51:36	<--	romuva (~D@78-56-108-189.static.zebra.lt) has quit (Client Quit)
+2019-10-29 13:58:32	-->	romuva (~D@78-56-108-189.static.zebra.lt) has joined #godotengine
+2019-10-29 14:05:54	-->	mceier (~mceier@89-68-132-187.dynamic.chello.pl) has joined #godotengine
+2019-10-29 14:32:57	<--	Jyhem_laptop (~libs@2a01:cb10:294:aa00:9cc:98d2:28e8:f0bd) has quit (Quit: Konversation terminated!)
+2019-10-29 14:36:15	<--	romuva (~D@78-56-108-189.static.zebra.lt) has quit (Quit: Leaving.)
+2019-10-29 14:37:49	<--	mceier (~mceier@89-68-132-187.dynamic.chello.pl) has quit (Ping timeout: 268 seconds)
+2019-10-29 14:39:18	-->	mceier (~mceier@89-68-132-187.dynamic.chello.pl) has joined #godotengine
+2019-10-29 14:40:26	-->	dddddd (~dddddd@unaffiliated/dddddd) has joined #godotengine
+2019-10-29 14:47:03	<--	saltpepp3r (~saltpepp3@91.207.173.118) has quit (Ping timeout: 252 seconds)
+2019-10-29 14:47:13	-->	greedom (~greedom@2001:16b8:2eca:5e00:76dd:9893:bf32:eac7) has joined #godotengine
+2019-10-29 14:49:02	-->	saltpepp3r (~saltpepp3@91.207.173.118) has joined #godotengine
+2019-10-29 14:52:22	<--	Technipion (~Thunderbi@p200300F933C29DB784DB2BADDFBFF2B0.dip0.t-ipconnect.de) has quit (Quit: Technipion)
+2019-10-29 14:52:47	-->	MoosePrime (~moose@207.44.22.117) has joined #godotengine
+2019-10-29 14:56:29	<--	YeldhamDev (michael@gateway/vpn/protonvpn/yeldham) has quit (Ping timeout: 246 seconds)
+2019-10-29 14:57:10	-->	Jyhem_laptop (~libs@2a01:cb10:294:aa00:5d57:523c:94e3:4ccf) has joined #godotengine
+2019-10-29 14:57:17	-->	YeldhamDev (~michael@138.118.198.35) has joined #godotengine
+2019-10-29 14:59:15	-->	kraghot (~manjaro-u@78-0-62-84.adsl.net.t-com.hr) has joined #godotengine
+2019-10-29 15:01:11	-->	romuva (~D@78-56-108-189.static.zebra.lt) has joined #godotengine
+2019-10-29 15:01:32	-->	noone93 (542f8552@84.47.133.82) has joined #godotengine
+2019-10-29 15:02:23	<--	noone93 (542f8552@84.47.133.82) has quit (Remote host closed the connection)
+2019-10-29 15:04:52	-->	Yeldham (michael@gateway/vpn/protonvpn/yeldham) has joined #godotengine
+2019-10-29 15:04:53	<--	YeldhamDev (~michael@138.118.198.35) has quit (Ping timeout: 246 seconds)
+2019-10-29 15:06:00	-->	capefeather (~capefeath@tnhlon4048w-lp140-06-70-29-102-236.dsl.bell.ca) has joined #godotengine
+2019-10-29 15:09:19	-->	Sipaha (~Sipaha@static-user-46-236-156-184.tomtelnet.ru) has joined #godotengine
+2019-10-29 15:10:31	<--	Taoki (~MirceaKit@93.113.162.37) has quit (Quit: http://www.furaffinity.net/user/mircea/)
+2019-10-29 15:16:25	<--	romuva (~D@78-56-108-189.static.zebra.lt) has quit (Quit: Leaving.)
+2019-10-29 15:16:25	-->	romuva (~D@78-56-108-189.static.zebra.lt) has joined #godotengine
+2019-10-29 15:19:44	<--	romuva (~D@78-56-108-189.static.zebra.lt) has quit (Client Quit)
+2019-10-29 15:26:32	<--	mceier (~mceier@89-68-132-187.dynamic.chello.pl) has quit (Ping timeout: 268 seconds)
+2019-10-29 15:34:34	-->	Taoki (~MirceaKit@93.113.162.37) has joined #godotengine
+2019-10-29 15:37:58	-->	mceier (~mceier@89-68-132-187.dynamic.chello.pl) has joined #godotengine
+2019-10-29 15:39:41	<--	Sipaha (~Sipaha@static-user-46-236-156-184.tomtelnet.ru) has quit (Quit: Going offline, see ya! 8=з)
+2019-10-29 15:43:22	<--	mrcdk (~mrcdk@180-200-39-46.usuarios.innovasur.com) has quit (Read error: Connection reset by peer)
+2019-10-29 15:57:57	<--	mceier (~mceier@89-68-132-187.dynamic.chello.pl) has quit (Ping timeout: 240 seconds)
+2019-10-29 16:03:53	-->	mceier (~mceier@89-68-132-187.dynamic.chello.pl) has joined #godotengine
+2019-10-29 16:07:11	<--	kraghot (~manjaro-u@78-0-62-84.adsl.net.t-com.hr) has quit (Ping timeout: 246 seconds)
+2019-10-29 16:16:18	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #godotengine
+2019-10-29 16:16:18	--	Topic for #godotengine is "Godot Engine | https://godotengine.org | GitHub: https://github.com/godotengine/godot | Docs: https://docs.godotengine.org | Discord: https://discord.gg/zH7NUgz | Don't ask if you can ask, just ask! :) | Interested in engine development? Join #godotengine-devel | Want to help with the documentation? Join #godotengine-doc"
+2019-10-29 16:16:18	--	Topic set by Calinou (~quassel@fsf/member/calinou) on Mon, 25 Feb 2019 00:45:33
+2019-10-29 16:16:18	--	Channel #godotengine: 259 nicks (1 op, 0 voices, 258 normals)
+2019-10-29 16:16:28	--	Channel created on Tue, 11 Feb 2014 08:43:18
+2019-10-29 16:28:10	<--	Taoki (~MirceaKit@93.113.162.37) has quit (Quit: http://www.furaffinity.net/user/mircea/)
+2019-10-29 16:41:34	<--	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has quit (Quit: WeeChat 1.9.1)
+2019-10-29 16:46:03	-->	biliogadafr (~bilio@46.53.248.20) has joined #godotengine
+2019-10-29 17:15:17	-->	kimamb (~kimamb__@62.97.173.88) has joined #godotengine
+2019-10-29 17:30:45	kimamb	Is there any possibility to get a built-in terrain editor in Godot 4.0?
+2019-10-29 17:30:52	-->	kriskropd (~kriskropd@unaffiliated/kriskropd) has joined #godotengine
+2019-10-29 17:32:34	-->	Mutex (25c9c53c@ip-37-201-197-60.hsi13.unitymediagroup.de) has joined #godotengine
+2019-10-29 17:33:09	-->	MDude (AdiIRC@c-174-55-101-236.hsd1.pa.comcast.net) has joined #godotengine
+2019-10-29 17:37:13	<--	odino (~odino3@2a02:1205:c6b3:cef0:7964:68ed:9245:e358) has quit (Quit: Leaving)
+2019-10-29 17:42:50	-->	bitwinery (~bitwinery@c-73-37-18-139.hsd1.wa.comcast.net) has joined #godotengine
+2019-10-29 17:43:42	<--	bitwinery (~bitwinery@c-73-37-18-139.hsd1.wa.comcast.net) has quit (Remote host closed the connection)
+2019-10-29 17:44:08	-->	bitwinery (~bitwinery@c-73-37-18-139.hsd1.wa.comcast.net) has joined #godotengine
+2019-10-29 17:44:17	Calinou	kimamb: no, I don't think it will be built-in anytime soon
+2019-10-29 17:44:27	Calinou	Zylann's terrain editor plugin seems to be the best option so far
+2019-10-29 17:44:49	Calinou	the issue with creating a built-in solution is that we'd need to make it cover a large amount of usecases, so it'd become a maintenance burden
+2019-10-29 17:45:09	Calinou	terrain is a very vast topic (no pun intended), Unity/Unreal's built-in solutions often leave to be desired for comparison
+2019-10-29 17:45:43	Calinou	however, we can make it easier to extend Godot to build plugins of this type
+2019-10-29 17:46:01	Calinou	(Godot 4.0 will make it possible to override parts of the renderer in scripts, and will offer a compute API for this purpose)
+2019-10-29 17:53:16	-->	Romlok (~mel@26.51-175-167.customer.lyse.net) has joined #godotengine
+2019-10-29 17:53:42	<--	zingo_ (uid365808@gateway/web/irccloud.com/x-milzxtnyokzjncfw) has quit (Quit: Connection closed for inactivity)
+2019-10-30 09:15:49	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #godotengine
+2019-10-30 09:15:49	--	Topic for #godotengine is "Godot Engine | https://godotengine.org | GitHub: https://github.com/godotengine/godot | Docs: https://docs.godotengine.org | Discord: https://discord.gg/zH7NUgz | Don't ask if you can ask, just ask! :) | Interested in engine development? Join #godotengine-devel | Want to help with the documentation? Join #godotengine-doc"
+2019-10-30 09:15:49	--	Topic set by Calinou (~quassel@fsf/member/calinou) on Mon, 25 Feb 2019 00:45:33
+2019-10-30 09:15:49	--	Channel #godotengine: 249 nicks (1 op, 0 voices, 248 normals)
+2019-10-30 09:16:00	--	Channel created on Tue, 11 Feb 2014 08:43:18
+2019-10-30 09:19:34	-->	romuva (~D@78-56-108-189.static.zebra.lt) has joined #godotengine
+2019-10-30 09:26:42	-->	maveerik (~1@93.84.169.63) has joined #godotengine
+2019-10-30 09:39:20	<--	bitwinery (~bitwinery@c-73-37-18-139.hsd1.wa.comcast.net) has quit (Quit: Leaving)
+2019-10-30 09:41:37	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #godotengine
+2019-10-30 09:47:36	<--	romuva (~D@78-56-108-189.static.zebra.lt) has quit (Quit: Leaving.)
+2019-10-30 09:51:13	<--	Tobbi (~Tobbi@supertux/tobbi) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-10-30 09:59:45	<--	regakakobigman (~regakakob@c-73-174-187-176.hsd1.pa.comcast.net) has quit (Ping timeout: 250 seconds)
+2019-10-30 10:26:55	-->	Technipion (~Thunderbi@p200300F933C29D8545FF9515FF4D8EE1.dip0.t-ipconnect.de) has joined #godotengine
+2019-10-30 10:34:00	-->	Sagirou (602148a6@96-33-72-166.dhcp.ahvl.nc.charter.com) has joined #godotengine
+2019-10-30 10:34:07	Sagirou	Hello
+2019-10-30 10:34:16	Nello	Sagirou
+2019-10-30 10:34:29	Nello	when you ask a question wait more than 5 mins before leaving
+2019-10-30 10:34:32	Sagirou	Hi Nello!
+2019-10-30 10:34:34	Sagirou	^.^
+2019-10-30 10:34:40	Nello	ive just missed you half a dozen times
+2019-10-30 10:34:51	Sagirou	lol
+2019-10-30 10:35:04	-->	greedom (~greedom@2001:16b8:2e85:3600:d086:e212:a0d7:bc58) has joined #godotengine
+2019-10-30 10:35:07	Sagirou	Im on here pretty often off and on. That or playing Go
+2019-10-30 10:36:29	Nello	not even 2 minutes! https://pastebin.com/Jx5Qi4Bb
+2019-10-30 10:36:49	Nello	anyway what's up? :)
+2019-10-30 10:37:39	Sagirou	Meh trying to figure out how to do attacks in godot...gettng some water...watching the news...playing Go..
+2019-10-30 10:38:08	-->	paramite (~paramite@nat-155.starnet.cz) has joined #godotengine
+2019-10-30 10:39:02	Nello	busy life
+2019-10-30 10:39:10	Nello	how are you implementing attacks?
+2019-10-30 10:39:37	Sagirou	I havent quite figured out how signals, area2ds, and groups work together to have basic combat and damage yet
+2019-10-30 10:39:51	Nello	which part is giving your trouble?
+2019-10-30 10:40:06	Sagirou	Not sure yet. Dont know how to do it so i dont know how im gonna use it
+2019-10-30 10:40:24	Sagirou	for the main project were doing its going to be just a swipe attack for a cat
+2019-10-30 10:40:35	Nello	what's your character? an animatedsprite or a kinematicbody2d?
+2019-10-30 10:40:39	Nello	oh or is it 3d
+2019-10-30 10:40:48	Sagirou	2d
+2019-10-30 10:41:02	Sagirou	the cats kinematic with an animated sprite
+2019-10-30 10:42:08	Sagirou	Im guessing it needs an are 2d that sends a signal to the mice and i supposed i can code the hurt animation for the mice when it enters it but beyond that and coding the animation itself im totally lost lol
+2019-10-30 10:43:12	Nello	the benefit of never clearing my browser history: https://www.youtube.com/watch?v=AaJopFFkmNo
+2019-10-30 10:44:05	Sagirou	that doesnt help too much
+2019-10-30 10:44:12	Sagirou	im not using a tiled sprite
+2019-10-30 10:44:38	Sagirou	plus ive already watched it and know of it
+2019-10-30 10:44:45	Sagirou	kind of what im trying to go off of already
+2019-10-30 10:44:47	Sagirou	^.^
+2019-10-30 10:45:47	-->	thc202 (~thc202@unaffiliated/thc202) has joined #godotengine
+2019-10-30 10:47:26	Nello	the AnimatedSprite node has get_frame() so if you want the hitbox to appear at a certain time you could have it if anim.get_frame() == target: area2d.set_monitoring(1)
+2019-10-30 10:48:41	Nello	that would enable the area2d/hitbox at the right frame. i guess you could add and remove the hitbox instead of enabling/disabling it
+2019-10-30 10:49:31	Nello	especially if you have different attacks
+2019-10-30 10:55:47	Sagirou	Nah its just a cat swipe lol
+2019-10-30 10:56:29	Sagirou	I guess i could disable it on 0 and then enable it briefly when the attack finishes
+2019-10-30 10:58:40	Nello	yeah you can specify which frames the hitbox is active and if you don't want to enable/disable it you can store the hitbox node in a variable and add_child/remove_child on the appropriate frames
+2019-10-30 11:00:31	Nello	that'd trigger anything you have in _enter_tree and _ready though so whatever works for you
+2019-10-30 11:16:17	Sagirou	Hey Nully
+2019-10-30 11:16:29	Sagirou	Would you like to see some shots of the game so far?
+2019-10-30 11:16:35	Sagirou	Nello*
+2019-10-30 11:18:05	Nello	yeah absolutely :D
+2019-10-30 11:21:33	Sagirou	k check your pms nello
+2019-10-30 11:23:20	Sagirou	https://discordapp.com/channels/212250894228652034/218361207990648832
+2019-10-30 11:23:27	Sagirou	i just posted a screen shot here
+2019-10-30 11:24:53	Sagirou	let me know if it took you to the right spot
+2019-10-30 11:29:43	<--	Sagirou (602148a6@96-33-72-166.dhcp.ahvl.nc.charter.com) has quit (Remote host closed the connection)
+2019-10-30 11:33:32	-->	Zeioth (~Zeioth@113.pool80-102-112.dynamic.orange.es) has joined #godotengine
+2019-10-30 11:33:34	Nello	oh hey sorry i don't have discord
+2019-10-30 11:34:03	Nello	and sorry for taking so long to respond i got sucked into the thing i was working on and forgot about everything elwe
+2019-10-30 11:37:25	<--	Sipaha (~Sipaha@static-user-46-236-156-184.tomtelnet.ru) has quit (Read error: Connection reset by peer)
+2019-10-30 11:40:19	-->	Sipaha (~Sipaha@static-user-46-236-156-184.tomtelnet.ru) has joined #godotengine
+2019-10-30 11:42:05	<--	atorresm (atorresmma@gateway/shell/matrix.org/x-lbatxkpyeirmmrng) has quit (Remote host closed the connection)
+2019-10-30 11:42:05	<--	anthyg[m] (anthygamor@gateway/shell/matrix.org/x-udnpjnlwzugjspwn) has quit (Remote host closed the connection)
+2019-10-30 11:42:06	<--	Xananax[m] (xananaxmut@gateway/shell/matrix.org/x-ksrsftvzlkbmjsiw) has quit (Remote host closed the connection)
+2019-10-30 11:42:07	<--	cuibonobo (cuibonobom@gateway/shell/matrix.org/x-jzukuhdxyqfgyhah) has quit (Remote host closed the connection)
+2019-10-30 11:42:08	<--	HER0_01 (her0matrix@gateway/shell/matrix.org/x-kvwcohzynzgexigh) has quit (Write error: Connection reset by peer)
+2019-10-30 11:42:09	<--	zicho[m] (zichomatri@gateway/shell/matrix.org/x-dydckegfuhuowwvl) has quit (Write error: Connection reset by peer)
+2019-10-30 11:42:09	<--	cobradabest[m] (fiakuroama@gateway/shell/matrix.org/x-arqxocqqpzrfalqq) has quit (Write error: Connection reset by peer)
+2019-10-30 11:42:09	<--	minielchi[m] (minielchim@gateway/shell/matrix.org/x-voqrrituxpckoygu) has quit (Write error: Broken pipe)
+2019-10-30 11:42:10	<--	Saracen[m] (saracenmat@gateway/shell/matrix.org/x-smhmaldpprtwpyyp) has quit (Remote host closed the connection)
+2019-10-30 11:42:11	<--	TMM (tmmmatrixo@fsf/member/pdpc.professional.tmm) has quit (Remote host closed the connection)
+2019-10-30 11:42:11	<--	theduriel[m] (thedurielm@gateway/shell/matrix.org/x-kuaijfthunxdffyo) has quit (Remote host closed the connection)
+2019-10-30 11:42:12	<--	anoa (andrewmamo@gateway/shell/matrix.org/x-fcbnibhyozaczbtk) has quit (Write error: Connection reset by peer)
+2019-10-30 11:42:14	<--	pixeltrik[m] (pixeltrikm@gateway/shell/matrix.org/x-xcyiqjgrfnbyeznr) has quit (Remote host closed the connection)
+2019-10-30 11:42:14	<--	azagaya (pablofonov@gateway/shell/matrix.org/x-zkchpjihcdnnoiyh) has quit (Remote host closed the connection)
+2019-10-30 11:42:42	<--	raymoo[m] (raymoomatr@gateway/shell/matrix.org/x-jpvhjykuveusdlui) has quit (Read error: Connection reset by peer)
+2019-10-30 11:42:42	<--	Mux213 (mux213matr@gateway/shell/matrix.org/x-agnwtjmeqfqihafp) has quit (Remote host closed the connection)
+2019-10-30 11:42:42	<--	bojidar_bg (bojidar-bg@gateway/shell/matrix.org/x-wxvffxjnyluohgpr) has quit (Read error: Connection reset by peer)
+2019-10-30 11:42:42	<--	polisummer[m] (polisummer@gateway/shell/matrix.org/x-niiahrbuntxgpixj) has quit (Remote host closed the connection)
+2019-10-30 11:42:42	<--	Alexwbc[m] (alexwbcmat@gateway/shell/matrix.org/x-tetcbhojqzxmhrbp) has quit (Read error: Connection reset by peer)
+2019-10-30 11:42:42	<--	fales[m] (falesmatri@gateway/shell/matrix.org/x-btrlutvybqqetqtf) has quit (Read error: Connection reset by peer)
+2019-10-30 11:42:42	<--	rxlecky[m] (rxlmatrixo@gateway/shell/matrix.org/x-kplbwpdfaauvpded) has quit (Read error: Connection reset by peer)
+2019-10-30 11:42:42	<--	OuTopos[m] (outoposmat@gateway/shell/matrix.org/x-nmzeaqijdugzenit) has quit (Read error: Connection reset by peer)
+2019-10-30 11:42:42	<--	andnovar[m] (andnovarub@gateway/shell/matrix.org/x-tinvgllbbjqnuatr) has quit (Remote host closed the connection)
+2019-10-30 11:42:42	<--	Cobra[scoen_SCO] (scotsleedp@gateway/shell/matrix.org/x-rlucyoclvkxnnkus) has quit (Write error: Broken pipe)
+2019-10-30 11:42:42	<--	Groud (groudmatri@gateway/shell/matrix.org/x-lzlddanpuopyzgxz) has quit (Remote host closed the connection)
+2019-10-30 11:42:42	<--	bruvzg[m] (bruvzgmatr@gateway/shell/matrix.org/x-asxzilbmakvmaqte) has quit (Read error: Connection reset by peer)
+2019-10-30 11:42:42	<--	nolan_d (nolanthewo@gateway/shell/matrix.org/x-neejlympgcqqgbsn) has quit (Write error: Connection reset by peer)
+2019-10-30 11:42:42	<--	kubecz3k[m] (kubecz3kma@gateway/shell/matrix.org/x-vhodjhettmeyjejv) has quit (Write error: Connection reset by peer)
+2019-10-30 11:42:42	<--	fry-[m] (fry-matrix@gateway/shell/matrix.org/x-mzzekkkblwyrrdpr) has quit (Write error: Connection reset by peer)
+2019-10-30 11:42:42	<--	rjBadger (rjbadgerma@gateway/shell/matrix.org/x-iorwbsbwsxwchzhv) has quit (Read error: Connection reset by peer)
+2019-10-30 11:42:42	<--	pablodp606[m] (pablodp606@gateway/shell/matrix.org/x-lmesddisxdjcmysn) has quit (Read error: Connection reset by peer)
+2019-10-30 11:42:42	<--	Paulb23 (paulb23mat@gateway/shell/matrix.org/x-zghjdwtwjxhgulrd) has quit (Read error: Connection reset by peer)
+2019-10-30 11:42:42	<--	Xrayez[m] (xrayezmatr@gateway/shell/matrix.org/x-ywoqwwndeiffpkgd) has quit (Read error: Connection reset by peer)
+2019-10-30 11:42:42	<--	albfan[m] (albfanmatr@gateway/shell/matrix.org/x-ftjldplafjkjdppc) has quit (Write error: Connection reset by peer)
+2019-10-30 11:42:42	<--	Hugo[m] (hugomatrix@gateway/shell/matrix.org/x-kttplrjqvhsxbjtp) has quit (Read error: Connection reset by peer)
+2019-10-30 11:42:42	<--	qbieshay (qbieshayma@gateway/shell/matrix.org/x-idmgzsbjwybeckcd) has quit (Remote host closed the connection)
+2019-10-30 11:42:42	<--	nigre-dique[m] (nigre-diqu@gateway/shell/matrix.org/x-vutaeflyyrnrnbwx) has quit (Write error: Connection reset by peer)
+2019-10-30 11:42:42	<--	lertsenem (lertsenemm@gateway/shell/matrix.org/x-ocyixipvmkmlcrhq) has quit (Read error: Connection reset by peer)
+2019-10-30 11:42:42	<--	iamactuallycthul (iamactuall@gateway/shell/matrix.org/x-myaspkcsofeenjcg) has quit (Read error: Connection reset by peer)
+2019-10-30 11:42:42	<--	eoinoneill[m] (theyokaima@gateway/shell/matrix.org/x-pwmucfkzhzfernjw) has quit (Read error: Connection reset by peer)
+2019-10-30 11:42:42	<--	nilsirl[m] (nilsirlmat@gateway/shell/matrix.org/x-srvivylicliyrhwo) has quit (Read error: Connection reset by peer)
+2019-10-30 11:42:42	<--	M18[m] (apaolillom@gateway/shell/matrix.org/x-lzzavbdewgutxiiz) has quit (Write error: Connection reset by peer)
+2019-10-30 11:42:42	<--	iriodus[m] (iriodusmat@gateway/shell/matrix.org/x-pnoizmactqzprpzf) has quit (Remote host closed the connection)
+2019-10-30 11:42:42	<--	noonereally[m] (noonereall@gateway/shell/matrix.org/x-ugtoehebiddswqbk) has quit (Read error: Connection reset by peer)
+2019-10-30 11:42:42	<--	neospark314[m] (neospark31@gateway/shell/matrix.org/x-pxpkptrftshqcjeg) has quit (Read error: Connection reset by peer)
+2019-10-30 11:42:42	<--	Tobbi[m] (tobbimatri@gateway/shell/matrix.org/x-srcupiexvceayhkt) has quit (Read error: Connection reset by peer)
+2019-10-30 11:42:42	<--	Dandellion[m] (dandellion@gateway/shell/matrix.org/x-chullgiajfjddshs) has quit (Read error: Connection reset by peer)
+2019-10-30 11:42:42	<--	LionUCS[m] (lionucsmat@gateway/shell/matrix.org/x-zyblejtzqppmnkzy) has quit (Remote host closed the connection)
+2019-10-30 11:42:42	<--	djiamnot[m] (djiamnotma@gateway/shell/matrix.org/x-suclgwjvzsrticab) has quit (Remote host closed the connection)
+2019-10-30 11:42:42	<--	imadlo (czlowiekim@gateway/shell/matrix.org/x-yshjpuikzwkzezcp) has quit (Remote host closed the connection)
+2019-10-30 11:42:42	<--	IronicallySerio (ironically@gateway/shell/matrix.org/x-jhblkucyspbnnysx) has quit (Read error: Connection reset by peer)
+2019-10-30 11:42:42	<--	karroffel_irc (karroffelc@gateway/shell/matrix.org/x-lixaynbxdskkfauv) has quit (Read error: Connection reset by peer)
+2019-10-30 11:42:42	<--	danielp3344 (danielp334@gateway/shell/matrix.org/x-qcvrwpympcsjcjpb) has quit (Read error: Connection reset by peer)
+2019-10-30 11:42:42	<--	Matrix8967[m] (matrix8967@gateway/shell/matrix.org/x-lqpfydlgsgvjtivk) has quit (Read error: Connection reset by peer)
+2019-10-30 11:42:42	<--	Lief[m] (liefswanso@gateway/shell/matrix.org/x-golvnhpgmiggkbfl) has quit (Remote host closed the connection)
+2019-10-30 11:42:42	<--	ajweeks[m] (ajweeksmat@gateway/shell/matrix.org/x-bvaadwvumozmfieo) has quit (Remote host closed the connection)
+2019-10-30 11:42:42	<--	Przmk[m] (soifmatrix@gateway/shell/matrix.org/x-ysdpqdornbrlndhw) has quit (Remote host closed the connection)
+2019-10-30 11:42:42	-->	uldall_ (98734992@152.115.73.146) has joined #godotengine
+2019-10-30 11:42:42	<--	minraws (swarnimmat@gateway/shell/matrix.org/x-jhcppoyikgylojak) has quit (Remote host closed the connection)
+2019-10-30 11:42:42	<--	dreamsComeTrue[m (dreamscome@gateway/shell/matrix.org/x-ykoygyllwadtmjid) has quit (Remote host closed the connection)
+2019-10-30 11:43:09	-->	rkieley (~rkieley@24.222.88.212) has joined #godotengine
+2019-10-30 11:45:00	uldall_	Hi, I am trying to build the export templates for HTML5 from source using this guide: https://docs.godotengine.org/en/latest/development/compiling/compiling_for_web.html. The output from following the guide is a webassembly_release.zip file. When I try to install it using the Export Template Manager I get an error that no version.txt file is
+2019-10-30 11:45:01	uldall_	present. Anyone know how to use the HTML5 template?
+2019-10-30 11:47:26	-->	lisac_ (~lisac@93-86-188-158.dynamic.isp.telekom.rs) has joined #godotengine
+2019-10-30 11:49:17	<--	lisac (~lisac@178-223-186-202.dynamic.isp.telekom.rs) has quit (Ping timeout: 240 seconds)
+2019-10-30 11:50:47	<--	paramite (~paramite@nat-155.starnet.cz) has quit (Quit: Leaving)
+2019-10-30 11:57:13	Nello	is it just a text file that's missing uldall_ ?
+2019-10-30 11:58:58	Nello	if you're on linux: echo "3.2.alpha" > version.txt
+2019-10-30 11:59:17	Nello	or whichever version you've built
+2019-10-30 12:03:40	uldall_	I just put it into the zip file?
+2019-10-30 12:04:01	Nello	i think in the same place where the zip is
+2019-10-30 12:04:13	uldall_	I will try
+2019-10-30 12:04:47	uldall_	I was a bit confused as the Export Template Manager looks for files with extension .tpz
+2019-10-30 12:06:30	Nello	yeah i think that's like a tgz/tar.gz
+2019-10-30 12:06:40	Nello	i know 7z doesn't mind them
+2019-10-30 12:08:08	Nello	oh it's just a short name for tar.gz it's the same thing as .tgz
+2019-10-30 12:08:17	-->	iamactuallycthul (iamactuall@gateway/shell/matrix.org/x-lsdevljvuldanwjv) has joined #godotengine
+2019-10-30 12:10:10	<--	Technipion (~Thunderbi@p200300F933C29D8545FF9515FF4D8EE1.dip0.t-ipconnect.de) has quit (Read error: Connection reset by peer)
+2019-10-30 12:10:29	-->	Technipion (~Thunderbi@p200300F933C29D8545FF9515FF4D8EE1.dip0.t-ipconnect.de) has joined #godotengine
+2019-10-30 12:26:37	-->	kriskropd (~kriskropd@unaffiliated/kriskropd) has joined #godotengine
+2019-10-30 12:31:07	-->	Yeldham (~michael@138.118.198.35) has joined #godotengine
+2019-10-30 12:34:32	-->	Cahaan (~Cahaan@109.133.183.154) has joined #godotengine
+2019-10-30 12:37:29	<--	Salabasama (~mustafa@68-118-84-232.dhcp.kgpt.tn.charter.com) has quit (Ping timeout: 276 seconds)
+2019-10-30 12:46:09	-->	clemo (~Thunderbi@e239-135.eduroam.tuwien.ac.at) has joined #godotengine
+2019-10-30 12:47:51	<--	clemo (~Thunderbi@e239-135.eduroam.tuwien.ac.at) has quit (Client Quit)
+2019-10-30 12:49:06	<--	Nello (~Nello@24-224-177-229.eastlink.ca) has quit (Remote host closed the connection)
+2019-10-30 12:50:13	-->	Nello (~Nello@24-224-177-229.eastlink.ca) has joined #godotengine
+2019-10-30 13:00:11	<--	Jyhem_laptop (~libs@2a01:cb10:294:aa00:5d57:523c:94e3:4ccf) has quit (Ping timeout: 246 seconds)
+2019-10-30 13:03:18	-->	Mux213 (mux213matr@gateway/shell/matrix.org/x-bosuhmdvpikslvux) has joined #godotengine
+2019-10-30 13:03:18	-->	Xrayez[m] (xrayezmatr@gateway/shell/matrix.org/x-iqlisoulyftmafti) has joined #godotengine
+2019-10-30 13:03:19	-->	theduriel[m] (thedurielm@gateway/shell/matrix.org/x-vcbnilqigsmkclos) has joined #godotengine
+2019-10-30 13:03:19	-->	M18[m] (apaolillom@gateway/shell/matrix.org/x-yosogqnibkjutfrm) has joined #godotengine
+2019-10-30 13:03:19	-->	djiamnot[m] (djiamnotma@gateway/shell/matrix.org/x-hliwucwoejmljbsv) has joined #godotengine
+2019-10-30 13:03:19	-->	atorresm (atorresmma@gateway/shell/matrix.org/x-jngocqtgddlthyhl) has joined #godotengine
+2019-10-30 13:03:19	-->	Hugo[m] (hugomatrix@gateway/shell/matrix.org/x-zhapahaefphwgcae) has joined #godotengine
+2019-10-30 13:03:19	-->	nolan_d (nolanthewo@gateway/shell/matrix.org/x-zokpfgtlmcufpzml) has joined #godotengine
+2019-10-30 13:03:19	-->	Cobra[scoen_SCO] (scotsleedp@gateway/shell/matrix.org/x-hwvpbdxlqhgcjxwu) has joined #godotengine
+2019-10-30 13:03:19	-->	ajweeks[m] (ajweeksmat@gateway/shell/matrix.org/x-zkvwngepnueuiprc) has joined #godotengine
+2019-10-30 13:03:19	-->	Groud (groudmatri@gateway/shell/matrix.org/x-aulhxoxgakxjikqv) has joined #godotengine
+2019-10-30 13:03:19	-->	HER0_01 (her0matrix@gateway/shell/matrix.org/x-hfjobrzhxpiyozpu) has joined #godotengine
+2019-10-30 13:03:20	-->	albfan[m] (albfanmatr@gateway/shell/matrix.org/x-gicyrcafyzlpgswc) has joined #godotengine
+2019-10-30 13:03:20	-->	qbieshay (qbieshayma@gateway/shell/matrix.org/x-lzjwcewxfqdxclmy) has joined #godotengine
+2019-10-30 13:03:20	-->	pablodp606[m] (pablodp606@gateway/shell/matrix.org/x-ilneaerqjcxrnfjj) has joined #godotengine
+2019-10-30 13:03:20	-->	andnovar[m] (andnovarub@gateway/shell/matrix.org/x-zhzxfnkdcljfoclo) has joined #godotengine
+2019-10-30 13:03:20	-->	kubecz3k[m] (kubecz3kma@gateway/shell/matrix.org/x-rfnuvncoihknkqyw) has joined #godotengine
+2019-10-30 13:03:20	-->	fry-[m] (fry-matrix@gateway/shell/matrix.org/x-khfaevpifupaosfd) has joined #godotengine
+2019-10-30 13:03:20	-->	cuibonobo (cuibonobom@gateway/shell/matrix.org/x-ponsyryadspaveuu) has joined #godotengine
+2019-10-30 13:03:21	-->	Dandellion[m] (dandellion@gateway/shell/matrix.org/x-szlukoxkuxnjstii) has joined #godotengine
+2019-10-30 13:03:21	-->	eoinoneill[m] (theyokaima@gateway/shell/matrix.org/x-xnrzwrciitaezqyi) has joined #godotengine
+2019-10-30 13:03:21	-->	Przmk[m] (soifmatrix@gateway/shell/matrix.org/x-igyrzmjckrkelzas) has joined #godotengine
+2019-10-30 13:03:21	-->	minielchi[m] (minielchim@gateway/shell/matrix.org/x-vjmrcdmcrpyyzxej) has joined #godotengine
+2019-10-30 13:03:21	-->	Matrix8967[m] (matrix8967@gateway/shell/matrix.org/x-cpszeudmcygvopfp) has joined #godotengine
+2019-10-30 13:03:21	-->	rjBadger (rjbadgerma@gateway/shell/matrix.org/x-euolthpvtwdajejk) has joined #godotengine
+2019-10-30 13:03:21	-->	dreamsComeTrue[m (dreamscome@gateway/shell/matrix.org/x-wfryaeaxhjukacfz) has joined #godotengine
+2019-10-30 13:03:21	-->	IronicallySerio (ironically@gateway/shell/matrix.org/x-qyjecgmgxsrxufoc) has joined #godotengine
+2019-10-30 13:03:21	-->	cobradabest[m] (fiakuroama@gateway/shell/matrix.org/x-gqegcslmhknohwsd) has joined #godotengine
+2019-10-30 13:03:21	-->	nigre-dique[m] (nigre-diqu@gateway/shell/matrix.org/x-zuzxntjhofbizsxi) has joined #godotengine
+2019-10-30 13:03:21	-->	rxlecky[m] (rxlmatrixo@gateway/shell/matrix.org/x-nocsufdefaswciwj) has joined #godotengine
+2019-10-30 13:03:21	-->	pixeltrik[m] (pixeltrikm@gateway/shell/matrix.org/x-odfvmevgfcfgpaxb) has joined #godotengine
+2019-10-30 13:03:21	-->	raymoo[m] (raymoomatr@gateway/shell/matrix.org/x-dfbxddurdebafoei) has joined #godotengine
+2019-10-30 13:03:21	-->	noonereally[m] (noonereall@gateway/shell/matrix.org/x-swolgrrkxltuodbx) has joined #godotengine
+2019-10-30 13:03:21	-->	Tobbi[m] (tobbimatri@gateway/shell/matrix.org/x-hyjcrxwztimdnyqn) has joined #godotengine
+2019-10-30 13:03:21	-->	bruvzg[m] (bruvzgmatr@gateway/shell/matrix.org/x-rlynppdmtrpeozes) has joined #godotengine
+2019-10-30 13:03:21	-->	bojidar_bg (bojidar-bg@gateway/shell/matrix.org/x-vzgdvdfszpjmmhin) has joined #godotengine
+2019-10-30 13:03:21	-->	TMM (tmmmatrixo@fsf/member/pdpc.professional.tmm) has joined #godotengine
+2019-10-30 13:03:21	-->	Saracen[m] (saracenmat@gateway/shell/matrix.org/x-pznglvkpvhsuthvp) has joined #godotengine
+2019-10-30 13:03:21	-->	lertsenem (lertsenemm@gateway/shell/matrix.org/x-ulfkehxrssazplwl) has joined #godotengine
+2019-10-30 13:03:22	-->	Xananax[m] (xananaxmut@gateway/shell/matrix.org/x-mapafcbnwstlclpl) has joined #godotengine
+2019-10-30 13:03:22	-->	neospark314[m] (neospark31@gateway/shell/matrix.org/x-fkzzbgcajeawxpxy) has joined #godotengine
+2019-10-30 13:03:22	-->	Alexwbc[m] (alexwbcmat@gateway/shell/matrix.org/x-zxcsvskbwcsxuimy) has joined #godotengine
+2019-10-30 13:03:22	-->	azagaya (pablofonov@gateway/shell/matrix.org/x-mwpixkggltflskll) has joined #godotengine
+2019-10-30 13:03:22	-->	imadlo (czlowiekim@gateway/shell/matrix.org/x-yaoyujkoazkcxzqd) has joined #godotengine
+2019-10-30 13:03:22	-->	fales[m] (falesmatri@gateway/shell/matrix.org/x-wvxzsfcrtpwsicgb) has joined #godotengine
+2019-10-30 13:03:22	-->	karroffel_irc (karroffelc@gateway/shell/matrix.org/x-ricbvbjgzgqnfojv) has joined #godotengine
+2019-10-30 13:03:22	-->	anoa (andrewmamo@gateway/shell/matrix.org/x-fomefznkmsfwrtcf) has joined #godotengine
+2019-10-30 13:03:23	-->	Paulb23 (paulb23mat@gateway/shell/matrix.org/x-ruftyvedequureba) has joined #godotengine
+2019-10-30 13:03:23	-->	minraws (swarnimmat@gateway/shell/matrix.org/x-fcyfocjrbimfijmq) has joined #godotengine
+2019-10-30 13:03:23	-->	anthyg[m] (anthygamor@gateway/shell/matrix.org/x-cjcxnisauakyhaoh) has joined #godotengine
+2019-10-30 13:03:23	-->	danielp3344 (danielp334@gateway/shell/matrix.org/x-iufaaiafmkibowvc) has joined #godotengine
+2019-10-30 13:03:23	-->	nilsirl[m] (nilsirlmat@gateway/shell/matrix.org/x-uzqofwqapkzeotmj) has joined #godotengine
+2019-10-30 13:03:26	-->	zicho[m] (zichomatri@gateway/shell/matrix.org/x-kpghglwwmqfficfa) has joined #godotengine
+2019-10-30 13:03:26	-->	OuTopos[m] (outoposmat@gateway/shell/matrix.org/x-pwriarueiqbpgjpf) has joined #godotengine
+2019-10-30 13:03:27	-->	LionUCS[m] (lionucsmat@gateway/shell/matrix.org/x-brmtxrtvzibornqq) has joined #godotengine
+2019-10-30 13:03:27	-->	Lief[m] (liefswanso@gateway/shell/matrix.org/x-yrjedfarxgwhkehl) has joined #godotengine
+2019-10-30 13:03:27	-->	iriodus[m] (iriodusmat@gateway/shell/matrix.org/x-yxkzqgfawgpephlz) has joined #godotengine
+2019-10-30 13:03:29	-->	polisummer[m] (polisummer@gateway/shell/matrix.org/x-ezwhgxzdfxkpbuce) has joined #godotengine
+2019-10-30 13:04:39	-->	alex51 (5f416829@95.65.104.41) has joined #godotengine
+2019-10-30 13:05:37	<--	alex51 (5f416829@95.65.104.41) has quit (Remote host closed the connection)
+2019-10-30 13:06:14	<--	uldall_ (98734992@152.115.73.146) has quit (Remote host closed the connection)
+2019-10-30 13:09:27	-->	paramite (~paramite@nat-155.starnet.cz) has joined #godotengine
+2019-10-30 13:26:30	-->	Jyhem_laptop (~libs@lneuilly-657-1-22-93.w90-63.abo.wanadoo.fr) has joined #godotengine
+2019-10-30 13:36:34	-->	aombk (~aombk@unaffiliated/aombk) has joined #godotengine
+2019-10-30 13:41:38	<--	Jyhem_laptop (~libs@lneuilly-657-1-22-93.w90-63.abo.wanadoo.fr) has quit (Ping timeout: 240 seconds)
+2019-10-30 13:42:15	-->	dddddd (~dddddd@unaffiliated/dddddd) has joined #godotengine
+2019-10-30 14:16:25	-->	tablerice (~tablerice@rrcs-71-41-50-122.se.biz.rr.com) has joined #godotengine
+2019-10-30 14:16:52	<--	equil (~s@h-37-123-162-67.NA.cust.bahnhof.se) has quit (Quit: WeeChat 2.6)
+2019-10-30 14:17:35	<--	saltpepp3r (~saltpepp3@91.207.173.118) has quit (Ping timeout: 276 seconds)
+2019-10-30 14:18:12	-->	equil (~s@h-37-123-162-67.NA.cust.bahnhof.se) has joined #godotengine
+2019-10-30 14:18:53	-->	saltpepp3r (~saltpepp3@91.207.173.118) has joined #godotengine
+2019-10-30 14:22:59	Calinou	new article on the website, https://godotengine.org/article/dtls-report-1 :)
+2019-10-30 14:49:29	-->	Jyhem_laptop (~libs@lneuilly-657-1-22-93.w90-63.abo.wanadoo.fr) has joined #godotengine
+2019-10-30 14:50:18	<--	ignaloidas (~ignaloida@158.129.26.113) has quit (Ping timeout: 245 seconds)
+2019-10-30 14:55:09	-->	MoosePrime (~moose@207.44.22.117) has joined #godotengine
+2019-10-30 15:01:00	-->	capefeather (~capefeath@tnhlon4048w-lp140-06-70-29-102-236.dsl.bell.ca) has joined #godotengine
+2019-10-30 15:14:21	-->	combustiblelemon (d57f7845@ip-213-127-120-69.ip.prioritytelecom.net) has joined #godotengine
+2019-10-30 15:16:45	-->	ignaloidas (~ignaloida@158.129.26.113) has joined #godotengine
+2019-10-30 15:25:21	-->	madmiraal (~Thunderbi@2001:984:a3d7:1:1d65:5919:db89:4c52) has joined #godotengine
+2019-10-30 15:33:01	-->	David_ (~bydave.ne@109.224.76.139) has joined #godotengine
+2019-10-30 15:33:15	-->	Romlok (~mel@26.51-175-167.customer.lyse.net) has joined #godotengine
+2019-10-30 15:33:19	David_	Test
+2019-10-30 15:33:54	<--	David_ (~bydave.ne@109.224.76.139) has quit (Client Quit)
+2019-10-30 15:34:37	-->	bydavenet (~bydave.ne@109.224.76.139) has joined #godotengine
+2019-10-30 15:51:14	<--	madmiraal (~Thunderbi@2001:984:a3d7:1:1d65:5919:db89:4c52) has quit (Quit: madmiraal)
+2019-10-30 15:51:59	<--	alexandre9099 (~alexandre@unaffiliated/alexandre9099) has quit (Quit: ZNC 1.7.5 - https://znc.in)
+2019-10-30 15:54:17	-->	alexandre9099 (~alexandre@unaffiliated/alexandre9099) has joined #godotengine
+2019-10-30 15:57:57	<--	odino (~odino3@2a02:1205:c6b3:cef0:7126:a9d7:245f:afac) has quit (Quit: Leaving)
+2019-10-30 16:01:56	Erops	Is there a writeup on how godot interacts with bullet on a technical level by any chance? or is it a 'read through the code and figure it out' type thing
+2019-10-30 16:02:30	Erops	Trying to debug why my joints dont seem to work and wanna see the rough overall pipeline
+2019-10-30 16:02:32	<--	Z-Man (~Z-Man@2002:4fe3:e9f3:0:60ef:2a67:d5c7:9b30) has quit (Ping timeout: 246 seconds)
+2019-10-30 16:02:43	-->	Z-Man (~Z-Man@p4FE3E9F3.dip0.t-ipconnect.de) has joined #godotengine
+2019-10-30 16:12:06	combustiblelemon	Has anyone managed to get the "Mic Record Demo" to work? I'm trying to record with a microphone, and the Godot application shows up in the Pulseaudio control panel, but it doesn't record any noise. I'm on Ubuntu, with Godot 3.1 and PulseAudio (Obviously)
+2019-10-30 16:21:32	<--	mr_rcollins (~mr_rcolli@104.131.67.140) has left #godotengine ("WeeChat 2.3")
+2019-10-30 16:22:35	Calinou	combustiblelemon: same, seems like it doesn't work here
+2019-10-30 16:22:43	Calinou	I'll report an issue
+2019-10-30 16:22:56	<--	chargen (~chargen@2a02:2e02:9ee0:7100:b16b:72f9:2ad8:e810) has quit (Quit: BBL)
+2019-10-30 16:23:02	Calinou	see also https://github.com/godotengine/godot-demo-projects/issues/359
+2019-10-30 16:23:56	combustiblelemon	Ah, I didn't see that one, thanks for the reference
+2019-10-30 16:24:56	Calinou	https://github.com/godotengine/godot/issues/33184
+2019-10-30 16:24:59	-->	kimamb (~kimamb__@62.97.173.88) has joined #godotengine
+2019-10-30 16:25:01	Calinou	this might be an engine issue, not sure
+2019-10-30 16:34:35	<--	Sipaha (~Sipaha@static-user-46-236-156-184.tomtelnet.ru) has quit (Quit: Going offline, see ya! 8=з)
+2019-10-30 16:48:10	<--	bydavenet (~bydave.ne@109.224.76.139) has quit (Read error: Connection reset by peer)
+2019-10-30 16:49:29	-->	biliogadafr (~bilio@46.53.248.20) has joined #godotengine
+2019-10-30 16:59:02	-->	inilog (~inilog@2a02-8429-8076-cf01-20dd-f40b-7fa3-272b.rev.sfr.net) has joined #godotengine
+2019-10-30 16:59:59	<--	inilog (~inilog@2a02-8429-8076-cf01-20dd-f40b-7fa3-272b.rev.sfr.net) has quit (Client Quit)
+2019-10-30 17:00:35	-->	psymin (~psymin@69.146.8.222) has joined #godotengine
+2019-10-30 17:01:11	<--	Technipion (~Thunderbi@p200300F933C29D8545FF9515FF4D8EE1.dip0.t-ipconnect.de) has quit (Quit: Technipion)
+2019-10-30 17:07:32	<--	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has quit (Quit: WeeChat 1.9.1)
+2019-10-30 17:08:59	-->	Roughy (~mdaw45ns@188.126.200.178) has joined #godotengine
+2019-10-30 17:13:45	-->	mandeep (~mandeep@unaffiliated/mandeepb) has joined #godotengine
+2019-10-30 17:15:49	<--	mrcdk (~mrcdk@180-200-39-46.usuarios.innovasur.com) has quit (Read error: Connection reset by peer)
+2019-10-30 17:22:28	<--	Ijatsu (6d00c7cf@gateway/web/cgi-irc/kiwiirc.com/ip.109.0.199.207) has quit (Remote host closed the connection)
+2019-10-30 17:42:41	-->	saddfg (53632c8c@ip-83-99-44-140.dyn.luxdsl.pt.lu) has joined #godotengine
+2019-10-31 09:16:12	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #godotengine
+2019-10-31 09:16:12	--	Topic for #godotengine is "Godot Engine | https://godotengine.org | GitHub: https://github.com/godotengine/godot | Docs: https://docs.godotengine.org | Discord: https://discord.gg/zH7NUgz | Don't ask if you can ask, just ask! :) | Interested in engine development? Join #godotengine-devel | Want to help with the documentation? Join #godotengine-doc"
+2019-10-31 09:16:12	--	Topic set by Calinou (~quassel@fsf/member/calinou) on Mon, 25 Feb 2019 00:45:33
+2019-10-31 09:16:12	--	Channel #godotengine: 251 nicks (1 op, 0 voices, 250 normals)
+2019-10-31 09:16:24	--	Channel created on Tue, 11 Feb 2014 08:43:18
+2019-10-31 09:25:32	-->	chargen (~chargen@2a02:2e02:9ee0:7100:11db:9fd4:1c6:e0e9) has joined #godotengine
+2019-10-31 09:28:59	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #godotengine
+2019-10-31 09:50:27	<--	equil (~s@h-37-123-162-67.NA.cust.bahnhof.se) has quit (Ping timeout: 240 seconds)
+2019-10-31 10:01:22	--	Namigator is now known as monstergator
+2019-10-31 10:03:44	-->	equil (~s@h-37-123-162-67.NA.cust.bahnhof.se) has joined #godotengine
+2019-10-31 10:05:56	-->	maveerik (~1@93.84.169.63) has joined #godotengine
+2019-10-31 10:10:03	<--	regakakobigman (~regakakob@c-73-174-187-176.hsd1.pa.comcast.net) has quit (Ping timeout: 240 seconds)
+2019-10-31 10:22:47	-->	Romlok (~mel@26.51-175-167.customer.lyse.net) has joined #godotengine
+2019-10-31 10:26:48	-->	Zeioth (~Zeioth@113.pool80-102-112.dynamic.orange.es) has joined #godotengine
+2019-10-31 10:28:04	-->	bomb (~bomb@gateway/tor-sasl/bomb) has joined #godotengine
+2019-10-31 10:33:17	-->	Tobbi (~Tobbi@supertux/tobbi) has joined #godotengine
+2019-10-31 10:33:59	-->	thc202 (~thc202@unaffiliated/thc202) has joined #godotengine
+2019-10-31 10:35:09	StraToN	harrydog07 You'll have to play with Z-index of objects moving on the Tileset
+2019-10-31 10:51:22	<--	Tobbi (~Tobbi@supertux/tobbi) has quit (Read error: Connection reset by peer)
+2019-10-31 10:51:38	-->	Tobbi (~Tobbi@supertux/tobbi) has joined #godotengine
+2019-10-31 10:59:44	<--	saltpepp3r (~saltpepp3@91.207.173.118) has quit (Ping timeout: 276 seconds)
+2019-10-31 11:01:29	-->	saltpepp3r (~saltpepp3@91.207.173.118) has joined #godotengine
+2019-10-31 11:02:34	-->	greedom (~greedom@2001:16b8:2ea5:1000:280e:dc4e:50c5:26f4) has joined #godotengine
+2019-10-31 11:05:27	<--	kriskropd (~kriskropd@unaffiliated/kriskropd) has quit (Ping timeout: 264 seconds)
+2019-10-31 11:07:43	-->	kriskropd (~kriskropd@unaffiliated/kriskropd) has joined #godotengine
+2019-10-31 11:10:27	<--	mceier (~mceier@89-68-132-187.dynamic.chello.pl) has quit (Ping timeout: 268 seconds)
+2019-10-31 11:15:01	-->	mceier (~mceier@89-68-132-187.dynamic.chello.pl) has joined #godotengine
+2019-10-31 11:43:33	lisac_	hey people, is there anyway to use pow() for hexadecimal strings? Or convert a long hexadecimal number into int?
+2019-10-31 11:44:00	lisac_	tbh conversion to int would be best
+2019-10-31 11:44:03	--	lisac_ is now known as lisac
+2019-10-31 12:07:51	-->	Cahaan (~Cahaan@109.133.183.154) has joined #godotengine
+2019-10-31 12:08:09	-->	neikeq (~neikeq@2a01:c50e:8f08:100:5929:9667:808b:76f2) has joined #godotengine
+2019-10-31 12:18:50	<--	mceier (~mceier@89-68-132-187.dynamic.chello.pl) has quit (Ping timeout: 240 seconds)
+2019-10-31 12:22:39	-->	mceier (~mceier@89-68-132-187.dynamic.chello.pl) has joined #godotengine
+2019-10-31 12:36:28	-->	Yeldham (~michael@138.118.198.32) has joined #godotengine
+2019-10-31 12:39:00	<--	Yeldham (~michael@138.118.198.32) has quit (Client Quit)
+2019-10-31 12:42:13	-->	Yeldham (~michael@138.118.198.38) has joined #godotengine
+2019-10-31 13:02:34	<--	chargen (~chargen@2a02:2e02:9ee0:7100:11db:9fd4:1c6:e0e9) has quit (Quit: BBL)
+2019-10-31 13:03:58	StraToN	lisac Did you check the official documentation? https://docs.godotengine.org/en/latest/classes/class_string.html#class-string-method-hex-to-int
+2019-10-31 13:04:46	lisac	yeah I tried that, but the number I'm trying to convert is quite long and isn't being converted whole
+2019-10-31 13:04:55	lisac	I only get first ~20 digits
+2019-10-31 13:09:28	StraToN	That's because it is bigger than maximum integer value then. You'll have to split your hexadecimal and calculate yourself with a function, I'm afraid.
+2019-10-31 13:10:14	-->	typ (811bdb08@viffw1.tugraz.at) has joined #godotengine
+2019-10-31 13:10:57	<--	typ (811bdb08@viffw1.tugraz.at) has left #godotengine
+2019-10-31 13:14:01	-->	chargen (~chargen@2a02:2e02:9ee0:7100:11db:9fd4:1c6:e0e9) has joined #godotengine
+2019-10-31 13:14:24	<--	Tobbi (~Tobbi@supertux/tobbi) has quit (Ping timeout: 268 seconds)
+2019-10-31 13:18:02	-->	Tobbi (~Tobbi@supertux/tobbi) has joined #godotengine
+2019-10-31 13:21:30	-->	RangerVermelho (bbb525cc@187.181.37.204) has joined #godotengine
+2019-10-31 13:23:14	RangerVermelho	Good morning guys... i have a question i think somebody here could answer i really appreciate. I dev a race game, using path 3d for tracks, but working with path on 3d is really painful. Theres a way to make a script tool to use gizmo on points? Is a big plus to precise control
+2019-10-31 13:34:02	<--	Tobbi (~Tobbi@supertux/tobbi) has quit (Ping timeout: 240 seconds)
+2019-10-31 14:06:14	<--	rainlizard (~rainlizar@180-150-38-48.b49626.bne.nbn.aussiebb.net) has quit
+2019-10-31 14:06:19	lisac	oh damn :(
+2019-10-31 14:09:42	<--	Sipaha (~Sipaha@static-user-46-236-156-184.tomtelnet.ru) has quit (Quit: Going offline, see ya! 8=з)
+2019-10-31 14:13:09	Nello	my character's root node is the hips like the tutorial suggest and i'm animating it but i'd like to move the hips
+2019-10-31 14:13:23	Nello	that moves the entire character because everything is set relative to the hips
+2019-10-31 14:13:44	Nello	is there a way to have some nodes, like the IK feet, stay in place while the hips are moved?
+2019-10-31 14:14:20	Nello	right now only thing i can think of is to move the hips then repositon everything which isn't the end of the world but it's a lot more work
+2019-10-31 14:17:10	-->	Sipaha (~Sipaha@static-user-46-236-156-184.tomtelnet.ru) has joined #godotengine
+2019-10-31 14:18:29	<--	RangerVermelho (bbb525cc@187.181.37.204) has quit (Remote host closed the connection)
+2019-10-31 14:22:32	-->	Tobbi (~Tobbi@supertux/tobbi) has joined #godotengine
+2019-10-31 14:38:43	<--	Yeldham (~michael@138.118.198.38) has quit (Quit: Konversation terminated!)
+2019-10-31 14:44:27	-->	dddddd (~dddddd@unaffiliated/dddddd) has joined #godotengine
+2019-10-31 14:48:13	<--	alexandre9099 (~alexandre@unaffiliated/alexandre9099) has quit (Read error: Connection reset by peer)
+2019-10-31 14:50:06	-->	alexandre9099 (~alexandre@unaffiliated/alexandre9099) has joined #godotengine
+2019-10-31 14:50:43	-->	biliogadafr (~bilio@46.53.248.20) has joined #godotengine
+2019-10-31 14:52:31	<--	Sipaha (~Sipaha@static-user-46-236-156-184.tomtelnet.ru) has quit (Quit: Going offline, see ya! 8=з)
+2019-10-31 14:53:52	<--	mrcdk (~mrcdk@180-200-39-46.usuarios.innovasur.com) has quit (Quit: Leaving)
+2019-10-31 15:00:34	-->	flyingwaffle[m] (flyingwaff@gateway/shell/matrix.org/x-mxfadgmmiqnbacqe) has joined #godotengine
+2019-10-31 15:02:03	--	flyingwaffle[m] is now known as FlyingWaffle[m]
+2019-10-31 15:02:24	-->	rainlizar (~rainlizar@180-150-38-48.b49626.bne.nbn.aussiebb.net) has joined #godotengine
+2019-10-31 15:03:45	-->	MoosePrime (~moose@207.44.22.117) has joined #godotengine
+2019-10-31 15:07:31	<--	Taoki (~MirceaKit@93.113.162.37) has quit (Quit: http://www.furaffinity.net/user/mircea/)
+2019-10-31 15:08:33	<--	rainlizar (~rainlizar@180-150-38-48.b49626.bne.nbn.aussiebb.net) has quit
+2019-10-31 15:10:23	-->	Taoki (~MirceaKit@93.113.162.37) has joined #godotengine
+2019-10-31 15:25:02	-->	Yeldham (~michael@138.118.198.38) has joined #godotengine
+2019-10-31 15:47:49	<--	Beliar (~Beliar@2a02:8108:9640:6c42:2469:d925:1dda:b4e3) has quit (Quit: The only real mistake is the one from which we learn nothing)
+2019-10-31 15:55:02	-->	Beliar (~Beliar@2a02:8108:9640:6c42:2469:d925:1dda:b4e3) has joined #godotengine
+2019-10-31 16:11:49	-->	kimamb (~kimamb__@62.97.173.88) has joined #godotengine
+2019-10-31 16:17:23	-->	odino (~odino3@2a02:1205:c6b3:cef0:4035:a5f4:7008:8f1b) has joined #godotengine
+2019-10-31 16:42:50	<--	Keetz (~Keetz@152.115.73.146) has quit (Ping timeout: 268 seconds)
+2019-10-31 17:03:57	-->	CombustibleLemon (d57f7845@ip-213-127-120-69.ip.prioritytelecom.net) has joined #godotengine
+2019-10-31 17:11:59	-->	Roughy (~mdaw45ns@188.126.200.178) has joined #godotengine
+2019-10-31 17:20:35	maveerik	is it possible to find out which node is under the mouse without establishing it beforehand?
+2019-10-31 17:23:58	-->	Jummit (52cfee05@muedsl-82-207-238-005.citykom.de) has joined #godotengine
+2019-10-31 17:26:48	Nello	maveerik, why can't you establish it beforehand?
+2019-10-31 17:27:15	maveerik	im trying to figure out what blocks the input in my scene, although its probably not a node
+2019-10-31 17:27:31	-->	Kelzorz (~Kelzorz@67.6.83.103) has joined #godotengine
+2019-10-31 17:28:51	-->	clemo (~Thunderbi@2a02:8388:6500:7900:c991:44e7:4fb4:26cc) has joined #godotengine
+2019-10-31 17:29:13	<--	chargen (~chargen@2a02:2e02:9ee0:7100:11db:9fd4:1c6:e0e9) has quit (Quit: BBL)
+2019-10-31 17:29:26	maveerik	really weird. i've made a custom panel popups of sorts, they work fine when selected normally, but when i use custom signal with RMB key they don't accept any mouseover inputs until i press rmb again
+2019-10-31 17:29:40	maveerik	or until i swap windows
+2019-10-31 17:29:52	maveerik	as if they are out of focus or something
+2019-10-31 17:30:14	maveerik	i think it has something to do with engine
+2019-10-31 17:30:41	maveerik	and i cant think of any workaround
+2019-10-31 17:32:51	CombustibleLemon	Is there anything like the record audio effect but more suitable for realtime audio processing and not just recording? I would like to get access to the latest bit of recorded data, but the data of the record effect doesn't refresh often enough, and it seems to be only useful for recording.
+2019-10-31 17:35:58	<--	Xooshoo (42ba481b@gateway/web/cgi-irc/kiwiirc.com/ip.66.186.72.27) has quit (Remote host closed the connection)
+2019-10-31 17:39:40	-->	chargen (~chargen@2a02:2e02:9ee0:7100:11db:9fd4:1c6:e0e9) has joined #godotengine
+2019-10-31 17:40:16	Nello	if you open up a github issue i'll check out the test project. there are a bunch of focus related properties and methods available to control nodes that may help https://docs.godotengine.org/en/3.1/classes/class_control.html
+2019-10-31 17:40:47	<--	Zeioth (~Zeioth@113.pool80-102-112.dynamic.orange.es) has quit (Ping timeout: 250 seconds)
+2019-10-31 17:43:56	maveerik	i think the issue might be that my custom rmb signal does not trigger the same patterns in gui which are triggered by 'pressed' signal
+2019-11-04 11:06:53	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #godotengine
+2019-11-04 11:06:53	--	Topic for #godotengine is "Godot Engine | https://godotengine.org | GitHub: https://github.com/godotengine/godot | Docs: https://docs.godotengine.org | Discord: https://discord.gg/zH7NUgz | Don't ask if you can ask, just ask! :) | Interested in engine development? Join #godotengine-devel | Want to help with the documentation? Join #godotengine-doc"
+2019-11-04 11:06:53	--	Topic set by Calinou (~quassel@fsf/member/calinou) on Mon, 25 Feb 2019 00:45:33
+2019-11-04 11:06:53	--	Channel #godotengine: 255 nicks (1 op, 0 voices, 254 normals)
+2019-11-04 11:07:05	--	Channel created on Tue, 11 Feb 2014 08:43:18
+2019-11-04 11:07:36	-->	kriskropd (~kriskropd@unaffiliated/kriskropd) has joined #godotengine
+2019-11-04 11:09:31	<--	harrydog07 (~m@96.79.4.90) has quit (Quit: harrydog07)
+2019-11-04 11:11:38	-->	StraToN1 (~StraToN@lfbn-str-1-105-35.w92-140.abo.wanadoo.fr) has joined #godotengine
+2019-11-04 11:12:59	-->	RobKohr (ae63442e@174.99.68.46) has joined #godotengine
+2019-11-04 11:14:14	-->	Akien (~Akien@godotengine/akien) has joined #godotengine
+2019-11-04 11:20:43	-->	maveerik (~1@178.127.91.222) has joined #godotengine
+2019-11-04 11:22:10	<--	RobKohr (ae63442e@174.99.68.46) has quit (Remote host closed the connection)
+2019-11-04 11:42:50	-->	Guest50 (4d430502@gateway/web/cgi-irc/kiwiirc.com/ip.77.67.5.2) has joined #godotengine
+2019-11-04 11:43:18	-->	Sipaha (~Sipaha@static-user-46-236-156-184.tomtelnet.ru) has joined #godotengine
+2019-11-04 11:43:21	<--	Guest50 (4d430502@gateway/web/cgi-irc/kiwiirc.com/ip.77.67.5.2) has quit (Remote host closed the connection)
+2019-11-04 11:43:22	-->	harrydog07 (~m@96.79.4.90) has joined #godotengine
+2019-11-04 11:56:53	-->	coldragon (c2ceae91@194.206.174.145) has joined #godotengine
+2019-11-04 11:57:02	coldragon	Hello guys.
+2019-11-04 11:57:15	<--	regakakobigman (~regakakob@c-73-174-187-176.hsd1.pa.comcast.net) has quit (Ping timeout: 240 seconds)
+2019-11-04 11:57:28	coldragon	How can I get the value of the scale godot apply to the viewport in 2D Mode and keep_height ?
+2019-11-04 11:57:57	coldragon	When I use get_viewport().size I get the real size in pixel of the screen but not the "virtual" screen size
+2019-11-04 11:58:23	coldragon	Please. I tried to find in doc, issue, google etc ... I don't seem to find a way to do this
+2019-11-04 12:00:15	coldragon	I want to do this because I code the game with a 960*540 size and the width can expand to fit any screen, but when I scale my background relative to the screen size it get much bigger because godot rescale it behind
+2019-11-04 12:03:21	<--	madmiraal (~Thunderbi@83-162-240-222.ip.xs4all.nl) has quit (Quit: madmiraal)
+2019-11-04 12:03:31	-->	madmiraal (~Thunderbi@83-162-240-222.ip.xs4all.nl) has joined #godotengine
+2019-11-04 12:05:59	<--	coldragon (c2ceae91@194.206.174.145) has quit (Ping timeout: 260 seconds)
+2019-11-04 12:07:22	Nello	he just left
+2019-11-04 12:07:33	Nello	it's in OS btw for anyone curious
+2019-11-04 12:07:45	Nello	OS.get_real_window_size()
+2019-11-04 12:08:27	-->	coldragon (4d9ae073@115.224.154.77.rev.sfr.net) has joined #godotengine
+2019-11-04 12:09:21	coldragon	Woops I got disconnected
+2019-11-04 12:09:27	Nello	coldragon,
+2019-11-04 12:09:37	Nello	have you checked out https://godot.readthedocs.io/en/3.1/tutorials/viewports/multiple_resolutions.html
+2019-11-04 12:09:49	Nello	there are settings to handle resizing and it makes it super easy
+2019-11-04 12:10:35	Nello	in the project settings go display and then window. from there change the mode to window and the aspect to keep
+2019-11-04 12:10:57	coldragon	Yes I read that
+2019-11-04 12:11:03	coldragon	I use the 2D mode and kee_heigh
+2019-11-04 12:11:15	coldragon	So my game always have the same height and just expand in width
+2019-11-04 12:11:25	coldragon	But how can I know the virtual size it expanded ?
+2019-11-04 12:11:29	Nello	if you absolutely need the window size you can get it with OS.get_real_window_size()
+2019-11-04 12:11:50	coldragon	No, the get_viewport().size already give me the real size in pixel of the renderer
+2019-11-04 12:11:57	coldragon	I need to know the "virtual" size of the renderer
+2019-11-04 12:12:47	coldragon	a sprite that is 400*400 in my 960*560pixel will be scalled to be the same "size" in a 1900*1080 screen
+2019-11-04 12:13:01	coldragon	but if the ratio is not the same
+2019-11-04 12:13:05	coldragon	it will expand in width
+2019-11-04 12:13:31	coldragon	so the "virtual" size of the renderer will be something like 960+X*560
+2019-11-04 12:13:52	coldragon	(because I keep the same Height)
+2019-11-04 12:14:11	Nello	i'm still confused as to which number you're looking for sorry
+2019-11-04 12:15:15	Nello	there's the window size and then there's the viewport size. i already gave you the window size (it's in OS) and you can get the viewport size with get_viewport_rect().size
+2019-11-04 12:15:28	Nello	is there some other size you're looking for?
+2019-11-04 12:15:34	coldragon	The virtual size
+2019-11-04 12:15:56	Nello	does get_viewport_rect().size give you that?
+2019-11-04 12:15:58	coldragon	The virtual size of the viewport is scaled to fit the size the viewport can take on the screen
+2019-11-04 12:16:07	coldragon	I'm gonna check
+2019-11-04 12:17:28	coldragon	get_viewport_rect() doesn't exist
+2019-11-04 12:18:34	Nello	i threw print(str(get_viewport_rect().size)) in _process(delta) in my character controller and it worked
+2019-11-04 12:19:11	coldragon	in 3.1 ?
+2019-11-04 12:19:39	coldragon	it say me it's not declared in current class
+2019-11-04 12:20:00	Nello	oh it's part of canvasitem https://docs.godotengine.org/en/3.1/classes/class_canvasitem.html
+2019-11-04 12:20:13	coldragon	I'm in a parralaxbackground
+2019-11-04 12:21:18	Nello	if your game has a control node or any node2d node pu‎t it in there
+2019-11-04 12:21:30	Nello	it just needs to inherit from canvasitem
+2019-11-04 12:23:59	coldragon	I tried
+2019-11-04 12:24:07	coldragon	it still return the "real" renderer size
+2019-11-04 12:24:10	coldragon	and not the logic one :/
+2019-11-04 12:26:29	Nello	sorry i don't know what else there is besides actual window size and the viewport size
+2019-11-04 12:27:02	coldragon	np
+2019-11-04 12:27:05	coldragon	thank's for your help
+2019-11-04 12:28:27	Nello	you have keep_height and the project height is 960 right? and the width is 560. so as you resize the height is always 960 because you set it to keep_height
+2019-11-04 12:28:37	Nello	and the width changes based on how the window resizes
+2019-11-04 12:28:48	Nello	what else are you looking for?
+2019-11-04 12:34:27	<--	coldragon (4d9ae073@115.224.154.77.rev.sfr.net) has quit (Ping timeout: 260 seconds)
+2019-11-04 12:47:20	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #godotengine
+2019-11-04 12:52:06	-->	drp (~drp@96.75.220.111.dyn.wbroadband.net.au) has joined #godotengine
+2019-11-04 13:07:25	-->	Yeldham (~michael@138.118.198.39) has joined #godotengine
+2019-11-04 13:31:16	<--	drp (~drp@96.75.220.111.dyn.wbroadband.net.au) has quit (Quit: Leaving)
+2019-11-04 13:32:02	-->	coldragon (c2ceae91@194.206.174.145) has joined #godotengine
+2019-11-04 13:32:50	coldragon	Nello, It was my lunch time sorry. I want the resized width
+2019-11-04 13:33:09	coldragon	My height is 540 and my width is something plus or minus 960
+2019-11-04 13:33:36	coldragon	But get_viewport() return the final size of the renderer and not the "virtual coordinate"
+2019-11-04 13:38:03	-->	ibenx (~irc@114.5.216.19) has joined #godotengine
+2019-11-04 13:48:15	Nello	i really think get_viewport_rect().size is what you want coldragon
+2019-11-04 13:48:31	coldragon	I tried I get the actual size of the viewport
+2019-11-04 13:48:35	Nello	https://streamable.com/5hkfw when i resize the window the height stays the same and the width changes
+2019-11-04 13:48:52	Nello	none of the images are stretched/squashed either
+2019-11-04 13:49:03	coldragon	Oh
+2019-11-04 13:49:08	coldragon	Did i miss something
+2019-11-04 13:49:12	coldragon	I try it quickly
+2019-11-04 13:49:40	coldragon	Oh sorry i'm dumb. Yeah that's exactly what I needed
+2019-11-04 13:49:58	Nello	:D ok good i thought there was some 3rd size out there i didn't know about :P
+2019-11-04 13:50:31	coldragon	Hmmm
+2019-11-04 13:50:36	coldragon	I remove what I said
+2019-11-04 13:50:38	coldragon	it don't work
+2019-11-04 13:50:54	coldragon	no wait
+2019-11-04 13:51:21	coldragon	it's good
+2019-11-04 13:51:30	Nello	what a rollercoaster of emotions
+2019-11-04 13:51:30	coldragon	Thank's a lot
+2019-11-04 13:51:48	coldragon	Yes. I was not in the good scene when I showed it to a friend
+2019-11-04 13:51:52	Nello	no problem :)
+2019-11-04 13:52:09	coldragon	In a ParallaxBackground i can't access it ? :/
+2019-11-04 13:53:17	Nello	it's only accessible to nodes that inherit from CanvasItem
+2019-11-04 13:53:42	Nello	so anything under Node2D or Control
+2019-11-04 13:54:44	Nello	so if the node you have doesn't inherit from CanvasItem you can either a) grab the size from a node that does inherit from CanvasItem and pass it along or b) add a CanvasItem as a child in your scene and get it that way
+2019-11-04 13:58:55	coldragon	Ok thank's. It's weird that ParallaxBackground aren't one
+2019-11-04 13:59:14	coldragon	I think it's some sort of controller node and the ParallaxBackgroundLayer are derived from Node2D
+2019-11-04 13:59:43	Nello	yeah parallaxbackground is part of canvaslayer not canvasitem
+2019-11-04 14:00:06	coldragon	Ok thank's
+2019-11-04 14:00:10	ibenx	Someone please help me https://github.com/godotengine/godot/issues/33328 thanks..
+2019-11-04 14:00:35	Nello	but the parallaxlayers you use with parallaxbackground do inherit from canvasitem coldragon
+2019-11-04 14:00:42	Nello	so you can grab it from there if you're using that
+2019-11-04 14:04:43	coldragon	Yes I looked it in the doc
+2019-11-04 14:04:48	coldragon	I understand their diff now
+2019-11-04 14:04:52	coldragon	thank's a lot :)
+2019-11-04 14:05:01	coldragon	Everything work like I expected !
+2019-11-04 14:09:28	Nello	good to hear!
+2019-11-04 14:20:36	-->	ignaloidas (~ignaloida@158.129.26.113) has joined #godotengine
+2019-11-04 14:40:29	<--	harrydog07 (~m@96.79.4.90) has quit (Quit: harrydog07)
+2019-11-04 14:44:17	<--	ibenx (~irc@114.5.216.19) has quit (Remote host closed the connection)
+2019-11-04 14:44:51	-->	_ibenx (~irc@114.5.216.19) has joined #godotengine
+2019-11-04 14:50:34	<--	houkime (~houkime@gateway/tor-sasl/houkime) has quit (Remote host closed the connection)
+2019-11-04 15:01:11	<--	Peuc (~Peuc@199.192.236.28) has quit (Ping timeout: 265 seconds)
+2019-11-04 15:02:06	-->	Peuc (~Peuc@199.192.236.28) has joined #godotengine
+2019-11-04 15:10:10	<--	_ibenx (~irc@114.5.216.19) has quit (Remote host closed the connection)
+2019-11-04 15:15:21	-->	bayview (~bayview@110.181.48.106) has joined #godotengine
+2019-11-04 15:22:14	-->	ignaloidas_ (~ignaloida@158.129.26.113) has joined #godotengine
+2019-11-04 15:23:48	<--	bayview (~bayview@110.181.48.106) has quit (Quit: Konversation terminated!)
+2019-11-04 15:23:56	<--	ignaloidas (~ignaloida@158.129.26.113) has quit (Ping timeout: 276 seconds)
+2019-11-04 15:25:26	<--	ignaloidas_ (~ignaloida@158.129.26.113) has quit (Remote host closed the connection)
+2019-11-04 15:25:50	-->	ignaloidas_ (~ignaloida@158.129.26.113) has joined #godotengine
+2019-11-04 15:35:31	<--	coldragon (c2ceae91@194.206.174.145) has quit (Ping timeout: 260 seconds)
+2019-11-04 15:46:34	-->	MoosePrime (~moose@207.44.22.117) has joined #godotengine
+2019-11-04 15:49:25	<--	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has quit (Quit: WeeChat 1.9.1)
+2019-11-04 15:50:51	-->	dddddd (~dddddd@unaffiliated/dddddd) has joined #godotengine
+2019-11-04 15:59:33	-->	psymin (~psymin@69.146.8.222) has joined #godotengine
+2019-11-04 16:22:52	<--	Keetz (~Keetz@152.115.73.146) has quit (Ping timeout: 265 seconds)
+2019-11-04 16:23:35	<--	Sagirou (602148a6@96-33-72-166.dhcp.ahvl.nc.charter.com) has quit (Ping timeout: 260 seconds)
+2019-11-04 16:28:53	-->	Duroxxigar (49685a6f@c-73-104-90-111.hsd1.fl.comcast.net) has joined #godotengine
+2019-11-04 16:38:01	<--	atari83 (~Thunderbi@37.202.226.44) has quit (Quit: atari83)
+2019-11-04 16:46:56	-->	Zeioth (~Zeioth@113.pool80-102-112.dynamic.orange.es) has joined #godotengine
+2019-11-04 16:53:21	-->	biliogadafr (~bilio@46.53.248.20) has joined #godotengine
+2019-11-04 17:03:49	<--	HicksD (~q@bernard.stupidbeard.uk) has quit (Quit: HicksD)
+2019-11-04 17:03:58	-->	HicksD (~q@bernard.stupidbeard.uk) has joined #godotengine
+2019-11-04 17:08:52	-->	TheBFR (0c68c32a@12.104.195.42) has joined #godotengine
+2019-11-04 17:18:55	<--	odino (~odino3@2a02:1205:c6b3:cef0:ad68:25de:d4fd:6942) has quit (Remote host closed the connection)
+2019-11-04 17:19:17	-->	Sanne (~Sanne@95-175-103-86.dynamic.dsl.tng.de) has joined #godotengine
+2019-11-04 17:20:27	-->	Roughy (~mdaw45ns@188.126.200.178) has joined #godotengine
+2019-11-04 17:31:44	<--	TheBFR (0c68c32a@12.104.195.42) has quit (Ping timeout: 260 seconds)
+2019-11-04 17:38:38	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #godotengine
+2019-11-04 17:38:38	--	Topic for #godotengine is "Godot Engine | https://godotengine.org | GitHub: https://github.com/godotengine/godot | Docs: https://docs.godotengine.org | Discord: https://discord.gg/zH7NUgz | Don't ask if you can ask, just ask! :) | Interested in engine development? Join #godotengine-devel | Want to help with the documentation? Join #godotengine-doc"
+2019-11-04 17:38:38	--	Topic set by Calinou (~quassel@fsf/member/calinou) on Mon, 25 Feb 2019 00:45:33
+2019-11-04 17:38:38	--	Channel #godotengine: 262 nicks (1 op, 0 voices, 261 normals)
+2019-11-04 17:38:49	--	Channel created on Tue, 11 Feb 2014 08:43:18
+2019-11-04 17:45:48	-->	aKidCalledAris (981a3361@gateway/web/cgi-irc/kiwiirc.com/ip.152.26.51.97) has joined #godotengine
+2019-11-04 17:46:36	-->	chargen (~chargen@2a02:2e02:9ee0:7100:123:68c4:617d:5698) has joined #godotengine
+2019-11-04 17:47:22	-->	Romlok (~mel@26.51-175-167.customer.lyse.net) has joined #godotengine
+2019-11-04 17:50:12	<--	aKidCalledAris (981a3361@gateway/web/cgi-irc/kiwiirc.com/ip.152.26.51.97) has quit (Remote host closed the connection)
+2019-11-05 09:04:51	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #godotengine
+2019-11-05 09:04:51	--	Topic for #godotengine is "Godot Engine | https://godotengine.org | GitHub: https://github.com/godotengine/godot | Docs: https://docs.godotengine.org | Discord: https://discord.gg/zH7NUgz | Don't ask if you can ask, just ask! :) | Interested in engine development? Join #godotengine-devel | Want to help with the documentation? Join #godotengine-doc"
+2019-11-05 09:04:51	--	Topic set by Calinou (~quassel@fsf/member/calinou) on Mon, 25 Feb 2019 00:45:33
+2019-11-05 09:04:51	--	Channel #godotengine: 255 nicks (1 op, 0 voices, 254 normals)
+2019-11-05 09:05:03	--	Channel created on Tue, 11 Feb 2014 08:43:18
+2019-11-05 09:31:50	-->	wardred (~wardred@103.5.142.234) has joined #godotengine
+2019-11-05 09:34:07	<--	Tobbi (~Tobbi@supertux/tobbi) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-11-05 09:38:39	<--	saltpepp3r (~saltpepp3@91.207.173.118) has quit (Ping timeout: 265 seconds)
+2019-11-05 09:39:27	-->	Tobbi (~Tobbi@supertux/tobbi) has joined #godotengine
+2019-11-05 09:39:47	-->	saltpepp3r (~saltpepp3@91.207.173.118) has joined #godotengine
+2019-11-05 09:53:45	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #godotengine
+2019-11-05 09:54:45	-->	jello_pudding (~jello_pud@2601:600:9f80:7780::a9b6) has joined #godotengine
+2019-11-05 09:56:05	<--	regakakobigman (~regakakob@c-73-174-187-176.hsd1.pa.comcast.net) has quit (Ping timeout: 276 seconds)
+2019-11-05 09:59:03	-->	odino (~odino3@2a02:1205:c6b3:cef0:257f:351:ca5b:4070) has joined #godotengine
+2019-11-05 10:00:41	<--	Tobbi (~Tobbi@supertux/tobbi) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-11-05 10:11:28	<--	jello_pudding (~jello_pud@2601:600:9f80:7780::a9b6) has quit (Quit: Quit Client)
+2019-11-05 10:12:46	-->	greedom (~greedom@2001:16b8:2e78:f400:e914:d46d:1429:1904) has joined #godotengine
+2019-11-05 10:15:38	-->	ibenx (7205d813@gateway/web/cgi-irc/kiwiirc.com/ip.114.5.216.19) has joined #godotengine
+2019-11-05 10:19:35	-->	thc202 (~thc202@unaffiliated/thc202) has joined #godotengine
+2019-11-05 10:19:57	<--	saltpepp3r (~saltpepp3@91.207.173.118) has quit (Ping timeout: 240 seconds)
+2019-11-05 10:21:43	-->	saltpepp3r (~saltpepp3@91.207.173.118) has joined #godotengine
+2019-11-05 10:25:35	<--	ibenx (7205d813@gateway/web/cgi-irc/kiwiirc.com/ip.114.5.216.19) has quit (Remote host closed the connection)
+2019-11-05 10:26:28	-->	ibenx (7205d813@gateway/web/cgi-irc/kiwiirc.com/ip.114.5.216.19) has joined #godotengine
+2019-11-05 10:30:54	<--	bitwinery (~bitwinery@c-73-37-18-139.hsd1.wa.comcast.net) has quit (Quit: Leaving)
+2019-11-05 10:30:58	<--	ibenx (7205d813@gateway/web/cgi-irc/kiwiirc.com/ip.114.5.216.19) has quit (Remote host closed the connection)
+2019-11-05 10:31:30	-->	ibenx (7205d813@gateway/web/cgi-irc/kiwiirc.com/ip.114.5.216.19) has joined #godotengine
+2019-11-05 10:36:50	<--	wardred (~wardred@103.5.142.234) has quit (Ping timeout: 240 seconds)
+2019-11-05 10:37:06	<--	ibenx (7205d813@gateway/web/cgi-irc/kiwiirc.com/ip.114.5.216.19) has quit (Remote host closed the connection)
+2019-11-05 10:37:52	<--	saltpepp3r (~saltpepp3@91.207.173.118) has quit (Ping timeout: 264 seconds)
+2019-11-05 10:38:02	-->	ibenx (7205d813@gateway/web/cgi-irc/kiwiirc.com/ip.114.5.216.19) has joined #godotengine
+2019-11-05 10:39:54	-->	saltpepp3r (~saltpepp3@91.207.173.118) has joined #godotengine
+2019-11-05 10:44:17	<--	saltpepp3r (~saltpepp3@91.207.173.118) has quit (Ping timeout: 240 seconds)
+2019-11-05 10:47:15	-->	Unpause (58852df0@88.133.45.240) has joined #godotengine
+2019-11-05 10:47:36	Unpause	good morning
+2019-11-05 10:47:43	Unpause	i got a question let me explain
+2019-11-05 10:48:30	Unpause	is there a way to somehow display a scene instead of a static image as bootsplash? i just cant wrap my head around on how todo it and could find nothing in the Q&A or the web
+2019-11-05 10:49:10	-->	saltpepp3r (~saltpepp3@91.207.173.118) has joined #godotengine
+2019-11-05 10:49:30	<--	madmiraal (~Thunderbi@83-162-240-222.ip.xs4all.nl) has quit (Read error: Connection reset by peer)
+2019-11-05 10:49:38	-->	madmiraal1 (~Thunderbi@83-162-240-222.ip.xs4all.nl) has joined #godotengine
+2019-11-05 10:51:58	--	madmiraal1 is now known as madmiraal
+2019-11-05 10:54:36	-->	paramite (~paramite@nat-155.starnet.cz) has joined #godotengine
+2019-11-05 10:55:42	<--	Unpause (58852df0@88.133.45.240) has quit (Remote host closed the connection)
+2019-11-05 10:56:19	Einlander	..
+2019-11-05 10:56:58	Einlander	instead of a having a splash screen load a scene instead
+2019-11-05 10:57:22	Einlander	then after a set time, load the proper scene
+2019-11-05 10:57:37	Einlander	similar to how valve does it in their source games
+2019-11-05 10:58:27	<--	saltpepp3r (~saltpepp3@91.207.173.118) has quit (Ping timeout: 240 seconds)
+2019-11-05 10:59:39	<--	paramite (~paramite@nat-155.starnet.cz) has quit (Ping timeout: 240 seconds)
+2019-11-05 11:00:10	<--	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has quit (Quit: WeeChat 1.9.1)
+2019-11-05 11:00:45	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #godotengine
+2019-11-05 11:01:14	-->	saltpepp3r (~saltpepp3@91.207.173.118) has joined #godotengine
+2019-11-05 11:03:00	-->	code-xd (uid402839@gateway/web/irccloud.com/x-gfbpxwlapmspoznb) has joined #godotengine
+2019-11-05 11:03:01	-->	code-xd_ (uid402839@gateway/web/irccloud.com/x-wvjdeposxhdfkegt) has joined #godotengine
+2019-11-05 11:04:24	<--	code-xd_ (uid402839@gateway/web/irccloud.com/x-wvjdeposxhdfkegt) has left #godotengine
+2019-11-05 11:05:39	<--	saltpepp3r (~saltpepp3@91.207.173.118) has quit (Ping timeout: 240 seconds)
+2019-11-05 11:06:24	code-xd	Hey guys,
+2019-11-05 11:06:24	code-xd	I wanted to contribute to Godot engine. Can anyone tell me where should I start from and what are the prerequisites?
+2019-11-05 11:06:44	<--	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has quit (Quit: WeeChat 2.7-dev)
+2019-11-05 11:07:22	Keetz	code-xd: https://docs.godotengine.org/en/3.1/community/contributing/ways_to_contribute.html
+2019-11-05 11:07:27	-->	saltpepp3r (~saltpepp3@91.207.173.118) has joined #godotengine
+2019-11-05 11:07:28	Keetz	code-xd: https://docs.godotengine.org/en/3.1/community/contributing/
+2019-11-05 11:07:46	code-xd	Thanks
+2019-11-05 11:07:52	Keetz	code-xd: that is a great place to start :)
+2019-11-05 11:08:09	code-xd	Have you been contributing?
+2019-11-05 11:08:19	Keetz	A little bit
+2019-11-05 11:08:28	code-xd	So how did you start?
+2019-11-05 11:08:47	code-xd	Like what are the resources for getting familiar with codebase
+2019-11-05 11:09:07	Keetz	code-xd: by running into a bug that i couldn't live with, so I started to look into it myself and eventually fix it
+2019-11-05 11:09:40	code-xd	So in which os are you working?
+2019-11-05 11:09:44	code-xd	Windows or Linux
+2019-11-05 11:09:52	Keetz	Linux
+2019-11-05 11:10:03	code-xd	Does Godot work in Linux?
+2019-11-05 11:10:08	Keetz	Very well
+2019-11-05 11:10:13	code-xd	So how you debug after building?
+2019-11-05 11:10:25	Keetz	I will be heading to lunch now, ask away and i will answer what i can when back :)
+2019-11-05 11:10:45	code-xd	Yeahhhh sure really appreciate your help
+2019-11-05 11:11:32	-->	wardred (~wardred@103.5.142.235) has joined #godotengine
+2019-11-05 11:12:36	code-xd	So i had few doubts
+2019-11-05 11:12:36	code-xd	One is that what issues to start from when working in GitHub.
+2019-11-05 11:12:36	code-xd	Second I know C++ and STL what more should I learn to get familiar with the Godot environment?
+2019-11-05 11:12:36	code-xd	Third question is that how do I debug after building the software?
+2019-11-05 11:13:50	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #godotengine
+2019-11-05 11:16:27	<--	saltpepp3r (~saltpepp3@91.207.173.118) has quit (Ping timeout: 240 seconds)
+2019-11-05 11:22:49	<--	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has quit (Quit: WeeChat 2.7-dev)
+2019-11-05 11:23:45	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #godotengine
+2019-11-05 11:26:29	-->	saltpepp3r (~saltpepp3@91.207.173.118) has joined #godotengine
+2019-11-05 11:27:24	<--	xakz (~XaMaD@229.ip-217-182-68.eu) has quit (Ping timeout: 265 seconds)
+2019-11-05 11:31:40	<--	saltpepp3r (~saltpepp3@91.207.173.118) has quit (Ping timeout: 252 seconds)
+2019-11-05 11:34:42	<--	ibenx (7205d813@gateway/web/cgi-irc/kiwiirc.com/ip.114.5.216.19) has quit (Ping timeout: 268 seconds)
+2019-11-05 11:35:31	<--	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has quit (Quit: WeeChat 2.7-dev)
+2019-11-05 11:35:50	Keetz	code-xd: i use gdb for debugging
+2019-11-05 11:36:06	Keetz	code-xd: on github look for issues tagged "junior job"
+2019-11-05 11:36:10	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #godotengine
+2019-11-05 11:36:49	Keetz	https://github.com/godotengine/godot/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+label%3A%22junior+job%22+
+2019-11-05 11:37:34	Keetz	code-xd: also if you haven't you can  take a look here https://docs.godotengine.org/en/3.1/development/cpp/index.html
+2019-11-05 11:40:30	<--	greedom (~greedom@2001:16b8:2e78:f400:e914:d46d:1429:1904) has quit (Quit: Konversation terminated!)
+2019-11-05 11:40:31	code-xd	For how long have you been contributing?
+2019-11-05 11:41:14	-->	greedom (~greedom@mue-88-130-54-207.dsl.tropolys.de) has joined #godotengine
+2019-11-05 11:42:15	Keetz	I am by no means an expert or a big time contributor :) I have done some small thing here and then, and opened a lot of issues.
+2019-11-05 11:42:41	Keetz	here and there*
+2019-11-05 11:43:06	<--	greedom (~greedom@mue-88-130-54-207.dsl.tropolys.de) has quit (Client Quit)
+2019-11-05 11:43:29	-->	greedom (~greedom@2001:16b8:2e78:f400:e914:d46d:1429:1904) has joined #godotengine
+2019-11-05 11:44:00	code-xd	Thanks alot I will asking doubts now and then. I want to get into open source developement and Godot interests me alot because one time I used to use unity game engine
+2019-11-05 11:45:13	Keetz	code-xd: also if you stumble upon more engine specific stuff, you might want to head over to #godotengine-devel
+2019-11-05 11:45:31	Keetz	And if you have questions about how to fix/implement something specific, that is the place to ask
+2019-11-05 11:46:08	code-xd	Thanks alot
+2019-11-05 11:46:26	code-xd	How much time did it take for you to get familiar with the codebase?
+2019-11-05 11:48:41	Keetz	code-xd: I am not at all familiar with the codebase :D I dived into very specific parts of the code to fix/implement something, and the scope have always been pretty small
+2019-11-05 11:48:43	<--	wardred (~wardred@103.5.142.235) has quit (Quit: Konversation terminated!)
+2019-11-05 11:49:21	code-xd	Familiar as in knowing that which part needs attention in the codebase for solving your issues
+2019-11-05 11:54:53	Keetz	I wouldn't say i know :)
+2019-11-05 11:55:41	Keetz	Sometimes i get by by searching for something specific. The only thing i know is that every related to nodes is in "/scene"
+2019-11-05 12:03:02	-->	Zeioth (~Zeioth@113.pool80-102-112.dynamic.orange.es) has joined #godotengine
+2019-11-05 12:03:09	<--	Zeioth (~Zeioth@113.pool80-102-112.dynamic.orange.es) has quit (Remote host closed the connection)
+2019-11-05 12:08:24	-->	Zeioth (~Zeioth@113.pool80-102-112.dynamic.orange.es) has joined #godotengine
+2019-11-05 12:08:31	-->	saltpepp3r (~saltpepp3@91.207.173.118) has joined #godotengine
+2019-11-05 12:17:33	<--	mrcdk (~mrcdk@172-200-39-46.usuarios.innovasur.com) has quit (Quit: Leaving)
+2019-11-05 12:21:01	-->	reiti (8b141148@139.20.17.72) has joined #godotengine
+2019-11-05 12:21:14	<--	reiti (8b141148@139.20.17.72) has quit (Remote host closed the connection)
+2019-11-05 12:27:58	-->	mrcdk (~mrcdk@172-200-39-46.usuarios.innovasur.com) has joined #godotengine
+2019-11-05 12:29:15	<--	saltpepp3r (~saltpepp3@91.207.173.118) has quit (Ping timeout: 240 seconds)
+2019-11-05 12:34:03	-->	saltpepp3r (~saltpepp3@91.207.173.118) has joined #godotengine
+2019-11-05 12:36:39	<--	bagedevimo (~bagedevim@219.88.234.121) has quit (Quit: No Ping reply in 180 seconds.)
+2019-11-05 12:38:04	-->	bagedevimo (~bagedevim@219.88.234.121) has joined #godotengine
+2019-11-05 12:38:35	<--	saltpepp3r (~saltpepp3@91.207.173.118) has quit (Ping timeout: 250 seconds)
+2019-11-05 12:38:47	-->	rkieley (~rkieley@24.222.88.212) has joined #godotengine
+2019-11-05 12:41:15	-->	saltpepp3r (~saltpepp3@91.207.173.118) has joined #godotengine
+2019-11-05 12:51:55	<--	saltpepp3r (~saltpepp3@91.207.173.118) has quit (Read error: Connection reset by peer)
+2019-11-05 12:55:44	-->	saltpepp3r (~saltpepp3@91.207.173.118) has joined #godotengine
+2019-11-05 12:57:25	-->	paramite (~paramite@nat-155.starnet.cz) has joined #godotengine
+2019-11-05 13:04:57	<--	saltpepp3r (~saltpepp3@91.207.173.118) has quit (Ping timeout: 240 seconds)
+2019-11-05 13:10:19	-->	saltpepp3r (~saltpepp3@91.207.173.118) has joined #godotengine
+2019-11-05 13:11:37	-->	wardred (~wardred@2001:268:d006:16c8:ec56:c43f:c1ca:c5fc) has joined #godotengine
+2019-11-05 13:24:26	Nello	I think I misread the gles2/3 descriptions when making a new project i thought it said don't use gles3 if you want to make mobile games
+2019-11-05 13:24:32	Nello	but it said web games
+2019-11-05 13:25:00	Nello	i spent half an hour reading up on mobile gles2 compatability and market share
+2019-11-05 13:32:28	<--	saltpepp3r (~saltpepp3@91.207.173.118) has quit (Ping timeout: 264 seconds)
+2019-11-05 13:33:15	-->	saltpepp3r (~saltpepp3@91.207.173.118) has joined #godotengine
+2019-11-05 13:55:34	<--	chargen (~chargen@2a02:2e02:9ee0:7100:515c:bc2f:6af1:e373) has quit (Read error: Connection reset by peer)
+2019-11-05 13:56:16	-->	chargen (~chargen@2a02:2e02:9ee0:7100:515c:bc2f:6af1:e373) has joined #godotengine
+2019-11-05 13:57:07	-->	wyattb (~wyattb@23.81.234.17) has joined #godotengine
+2019-11-05 14:19:33	-->	clemo (~Thunderbi@91-114-190-236.adsl.highway.telekom.at) has joined #godotengine
+2019-11-05 14:20:47	<--	wyattb (~wyattb@23.81.234.17) has quit (Remote host closed the connection)
+2019-11-05 14:21:25	-->	murkx (~mur@unaffiliated/murkx) has joined #godotengine
+2019-11-05 14:24:08	-->	wyattb (~wyattb@23.81.234.17) has joined #godotengine
+2019-11-05 14:25:42	-->	viruscthulhu (~viruscthu@208.157.149.253) has joined #godotengine
+2019-11-05 14:34:32	-->	bomb (~bomb@gateway/tor-sasl/bomb) has joined #godotengine
+2019-11-05 14:40:34	-->	biliogadafr (~bilio@46.53.248.20) has joined #godotengine
+2019-11-05 14:49:45	-->	ignaloidas (~ignaloida@158.129.26.113) has joined #godotengine
+2019-11-05 15:09:54	-->	MoosePrime (~moose@207.44.22.117) has joined #godotengine
+2019-11-05 15:10:43	-->	Technipion (~Thunderbi@p200300F933C29D598D603D5D25868D2C.dip0.t-ipconnect.de) has joined #godotengine
+2019-11-05 15:31:37	<--	Nello (~Nello@24.224.177.229) has quit (Ping timeout: 240 seconds)
+2019-11-05 15:38:24	<--	hamishtpb (~weechat@44.92.187.81.in-addr.arpa) has quit (Quit: WeeChat 2.6-rc1)
+2019-11-05 15:41:53	-->	hamishtpb (~weechat@2001:8b0:cbdb:84b6:6ab8:dd2c:b6c:8b4a) has joined #godotengine
+2019-11-05 15:43:06	-->	ljavuras (7bc129f5@123-193-41-245.dynamic.kbronet.com.tw) has joined #godotengine
+2019-11-05 15:45:42	-->	Nello (~Nello@24.224.177.229) has joined #godotengine
+2019-11-05 15:51:39	<--	wardred (~wardred@2001:268:d006:16c8:ec56:c43f:c1ca:c5fc) has quit (Quit: Konversation terminated!)
+2019-11-05 15:53:50	-->	psymin (~psymin@69.146.8.222) has joined #godotengine
+2019-11-05 15:55:25	<--	ljavuras (7bc129f5@123-193-41-245.dynamic.kbronet.com.tw) has left #godotengine
+2019-11-05 16:08:22	-->	sutter_cane (~snowcrash@p200300CF870BC9000E1308576AD2F8E6.dip0.t-ipconnect.de) has joined #godotengine
+2019-11-05 16:22:26	-->	Skaruts (b04ea7f6@dsl-167-246.bl26.telepac.pt) has joined #godotengine
+2019-11-05 16:25:37	Skaruts	Am I getting paraboloid shadows here: https://i.imgur.com/Xp7FsEU.png
+2019-11-05 16:25:50	Skaruts	notice I have "cube" mode selected
+2019-11-05 16:26:37	Skaruts	as far as I understand it, cube shadows don't have that gap in the middle, or do they?
+2019-11-05 16:27:30	Skaruts	but then nothing about the shadows changes when I switch between cube and paraboloid
+2019-11-05 16:38:30	<--	clemo (~Thunderbi@91-114-190-236.adsl.highway.telekom.at) has quit (Ping timeout: 264 seconds)
+2019-11-05 16:43:21	-->	Kelzorz (~Kelzorz@67.6.83.103) has joined #godotengine
+2019-11-05 16:48:22	<--	Keetz (~Keetz@152.115.73.146) has quit (Ping timeout: 265 seconds)
+2019-11-05 16:48:29	<--	shodan45 (~quassel@107.161.22.155) has quit (Remote host closed the connection)
+2019-11-05 16:51:41	<--	Zeioth (~Zeioth@113.pool80-102-112.dynamic.orange.es) has quit (Ping timeout: 240 seconds)
+2019-11-05 16:53:11	-->	shodan45 (~quassel@107.161.22.155) has joined #godotengine
+2019-11-05 16:55:15	<--	biliogadafr (~bilio@46.53.248.20) has quit (Ping timeout: 240 seconds)
+2019-11-05 16:55:43	-->	Roughy (~mdaw45ns@188.126.200.178) has joined #godotengine
+2019-11-05 17:03:41	<--	Technipion (~Thunderbi@p200300F933C29D598D603D5D25868D2C.dip0.t-ipconnect.de) has quit (Quit: Technipion)
+2019-11-05 17:06:04	-->	kimamb (~kimamb__@62.97.173.88) has joined #godotengine
+2019-11-05 17:06:24	-->	pd09041999 (~pd0904199@unaffiliated/pd09041999) has joined #godotengine
+2019-11-05 17:08:36	<--	pd09041999 (~pd0904199@unaffiliated/pd09041999) has quit (Remote host closed the connection)
+2019-11-05 17:10:08	<--	rainlizar (~rainlizar@180-150-38-48.b49626.bne.nbn.aussiebb.net) has quit
+2019-11-05 17:10:33	-->	rainlizard (~rainlizar@180-150-38-48.b49626.bne.nbn.aussiebb.net) has joined #godotengine
+2019-11-05 17:12:52	<--	odino (~odino3@2a02:1205:c6b3:cef0:257f:351:ca5b:4070) has quit (Quit: Leaving)
+2019-11-05 17:19:26	<--	mrcdk (~mrcdk@172-200-39-46.usuarios.innovasur.com) has quit (Read error: Connection reset by peer)
+2019-11-05 17:31:07	-->	daela (~daela@24-217-251-202.dhcp.stls.mo.charter.com) has joined #godotengine
+2019-11-05 17:33:51	-->	Beliar (~Beliar@2a02:8108:9640:6c42:9d18:56b9:df2e:26e5) has joined #godotengine
+2019-11-05 17:37:37	<--	merpnderp (sid16744@gateway/web/irccloud.com/x-pmbmozielffgttbw) has quit
+2019-11-05 17:43:32	<--	rainlizard (~rainlizar@180-150-38-48.b49626.bne.nbn.aussiebb.net) has quit
+2019-11-06 09:03:18	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #godotengine
+2019-11-06 09:03:18	--	Topic for #godotengine is "Godot Engine | https://godotengine.org | GitHub: https://github.com/godotengine/godot | Docs: https://docs.godotengine.org | Discord: https://discord.gg/zH7NUgz | Don't ask if you can ask, just ask! :) | Interested in engine development? Join #godotengine-devel | Want to help with the documentation? Join #godotengine-doc"
+2019-11-06 09:03:18	--	Topic set by Calinou (~quassel@fsf/member/calinou) on Mon, 25 Feb 2019 00:45:33
+2019-11-06 09:03:18	--	Channel #godotengine: 258 nicks (1 op, 0 voices, 257 normals)
+2019-11-06 09:03:29	--	Channel created on Tue, 11 Feb 2014 08:43:18
+2019-11-06 09:09:14	-->	chargen (~chargen@2a02:2e02:9ee0:7100:515c:bc2f:6af1:e373) has joined #godotengine
+2019-11-06 09:10:47	<--	bitwinery (~bitwinery@c-73-37-18-139.hsd1.wa.comcast.net) has quit (Quit: Leaving)
+2019-11-06 09:14:52	-->	nee` (AE5BM21NWK@pictor.uberspace.de) has joined #godotengine
+2019-11-06 09:15:36	<--	Salabasama (~mustafa@68-118-84-232.dhcp.kgpt.tn.charter.com) has quit (Ping timeout: 240 seconds)
+2019-11-06 09:26:13	<--	chargen (~chargen@2a02:2e02:9ee0:7100:515c:bc2f:6af1:e373) has quit (Quit: BBL)
+2019-11-06 09:28:15	-->	reber (~reber@unaffiliated/reber) has joined #godotengine
+2019-11-06 09:51:35	-->	chargen (~chargen@2a02:2e02:9ee0:7100:3c5f:a860:69dd:19a5) has joined #godotengine
+2019-11-06 09:52:03	-->	Tobbi (~Tobbi@supertux/tobbi) has joined #godotengine
+2019-11-06 10:11:28	-->	Cahaan (~Cahaan@109.133.183.154) has joined #godotengine
+2019-11-06 10:32:58	-->	Hinsbart[m] (hinsbartma@gateway/shell/matrix.org/x-hlcllaelntyqocad) has joined #godotengine
+2019-11-06 10:33:16	<--	Tobbi (~Tobbi@supertux/tobbi) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-11-06 10:34:03	-->	thc202 (~thc202@unaffiliated/thc202) has joined #godotengine
+2019-11-06 11:02:49	-->	kriskrop1 (~kriskropd@108-81-178-201.lightspeed.gnvlsc.sbcglobal.net) has joined #godotengine
+2019-11-06 11:03:47	<--	kriskropd (~kriskropd@unaffiliated/kriskropd) has quit (Ping timeout: 268 seconds)
+2019-11-06 11:04:34	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #godotengine
+2019-11-06 11:13:27	-->	dddddd (~dddddd@unaffiliated/dddddd) has joined #godotengine
+2019-11-06 11:13:43	<--	regakakobigman (~regakakob@c-73-174-187-176.hsd1.pa.comcast.net) has quit (Ping timeout: 265 seconds)
+2019-11-06 12:06:22	-->	Technipion (~Thunderbi@p200300F933CF80B8B0B455F6598BEC55.dip0.t-ipconnect.de) has joined #godotengine
+2019-11-06 12:28:18	<--	Skaruts (b04ea7f6@dsl-167-246.bl26.telepac.pt) has quit (Remote host closed the connection)
+2019-11-06 12:51:58	<--	Taoki (~MirceaKit@93.113.162.37) has quit (Ping timeout: 245 seconds)
+2019-11-06 12:53:33	-->	Taoki (~MirceaKit@93.113.162.37) has joined #godotengine
+2019-11-06 13:25:23	-->	rkieley (~rkieley@blk-222-88-212.eastlink.ca) has joined #godotengine
+2019-11-06 13:39:38	<--	jeffyboh (~JeffyBoh@c-76-18-203-239.hsd1.fl.comcast.net) has quit (Ping timeout: 240 seconds)
+2019-11-06 14:19:05	-->	madmiraal (~Thunderbi@2001:984:a3d7:1:3120:6207:8d19:14c3) has joined #godotengine
+2019-11-06 14:34:43	IcyDiamond	I'm trying to make a quadtree LOD planet in 3D https://i.lunasqu.ee/2019-11-06_15-18-58.mp4
+2019-11-06 14:36:10	DarkUranium	IcyDiamond, neat
+2019-11-06 14:38:20	-->	Roughy (~mdaw45ns@188.126.200.178) has joined #godotengine
+2019-11-06 15:01:37	IcyDiamond	I want atmospheric scattering shader but unfortunately I don't know how to code shaders :(
+2019-11-06 15:03:34	-->	TheBFR (0c68c32a@12.104.195.42) has joined #godotengine
+2019-11-06 15:04:39	Technipion	IcyDiamond: Have you a picture of what visual effect you want to achieve?
+2019-11-06 15:06:47	IcyDiamond	Just a rayleigh scattering effect both outside and inside the "atmosphere"
+2019-11-06 15:12:53	Technipion	IcyDiamond: You could do something like this: https://docs.godotengine.org/en/3.1/tutorials/3d/spatial_material.html#grow
+2019-11-06 15:13:23	Technipion	IcyDiamond: And then use a material with emission. Alternatively you can write your own shader, which should not be too hard in this case
+2019-11-06 15:14:45	-->	ignaloidas (~ignaloida@158.129.26.113) has joined #godotengine
+2019-11-06 15:22:45	Technipion	IcyDiamond: I was able to get something pretty close...
+2019-11-06 15:33:36	-->	MoosePrime (~moose@207.44.22.117) has joined #godotengine
+2019-11-06 15:35:34	Technipion	IcyDiamond: I have uploaded my example for you: https://send.firefox.com/download/fe8c770c7b033a13/#dEwAyLr637uWg1SCArz3iA
+2019-11-06 15:37:29	IcyDiamond	hmm, interesting
+2019-11-06 15:47:51	-->	Xard (~xard@88-112-236-145.elisa-laajakaista.fi) has joined #godotengine
+2019-11-06 15:49:57	IcyDiamond	i tried applying some shader i found onto a sphere and i get these weird lines https://i.lunasqu.ee/Screenshot_19-11-06-16:49:15.png
+2019-11-06 15:49:59	IcyDiamond	how strange
+2019-11-06 15:50:23	-->	jeffyboh (~JeffyBoh@c-76-18-203-239.hsd1.fl.comcast.net) has joined #godotengine
+2019-11-06 15:52:13	-->	psymin (~psymin@69.146.8.222) has joined #godotengine
+2019-11-06 15:57:38	<--	equil (~s@h-37-123-162-67.NA.cust.bahnhof.se) has quit (Ping timeout: 246 seconds)
+2019-11-06 15:58:54	-->	equil (~s@h-37-123-162-67.NA.cust.bahnhof.se) has joined #godotengine
+2019-11-06 16:09:14	<--	jaggz (~jaggz@unaffiliated/jaggz) has quit (Ping timeout: 240 seconds)
+2019-11-06 16:20:03	-->	jaggz (~jaggz@unaffiliated/jaggz) has joined #godotengine
+2019-11-06 16:21:57	<--	Technipion (~Thunderbi@p200300F933CF80B8B0B455F6598BEC55.dip0.t-ipconnect.de) has quit (Quit: Technipion)
+2019-11-06 16:22:56	<--	rainlizard (~rainlizar@180-150-38-48.b49626.bne.nbn.aussiebb.net) has quit
