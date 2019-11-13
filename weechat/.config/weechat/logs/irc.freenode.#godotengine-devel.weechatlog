@@ -2163,3 +2163,782 @@
 2019-11-06 16:24:14	RevoluPowered	Morning @iFire
 2019-11-06 16:25:26	qbieshay	I have a question: I noticed that the InputEventMouseMotion does not expose a `pressed` property, but it is possible to use the `is_pressed` function on it. And the function works
 2019-11-06 16:26:40	qbieshay	I'm wondering if this is an inconsistency that should be taken care of or not (expose a `pressed` property on everything that inherits from InputEvent, which is the class that exposes the function `is_pressed`
+2019-11-06 16:35:11	reduz	qbieshay: it has a buttom nask
+2019-11-06 16:35:41	reduz	all APIs of this kind expose a button mask for mouse motion events
+2019-11-06 16:36:28	qbieshay	Ah, I see.
+2019-11-06 16:38:02	qbieshay	reduz thanks for the explanation!
+2019-11-06 16:45:07	<--	mrcdk_ (~mrcdk@172-200-39-46.usuarios.innovasur.com) has quit (Read error: Connection reset by peer)
+2019-11-06 16:46:26	-->	biliogadafr (~bilio@46.53.248.20) has joined #godotengine-devel
+2019-11-06 16:48:27	<--	murkx (~mur@unaffiliated/murkx) has quit (Ping timeout: 240 seconds)
+2019-11-06 16:48:40	<--	Keetz (~Keetz@152.115.73.146) has quit (Ping timeout: 265 seconds)
+2019-11-06 16:53:24	-->	murkx (~mur@unaffiliated/murkx) has joined #godotengine-devel
+2019-11-06 17:09:07	-->	Jummit (52cfee13@muedsl-82-207-238-019.citykom.de) has joined #godotengine-devel
+2019-11-06 17:09:34	clayjohn	Akien: im not sure how much we can do for fracteed without breaking compat. Im still not completely sure how things broke. I did my best to fix his issue earlier but it appears it's still there.
+2019-11-06 17:11:17	iFire	clayjohn: is there a physics image we can rendering to?
+2019-11-06 17:11:30	Calinou	we don't have to keep rendering 100% accurate for 4.0
+2019-11-06 17:11:43	Calinou	as long as APIs can be converted automatically, the renderer can look different
+2019-11-06 17:12:06	Calinou	if anything, materials looking *less* shiny would be appreciated by most people in my experience, even if their project intended to use less rough materials at first :)
+2019-11-06 17:12:13	iFire	I feel like comparing substance or eevee is the wrong way of doing this. It should be compared with a physically based render like appleseed, or a photo of a scene that is recreated into Godot 4.0
+2019-11-06 17:12:18	Calinou	(but I think most people use roughness maps as intended by Substance)
+2019-11-06 17:12:24	Calinou	which look too shiny in Godot right now
+2019-11-06 17:12:39	clayjohn	Calinou: yes. For 4.0. akien was asking if we could change for 3.2, or add a separate option to revert behaviour.
+2019-11-06 17:12:47	Calinou	oh, right
+2019-11-06 17:13:00	Calinou	yeah, it needs to be made opt-in for 3.2 somehow
+2019-11-06 17:13:53	Calinou	when I tried sqrt()ing the roughness map back in 3.0.x, it felt like an upgrade overall
+2019-11-06 17:14:07	Calinou	(so the effective roughness was overall increased, but non-rough surfaces stayed non-rough)
+2019-11-06 17:14:48	Calinou	maybe this has to do with gamma correcting roughness maps? I don't know if it has to be done in the first place
+2019-11-06 17:18:14	Akien	Yeah IMO if we could add an option in 3.2 that makes the roughness closer to the substance or eevee output, that would be great.
+2019-11-06 17:18:40	Akien	3.2 is here to stay for a while as 4.0 will take time and some with big projects in GLES3 won't want to migrate, so this kind of option is important I think.
+2019-11-06 17:19:05	Groud	If we know how to solve the problem
+2019-11-06 17:19:17	Groud	But yeah, that would be great
+2019-11-06 17:19:51	Akien	fracteed seems to say that it's about a 4 lines change to get back something he's fine with (3.0.6 output)
+2019-11-06 17:20:35	Groud	Oh ok
+2019-11-06 17:21:31	Groud	I'm kind of surprised there is no definitive and common way to render basic PBR materials
+2019-11-06 17:22:47	Groud	I mean, it makes sense to have different trechniques for aliasing, ambiant occlusion, etc... but having some many different results for basic materials is kind of weird
+2019-11-06 17:23:01	clayjohn	Akien: hmmm. Okay. I'll look into it this weekend.
+2019-11-06 17:23:03	Calinou	unfortunately, PBR is not the universal standard we initially hoped for :(
+2019-11-06 17:23:21	clayjohn	Groud: it's usually a result of tradeoffs made in the name of optimizations.
+2019-11-06 17:25:04	Groud	clayjohn: I guess so, but like, for a basic light and only metalness/roughness materials, it is crazy to have so many differences
+2019-11-06 17:25:50	Groud	I mean, it's supposed to be "physically-based", so there should not be crazy differences in the equations ^^
+2019-11-06 17:26:08	clayjohn	Groud: eh. It's physically based rendering, not physically correct rendering, so everyone uses slightly different techniques. In this case, it's most likely a different in how the environment map is generated.
+2019-11-06 17:26:17	Jummit	I am thinking about adding a download counter to the asset lib. What do you guys think?
+2019-11-06 17:26:36	Groud	hmm ok
+2019-11-06 17:26:48	Jummit	So you can sort by most/least downloads.
+2019-11-06 17:26:58	Groud	Ah yes, if fracteed's examples uses an environment map it makes sense
+2019-11-06 17:28:02	clayjohn	Groud: I think it is the environment map. Cause we use the same PBR equations as most people within the actual shaders.
+2019-11-06 17:28:45	Groud	the environment map is generated differently for different roughness, is that it ?
+2019-11-06 17:29:48	Calinou	Jummit: the asset library is being rewritten, the old code will be thrown away soon :)
+2019-11-06 17:30:04	Calinou	I considered implementing a download count, but it can be exploited with relative ease so I'm not sure about it
+2019-11-06 17:30:10	Calinou	I do have a voting/comments system though
+2019-11-06 17:30:23	Jummit	Ooh, that's nice! I'm looking forward to the new version.
+2019-11-06 17:30:45	Calinou	to make the download count less exploitable, one could store the IP address in a database and compare the request IP against it (and only allow 1 download to be counted per day or something), but GDPR says no :P
+2019-11-06 17:31:26	-->	bomb (~bomb@gateway/tor-sasl/bomb) has joined #godotengine-devel
+2019-11-06 17:33:20	Calinou	https://www.reddit.com/r/gdpr/comments/8icg2j/can_i_still_store_ip_addresses_in_a_database/ says it's OK to do it, as long as it's clearly written in the privacy policy and you get consent somehow (consent sounds difficult for our use case though…)
+2019-11-06 17:35:30	Groud	Calinou: What do you use for the new asset library ?
+2019-11-06 17:35:54	Calinou	PHP + Laravel, the code is at https://github.com/Calinou/godot-asset-library-laravel :) still a work in progress, but you can already run it locally
+2019-11-06 17:36:17	Groud	The problem with IP addresses is that they are not a reliable way to identify a user
+2019-11-06 17:36:36	Groud	ok
+2019-11-06 17:36:43	Calinou	yeah, someone with access to many VPNs could still inflate download counts. There's no perfect way to prevent it, I just want to avoid the case where a random user spams F5 on their own asset download link
+2019-11-06 17:37:20	Groud	But honestly, I would not worry so much about that
+2019-11-06 17:37:23	Groud	You could count the file only once it's fully downloaded
+2019-11-06 17:37:53	Groud	Ah maybe put a timer on a per-IP basic
+2019-11-06 17:38:03	Groud	like 30 minutes
+2019-11-06 17:38:48	Calinou	we don't know when the user finishes downloading the file, or even if they finished it in the first place. Tracking downloads is done by setting up a controller that increments a counter in the database, and redirects the user to the actual download link (this is done transparently in the web browser)
+2019-11-06 17:38:57	Calinou	oh also, for this to work, the HTTP client used by Godot needs to follow redirects
+2019-11-06 17:39:14	Calinou	if it currently doesn't do this, it means we'd have to supply a point release for all supported Godot releases just for this
+2019-11-06 17:43:32	Calinou	so yeah, I'll focus on other features first, the review system should make it easier for users to find good assets in the first place
+2019-11-06 17:43:36	Calinou	plus the tagging system which I added :)
+2019-11-06 17:44:42	lawnjelly	with that GDPR thing it's open to interpretation
+2019-11-06 17:45:00	lawnjelly	i haven't read it but surely they mean storing a longterm evil database a la google or facebook
+2019-11-06 17:45:11	lawnjelly	you need to store an IP for lots of things to run a server..
+2019-11-06 17:45:23	lawnjelly	in the short term, so where does short term end?
+2019-11-06 17:45:44	lawnjelly	I'd say a few hours or a day is hard to argue against
+2019-11-06 17:46:32	lawnjelly	even an hour would put most people off
+2019-11-06 17:47:05	Calinou	24 hours would be better, as the download count should usually reflect how many people are interested in the asset
+2019-11-06 17:47:15	Groud	Calinou: Will you implement a way to specify a list of compatible versions ?
+2019-11-06 17:47:18	clayjohn	Groud: essentially yea. Each amount of roughness has a different layer in a mipmap.
+2019-11-06 17:47:35	Calinou	Groud: yeah, that's been done, you can have multiple versions per asset, each with their own supported Godot version
+2019-11-06 17:47:36	Groud	clayjohn: ok :)
+2019-11-06 17:47:50	Groud	great :)
+2019-11-06 17:47:56	Calinou	right now, the Godot version is major.minor, but I plan to add full support for semver ranges so you can be more accurate (or more lenient) in terms of version support
+2019-11-06 17:47:57	minraws	Groud: a full size dependency manager for assets sounds good
+2019-11-06 17:48:00	Groud	Is there a demo avaiable somewhere ?
+2019-11-06 17:48:11	Calinou	since not everyone understands semver strings (it's not easy), I'll add templates that you can click to fill the form automatically
+2019-11-06 17:48:16	Groud	awesome
+2019-11-06 17:48:27	Calinou	like ^3.1 to support 3.1 up to 4.0 (exclusive)
+2019-11-06 17:48:35	Groud	minraws: honestly, I think dependency management for game asset is overkill
+2019-11-06 17:49:02	Calinou	I don't have an hosted demo yet, would be nice to put one up (I could do it on my VPS)
+2019-11-06 17:49:16	<--	bomb (~bomb@gateway/tor-sasl/bomb) has quit (Remote host closed the connection)
+2019-11-06 17:49:48	minraws	Groud: Why?
+2019-11-06 17:49:49	Calinou	Groud: also, I implemented OAuth2 for GitHub and GitLab, so you can log in with your existing account. This lowers the barrier to entry a fair bit
+2019-11-06 17:49:54	Calinou	(especially for those just writing reviews)
+2019-11-06 17:50:02	Calinou	manual registration is still supported :)
+2019-11-06 17:50:03	minraws	Game Assets especially in FOSS world like ours should be able to be interested dependent
+2019-11-06 17:50:13	minraws	*inter dependent
+2019-11-06 17:50:18	Groud	Calinou: niice ! :D
+2019-11-06 17:50:24	 *	minraws hates autocomplete
+2019-11-06 17:52:10	Calinou	speaking of which, https://github.com/godotengine/godot/issues/20780#issuecomment-550323751 :|
+2019-11-06 17:52:20	Calinou	I'm not fond of having a asset store which just clones the official one :(
+2019-11-06 17:52:24	Calinou	it can mislead users
+2019-11-06 17:52:43	minraws	A proper dependency could probably even have a way to directly import from GitHub (specific branches/tags/commits)...
+2019-11-06 17:52:49	Calinou	I guess their plan is to add paid assets, but having assets taken from the official assetlib can be confusing
+2019-11-06 17:53:32	Calinou	minraws: I agree having some kind of dependency management would be good, we could have a "dependencies" section in project.godot at the very least with a {package:version} dictionary
+2019-11-06 17:53:43	Groud	minraws: Because game assets are rarely dependant on each other
+2019-11-06 17:53:54	<--	odino (~odino3@2a02:1205:c6b3:cef0:ed91:17fd:8c8d:cfde) has quit (Quit: Leaving)
+2019-11-06 17:54:15	Calinou	right now, you have to "vendor" your dependencies in your Git repository (which is a waste of space), or tell people to download them manually (inconvenient)
+2019-11-06 17:54:25	Calinou	making Godot able to download them when importing the project would be much better for version control
+2019-11-06 17:54:29	minraws	Groud: That's true for Unity cause it's all paid/pay walled...
+2019-11-06 17:54:53	Calinou	the best compromise you can do right now is having a shell script that does it for you, but a shell script isn't cross-platform :(
+2019-11-07 09:11:40	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #godotengine-devel
+2019-11-07 09:11:40	--	Topic for #godotengine-devel is "Godot Engine Developers | Tasks up for grabs: https://github.com/godotengine/godot/issues | ML: https://listengine.tuxfamily.org/godotengine.org/devel | Logs: http://godot.eska.me/irc-logs | Can't join from Matrix? https://frama.link/matrix-irc-needreggednick"
+2019-11-07 09:11:40	--	Topic set by Akien (~Akien@godotengine/akien) on Sun, 23 Sep 2018 17:02:58
+2019-11-07 09:11:40	--	Channel #godotengine-devel: 155 nicks (1 op, 0 voices, 154 normals)
+2019-11-07 09:11:40	<--	Stan` (~yaaic@37.165.65.192) has quit (Ping timeout: 240 seconds)
+2019-11-07 09:11:53	--	Channel created on Tue, 23 Jun 2015 16:46:41
+2019-11-07 09:14:07	-->	Technipion (~Thunderbi@p200300F933CF8066CC30087B92BF53D8.dip0.t-ipconnect.de) has joined #godotengine-devel
+2019-11-07 09:16:35	-->	Stan` (~yaaic@37.173.64.228) has joined #godotengine-devel
+2019-11-07 09:32:16	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #godotengine-devel
+2019-11-07 09:32:16	--	Topic for #godotengine-devel is "Godot Engine Developers | Tasks up for grabs: https://github.com/godotengine/godot/issues | ML: https://listengine.tuxfamily.org/godotengine.org/devel | Logs: http://godot.eska.me/irc-logs | Can't join from Matrix? https://frama.link/matrix-irc-needreggednick"
+2019-11-07 09:32:16	--	Topic set by Akien (~Akien@godotengine/akien) on Sun, 23 Sep 2018 17:02:58
+2019-11-07 09:32:16	--	Channel #godotengine-devel: 156 nicks (1 op, 0 voices, 155 normals)
+2019-11-07 09:32:30	--	Channel created on Tue, 23 Jun 2015 16:46:41
+2019-11-07 09:33:26	code-xd	What is the best way to make changes to the source code without building that code over and over again?
+2019-11-07 09:33:57	code-xd	Is something is written in the documentation then can someone highlight me that?
+2019-11-07 09:34:48	Akien	Once you have built everything once, subsequent builds only rebuild what needs to be rebuilt.
+2019-11-07 09:34:54	Akien	(incremental builds)
+2019-11-07 09:35:23	jfons	morning
+2019-11-07 09:35:45	Akien	So if you change code at the end of the dependency chain, it's fast, if you change code with lots of things depending on it, all those things will be recompiled (so changes to `core/` would be slow typically).
+2019-11-07 09:36:28	Akien	rxlecky[m]: I had forgotten about #27742 - is it ready to merge now?
+2019-11-07 09:36:28	IssueBot	#27742: Game camera override | https://git.io/fjLFN
+2019-11-07 09:37:48	Akien	rxlecky[m]: Is there any major risk of regression you can think of for normal debugging, or should all potential bugs be constrained to the new feature itself?
+2019-11-07 09:54:36	-->	odino (~odino3@2a02:1205:c6a7:4fc0:906f:c91e:f444:ce06) has joined #godotengine-devel
+2019-11-07 09:54:43	odino	o/
+2019-11-07 09:55:58	StraToN	Morning
+2019-11-07 09:57:23	-->	thc202 (~thc202@unaffiliated/thc202) has joined #godotengine-devel
+2019-11-07 10:01:02	code-xd	Is there any command for that? I could only find the whole build command in the documentation.
+2019-11-07 10:03:39	Akien	code-xd: it's the same command. It only builds what changed and its dependencies.
+2019-11-07 10:04:01	Akien	If it always rebuilds everything in your case, that's a bug. Try to update to the latest SCons version if that's not the one you're using.
+2019-11-07 10:04:14	Akien	jfons: Did you have any chance to look at #28526 ?
+2019-11-07 10:04:15	IssueBot	#28526: GIProbe::bake(): special handling of spatial | https://git.io/fjG5X
+2019-11-07 10:09:02	code-xd	Thank you Akien
+2019-11-07 10:11:04	fales[m]	iFire: yeah, I see no reasons for a callback based API in HTTPClient, which is also not a commonly used pattern in godot.
+2019-11-07 10:22:37	<--	pieq (~pieq@canonical/oem/pieq) has quit (Quit: Leaving)
+2019-11-07 10:29:16	-->	SonerSound (~SonerSoun@228.175.18.212.rev.vodafone.pt) has joined #godotengine-devel
+2019-11-07 10:43:29	IronicallySerio	In some cases with Windows and a specific scons version, scons will actually rebuild everything at every build command. Its a bug though but I seemed to encounter it quite a lot
+2019-11-07 11:06:11	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #godotengine-devel
+2019-11-07 11:06:11	--	Topic for #godotengine-devel is "Godot Engine Developers | Tasks up for grabs: https://github.com/godotengine/godot/issues | ML: https://listengine.tuxfamily.org/godotengine.org/devel | Logs: http://godot.eska.me/irc-logs | Can't join from Matrix? https://frama.link/matrix-irc-needreggednick"
+2019-11-07 11:06:11	--	Topic set by Akien (~Akien@godotengine/akien) on Sun, 23 Sep 2018 17:02:58
+2019-11-07 11:06:11	--	Channel #godotengine-devel: 158 nicks (1 op, 0 voices, 157 normals)
+2019-11-07 11:06:26	--	Channel created on Tue, 23 Jun 2015 16:46:41
+2019-11-07 11:12:47	reduz	moorning
+2019-11-07 11:15:58	Akien	Morning reduz :)
+2019-11-07 11:16:49	StraToN	Morning reduz
+2019-11-07 11:16:50	-->	awsumpwner27 (~awsumpwne@wnpgmb0805w-ad05-202-9.dynamic.bellmts.net) has joined #godotengine-devel
+2019-11-07 11:19:11	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #godotengine-devel
+2019-11-07 11:22:02	<--	ignaloidas (~ignaloida@158.129.26.113) has quit (Remote host closed the connection)
+2019-11-07 11:31:39	Akien	StraToN: just saw that, made with Godot, might be interesting to you :) https://radmatt.itch.io/dialogue-designer
+2019-11-07 11:38:05	jfons	Akien: commented on that PR
+2019-11-07 11:38:57	StraToN	Akien Thanks!
+2019-11-07 11:41:19	StraToN	Akien Wow this is so much more advanced than what I currently have. Bt it does look sweet
+2019-11-07 11:42:31	Akien	StraToN: and they did an outstanding job customizing the itch page :D
+2019-11-07 11:42:52	StraToN	Indeed
+2019-11-07 11:43:37	StraToN	I think I'll buy this piece of software so I can test it.
+2019-11-07 11:44:08	StraToN	I suppose I don't get the source code, but no big deal
+2019-11-07 12:01:38	jitspoe	https://github.com/godotengine/godot/issues/28032 - I hope, some day, we can have physics in godot without all this margin nonsense.
+2019-11-07 12:31:18	-->	Cahaan (~Cahaan@109.129.13.76) has joined #godotengine-devel
+2019-11-07 13:19:33	Akien	Groud: ok with #33052 ?
+2019-11-07 13:19:34	IssueBot	#33052: Fix analog input in sliders | https://git.io/Je09X
+2019-11-07 13:23:43	reduz	please correct me if I am wrong, but if I do
+2019-11-07 13:23:49	reduz	void* mmappedData = mmap(NULL, TOTAL_SIZE, PROT_READ|PROT_WRITE, MAP_ANONYMOUS|MAP_PRIVATE , -1, 0);
+2019-11-07 13:24:42	reduz	this memory is virtual right?  it does not allocate phyisical pages until written to it, right?
+2019-11-07 13:24:56	reduz	I understand it is this way in Linux but i don't know how standard it is
+2019-11-07 13:25:10	reduz	TMM: you probably know this better :P
+2019-11-07 13:40:49	-->	Yeldham (~michael@138.219.238.108.newlifeinformatica.com.br) has joined #godotengine-devel
+2019-11-07 13:43:55	Groud	Akien: I kind of don't like much about this one, it's kind of dirty
+2019-11-07 13:44:31	Groud	I'd rather add a parameter on is_action_pressed to match echo events if that's the problem
+2019-11-07 13:47:01	Groud	Akien: Commented
+2019-11-07 13:50:15	Akien	Groud: thanks
+2019-11-07 13:50:28	Akien	Ah, came in a couple days too late but here we are being saved by Linus again :P https://twitter.com/phoronix/status/1192423450079584257
+2019-11-07 13:52:31	Akien	Well I don't know if Linus is still involved at all in Git development though.
+2019-11-07 13:53:09	Akien	Seems like it's old news too, I guess nobody whined or not loud enough to reach my ears :)
+2019-11-07 13:54:05	-->	MoosePrime (~moose@207.44.22.117) has joined #godotengine-devel
+2019-11-07 13:54:19	Groud	\o/
+2019-11-07 14:03:34	-->	lxsameer (~lxsameer@unaffiliated/lxsameer) has joined #godotengine-devel
+2019-11-07 14:04:21	lxsameer	hey folks, where can i find a list of language bindings for godot ? official and community bindings
+2019-11-07 14:10:43	RevoluPowered	morning
+2019-11-07 14:11:20	minraws	lxsameer: all of them are community maintained. And just think of a language and it likely has bindings
+2019-11-07 14:11:31	minraws	Although few are well maintained.
+2019-11-07 14:11:52	lxsameer	minraws: nice, is there any lisp among them ?
+2019-11-07 14:11:54	minraws	Like Python, Nim, some D...
+2019-11-07 14:12:16	minraws	lxsameer: There are a couple attempts not well maintained iirc
+2019-11-07 14:12:51	lxsameer	minraws: here can i find a list or something
+2019-11-07 14:12:55	minraws	We are getting asked about Lisp a bit too much...
+2019-11-07 14:13:14	minraws	Not sure if anyone has made one.
+2019-11-07 14:14:19	lxsameer	minraws: it can be really useful to have a lisp connecting the lisp world to godot
+2019-11-07 14:17:35	-->	ignaloidas (~ignaloida@158.129.11.9) has joined #godotengine-devel
+2019-11-07 14:18:23	reduz	well ok, I will just allocate a large number of virtual memory, then split it in one for page and one for poolvector
+2019-11-07 14:23:47	<--	MoosePrime (~moose@207.44.22.117) has quit (Remote host closed the connection)
+2019-11-07 14:28:15	-->	MoosePrime (~moose@207.44.22.117) has joined #godotengine-devel
+2019-11-07 14:45:45	Akien	Yeldham: I've been reading #31427 a few times but I still don't understand it... or can't reproduce.
+2019-11-07 14:45:46	IssueBot	#31427: File dialog gets stuck on the path of the first selected preset in export dialog | https://git.io/fjx7U
+2019-11-07 14:46:41	Akien	For me the export file dialog always defaults to the project folder, regardless of previous export paths anyway.
+2019-11-07 14:50:56	reduz	this will be very cool
+2019-11-07 14:50:59	Akien	Ah now I can kind of reproduce it, I need to reset an export path to then see its export path used in the Export Path selection filedialog
+2019-11-07 15:03:45	<--	est31 (~quassel@gateway/tor-sasl/est31) has quit (Remote host closed the connection)
+2019-11-07 15:03:57	-->	est31 (~quassel@gateway/tor-sasl/est31) has joined #godotengine-devel
+2019-11-07 15:30:59	<--	Technipion (~Thunderbi@p200300F933CF8066CC30087B92BF53D8.dip0.t-ipconnect.de) has quit (Ping timeout: 250 seconds)
+2019-11-07 15:33:32	TMM	reduz yes, the memory will not be backed by physical pages until written to
+2019-11-07 15:35:44	-->	dddddd (~dddddd@unaffiliated/dddddd) has joined #godotengine-devel
+2019-11-07 15:38:56	-->	Sipaha (~Sipaha@46.236.156.184) has joined #godotengine-devel
+2019-11-07 15:46:00	<--	jahd (~jahd2602@191.101.3.230) has quit (Remote host closed the connection)
+2019-11-07 15:46:00	<--	Dmat1 (~Dmat@191.101.3.230) has quit (Remote host closed the connection)
+2019-11-07 15:46:00	<--	vnen (~vnen@unaffiliated/vnen) has quit (Remote host closed the connection)
+2019-11-07 15:46:25	-->	jahd (~jahd2602@191.101.3.230) has joined #godotengine-devel
+2019-11-07 15:46:25	-->	Dmat1 (~Dmat@191.101.3.230) has joined #godotengine-devel
+2019-11-07 15:46:28	-->	vnen (~vnen@unaffiliated/vnen) has joined #godotengine-devel
+2019-11-07 15:57:14	<--	awsumpwner27 (~awsumpwne@wnpgmb0805w-ad05-202-9.dynamic.bellmts.net) has quit (Read error: Connection reset by peer)
+2019-11-07 16:05:09	<--	Sipaha (~Sipaha@46.236.156.184) has quit (Quit: Going offline, see ya! 8=з)
+2019-11-07 16:12:27	<--	Nello (~Nello@24.224.177.229) has quit (Read error: Connection reset by peer)
+2019-11-07 16:12:35	-->	Nello_ (~Nello@24.224.177.229) has joined #godotengine-devel
+2019-11-07 16:13:22	Calinou	iFire: yeah, I thought about that too, ideally we'd have a property for that in Label
+2019-11-07 16:13:31	Calinou	Clip Text could be turned into an enum maybe, not sure if that's possible
+2019-11-07 16:13:35	Calinou	("None", "Clip", "Ellipsis")
+2019-11-07 16:19:35	-->	biliogadafr (~bilio@46.53.248.20) has joined #godotengine-devel
+2019-11-07 16:20:07	-->	Sipaha (~Sipaha@46.236.156.184) has joined #godotengine-devel
+2019-11-07 16:39:58	<--	Stan` (~yaaic@37.173.64.228) has quit (Quit: See you !)
+2019-11-07 16:40:37	-->	Stan` (~yaaic@37.173.64.228) has joined #godotengine-devel
+2019-11-07 16:40:43	<--	Stan` (~yaaic@37.173.64.228) has quit (Client Quit)
+2019-11-07 16:41:15	<--	ignaloidas (~ignaloida@158.129.11.9) has quit (Read error: Connection reset by peer)
+2019-11-07 16:41:26	-->	Stan` (~yaaic@37.173.64.228) has joined #godotengine-devel
+2019-11-07 16:51:37	<--	Keetz (~Keetz@152.115.73.146) has quit (Ping timeout: 240 seconds)
+2019-11-07 16:52:07	RevoluPowered	GEOMETRIC PIVOT SUPPORT!!!!
+2019-11-07 16:52:09	RevoluPowered	https://usercontent.irccloud-cdn.com/file/VVc0C6lQ/image.png
+2019-11-07 16:52:12	RevoluPowered	:D
+2019-11-07 16:52:13	RevoluPowered	:D
+2019-11-07 16:52:53	iFire	whooooo
+2019-11-07 16:52:54	iFire	!
+2019-11-07 16:53:05	RevoluPowered	nom nom nom
+2019-11-07 16:53:06	RevoluPowered	:D
+2019-11-07 16:53:25	RevoluPowered	now to apply this to the animations
+2019-11-07 16:53:25	iFire	was new nodes required?
+2019-11-07 16:53:29	RevoluPowered	nope
+2019-11-07 16:53:30	RevoluPowered	:D
+2019-11-07 16:53:55	RevoluPowered	https://usercontent.irccloud-cdn.com/file/5LV7qKb9/image.png
+2019-11-07 16:53:57	RevoluPowered	just some math
+2019-11-07 16:54:06	RevoluPowered	inverse the children
+2019-11-07 16:54:10	RevoluPowered	pass it in during recursion
+2019-11-07 16:54:11	Groud	Is that a fbx fix ?
+2019-11-07 16:54:13	RevoluPowered	yes
+2019-11-07 16:54:37	Groud	ok
+2019-11-07 16:54:48	RevoluPowered	It gives us eventually maya and max support
+2019-11-07 16:54:59	RevoluPowered	geometric pivots are explicitly required to make 3ds max fbx files work
+2019-11-07 16:55:14	RevoluPowered	however we need geometric pivots even if we aren't supporting max
+2019-11-07 16:55:20	RevoluPowered	because some people move from max to maya
+2019-11-07 16:55:27	RevoluPowered	and this breaks if you don't have geometric pivots
+2019-11-07 16:55:35	RevoluPowered	as they are forever preserved in the file
+2019-11-07 16:55:37	--	est31 is now known as est
+2019-11-07 16:55:38	RevoluPowered	so you need both
+2019-11-07 16:59:32	Groud	sounds cool :)
+2019-11-07 16:59:56	-->	awsumpwner27 (~awsumpwne@140.193.225.196) has joined #godotengine-devel
+2019-11-07 17:00:34	RevoluPowered	very cool
+2019-11-07 17:00:40	RevoluPowered	it means we get all pivots
+2019-11-07 17:00:44	RevoluPowered	unity doesn't support them
+2019-11-07 17:00:45	RevoluPowered	all
+2019-11-07 17:00:49	RevoluPowered	nor does unreal engine
+2019-11-07 17:00:59	RevoluPowered	it supports some pivots
+2019-11-07 17:01:01	RevoluPowered	but not all of them
+2019-11-07 17:01:04	RevoluPowered	we do
+2019-11-07 17:01:17	Groud	oh ok
+2019-11-07 17:01:29	<--	mrcdk (~mrcdk@172-200-39-46.usuarios.innovasur.com) has quit (Read error: Connection reset by peer)
+2019-11-07 17:01:49	Groud	I mean, I don't know a lot about the 3D pipeline ^^
+2019-11-07 17:02:06	Groud	But every compatibility bit is good to take ^^
+2019-11-07 17:02:33	RevoluPowered	yeah, it will be a good step forward
+2019-11-07 17:06:00	<--	odino (~odino3@2a02:1205:c6a7:4fc0:906f:c91e:f444:ce06) has quit (Remote host closed the connection)
+2019-11-07 17:06:15	-->	odino (~odino3@2a02:1205:c6a7:4fc0:906f:c91e:f444:ce06) has joined #godotengine-devel
+2019-11-07 17:08:56	<--	odino (~odino3@2a02:1205:c6a7:4fc0:906f:c91e:f444:ce06) has quit (Client Quit)
+2019-11-07 17:48:22	iFire	There are so many critical bugs for 3.2
+2019-11-07 17:49:07	iFire	45 pages of unsorted bugs is a lot
+2019-11-07 17:51:53	iFire	Akien: do you think it would be helpful to add new tags like bug-3.2-a, bug-3.2-b, bug-3.2-c
+2019-11-07 17:55:21	-->	ignaloidas (~ignaloida@158.129.26.113) has joined #godotengine-devel
+2019-11-07 17:57:37	Akien	They're not all critical at all.
+2019-11-07 17:57:53	Akien	I haven't re-reviewed them yet to move the non critical ones to different milestones.
+2019-11-07 17:58:43	Akien	I'll probably get it down to 5-6 pages in coming days.
+2019-11-07 17:59:50	iFire	Akien: I guess 6 pages of unsorted important bugs is manageable
+2019-11-07 18:00:23	-->	aws27 (~awsumpwne@140.193.225.196) has joined #godotengine-devel
+2019-11-07 18:00:26	<--	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has quit (Quit: WeeChat 1.9.1)
+2019-11-07 18:01:57	Calinou	there's the "high priority" label already
+2019-11-07 18:02:07	Calinou	however, I don't have the knowledge to fix any of them :(
+2019-11-07 18:02:20	Calinou	all I could do is bisect some of the more pressing issues, but it takes a lot of time
+2019-11-08 09:09:17	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #godotengine-devel
+2019-11-08 09:09:17	--	Topic for #godotengine-devel is "Godot Engine Developers | Tasks up for grabs: https://github.com/godotengine/godot/issues | ML: https://listengine.tuxfamily.org/godotengine.org/devel | Logs: http://godot.eska.me/irc-logs | Can't join from Matrix? https://frama.link/matrix-irc-needreggednick"
+2019-11-08 09:09:17	--	Topic set by Akien (~Akien@godotengine/akien) on Sun, 23 Sep 2018 17:02:58
+2019-11-08 09:09:17	--	Channel #godotengine-devel: 156 nicks (1 op, 0 voices, 155 normals)
+2019-11-08 09:09:32	--	Channel created on Tue, 23 Jun 2015 16:46:41
+2019-11-08 09:36:40	<--	Stan` (~yaaic@37.166.120.179) has quit (Read error: Connection reset by peer)
+2019-11-08 09:39:57	-->	Stan` (~yaaic@37.166.120.179) has joined #godotengine-devel
+2019-11-08 09:46:04	RevoluPowered	Morning
+2019-11-08 09:48:37	RevoluPowered	@Calinou: I agree I just though really don't like the thought of a user losing all of their work irrecoverably if this bug is reintroduced again some other way. A cache somewhere would be fine if it wasn't in the project maybe. Maybe even just temp directory somewhere else on the OS to prevent users even being aware of it.
+2019-11-08 09:49:13	RevoluPowered	I was just concerned that .Vs completely loses all work irrecoverably
+2019-11-08 09:49:26	RevoluPowered	At a gamejam this might be a serious annoyance
+2019-11-08 09:50:31	RevoluPowered	Is .Vs a text format?
+2019-11-08 09:57:27	Akien	It's binary.
+2019-11-08 10:00:57	RevoluPowered	Ah
+2019-11-08 10:01:32	RevoluPowered	@Akien: what do you think about it?
+2019-11-08 10:02:08	Akien	About what?
+2019-11-08 10:02:32	RevoluPowered	If a write fails for a .Vs currently we lose the entire file
+2019-11-08 10:02:56	RevoluPowered	#32511
+2019-11-08 10:02:57	IssueBot	#32511: .vs Visual Script file corrupting to RSCC | https://git.io/JeaNH
+2019-11-08 10:05:03	Akien	Well there's no clear steps to reproduce so it's a bit difficult to fix. Most likely it was Windows being a PITA with file access and failing to write to a file due to it being in use somewhere.
+2019-11-08 10:05:30	Akien	Like first write adds header, antivirus goes paranoid and checks it, second write fails because antivirus stole the file handle.
+2019-11-08 10:06:38	Akien	As I commented there, the crash seen by iFire just means that we don't do enough error checking when loading potentially corrupted compressed files. This should be easy to fix.
+2019-11-08 10:06:57	Akien	But fixing whatever failed writing the .vs file's content is a bit more tricky without knowing how to reproduce it.
+2019-11-08 10:10:01	Nello	after disabling the 3D Editor and all Spatial nodes in "Manage Editor Features" the Scene panel still offers the option to create a 3D Scene. is this intended or an oversight that i should open an issue for?
+2019-11-08 10:10:48	RevoluPowered	Yah does sound like a Windows 'feature' haha
+2019-11-08 10:11:07	RevoluPowered	Its so cold right now in the UK
+2019-11-08 10:12:45	Akien	Nello: that's an oversight.
+2019-11-08 10:12:59	Nello	ok i'll open an issue
+2019-11-08 10:21:52	<--	pieq (~pieq@canonical/oem/pieq) has quit (Quit: Leaving)
+2019-11-08 10:45:17	-->	madmiraal (~Thunderbi@2001:984:a3d7:1:1ee:28fb:b591:4022) has joined #godotengine-devel
+2019-11-08 10:49:16	-->	thc202 (~thc202@unaffiliated/thc202) has joined #godotengine-devel
+2019-11-08 10:50:11	-->	endragor (~endragor@212.164.228.99) has joined #godotengine-devel
+2019-11-08 11:33:01	<--	madmiraal (~Thunderbi@2001:984:a3d7:1:1ee:28fb:b591:4022) has quit (Quit: madmiraal)
+2019-11-08 11:38:32	reduz	mooorning
+2019-11-08 11:45:11	RevoluPowered	morning @reduz
+2019-11-08 11:46:10	RevoluPowered	reduz: managed to get the geometric pivots working last night :)
+2019-11-08 11:46:27	RevoluPowered	so we have max support too
+2019-11-08 11:48:39	Mux213	jow reduz
+2019-11-08 11:48:53	reduz	RevoluPowered: oooh wow, even animations?
+2019-11-08 11:49:12	Mux213	Akien: I'm going to open up a new issue to further discuss this GLES2 MSAA implementation. The more I look at it, the more I draw the conclusion something is missing in it
+2019-11-08 11:49:20	RevoluPowered	animations are in the works :)
+2019-11-08 11:49:54	<--	balenol[m] (~balenolm]@152.118.150.211) has quit (Read error: Connection reset by peer)
+2019-11-08 11:50:12	RevoluPowered	same principle but just need to make 'matrix keyframes' in assimp then to get into assimp animation format need to extract new loc rot scale keyframes
+2019-11-08 11:50:23	RevoluPowered	and then should be okay
+2019-11-08 11:50:49	RevoluPowered	only downside to geometric pivots is I had to inverse the children nodes, not sure about the precision loss if multiple inverses done recursively
+2019-11-08 11:51:07	RevoluPowered	if its an issue then we need them in the engine but I can't see a major or minor one
+2019-11-08 11:53:49	RevoluPowered	https://usercontent.irccloud-cdn.com/file/BycRWV9M/image.png
+2019-11-08 11:53:56	RevoluPowered	these engine components use geometric pivots
+2019-11-08 11:54:14	RevoluPowered	before they were off centre
+2019-11-08 11:57:03	reduz	RevoluPowered: oh wow that looks great
+2019-11-08 11:57:13	RevoluPowered	yeah
+2019-11-08 11:57:24	RevoluPowered	the other nice thing
+2019-11-08 11:57:27	RevoluPowered	the pivots kind of show up
+2019-11-08 11:57:39	RevoluPowered	so you can see their origin is not centered to the mesh
+2019-11-08 11:57:52	RevoluPowered	so if you were going to animate in godot later
+2019-11-08 11:57:53	RevoluPowered	you can
+2019-11-08 11:58:22	RevoluPowered	oh strike that :L
+2019-11-08 11:58:27	RevoluPowered	geometric pivots broke that part
+2019-11-08 11:59:27	RevoluPowered	here is a before shot
+2019-11-08 11:59:30	RevoluPowered	https://usercontent.irccloud-cdn.com/file/6bKjGxcD/image.png
+2019-11-08 11:59:33	RevoluPowered	lol
+2019-11-08 12:01:08	-->	Cahaan (~Cahaan@109.129.13.76) has joined #godotengine-devel
+2019-11-08 12:01:21	reduz	heh wow
+2019-11-08 12:01:21	Mux213	Akien: neospark is awake so discussing with him further first, maybe join us on #xr
+2019-11-08 12:02:29	Mux213	actually reduz, maybe you can shed some light on this
+2019-11-08 12:02:59	Mux213	we're trying to figure out how MSAA is supposed to work in GLES2 seeing we're having some issues around the quest with this
+2019-11-08 12:04:19	Mux213	from what i understand when MSAA is turned on we create extra buffers for this. if I read the code right the idea is that we render into these buffers and then in post copy the data from the MSAA buffers into the normal framebuffer resolving the anti aliassing.
+2019-11-08 12:04:40	Mux213	the bit that I can't figure out is that I can find the copy in post, but I can't seem to find where we tell Godot to actually render into the multisample_fbo instead of the normal fbo, yet it works
+2019-11-08 12:08:48	Mux213	reduz: ^
+2019-11-08 12:09:01	-->	SonerSound (~SonerSoun@228.175.18.212.rev.vodafone.pt) has joined #godotengine-devel
+2019-11-08 12:09:07	Mux213	(just pinging you in case  you missed it :) )
+2019-11-08 12:09:12	SonerSound	Morning all!
+2019-11-08 12:10:05	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #godotengine-devel
+2019-11-08 12:15:12	reduz	Mux213: you should probably ask clayjohn who implemented it in that platform, but afaik MSAA is another framebuffer that is rendered to, which needs to be resolved to a non-MSAA at the end
+2019-11-08 12:18:57	Mux213	reduz: we already figured it out, and why it freaks out when we're using an external texture
+2019-11-08 12:20:26	<--	eska (MwzZpLVveT@gateway/shell/uberspace.de/x-jxamcotpvrehfjgw) has quit (Ping timeout: 246 seconds)
+2019-11-08 12:22:52	-->	Technipion (~Thunderbi@p200300F933D68B153CFBBFC84C66FFEC.dip0.t-ipconnect.de) has joined #godotengine-devel
+2019-11-08 12:41:34	-->	eska (10clkrN9Xd@gateway/shell/uberspace.de/x-xfokjbszvyjisnwb) has joined #godotengine-devel
+2019-11-08 13:23:09	<--	Technipion (~Thunderbi@p200300F933D68B153CFBBFC84C66FFEC.dip0.t-ipconnect.de) has quit (Remote host closed the connection)
+2019-11-08 13:23:09	-->	Yeldham (~michael@138.219.238.102.newlifeinformatica.com.br) has joined #godotengine-devel
+2019-11-08 13:23:25	-->	Technipion (~Thunderbi@p200300F933D68B153CFBBFC84C66FFEC.dip0.t-ipconnect.de) has joined #godotengine-devel
+2019-11-08 13:27:54	-->	dddddd (~dddddd@unaffiliated/dddddd) has joined #godotengine-devel
+2019-11-08 13:38:59	<--	chaosus89 (d58d8110@gateway/web/cgi-irc/kiwiirc.com/ip.213.141.129.16) has quit (Remote host closed the connection)
+2019-11-08 13:40:01	bojidar_bg	reduz: sorry for pinging you, I was wondering if https://github.com/godotengine/godot/issues/33230 needs fixing, or is it too much of a performance hit to have a stable sort order on YSorted nodes with equal Y coordinates
+2019-11-08 13:40:54	reduz	bojidar_bg: yeah i guess that should be fixed, maybe comparing X, then Y?
+2019-11-08 13:41:20	reduz	bojidar_bg: i think its a more memory bound operation than CPU, so comparing X and Y should have no cost imo. You can make a small benchmark to test if you want I guess
+2019-11-08 13:41:34	reduz	bojidar_bg: sorry I ment comparing Y, then X if they are the same
+2019-11-08 13:52:05	bojidar_bg	yeah, that would be a good solution
+2019-11-08 13:52:34	bojidar_bg	reduz: maybe add custom sorting axis at the same time? ^^
+2019-11-08 13:53:07	reduz	bojidar_bg: i think that could workm but then that means you would need to convert the sort function to a template
+2019-11-08 13:53:09	<--	endragor (~endragor@212.164.228.99) has quit (Remote host closed the connection)
+2019-11-08 13:54:09	reduz	bojidar_bg: but I would do something like this only if we see there is a significant performance hit to adding X
+2019-11-08 13:54:34	reduz	otherwise it makes no sense imo
+2019-11-08 14:08:37	bojidar_bg	alright
+2019-11-08 14:56:21	bojidar_bg	bugsquad: I'm thinking to merge #31378 and #32205 into #27136, WDYT?
+2019-11-08 14:56:23	IssueBot	#31378: Memory leak if define class name and use it inside the same script | https://git.io/JeV30
+2019-11-08 14:56:23	IssueBot	#32205: GDScript : class circular reference : class as method parameter signature | https://git.io/JeV3E
+2019-11-08 14:56:23	IssueBot	#27136: Classes cross (recursive) references lead to "script could not be loaded" | https://git.io/JeV3u
+2019-11-08 15:20:27	-->	MoosePrime (~moose@207.44.22.117) has joined #godotengine-devel
+2019-11-08 15:22:57	<--	Technipion (~Thunderbi@p200300F933D68B153CFBBFC84C66FFEC.dip0.t-ipconnect.de) has quit (Remote host closed the connection)
+2019-11-08 15:23:15	-->	Technipion (~Thunderbi@p200300F933D68B153CFBBFC84C66FFEC.dip0.t-ipconnect.de) has joined #godotengine-devel
+2019-11-08 15:32:03	-->	Technipion2 (~Thunderbi@p200300F933D68BF43CFBBFC84C66FFEC.dip0.t-ipconnect.de) has joined #godotengine-devel
+2019-11-08 15:33:38	<--	Technipion (~Thunderbi@p200300F933D68B153CFBBFC84C66FFEC.dip0.t-ipconnect.de) has quit (Ping timeout: 245 seconds)
+2019-11-08 15:33:38	--	Technipion2 is now known as Technipion
+2019-11-08 16:01:58	RevoluPowered	for #27641 could we instead implement this for vulkan only and not support this in the gles2 renderer?
+2019-11-08 16:01:58	RevoluPowered	Just a thought you probably don't want 8 vertex weights on gles2 performance wise
+2019-11-08 16:01:58	IssueBot	#27641: [WIP] Enable 8_WEIGHTS for 8 bone influences. | https://git.io/fjI9E
+2019-11-08 16:07:41	-->	chaosus89 (d58d8110@gateway/web/cgi-irc/kiwiirc.com/ip.213.141.129.16) has joined #godotengine-devel
+2019-11-08 16:09:44	<--	Keetz (~Keetz@152.115.73.146) has quit (Ping timeout: 276 seconds)
+2019-11-08 16:13:47	reduz	I know I won't understand anything when I come back in a month, so I am working on a roadmao
+2019-11-08 16:13:55	reduz	roadmap
+2019-11-08 16:17:55	-->	bomb (~bomb@gateway/tor-sasl/bomb) has joined #godotengine-devel
+2019-11-08 16:22:12	<--	chaosus89 (d58d8110@gateway/web/cgi-irc/kiwiirc.com/ip.213.141.129.16) has quit (Remote host closed the connection)
+2019-11-08 16:32:02	iFire	reduz: Do you still have the document Clayjohn shared?
+2019-11-08 16:33:36	reduz	iFire: yeah, althought what I am writing is for my immediate tasks I left pending after I come back
+2019-11-08 16:34:40	iFire	Ah, that's important. reduz needs to dump state so he can review his work when he gets back from vacation. :D
+2019-11-08 16:37:06	iFire	pronouns are hard
+2019-11-08 16:38:02	jimbzy	o/
+2019-11-08 16:38:47	reduz	iFire: pretty much :D
+2019-11-08 16:46:48	-->	biliogadafr (~bilio@46.53.248.20) has joined #godotengine-devel
+2019-11-08 17:19:25	-->	aws27 (~awsumpwne@wnpgmb0805w-ad05-202-9.dynamic.bellmts.net) has joined #godotengine-devel
+2019-11-08 17:25:47	<--	Stan` (~yaaic@37.166.120.179) has quit (Ping timeout: 276 seconds)
+2019-11-08 17:28:21	<--	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has quit (Quit: WeeChat 1.9.1)
+2019-11-08 17:30:08	-->	endragor (~endragor@static.90.189.150.229.sinor.ru) has joined #godotengine-devel
+2019-11-08 17:31:58	-->	chaosus89 (d58d8110@gateway/web/cgi-irc/kiwiirc.com/ip.213.141.129.16) has joined #godotengine-devel
+2019-11-08 17:33:17	-->	Stan` (~yaaic@37.166.120.179) has joined #godotengine-devel
+2019-11-08 17:34:50	<--	endragor (~endragor@static.90.189.150.229.sinor.ru) has quit (Remote host closed the connection)
+2019-11-11 09:32:18	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #godotengine-devel
+2019-11-11 09:32:18	--	Topic for #godotengine-devel is "Godot Engine Developers | Tasks up for grabs: https://github.com/godotengine/godot/issues | ML: https://listengine.tuxfamily.org/godotengine.org/devel | Logs: http://godot.eska.me/irc-logs | Can't join from Matrix? https://frama.link/matrix-irc-needreggednick"
+2019-11-11 09:32:18	--	Topic set by Akien (~Akien@godotengine/akien) on Sun, 23 Sep 2018 17:02:58
+2019-11-11 09:32:18	--	Channel #godotengine-devel: 156 nicks (1 op, 0 voices, 155 normals)
+2019-11-11 09:32:31	--	Channel created on Tue, 23 Jun 2015 16:46:41
+2019-11-11 09:38:10	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #godotengine-devel
+2019-11-11 09:52:31	larpon	mornin'
+2019-11-11 09:55:28	<--	bomb (~bomb@gateway/tor-sasl/bomb) has quit (Ping timeout: 260 seconds)
+2019-11-11 10:06:18	Calinou	morning :)
+2019-11-11 10:08:22	-->	thc202 (~thc202@unaffiliated/thc202) has joined #godotengine-devel
+2019-11-11 10:21:09	<--	pieq (~pieq@canonical/oem/pieq) has quit (Quit: Leaving)
+2019-11-11 10:21:40	RevoluPowered	morning
+2019-11-11 10:26:04	Calinou	working on updating the changelog… it's been 6 weeks since I did it, so it looks like it'll take me a while :)
+2019-11-11 10:28:14	RevoluPowered	working on my cup of coffee then into fbx again for another push
+2019-11-11 10:28:27	RevoluPowered	got bugs to fix which should not be too much hassle
+2019-11-11 10:29:55	RevoluPowered	Can #33399 be updated to 3.2 please? pivots are mandatory part of fbx support for 3.2
+2019-11-11 10:29:56	IssueBot	#33399: [WIP] FBX pivot support  | https://git.io/Jeazv
+2019-11-11 10:30:23	RevoluPowered	otherwise we only have blender fbx support
+2019-11-11 10:30:30	RevoluPowered	for 3.2
+2019-11-11 10:37:21	RevoluPowered	akien: will say for definite today we shall make time to get a blog post for you :)
+2019-11-11 10:44:21	-->	Technipion (~Thunderbi@p200300F933D68B7611C1F19178922B0B.dip0.t-ipconnect.de) has joined #godotengine-devel
+2019-11-11 10:51:06	Akien	RevoluPowered: It's WIP and we're in release freeze, so it's coming too late.
+2019-11-11 10:51:18	RevoluPowered	ah okay
+2019-11-11 10:51:39	Akien	It can still be cherry-picked for a 3.2.x release eventually.
+2019-11-11 10:51:46	RevoluPowered	cool
+2019-11-11 10:51:55	RevoluPowered	yeah plus 4.0 master is coming soon
+2019-11-11 10:51:59	RevoluPowered	im excited for that
+2019-11-11 10:53:28	Calinou	anyone with GDScript parser knowledge can check https://github.com/godotengine/godot/issues/32759 ?
+2019-11-11 10:53:39	Calinou	I don't know the answer to his question
+2019-11-11 11:20:14	-->	chaosus89 (d58d8110@gateway/web/cgi-irc/kiwiirc.com/ip.213.141.129.16) has joined #godotengine-devel
+2019-11-11 11:20:19	Calinou	done! https://gist.github.com/Calinou/49aefe52ce8f67ffa3f743932123d14f
+2019-11-11 11:21:12	<--	Erops (~Erops@126.ip-192-99-144.net) has quit (Quit: ZNC 1.7.4 - https://znc.in)
+2019-11-11 11:40:04	fales[m]	aargghhh... I hate link-time errors 😢
+2019-11-11 11:40:32	fales[m]	morning everyone :)
+2019-11-11 12:20:26	StraToN	Morning !
+2019-11-11 12:28:43	-->	ignaloidas (~ignaloida@193.219.160.34) has joined #godotengine-devel
+2019-11-11 12:59:29	<--	endragor (~endragor@212.164.228.99) has quit (Remote host closed the connection)
+2019-11-11 13:01:01	-->	Yeldham (~michael@138.219.238.110.newlifeinformatica.com.br) has joined #godotengine-devel
+2019-11-11 13:48:47	-->	madmiraal (~Thunderbi@2001:984:a3d7:1:4c97:8ddf:f948:cabf) has joined #godotengine-devel
+2019-11-11 13:50:40	<--	puthre (~puthre@cpc122332-bmly11-2-0-cust84.2-3.cable.virginm.net) has quit (Remote host closed the connection)
+2019-11-11 13:57:19	-->	endragor (~endragor@static.90.189.150.229.sinor.ru) has joined #godotengine-devel
+2019-11-11 14:00:48	<--	Keetz (~Keetz@152.115.73.146) has quit (Remote host closed the connection)
+2019-11-11 14:01:39	<--	endragor (~endragor@static.90.189.150.229.sinor.ru) has quit (Ping timeout: 246 seconds)
+2019-11-11 14:04:46	<--	ignaloidas (~ignaloida@193.219.160.34) has quit (Remote host closed the connection)
+2019-11-11 14:17:13	-->	ignaloidas (~ignaloida@158.129.26.113) has joined #godotengine-devel
+2019-11-11 14:20:27	-->	aws27 (~awsumpwne@wnpgmb0805w-ad05-202-9.dynamic.bellmts.net) has joined #godotengine-devel
+2019-11-11 14:38:35	jimbzy	o/
+2019-11-11 14:47:53	-->	Keetz (~Keetz@152.115.73.146) has joined #godotengine-devel
+2019-11-11 14:55:06	<--	madmiraal (~Thunderbi@2001:984:a3d7:1:4c97:8ddf:f948:cabf) has quit (Quit: madmiraal)
+2019-11-11 14:55:52	<--	aws27 (~awsumpwne@wnpgmb0805w-ad05-202-9.dynamic.bellmts.net) has quit (Read error: Connection reset by peer)
+2019-11-11 15:00:35	Akien	chaosus89: This is fixed I guess? #10751
+2019-11-11 15:00:36	IssueBot	#10751: Shader language: implement arrays support | https://git.io/JewcW
+2019-11-11 15:00:56	chaosus89	yeah
+2019-11-11 15:01:07	chaosus89	ah
+2019-11-11 15:01:09	chaosus89	no
+2019-11-11 15:01:16	chaosus89	uniform array is not implemented
+2019-11-11 15:02:55	Akien	And do we plan to implement them? The request was quite broad for any kind of arrays, so it seems we're well served in 3.2 already.
+2019-11-11 15:04:33	chaosus89	well, until 4.0 it is not possible I think
+2019-11-11 15:05:42	chaosus89	new methods should be implemented to renderer
+2019-11-11 15:06:55	Akien	Maybe it's better to close this broad issue as fixed in 3.2, and open a new one specific for uniform arrays?
+2019-11-11 15:07:25	chaosus89	of course
+2019-11-11 15:08:33	chaosus89	this feature is supported only on gles3 and the reduz actively working on vulkan renderer, so I did not implement it in 3.2
+2019-11-11 15:09:56	ignaloidas	Akien: more publicity on fediverse(mastodon, pleroma, etc.) would be nice for godot. Godot's account is quite silent on mastodon.gamedev.space And maybe there is interest to transfer the account to foss.technology which is supposed to be an specialized instance for FOSS projects
+2019-11-11 15:11:00	-->	MoosePrime (~moose@207.44.22.117) has joined #godotengine-devel
+2019-11-11 15:11:34	chaosus89	@Akien I think, also #32751 should be merged before closing this issue (or not)
+2019-11-11 15:11:35	IssueBot	#32751: Implemented global const array to shaders | https://git.io/Jelat
+2019-11-11 15:16:05	-->	madmiraal (~Thunderbi@2001:984:a3d7:1:4c97:8ddf:f948:cabf) has joined #godotengine-devel
+2019-11-11 15:19:41	Akien	ignaloidas: That instance only seems to exist since 5 days? I'd prefer not doing instance-hopping unless there's a good reason to, and a guaranteed good federation on the new instance.
+2019-11-11 15:20:01	Akien	The gamedev.space instance is gamedev specific, so it's also quite good for @godotengine.
+2019-11-11 15:20:13	Akien	And it's all federated anyway so I don't see much reason to move things around yet.
+2019-11-11 15:20:30	Akien	But yeah, it needs some more content.
+2019-11-11 15:21:09	Akien	I kind of lost interest in mastodon since most content that I see in my timeline is actually stuff that gets reshared from Twitter and that I already saw... But it's a chicken and egg problem.
+2019-11-11 15:23:07	ignaloidas	Ah, well I started to find people only on there to fight that problem :)
+2019-11-11 15:31:38	-->	Technipion2 (~Thunderbi@p200300F933D68B0E11C1F19178922B0B.dip0.t-ipconnect.de) has joined #godotengine-devel
+2019-11-11 15:31:57	-->	aws27 (~awsumpwne@wnpgmb014uw-ad04-202-9.dynamic.bellmts.net) has joined #godotengine-devel
+2019-11-11 15:33:01	<--	Technipion (~Thunderbi@p200300F933D68B7611C1F19178922B0B.dip0.t-ipconnect.de) has quit (Ping timeout: 250 seconds)
+2019-11-11 15:33:02	--	Technipion2 is now known as Technipion
+2019-11-11 15:42:20	<--	madmiraal (~Thunderbi@2001:984:a3d7:1:4c97:8ddf:f948:cabf) has quit (Quit: madmiraal)
+2019-11-11 15:49:05	<--	Technipion (~Thunderbi@p200300F933D68B0E11C1F19178922B0B.dip0.t-ipconnect.de) has quit (Quit: Technipion)
+2019-11-11 15:52:58	-->	dddddd (~dddddd@unaffiliated/dddddd) has joined #godotengine-devel
+2019-11-11 16:00:23	<--	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has quit (Quit: WeeChat 1.9.1)
+2019-11-11 16:11:58	<--	thc202 (~thc202@unaffiliated/thc202) has quit (Ping timeout: 245 seconds)
+2019-11-11 16:12:16	-->	thc202 (~thc202@unaffiliated/thc202) has joined #godotengine-devel
+2019-11-11 16:22:06	<--	mrcdk (~mrcdk@172-200-39-46.usuarios.innovasur.com) has quit (Read error: Connection reset by peer)
+2019-11-11 16:27:09	iFire	Hi is anyone awake?
+2019-11-11 16:29:10	iFire	I've been working on a polygon mesh and polygin path plugin with HungryProton. We're revising the code. The new design is to create a bunch of CSG meshes, apply all operation, get the resulting mesh, convex decomposition, -> for each piece of mesh, run it through a lib to tell if the point is inside or not. We're not sure how to tell if the point is inside or not. One approach is to take one of the points and have it be a distance of n away from
+2019-11-11 16:29:10	iFire	 the point to implement the is point is inside the mesh. Is there an easier way?
+2019-11-11 16:30:39	iFire	found it. https://docs.godotengine.org/en/latest/classes/class_geometry.html#class-geometry-method-segment-intersects-convex
+2019-11-11 16:38:20	iFire	https://github.com/godotengine/godot/blob/master/scene/resources/convex_polygon_shape.cpp#L35 This gives us the lines of the polygons.
+2019-11-11 16:38:50	<--	Keetz (~Keetz@152.115.73.146) has quit (Ping timeout: 268 seconds)
+2019-11-11 16:47:25	iFire	the other way is a cast_motion cast_ray
+2019-11-11 17:09:22	iFire	https://stackoverflow.com/questions/38535430/how-to-check-if-point-belongs-to-convexshape
+2019-11-11 17:35:28	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #godotengine-devel
+2019-11-11 17:35:28	--	Topic for #godotengine-devel is "Godot Engine Developers | Tasks up for grabs: https://github.com/godotengine/godot/issues | ML: https://listengine.tuxfamily.org/godotengine.org/devel | Logs: http://godot.eska.me/irc-logs | Can't join from Matrix? https://frama.link/matrix-irc-needreggednick"
+2019-11-11 17:35:28	--	Topic set by Akien (~Akien@godotengine/akien) on Sun, 23 Sep 2018 17:02:58
+2019-11-11 17:35:28	--	Channel #godotengine-devel: 156 nicks (1 op, 0 voices, 155 normals)
+2019-11-11 17:35:41	--	Channel created on Tue, 23 Jun 2015 16:46:41
+2019-11-11 17:40:36	<--	Stan` (~yaaic@37.164.60.169) has quit (Ping timeout: 265 seconds)
+2019-11-11 17:42:44	-->	Stan` (~yaaic@37.164.73.128) has joined #godotengine-devel
+2019-11-11 17:48:36	iFire	I guess I'm looking for is_point_in_convex() as a geometry function
+2019-11-12 09:16:51	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #godotengine-devel
+2019-11-12 09:16:51	--	Topic for #godotengine-devel is "Godot Engine Developers | Tasks up for grabs: https://github.com/godotengine/godot/issues | ML: https://listengine.tuxfamily.org/godotengine.org/devel | Logs: http://godot.eska.me/irc-logs | Can't join from Matrix? https://frama.link/matrix-irc-needreggednick"
+2019-11-12 09:16:51	--	Topic set by Akien (~Akien@godotengine/akien) on Sun, 23 Sep 2018 17:02:58
+2019-11-12 09:16:51	--	Channel #godotengine-devel: 150 nicks (1 op, 0 voices, 149 normals)
+2019-11-12 09:17:05	--	Channel created on Tue, 23 Jun 2015 16:46:41
+2019-11-12 09:46:27	StraToN	Morning!
+2019-11-12 09:50:25	-->	larpon (~larpon@193.106.166.119) has joined #godotengine-devel
+2019-11-12 10:19:43	<--	pieq (~pieq@canonical/oem/pieq) has quit (Quit: Leaving)
+2019-11-12 10:24:49	-->	thc202 (~thc202@unaffiliated/thc202) has joined #godotengine-devel
+2019-11-12 10:38:00	<--	est31 (~quassel@gateway/tor-sasl/est31) has quit (Remote host closed the connection)
+2019-11-12 10:39:33	-->	est31 (~quassel@gateway/tor-sasl/est31) has joined #godotengine-devel
+2019-11-12 11:20:21	-->	Yeldham (~michael@138.219.238.110.newlifeinformatica.com.br) has joined #godotengine-devel
+2019-11-12 11:51:39	<--	mrcdk (~mrcdk@172-200-39-46.usuarios.innovasur.com) has quit (Ping timeout: 240 seconds)
+2019-11-12 13:00:11	-->	dddddd (~dddddd@unaffiliated/dddddd) has joined #godotengine-devel
+2019-11-12 13:04:35	iFire	marstaik: post it in a wip pr, if you want I can poke at it
+2019-11-12 13:26:31	-->	aws27 (~awsumpwne@wnpgmb0805w-ad05-202-9.dynamic.bellmts.net) has joined #godotengine-devel
+2019-11-12 13:28:39	-->	biliogadafr (~bilio@46.53.248.20) has joined #godotengine-devel
+2019-11-12 13:38:46	<--	krystof[m] (krystofmat@gateway/shell/matrix.org/x-atgforctvznuieso) has quit (Remote host closed the connection)
+2019-11-12 13:38:47	<--	pixeltrik[m] (pixeltrikm@gateway/shell/matrix.org/x-odfvmevgfcfgpaxb) has quit (Remote host closed the connection)
+2019-11-12 13:38:48	<--	pd09041999[m] (pd09041999@gateway/shell/matrix.org/x-wslxlhmiebheleoi) has quit (Write error: Connection reset by peer)
+2019-11-12 13:38:49	<--	RandomShaper[m] (randomshap@gateway/shell/matrix.org/x-nuelfnfqeqptfixd) has quit (Read error: Connection reset by peer)
+2019-11-12 13:38:50	<--	flo-k[m] (flo-kmatri@gateway/shell/matrix.org/x-qbjvrdbxipqpnacx) has quit (Remote host closed the connection)
+2019-11-12 13:38:53	<--	ProNoobWarning (pronoobwar@gateway/shell/matrix.org/x-afmwxonmrzbosdxl) has quit (Write error: Connection reset by peer)
+2019-11-12 13:38:55	<--	atorresm (atorresmma@gateway/shell/matrix.org/x-glaojkewcdudcdxs) has quit (Remote host closed the connection)
+2019-11-12 13:38:55	<--	lertsenem (lertsenemm@gateway/shell/matrix.org/x-xryffdbqqghdfzuv) has quit (Read error: Connection reset by peer)
+2019-11-12 13:38:56	<--	ajweeks[m] (ajweeksmat@gateway/shell/matrix.org/x-zkvwngepnueuiprc) has quit (Write error: Connection reset by peer)
+2019-11-12 13:38:56	<--	arjenvanstaaldui (arjenvanst@gateway/shell/matrix.org/x-bdxxvmivjnvtsaxb) has quit (Write error: Connection reset by peer)
+2019-11-12 13:38:57	<--	karroffel_irc (karroffelc@gateway/shell/matrix.org/x-uzagmnuwfsyfvksg) has quit (Read error: Connection reset by peer)
+2019-11-12 13:38:59	<--	sudoreboot[m] (sudorebo2@gateway/shell/matrix.org/x-lldfesjwaqmvgpxb) has quit (Read error: Connection reset by peer)
+2019-11-12 13:38:59	<--	ainasoler[m] (ainasolerm@gateway/shell/matrix.org/x-iojgaxikhlhonoxm) has quit (Read error: Connection reset by peer)
+2019-11-12 13:39:01	<--	mo7sen[m] (mo7senmatr@gateway/shell/matrix.org/x-mtfpamegrapmkodi) has quit (Remote host closed the connection)
+2019-11-12 13:39:02	<--	Akien_ (akienmatri@gateway/shell/matrix.org/x-pzuwpnlqdotvxvbi) has quit (Remote host closed the connection)
+2019-11-12 13:39:04	<--	bruvzg[m] (bruvzgmatr@gateway/shell/matrix.org/x-rlynppdmtrpeozes) has quit (Write error: Connection reset by peer)
+2019-11-12 13:39:05	<--	PJB3005[m] (pjb3005mat@gateway/shell/matrix.org/x-lurkwwmmypbgbdqe) has quit (Read error: Connection reset by peer)
+2019-11-12 13:39:05	<--	andnovar[m] (andnovarub@gateway/shell/matrix.org/x-zhzxfnkdcljfoclo) has quit (Read error: Connection reset by peer)
+2019-11-12 13:39:05	<--	bojidar_bg (bojidar-bg@gateway/shell/matrix.org/x-vzgdvdfszpjmmhin) has quit (Remote host closed the connection)
+2019-11-12 13:39:05	<--	imadlo (czlowiekim@gateway/shell/matrix.org/x-yaoyujkoazkcxzqd) has quit (Remote host closed the connection)
+2019-11-12 13:39:06	<--	iamactuallycthul (iamactuall@gateway/shell/matrix.org/x-lsdevljvuldanwjv) has quit (Read error: Connection reset by peer)
+2019-11-12 13:39:06	<--	toger5[m] (toger5matr@gateway/shell/matrix.org/x-crhdsegxethqhiup) has quit (Remote host closed the connection)
+2019-11-12 13:39:07	<--	keksdev[m] (keksdevmat@gateway/shell/matrix.org/x-tbnuhptpbobbsicg) has quit (Read error: Connection reset by peer)
+2019-11-12 13:39:07	<--	geequlim[m] (geequlimma@gateway/shell/matrix.org/x-achyylccbyzucavf) has quit (Read error: Connection reset by peer)
+2019-11-12 13:39:07	<--	minraws (swarnimmat@gateway/shell/matrix.org/x-fcyfocjrbimfijmq) has quit (Read error: Connection reset by peer)
+2019-11-12 13:39:07	<--	neospark314[m] (neospark31@gateway/shell/matrix.org/x-kvrdmlbnxmfvlwiw) has quit (Read error: Connection reset by peer)
+2019-11-12 13:39:08	<--	Ruka2177 (ruka2177ma@gateway/shell/matrix.org/x-nebjstwldepijkli) has quit (Remote host closed the connection)
+2019-11-12 13:39:09	<--	jwestman[m] (flyingpimo@gateway/shell/matrix.org/x-cojgcrvymmzcyxjd) has quit (Read error: Connection reset by peer)
+2019-11-12 13:39:09	<--	Vortai[m] (vortaimatr@gateway/shell/matrix.org/x-yayoteevlmgkdfqo) has quit (Remote host closed the connection)
+2019-11-12 13:39:09	<--	djiamnot[m] (djiamnotma@gateway/shell/matrix.org/x-hliwucwoejmljbsv) has quit (Remote host closed the connection)
+2019-11-12 13:39:11	<--	wscp (wscpmatrix@gateway/shell/matrix.org/x-fjbdaqprpsfkycvy) has quit (Remote host closed the connection)
+2019-11-12 13:39:12	<--	Mux213 (mux213matr@gateway/shell/matrix.org/x-bosuhmdvpikslvux) has quit (Remote host closed the connection)
+2019-11-12 13:39:13	<--	thenameipicked[m (thenameipi@gateway/shell/matrix.org/x-rhhwuhohzyugpbam) has quit (Read error: Connection reset by peer)
+2019-11-12 13:39:13	<--	Valentactive[m] (valentacti@gateway/shell/matrix.org/x-afvltcrukrwzneim) has quit (Write error: Connection reset by peer)
+2019-11-12 13:39:14	<--	supagu[m] (supagumatr@gateway/shell/matrix.org/x-wbkpxeojxblrkefy) has quit (Remote host closed the connection)
+2019-11-12 13:39:14	<--	sakerdot[m] (sakerdotma@gateway/shell/matrix.org/x-wmjtzscmlhxfsiri) has quit (Remote host closed the connection)
+2019-11-12 13:39:15	<--	IronicallySerio (ironically@gateway/shell/matrix.org/x-waxgtclhyrrtlkzz) has quit (Remote host closed the connection)
+2019-11-12 13:39:15	<--	sudorebootnowsud (sudoreboot@gateway/shell/matrix.org/x-sjoqgdfpriuvbott) has quit (Read error: Connection reset by peer)
+2019-11-12 13:39:15	<--	DestinyGamer (destinygam@gateway/shell/matrix.org/x-ptcexzgpeyoujkab) has quit (Remote host closed the connection)
+2019-11-12 13:39:15	<--	BenMcLean (benmcleanm@gateway/shell/matrix.org/x-tadklhtclhelnjhv) has quit (Remote host closed the connection)
+2019-11-12 13:39:15	<--	anoa (andrewmamo@gateway/shell/matrix.org/x-fomefznkmsfwrtcf) has quit (Read error: Connection reset by peer)
+2019-11-12 13:39:16	<--	TMM (tmmmatrixo@fsf/member/pdpc.professional.tmm) has quit (Read error: Connection reset by peer)
+2019-11-12 13:39:17	<--	clayjohn (clayjohnma@gateway/shell/matrix.org/x-kpnumaaoufcarvtr) has quit (Read error: Connection reset by peer)
+2019-11-12 13:39:18	<--	wmww (wmwwmatrix@gateway/shell/matrix.org/x-nucgwwutfbatxbad) has quit (Read error: Connection reset by peer)
+2019-11-12 13:39:19	<--	Saracen[m] (saracenmat@gateway/shell/matrix.org/x-pznglvkpvhsuthvp) has quit (Read error: Connection reset by peer)
+2019-11-12 13:39:19	<--	Hinsbart[m] (hinsbartma@gateway/shell/matrix.org/x-hlcllaelntyqocad) has quit (Read error: Connection reset by peer)
+2019-11-12 13:39:19	<--	timslippy[m] (timslippyl@gateway/shell/matrix.org/x-rxsppszkhipoigyk) has quit (Read error: Connection reset by peer)
+2019-11-12 13:39:19	<--	paulloz[m] (paullozliv@gateway/shell/matrix.org/x-agezmlonhgadkcau) has quit (Read error: Connection reset by peer)
+2019-11-12 13:39:20	<--	Xrayez[m] (xrayezmatr@gateway/shell/matrix.org/x-iqlisoulyftmafti) has quit (Remote host closed the connection)
+2019-11-12 13:39:21	<--	frazerclews[m] (frazerclew@gateway/shell/matrix.org/x-rfopbtmaxbjvcoht) has quit (Remote host closed the connection)
+2019-11-12 13:39:22	<--	Alexwbc[m] (alexwbcmat@gateway/shell/matrix.org/x-zxcsvskbwcsxuimy) has quit (Write error: Connection reset by peer)
+2019-11-12 13:39:22	<--	Przmk[m] (soifmatrix@gateway/shell/matrix.org/x-igyrzmjckrkelzas) has quit (Write error: Connection reset by peer)
+2019-11-12 13:39:22	<--	theduriel[m] (thedurielm@gateway/shell/matrix.org/x-vcbnilqigsmkclos) has quit (Remote host closed the connection)
+2019-11-12 13:39:22	-->	jamm (~jam@i219-167-191-92.s42.a013.ap.plala.or.jp) has joined #godotengine-devel
+2019-11-12 13:39:23	<--	nldvos[m] (nldvosmatr@gateway/shell/matrix.org/x-hnvfxexbyghgcnjn) has quit (Read error: Connection reset by peer)
+2019-11-12 13:39:23	<--	moiman100 (moiman100m@gateway/shell/matrix.org/x-zozbhlnpmiqcoldw) has quit (Read error: Connection reset by peer)
+2019-11-12 13:39:24	<--	HER0_01 (her0matrix@gateway/shell/matrix.org/x-hfjobrzhxpiyozpu) has quit (Write error: Connection reset by peer)
+2019-11-12 13:39:24	<--	azagaya (pablofonov@gateway/shell/matrix.org/x-mwpixkggltflskll) has quit (Read error: Connection reset by peer)
+2019-11-12 13:39:24	<--	emmetpdx (emmetoneil@gateway/shell/matrix.org/x-sglpchieqqobzdbp) has quit (Read error: Connection reset by peer)
+2019-11-12 13:39:24	<--	rxlecky[m] (rxlmatrixo@gateway/shell/matrix.org/x-nocsufdefaswciwj) has quit (Read error: Connection reset by peer)
+2019-11-12 13:39:24	<--	fales[m] (falesmatri@gateway/shell/matrix.org/x-wvxzsfcrtpwsicgb) has quit (Read error: Connection reset by peer)
+2019-11-12 13:39:24	<--	anthyg[m] (anthygamor@gateway/shell/matrix.org/x-cjcxnisauakyhaoh) has quit (Read error: Connection reset by peer)
+2019-11-12 13:39:24	<--	biodude[m] (biodudemat@gateway/shell/matrix.org/x-jzwoaiijmwfryxdk) has quit (Remote host closed the connection)
+2019-11-12 13:39:25	<--	Paulb23 (paulb23mat@gateway/shell/matrix.org/x-ruftyvedequureba) has quit (Read error: Connection reset by peer)
+2019-11-12 13:39:25	<--	dreamsComeTrue[m (dreamscome@gateway/shell/matrix.org/x-wfryaeaxhjukacfz) has quit (Read error: Connection reset by peer)
+2019-11-12 13:39:25	<--	pablodp606[m] (pablodp606@gateway/shell/matrix.org/x-ilneaerqjcxrnfjj) has quit (Remote host closed the connection)
+2019-11-12 13:39:25	<--	kobewi[m] (kobewimatr@gateway/shell/matrix.org/x-ndwryudvxcpgyzfk) has quit (Remote host closed the connection)
+2019-11-12 13:39:26	<--	jamm (~jam@i219-167-191-92.s42.a013.ap.plala.or.jp) has quit (Changing host)
+2019-11-12 13:39:26	-->	jamm (~jam@unaffiliated/jamm) has joined #godotengine-devel
+2019-11-12 13:39:30	<--	nilsirl[m] (nilsirlmat@gateway/shell/matrix.org/x-uzqofwqapkzeotmj) has quit (Write error: Connection reset by peer)
+2019-11-12 13:39:30	<--	collegeprepkid[m (collegepre@gateway/shell/matrix.org/x-ipaqyvzuohmgfllt) has quit (Remote host closed the connection)
+2019-11-12 13:39:31	<--	KidRigger[m] (kidriggerm@gateway/shell/matrix.org/x-aaqnnsfxpvccztsg) has quit (Remote host closed the connection)
+2019-11-12 13:39:31	<--	eoinoneill[m] (theyokaima@gateway/shell/matrix.org/x-xnrzwrciitaezqyi) has quit (Remote host closed the connection)
+2019-11-12 13:39:31	<--	JeppeZapp[m] (jzappmatri@gateway/shell/matrix.org/x-lkvhoswsdkdonyje) has quit (Remote host closed the connection)
+2019-11-12 13:39:31	<--	kubecz3k[m] (kubecz3kma@gateway/shell/matrix.org/x-rfnuvncoihknkqyw) has quit (Remote host closed the connection)
+2019-11-12 13:39:32	<--	qbieshay (qbieshayma@gateway/shell/matrix.org/x-lzjwcewxfqdxclmy) has quit (Remote host closed the connection)
+2019-11-12 13:39:32	<--	Groud (groudmatri@gateway/shell/matrix.org/x-aulhxoxgakxjikqv) has quit (Remote host closed the connection)
+2019-11-12 13:50:51	<--	endragor (~endragor@212.164.228.99) has quit (Remote host closed the connection)
+2019-11-12 14:08:43	-->	shafoo (estelleros@gateway/shell/matrix.org/x-yowtaeirscvyqdel) has joined #godotengine-devel
+2019-11-12 14:10:08	-->	TMM (tmmmatrixo@fsf/member/pdpc.professional.tmm) has joined #godotengine-devel
+2019-11-12 14:28:27	<--	aws27 (~awsumpwne@wnpgmb0805w-ad05-202-9.dynamic.bellmts.net) has quit (Read error: Connection reset by peer)
+2019-11-12 14:32:37	-->	chaosus89 (d58d8110@gateway/web/cgi-irc/kiwiirc.com/ip.213.141.129.16) has joined #godotengine-devel
+2019-11-12 14:33:17	-->	biliogadafr1 (~bilio@46.53.248.20) has joined #godotengine-devel
+2019-11-12 14:34:22	<--	biliogadafr (~bilio@46.53.248.20) has quit (Ping timeout: 265 seconds)
+2019-11-12 14:43:25	-->	Technipion (~Thunderbi@p200300F933D68B0E0028667C9380B33A.dip0.t-ipconnect.de) has joined #godotengine-devel
+2019-11-12 14:46:00	<--	biliogadafr1 (~bilio@46.53.248.20) has quit (Ping timeout: 246 seconds)
+2019-11-12 14:51:03	<--	Yeldham (~michael@138.219.238.110.newlifeinformatica.com.br) has quit (Quit: Konversation terminated!)
+2019-11-12 14:51:21	-->	Yeldham (~michael@138.219.238.110.newlifeinformatica.com.br) has joined #godotengine-devel
+2019-11-12 15:02:33	-->	Paulb23 (paulb23mat@gateway/shell/matrix.org/x-smyezpepvdzmckfl) has joined #godotengine-devel
+2019-11-12 15:02:33	-->	wscp (wscpmatrix@gateway/shell/matrix.org/x-resrtxiqahfftkqo) has joined #godotengine-devel
+2019-11-12 15:02:33	-->	DestinyGamer (destinygam@gateway/shell/matrix.org/x-hvuhxkjxtrxpxebo) has joined #godotengine-devel
+2019-11-12 15:02:33	-->	jwestman[m] (flyingpimo@gateway/shell/matrix.org/x-gowrqepxbtufszgr) has joined #godotengine-devel
+2019-11-12 15:02:33	-->	pd09041999[m] (pd09041999@gateway/shell/matrix.org/x-ntnripkzhaxanxxp) has joined #godotengine-devel
+2019-11-12 15:02:33	-->	pixeltrik[m] (pixeltrikm@gateway/shell/matrix.org/x-xamfrxydgtbutnjv) has joined #godotengine-devel
+2019-11-12 15:02:33	-->	Alexwbc[m] (alexwbcmat@gateway/shell/matrix.org/x-mxkxknvecgcpgmfj) has joined #godotengine-devel
+2019-11-12 15:02:33	-->	dreamsComeTrue[m (dreamscome@gateway/shell/matrix.org/x-dobcvyavixkfwcap) has joined #godotengine-devel
+2019-11-12 15:02:33	-->	moiman100 (moiman100m@gateway/shell/matrix.org/x-frtodwjmnwcmypqv) has joined #godotengine-devel
+2019-11-12 15:02:33	-->	keksdev[m] (keksdevmat@gateway/shell/matrix.org/x-pkkhqkwlihdkazra) has joined #godotengine-devel
+2019-11-12 15:02:34	-->	atorresm (atorresmma@gateway/shell/matrix.org/x-wunffgrvctslbzna) has joined #godotengine-devel
+2019-11-12 15:02:34	-->	Groud (groudmatri@gateway/shell/matrix.org/x-jlprgawkazvgxjve) has joined #godotengine-devel
+2019-11-12 15:02:34	-->	ajweeks[m] (ajweeksmat@gateway/shell/matrix.org/x-nfzfusvpsuqekgqz) has joined #godotengine-devel
+2019-11-12 15:02:34	-->	RandomShaper[m] (randomshap@gateway/shell/matrix.org/x-kmbmpuvbffnxqkbs) has joined #godotengine-devel
+2019-11-12 15:02:34	-->	Saracen[m] (saracenmat@gateway/shell/matrix.org/x-opgwaxrhhdumygjd) has joined #godotengine-devel
+2019-11-12 15:02:34	-->	Xrayez[m] (xrayezmatr@gateway/shell/matrix.org/x-zzspfqldrdwhgkkt) has joined #godotengine-devel
+2019-11-12 15:02:34	-->	nilsirl[m] (nilsirlmat@gateway/shell/matrix.org/x-zbfbiqiqkjtynakp) has joined #godotengine-devel
+2019-11-12 15:02:34	-->	nldvos[m] (nldvosmatr@gateway/shell/matrix.org/x-xuxgjlobchpofrbf) has joined #godotengine-devel
+2019-11-12 15:02:34	-->	ainasoler[m] (ainasolerm@gateway/shell/matrix.org/x-rppopsmyrydnbddu) has joined #godotengine-devel
+2019-11-12 15:02:34	-->	Przmk[m] (soifmatrix@gateway/shell/matrix.org/x-bfjnskpgmsmhqtfk) has joined #godotengine-devel
+2019-11-12 15:02:34	-->	paulloz[m] (paullozliv@gateway/shell/matrix.org/x-fahojsdfliffzvzs) has joined #godotengine-devel
+2019-11-12 15:02:34	-->	collegeprepkid[m (collegepre@gateway/shell/matrix.org/x-mvobtfjfxsnzgzdf) has joined #godotengine-devel
+2019-11-12 15:02:34	-->	emmetpdx (emmetoneil@gateway/shell/matrix.org/x-tkgalgdywscatzrk) has joined #godotengine-devel
+2019-11-12 15:02:34	-->	kobewi[m] (kobewimatr@gateway/shell/matrix.org/x-ueealsnantastxju) has joined #godotengine-devel
+2019-11-12 15:02:34	-->	HER0_01 (her0matrix@gateway/shell/matrix.org/x-willbdudppcvxxso) has joined #godotengine-devel
+2019-11-12 15:02:34	-->	qbieshay (qbieshayma@gateway/shell/matrix.org/x-yxxxqvucobnncjnr) has joined #godotengine-devel
+2019-11-12 15:02:34	-->	Ruka2177 (ruka2177ma@gateway/shell/matrix.org/x-rcqdnuecmvwifphl) has joined #godotengine-devel
+2019-11-12 15:02:35	-->	toger5[m] (toger5matr@gateway/shell/matrix.org/x-hbkzhardxjqwaaih) has joined #godotengine-devel
+2019-11-12 15:02:35	-->	lertsenem (lertsenemm@gateway/shell/matrix.org/x-wwteghqjmootbwbw) has joined #godotengine-devel
+2019-11-12 15:02:35	-->	ProNoobWarning (pronoobwar@gateway/shell/matrix.org/x-ivfcsnuvxzaqksht) has joined #godotengine-devel
+2019-11-12 15:02:35	-->	biodude[m] (biodudemat@gateway/shell/matrix.org/x-cdfkhcnkvveiylcs) has joined #godotengine-devel
+2019-11-12 15:02:35	-->	bojidar_bg (bojidar-bg@gateway/shell/matrix.org/x-obcnllmgdmvaqyqy) has joined #godotengine-devel
+2019-11-12 15:02:35	-->	rxlecky[m] (rxlmatrixo@gateway/shell/matrix.org/x-klvgfqvxmlcztsyy) has joined #godotengine-devel
+2019-11-12 15:02:35	-->	minraws (swarnimmat@gateway/shell/matrix.org/x-hhptklpypezirxir) has joined #godotengine-devel
+2019-11-12 15:02:35	-->	clayjohn (clayjohnma@gateway/shell/matrix.org/x-bgepaurpfhgtijsx) has joined #godotengine-devel
+2019-11-12 15:02:35	-->	kubecz3k[m] (kubecz3kma@gateway/shell/matrix.org/x-hmyhvyzdfflprqth) has joined #godotengine-devel
+2019-11-12 15:02:35	-->	djiamnot[m] (djiamnotma@gateway/shell/matrix.org/x-dgdtrvpknjflnomj) has joined #godotengine-devel
+2019-11-12 15:02:35	-->	Valentactive[m] (valentacti@gateway/shell/matrix.org/x-athixdwcrzlanuje) has joined #godotengine-devel
+2019-11-12 15:02:35	-->	pablodp606[m] (pablodp606@gateway/shell/matrix.org/x-csevpeywxbqrobod) has joined #godotengine-devel
+2019-11-12 15:02:35	-->	IronicallySerio (ironically@gateway/shell/matrix.org/x-imzzxtiabdzsbozx) has joined #godotengine-devel
+2019-11-12 15:02:35	-->	BenMcLean (benmcleanm@gateway/shell/matrix.org/x-yqincbbnwmwxwjrw) has joined #godotengine-devel
+2019-11-12 15:02:35	-->	arjenvanstaaldui (arjenvanst@gateway/shell/matrix.org/x-fhlnebqjowmitjvr) has joined #godotengine-devel
+2019-11-12 15:02:35	-->	anthyg[m] (anthygamor@gateway/shell/matrix.org/x-zdqaqlsvrrstwchz) has joined #godotengine-devel
+2019-11-12 15:02:35	-->	sudorebootnowsud (sudoreboot@gateway/shell/matrix.org/x-ppmagwgtlwilpnxv) has joined #godotengine-devel
+2019-11-12 15:02:36	-->	imadlo (czlowiekim@gateway/shell/matrix.org/x-gvcwhzwqosmptxwx) has joined #godotengine-devel
+2019-11-12 15:02:36	-->	Mux213 (mux213matr@gateway/shell/matrix.org/x-chqllrrsiukuqjpw) has joined #godotengine-devel
+2019-11-12 15:02:36	-->	bruvzg[m] (bruvzgmatr@gateway/shell/matrix.org/x-wenobbxpjqdenegq) has joined #godotengine-devel
+2019-11-12 15:02:36	-->	anoa (andrewmamo@gateway/shell/matrix.org/x-brkqoiwkvjwdpgsc) has joined #godotengine-devel
+2019-11-12 15:02:36	-->	thenameipicked[m (thenameipi@gateway/shell/matrix.org/x-kdsuefmbpzujykjq) has joined #godotengine-devel
+2019-11-12 15:02:36	-->	eoinoneill[m] (theyokaima@gateway/shell/matrix.org/x-mtymezlkarbzthvx) has joined #godotengine-devel
+2019-11-12 15:02:36	-->	theduriel[m] (thedurielm@gateway/shell/matrix.org/x-vqpytscskbilfqnr) has joined #godotengine-devel
+2019-11-12 15:02:36	-->	wmww (wmwwmatrix@gateway/shell/matrix.org/x-hthbbmnphhqtxgkg) has joined #godotengine-devel
+2019-11-12 15:02:36	-->	neospark314[m] (neospark31@gateway/shell/matrix.org/x-atdvaivvezuscykk) has joined #godotengine-devel
+2019-11-12 15:02:36	-->	azagaya (pablofonov@gateway/shell/matrix.org/x-rpgorqanxlednbpk) has joined #godotengine-devel
+2019-11-12 15:02:36	-->	Hinsbart[m] (hinsbartma@gateway/shell/matrix.org/x-csmrhrvbkhlnewnj) has joined #godotengine-devel
+2019-11-12 15:02:36	-->	andnovar[m] (andnovarub@gateway/shell/matrix.org/x-bulnhirlqwawiifc) has joined #godotengine-devel
+2019-11-12 15:02:36	-->	Akien_ (akienmatri@gateway/shell/matrix.org/x-tgnygzsyofmbbwwa) has joined #godotengine-devel
+2019-11-12 15:02:36	-->	iamactuallycthul (iamactuall@gateway/shell/matrix.org/x-pfdpvkcgjvinsajz) has joined #godotengine-devel
+2019-11-12 15:02:36	-->	geequlim[m] (geequlimma@gateway/shell/matrix.org/x-vxddxboaajgyudem) has joined #godotengine-devel
+2019-11-12 15:02:37	-->	sudoreboot[m] (sudorebo2@gateway/shell/matrix.org/x-nezxkarmusxklfjv) has joined #godotengine-devel
+2019-11-12 15:02:37	-->	karroffel_irc (karroffelc@gateway/shell/matrix.org/x-khtluyumizhlvqyj) has joined #godotengine-devel
+2019-11-12 15:02:37	-->	timslippy[m] (timslippyl@gateway/shell/matrix.org/x-qyauibmxhbwrsctz) has joined #godotengine-devel
+2019-11-12 15:02:37	-->	frazerclews[m] (frazerclew@gateway/shell/matrix.org/x-hxzvfhuoyfehflpn) has joined #godotengine-devel
+2019-11-12 15:02:37	-->	fales[m] (falesmatri@gateway/shell/matrix.org/x-yyaidqlgzwkkeixq) has joined #godotengine-devel
+2019-11-12 15:02:39	-->	supagu[m] (supagumatr@gateway/shell/matrix.org/x-jirmthgptolrrjxo) has joined #godotengine-devel
+2019-11-12 15:02:40	-->	Vortai[m] (vortaimatr@gateway/shell/matrix.org/x-xwljdicjoomvgwcp) has joined #godotengine-devel
+2019-11-12 15:02:40	-->	PJB3005[m] (pjb3005mat@gateway/shell/matrix.org/x-jnfccjnswmiuwbye) has joined #godotengine-devel
+2019-11-12 15:02:40	-->	mo7sen[m] (mo7senmatr@gateway/shell/matrix.org/x-ikzntbxjrlgxjiov) has joined #godotengine-devel
+2019-11-12 15:02:41	-->	krystof[m] (krystofmat@gateway/shell/matrix.org/x-qghlnpcidnbwzakj) has joined #godotengine-devel
+2019-11-12 15:02:41	-->	flo-k[m] (flo-kmatri@gateway/shell/matrix.org/x-ljwgmvrgjzfshuna) has joined #godotengine-devel
+2019-11-12 15:02:42	-->	sakerdot[m] (sakerdotma@gateway/shell/matrix.org/x-jixyfqeopjhxfwzh) has joined #godotengine-devel
+2019-11-12 15:02:42	-->	KidRigger[m] (kidriggerm@gateway/shell/matrix.org/x-awlplozqdcmceylp) has joined #godotengine-devel
+2019-11-12 15:02:43	-->	JeppeZapp[m] (jzappmatri@gateway/shell/matrix.org/x-tmygaxxgbligkwxt) has joined #godotengine-devel
+2019-11-12 15:21:04	-->	MoosePrime (~moose@207.44.22.117) has joined #godotengine-devel
+2019-11-12 15:21:44	-->	ignaloidas (~ignaloida@158.129.26.113) has joined #godotengine-devel
+2019-11-12 15:33:03	<--	chaosus89 (d58d8110@gateway/web/cgi-irc/kiwiirc.com/ip.213.141.129.16) has quit (Remote host closed the connection)
+2019-11-12 15:49:15	<--	ignaloidas (~ignaloida@158.129.26.113) has quit (Read error: Connection reset by peer)
+2019-11-12 15:50:00	-->	ignaloidas (~ignaloida@158.129.26.113) has joined #godotengine-devel
+2019-11-12 15:53:14	-->	Technipion2 (~Thunderbi@p200300F933D68B690028667C9380B33A.dip0.t-ipconnect.de) has joined #godotengine-devel
+2019-11-12 15:54:28	<--	Technipion (~Thunderbi@p200300F933D68B0E0028667C9380B33A.dip0.t-ipconnect.de) has quit (Ping timeout: 245 seconds)
+2019-11-12 15:54:28	--	Technipion2 is now known as Technipion
+2019-11-12 16:10:01	<--	code-xd (uid402839@gateway/web/irccloud.com/x-gfbpxwlapmspoznb) has quit (Quit: Connection closed for inactivity)
+2019-11-12 16:17:11	<--	ignaloidas (~ignaloida@158.129.26.113) has quit (Ping timeout: 276 seconds)
+2019-11-12 16:23:49	-->	ignaloidas (~ignaloida@158.129.26.113) has joined #godotengine-devel
+2019-11-12 16:50:16	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #godotengine-devel
+2019-11-12 16:50:16	--	Topic for #godotengine-devel is "Godot Engine Developers | Tasks up for grabs: https://github.com/godotengine/godot/issues | ML: https://listengine.tuxfamily.org/godotengine.org/devel | Logs: http://godot.eska.me/irc-logs | Can't join from Matrix? https://frama.link/matrix-irc-needreggednick"
+2019-11-12 16:50:16	--	Topic set by Akien (~Akien@godotengine/akien) on Sun, 23 Sep 2018 17:02:58
+2019-11-12 16:50:16	--	Channel #godotengine-devel: 155 nicks (1 op, 0 voices, 154 normals)
+2019-11-12 16:50:31	--	Channel created on Tue, 23 Jun 2015 16:46:41
+2019-11-12 17:06:51	-->	Duroxxigar (49685a6f@c-73-104-90-111.hsd1.fl.comcast.net) has joined #godotengine-devel
+2019-11-12 17:23:14	-->	aws27 (~awsumpwne@wnpgmb014uw-ad04-202-9.dynamic.bellmts.net) has joined #godotengine-devel
+2019-11-12 17:32:02	RevoluPowered	afternoon
+2019-11-12 17:34:29	<--	Technipion (~Thunderbi@p200300F933D68B690028667C9380B33A.dip0.t-ipconnect.de) has quit (Quit: Technipion)
+2019-11-12 17:47:34	Welp	morning
+2019-11-12 17:56:29	-->	code-xd (uid402839@gateway/web/irccloud.com/x-bdwkeucbjlzovzaa) has joined #godotengine-devel
+2019-11-12 17:56:54	code-xd	What are the debug commands in Godot?
+2019-11-12 17:57:18	code-xd	I came across print_line() one but can't find it outputting anything to the console.
+2019-11-12 18:00:38	jimbzy	Do you have it enabled, code-xd?
+2019-11-13 09:10:10	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #godotengine-devel
+2019-11-13 09:10:10	--	Topic for #godotengine-devel is "Godot Engine Developers | Tasks up for grabs: https://github.com/godotengine/godot/issues | ML: https://listengine.tuxfamily.org/godotengine.org/devel | Logs: http://godot.eska.me/irc-logs | Can't join from Matrix? https://frama.link/matrix-irc-needreggednick"
+2019-11-13 09:10:10	--	Topic set by Akien (~Akien@godotengine/akien) on Sun, 23 Sep 2018 17:02:58
+2019-11-13 09:10:10	--	Channel #godotengine-devel: 143 nicks (1 op, 0 voices, 142 normals)
+2019-11-13 09:10:23	--	Channel created on Tue, 23 Jun 2015 16:46:41
+2019-11-13 09:26:15	-->	aws27 (~awsumpwne@wnpgmb0805w-ad05-202-9.dynamic.bellmts.net) has joined #godotengine-devel
+2019-11-13 09:30:11	<--	Stan` (~yaaic@37.166.90.207) has quit (Remote host closed the connection)
+2019-11-13 09:37:59	<--	aws27 (~awsumpwne@wnpgmb0805w-ad05-202-9.dynamic.bellmts.net) has quit (Read error: Connection reset by peer)
+2019-11-13 09:58:17	Einlander	is there a sane way to reparent a node at runtime?
+2019-11-13 09:58:52	Einlander	i want to detext a collision_entered signal, get the node and change it's parents
+2019-11-13 09:59:45	Einlander	i think understand that i am supposed to remove_child the node, then add_child to something else
+2019-11-13 09:59:53	Einlander	but i keep getting stalls
+2019-11-13 10:03:03	-->	code-xd (uid402839@gateway/web/irccloud.com/x-ggbkotfdczoqfqtm) has joined #godotengine-devel
+2019-11-13 10:03:54	code-xd	I looked at the code but it's not clear it has used some macros which I can't get familiar with
+2019-11-13 10:05:23	code-xd	Akien: okay now I understand
+2019-11-13 10:06:25	code-xd	It returns the zeroth element pointer if I am not wrong?
+2019-11-13 10:14:01	Akien	Looks like it.
+2019-11-13 10:37:41	<--	mfoxdogg (~mfoxdogg@124-168-188-215.dyn.iinet.net.au) has quit (Quit: Leaving)
+2019-11-13 10:40:51	-->	Cahaan (~Cahaan@109.129.13.76) has joined #godotengine-devel
+2019-11-13 10:41:35	-->	xakz (~XaMaD@229.ip-217-182-68.eu) has joined #godotengine-devel
+2019-11-13 10:44:13	-->	thc202 (~thc202@unaffiliated/thc202) has joined #godotengine-devel
+2019-11-13 11:39:51	-->	Yeldham (~michael@138.219.238.110.newlifeinformatica.com.br) has joined #godotengine-devel
+2019-11-13 11:44:03	<--	xakz (~XaMaD@229.ip-217-182-68.eu) has quit (Ping timeout: 240 seconds)
+2019-11-13 11:48:46	-->	balenol[m] (~balenolm]@140.213.6.221) has joined #godotengine-devel
+2019-11-13 11:51:01	<--	balenol[m] (~balenolm]@140.213.6.221) has quit (Read error: Connection reset by peer)
+2019-11-13 11:52:15	-->	Technipion (~Thunderbi@p200300F933D68B69C95FF3B272DFAE3D.dip0.t-ipconnect.de) has joined #godotengine-devel
+2019-11-13 11:57:39	-->	balenol[m] (~balenolm]@140.213.38.236) has joined #godotengine-devel
+2019-11-13 12:02:13	code-xd	Is it necessary to use build ear for building?
+2019-11-13 12:02:14	code-xd	Does it speed up the building process?
+2019-11-13 12:09:14	balenol[m]	Ear?
+2019-11-13 12:14:12	code-xd	Bear to be specific
+2019-11-13 12:14:23	code-xd	It's something related to compilation db
+2019-11-13 12:36:45	<--	balenol[m] (~balenolm]@140.213.38.236) has quit (Ping timeout: 246 seconds)
+2019-11-13 12:48:49	-->	balenol[m] (~balenolm]@180.252.26.105) has joined #godotengine-devel
+2019-11-13 12:59:11	<--	balenol[m] (~balenolm]@180.252.26.105) has quit (Read error: Connection reset by peer)
+2019-11-13 13:05:52	-->	balenol[m] (~balenolm]@180.252.26.105) has joined #godotengine-devel
+2019-11-13 13:22:18	fales[m]	can anyone cross-compile from linux to windows (mingw) latest master? I'm getting errors...
+2019-11-13 13:22:22	fales[m]	"error: 'format_error_message' was not declared in this scope"
+2019-11-13 13:22:53	fales[m]	That function is only available in debug, and it used to be stripped (as part of ERR_EXPLAIN) in release mode
+2019-11-13 13:23:23	fales[m]	but with the latest change I think it doesn't properly get stripped and fail to build
+2019-11-13 13:23:59	fales[m]	where latest change is "ERR_EXPLAIN" -> "ERR_FAIL_*_MSG"
+2019-11-13 13:29:04	Akien	fales[m]: Likely a regression from #33517
+2019-11-13 13:29:05	IssueBot	#33517: Send *_MSG macros' explanations directly to the _err_print_error(). | https://git.io/JeVdS
+2019-11-13 13:29:24	<--	balenol[m] (~balenolm]@180.252.26.105) has quit (Remote host closed the connection)
+2019-11-13 13:29:41	-->	balenol[m] (~balenolm]@180.252.26.105) has joined #godotengine-devel
+2019-11-13 13:31:58	fales[m]	Akien: likely, the message part of the macro should be skipped in release mode (which will also save size by optimizing out all the strings)
+2019-11-13 13:32:49	fales[m]	I can think of a macro that calls _err_print_index_error/_err_print_error with empty parameter in release, passing through in debug
+2019-11-13 13:32:54	fales[m]	should be easy, I'll have a look
+2019-11-13 13:33:33	fales[m]	maybe even just a macro around m_msg...
+2019-11-13 13:35:44	Akien	fales[m]: yeah, I guess all macros now need something like that which used to be done for ERR_EXPLAIN: https://hastebin.com/qoxolasaji.php
+2019-11-13 13:35:56	Akien	It's a bit ugly though, if you have a prettier idea, that would be good :P
+2019-11-13 13:38:42	fales[m]	Akien:  maybe this? https://paste.ofcode.org/itd5QLdAvMV6ZEse6qJSx
+2019-11-13 13:42:36	Akien	fales[m]: +1
+2019-11-13 13:42:51	fales[m]	about the name, maybe `_DEBUG_MSG` instead of `EXPLAIN_MSG`?
+2019-11-13 13:44:22	Akien	Makes sense yeah.
+2019-11-13 13:47:23	fales[m]	or even `_DEBUG_STR` (since we already have `_STR`? I'm a bit worried about `_` in preprocessor macros, most compiler macros starts with two underscore, but for example GCC says: "All names which begin with two underscores, or an underscore and a capital letter, are reserved for the compiler and library to use as they wish"
+2019-11-13 13:50:25	Akien	Well you can go with `DEBUG_MSG` or `DEBUG_STR`, we don't need the underscore.
+2019-11-13 14:11:00	<--	endragor (~endragor@212.164.228.99) has quit (Remote host closed the connection)
+2019-11-13 14:34:37	jimbzy	Hi, all.
+2019-11-13 14:44:52	-->	madmiraal (~Thunderbi@2001:984:a3d7:1:4c97:8ddf:f948:cabf) has joined #godotengine-devel
+2019-11-13 15:24:24	<--	Technipion (~Thunderbi@p200300F933D68B69C95FF3B272DFAE3D.dip0.t-ipconnect.de) has quit (Ping timeout: 246 seconds)
+2019-11-13 15:24:43	-->	Technipion (~Thunderbi@p200300F933D68BCAC95FF3B272DFAE3D.dip0.t-ipconnect.de) has joined #godotengine-devel
+2019-11-13 15:35:00	-->	biliogadafr (~bilio@46.53.248.20) has joined #godotengine-devel

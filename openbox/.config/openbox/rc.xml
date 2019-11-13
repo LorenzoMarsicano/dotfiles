@@ -273,7 +273,7 @@
     </keybind>
     <keybind key="S-W-d">
       <action name="Execute">
-        <command>rofi -modi run,drun,window -lines 10 -padding 20 -width 50  -location 1 -yoffset 60 -xoffset 28 -show drun -sidebar-mode -columns 3 -font "Fantasque Sans Mono 10"</command>
+        <command>rofi -modi run,drun,window -lines 10 -padding 20 -width 50  -location 1 -yoffset 60 -xoffset 28 -show drun -sidebar-mode -columns 3 -font "Fantasque Sans Mono 12"</command>
       </action>
     </keybind>
     <keybind key="W-Return">

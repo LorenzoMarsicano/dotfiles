@@ -1830,3 +1830,419 @@
 2019-11-06 15:33:36	-->	Uhfgood (~Uhfgood@072-186-048-053.res.spectrum.com) has joined #reddit-gamedev
 2019-11-06 16:08:30	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #reddit-gamedev
 2019-11-06 16:14:35	-->	ImQ009 (~ImQ009@unaffiliated/imq009) has joined #reddit-gamedev
+2019-11-06 16:37:56	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Ping timeout: 240 seconds)
+2019-11-06 16:48:30	-->	nanoz (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-11-06 16:49:13	+Jonas__	took my car in to the mechanic today, zebbiz_pi
+2019-11-06 16:49:27	+Jonas__	the price estimate is like 20% of the price I paid to buy the car
+2019-11-06 16:50:00	+Jonas__	probably shouldn't have put the original brand brake discs on there
+2019-11-06 16:52:02	<--	enrioog (~nanoz@unaffiliated/nanoz) has quit (Ping timeout: 252 seconds)
+2019-11-06 16:52:06	guest	Shapes are solid 2d geometrical objects which handle the mass and collision of a Body. Bodies are objects with velocity and position. Fixtures attach shapes to bodies. A world is an object that contains all bodies and joints. Attach multiple bodies together to interact in unique ways (Joint).
+2019-11-06 16:53:48	+zebbiz_pi	guest: ok
+2019-11-06 16:53:58	+zebbiz_pi	Jonas__: HAH! That's newbie numbers
+2019-11-06 16:54:10	+zebbiz_pi	I've spend 200% of the car's worth this year
+2019-11-06 16:54:34	+Jonas__	well I can't compete with a car where every repair is at minimum the whole car's net value, just to get inside the door
+2019-11-06 16:54:53	+zebbiz_pi	Hey, the most expensive thing has been ~2k
+2019-11-06 16:55:07	+zebbiz_pi	Car was valued to 3k 3 years ago
+2019-11-06 16:56:16	+zebbiz_pi	Fuckit, I'm going home
+2019-11-06 17:04:21	-->	macz (~macz@67.231.29.194) has joined #reddit-gamedev
+2019-11-06 17:20:46	-->	steelgolem (~SteelGole@156.57.241.200) has joined #reddit-gamedev
+2019-11-06 17:24:40	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #reddit-gamedev
+2019-11-06 17:31:26	-->	bomb (~bomb@gateway/tor-sasl/bomb) has joined #reddit-gamedev
+2019-11-06 17:31:26	--	Mode #reddit-gamedev [+v bomb] by ChanServ
+2019-11-06 17:36:01	elsie273	bomb no i can't draw comics
+2019-11-06 17:36:10	+bomb	:(
+2019-11-06 17:36:22	elsie273	i'd like to though. i think my drawing is at the point where I could attempt it
+2019-11-06 17:36:45	+bomb	i need shit ton of characters for an adventure game
+2019-11-06 17:39:12	elsie273	i want to finish a game this week and have done a first pass of a couple of characters and some of the other assets
+2019-11-06 17:39:29	elsie273	need to do them properly with parts split out for animating
+2019-11-06 17:48:55	-->	Chevluh (~Chev@238.49.77.83.dynamic.wline.res.cust.swisscom.ch) has joined #reddit-gamedev
+2019-11-06 17:49:16	<--	bomb (~bomb@gateway/tor-sasl/bomb) has quit (Remote host closed the connection)
+2019-11-07 09:11:40	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-11-07 09:11:40	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-11-07 09:11:40	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-11-07 09:11:40	--	Channel #reddit-gamedev: 64 nicks (0 ops, 14 voices, 50 normals)
+2019-11-07 09:11:43	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-11-07 09:32:16	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-11-07 09:32:16	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-11-07 09:32:16	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-11-07 09:32:16	--	Channel #reddit-gamedev: 64 nicks (0 ops, 14 voices, 50 normals)
+2019-11-07 09:32:20	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-11-07 10:21:37	<--	Coldblackice (c@gateway/vpn/privateinternetaccess/coldblackice) has quit (Ping timeout: 240 seconds)
+2019-11-07 10:37:06	-->	elsie273 (~Android@213.205.194.66) has joined #reddit-gamedev
+2019-11-07 11:06:11	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-11-07 11:06:11	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-11-07 11:06:11	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-11-07 11:06:11	--	Channel #reddit-gamedev: 64 nicks (0 ops, 14 voices, 50 normals)
+2019-11-07 11:06:16	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-11-07 11:09:52	<--	moldybits (~moldybits@unaffiliated/moldybits) has quit (Quit: WeeChat 2.4)
+2019-11-07 11:19:11	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #reddit-gamedev
+2019-11-07 11:32:56	-->	moldybits (~moldybits@unaffiliated/moldybits) has joined #reddit-gamedev
+2019-11-07 11:34:27	-->	NomadJim (~NomadJim@pdpc/supporter/active/nomadjim) has joined #reddit-gamedev
+2019-11-07 11:34:27	--	Mode #reddit-gamedev [+v NomadJim] by ChanServ
+2019-11-07 12:31:18	-->	Cahaan (~Cahaan@109.129.13.76) has joined #reddit-gamedev
+2019-11-07 12:31:18	--	Mode #reddit-gamedev [+v Cahaan] by ChanServ
+2019-11-07 14:12:19	-->	Quetzal2_ (c133ec53@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.83) has joined #reddit-gamedev
+2019-11-07 14:51:57	<--	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has quit (Ping timeout: 240 seconds)
+2019-11-07 15:04:07	<--	Quetzal2_ (c133ec53@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.83) has quit (Ping timeout: 250 seconds)
+2019-11-07 15:32:07	-->	macz (~macz@d75-155-130-204.bchsia.telus.net) has joined #reddit-gamedev
+2019-11-07 15:36:40	<--	macz (~macz@d75-155-130-204.bchsia.telus.net) has quit (Ping timeout: 264 seconds)
+2019-11-07 16:03:38	-->	Uhfgood (~Uhfgood@072-186-048-053.res.spectrum.com) has joined #reddit-gamedev
+2019-11-07 16:16:40	-->	_DB (4955cb47@gateway/web/cgi-irc/kiwiirc.com/ip.73.85.203.71) has joined #reddit-gamedev
+2019-11-07 16:18:17	-->	ImQ009 (~ImQ009@unaffiliated/imq009) has joined #reddit-gamedev
+2019-11-07 16:20:10	-->	macz (~macz@67.231.29.194) has joined #reddit-gamedev
+2019-11-07 16:20:50	<--	macz (~macz@67.231.29.194) has quit (Read error: Connection reset by peer)
+2019-11-07 16:20:53	-->	macz_ (~macz@67.231.29.194) has joined #reddit-gamedev
+2019-11-07 16:29:45	<--	_DB (4955cb47@gateway/web/cgi-irc/kiwiirc.com/ip.73.85.203.71) has quit (Ping timeout: 246 seconds)
+2019-11-07 16:42:04	guest	https://love2d.org/wiki/Tutorial:PhysicsCollisionCallbacks at function beginContact(a, b, coll) wondering what causes Block to bind to a, and Ball to bind to b
+2019-11-07 16:42:54	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #reddit-gamedev
+2019-11-07 16:43:24	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Remote host closed the connection)
+2019-11-07 16:50:10	+carefish	guest: a and b are merely variable names
+2019-11-07 16:51:15	+carefish	might be a reserved functionname that autobinds to any object it can apply itself to guest/
+2019-11-07 16:51:26	guest	yeah no i was concerned about working with the normal vector and why it wouldn't be in the opposite direction, but i guess its not that critical
+2019-11-07 16:51:55	+carefish	so i'm reading the 'finished' code bit
+2019-11-07 16:51:58	guest	and i found it weird in the output it says the block is colliding with the ball instead of the other way around
+2019-11-07 16:52:19	+carefish	the moment you set userdata on a physics object, the beginContact can resolve incoming objects to Block and Ball
+2019-11-07 16:52:35	+carefish	oh
+2019-11-07 16:53:02	+carefish	the 'order' doesn't matter too much though
+2019-11-07 16:56:35	-->	LDAsh[]-__ (~yaaic@14-0-224-183.static.pccw-hkt.com) has joined #reddit-gamedev
+2019-11-07 16:56:54	LDAsh[]-__	Hey, any vertex buffers here?
+2019-11-07 16:57:46	LDAsh[]-__	V4VB, baby, lemme fill your buffers with my vertices
+2019-11-07 16:58:20	LDAsh[]-__	Double fist pump
+2019-11-07 16:58:49	+carefish	two pump chump
+2019-11-07 16:59:29	LDAsh[]-__	Two (plus 10 million) pump
+2019-11-07 17:15:34	<--	enrio (~nanoz@unaffiliated/nanoz) has quit (Quit: Leaving)
+2019-11-07 17:24:39	-->	Chevluh (~Chev@238.49.77.83.dynamic.wline.res.cust.swisscom.ch) has joined #reddit-gamedev
+2019-11-07 17:38:25	LDAsh[]-__	Okay, no one understands...
+2019-11-07 17:38:49	LDAsh[]-__	4 years
+2019-11-07 17:39:51	LDAsh[]-__	This is embarrassing
+2019-11-07 17:42:09	+zebbiz_pi	I have no idea what you're talking about
+2019-11-07 17:42:37	LDAsh[]-__	Hey zebbiz, let's try this
+2019-11-07 17:42:42	LDAsh[]-__	65536
+2019-11-07 17:43:12	LDAsh[]-__	Rings a 2009 Ouyu bell?
+2019-11-07 17:45:21	LDAsh[]-__	Hey it's like a Wii, but without all the soccer moms
+2019-11-07 17:45:47	LDAsh[]-__	Plus you don't need to know what a vertex buffer is?
+2019-11-07 17:46:04	LDAsh[]-__	10 years...
+2019-11-07 17:46:24	-->	enrio (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-11-07 17:46:33	LDAsh[]-__	RPG Maker with Java
+2019-11-07 17:47:35	+zebbiz_pi	I have no idea what you're even trying to say. I see no connection bewtween your sentences
+2019-11-07 17:47:47	Chevluh	That's some kind of alien code
+2019-11-07 17:49:33	LDAsh[]-__	NetEase engine.  Please, Winnie The Pooh
+2019-11-07 17:50:09	LDAsh[]-__	I have RPG Maker experience, Lord Pooh
+2019-11-07 17:50:22	LDAsh[]-__	Employ!!!!
+2019-11-07 17:50:40	LDAsh[]-__	Master Pooh!!!!
+2019-11-07 17:51:44	LDAsh[]-__	I can promise, dear pooh, I know nothing about vertex buffers like those evil western developers
+2019-11-07 17:52:11	LDAsh[]-__	I'm dumb and evil, just like you!
+2019-11-07 17:54:56	LDAsh[]-__	It's okay.  Some of you know 65536
+2019-11-07 17:55:38	+zebbiz_pi	I know it's 2^16
+2019-11-07 17:55:45	LDAsh[]-__	That will be enough for the 2019es
+2019-11-07 17:56:41	+zebbiz_pi	== 2^2^2^2
+2019-11-07 17:56:47	+zebbiz_pi	It's a nice number
+2019-11-07 17:57:02	+zebbiz_pi	But what that has to do with your ramblings, I don't know
+2019-11-07 17:57:21	LDAsh[]-__	Vertex buffer
+2019-11-07 17:58:09	LDAsh[]-__	This is where entire worlds reside
+2019-11-07 17:59:08	LDAsh[]-__	"He's wrong!  Kill!  Burn!  Ban!!!"
+2019-11-07 18:00:26	<--	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has quit (Quit: WeeChat 1.9.1)
+2019-11-08 09:09:17	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-11-08 09:09:17	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-11-08 09:09:17	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-11-08 09:09:17	--	Channel #reddit-gamedev: 63 nicks (0 ops, 15 voices, 48 normals)
+2019-11-08 09:09:22	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-11-08 09:22:29	-->	enrio (~nanoz@117.194.59.44) has joined #reddit-gamedev
+2019-11-08 09:23:19	<--	enrio (~nanoz@117.194.59.44) has quit (Remote host closed the connection)
+2019-11-08 09:23:33	-->	enrio (~nanoz@117.194.59.44) has joined #reddit-gamedev
+2019-11-08 09:46:11	+zebbiz_pi	22:33:19 <+Jonas___> zebbiz_pi, did you ask the girl out the old-fashioned way, or was it like..tinder?
+2019-11-08 09:47:01	+zebbiz_pi	Jonas___: We met är Hoben when I still had a gf. We added each other on snap and I made contact a while after we broke up
+2019-11-08 09:47:31	+zebbiz_pi	Added on snap during Hoben, made contact after
+2019-11-08 10:06:46	+Jonas___	meet over a shared interest, nice
+2019-11-08 10:07:12	+Jonas___	lika barn leka bäst, that goes for alcoholics too
+2019-11-08 10:16:09	+zebbiz_pi	Yeah, and since I've looked her up a bit online and we have some other common interests as well
+2019-11-08 10:16:58	+DrAwesomeClaws	take her hiking
+2019-11-08 10:17:14	+zebbiz_pi	DrAwesomeClaws: Maybe
+2019-11-08 10:18:13	<--	enrio (~nanoz@117.194.59.44) has quit (Ping timeout: 245 seconds)
+2019-11-08 10:25:33	+zebbiz_pi	DrAwesomeClaws: Not really hiking weather now though
+2019-11-08 10:25:39	+zebbiz_pi	cold and rainy
+2019-11-08 10:25:49	+DrAwesomeClaws	that's perfect hiking weather
+2019-11-08 10:27:41	+DrAwesomeClaws	I just discovered The Sword, good band
+2019-11-08 10:28:04	+DrAwesomeClaws	https://www.youtube.com/watch?v=B2SCIoq0VX4
+2019-11-08 10:28:32	+DrAwesomeClaws	texas stoner sci fi metal
+2019-11-08 11:09:47	<--	Quetzal2_ (c133ec53@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.83) has quit (Ping timeout: 268 seconds)
+2019-11-08 11:10:58	+DrAwesomeClaws	interesting, if you search google for "snack fund" the first 3 links are air force related
+2019-11-08 11:11:09	+DrAwesomeClaws	AF takes snack bars seriously
+2019-11-08 11:14:48	-->	Quetzal2_ (c133ec53@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.83) has joined #reddit-gamedev
+2019-11-08 11:29:30	+carefish	or your search results are localized and personalized DrAwesomeClaws
+2019-11-08 11:31:57	+carefish	yeah, it's gotta be
+2019-11-08 11:32:06	+carefish	i only see 1 air force reference at hit 5
+2019-11-08 12:01:08	-->	Cahaan (~Cahaan@109.129.13.76) has joined #reddit-gamedev
+2019-11-08 12:01:08	--	Mode #reddit-gamedev [+v Cahaan] by ChanServ
+2019-11-08 12:02:45	+zebbiz_pi	https://imgur.com/9mwDzzp
+2019-11-08 12:10:04	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #reddit-gamedev
+2019-11-08 12:22:50	<--	Quetzal2_ (c133ec53@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.83) has quit (Ping timeout: 240 seconds)
+2019-11-08 12:35:14	+DrAwesomeClaws	carefish, i read it online and tried it.  Probably pretty similar for most of the USA
+2019-11-08 12:43:44	+DrAwesomeClaws	no other nation can compete with the USAF when it comes to snacks.
+2019-11-08 12:44:19	+carefish	clearly they got their priorities straight
+2019-11-08 12:45:21	+DrAwesomeClaws	my roomate and i found a loophole in that the snack bar didn't charge for buns and ketchup for the hot dogs.  When you don't have 25 cents for a hot dog you could just put some condiments on a bun for free
+2019-11-08 12:45:56	+carefish	haha nice
+2019-11-08 13:20:34	-->	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has joined #reddit-gamedev
+2019-11-08 13:28:02	-->	Quetzal2_ (c133ec53@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.83) has joined #reddit-gamedev
+2019-11-08 13:30:31	+Jonas___	mfw the tip of the spear are nickle-and-dimed for hot-dogs :|
+2019-11-08 13:30:49	+Jonas___	Uncle Sam wants you..to pay for your goddamn food
+2019-11-08 13:32:15	+DrAwesomeClaws	well the chow halls are free.  But those were only open at certain times and when you work nights you get out of work after they stop doing breakfast.   So the only chances to use them were 11-1 or 4-6
+2019-11-08 13:32:26	+DrAwesomeClaws	free if you lived on base
+2019-11-08 13:32:35	+DrAwesomeClaws	otherwise you get extra money each month
+2019-11-08 13:33:34	+DrAwesomeClaws	but if you live on base and work nights, you can only eat for free 3 hours after work or 6 hours before
+2019-11-08 13:34:12	+DrAwesomeClaws	or 5 or whatever the math was
+2019-11-08 13:34:44	+DrAwesomeClaws	that's why there are so many bad marriages.   If you get married you get to move off base immediately and get a bunch of money for food and housing
+2019-11-08 13:34:53	+DrAwesomeClaws	no room inspections
+2019-11-08 13:34:59	+DrAwesomeClaws	can eat whenever you want
+2019-11-08 13:41:02	+Jonas___	the dependapotamus incentive
+2019-11-08 14:49:47	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #reddit-gamedev
+2019-11-08 14:50:45	-->	enrio (~nanoz@117.194.59.44) has joined #reddit-gamedev
+2019-11-08 14:55:08	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Remote host closed the connection)
+2019-11-08 15:15:01	-->	enrioog (~nanoz@117.194.59.44) has joined #reddit-gamedev
+2019-11-08 15:18:55	<--	enrio (~nanoz@117.194.59.44) has quit (Ping timeout: 268 seconds)
+2019-11-08 15:26:56	-->	nanoz (~nanoz@117.194.59.44) has joined #reddit-gamedev
+2019-11-08 15:30:07	-->	enrio (~nanoz@117.194.59.44) has joined #reddit-gamedev
+2019-11-08 15:30:18	<--	enrioog (~nanoz@117.194.59.44) has quit (Ping timeout: 245 seconds)
+2019-11-08 15:33:20	<--	nanoz (~nanoz@117.194.59.44) has quit (Ping timeout: 276 seconds)
+2019-11-08 15:47:42	-->	Guest50 (4d430502@gateway/web/cgi-irc/kiwiirc.com/ip.77.67.5.2) has joined #reddit-gamedev
+2019-11-08 15:54:06	+zebbiz_pi	https://www.youtube.com/watch?v=VE8vKLEK6A8
+2019-11-08 16:04:41	-->	Uhfgood (~Uhfgood@2603:9000:b10b:c00:a9f7:4f99:c441:430) has joined #reddit-gamedev
+2019-11-08 16:14:24	-->	enrioog (~nanoz@117.194.59.44) has joined #reddit-gamedev
+2019-11-08 16:15:05	-->	nanoz (~nanoz@117.194.59.44) has joined #reddit-gamedev
+2019-11-08 16:17:02	-->	ImQ009 (~ImQ009@unaffiliated/imq009) has joined #reddit-gamedev
+2019-11-08 16:17:55	-->	bomb (~bomb@gateway/tor-sasl/bomb) has joined #reddit-gamedev
+2019-11-08 16:17:55	--	Mode #reddit-gamedev [+v bomb] by ChanServ
+2019-11-08 16:18:06	<--	enrio (~nanoz@117.194.59.44) has quit (Ping timeout: 252 seconds)
+2019-11-08 16:19:29	<--	enrioog (~nanoz@117.194.59.44) has quit (Ping timeout: 276 seconds)
+2019-11-08 16:24:20	<--	Guest50 (4d430502@gateway/web/cgi-irc/kiwiirc.com/ip.77.67.5.2) has quit (Remote host closed the connection)
+2019-11-08 17:04:59	+zebbiz_pi	DrAwesomeClaws: Btw, this channel might be something you'd like https://www.youtube.com/watch?v=ZsOrn5fhS_k
+2019-11-08 17:25:27	-->	macz_ (~macz@162.221.202.202) has joined #reddit-gamedev
+2019-11-08 17:28:21	<--	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has quit (Quit: WeeChat 1.9.1)
+2019-11-08 17:28:31	--	macz_ is now known as macz
+2019-11-11 09:32:18	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-11-11 09:32:18	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-11-11 09:32:18	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-11-11 09:32:18	--	Channel #reddit-gamedev: 65 nicks (0 ops, 16 voices, 49 normals)
+2019-11-11 09:32:21	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-11-11 09:38:09	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #reddit-gamedev
+2019-11-11 09:55:28	<--	bomb (~bomb@gateway/tor-sasl/bomb) has quit (Ping timeout: 260 seconds)
+2019-11-11 11:06:08	<--	Coldblackice (c@gateway/vpn/privateinternetaccess/coldblackice) has quit (Ping timeout: 252 seconds)
+2019-11-11 11:07:24	-->	Coldblackice (c@gateway/vpn/privateinternetaccess/coldblackice) has joined #reddit-gamedev
+2019-11-11 13:01:44	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #reddit-gamedev
+2019-11-11 13:21:13	-->	Coldblackice_ (c@gateway/vpn/privateinternetaccess/coldblackice) has joined #reddit-gamedev
+2019-11-11 13:22:44	<--	Coldblackice (c@gateway/vpn/privateinternetaccess/coldblackice) has quit (Ping timeout: 268 seconds)
+2019-11-11 14:17:20	-->	_DB (68375605@gateway/web/cgi-irc/kiwiirc.com/ip.104.55.86.5) has joined #reddit-gamedev
+2019-11-11 14:26:35	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Quit: Leaving)
+2019-11-11 14:30:48	<--	Snoras (~Snoras@gateway/tor-sasl/snoras) has quit (Ping timeout: 260 seconds)
+2019-11-11 14:31:14	-->	Snoras (~Snoras@gateway/tor-sasl/snoras) has joined #reddit-gamedev
+2019-11-11 14:46:36	<--	Coldblackice_ (c@gateway/vpn/privateinternetaccess/coldblackice) has quit (Ping timeout: 240 seconds)
+2019-11-11 15:18:52	-->	Coldblackice (~c@unaffiliated/coldblackice) has joined #reddit-gamedev
+2019-11-11 16:00:23	<--	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has quit (Quit: WeeChat 1.9.1)
+2019-11-11 16:44:26	-->	MrDescanso (~luchus@181.88.178.25) has joined #reddit-gamedev
+2019-11-11 16:50:35	<--	_DB (68375605@gateway/web/cgi-irc/kiwiirc.com/ip.104.55.86.5) has quit (Ping timeout: 276 seconds)
+2019-11-11 16:56:16	-->	Chevluh (~Chev@238.49.77.83.dynamic.wline.res.cust.swisscom.ch) has joined #reddit-gamedev
+2019-11-11 17:35:28	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-11-11 17:35:28	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-11-11 17:35:28	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-11-11 17:35:28	--	Channel #reddit-gamedev: 66 nicks (0 ops, 15 voices, 51 normals)
+2019-11-11 17:35:31	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-11-12 09:16:51	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-11-12 09:16:51	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-11-12 09:16:51	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-11-12 09:16:51	--	Channel #reddit-gamedev: 65 nicks (0 ops, 15 voices, 50 normals)
+2019-11-12 09:16:55	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-11-12 09:17:50	<--	enrio (~nanoz@unaffiliated/nanoz) has quit (Ping timeout: 268 seconds)
+2019-11-12 09:21:28	-->	enrio (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-11-12 09:22:27	<--	enrioog (~nanoz@unaffiliated/nanoz) has quit (Ping timeout: 240 seconds)
+2019-11-12 09:25:02	-->	enrioog (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-11-12 09:27:17	<--	enrio (~nanoz@unaffiliated/nanoz) has quit (Ping timeout: 240 seconds)
+2019-11-12 09:30:51	<--	enrioog (~nanoz@unaffiliated/nanoz) has quit (Ping timeout: 240 seconds)
+2019-11-12 09:32:16	-->	enrio (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-11-12 09:41:41	<--	enrio (~nanoz@unaffiliated/nanoz) has quit (Read error: Connection reset by peer)
+2019-11-12 09:42:16	-->	enrio (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-11-12 09:46:18	-->	enrioog (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-11-12 09:48:40	<--	enrio (~nanoz@unaffiliated/nanoz) has quit (Ping timeout: 268 seconds)
+2019-11-12 09:50:25	-->	larpon (~larpon@193.106.166.119) has joined #reddit-gamedev
+2019-11-12 09:51:08	<--	enrioog (~nanoz@unaffiliated/nanoz) has quit (Ping timeout: 268 seconds)
+2019-11-12 09:51:11	-->	enrio (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-11-12 09:52:03	<--	enrio (~nanoz@unaffiliated/nanoz) has quit (Read error: Connection reset by peer)
+2019-11-12 09:52:28	-->	enrio (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-11-12 09:56:04	-->	enrioog (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-11-12 09:58:27	<--	enrio (~nanoz@unaffiliated/nanoz) has quit (Ping timeout: 250 seconds)
+2019-11-12 10:05:38	<--	enrioog (~nanoz@unaffiliated/nanoz) has quit (Ping timeout: 240 seconds)
+2019-11-12 10:06:47	-->	enrio (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-11-12 10:12:01	-->	enrioog (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-11-12 10:12:06	<--	enrio (~nanoz@unaffiliated/nanoz) has quit (Ping timeout: 268 seconds)
+2019-11-12 10:13:40	<--	enrioog (~nanoz@unaffiliated/nanoz) has quit (Read error: Connection reset by peer)
+2019-11-12 10:24:33	-->	bnyio (~bnyio@alcatraz.open-xchange.com) has joined #reddit-gamedev
+2019-11-12 10:26:09	<--	bnyio (~bnyio@alcatraz.open-xchange.com) has quit (Client Quit)
+2019-11-12 10:38:00	<--	Snoras (~Snoras@gateway/tor-sasl/snoras) has quit (Remote host closed the connection)
+2019-11-12 10:40:19	-->	Snoras (~Snoras@gateway/tor-sasl/snoras) has joined #reddit-gamedev
+2019-11-12 11:23:25	<--	Quetzal2_ (c133ec53@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.83) has quit (Remote host closed the connection)
+2019-11-12 12:11:46	+zebbiz_pi	Heyayayaya
+2019-11-12 13:21:25	<--	Narris (~bunnies@vtelinet-216-66-102-10.vermontel.net) has quit (Read error: Connection reset by peer)
+2019-11-12 13:21:33	-->	BlkStaff (~bunnies@vtelinet-216-66-102-10.vermontel.net) has joined #reddit-gamedev
+2019-11-12 13:21:37	--	BlkStaff is now known as Narris
+2019-11-12 13:31:05	-->	Quetzal2_ (c133ec53@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.83) has joined #reddit-gamedev
+2019-11-12 13:38:49	<--	turt2live (travist2li@gateway/shell/matrix.org/x-ylwpnvbcllgttjxp) has quit (Write error: Connection reset by peer)
+2019-11-12 13:39:18	<--	planetis[m] (planetisma@gateway/shell/matrix.org/x-xknylqimvsezfnaz) has quit (Read error: Connection reset by peer)
+2019-11-12 14:05:43	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #reddit-gamedev
+2019-11-12 14:23:30	-->	enrio (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-11-12 14:24:17	<--	enrio (~nanoz@unaffiliated/nanoz) has quit (Read error: Connection reset by peer)
+2019-11-12 14:25:03	-->	enrio (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-11-12 14:37:44	-->	enrioog (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-11-12 14:41:16	<--	enrio (~nanoz@unaffiliated/nanoz) has quit (Ping timeout: 252 seconds)
+2019-11-12 14:43:12	<--	enrioog (~nanoz@unaffiliated/nanoz) has quit (Quit: Leaving)
+2019-11-12 14:49:47	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Quit: Leaving)
+2019-11-12 14:59:23	<--	Jattenalle (~CABAL@h-207-79.A246.priv.bahnhof.se) has quit (Read error: Connection reset by peer)
+2019-11-12 15:00:08	-->	Jattenalle (~CABAL@h-207-79.A246.priv.bahnhof.se) has joined #reddit-gamedev
+2019-11-12 15:00:08	--	Mode #reddit-gamedev [+v Jattenalle] by ChanServ
+2019-11-12 15:21:20	-->	turt2live (travist2li@gateway/shell/matrix.org/x-lztgyjitromqaclj) has joined #reddit-gamedev
+2019-11-12 15:21:20	-->	planetis[m] (planetisma@gateway/shell/matrix.org/x-tzckcsyydgawqzwv) has joined #reddit-gamedev
+2019-11-12 15:39:52	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #reddit-gamedev
+2019-11-12 15:50:16	-->	Uhfgood (~Uhfgood@2603:9000:b10b:c00:d19b:cd01:6302:73e7) has joined #reddit-gamedev
+2019-11-12 16:20:30	-->	ImQ009 (~ImQ009@unaffiliated/imq009) has joined #reddit-gamedev
+2019-11-12 16:24:24	-->	enrio (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-11-12 16:30:03	<--	enrio (~nanoz@unaffiliated/nanoz) has quit (Read error: Connection reset by peer)
+2019-11-12 16:31:14	-->	enrio (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-11-12 16:31:43	<--	enrio (~nanoz@unaffiliated/nanoz) has quit (Read error: Connection reset by peer)
+2019-11-12 16:48:45	-->	enrio (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-11-12 16:50:16	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-11-12 16:50:16	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-11-12 16:50:16	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-11-12 16:50:16	--	Channel #reddit-gamedev: 68 nicks (0 ops, 15 voices, 53 normals)
+2019-11-12 16:50:21	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-11-12 16:51:59	-->	enrioog (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-11-12 16:53:35	<--	enrio (~nanoz@unaffiliated/nanoz) has quit (Ping timeout: 250 seconds)
+2019-11-12 16:56:19	<--	enrioog (~nanoz@unaffiliated/nanoz) has quit (Read error: Connection reset by peer)
+2019-11-12 16:57:12	-->	enrio (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-11-12 16:59:49	<--	enrio (~nanoz@unaffiliated/nanoz) has quit (Read error: Connection reset by peer)
+2019-11-12 17:01:47	-->	enrio (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-11-12 17:07:14	<--	enrio (~nanoz@unaffiliated/nanoz) has quit (Ping timeout: 276 seconds)
+2019-11-12 17:07:50	-->	enrio (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-11-12 17:13:30	-->	enrioog (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-11-12 17:15:48	-->	nanoz (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-11-12 17:16:17	<--	enrio (~nanoz@unaffiliated/nanoz) has quit (Ping timeout: 240 seconds)
+2019-11-12 17:18:37	<--	enrioog (~nanoz@unaffiliated/nanoz) has quit (Ping timeout: 240 seconds)
+2019-11-12 17:21:39	<--	nanoz (~nanoz@unaffiliated/nanoz) has quit (Ping timeout: 240 seconds)
+2019-11-12 17:22:55	<--	Narris (~bunnies@vtelinet-216-66-102-10.vermontel.net) has quit (Read error: Connection reset by peer)
+2019-11-12 17:23:18	-->	Narris (~bunnies@vtelinet-216-66-102-10.vermontel.net) has joined #reddit-gamedev
+2019-11-12 17:31:30	-->	Chevluh (~Chev@238.49.77.83.dynamic.wline.res.cust.swisscom.ch) has joined #reddit-gamedev
+2019-11-12 17:55:19	-->	macz (~macz@67.231.29.194) has joined #reddit-gamedev
+2019-11-13 09:10:10	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-11-13 09:10:10	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-11-13 09:10:10	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-11-13 09:10:10	--	Channel #reddit-gamedev: 64 nicks (0 ops, 15 voices, 49 normals)
+2019-11-13 09:10:13	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-11-13 09:23:26	<--	shan (~shan@unaffiliated/jasatso1301) has quit (Ping timeout: 265 seconds)
+2019-11-13 09:47:18	-->	Coldblackice_ (~c@unaffiliated/coldblackice) has joined #reddit-gamedev
+2019-11-13 09:48:34	<--	Coldblackice (~c@unaffiliated/coldblackice) has quit (Ping timeout: 265 seconds)
+2019-11-13 09:50:58	<--	Uhfgood (~Uhfgood@2603:9000:b10b:c00:70f3:d77e:3acb:5834) has quit (Read error: Connection reset by peer)
+2019-11-13 09:51:24	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #reddit-gamedev
+2019-11-13 09:55:36	<--	Coldblackice_ (~c@unaffiliated/coldblackice) has quit (Ping timeout: 240 seconds)
+2019-11-13 09:58:12	-->	Coldblackice (~c@unaffiliated/coldblackice) has joined #reddit-gamedev
+2019-11-13 10:00:21	-->	Coldblackice_ (c@gateway/vpn/privateinternetaccess/coldblackice) has joined #reddit-gamedev
+2019-11-13 10:04:37	<--	Coldblackice (~c@unaffiliated/coldblackice) has quit (Ping timeout: 268 seconds)
+2019-11-13 10:10:48	<--	Coldblackice_ (c@gateway/vpn/privateinternetaccess/coldblackice) has quit (Ping timeout: 265 seconds)
+2019-11-13 10:10:51	-->	Coldblackice (~c@unaffiliated/coldblackice) has joined #reddit-gamedev
+2019-11-13 10:22:21	<--	Coldblackice (~c@unaffiliated/coldblackice) has quit (Ping timeout: 246 seconds)
+2019-11-13 10:37:15	<--	terminx (~terminx@198.8.81.214) has quit (Ping timeout: 240 seconds)
+2019-11-13 10:38:18	-->	terminx (~terminx@198.8.81.214) has joined #reddit-gamedev
+2019-11-13 10:38:18	--	Mode #reddit-gamedev [+v terminx] by ChanServ
+2019-11-13 10:39:25	<--	bomb (~bomb@gateway/tor-sasl/bomb) has quit (Remote host closed the connection)
+2019-11-13 10:40:51	-->	Cahaan (~Cahaan@109.129.13.76) has joined #reddit-gamedev
+2019-11-13 10:40:51	--	Mode #reddit-gamedev [+v Cahaan] by ChanServ
+2019-11-13 10:43:13	deniska	there's gdscript highlighting for vim, what other external tools would you ever need? :P
+2019-11-13 10:44:08	deniska	(and there's C# support nowadays to appease unity refugees)
+2019-11-13 10:54:54	+carefish	i'll never understand or agree with their decision to make their own prog language
+2019-11-13 10:55:03	-->	Coldblackice (~c@unaffiliated/coldblackice) has joined #reddit-gamedev
+2019-11-13 10:55:17	+carefish	how to fracture a userbase 101
+2019-11-13 10:57:19	-->	Coldblackice_ (~c@unaffiliated/coldblackice) has joined #reddit-gamedev
+2019-11-13 10:58:23	deniska	It was an internal tool, so they didn't care about userbase at the time
+2019-11-13 10:58:49	deniska	And I guess it was easier to invent a language than to embed lua or python ¯\_(ツ)_/¯
+2019-11-13 10:59:37	<--	Coldblackice (~c@unaffiliated/coldblackice) has quit (Ping timeout: 265 seconds)
+2019-11-13 11:05:38	+carefish	deniska: it reeks of NIH syndrome to me
+2019-11-13 11:06:23	<--	Coldblackice_ (~c@unaffiliated/coldblackice) has quit (Ping timeout: 265 seconds)
+2019-11-13 11:07:41	+carefish	http://docs.godotengine.org/en/latest/about/faq.html#gdscript-why-your-own-scripting-language-why-not-lua-javascript-c-etc also re-reading this
+2019-11-13 11:09:37	+carefish	i don't like their reasoning either tbh
+2019-11-13 11:10:43	+carefish	imo a custom language, no matter how 'simplified' it is, is increading complexity, not reducing it imo.
+2019-11-13 11:11:58	+carefish	their second argument that it makes maintenance easier also sounds like the exact opposite: anytime someone finds a bug with your custom language... it might be hard to locate/solve/etc, whereas with a standard implementation of python or any other language you can, generally, assume its your wrapping code that's messing things up rather than the script language itself
+2019-11-13 11:13:14	+carefish	when that page claims it would have been a worse experience to use other embeddable language, isn't that them admitting their architecture sucks for adding any scripting language?
+2019-11-13 11:13:51	+carefish	and they close with 'why not just give it a try' after giving these (imo) non-arguments as to why gdscript was a better choice
+2019-11-13 11:16:12	+carefish	their list of motivations imo only reads like 'yeah it was too much work, so we decided to make our own scripting language'
+2019-11-13 11:17:01	+carefish	poor thread support? i disagree here, some of the vm's they're mentioning explicitly tell you to add your own threading model on top of it if you require it
+2019-11-13 11:17:22	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Quit: Leaving)
+2019-11-13 11:17:31	+carefish	i kind-of agree with the poor class-extending supprot, i'll give em that.
+2019-11-13 11:18:13	+carefish	no 3 is actually very weird to say, cause imo only python is a bit weird to embed but stuff like google's v8 or spidermonkey is kinda straight forward in c++
+2019-11-13 11:18:57	+carefish	no native vector types is... a super weird argument, because that entirely depends on how you decide to add or implement a scripting language
+2019-11-13 11:19:26	+carefish	w/ google's v8 for example, you can bind native types to their js-object counter parts
+2019-11-13 11:20:07	+carefish	i'm quite sure other languages like lua and python offer similar if not the same mechanics to help with 'housekeeping' between VM objects and 'native' objects
+2019-11-13 11:20:50	+carefish	GC collector issues would also happen with your own scripting language, unless you don't have any which is unlikely if they modelled their gdscript after python
+2019-11-13 11:21:31	+carefish	the last one absolutely is weird, because when i look at C# for visual studio code... that also uses a 'language server' to provide completion and whatnot
+2019-11-13 11:22:05	+carefish	or looking at haxe, which also offers code completion through a 'language server'
+2019-11-13 11:29:37	deniska	well, for me it wouldn't make a huge difference whether it's gdscript or haxe
+2019-11-13 11:29:43	deniska	both are obscure languages :)
+2019-11-13 11:40:55	+carefish	i wouldn't call haxe obscure tho
+2019-11-13 11:41:12	+carefish	https://haxe.org/use-cases/who-uses-haxe.html
+2019-11-13 11:41:22	+carefish	some pretty darn big names on there
+2019-11-13 11:42:06	+carefish	granted, it might still be a niche language
+2019-11-13 11:43:39	mursu	definitely a niche language
+2019-11-13 11:43:46	mursu	but not as niche as GDScript lol
+2019-11-13 11:44:59	+carefish	also general purpose vs engine specific
+2019-11-13 11:46:45	mursu	that too
+2019-11-13 11:47:39	mursu	though GDScript isn't THAT bad if you are already familiar with programming it's still annoying to have to constantly check the reference
+2019-11-13 11:48:22	yuken	I liked Godot from what I used of it, although I still dunno if I want to stick with it for any of my future games.
+2019-11-13 11:49:25	mursu	anything bad/good that sticks out?
+2019-11-13 11:50:14	yuken	Right now, no headless/server C# builds. Other than that, not really.
+2019-11-13 11:50:21	+carefish	i don't want to learn some wonky language with poorly supported design choices other than 'we know what we're doing'-type of explanation
+2019-11-13 11:51:24	+carefish	lua, C#, python, js, the establised languages all have committee's and such
+2019-11-13 11:51:44	mursu	you can always use C++ with Godot if you feel so inclined
+2019-11-13 11:51:55	+carefish	hehe
+2019-11-13 11:52:03	+carefish	i don't ever intend to use godot
+2019-11-13 11:52:19	mursu	:+1:
+2019-11-13 11:52:24	+carefish	lack of the standard things under the guise of being open is a poor fit for me :p
+2019-11-13 11:52:43	+carefish	fbx being proprietary should still be a simple tickbox in installation for most end-users
+2019-11-13 11:53:01	+carefish	rather than having to get it through plugins
+2019-11-13 11:53:11	yuken	I'm still itnerested in https://amethyst.rs
+2019-11-13 11:53:18	+carefish	and each plugin with varying levels of 'quality'
+2019-11-13 11:54:08	+carefish	don't get me wrong btw, i appload anyone using godot and making great games/apps with it. it's just not for me.
+2019-11-13 11:56:04	mursu	I think the plugin issue is an issue with plugins in general rather than godot specific though
+2019-11-13 11:56:12	-->	bomb (~bomb@gateway/tor-sasl/bomb) has joined #reddit-gamedev
+2019-11-13 11:56:12	--	Mode #reddit-gamedev [+v bomb] by ChanServ
+2019-11-13 11:56:32	mursu	unless you go the route of having some kind of approval process, which has its own issues
+2019-11-13 11:56:56	+carefish	idk who makes or maintains the godot fbx plugin
+2019-11-13 11:57:12	+carefish	but it feels kind-of weird for a game engine not to have an industry standard included because of licensing issues
+2019-11-13 11:57:36	+carefish	and its not even about monetary licenses, just that autodesk doesn't want to open source their fbx sdk
+2019-11-13 11:57:54	+bomb	aeth: i don't use any of the tools Godot provides anyway. my game has no tilemaps, no collision shapes, no skeletal animations
+2019-11-13 11:58:04	+carefish	imo FBX support should be first-class through direct support or at least a 'vetted' plugin that provides this
+2019-11-13 11:58:38	+carefish	i don't know how that's done at godot, so besides having a shortsighted opinion on that specific bit i'm open to be corrected on this
+2019-11-13 11:59:03	+bomb	FBX support is still a problem since assimp?
+2019-11-13 11:59:11	+carefish	idk
+2019-11-13 12:04:39	-->	enrioog (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-11-13 12:07:17	<--	enrio (~nanoz@unaffiliated/nanoz) has quit (Ping timeout: 265 seconds)
+2019-11-13 12:24:17	<--	titanbiscuit (~tbisk@152.89.160.126) has quit (Read error: Connection reset by peer)
+2019-11-13 12:25:37	-->	titanbiscuit (~tbisk@152.89.160.126) has joined #reddit-gamedev
+2019-11-13 12:27:45	+zebbiz_pi	Found a Nokia 3210 yesterday
+2019-11-13 12:27:48	+zebbiz_pi	I hope it works
+2019-11-13 12:29:48	+bomb	heh
+2019-11-13 12:29:59	+bomb	that weapon is banned in most countries
+2019-11-13 12:30:07	+zebbiz_pi	You're thinking of 3310
+2019-11-13 12:30:36	+bomb	i really wanted a 3210 when i was younger
+2019-11-13 12:30:41	+bomb	i thought 3310 was meh
+2019-11-13 12:34:25	+zebbiz_pi	https://www.youtube.com/watch?v=4GS2Rw9GzHA
+2019-11-13 12:35:07	+bomb	hehehe i love these phones ringtone composers
+2019-11-13 12:49:11	-->	enrio (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-11-13 12:51:45	<--	enrioog (~nanoz@unaffiliated/nanoz) has quit (Ping timeout: 250 seconds)
+2019-11-13 12:52:25	-->	enrioog (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-11-13 12:54:32	<--	enrioog (~nanoz@unaffiliated/nanoz) has quit (Read error: Connection reset by peer)
+2019-11-13 12:55:00	-->	enrioog (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-11-13 12:55:02	-->	Quetzal2_ (c133ecb8@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.184) has joined #reddit-gamedev
+2019-11-13 12:55:39	<--	enrio (~nanoz@unaffiliated/nanoz) has quit (Ping timeout: 240 seconds)
+2019-11-13 12:55:46	<--	enrioog (~nanoz@unaffiliated/nanoz) has quit (Read error: Connection reset by peer)
+2019-11-13 12:56:15	-->	enrioog (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-11-13 12:57:02	--	enrioog is now known as enrio
+2019-11-13 13:29:12	-->	shan (~shan@unaffiliated/jasatso1301) has joined #reddit-gamedev
+2019-11-13 13:29:13	--	Mode #reddit-gamedev [+v shan] by ChanServ
+2019-11-13 14:25:42	<--	enrio (~nanoz@unaffiliated/nanoz) has quit (Read error: Connection reset by peer)
+2019-11-13 14:27:06	-->	enrio (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-11-13 15:21:56	<--	enrio (~nanoz@unaffiliated/nanoz) has quit (Ping timeout: 240 seconds)

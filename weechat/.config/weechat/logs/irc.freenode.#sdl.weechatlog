@@ -1099,3 +1099,249 @@
 2019-11-06 16:10:21	<--	joakim12 (~leho@ae6c-877e-6ba9-28bb-6a80-88c8-07d0-2001.dyn.estpak.ee) has left #SDL ("Leaving")
 2019-11-06 16:13:23	-->	Xeek (~xeek@unaffiliated/xeek) has joined #SDL
 2019-11-06 16:14:35	-->	ImQ009 (~ImQ009@unaffiliated/imq009) has joined #SDL
+2019-11-06 16:44:02	J_L_P	repaired "Space Swap 110%"
+2019-11-06 16:44:10	J_L_P	2 game left
+2019-11-06 16:44:13	J_L_P	games*
+2019-11-06 17:06:15	EvanR	gamer repairer 2019
+2019-11-06 17:10:15	<--	Lightkey (~Darklock@p200300F693C0485022CF30FFFE083718.dip0.t-ipconnect.de) has quit (Ping timeout: 264 seconds)
+2019-11-06 17:14:23	J_L_P	putting Unity engine aside(again) - want to work with fixed AppGameKit Classic more - should be starting brand new game project in a few weeks
+2019-11-06 17:22:24	-->	Lightkey (~Darklock@p200300F693C0488822CF30FFFE083718.dip0.t-ipconnect.de) has joined #SDL
+2019-11-06 17:30:42	<--	Xeek (~xeek@unaffiliated/xeek) has quit (Quit: Lost terminal)
+2019-11-06 17:39:46	-->	Xeek (~xeek@unaffiliated/xeek) has joined #SDL
+2019-11-07 09:11:40	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #SDL
+2019-11-07 09:11:40	--	Topic for #SDL is "Official SDL Channel http://www.libsdl.org/ | You must identify with NickServ to join/talk"
+2019-11-07 09:11:40	--	Topic set by akawaka (~akawaka@2605:e000:1701:40f8:211:32ff:fe51:9639) on Wed, 01 Aug 2018 18:04:39
+2019-11-07 09:11:40	--	Channel #SDL: 88 nicks (1 op, 0 voices, 87 normals)
+2019-11-07 09:11:46	--	PvNotice(ChanServ): Welcome to #sdl - The Offical Simple DirectMedia Layer Channel
+2019-11-07 09:11:46	--	URL for #SDL: http://www.libsdl.org/
+2019-11-07 09:11:49	--	Channel created on Sun, 26 Nov 2006 07:42:43
+2019-11-07 09:32:16	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #SDL
+2019-11-07 09:32:16	--	Topic for #SDL is "Official SDL Channel http://www.libsdl.org/ | You must identify with NickServ to join/talk"
+2019-11-07 09:32:16	--	Topic set by akawaka (~akawaka@2605:e000:1701:40f8:211:32ff:fe51:9639) on Wed, 01 Aug 2018 18:04:39
+2019-11-07 09:32:16	--	Channel #SDL: 88 nicks (1 op, 0 voices, 87 normals)
+2019-11-07 09:32:16	--	PvNotice(ChanServ): Welcome to #sdl - The Offical Simple DirectMedia Layer Channel
+2019-11-07 09:32:16	--	URL for #SDL: http://www.libsdl.org/
+2019-11-07 09:32:26	--	Channel created on Sun, 26 Nov 2006 07:42:43
+2019-11-07 09:35:23	-->	Tobbi (~Tobbi@supertux/tobbi) has joined #SDL
+2019-11-07 09:53:34	<--	Tobbi (~Tobbi@supertux/tobbi) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-11-07 10:13:38	-->	yann (~yann@85.118.38.73) has joined #SDL
+2019-11-07 11:01:14	<--	codebrainz (~codebrain@S010634bdfa9ee795.vc.shawcable.net) has quit (Ping timeout: 276 seconds)
+2019-11-07 11:03:17	-->	RebelCoder (~RebelCode@cpc121028-nmal24-2-0-cust148.19-2.cable.virginm.net) has joined #SDL
+2019-11-07 11:06:11	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #SDL
+2019-11-07 11:06:11	--	Topic for #SDL is "Official SDL Channel http://www.libsdl.org/ | You must identify with NickServ to join/talk"
+2019-11-07 11:06:11	--	Topic set by akawaka (~akawaka@2605:e000:1701:40f8:211:32ff:fe51:9639) on Wed, 01 Aug 2018 18:04:39
+2019-11-07 11:06:11	--	Channel #SDL: 89 nicks (1 op, 0 voices, 88 normals)
+2019-11-07 11:06:12	--	PvNotice(ChanServ): Welcome to #sdl - The Offical Simple DirectMedia Layer Channel
+2019-11-07 11:06:12	--	URL for #SDL: http://www.libsdl.org/
+2019-11-07 11:06:22	--	Channel created on Sun, 26 Nov 2006 07:42:43
+2019-11-07 11:25:43	<--	stefkos (~Pawel@79.184.188.227.ipv4.supernova.orange.pl) has quit (Read error: Connection reset by peer)
+2019-11-07 11:25:57	-->	stefkos (~Pawel@79.184.188.227.ipv4.supernova.orange.pl) has joined #SDL
+2019-11-07 11:28:10	<--	MarcinWieczorek (~marcin@212.182.24.81) has quit (Quit: ZNC 1.7.5 - https://znc.in)
+2019-11-07 11:29:00	-->	MarcinWieczorek (~marcin@212.182.24.81) has joined #SDL
+2019-11-07 11:38:43	<--	RebelCoder (~RebelCode@cpc121028-nmal24-2-0-cust148.19-2.cable.virginm.net) has quit (Quit: Leaving)
+2019-11-07 11:39:01	-->	RebelCoder (~RebelCode@cpc121028-nmal24-2-0-cust148.19-2.cable.virginm.net) has joined #SDL
+2019-11-07 13:24:37	-->	YuGiOhJCJ (~YuGiOhJCJ@gateway/tor-sasl/yugiohjcj) has joined #SDL
+2019-11-07 13:44:50	<--	J_L_P (~J_L_P@ool-44c0dad8.dyn.optonline.net) has quit (Quit: Leaving)
+2019-11-07 13:49:24	-->	donofrio (~donofrio@host-232.subnet-17.med.umich.edu) has joined #SDL
+2019-11-07 13:50:12	<--	donofrio (~donofrio@host-232.subnet-17.med.umich.edu) has quit (Remote host closed the connection)
+2019-11-07 13:50:36	-->	donofrio (~donofrio@host-232.subnet-17.med.umich.edu) has joined #SDL
+2019-11-07 13:50:59	-->	J_L_P (~J_L_P@ool-44c0dad8.dyn.optonline.net) has joined #SDL
+2019-11-07 14:03:51	<--	stefkos (~Pawel@79.184.188.227.ipv4.supernova.orange.pl) has quit (Quit: Going offline, see ya! (www.adiirc.com))
+2019-11-07 14:11:16	<--	Kingsquee (~mobile-de@node-1w7jr9qmxqrpn224cnrjitzt1.ipv6.telus.net) has quit (Quit: Konversation terminated!)
+2019-11-07 14:18:39	J_L_P	Morning!
+2019-11-07 15:54:41	-->	ray_caster (~ray_caste@81-227-94-115-no200.tbcn.telia.com) has joined #SDL
+2019-11-07 16:02:32	<--	RebelCoder (~RebelCode@cpc121028-nmal24-2-0-cust148.19-2.cable.virginm.net) has quit (Remote host closed the connection)
+2019-11-07 16:18:17	-->	ImQ009 (~ImQ009@unaffiliated/imq009) has joined #SDL
+2019-11-07 16:50:21	<--	ray_caster (~ray_caste@81-227-94-115-no200.tbcn.telia.com) has quit (Quit: ray_caster)
+2019-11-07 16:56:25	J_L_P	ran into a problem with Internet Cookies: browser limit is 50 cookies - Space Swap game has more than 50 Cookies
+2019-11-07 16:56:36	J_L_P	need to compress the Cookies
+2019-11-07 17:05:01	-->	dwclaire (~Darkhero@unaffiliated/darkhero) has joined #SDL
+2019-11-07 17:07:48	<--	Lightkey (~Darklock@p200300F693C0488822CF30FFFE083718.dip0.t-ipconnect.de) has quit (Ping timeout: 245 seconds)
+2019-11-07 17:21:15	-->	Lightkey (~Darklock@p200300F693C0488922CF30FFFE083718.dip0.t-ipconnect.de) has joined #SDL
+2019-11-07 17:23:15	<--	qeed_ (~qeed@c-76-102-116-207.hsd1.ca.comcast.net) has quit (Quit: qeed_)
+2019-11-07 17:30:31	-->	qeed (~qeed@c-76-102-116-207.hsd1.ca.comcast.net) has joined #SDL
+2019-11-07 17:31:53	-->	Xeek (~xeek@unaffiliated/xeek) has joined #SDL
+2019-11-07 17:37:42	Xeek	Good Morning
+2019-11-08 09:09:17	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #SDL
+2019-11-08 09:09:17	--	Topic for #SDL is "Official SDL Channel http://www.libsdl.org/ | You must identify with NickServ to join/talk"
+2019-11-08 09:09:17	--	Topic set by akawaka (~akawaka@2605:e000:1701:40f8:211:32ff:fe51:9639) on Wed, 01 Aug 2018 18:04:39
+2019-11-08 09:09:17	--	Channel #SDL: 91 nicks (1 op, 0 voices, 90 normals)
+2019-11-08 09:09:17	--	PvNotice(ChanServ): Welcome to #sdl - The Offical Simple DirectMedia Layer Channel
+2019-11-08 09:09:17	--	URL for #SDL: http://www.libsdl.org/
+2019-11-08 09:09:28	--	Channel created on Sun, 26 Nov 2006 07:42:43
+2019-11-08 09:20:57	<--	Tobbi (~Tobbi@supertux/tobbi) has quit (Ping timeout: 240 seconds)
+2019-11-08 09:40:22	<--	yann (~yann@91-170-159-152.subs.proxad.net) has quit (Ping timeout: 268 seconds)
+2019-11-08 09:45:25	<--	bitwinery (~bitwinery@c-73-37-18-139.hsd1.wa.comcast.net) has quit (Quit: Leaving)
+2019-11-08 09:56:57	<--	codebrainz (~codebrain@S010634bdfa9ee795.vc.shawcable.net) has quit (Ping timeout: 240 seconds)
+2019-11-08 10:37:40	-->	yann (~yann@85.118.38.73) has joined #SDL
+2019-11-08 11:20:53	-->	fogobogo (~fogobogo@unaffiliated/fogobogo) has joined #SDL
+2019-11-08 11:25:44	-->	MarcinWieczorek (~marcin@212.182.24.81) has joined #SDL
+2019-11-08 12:09:29	<--	fogobogo (~fogobogo@unaffiliated/fogobogo) has quit (Remote host closed the connection)
+2019-11-08 12:17:45	-->	fogobogo (~fogobogo@unaffiliated/fogobogo) has joined #SDL
+2019-11-08 12:28:50	<--	stefkos (~Pawel@79.184.188.227.ipv4.supernova.orange.pl) has quit (Ping timeout: 240 seconds)
+2019-11-08 13:57:31	-->	distcline (~dist@d8D867214.access.telenet.be) has joined #SDL
+2019-11-08 13:59:12	<--	J_L_P (~J_L_P@ool-44c0dad8.dyn.optonline.net) has quit (Quit: Leaving)
+2019-11-08 14:08:39	-->	J_L_P (~J_L_P@ool-44c0dad8.dyn.optonline.net) has joined #SDL
+2019-11-08 14:13:26	distcline	using alsa as backend i'm playing simple wave files with SDL_QueueAudio, everything works fine. often though my terminal gets spammed with
+2019-11-08 14:13:37	distcline	Alsa lib: /alsa-lib-1.1.9/src/pcm/pcm.c:8432:(snd_pcm_recover) underrun occurred
+2019-11-08 14:15:11	distcline	don't see how i'm doing something different than the examples. any clean way to handle this or should i just ignore it
+2019-11-08 14:18:11	distcline	perhaps a better question is how can i abort a playing sound
+2019-11-08 14:31:59	J_L_P	Morning!
+2019-11-08 15:04:36	J_L_P	Internet Cookie limitations are pretty severe
+2019-11-08 15:04:50	J_L_P	max 50 Cookies per domain
+2019-11-08 15:05:16	J_L_P	max 4096 Bytes per Cookie
+2019-11-08 15:05:23	<--	Lightkey (~Darklock@p200300F693C0488922CF30FFFE083718.dip0.t-ipconnect.de) has quit (Ping timeout: 250 seconds)
+2019-11-08 15:17:53	<--	distcline (~dist@d8D867214.access.telenet.be) has quit (Quit: Leaving)
+2019-11-08 16:03:15	<--	Lucretia (~Luke@pdpc/supporter/active/lucretia) has quit (Quit: Konversation terminated!)
+2019-11-08 16:17:02	-->	ImQ009 (~ImQ009@unaffiliated/imq009) has joined #SDL
+2019-11-08 16:28:43	fogobogo	seems plenty. interesting factoid though
+2019-11-08 16:29:10	fogobogo	thats 200k worth of cookies
+2019-11-08 16:29:43	fogobogo	enough for a whole book
+2019-11-08 16:51:57	-->	LunarJetman (LunarJetma@5ec1bc5a.skybroadband.com) has joined #SDL
+2019-11-08 16:55:06	-->	Lucretia (~Luke@pdpc/supporter/active/lucretia) has joined #SDL
+2019-11-08 17:00:00	J_L_P	fogobogo - I managed to fit all game data into 1 cookie - so then I am limited to only 50 HTML5 games on my domain
+2019-11-08 17:00:19	J_L_P	might take some time to make 51 HTML5 games though
+2019-11-08 17:00:56	J_L_P	currently have 6 HTML5 live on my domain
+2019-11-08 17:01:07	J_L_P	HTML5 games*
+2019-11-08 17:01:10	fogobogo	certainly. might want to give your players a warning they need cookies enabled though
+2019-11-08 17:01:25	fogobogo	for saving that is
+2019-11-08 17:08:11	fogobogo	J_L_P: how about subdomains? do they count to that as well?
+2019-11-08 17:08:33	J_L_P	fogobogo - don't know much about subdomains, not sure
+2019-11-08 17:09:13	fogobogo	e.g. mygame.jlp.com
+2019-11-08 17:09:25	J_L_P	cookies are listed for http://www.FallenAngelSoftware.com
+2019-11-08 17:09:39	fogobogo	just wondering
+2019-11-08 17:09:55	J_L_P	are subdomains free, or I must pay extra for them?
+2019-11-08 17:11:27	fogobogo	afaik its a simple matter of proper server config
+2019-11-08 17:11:42	Xeek	depends on yoru host, most hosting packges gives you free unlimited subdomains, tis' the primary domain that costs money froma registrar, the subdomains are mearly server configurations
+2019-11-08 17:12:08	fogobogo	what Xeek said ^
+2019-11-08 17:12:38	Xeek	with xeekworx.com I get unlimited subdomains and emails, I think unlimited parked domains too, but registration costs money, ~$14.99 per year usually. Most hosting account though is $12.99 /mo
+2019-11-08 17:12:57	Xeek	with xeek.xyz though, its my server hear next to me, I can do as much as I want :D
+2019-11-08 17:13:09	Xeek	here*
+2019-11-11 09:32:18	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #SDL
+2019-11-11 09:32:18	--	Topic for #SDL is "Official SDL Channel http://www.libsdl.org/ | You must identify with NickServ to join/talk"
+2019-11-11 09:32:18	--	Topic set by akawaka (~akawaka@2605:e000:1701:40f8:211:32ff:fe51:9639) on Wed, 01 Aug 2018 18:04:39
+2019-11-11 09:32:18	--	Channel #SDL: 89 nicks (1 op, 0 voices, 88 normals)
+2019-11-11 09:32:18	--	PvNotice(ChanServ): Welcome to #sdl - The Offical Simple DirectMedia Layer Channel
+2019-11-11 09:32:18	--	URL for #SDL: http://www.libsdl.org/
+2019-11-11 09:32:27	--	Channel created on Sun, 26 Nov 2006 07:42:43
+2019-11-11 09:43:01	<--	Tobbi (~Tobbi@supertux/tobbi) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-11-11 11:22:52	<--	Elysion_ (~Elysion@ppp14-2-110-228.adl-apt-pir-bras32.tpg.internode.on.net) has quit (Read error: Connection timed out)
+2019-11-11 11:24:01	-->	Elysion_ (~Elysion@ppp14-2-110-228.adl-apt-pir-bras32.tpg.internode.on.net) has joined #SDL
+2019-11-11 13:01:11	<--	YuGiOhJCJ (~YuGiOhJCJ@gateway/tor-sasl/yugiohjcj) has quit (Quit: YuGiOhJCJ)
+2019-11-11 13:20:52	-->	Gorbit99 (9842a944@dhcp-324.q.wlan.net.bme.hu) has joined #SDL
+2019-11-11 13:29:53	Gorbit99	Hey, I have a small problem with SDL_RenderSetClipRect, it seems like, if I use it, even if I try to disable clipping afterwards, it will only clear the rectangle I specified as the clipping
+2019-11-11 13:30:16	Gorbit99	Strangely, if I draw a line before the clear, it will clear correctly
+2019-11-11 13:35:59	-->	Hexmind (~alain@172-97-200-182.cpe.distributel.net) has joined #SDL
+2019-11-11 13:56:04	<--	Gorbit99 (9842a944@dhcp-324.q.wlan.net.bme.hu) has quit (Remote host closed the connection)
+2019-11-11 15:08:35	<--	J_L_P (~J_L_P@ool-44c0dad8.dyn.optonline.net) has quit (Quit: Leaving)
+2019-11-11 15:13:48	-->	J_L_P (~J_L_P@ool-44c0dad8.dyn.optonline.net) has joined #SDL
+2019-11-11 15:43:06	-->	donofrio (~donofrio@host-232.subnet-17.med.umich.edu) has joined #SDL
+2019-11-11 15:48:34	J_L_P	Morning!
+2019-11-11 16:06:33	<--	Hexmind (~alain@172-97-200-182.cpe.distributel.net) has quit (Ping timeout: 245 seconds)
+2019-11-11 16:45:29	J_L_P	probably starting next AppGameKit game project in about a week!
+2019-11-11 17:00:59	<--	Lightkey (~Darklock@p200300F693C0487522CF30FFFE083718.dip0.t-ipconnect.de) has quit (Ping timeout: 250 seconds)
+2019-11-11 17:13:38	-->	Lightkey (~Darklock@p200300F693C0488722CF30FFFE083718.dip0.t-ipconnect.de) has joined #SDL
+2019-11-11 17:35:28	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #SDL
+2019-11-11 17:35:28	--	Topic for #SDL is "Official SDL Channel http://www.libsdl.org/ | You must identify with NickServ to join/talk"
+2019-11-11 17:35:28	--	Topic set by akawaka (~akawaka@2605:e000:1701:40f8:211:32ff:fe51:9639) on Wed, 01 Aug 2018 18:04:39
+2019-11-11 17:35:28	--	Channel #SDL: 88 nicks (1 op, 0 voices, 87 normals)
+2019-11-11 17:35:28	--	PvNotice(ChanServ): Welcome to #sdl - The Offical Simple DirectMedia Layer Channel
+2019-11-11 17:35:28	--	URL for #SDL: http://www.libsdl.org/
+2019-11-11 17:35:37	--	Channel created on Sun, 26 Nov 2006 07:42:43
+2019-11-11 17:53:51	-->	antilogic (~epic@88.118.168.252) has joined #SDL
+2019-11-12 09:16:51	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #SDL
+2019-11-12 09:16:51	--	Topic for #SDL is "Official SDL Channel http://www.libsdl.org/ | You must identify with NickServ to join/talk"
+2019-11-12 09:16:51	--	Topic set by akawaka (~akawaka@2605:e000:1701:40f8:211:32ff:fe51:9639) on Wed, 01 Aug 2018 18:04:39
+2019-11-12 09:16:51	--	Channel #SDL: 88 nicks (1 op, 0 voices, 87 normals)
+2019-11-12 09:16:52	--	PvNotice(ChanServ): Welcome to #sdl - The Offical Simple DirectMedia Layer Channel
+2019-11-12 09:16:52	--	URL for #SDL: http://www.libsdl.org/
+2019-11-12 09:17:01	--	Channel created on Sun, 26 Nov 2006 07:42:43
+2019-11-12 09:24:11	-->	MarcinWieczorek (~marcin@178-36-208-76.adsl.inetia.pl) has joined #SDL
+2019-11-12 09:32:37	-->	Redfoxmoon (~red@unaffiliated/kitt3n) has joined #SDL
+2019-11-12 09:36:57	<--	yann (~yann@91-170-159-152.subs.proxad.net) has quit (Ping timeout: 246 seconds)
+2019-11-12 09:41:28	<--	MarcinWieczorek (~marcin@178-36-208-76.adsl.inetia.pl) has quit (Quit: ZNC 1.7.5 - https://znc.in)
+2019-11-12 10:29:19	-->	Tobbi (~Tobbi@supertux/tobbi) has joined #SDL
+2019-11-12 10:39:06	-->	MarcinWieczorek (~marcin@212.182.24.81) has joined #SDL
+2019-11-12 10:39:56	<--	ArRay_ (~ArRay_@gateway/tor-sasl/array/x-42000387) has quit (Ping timeout: 260 seconds)
+2019-11-12 10:40:15	<--	Tobbi (~Tobbi@supertux/tobbi) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-11-12 10:53:26	-->	ArRay_ (~ArRay_@gateway/tor-sasl/array/x-42000387) has joined #SDL
+2019-11-12 11:19:48	-->	yann (~yann@85.118.38.73) has joined #SDL
+2019-11-12 11:57:00	<--	J_L_P (~J_L_P@ool-44c0dad8.dyn.optonline.net) has quit (Quit: Leaving)
+2019-11-12 12:01:46	-->	J_L_P (~J_L_P@ool-44c0dad8.dyn.optonline.net) has joined #SDL
+2019-11-12 13:05:12	begui	swivel, saw it driving home last night
+2019-11-12 13:10:26	demonicmaniac3	https://www.youtube.com/watch?v=szby7ZHLnkA
+2019-11-12 13:38:47	<--	rnx[m] (rnxmatrixo@gateway/shell/matrix.org/x-hwyjzzeihbsxvwdz) has quit (Remote host closed the connection)
+2019-11-12 13:39:13	<--	morguldir[m] (criminalma@gateway/shell/matrix.org/x-fkdclrhkcvzailiz) has quit (Write error: Connection reset by peer)
+2019-11-12 13:39:24	<--	Coldragon[m] (coldragonm@gateway/shell/matrix.org/x-crrutfmoahtksnkl) has quit (Write error: Connection reset by peer)
+2019-11-12 13:47:18	begui	that doesn't look that bad at all... i'd go see it
+2019-11-12 13:48:20	<--	mniip (mniip@freenode/staff/mniip) has quit (Ping timeout: 612 seconds)
+2019-11-12 14:24:38	-->	Thedarkb (~beno@193.1.184.232) has joined #SDL
+2019-11-12 14:24:40	Thedarkb	Hey
+2019-11-12 14:24:56	Thedarkb	I'm looking to blit an image onto a surface, but it's not showing up for me.
+2019-11-12 14:25:24	Thedarkb	http://dpaste.com/150X1XY
+2019-11-12 14:25:26	Thedarkb	Here's my code.
+2019-11-12 14:30:47	-->	mniip (mniip@freenode/staff/mniip) has joined #SDL
+2019-11-12 14:33:41	<--	ArRay_ (~ArRay_@gateway/tor-sasl/array/x-42000387) has quit (Remote host closed the connection)
+2019-11-12 14:34:16	-->	ArRay_ (~ArRay_@gateway/tor-sasl/array/x-42000387) has joined #SDL
+2019-11-12 14:38:06	Thedarkb	I'm just blitting straight to the window surface and then running UpdateWindowSurface
+2019-11-12 15:07:42	<--	Thedarkb (~beno@193.1.184.232) has quit (Ping timeout: 246 seconds)
+2019-11-12 15:08:45	-->	Coldragon[m] (coldragonm@gateway/shell/matrix.org/x-fpeelnchynbnktch) has joined #SDL
+2019-11-12 15:08:52	-->	rnx[m] (rnxmatrixo@gateway/shell/matrix.org/x-wycyyhywrkzbjlkj) has joined #SDL
+2019-11-12 15:12:07	-->	donofrio_ (~donofrio@host-232.subnet-17.med.umich.edu) has joined #SDL
+2019-11-12 15:14:53	<--	donofrio (~donofrio@host-232.subnet-17.med.umich.edu) has quit (Ping timeout: 268 seconds)
+2019-11-12 15:25:59	<--	codebrainz (~codebrain@S010634bdfa9ee795.vc.shawcable.net) has quit (Ping timeout: 268 seconds)
+2019-11-12 16:20:30	-->	ImQ009 (~ImQ009@unaffiliated/imq009) has joined #SDL
+2019-11-12 16:32:08	<--	yann (~yann@85.118.38.73) has quit (Ping timeout: 276 seconds)
+2019-11-12 16:50:16	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #SDL
+2019-11-12 16:50:16	--	Topic for #SDL is "Official SDL Channel http://www.libsdl.org/ | You must identify with NickServ to join/talk"
+2019-11-12 16:50:16	--	Topic set by akawaka (~akawaka@2605:e000:1701:40f8:211:32ff:fe51:9639) on Wed, 01 Aug 2018 18:04:39
+2019-11-12 16:50:16	--	Channel #SDL: 88 nicks (1 op, 0 voices, 87 normals)
+2019-11-12 16:50:16	--	PvNotice(ChanServ): Welcome to #sdl - The Offical Simple DirectMedia Layer Channel
+2019-11-12 16:50:16	--	URL for #SDL: http://www.libsdl.org/
+2019-11-12 16:50:27	--	Channel created on Sun, 26 Nov 2006 07:42:43
+2019-11-12 16:57:15	-->	antilogic (~epic@88.118.168.252) has joined #SDL
+2019-11-12 16:58:47	<--	Lightkey (~Darklock@p200300F693C0488722CF30FFFE083718.dip0.t-ipconnect.de) has quit (Ping timeout: 250 seconds)
+2019-11-12 17:01:45	-->	yann (~yann@85.118.38.73) has joined #SDL
+2019-11-12 17:11:38	-->	Lightkey (~Darklock@p200300F693C0485222CF30FFFE083718.dip0.t-ipconnect.de) has joined #SDL
+2019-11-13 09:10:10	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #SDL
+2019-11-13 09:10:10	--	Topic for #SDL is "Official SDL Channel http://www.libsdl.org/ | You must identify with NickServ to join/talk"
+2019-11-13 09:10:10	--	Topic set by akawaka (~akawaka@2605:e000:1701:40f8:211:32ff:fe51:9639) on Wed, 01 Aug 2018 18:04:39
+2019-11-13 09:10:10	--	Channel #SDL: 84 nicks (1 op, 0 voices, 83 normals)
+2019-11-13 09:10:10	--	PvNotice(ChanServ): Welcome to #sdl - The Offical Simple DirectMedia Layer Channel
+2019-11-13 09:10:10	--	URL for #SDL: http://www.libsdl.org/
+2019-11-13 09:10:19	--	Channel created on Sun, 26 Nov 2006 07:42:43
+2019-11-13 09:12:26	-->	kirenoto (~Kirenoto@c-73-244-214-94.hsd1.fl.comcast.net) has joined #SDL
+2019-11-13 09:14:36	<--	Elysion_ (~Elysion@ppp14-2-110-228.adl-apt-pir-bras32.tpg.internode.on.net) has quit (Read error: Connection reset by peer)
+2019-11-13 09:14:51	<--	yann (~yann@91-170-159-152.subs.proxad.net) has quit (Ping timeout: 240 seconds)
+2019-11-13 10:01:35	<--	mokafolio (~mokafolio@mokafolio.powered.by.lunarbnc.net) has quit (Quit: Bye Bye!)
+2019-11-13 10:01:40	<--	krator44 (~krator44@unaffiliated/krator44) has quit (Quit: --)
+2019-11-13 10:05:22	-->	mokafolio (~mokafolio@mokafolio.powered.by.lunarbnc.net) has joined #SDL
+2019-11-13 10:05:26	-->	yann (~yann@85.118.38.73) has joined #SDL
+2019-11-13 10:09:19	-->	krator44 (~krator44@unaffiliated/krator44) has joined #SDL
+2019-11-13 10:26:59	-->	slvn_ (~slvn_@2a01:e34:ef55:a6f0:8d4b:9e46:e7a:794) has joined #SDL
+2019-11-13 10:39:54	-->	Thedarkb (~beno@193.1.184.232) has joined #SDL
+2019-11-13 10:40:13	Thedarkb	Hey, I'm trying to blit an image onto a surface but can't persuade it to work.
+2019-11-13 10:40:14	Thedarkb	http://dpaste.com/24F6APQ
+2019-11-13 10:41:29	demonicmaniac3	you override s
+2019-11-13 10:41:37	demonicmaniac3	from just a simple quick glance
+2019-11-13 10:42:22	Thedarkb	What do you mean?
+2019-11-13 10:42:27	demonicmaniac3	and bgl is null so you copy null to the window surface in draw
+2019-11-13 10:42:45	Thedarkb	OH
+2019-11-13 10:42:47	Thedarkb	I'm an idiot.
+2019-11-13 10:42:48	Thedarkb	Thank you.
+2019-11-13 10:42:51	demonicmaniac3	:)
+2019-11-13 10:43:42	-->	RebelCoderRU (~RebelCode@cpc121028-nmal24-2-0-cust148.19-2.cable.virginm.net) has joined #SDL
+2019-11-13 10:44:25	Thedarkb	I meant to type bgl = IMG_Load, not s = IMG_Load
+2019-11-13 10:44:34	Thedarkb	I've been stumped by this for days.
+2019-11-13 10:44:38	Thedarkb	Lol
+2019-11-13 10:44:41	demonicmaniac3	XD
+2019-11-13 10:48:30	<--	RebelCoderRU (~RebelCode@cpc121028-nmal24-2-0-cust148.19-2.cable.virginm.net) has quit (Ping timeout: 265 seconds)
+2019-11-13 11:12:19	<--	Thedarkb (~beno@193.1.184.232) has quit (Remote host closed the connection)
+2019-11-13 11:34:27	<--	codebrainz (~codebrain@S010634bdfa9ee795.vc.shawcable.net) has quit (Ping timeout: 240 seconds)
+2019-11-13 13:36:49	-->	Thedarkb (~beno@193.1.184.232) has joined #SDL
+2019-11-13 13:42:22	-->	zap0 (~zap0@14-201-222-143.tpgi.com.au) has joined #SDL
+2019-11-13 13:48:20	-->	J_L_P (68251f14@gateway/web/cgi-irc/kiwiirc.com/ip.104.37.31.20) has joined #SDL
+2019-11-13 13:50:29	<--	fogobogo (~fogobogo@unaffiliated/fogobogo) has quit (Quit: leaving)
+2019-11-13 14:04:36	<--	Thedarkb (~beno@193.1.184.232) has quit (Ping timeout: 240 seconds)
+2019-11-13 14:34:50	<--	zap0 (~zap0@14-201-222-143.tpgi.com.au) has left #SDL
+2019-11-13 15:13:06	-->	LunarJetman (LunarJetma@5ec1bc5a.skybroadband.com) has joined #SDL
