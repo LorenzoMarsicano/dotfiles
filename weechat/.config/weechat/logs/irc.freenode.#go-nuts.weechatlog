@@ -8425,3 +8425,586 @@
 2019-11-13 15:34:54	strigazi	JeffJohnson: I tried that, but I couldn't make a lot of sense out of it. I see goroutine profile: total 8392, but I don't know where it comes from.
 2019-11-13 15:35:00	-->	icholy (~icholy@68.71.18.45) has joined #go-nuts
 2019-11-13 15:36:33	-->	m1sdirection (~m1sdirect@146.115.42.10) has joined #go-nuts
+2019-11-13 15:41:06	--	im0nde_ is now known as im0nde
+2019-11-13 15:43:14	<--	andlabs (~pietro@ool-44c660e7.dyn.optonline.net) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-11-13 15:46:03	<--	AgTh (~b50c6@static-210-214-117-93.thenetworkfactory.nl) has quit (Ping timeout: 240 seconds)
+2019-11-13 15:46:37	<--	lluad (~lluad@217.173.105.122) has quit (Ping timeout: 240 seconds)
+2019-11-13 15:50:50	<--	FunnyLookinHat (~FunnyLook@ubuntu/member/funnylookinhat) has quit (Remote host closed the connection)
+2019-11-13 15:53:15	-->	AgTh (~b50c6@static-210-214-117-93.thenetworkfactory.nl) has joined #go-nuts
+2019-11-13 15:53:50	-->	brendan- (~Brendan@2601:4a:401:1210:a85c:99be:11f1:80c3) has joined #go-nuts
+2019-11-13 16:00:15	<--	greedom (~greedom@2001:16b8:2ec2:3f00:67b7:3e6f:d662:4253) has quit (Ping timeout: 250 seconds)
+2019-11-13 16:00:27	<--	jcajka (jcajka@nat/redhat/x-yqpjsndwjlyzvcsq) has quit (Quit: Leaving)
+2019-11-13 16:02:38	<--	AgTh (~b50c6@static-210-214-117-93.thenetworkfactory.nl) has quit (Ping timeout: 276 seconds)
+2019-11-13 16:08:02	<--	MindSpark (~Mind@port-212-202-242-74.static.qsc.de) has quit (Ping timeout: 240 seconds)
+2019-11-13 16:08:03	-->	ravenousmoose (~ravenousm@ptr-cud5aqg5mwnp5zv7fzk.18120a2.ip6.access.telenet.be) has joined #go-nuts
+2019-11-13 16:08:17	-->	MindSpark (~Mind@port-212-202-242-74.static.qsc.de) has joined #go-nuts
+2019-11-13 16:09:59	-->	lluad (~lluad@2a02:8084:2861:3f80:d87a:1cf7:98d5:eb3f) has joined #go-nuts
+2019-11-13 16:11:04	-->	andlabs (~pietro@ip-173-129-187-185.nymnny.spcsdns.net) has joined #go-nuts
+2019-11-13 16:12:23	<--	ravenousmoose (~ravenousm@ptr-cud5aqg5mwnp5zv7fzk.18120a2.ip6.access.telenet.be) has quit (Ping timeout: 250 seconds)
+2019-11-13 16:15:09	-->	bassil (uid143807@gateway/web/irccloud.com/x-xgjrkhiwuzudfwma) has joined #go-nuts
+2019-11-13 16:16:07	<--	caubert (~caubert@85.253.251.100.cable.starman.ee) has quit
+2019-11-13 16:18:09	-->	ravenousmoose (~ravenousm@ptr-cud5aqg5mwnp5zv7fzk.18120a2.ip6.access.telenet.be) has joined #go-nuts
+2019-11-13 16:21:17	<--	xkapastel (uid17782@gateway/web/irccloud.com/x-sjjlfxjcldxovvjt) has quit (Quit: Connection closed for inactivity)
+2019-11-13 16:22:47	<--	ravenousmoose (~ravenousm@ptr-cud5aqg5mwnp5zv7fzk.18120a2.ip6.access.telenet.be) has quit (Ping timeout: 250 seconds)
+2019-11-13 16:33:04	--	irc: disconnected from server
+2019-11-13 16:33:32	-->	Syrinxos (~syrinxos@93-34-1-82.ip47.fastwebnet.it) has joined #go-nuts
+2019-11-13 16:33:32	--	Topic for #go-nuts is "golang.org | known issues: golang.org/issue | https://freenode.logbot.info/go-nuts | don't ask to ask, just ask | don't solve problems you don't have | did you check your errors?"
+2019-11-13 16:33:32	--	Topic set by skelterjohn (sid13218@gateway/web/irccloud.com/x-gfctwrngwpjcjgtp) on Tue, 18 Jun 2019 19:13:21
+2019-11-13 16:33:32	--	Channel #go-nuts: 815 nicks (0 ops, 3 voices, 812 normals)
+2019-11-13 16:33:32	--	PvNotice(ChanServ): Please follow the Go Community Code of Conduct when chatting here. See https://golang.org/conduct
+2019-11-13 16:33:52	--	Channel created on Mon, 09 Nov 2009 19:22:37
+2019-11-13 16:33:53	<--	GuyNoIRQ (~GuyNoIRQ@hs-nc-4d9f73c503-28445-1.tingfiber.com) has quit (Quit: Lost terminal)
+2019-11-13 16:41:02	-->	danemacmillan (~danemacmi@unaffiliated/danemacmillan) has joined #go-nuts
+2019-11-13 16:41:46	-->	dctrud (~dctrud@petroc.randomroad.net) has joined #go-nuts
+2019-11-13 16:42:03	<--	maniacal (~maniacal@2600:8800:2000:e3:587f:df56:3e9e:9cae) has quit (Quit: Leaving)
+2019-11-13 16:43:00	LiENUS	amosbird,  have you not tried `go fmt` yet?
+2019-11-13 16:43:16	<--	emocakes (~emocakes@unaffiliated/emocakes) has quit (Ping timeout: 240 seconds)
+2019-11-13 16:43:21	-->	greedom (~greedom@mue-88-130-54-025.dsl.tropolys.de) has joined #go-nuts
+2019-11-13 16:44:05	<--	untoreh (~untoreh@198.12.101.192) has quit (Remote host closed the connection)
+2019-11-13 16:46:42	-->	juztin (~juztin@2607:fb90:f36:cfc3:b817:a874:1c38:55e1) has joined #go-nuts
+2019-11-13 16:47:03	<--	SorinIntoCode (~marius_ro@5.2.196.6) has quit (Quit: Leaving.)
+2019-11-13 16:50:24	<--	Tichodroma (~lutz@fsf/member/Tichodroma) has quit (Quit: leaving)
+2019-11-13 16:52:03	-->	emocakes (~emocakes@unaffiliated/emocakes) has joined #go-nuts
+2019-11-13 16:52:28	<--	AquaL1te (~AquaL1te@unaffiliated/aqual1te) has quit (Quit: leaving)
+2019-11-13 16:55:41	<--	chargen (~chargen@2a02:2e02:9ee0:7100:b459:2ecf:2363:7983) has quit (Quit: BBL)
+2019-11-13 16:58:08	<--	plutoniix (~q@125.24.64.251) has quit (Quit: Leaving)
+2019-11-13 16:58:11	-->	girafe (~girafe@lfbn-lyo-1-473-69.w2-7.abo.wanadoo.fr) has joined #go-nuts
+2019-11-13 17:00:32	-->	Tv` (uid62079@gateway/web/irccloud.com/x-mkvpujjgapsncjwa) has joined #go-nuts
+2019-11-13 17:01:36	-->	happycrappy (~mes@2620:15c:2c1:200:d525:6848:1e66:9fdd) has joined #go-nuts
+2019-11-13 17:03:19	<--	xco (~textual@188.121.0.11) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2019-11-13 17:03:57	<--	drincruz (~adriancru@ool-44c7491c.dyn.optonline.net) has quit (Ping timeout: 268 seconds)
+2019-11-13 17:05:15	<--	andlabs (~pietro@ip-173-129-187-185.nymnny.spcsdns.net) has quit (Ping timeout: 250 seconds)
+2019-11-13 17:05:39	<--	MindSpark (~Mind@port-212-202-242-74.static.qsc.de) has quit (Ping timeout: 240 seconds)
+2019-11-13 17:06:04	-->	st8less (~st8less@inet-167-224-197-181.isp.ozarksgo.net) has joined #go-nuts
+2019-11-13 17:06:42	-->	MindSpark (~Mind@port-212-202-242-74.static.qsc.de) has joined #go-nuts
+2019-11-13 17:06:53	-->	caubert (~caubert@85.253.251.100.cable.starman.ee) has joined #go-nuts
+2019-11-13 17:09:30	-->	agent_white (~agent_whi@unaffiliated/agent-white/x-6197888) has joined #go-nuts
+2019-11-13 17:15:25	--	irc: disconnected from server
+2019-11-13 17:15:54	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #go-nuts
+2019-11-13 17:15:54	--	Topic for #go-nuts is "golang.org | known issues: golang.org/issue | https://freenode.logbot.info/go-nuts | don't ask to ask, just ask | don't solve problems you don't have | did you check your errors?"
+2019-11-13 17:15:54	--	Topic set by skelterjohn (sid13218@gateway/web/irccloud.com/x-gfctwrngwpjcjgtp) on Tue, 18 Jun 2019 19:13:21
+2019-11-13 17:15:54	--	Channel #go-nuts: 813 nicks (0 ops, 3 voices, 810 normals)
+2019-11-13 17:15:54	--	PvNotice(ChanServ): Please follow the Go Community Code of Conduct when chatting here. See https://golang.org/conduct
+2019-11-13 17:16:02	<--	jtux (~jtux@p5DF5FC60.dip0.t-ipconnect.de) has quit (Quit: Leaving.)
+2019-11-13 17:16:14	--	Channel created on Mon, 09 Nov 2009 19:22:37
+2019-11-13 17:16:46	-->	ooqaarx (~ooqaarx@unaffiliated/ooqaarx) has joined #go-nuts
+2019-11-13 17:16:47	<--	caubert (~caubert@85.253.251.100.cable.starman.ee) has quit
+2019-11-13 17:17:29	-->	kyrylo (~kyrylo@subtle/user/kyrylo) has joined #go-nuts
+2019-11-13 17:18:02	-->	caubert (~caubert@85.253.251.100.cable.starman.ee) has joined #go-nuts
+2019-11-13 17:19:16	-->	ravenousmoose (~ravenousm@ptr-cud5aqg5mwnp5zv7fzk.18120a2.ip6.access.telenet.be) has joined #go-nuts
+2019-11-13 17:23:35	-->	kriskropd (~kriskropd@unaffiliated/kriskropd) has joined #go-nuts
+2019-11-13 17:23:53	<--	ravenousmoose (~ravenousm@ptr-cud5aqg5mwnp5zv7fzk.18120a2.ip6.access.telenet.be) has quit (Ping timeout: 250 seconds)
+2019-11-13 17:24:45	<--	TripleDES (~sjr@93.176.187.161) has quit (Ping timeout: 250 seconds)
+2019-11-13 17:30:02	<--	juztin (~juztin@2607:fb90:f36:cfc3:b817:a874:1c38:55e1) has quit (Remote host closed the connection)
+2019-11-13 17:31:04	<--	encod3 (~encod3@144.178.76.42.static.ef-service.nl) has quit (Remote host closed the connection)
+2019-11-13 17:31:35	<--	BeerLover (~BeerLover@103.203.254.245) has quit (Remote host closed the connection)
+2019-11-13 17:33:38	<--	brendan- (~Brendan@2601:4a:401:1210:a85c:99be:11f1:80c3) has quit (Ping timeout: 245 seconds)
+2019-11-13 17:34:42	<--	kriskropd (~kriskropd@unaffiliated/kriskropd) has quit (Quit: kriskropd)
+2019-11-13 17:36:53	<--	ziyourenxiang (~ziyourenx@unaffiliated/ziyourenxiang) has quit (Ping timeout: 276 seconds)
+2019-11-13 17:37:45	-->	brendan- (~Brendan@c-73-141-252-152.hsd1.pa.comcast.net) has joined #go-nuts
+2019-11-13 17:43:53	Tv`	i find it really depressing that i literally need about 10 seconds with a new security-purpose codebase and i find just naive mistakes in it
+2019-11-13 17:44:38	Tv`	today's example: https://github.com/mehrdadrad/radvpn/blob/39b7b0ea10f1aa1a545deb72785400449ab5b17b/server/server.go#L319-L325
+2019-11-13 17:45:19	<--	kyrylo (~kyrylo@subtle/user/kyrylo) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-11-13 17:45:28	<--	shady_traveller (~shady_tra@80.169.46.234) has quit (Quit: WeeChat 1.4)
+2019-11-13 17:47:11	tharkun	Tv`: I am precisely doing some service hardening. ( Make it secure ) Do you have any URL/Resource that can be read to not make this type of mistakes?
+2019-11-13 17:47:13	-->	andlabs (~pietro@2a00:79e1:abc:1a0a:dd68:9ad0:9ffc:1a33) has joined #go-nuts
+2019-11-13 17:47:22	-->	nibble_zero (~nibble_ze@37.244.239.26) has joined #go-nuts
+2019-11-13 17:48:43	Tv`	tharkun: i don't believe in easy answers for large topics
+2019-11-13 17:49:27	-->	MrBR (~USER@157-157-116-115.static.simnet.is) has joined #go-nuts
+2019-11-13 17:50:48	tharkun	Tv`: me neither but then babysteps is what I need. I hate when people trust me and I do foolish mistakes.
+2019-11-13 17:54:16	<--	tuskkk____ (uid18470@gateway/web/irccloud.com/x-zsskqkpguhhihxen) has quit (Quit: Connection closed for inactivity)
+2019-11-13 17:54:19	-->	jenia (ce2ff9f6@dmop05.bell.ca) has joined #go-nuts
+2019-11-13 17:54:23	jenia	hi everyone
+2019-11-13 17:54:58	CrunchyChewie	Tv`: I'm still confused re: our convo last night about converting that string to the type it expects
+2019-11-14 09:34:13	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #go-nuts
+2019-11-14 09:34:13	--	Topic for #go-nuts is "golang.org | known issues: golang.org/issue | https://freenode.logbot.info/go-nuts | don't ask to ask, just ask | don't solve problems you don't have | did you check your errors?"
+2019-11-14 09:34:13	--	Topic set by skelterjohn (sid13218@gateway/web/irccloud.com/x-gfctwrngwpjcjgtp) on Tue, 18 Jun 2019 19:13:21
+2019-11-14 09:34:13	--	Channel #go-nuts: 793 nicks (0 ops, 3 voices, 790 normals)
+2019-11-14 09:34:13	--	PvNotice(ChanServ): Please follow the Go Community Code of Conduct when chatting here. See https://golang.org/conduct
+2019-11-14 09:34:20	--	Channel created on Mon, 09 Nov 2009 19:22:37
+2019-11-14 09:34:32	<--	ravenousmoose (~ravenousm@ptr-cud5aqg5mwnp5zv7fzk.18120a2.ip6.access.telenet.be) has quit (Ping timeout: 252 seconds)
+2019-11-14 09:35:36	-->	landervdb (~landervdb@94.107.246.126) has joined #go-nuts
+2019-11-14 09:39:18	<--	moser_ (~moser@113.119.58.7) has quit (Ping timeout: 252 seconds)
+2019-11-14 09:39:46	-->	_ADN_ (~ADN@212.183.131.195) has joined #go-nuts
+2019-11-14 09:42:41	-->	azidhaka (~azid@gateway.videnov.bg) has joined #go-nuts
+2019-11-14 09:43:28	<--	greedom (~greedom@i577BC6D1.versanet.de) has quit (Remote host closed the connection)
+2019-11-14 09:43:44	-->	moser_ (~moser@113.119.58.7) has joined #go-nuts
+2019-11-14 09:44:35	-->	greedom (~greedom@i577BC6D1.versanet.de) has joined #go-nuts
+2019-11-14 09:45:29	<--	plutoniix (~q@175.176.222.7) has quit (Quit: Leaving)
+2019-11-14 09:52:02	-->	floppydh (~floppydh@buro.mquadr.at) has joined #go-nuts
+2019-11-14 09:52:52	<--	aps_ (~aps@2a02:908:dd28:92bc:a989:c472:e341:899e) has quit (Ping timeout: 252 seconds)
+2019-11-14 09:52:59	-->	progart (~kamee@178.78.155.206) has joined #go-nuts
+2019-11-14 09:54:48	-->	aps_ (~aps@2a02:908:dd21:16bc:793f:7eaa:1148:1a15) has joined #go-nuts
+2019-11-14 09:56:05	<--	progart (~kamee@178.78.155.206) has quit (Client Quit)
+2019-11-14 10:00:56	<--	moser_ (~moser@113.119.58.7) has quit (Ping timeout: 240 seconds)
+2019-11-14 10:01:04	-->	DanyC (~DanyC@185.65.25.74) has joined #go-nuts
+2019-11-14 10:01:48	-->	karakedi (~eAC53C340@unaffiliated/orphan) has joined #go-nuts
+2019-11-14 10:02:41	-->	plutoniix (~q@175.176.222.7) has joined #go-nuts
+2019-11-14 10:03:08	<--	aps_ (~aps@2a02:908:dd21:16bc:793f:7eaa:1148:1a15) has quit (Ping timeout: 252 seconds)
+2019-11-14 10:06:27	-->	moser_ (~moser@113.119.58.7) has joined #go-nuts
+2019-11-14 10:06:50	<--	DanyC (~DanyC@185.65.25.74) has quit (Ping timeout: 276 seconds)
+2019-11-14 10:07:01	<--	azidhaka (~azid@gateway.videnov.bg) has quit
+2019-11-14 10:08:26	<--	Tichodroma (~lutz@fsf/member/Tichodroma) has quit (Ping timeout: 240 seconds)
+2019-11-14 10:09:09	<--	landervdb (~landervdb@94.107.246.126) has quit (Remote host closed the connection)
+2019-11-14 10:10:31	-->	Tichodroma (~lutz@fsf/member/Tichodroma) has joined #go-nuts
+2019-11-14 10:11:38	-->	DanyC (~DanyC@185.65.25.74) has joined #go-nuts
+2019-11-14 10:25:25	<--	vila (~vila@2a01:e35:2e63:5f40:a5c5:6911:5ea8:14da) has quit (Remote host closed the connection)
+2019-11-14 10:29:04	-->	vila (~vila@2a01:e35:2e63:5f40:ddc9:f30c:9c15:d678) has joined #go-nuts
+2019-11-14 10:30:58	<--	psaintlaurent000 (psaintlaur@gateway/vpn/protonvpn/psaintlaurent000) has quit (Read error: Connection reset by peer)
+2019-11-14 10:38:20	-->	jbrodriguez (~textual@181.197.22.108) has joined #go-nuts
+2019-11-14 10:40:34	-->	velco (velco@nat/arm/x-undrcoohswyubfpk) has joined #go-nuts
+2019-11-14 10:41:29	-->	shady_traveller (~shady_tra@80.169.46.234) has joined #go-nuts
+2019-11-14 10:47:11	-->	return0__ (~return0e@host86-155-41-76.range86-155.btcentralplus.com) has joined #go-nuts
+2019-11-14 10:47:20	<--	return0e_ (~return0e@host86-155-41-76.range86-155.btcentralplus.com) has quit (Read error: Connection reset by peer)
+2019-11-14 10:48:45	-->	Ai9zO5AP (~BQcdf9eiZ@41.248.193.197) has joined #go-nuts
+2019-11-14 10:49:01	-->	user9 (984d0e74@dcm-info-22.u-ga.fr) has joined #go-nuts
+2019-11-14 10:54:17	<--	pknull (~pooky@184.103.126.184) has quit (Quit: Departing.)
+2019-11-14 10:55:11	-->	pknull (~pooky@184.103.126.184) has joined #go-nuts
+2019-11-14 10:56:10	-->	Mentol (~mentol@195.red-83-38-123.dynamicip.rima-tde.net) has joined #go-nuts
+2019-11-14 10:57:44	Mentol	How to clear (set to "") a []string? Would be enough doing 'tmp = []string'
+2019-11-14 10:58:43	b0nn	Mentol: At the risk of sounding a bit snarky, TIAS
+2019-11-14 10:58:52	<--	cnsunyour (~cnsunyour@94.69.241.35.bc.googleusercontent.com) has quit (Quit: WeeChat 2.6)
+2019-11-14 10:59:11	-->	cnsunyour (~cnsunyour@94.69.241.35.bc.googleusercontent.com) has joined #go-nuts
+2019-11-14 10:59:35	Mentol	s/tmp.*$/tmp = make([]string, 0)
+2019-11-14 10:59:47	KirkMcDonald	tmp = []string{}
+2019-11-14 11:00:04	Mentol	I want to remove sensitive data from memory
+2019-11-14 11:00:06	-->	epony (epony@unaffiliated/epony) has joined #go-nuts
+2019-11-14 11:00:06	KirkMcDonald	Though, this doesn't 'set to ""'. Since "" is a string.
+2019-11-14 11:00:19	KirkMcDonald	This does not guarantee that.
+2019-11-14 11:00:53	Mentol	then, I'll rewrite those strings
+2019-11-14 11:00:55	b0nn	How sensitive, how removed
+2019-11-14 11:01:47	iivvoo	is tmp = []string{} significantly different from tmp = nil ?
+2019-11-14 11:01:57	iivvoo	(I did try and see)
+2019-11-14 11:02:16	KirkMcDonald	They are not identical, but for many practical purposes you may use either.
+2019-11-14 11:02:44	-->	capella-da-star (~capella-d@103.68.10.14) has joined #go-nuts
+2019-11-14 11:02:57	iivvoo	just out of curiousity, when would you notice the difference?
+2019-11-14 11:03:26	KirkMcDonald	You can compare slices to nil.
+2019-11-14 11:04:08	KirkMcDonald	So, obviously, a nil slice value is equal to nil, and an empty, non-nil slice is not.
+2019-11-14 11:04:19	-->	drap3r (~drap3r@c-73-15-142-51.hsd1.ca.comcast.net) has joined #go-nuts
+2019-11-14 11:04:19	-->	fixl (fixl@gateway/vpn/privateinternetaccess/fixl) has joined #go-nuts
+2019-11-14 11:04:29	<--	return0__ (~return0e@host86-155-41-76.range86-155.btcentralplus.com) has quit (Read error: Connection reset by peer)
+2019-11-14 11:05:08	-->	return0e (~return0e@host86-155-41-76.range86-155.btcentralplus.com) has joined #go-nuts
+2019-11-14 11:07:52	iivvoo	ah of course.
+2019-11-14 11:08:37	-->	mrig (~mrig@unaffiliated/mrig) has joined #go-nuts
+2019-11-14 11:08:51	<--	Mentol (~mentol@195.red-83-38-123.dynamicip.rima-tde.net) has quit
+2019-11-14 11:08:58	-->	black_ant (~antilope@unaffiliated/black-ant/x-1505394) has joined #go-nuts
+2019-11-14 11:09:26	iivvoo	mentol: strings are immutable so "rewriting" won't help. a bytes.Buffer might work?
+2019-11-14 11:10:39	KirkMcDonald	Or a []byte, depending.
+2019-11-14 11:10:58	dominikh	they're gone, anyway.
+2019-11-14 11:11:53	-->	whaley (~whaley@8.25.196.26) has joined #go-nuts
+2019-11-14 11:14:37	-->	hyperreal (hyperreal@gateway/vpn/privateinternetaccess/hyperreal) has joined #go-nuts
+2019-11-14 11:16:36	<--	moser_ (~moser@113.119.58.7) has quit (Ping timeout: 240 seconds)
+2019-11-14 11:19:21	<--	DanyC (~DanyC@185.65.25.74) has quit (Remote host closed the connection)
+2019-11-14 11:21:21	-->	moser_ (~moser@113.119.58.7) has joined #go-nuts
+2019-11-14 11:21:49	<--	wsm (~wsm@gateway/tor-sasl/wsm) has quit (Remote host closed the connection)
+2019-11-14 11:22:14	<--	fridim (~fridim@lfbn-mon-1-257-150.w86-193.abo.wanadoo.fr) has quit (Ping timeout: 276 seconds)
+2019-11-14 11:23:00	<--	hyperreal (hyperreal@gateway/vpn/privateinternetaccess/hyperreal) has quit (Quit: kthxbai)
+2019-11-14 11:26:08	jadax	hi, I'm executing multiple db.Query("INSERT INTO ...") in the loop and my database errors out 1040: Too many connections; I thought go-sql-driver/mysql used connection pool, so it should be able to reuse previously opened connections. Do you know why it's opening new connections in my case and not reusing old ones?
+2019-11-14 11:26:54	sztanpet	its usually because you are misusing the api, like not closing Rows and friends
+2019-11-14 11:28:56	-->	azidhaka (~azid@gateway.videnov.bg) has joined #go-nuts
+2019-11-14 11:29:20	<--	drap3r (~drap3r@c-73-15-142-51.hsd1.ca.comcast.net) has quit (Remote host closed the connection)
+2019-11-14 11:30:30	jadax	ok, I understand I have to use Exec instead of Query INSERTs
+2019-11-14 11:32:25	<--	im0nde (~im0nde@2a0a-a546-f676-0-2ad2-44ff-fe00-9395.ipv6dyn.netcologne.de) has quit (Quit: ZNC 1.7.4 - https://znc.in)
+2019-11-14 11:35:01	-->	im0nde (~im0nde@2a0a-a546-f676-0-2ad2-44ff-fe00-9395.ipv6dyn.netcologne.de) has joined #go-nuts
+2019-11-14 11:35:39	<--	Martchus (~martchus@ipservice-092-211-027-214.092.211.pools.vodafone-ip.de) has quit (Ping timeout: 240 seconds)
+2019-11-14 11:36:00	-->	Martchus (~martchus@ipservice-092-217-061-078.092.217.pools.vodafone-ip.de) has joined #go-nuts
+2019-11-14 11:36:33	-->	fridim (~fridim@2a01:cb1d:847c:6300:d410:b5c3:b89a:b505) has joined #go-nuts
+2019-11-14 11:38:41	-->	Martchus_ (~martchus@ipservice-092-211-026-197.092.211.pools.vodafone-ip.de) has joined #go-nuts
+2019-11-14 11:41:05	<--	Martchus (~martchus@ipservice-092-217-061-078.092.217.pools.vodafone-ip.de) has quit (Ping timeout: 276 seconds)
+2019-11-14 11:41:55	-->	DanyC (~DanyC@185.65.25.74) has joined #go-nuts
+2019-11-14 11:42:36	<--	moser_ (~moser@113.119.58.7) has quit (Ping timeout: 240 seconds)
+2019-11-14 11:43:02	<--	Tichodroma (~lutz@fsf/member/Tichodroma) has quit (Ping timeout: 276 seconds)
+2019-11-14 11:44:23	-->	Tichodroma (~lutz@fsf/member/Tichodroma) has joined #go-nuts
+2019-11-14 11:44:33	-->	moser_ (~moser@113.119.58.7) has joined #go-nuts
+2019-11-14 11:45:52	sztanpet	static code analizers should tell you about these
+2019-11-14 11:48:58	<--	im0nde (~im0nde@2a0a-a546-f676-0-2ad2-44ff-fe00-9395.ipv6dyn.netcologne.de) has quit (Quit: ZNC 1.7.4 - https://znc.in)
+2019-11-14 11:50:34	-->	im0nde (~im0nde@xdsl-89-0-173-80.nc.de) has joined #go-nuts
+2019-11-14 11:51:05	<--	im0nde (~im0nde@xdsl-89-0-173-80.nc.de) has quit (Remote host closed the connection)
+2019-11-14 11:52:38	-->	im0nde (~im0nde@2a0a-a546-f676-0-2ad2-44ff-fe00-9395.ipv6dyn.netcologne.de) has joined #go-nuts
+2019-11-14 11:53:51	<--	pknull (~pooky@184.103.126.184) has quit (Quit: Departing.)
+2019-11-14 11:54:16	-->	pknull (~pooky@184.103.126.184) has joined #go-nuts
+2019-11-14 11:55:46	-->	rif (~rif@95.76.93.100) has joined #go-nuts
+2019-11-14 12:00:16	<--	pknull (~pooky@184.103.126.184) has quit (Quit: Departing.)
+2019-11-14 12:00:47	-->	pknull (~pooky@184.103.126.184) has joined #go-nuts
+2019-11-14 12:03:33	<--	moser_ (~moser@113.119.58.7) has quit (Ping timeout: 268 seconds)
+2019-11-14 12:03:43	<--	pknull (~pooky@184.103.126.184) has quit (Client Quit)
+2019-11-14 12:04:17	-->	pknull (~pooky@184.103.126.184) has joined #go-nuts
+2019-11-14 12:09:42	<--	pdgendt (~pdgendt@d5152f4f9.static.telenet.be) has quit (Ping timeout: 246 seconds)
+2019-11-14 12:12:03	-->	moser_ (~moser@113.119.58.7) has joined #go-nuts
+2019-11-14 12:12:31	<--	Xjs (~jannis@128.127.8.133) has quit (Quit: Bye.)
+2019-11-14 12:22:24	-->	pdgendt (~pdgendt@d5152f4f9.static.telenet.be) has joined #go-nuts
+2019-11-14 12:23:51	<--	plutoniix (~q@175.176.222.7) has quit (Quit: Leaving)
+2019-11-14 12:31:38	<--	Jackneilll (~Jackneill@unaffiliated/jackneill) has quit (Ping timeout: 252 seconds)
+2019-11-14 12:41:32	<--	return0e (~return0e@host86-155-41-76.range86-155.btcentralplus.com) has quit (Read error: Connection reset by peer)
+2019-11-14 12:42:21	-->	return0e (~return0e@host86-155-41-76.range86-155.btcentralplus.com) has joined #go-nuts
+2019-11-14 12:43:22	-->	con3 (~kvirc@154.119.40.183) has joined #go-nuts
+2019-11-14 12:44:28	-->	Jackneilll (~Jackneill@unaffiliated/jackneill) has joined #go-nuts
+2019-11-14 12:50:53	-->	Xjs (~jannis@128.127.8.136) has joined #go-nuts
+2019-11-14 12:52:09	<--	fixl (fixl@gateway/vpn/privateinternetaccess/fixl) has quit (Remote host closed the connection)
+2019-11-14 12:52:44	<--	capella-da-star (~capella-d@103.68.10.14) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-11-14 12:55:15	<--	con3 (~kvirc@154.119.40.183) has quit (Quit: KVIrc 5.0.0 Aria http://www.kvirc.net/)
+2019-11-14 12:55:28	<--	Jackneilll (~Jackneill@unaffiliated/jackneill) has quit (Ping timeout: 265 seconds)
+2019-11-14 12:58:36	<--	absc (~abiscuola@dynamic-adsl-94-34-196-117.clienti.tiscali.it) has quit (Ping timeout: 240 seconds)
+2019-11-14 12:59:40	<--	karakedi (~eAC53C340@unaffiliated/orphan) has quit (Ping timeout: 268 seconds)
+2019-11-14 13:00:14	-->	jcajka (jcajka@nat/redhat/x-uoczjwbxguyasnyp) has joined #go-nuts
+2019-11-14 13:00:22	-->	francis36012 (~francis@S0106a84e3f6eee83.cg.shawcable.net) has joined #go-nuts
+2019-11-14 13:01:08	-->	karakedi (~eAC53C340@unaffiliated/orphan) has joined #go-nuts
+2019-11-14 13:02:46	-->	capella-da-star (~capella-d@103.68.10.14) has joined #go-nuts
+2019-11-14 13:03:15	<--	pupskuchen (~pupskuche@unaffiliated/pupskuchen) has quit (Ping timeout: 240 seconds)
+2019-11-14 13:03:22	<--	capella-da-star (~capella-d@103.68.10.14) has quit (Client Quit)
+2019-11-14 13:05:36	-->	Strom (strom@127-16-191-90.dyn.estpak.ee) has joined #go-nuts
+2019-11-14 13:08:28	-->	Jackneilll (~Jackneill@unaffiliated/jackneill) has joined #go-nuts
+2019-11-14 13:17:24	-->	capella-da-star (~capella-d@103.68.10.14) has joined #go-nuts
+2019-11-14 13:18:47	<--	moser_ (~moser@113.119.58.7) has quit (Ping timeout: 268 seconds)
+2019-11-14 13:21:29	<--	pknull (~pooky@184.103.126.184) has quit (Quit: Departing.)
+2019-11-14 13:22:24	-->	pknull (~pooky@184.103.126.184) has joined #go-nuts
+2019-11-14 13:24:15	-->	feed (4469ca58@ip68-105-202-88.mc.at.cox.net) has joined #go-nuts
+2019-11-14 13:24:50	<--	pknull (~pooky@184.103.126.184) has quit (Client Quit)
+2019-11-14 13:25:25	-->	pknull (~pooky@184.103.126.184) has joined #go-nuts
+2019-11-14 13:26:24	<--	Martchus_ (~martchus@ipservice-092-211-026-197.092.211.pools.vodafone-ip.de) has quit (Ping timeout: 265 seconds)
+2019-11-14 13:26:57	-->	moser_ (~moser@113.119.58.7) has joined #go-nuts
+2019-11-14 13:28:06	<--	AgTh (~b50c6@static-212-214-117-93.thenetworkfactory.nl) has quit (Ping timeout: 252 seconds)
+2019-11-14 13:29:56	-->	AgTh (~b50c6@static-210-214-117-93.thenetworkfactory.nl) has joined #go-nuts
+2019-11-14 13:30:03	-->	drap3r (~drap3r@c-73-15-142-51.hsd1.ca.comcast.net) has joined #go-nuts
+2019-11-14 13:31:34	-->	Martchus (~martchus@dslb-188-110-133-147.188.110.pools.vodafone-ip.de) has joined #go-nuts
+2019-11-14 13:34:27	<--	drap3r (~drap3r@c-73-15-142-51.hsd1.ca.comcast.net) has quit (Ping timeout: 240 seconds)
+2019-11-14 13:34:42	-->	ravenousmoose (~ravenousm@ptr-cud5aqg5mwnp5zv7fzk.18120a2.ip6.access.telenet.be) has joined #go-nuts
+2019-11-14 13:34:45	<--	lluad (~lluad@2a02:8084:2861:3f80:d87a:1cf7:98d5:eb3f) has quit (Ping timeout: 246 seconds)
+2019-11-14 13:36:21	<--	Martchus (~martchus@dslb-188-110-133-147.188.110.pools.vodafone-ip.de) has quit (Ping timeout: 252 seconds)
+2019-11-14 13:39:06	<--	ravenousmoose (~ravenousm@ptr-cud5aqg5mwnp5zv7fzk.18120a2.ip6.access.telenet.be) has quit (Ping timeout: 252 seconds)
+2019-11-14 13:39:07	<--	pknull (~pooky@184.103.126.184) has quit (Quit: Departing.)
+2019-11-14 13:39:56	-->	pknull (~pooky@184.103.126.184) has joined #go-nuts
+2019-11-14 13:40:23	-->	Martchus (~martchus@ipservice-092-211-029-234.092.211.pools.vodafone-ip.de) has joined #go-nuts
+2019-11-14 13:40:59	<--	AgTh (~b50c6@static-210-214-117-93.thenetworkfactory.nl) has quit (Ping timeout: 268 seconds)
+2019-11-14 13:43:06	-->	lluad (~lluad@37.228.193.94) has joined #go-nuts
+2019-11-14 13:45:18	<--	Martchus (~martchus@ipservice-092-211-029-234.092.211.pools.vodafone-ip.de) has quit (Ping timeout: 268 seconds)
+2019-11-14 13:45:37	-->	Martchus (~martchus@ipservice-092-211-023-099.092.211.pools.vodafone-ip.de) has joined #go-nuts
+2019-11-14 13:45:42	<--	user9 (984d0e74@dcm-info-22.u-ga.fr) has quit (Remote host closed the connection)
+2019-11-14 13:50:01	-->	freswa (~freswa@p200300C52F4FC70138642B8E3E4440F8.dip0.t-ipconnect.de) has joined #go-nuts
+2019-11-14 13:51:05	<--	moser_ (~moser@113.119.58.7) has quit (Ping timeout: 276 seconds)
+2019-11-14 13:51:09	<--	titouan (~titouan@static.126.162.47.78.clients.your-server.de) has quit (Remote host closed the connection)
+2019-11-14 13:51:10	<--	return0e (~return0e@host86-155-41-76.range86-155.btcentralplus.com) has quit (*.net *.split)
+2019-11-14 13:51:10	<--	im0nde (~im0nde@2a0a-a546-f676-0-2ad2-44ff-fe00-9395.ipv6dyn.netcologne.de) has quit (*.net *.split)
+2019-11-14 13:51:11	<--	whaley (~whaley@8.25.196.26) has quit (*.net *.split)
+2019-11-14 13:51:11	<--	black_ant (~antilope@unaffiliated/black-ant/x-1505394) has quit (*.net *.split)
+2019-11-14 13:51:11	<--	shady_traveller (~shady_tra@80.169.46.234) has quit (*.net *.split)
+2019-11-14 13:51:11	<--	velco (velco@nat/arm/x-undrcoohswyubfpk) has quit (*.net *.split)
+2019-11-14 13:51:11	<--	jbrodriguez (~textual@181.197.22.108) has quit (*.net *.split)
+2019-11-14 13:51:11	<--	livcd (mewmew@unaffiliated/livcd) has quit (*.net *.split)
+2019-11-14 13:51:11	<--	TripleDES (~sjr@93.176.187.161) has quit (*.net *.split)
+2019-11-14 13:51:11	<--	SorinIntoCode (~marius_ro@5.2.196.6) has quit (*.net *.split)
+2019-11-14 13:51:11	<--	swills (~swills@freebsd/developer/swills) has quit (*.net *.split)
+2019-11-14 13:51:11	<--	w3bcrawler (~w3bcrawle@134.41.73.181) has quit (*.net *.split)
+2019-11-14 13:51:11	<--	ziyourenxiang (~ziyourenx@unaffiliated/ziyourenxiang) has quit (*.net *.split)
+2019-11-14 13:51:12	<--	brendan- (~Brendan@c-73-141-252-152.hsd1.pa.comcast.net) has quit (*.net *.split)
+2019-11-14 13:51:12	<--	bline (~smc@184.63.220.178) has quit (*.net *.split)
+2019-11-14 13:51:12	<--	xnaas (~xnaas@unaffiliated/xnaas) has quit (*.net *.split)
+2019-11-14 13:51:12	<--	m1sdirection (~m1sdirect@146.115.42.10) has quit (*.net *.split)
+2019-11-14 13:51:12	<--	gump (~gump@97-90-65-238.static.yakm.wa.charter.com) has quit (*.net *.split)
+2019-11-14 13:51:13	<--	ExoUNX (~ExoUNX@unaffiliated/exounx) has quit (*.net *.split)
+2019-11-14 13:51:13	<--	casaca (~nut@209.222.10.61) has quit (*.net *.split)
+2019-11-14 13:51:13	<--	bsdbandit (~bwell@users.757.org) has quit (*.net *.split)
+2019-11-14 13:51:13	<--	schaeffer (~schaeffer@unaffiliated/simcity2000) has quit (*.net *.split)
+2019-11-14 13:51:13	<--	Wessie (~Wessie@static.226.41.47.78.clients.your-server.de) has quit (*.net *.split)
+2019-11-14 13:51:13	<--	Vinski (~Vin@static.226.41.47.78.clients.your-server.de) has quit (*.net *.split)
+2019-11-14 13:51:13	<--	elibrokeit (eschwartz@archlinux/bugwrangler/eschwartz) has quit (*.net *.split)
+2019-11-14 13:51:13	<--	pztrn (~pztrn@aurora.pztrn.name) has quit (*.net *.split)
+2019-11-14 13:51:13	<--	Ring0` (~ringo@unaffiliated/ring0/x-8667941) has quit (*.net *.split)
+2019-11-14 13:51:13	<--	paulgrmn (~paulgrmn@mail2.hartmantyner.com) has quit (*.net *.split)
+2019-11-14 13:51:13	<--	Ch3ck (~Ch3ck@104.225.5.10) has quit (*.net *.split)
+2019-11-14 13:51:13	<--	adtac (~adtac@2a01:4f8:202:4283::2) has quit (*.net *.split)
+2019-11-14 13:51:13	<--	Cyrus (~Cyrus@unaffiliated/cyrus) has quit (*.net *.split)
+2019-11-14 13:51:13	<--	Led_Zeppelin (~user@cpe-68-172-248-139.nj.res.rr.com) has quit (*.net *.split)
+2019-11-14 13:51:14	<--	slax0r (znc@unaffiliated/slax0r) has quit (*.net *.split)
+2019-11-14 13:51:14	<--	entropygain (levitate@2600:3c01::f03c:91ff:fecc:c443) has quit (*.net *.split)
+2019-11-14 13:51:14	<--	Fingel (~fingel@unaffiliated/fingel) has quit (*.net *.split)
+2019-11-14 13:51:14	<--	Freeaqingme (quassel@gateway/vpn/privateinternetaccess/freeaqingme) has quit (*.net *.split)
+2019-11-14 13:51:14	<--	PMStudio (paper@tilde.institute) has quit (*.net *.split)
+2019-11-14 13:51:14	<--	stutter (~stutter@cpe-174-107-125-216.sc.res.rr.com) has quit (*.net *.split)
+2019-11-14 13:51:14	<--	dostoyevsky (~sck@unaffiliated/dostoyevsky) has quit (*.net *.split)
+2019-11-14 13:51:15	<--	xorex (~xerox@ircdoos.koppelvlak.net) has quit (*.net *.split)
+2019-11-14 13:51:15	<--	d34dh0r53 (~d34dh0r53@2605:6001:f341:1b00:80f3:fcff:fed4:2543) has quit (*.net *.split)
+2019-11-14 13:51:15	<--	Spritzgebaeck (~Spritzgeb@voxpupuli/contributor/Spritzgebaeck) has quit (*.net *.split)
+2019-11-14 13:51:15	<--	Natch (~Natch@h-112-130.A444.priv.bahnhof.se) has quit (*.net *.split)
+2019-11-14 13:51:15	<--	tjbp (~tom@78.141.197.43) has quit (*.net *.split)
+2019-11-14 13:51:15	<--	Grauwolf (~grauwolf@unaffiliated/grauwolf) has quit (*.net *.split)
+2019-11-14 13:51:15	<--	babilen (~babilen@unaffiliated/babilen) has quit (*.net *.split)
+2019-11-14 13:51:15	<--	trees (~trees@de.timrees.co.uk) has quit (*.net *.split)
+2019-11-14 13:51:15	<--	lynchc (~quassel@c-67-169-113-213.hsd1.ca.comcast.net) has quit (*.net *.split)
+2019-11-14 13:51:15	<--	paracyst (~paracyst@unaffiliated/paracyst) has quit (*.net *.split)
+2019-11-14 13:51:15	<--	lemmi (~lemmi@lpm.pw) has quit (*.net *.split)
+2019-11-14 13:51:15	<--	nachoes (~nachoes@bender.initq.net) has quit (*.net *.split)
+2019-11-14 13:51:16	<--	Skarlso (~Skarlso@46.101.156.25) has quit (*.net *.split)
+2019-11-14 13:51:16	<--	RayS (~raysl@sdf1.xen.prgmr.com) has quit (*.net *.split)
+2019-11-14 13:51:16	<--	avemestr (~avemestr@2a01:4f8:212:2719::2) has quit (*.net *.split)
+2019-11-14 13:51:16	<--	nekron (~nekron@noordsee.de) has quit (*.net *.split)
+2019-11-14 13:51:16	<--	vendan (~vendan@li330-117.members.linode.com) has quit (*.net *.split)
+2019-11-14 13:51:16	<--	fmccann (~fmccann@www.sharpnoodles.com) has quit (*.net *.split)
+2019-11-14 13:51:16	<--	FIFOd (~FIFOd@neverfear.org) has quit (*.net *.split)
+2019-11-14 13:51:16	<--	tumdedum (~tumdedum@unaffiliated/espiral) has quit (*.net *.split)
+2019-11-14 13:51:16	<--	stux|RC (stux@2a01:270:0:ffff:ffff:2050:0:2) has quit (*.net *.split)
+2019-11-14 13:51:16	<--	megeve (sid151413@gateway/web/irccloud.com/x-kncwzzxfbtygztzq) has quit (*.net *.split)
+2019-11-14 13:51:16	<--	dec (~dec@unaffiliated/dec) has quit (*.net *.split)
+2019-11-14 13:51:17	<--	foxcpp (~foxcpp@foxcpp.dev) has quit (*.net *.split)
+2019-11-14 13:51:17	<--	kris-nova (~kris-nova@ec2-35-160-229-114.us-west-2.compute.amazonaws.com) has quit (*.net *.split)
+2019-11-14 13:51:17	<--	ddevault (znc@sourcehut/staff/ddevault) has quit (*.net *.split)
+2019-11-14 13:51:17	<--	eldritch (~eldritch@unaffiliated/eldritch) has quit (*.net *.split)
+2019-11-14 13:51:17	<--	slashfocus (~no@104.131.21.114) has quit (*.net *.split)
+2019-11-14 13:51:17	<--	rjeli (sid289321@gateway/web/irccloud.com/x-vwfmsdzaommrwsyl) has quit (*.net *.split)
+2019-11-14 13:51:17	<--	fuchstronaut (~fuchstron@unaffiliated/fuchstronaut) has quit (*.net *.split)
+2019-11-14 13:51:17	<--	lkebin (~lkebin@149.129.77.141) has quit (*.net *.split)
+2019-11-14 13:51:17	<--	toffermann (~tofferman@104.131.155.226) has quit (*.net *.split)
+2019-11-14 13:51:18	<--	colekowalski (~cole@ns521035.ip-158-69-119.net) has quit (*.net *.split)
+2019-11-14 13:51:18	<--	drawks (~drawks@209.66.91.113) has quit (*.net *.split)
+2019-11-14 13:51:18	<--	Nilium (~sid200856@p01.sfo2.do.x.spiff.io) has quit (*.net *.split)
+2019-11-14 13:51:18	<--	bhavin192 (~bhavin192@fedora/bhavin192) has quit (*.net *.split)
+2019-11-14 13:51:18	<--	ossifrage (~ossifrage@unaffiliated/ossifrage) has quit (*.net *.split)
+2019-11-14 13:51:18	<--	justache (justache@gateway/web/irccloud.com/x-noubklhzjomxkpxl) has quit (*.net *.split)
+2019-11-14 13:51:18	<--	nupogodi (~nupogodi@2602:ffc5:40::1:786b) has quit (*.net *.split)
+2019-11-14 13:51:18	<--	mindfreeze (uid250931@iris/developer/mindfreeze) has quit (*.net *.split)
+2019-11-14 13:51:18	<--	sadbox (jmcguire@sadbox.org) has quit (*.net *.split)
+2019-11-14 13:51:18	<--	marlinc (~marlinc@znc.marlinc.nl) has quit (*.net *.split)
+2019-11-14 13:51:18	<--	comrad (~quassel@holarse/core/comrad) has quit (*.net *.split)
+2019-11-14 13:51:18	<--	linuxdaemon (linuxdemon@unaffiliated/linuxdaemon) has quit (*.net *.split)
+2019-11-14 13:51:18	<--	amosbird (~amosbird@2a01:111:f102:8001::1761:4cf8) has quit (*.net *.split)
+2019-11-14 13:51:19	<--	ebfe (~ebfe@scart.ebfe.org) has quit (*.net *.split)
+2019-11-14 13:51:19	<--	jhill (sid1055@gateway/web/irccloud.com/x-hipzralruwhcdwrh) has quit (*.net *.split)
+2019-11-14 13:51:19	<--	MachinShin (sid243317@gateway/web/irccloud.com/x-zvyosdtfbdysvvvb) has quit (*.net *.split)
+2019-11-14 13:51:19	<--	shakeel (sid164733@gateway/web/irccloud.com/x-wugdzqvdqyzkplrf) has quit (*.net *.split)
+2019-11-14 13:51:19	<--	nevivurn (~nevivurn@unaffiliated/nevivurn) has quit (*.net *.split)
+2019-11-14 13:51:19	<--	laris (undead@lar.is) has quit (*.net *.split)
+2019-11-14 13:51:19	<--	RN1986239 (~RN1986239@51.158.99.44) has quit (*.net *.split)
+2019-11-14 13:51:19	<--	Naeblis (~Naeblis@unaffiliated/naeblis) has quit (*.net *.split)
+2019-11-14 13:51:19	<--	lstanley (sid7517@gateway/web/irccloud.com/x-qfrdetedpdpszxmc) has quit (*.net *.split)
+2019-11-14 13:51:19	<--	since_ (d1cb7284cb@nat/friedrich-alexander/x-pyfjtoqliixlztbw) has quit (*.net *.split)
+2019-11-14 13:51:19	<--	geck (sid155183@gateway/web/irccloud.com/x-yzzfvxwczfbngscw) has quit (*.net *.split)
+2019-11-14 13:51:19	<--	worstadmin (sid56056@gateway/web/irccloud.com/x-wpvxunoemzzowkcc) has quit (*.net *.split)
+2019-11-14 13:51:20	<--	Kubuxu (sid346121@gateway/web/irccloud.com/x-gbbexpsvhgwndejb) has quit (*.net *.split)
+2019-11-14 13:52:23	<--	francis36012 (~francis@S0106a84e3f6eee83.cg.shawcable.net) has quit (Ping timeout: 245 seconds)
+2019-11-14 13:52:26	-->	titouan (~titouan@static.126.162.47.78.clients.your-server.de) has joined #go-nuts
+2019-11-14 13:53:39	<--	smcquay (~smcquay@c-76-102-33-94.hsd1.ca.comcast.net) has quit (Ping timeout: 260 seconds)
+2019-11-14 13:53:39	<--	jinks (~jinks@104.161.79.77) has quit (Ping timeout: 260 seconds)
+2019-11-14 13:53:56	-->	return0e (~return0e@host86-155-41-76.range86-155.btcentralplus.com) has joined #go-nuts
+2019-11-14 13:53:56	-->	im0nde (~im0nde@2a0a-a546-f676-0-2ad2-44ff-fe00-9395.ipv6dyn.netcologne.de) has joined #go-nuts
+2019-11-14 13:53:56	-->	whaley (~whaley@8.25.196.26) has joined #go-nuts
+2019-11-14 13:53:56	-->	black_ant (~antilope@unaffiliated/black-ant/x-1505394) has joined #go-nuts
+2019-11-14 13:53:56	-->	shady_traveller (~shady_tra@80.169.46.234) has joined #go-nuts
+2019-11-14 13:53:56	-->	velco (velco@nat/arm/x-undrcoohswyubfpk) has joined #go-nuts
+2019-11-14 13:53:56	-->	jbrodriguez (~textual@181.197.22.108) has joined #go-nuts
+2019-11-14 13:53:56	-->	livcd (mewmew@unaffiliated/livcd) has joined #go-nuts
+2019-11-14 13:53:56	-->	TripleDES (~sjr@93.176.187.161) has joined #go-nuts
+2019-11-14 13:53:56	-->	SorinIntoCode (~marius_ro@5.2.196.6) has joined #go-nuts
+2019-11-14 13:53:56	-->	swills (~swills@freebsd/developer/swills) has joined #go-nuts
+2019-11-14 13:53:56	-->	w3bcrawler (~w3bcrawle@134.41.73.181) has joined #go-nuts
+2019-11-14 13:53:56	-->	ziyourenxiang (~ziyourenx@unaffiliated/ziyourenxiang) has joined #go-nuts
+2019-11-14 13:53:56	-->	brendan- (~Brendan@c-73-141-252-152.hsd1.pa.comcast.net) has joined #go-nuts
+2019-11-14 13:53:56	-->	m1sdirection (~m1sdirect@146.115.42.10) has joined #go-nuts
+2019-11-14 13:53:56	-->	bline (~smc@184.63.220.178) has joined #go-nuts
+2019-11-14 13:53:56	-->	xnaas (~xnaas@unaffiliated/xnaas) has joined #go-nuts
+2019-11-14 13:53:56	-->	gump (~gump@97-90-65-238.static.yakm.wa.charter.com) has joined #go-nuts
+2019-11-14 13:53:56	-->	Ring0` (~ringo@unaffiliated/ring0/x-8667941) has joined #go-nuts
+2019-11-14 13:53:56	-->	ExoUNX (~ExoUNX@unaffiliated/exounx) has joined #go-nuts
+2019-11-14 13:53:56	-->	casaca (~nut@209.222.10.61) has joined #go-nuts
+2019-11-14 13:53:56	-->	bsdbandit (~bwell@users.757.org) has joined #go-nuts
+2019-11-14 13:53:56	-->	schaeffer (~schaeffer@unaffiliated/simcity2000) has joined #go-nuts
+2019-11-14 13:53:56	-->	Wessie (~Wessie@static.226.41.47.78.clients.your-server.de) has joined #go-nuts
+2019-11-14 13:53:56	-->	Vinski (~Vin@static.226.41.47.78.clients.your-server.de) has joined #go-nuts
+2019-11-14 13:53:56	-->	elibrokeit (eschwartz@archlinux/bugwrangler/eschwartz) has joined #go-nuts
+2019-11-14 13:53:56	-->	pztrn (~pztrn@aurora.pztrn.name) has joined #go-nuts
+2019-11-14 13:53:56	-->	paulgrmn (~paulgrmn@mail2.hartmantyner.com) has joined #go-nuts
+2019-11-14 13:53:56	-->	Ch3ck (~Ch3ck@104.225.5.10) has joined #go-nuts
+2019-11-14 13:53:56	-->	adtac (~adtac@2a01:4f8:202:4283::2) has joined #go-nuts
+2019-11-14 13:53:56	-->	Cyrus (~Cyrus@unaffiliated/cyrus) has joined #go-nuts
+2019-11-14 13:53:56	-->	Led_Zeppelin (~user@cpe-68-172-248-139.nj.res.rr.com) has joined #go-nuts
+2019-11-14 13:53:56	-->	PMStudio (paper@tilde.institute) has joined #go-nuts
+2019-11-14 13:53:56	-->	lkebin (~lkebin@149.129.77.141) has joined #go-nuts
+2019-11-14 13:53:56	-->	slax0r (znc@unaffiliated/slax0r) has joined #go-nuts
+2019-11-14 13:53:56	-->	entropygain (levitate@2600:3c01::f03c:91ff:fecc:c443) has joined #go-nuts
+2019-11-14 13:53:56	-->	Fingel (~fingel@unaffiliated/fingel) has joined #go-nuts
+2019-11-14 13:53:56	-->	Freeaqingme (quassel@gateway/vpn/privateinternetaccess/freeaqingme) has joined #go-nuts
+2019-11-14 13:53:56	-->	fmccann (~fmccann@www.sharpnoodles.com) has joined #go-nuts
+2019-11-14 13:53:56	-->	stutter (~stutter@cpe-174-107-125-216.sc.res.rr.com) has joined #go-nuts
+2019-11-14 13:53:56	-->	dostoyevsky (~sck@unaffiliated/dostoyevsky) has joined #go-nuts
+2019-11-14 13:53:56	-->	trees (~trees@de.timrees.co.uk) has joined #go-nuts
+2019-11-14 13:53:56	-->	xorex (~xerox@ircdoos.koppelvlak.net) has joined #go-nuts
+2019-11-14 13:53:56	-->	d34dh0r53 (~d34dh0r53@2605:6001:f341:1b00:80f3:fcff:fed4:2543) has joined #go-nuts
+2019-11-14 13:53:56	-->	Spritzgebaeck (~Spritzgeb@voxpupuli/contributor/Spritzgebaeck) has joined #go-nuts
+2019-11-14 13:53:56	-->	mindfreeze (uid250931@iris/developer/mindfreeze) has joined #go-nuts
+2019-11-14 13:53:56	-->	Natch (~Natch@h-112-130.A444.priv.bahnhof.se) has joined #go-nuts
+2019-11-14 13:53:56	-->	tjbp (~tom@78.141.197.43) has joined #go-nuts
+2019-11-14 13:53:56	-->	Grauwolf (~grauwolf@unaffiliated/grauwolf) has joined #go-nuts
+2019-11-14 13:53:56	-->	MachinShin (sid243317@gateway/web/irccloud.com/x-zvyosdtfbdysvvvb) has joined #go-nuts
+2019-11-14 13:53:56	-->	babilen (~babilen@unaffiliated/babilen) has joined #go-nuts
+2019-11-14 13:53:56	-->	Kubuxu (sid346121@gateway/web/irccloud.com/x-gbbexpsvhgwndejb) has joined #go-nuts
+2019-11-14 13:53:56	-->	lynchc (~quassel@c-67-169-113-213.hsd1.ca.comcast.net) has joined #go-nuts
+2019-11-14 13:53:56	-->	paracyst (~paracyst@unaffiliated/paracyst) has joined #go-nuts
+2019-11-14 13:53:56	-->	lemmi (~lemmi@lpm.pw) has joined #go-nuts
+2019-11-14 13:53:56	-->	nachoes (~nachoes@bender.initq.net) has joined #go-nuts
+2019-11-14 13:53:56	-->	Skarlso (~Skarlso@46.101.156.25) has joined #go-nuts
+2019-11-14 13:53:56	-->	RayS (~raysl@sdf1.xen.prgmr.com) has joined #go-nuts
+2019-11-14 13:53:56	-->	avemestr (~avemestr@2a01:4f8:212:2719::2) has joined #go-nuts
+2019-11-14 13:53:56	-->	nekron (~nekron@noordsee.de) has joined #go-nuts
+2019-11-14 13:53:56	-->	vendan (~vendan@li330-117.members.linode.com) has joined #go-nuts
+2019-11-14 13:53:56	-->	FIFOd (~FIFOd@neverfear.org) has joined #go-nuts
+2019-11-14 13:53:56	-->	tumdedum (~tumdedum@unaffiliated/espiral) has joined #go-nuts
+2019-11-14 13:53:56	-->	stux|RC (stux@2a01:270:0:ffff:ffff:2050:0:2) has joined #go-nuts
+2019-11-14 13:53:56	-->	megeve (sid151413@gateway/web/irccloud.com/x-kncwzzxfbtygztzq) has joined #go-nuts
+2019-11-14 13:53:56	-->	slashfocus (~no@104.131.21.114) has joined #go-nuts
+2019-11-14 13:53:56	-->	dec (~dec@unaffiliated/dec) has joined #go-nuts
+2019-11-14 13:53:56	-->	foxcpp (~foxcpp@foxcpp.dev) has joined #go-nuts
+2019-11-14 13:53:56	-->	eldritch (~eldritch@unaffiliated/eldritch) has joined #go-nuts
+2019-11-14 13:53:56	-->	kris-nova (~kris-nova@ec2-35-160-229-114.us-west-2.compute.amazonaws.com) has joined #go-nuts
+2019-11-14 13:53:56	-->	ddevault (znc@sourcehut/staff/ddevault) has joined #go-nuts
+2019-11-14 13:53:56	-->	rjeli (sid289321@gateway/web/irccloud.com/x-vwfmsdzaommrwsyl) has joined #go-nuts
+2019-11-14 13:53:56	-->	fuchstronaut (~fuchstron@unaffiliated/fuchstronaut) has joined #go-nuts
+2019-11-14 13:53:56	-->	toffermann (~tofferman@104.131.155.226) has joined #go-nuts
+2019-11-14 13:53:56	-->	shakeel (sid164733@gateway/web/irccloud.com/x-wugdzqvdqyzkplrf) has joined #go-nuts
+2019-11-14 13:53:56	-->	colekowalski (~cole@ns521035.ip-158-69-119.net) has joined #go-nuts
+2019-11-14 13:53:56	-->	drawks (~drawks@209.66.91.113) has joined #go-nuts
+2019-11-14 13:53:56	-->	RN1986239 (~RN1986239@51.158.99.44) has joined #go-nuts
+2019-11-14 13:53:56	-->	Nilium (~sid200856@p01.sfo2.do.x.spiff.io) has joined #go-nuts
+2019-11-14 13:53:56	-->	bhavin192 (~bhavin192@fedora/bhavin192) has joined #go-nuts
+2019-11-14 13:53:56	-->	ossifrage (~ossifrage@unaffiliated/ossifrage) has joined #go-nuts
+2019-11-14 13:53:56	-->	justache (justache@gateway/web/irccloud.com/x-noubklhzjomxkpxl) has joined #go-nuts
+2019-11-14 13:53:56	-->	nupogodi (~nupogodi@2602:ffc5:40::1:786b) has joined #go-nuts
+2019-11-14 13:53:56	-->	sadbox (jmcguire@sadbox.org) has joined #go-nuts
+2019-11-14 13:53:56	-->	marlinc (~marlinc@znc.marlinc.nl) has joined #go-nuts
+2019-11-14 13:53:56	-->	comrad (~quassel@holarse/core/comrad) has joined #go-nuts
+2019-11-14 13:53:56	-->	linuxdaemon (linuxdemon@unaffiliated/linuxdaemon) has joined #go-nuts
+2019-11-14 13:53:56	-->	amosbird (~amosbird@2a01:111:f102:8001::1761:4cf8) has joined #go-nuts
+2019-11-14 13:53:56	-->	jhill (sid1055@gateway/web/irccloud.com/x-hipzralruwhcdwrh) has joined #go-nuts
+2019-11-14 13:53:56	-->	ebfe (~ebfe@scart.ebfe.org) has joined #go-nuts
+2019-11-14 13:53:56	-->	nevivurn (~nevivurn@unaffiliated/nevivurn) has joined #go-nuts
+2019-11-14 13:53:56	-->	laris (undead@lar.is) has joined #go-nuts
+2019-11-14 13:53:56	-->	Naeblis (~Naeblis@unaffiliated/naeblis) has joined #go-nuts
+2019-11-14 13:53:56	-->	lstanley (sid7517@gateway/web/irccloud.com/x-qfrdetedpdpszxmc) has joined #go-nuts
+2019-11-14 13:53:56	-->	since_ (d1cb7284cb@nat/friedrich-alexander/x-pyfjtoqliixlztbw) has joined #go-nuts
+2019-11-14 13:53:56	-->	geck (sid155183@gateway/web/irccloud.com/x-yzzfvxwczfbngscw) has joined #go-nuts
+2019-11-14 13:53:56	-->	worstadmin (sid56056@gateway/web/irccloud.com/x-wpvxunoemzzowkcc) has joined #go-nuts
+2019-11-14 13:53:58	<--	the_ant (~Thunderbi@182.253.184.210) has quit (Quit: the_ant)
+2019-11-14 13:54:08	-->	wsm (~wsm@unaffiliated/wsm) has joined #go-nuts
+2019-11-14 13:54:08	<--	wsm (~wsm@unaffiliated/wsm) has quit (Changing host)
+2019-11-14 13:54:08	-->	wsm (~wsm@gateway/tor-sasl/wsm) has joined #go-nuts
+2019-11-14 13:54:27	<--	metalinspired (~milan@p5DD23B7F.dip0.t-ipconnect.de) has quit (Ping timeout: 240 seconds)
+2019-11-14 13:54:45	<--	megeve (sid151413@gateway/web/irccloud.com/x-kncwzzxfbtygztzq) has quit (Max SendQ exceeded)
+2019-11-14 13:54:45	<--	lstanley (sid7517@gateway/web/irccloud.com/x-qfrdetedpdpszxmc) has quit (Max SendQ exceeded)
+2019-11-14 13:54:45	<--	justache (justache@gateway/web/irccloud.com/x-noubklhzjomxkpxl) has quit (Max SendQ exceeded)
+2019-11-14 13:54:45	<--	jhill (sid1055@gateway/web/irccloud.com/x-hipzralruwhcdwrh) has quit (Max SendQ exceeded)
+2019-11-14 13:54:45	<--	dostoyevsky (~sck@unaffiliated/dostoyevsky) has quit (Max SendQ exceeded)
+2019-11-14 13:54:45	<--	stux|RC (stux@2a01:270:0:ffff:ffff:2050:0:2) has quit (Max SendQ exceeded)
+2019-11-14 13:54:51	<--	emocakes (~emocakes@unaffiliated/emocakes) has quit (Ping timeout: 240 seconds)
+2019-11-14 13:54:51	<--	Janhouse (~Janhouse@torch.id.lv) has quit (Ping timeout: 240 seconds)
+2019-11-14 13:54:52	-->	dostoyevsky (~sck@unaffiliated/dostoyevsky) has joined #go-nuts
+2019-11-14 13:54:53	<--	Martchus (~martchus@ipservice-092-211-023-099.092.211.pools.vodafone-ip.de) has quit (Ping timeout: 245 seconds)
+2019-11-14 13:55:15	<--	nghtshd (~nghtshd@c-98-252-221-154.hsd1.ga.comcast.net) has quit (Ping timeout: 240 seconds)
+2019-11-14 13:55:28	<--	pknull (~pooky@184.103.126.184) has quit (Quit: Departing.)
+2019-11-14 13:55:39	<--	not_bravo (~bravo@destiny.cat.pdx.edu) has quit (Ping timeout: 240 seconds)
+2019-11-14 13:55:54	-->	jinks (~jinks@2001:470:1f18:3aa:1d8:0:1c:34ac) has joined #go-nuts
+2019-11-14 13:55:59	-->	moser_ (~moser@113.119.58.7) has joined #go-nuts
+2019-11-14 13:56:12	-->	smcquay (~smcquay@2601:646:8c00:d04:ba88:e3ff:fedd:1e39) has joined #go-nuts
+2019-11-14 13:56:22	-->	nghtshd (nghtshd@2601:ca:4000:43b3:6254:15a6:538d:7f2c) has joined #go-nuts
+2019-11-14 13:56:27	-->	pknull (~pooky@184.103.126.184) has joined #go-nuts
+2019-11-14 13:56:54	-->	emocakes (~emocakes@unaffiliated/emocakes) has joined #go-nuts
+2019-11-14 13:56:56	<--	return0e (~return0e@host86-155-41-76.range86-155.btcentralplus.com) has quit (Ping timeout: 252 seconds)
+2019-11-14 13:57:00	-->	stux|RC (stux@cosmo.lunarshells.com) has joined #go-nuts
+2019-11-14 13:57:10	-->	Janhouse (~Janhouse@torch.id.lv) has joined #go-nuts
+2019-11-14 13:57:22	-->	megeve (sid151413@gateway/web/irccloud.com/x-roebcobnzqdhyelt) has joined #go-nuts
+2019-11-14 13:57:32	-->	lstanley (sid7517@gateway/web/irccloud.com/x-kxnltgzvdxoqorof) has joined #go-nuts
+2019-11-14 13:57:57	-->	justache (justache@gateway/web/irccloud.com/x-giibqjyvgmlufbbn) has joined #go-nuts
+2019-11-14 13:58:22	-->	jhill (sid1055@gateway/web/irccloud.com/x-zrhpagkgsxdaygnx) has joined #go-nuts
+2019-11-14 13:59:27	<--	pknull (~pooky@184.103.126.184) has quit (Client Quit)
+2019-11-14 13:59:58	-->	pknull (~pooky@184.103.126.184) has joined #go-nuts
+2019-11-14 14:05:39	<--	synthmeat (~synthmeat@unaffiliated/synthmeat) has quit (Quit: WeeChat 2.6)
+2019-11-14 14:06:29	lluad	Anyone know of a package that'll implement a dependency tree - i.e. the sort of thing you'd use to implement a build tool like make or ninja?
+2019-11-14 14:07:06	-->	silver (~silver@37.214.60.80) has joined #go-nuts
+2019-11-14 14:11:39	-->	return0e (~return0e@host86-155-41-76.range86-155.btcentralplus.com) has joined #go-nuts
+2019-11-14 14:14:50	<--	capella-da-star (~capella-d@103.68.10.14) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2019-11-14 14:15:59	-->	st8less (~st8less@inet-167-224-197-181.isp.ozarksgo.net) has joined #go-nuts
+2019-11-14 14:17:59	-->	Glorforidor (~pbj@30835008d.pa.net.dtu.dk) has joined #go-nuts
+2019-11-14 14:20:24	-->	absc (~abiscuola@dynamic-adsl-94-34-196-117.clienti.tiscali.it) has joined #go-nuts
+2019-11-14 14:24:56	-->	con3 (~kvirc@154.119.40.183) has joined #go-nuts
+2019-11-14 14:26:16	<--	moser_ (~moser@113.119.58.7) has quit (Ping timeout: 240 seconds)
+2019-11-14 14:27:22	-->	aps_ (~aps@2a02:908:dd21:16bc::1bc1) has joined #go-nuts
+2019-11-14 14:27:51	<--	Glorforidor (~pbj@30835008d.pa.net.dtu.dk) has quit (Ping timeout: 268 seconds)
+2019-11-14 14:31:34	-->	moser_ (~moser@113.119.58.7) has joined #go-nuts
+2019-11-14 14:31:36	-->	progart (~kamee@37.252.78.2) has joined #go-nuts
+2019-11-14 14:31:43	<--	progart (~kamee@37.252.78.2) has quit (Client Quit)
+2019-11-14 14:34:04	-->	pupskuchen (~pupskuche@unaffiliated/pupskuchen) has joined #go-nuts
+2019-11-14 14:41:32	<--	sword865 (uid208942@gateway/web/irccloud.com/x-lhalskfkyaasugkz) has quit (Quit: Connection closed for inactivity)
+2019-11-14 14:44:52	<--	xkapastel (uid17782@gateway/web/irccloud.com/x-ozctujlwbnklzmnj) has quit (Quit: Connection closed for inactivity)
+2019-11-14 14:44:58	-->	antsmartian (~antsmarti@122.164.157.245) has joined #go-nuts
+2019-11-14 14:45:59	-->	ravenousmoose (~ravenousm@ptr-cud5aqg5mwnp5zv7fzk.18120a2.ip6.access.telenet.be) has joined #go-nuts
+2019-11-14 14:46:02	-->	hexydecy6 (~hexydecy@64.42.179.51) has joined #go-nuts
+2019-11-14 14:46:27	<--	hexydecy (~hexydecy@64.42.179.51) has quit (Ping timeout: 240 seconds)
+2019-11-14 14:50:18	<--	ravenousmoose (~ravenousm@ptr-cud5aqg5mwnp5zv7fzk.18120a2.ip6.access.telenet.be) has quit (Ping timeout: 245 seconds)
+2019-11-14 14:50:51	<--	lluad (~lluad@37.228.193.94) has quit (Remote host closed the connection)
+2019-11-14 14:51:14	-->	plutoniix (~q@125.24.64.77) has joined #go-nuts
+2019-11-14 14:51:17	-->	lluad (~lluad@37.228.193.94) has joined #go-nuts
+2019-11-14 14:51:19	<--	hexfive (~hexfive@50.35.80.237) has quit (Quit: WeeChat 2.6)
+2019-11-14 14:53:55	<--	Anthaas (~Anthaas@unaffiliated/anthaas) has quit (Quit: ZNC 1.7.1 - https://znc.in)
+2019-11-14 14:54:47	-->	Anthaas (~Anthaas@unaffiliated/anthaas) has joined #go-nuts
+2019-11-14 14:58:41	<--	absc (~abiscuola@dynamic-adsl-94-34-196-117.clienti.tiscali.it) has quit (Ping timeout: 276 seconds)
+2019-11-14 14:59:40	-->	user9 (984d0e74@dcm-info-22.u-ga.fr) has joined #go-nuts
+2019-11-14 14:59:50	<--	kyrylo (~kyrylo@subtle/user/kyrylo) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-11-14 15:00:43	-->	Martchus (~martchus@dslb-088-066-227-087.088.066.pools.vodafone-ip.de) has joined #go-nuts
+2019-11-14 15:05:06	<--	feed (4469ca58@ip68-105-202-88.mc.at.cox.net) has quit (Remote host closed the connection)
+2019-11-14 15:05:23	<--	pknull (~pooky@184.103.126.184) has quit (Quit: Departing.)
+2019-11-14 15:06:03	-->	pknull (~pooky@184.103.126.184) has joined #go-nuts
+2019-11-14 15:06:27	<--	Martchus (~martchus@dslb-088-066-227-087.088.066.pools.vodafone-ip.de) has quit (Ping timeout: 265 seconds)
+2019-11-14 15:07:08	<--	swills (~swills@freebsd/developer/swills) has quit (Quit: swills)
+2019-11-14 15:08:18	-->	BeerLover (~BeerLover@103.203.254.245) has joined #go-nuts
+2019-11-14 15:08:34	-->	Martchus (~martchus@dslb-088-066-073-054.088.066.pools.vodafone-ip.de) has joined #go-nuts
+2019-11-14 15:09:47	-->	saml (~saml@unaffiliated/saml) has joined #go-nuts
+2019-11-14 15:11:36	<--	antsmartian (~antsmarti@122.164.157.245) has quit (Remote host closed the connection)
+2019-11-14 15:14:56	-->	im0nde_ (~im0nde@2a0a-a546-6b49-0-2ad2-44ff-fe00-9395.ipv6dyn.netcologne.de) has joined #go-nuts
+2019-11-14 15:14:56	<--	im0nde (~im0nde@2a0a-a546-f676-0-2ad2-44ff-fe00-9395.ipv6dyn.netcologne.de) has quit (Ping timeout: 276 seconds)
+2019-11-14 15:15:51	<--	pknull (~pooky@184.103.126.184) has quit (Quit: Departing.)
+2019-11-14 15:16:34	-->	pknull (~pooky@184.103.126.184) has joined #go-nuts
+2019-11-14 15:18:11	<--	lluad (~lluad@37.228.193.94) has quit (Ping timeout: 276 seconds)
+2019-11-14 15:18:21	<--	SorinIntoCode (~marius_ro@5.2.196.6) has quit (Quit: Leaving.)
+2019-11-14 15:18:58	-->	swills (~swills@freebsd/developer/swills) has joined #go-nuts
+2019-11-14 15:21:02	-->	lluad (~lluad@2a02:8084:2861:3f80:d87a:1cf7:98d5:eb3f) has joined #go-nuts
+2019-11-14 15:21:27	<--	st8less (~st8less@inet-167-224-197-181.isp.ozarksgo.net) has quit (Quit: WeeChat 2.4)
+2019-11-14 15:21:38	-->	st8less (~st8less@inet-167-224-197-181.isp.ozarksgo.net) has joined #go-nuts
+2019-11-14 15:21:55	-->	eroux (~eroux@102-65-72-106.ftth.web.africa) has joined #go-nuts
+2019-11-14 15:23:51	<--	Tichodroma (~lutz@fsf/member/Tichodroma) has left #go-nuts
+2019-11-14 15:34:15	dupondje	Hi, I'm playing around with the Go Reverse Proxy (NewSingleHostReverseProxy)
+2019-11-14 15:34:48	dupondje	Now I modify the r.From["headerX"], but it still seems to proxy the unmodified header ?!
+2019-11-14 15:34:54	dupondje	Did I miss something?
+2019-11-14 15:38:17	<--	pknull (~pooky@184.103.126.184) has quit (Quit: Departing.)
+2019-11-14 15:39:42	-->	jrabbit (~jack@unaffiliated/jrabbit) has joined #go-nuts
+2019-11-14 15:39:57	-->	sircco (~damir@cpe-188-129-95-117.dynamic.amis.hr) has joined #go-nuts
+2019-11-14 15:41:37	sircco	i read ton of data from snmp and i have slow sql database that doesn't catch up on snmp read spikes. Should i use buffered channel for that or is there some better solution?
+2019-11-14 15:44:07	<--	umask077 (~Thunderbi@pool-108-14-233-233.nycmny.fios.verizon.net) has quit (Remote host closed the connection)
+2019-11-14 15:44:10	emilsp	say, I've got some dependency at git.example.com/coolmod. Is there a way with go1.12 to download it and let me change it?
+2019-11-14 15:49:08	-->	pknull (~pooky@184.103.126.184) has joined #go-nuts
+2019-11-14 15:50:16	-->	umask077 (~Thunderbi@pool-108-14-233-233.nycmny.fios.verizon.net) has joined #go-nuts
+2019-11-14 15:52:57	<--	sircco (~damir@cpe-188-129-95-117.dynamic.amis.hr) has quit (Quit: Leaving)
+2019-11-14 15:53:52	<--	andlabs (~pietro@ool-44c660e7.dyn.optonline.net) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-11-14 15:57:58	-->	return0__ (~return0e@host86-155-41-76.range86-155.btcentralplus.com) has joined #go-nuts
+2019-11-14 15:59:53	<--	return0e (~return0e@host86-155-41-76.range86-155.btcentralplus.com) has quit (Ping timeout: 245 seconds)
+2019-11-14 16:07:46	-->	ypa (~Sergey@94.158.171.6) has joined #go-nuts
+2019-11-14 16:09:06	<--	floppydh (~floppydh@buro.mquadr.at) has quit (Quit: WeeChat 2.6)
+2019-11-14 16:09:32	sztanpet	emilsp https://github.com/golang/go/wiki/Modules#when-should-i-use-the-replace-directive
+2019-11-14 16:09:58	sztanpet	and no, the whole workflow is not built into the build tool
+2019-11-14 16:10:24	<--	webstrand (~webstrand@23.94.139.105) has left #go-nuts
+2019-11-14 16:11:53	-->	Tjowers (c7bc5729@199.188.87.41) has joined #go-nuts
+2019-11-14 16:12:02	-->	nika_ (~nika@unaffiliated/nika) has joined #go-nuts
+2019-11-14 16:12:16	sztanpet	dupondje im guessing you are using the ModifyResponse functionality?
+2019-11-14 16:12:16	-->	ooqaarx (~ooqaarx@unaffiliated/ooqaarx) has joined #go-nuts
+2019-11-14 16:12:28	emilsp	I tried to hack around it by `go mod vendor`. This resulted in the tool trying to access weird parts of my fs - go mod vendor: open C:\Users\LICENSE.md: Access is denied.
+2019-11-14 16:12:36	emilsp	But thanks sztanpet :)
+2019-11-14 16:12:38	<--	user9 (984d0e74@dcm-info-22.u-ga.fr) has quit (Remote host closed the connection)
+2019-11-14 16:17:36	<--	pknull (~pooky@184.103.126.184) has quit (Quit: Departing.)
+2019-11-14 16:18:11	-->	pknull (~pooky@184.103.126.184) has joined #go-nuts
+2019-11-14 16:18:29	-->	user9 (984d0e74@dcm-info-22.u-ga.fr) has joined #go-nuts
+2019-11-14 16:20:16	-->	juztin (~juztin@internal.mediciventures.com) has joined #go-nuts
+2019-11-14 16:22:17	dupondje	sztanpet: No, ad its not the response that needs to be rewritten, but I need to do mod's to the request that is proxied
+2019-11-14 16:23:02	dupondje	anyway, seems like adjusting r.From is not working, and have to set query: r.URL.RawQuery = q.Encode()
+2019-11-14 16:23:18	sztanpet	dont even know what r.From is
+2019-11-14 16:23:35	sztanpet	anyway, you might want to show code
+2019-11-14 16:23:58	dupondje	seems to work now, except that httputil.DumpRequest() still gives me the un-adjusted request, while it actually does the correct request (according to tcpdump) :)
+2019-11-14 16:24:13	sztanpet	if its the form, not sure what the query has to do with it
+2019-11-14 16:24:25	dupondje	sztanpet: https://golang.org/pkg/net/http/#Request.ParseForm
+2019-11-14 16:24:48	sztanpet	so you just keep typoing it, cool
+2019-11-14 16:25:19	dupondje	Well, ParseForm parses the query string, and saves it into r.Form, but adjusting r.Form doesn't make the proxied request to use the modified value

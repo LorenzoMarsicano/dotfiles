@@ -2743,3 +2743,262 @@
 2019-11-13 09:10:04	--	CTCP reply to freenode-connect: VERSION WeeChat 2.6 (Nov 11 2019 16:11:38)
 2019-11-13 09:10:10	--	#rust: ##rust :Forwarding to another channel
 2019-11-13 09:10:10	--	NickServ (NickServ@services.): You are already logged in as Syrinxos.
+2019-11-13 16:33:04	--	irc: lag is high, reconnecting to server freenode
+2019-11-13 16:33:04	--	irc: disconnected from server
+2019-11-13 16:33:04	--	irc: reconnecting to server in 10 seconds
+2019-11-13 16:33:14	--	irc: reconnecting to server...
+2019-11-13 16:33:14	--	irc: connecting to server chat.freenode.net/6667...
+2019-11-13 16:33:14	--	irc: connected to chat.freenode.net/6667 (38.229.70.22)
+2019-11-13 16:33:14	--	card.freenode.net: *** Looking up your hostname...
+2019-11-13 16:33:14	--	card.freenode.net: *** Checking Ident
+2019-11-13 16:33:14	--	card.freenode.net: *** Found your hostname
+2019-11-13 16:33:20	--	card.freenode.net: *** No Ident response
+2019-11-13 16:33:20	--	irc: client capability, server supports: extended-join tls multi-prefix identify-msg account-notify chghost sasl cap-notify away-notify
+2019-11-13 16:33:20	--	irc: client capability, requesting: sasl
+2019-11-13 16:33:21	--	irc: client capability, enabled: sasl
+2019-11-13 16:33:21	--	You are now logged in as Syrinxos. (Syrinxos!syrinxos@93-34-1-82.ip47.fastwebnet.it)
+2019-11-13 16:33:22	--	SASL authentication successful
+2019-11-13 16:33:22	--	Welcome to the freenode Internet Relay Chat Network Syrinxos
+2019-11-13 16:33:22	--	MSG(nickserv): identify *********
+2019-11-13 16:33:22	--	Your host is card.freenode.net[38.229.70.22/6667], running version ircd-seven-1.1.8
+2019-11-13 16:33:22	--	This server was created Sun Sep 22 2019 at 17:40:02 UTC
+2019-11-13 16:33:22	--	card.freenode.net ircd-seven-1.1.8 DOQRSZaghilopsuwz CFILMPQSbcefgijklmnopqrstuvz bkloveqjfI
+2019-11-13 16:33:22	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstuz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode STATUSMSG=@+ CALLERID=g CASEMAPPING=rfc1459 :are supported by this server
+2019-11-13 16:33:22	--	CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 DEAF=D FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: EXTBAN=$,ajrxz CLIENTVER=3.0 KNOCK CPRIVMSG CNOTICE :are supported by this server
+2019-11-13 16:33:22	--	WHOX SAFELIST ELIST=CTU ETRACE :are supported by this server
+2019-11-13 16:33:22	--	There are 95 users and 86620 invisible on 31 servers
+2019-11-13 16:33:22	--	37 :IRC Operators online
+2019-11-13 16:33:22	--	17 :unknown connection(s)
+2019-11-13 16:33:22	--	50269 :channels formed
+2019-11-13 16:33:22	--	I have 7420 clients and 1 servers
+2019-11-13 16:33:22	--	7420 7597 :Current local users 7420, max 7597
+2019-11-13 16:33:22	--	86715 92608 :Current global users 86715, max 92608
+2019-11-13 16:33:22	--	Highest connection count: 7598 (7597 clients) (672955 connections received)
+2019-11-13 16:33:22	--	- card.freenode.net Message of the Day - 
+2019-11-13 16:33:22	--	-  
+2019-11-13 16:33:22	--	- Welcome to card.freenode.net in Washington, DC, US, kindly sponsored by
+2019-11-13 16:33:22	--	- Team Cymru (http://www.team-cymru.org).
+2019-11-13 16:33:22	--	-  
+2019-11-13 16:33:22	--	- CARD, ORSON SCOTT [1951-]. Born in Richland, Washington, Card grew up in
+2019-11-13 16:33:22	--	- California, Arizona, and Utah. He lived in Brazil for two years as an unpaid
+2019-11-13 16:33:22	--	- missionary for the Mormon Church. Author of the Ender and Alvin Maker books,
+2019-11-13 16:33:22	--	- Card's science fiction and fantasy work is strongly influenced by his Mormon
+2019-11-13 16:33:22	--	- cultural background. The first author to win the Hugo and Nebula novel awards
+2019-11-13 16:33:22	--	- two years in a row, Card currently lives in Greensboro, North Carolina, US.
+2019-11-13 16:33:22	--	-  
+2019-11-13 16:33:22	--	-  
+2019-11-13 16:33:22	--	- Welcome to freenode - supporting the free and open source
+2019-11-13 16:33:22	--	- software communities since 1998.
+2019-11-13 16:33:22	--	-  
+2019-11-13 16:33:22	--	- By connecting to freenode you indicate that you have read and
+2019-11-13 16:33:22	--	- accept our policies and guidelines as set out on https://freenode.net
+2019-11-13 16:33:22	--	-  
+2019-11-13 16:33:22	--	- In the event that you observe behaviour that contravenes our policies,
+2019-11-13 16:33:22	--	- please notify a volunteer staff member via private message, or send us an
+2019-11-13 16:33:22	--	- e-mail to complaints@freenode.net -- we will do our best to address the
+2019-11-13 16:33:22	--	- situation within a reasonable period of time, and we may request further
+2019-11-13 16:33:22	--	- information or, as appropriate, involve other parties such as channel operators 
+2019-11-13 16:33:22	--	- Group Contacts representing an on-topic group.
+2019-11-13 16:33:22	--	-  
+2019-11-13 16:33:22	--	- freenode runs an open proxy scanner.
+2019-11-13 16:33:22	--	-  
+2019-11-13 16:33:22	--	- If you are looking for assistance, you may be able to find a list of 
+2019-11-13 16:33:22	--	- volunteer staff on '/stats p' (shows only on-call staff) or by joining 
+2019-11-13 16:33:22	--	- #freenode and using the '/who freenode/staff/*' command. You may message
+2019-11-13 16:33:22	--	- any of us at any time. Please note that freenode predominantly provides 
+2019-11-13 16:33:22	--	- assistance via private message, and while we have a network channel the 
+2019-11-13 16:33:22	--	- primary venue for support requests is via private message to a member 
+2019-11-13 16:33:22	--	- of the volunteer staff team.
+2019-11-13 16:33:22	--	-  
+2019-11-13 16:33:22	--	- From time to time, volunteer staff may send server-wide notices relating to
+2019-11-13 16:33:22	--	- the project, or the communities that we host. The majority of such notices
+2019-11-13 16:33:22	--	- will be sent as wallops, and you can '/mode <yournick> +w' to ensure that you
+2019-11-13 16:33:22	--	- do not miss them. Important messages relating to the freenode project, including
+2019-11-13 16:33:22	--	- notices of upcoming maintenance and other scheduled downtime will be issued as
+2019-11-13 16:33:22	--	- global notices.
+2019-11-13 16:33:22	--	-  
+2019-11-13 16:33:22	--	- Representing an on-topic project? Don't forget to register, more information
+2019-11-13 16:33:22	--	- can be found on the https://freenode.net website under "Group Registration".
+2019-11-13 16:33:22	--	-  
+2019-11-13 16:33:22	--	- Thank you also to our server sponsors for the sustained support in keeping the
+2019-11-13 16:33:22	--	- network going for close to two decades.
+2019-11-13 16:33:22	--	-  
+2019-11-13 16:33:22	--	- Thank you to all of our attendees, sponsors, speakers, exhibitors, helpers,
+2019-11-13 16:33:22	--	- and everyone else who made this year's freenode #live conference amazing.
+2019-11-13 16:33:22	--	- https://freenode.net/news/live-2018
+2019-11-13 16:33:22	--	-  
+2019-11-13 16:33:22	--	- Thank you for using freenode!
+2019-11-13 16:33:22	--	End of /MOTD command.
+2019-11-13 16:33:22	--	User mode [+i] by Syrinxos
+2019-11-13 16:33:23	--	freenode-connect (frigg@freenode/utility-bot/frigg): Welcome to freenode. To protect the network all new connections will be scanned for vulnerabilities. This will not harm your computer, and vulnerable hosts will be notified.
+2019-11-13 16:33:23	--	CTCP requested by freenode-connect: VERSION
+2019-11-13 16:33:23	--	CTCP reply to freenode-connect: VERSION WeeChat 2.6 (Nov 11 2019 16:11:38)
+2019-11-13 16:33:28	--	NickServ (NickServ@services.): You are already logged in as Syrinxos.
+2019-11-13 17:15:25	--	irc: lag is high, reconnecting to server freenode
+2019-11-13 17:15:25	--	irc: disconnected from server
+2019-11-13 17:15:25	--	irc: reconnecting to server in 10 seconds
+2019-11-13 17:15:35	--	irc: reconnecting to server...
+2019-11-13 17:15:35	--	irc: connecting to server chat.freenode.net/6667...
+2019-11-13 17:15:35	--	irc: connected to chat.freenode.net/6667 (149.56.134.238)
+2019-11-13 17:15:35	--	cherryh.freenode.net: *** Looking up your hostname...
+2019-11-13 17:15:35	--	cherryh.freenode.net: *** Checking Ident
+2019-11-13 17:15:36	--	cherryh.freenode.net: *** Found your hostname
+2019-11-13 17:15:42	--	cherryh.freenode.net: *** No Ident response
+2019-11-13 17:15:42	--	irc: client capability, server supports: extended-join tls multi-prefix identify-msg account-notify chghost sasl cap-notify away-notify
+2019-11-13 17:15:42	--	irc: client capability, requesting: sasl
+2019-11-13 17:15:42	--	irc: client capability, enabled: sasl
+2019-11-13 17:15:43	--	You are now logged in as Syrinxos. (Syrinxos!syrinxos@93-34-1-84.ip47.fastwebnet.it)
+2019-11-13 17:15:43	--	SASL authentication successful
+2019-11-13 17:15:44	--	Welcome to the freenode Internet Relay Chat Network Syrinxos
+2019-11-13 17:15:44	--	MSG(nickserv): identify *********
+2019-11-13 17:15:44	--	Your host is cherryh.freenode.net[149.56.134.238/6667], running version ircd-seven-1.1.8
+2019-11-13 17:15:44	--	This server was created Wed Sep 11 2019 at 21:09:45 UTC
+2019-11-13 17:15:44	--	cherryh.freenode.net ircd-seven-1.1.8 DOQRSZaghilopsuwz CFILMPQSbcefgijklmnopqrstuvz bkloveqjfI
+2019-11-13 17:15:44	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstuz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode STATUSMSG=@+ CALLERID=g CASEMAPPING=rfc1459 :are supported by this server
+2019-11-13 17:15:44	--	CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 DEAF=D FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: EXTBAN=$,ajrxz CLIENTVER=3.0 CPRIVMSG CNOTICE SAFELIST :are supported by this server
+2019-11-13 17:15:44	--	ELIST=CTU WHOX ETRACE KNOCK :are supported by this server
+2019-11-13 17:15:44	--	There are 94 users and 86462 invisible on 31 servers
+2019-11-13 17:15:44	--	37 :IRC Operators online
+2019-11-13 17:15:44	--	22 :unknown connection(s)
+2019-11-13 17:15:44	--	50236 :channels formed
+2019-11-13 17:15:44	--	I have 7333 clients and 1 servers
+2019-11-13 17:15:44	--	7333 7519 :Current local users 7333, max 7519
+2019-11-13 17:15:44	--	86556 92605 :Current global users 86556, max 92605
+2019-11-13 17:15:44	--	Highest connection count: 7520 (7519 clients) (825650 connections received)
+2019-11-13 17:15:44	--	- cherryh.freenode.net Message of the Day - 
+2019-11-13 17:15:44	--	- Welcome to cherryh.freenode.net in Montreal, CA.
+2019-11-13 17:15:44	--	- Welcome to freenode - supporting the free and open source
+2019-11-13 17:15:44	--	- software communities since 1998.
+2019-11-13 17:15:44	--	-  
+2019-11-13 17:15:44	--	- By connecting to freenode you indicate that you have read and
+2019-11-13 17:15:44	--	- accept our policies and guidelines as set out on https://freenode.net
+2019-11-13 17:15:44	--	-  
+2019-11-13 17:15:44	--	- In the event that you observe behaviour that contravenes our policies,
+2019-11-13 17:15:44	--	- please notify a volunteer staff member via private message, or send us an
+2019-11-13 17:15:44	--	- e-mail to complaints@freenode.net -- we will do our best to address the
+2019-11-13 17:15:44	--	- situation within a reasonable period of time, and we may request further
+2019-11-13 17:15:44	--	- information or, as appropriate, involve other parties such as channel operators 
+2019-11-13 17:15:44	--	- Group Contacts representing an on-topic group.
+2019-11-13 17:15:44	--	-  
+2019-11-13 17:15:44	--	- freenode runs an open proxy scanner.
+2019-11-13 17:15:44	--	-  
+2019-11-13 17:15:44	--	- If you are looking for assistance, you may be able to find a list of 
+2019-11-13 17:15:44	--	- volunteer staff on '/stats p' (shows only on-call staff) or by joining 
+2019-11-13 17:15:44	--	- #freenode and using the '/who freenode/staff/*' command. You may message
+2019-11-13 17:15:44	--	- any of us at any time. Please note that freenode predominantly provides 
+2019-11-13 17:15:44	--	- assistance via private message, and while we have a network channel the 
+2019-11-13 17:15:44	--	- primary venue for support requests is via private message to a member 
+2019-11-13 17:15:44	--	- of the volunteer staff team.
+2019-11-13 17:15:44	--	-  
+2019-11-13 17:15:44	--	- From time to time, volunteer staff may send server-wide notices relating to
+2019-11-13 17:15:44	--	- the project, or the communities that we host. The majority of such notices
+2019-11-13 17:15:44	--	- will be sent as wallops, and you can '/mode <yournick> +w' to ensure that you
+2019-11-13 17:15:44	--	- do not miss them. Important messages relating to the freenode project, including
+2019-11-13 17:15:44	--	- notices of upcoming maintenance and other scheduled downtime will be issued as
+2019-11-13 17:15:44	--	- global notices.
+2019-11-13 17:15:44	--	-  
+2019-11-13 17:15:44	--	- Representing an on-topic project? Don't forget to register, more information
+2019-11-13 17:15:44	--	- can be found on the https://freenode.net website under "Group Registration".
+2019-11-13 17:15:44	--	-  
+2019-11-13 17:15:44	--	- Thank you also to our server sponsors for the sustained support in keeping the
+2019-11-13 17:15:44	--	- network going for close to two decades.
+2019-11-13 17:15:44	--	-  
+2019-11-13 17:15:44	--	- Thank you to all of our attendees, sponsors, speakers, exhibitors, helpers,
+2019-11-13 17:15:44	--	- and everyone else who made this year's freenode #live conference amazing.
+2019-11-13 17:15:44	--	- https://freenode.net/news/live-2018
+2019-11-13 17:15:44	--	-  
+2019-11-13 17:15:44	--	- Thank you for using freenode!
+2019-11-13 17:15:44	--	End of /MOTD command.
+2019-11-13 17:15:44	--	User mode [+i] by Syrinxos
+2019-11-13 17:15:45	--	freenode-connect (frigg@freenode/utility-bot/frigg): Welcome to freenode. To protect the network all new connections will be scanned for vulnerabilities. This will not harm your computer, and vulnerable hosts will be notified.
+2019-11-13 17:15:45	--	CTCP requested by freenode-connect: VERSION
+2019-11-13 17:15:45	--	CTCP reply to freenode-connect: VERSION WeeChat 2.6 (Nov 11 2019 16:11:38)
+2019-11-13 17:15:50	--	NickServ (NickServ@services.): You are already logged in as Syrinxos.
+2019-11-14 09:33:57	--	irc: connecting to server chat.freenode.net/6667...
+2019-11-14 09:33:58	--	irc: connected to chat.freenode.net/6667 (38.229.70.22)
+2019-11-14 09:33:58	--	card.freenode.net: *** Looking up your hostname...
+2019-11-14 09:33:58	--	card.freenode.net: *** Checking Ident
+2019-11-14 09:33:58	--	card.freenode.net: *** Found your hostname
+2019-11-14 09:34:05	--	card.freenode.net: *** No Ident response
+2019-11-14 09:34:05	--	irc: client capability, server supports: extended-join tls multi-prefix identify-msg account-notify chghost sasl cap-notify away-notify
+2019-11-14 09:34:05	--	irc: client capability, requesting: sasl
+2019-11-14 09:34:05	--	irc: client capability, enabled: sasl
+2019-11-14 09:34:06	--	You are now logged in as Syrinxos. (Syrinxos!syrinxos@93-34-1-84.ip47.fastwebnet.it)
+2019-11-14 09:34:06	--	SASL authentication successful
+2019-11-14 09:34:06	--	Welcome to the freenode Internet Relay Chat Network Syrinxos
+2019-11-14 09:34:06	--	MSG(nickserv): identify *********
+2019-11-14 09:34:06	--	Your host is card.freenode.net[38.229.70.22/6667], running version ircd-seven-1.1.8
+2019-11-14 09:34:06	--	This server was created Sun Sep 22 2019 at 17:40:02 UTC
+2019-11-14 09:34:06	--	card.freenode.net ircd-seven-1.1.8 DOQRSZaghilopsuwz CFILMPQSbcefgijklmnopqrstuvz bkloveqjfI
+2019-11-14 09:34:06	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstuz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode STATUSMSG=@+ CALLERID=g CASEMAPPING=rfc1459 :are supported by this server
+2019-11-14 09:34:06	--	CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 DEAF=D FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: EXTBAN=$,ajrxz CLIENTVER=3.0 KNOCK CPRIVMSG CNOTICE :are supported by this server
+2019-11-14 09:34:06	--	WHOX SAFELIST ELIST=CTU ETRACE :are supported by this server
+2019-11-14 09:34:06	--	There are 97 users and 84500 invisible on 31 servers
+2019-11-14 09:34:06	--	37 :IRC Operators online
+2019-11-14 09:34:06	--	15 :unknown connection(s)
+2019-11-14 09:34:06	--	50063 :channels formed
+2019-11-14 09:34:06	--	I have 7211 clients and 1 servers
+2019-11-14 09:34:06	--	7211 7597 :Current local users 7211, max 7597
+2019-11-14 09:34:06	--	84597 92608 :Current global users 84597, max 92608
+2019-11-14 09:34:06	--	Highest connection count: 7598 (7597 clients) (682786 connections received)
+2019-11-14 09:34:06	--	- card.freenode.net Message of the Day - 
+2019-11-14 09:34:06	--	-  
+2019-11-14 09:34:06	--	- Welcome to card.freenode.net in Washington, DC, US, kindly sponsored by
+2019-11-14 09:34:06	--	- Team Cymru (http://www.team-cymru.org).
+2019-11-14 09:34:06	--	-  
+2019-11-14 09:34:06	--	- CARD, ORSON SCOTT [1951-]. Born in Richland, Washington, Card grew up in
+2019-11-14 09:34:06	--	- California, Arizona, and Utah. He lived in Brazil for two years as an unpaid
+2019-11-14 09:34:06	--	- missionary for the Mormon Church. Author of the Ender and Alvin Maker books,
+2019-11-14 09:34:06	--	- Card's science fiction and fantasy work is strongly influenced by his Mormon
+2019-11-14 09:34:06	--	- cultural background. The first author to win the Hugo and Nebula novel awards
+2019-11-14 09:34:06	--	- two years in a row, Card currently lives in Greensboro, North Carolina, US.
+2019-11-14 09:34:06	--	-  
+2019-11-14 09:34:06	--	-  
+2019-11-14 09:34:06	--	- Welcome to freenode - supporting the free and open source
+2019-11-14 09:34:06	--	- software communities since 1998.
+2019-11-14 09:34:06	--	-  
+2019-11-14 09:34:06	--	- By connecting to freenode you indicate that you have read and
+2019-11-14 09:34:06	--	- accept our policies and guidelines as set out on https://freenode.net
+2019-11-14 09:34:06	--	-  
+2019-11-14 09:34:06	--	- In the event that you observe behaviour that contravenes our policies,
+2019-11-14 09:34:06	--	- please notify a volunteer staff member via private message, or send us an
+2019-11-14 09:34:06	--	- e-mail to complaints@freenode.net -- we will do our best to address the
+2019-11-14 09:34:06	--	- situation within a reasonable period of time, and we may request further
+2019-11-14 09:34:06	--	- information or, as appropriate, involve other parties such as channel operators 
+2019-11-14 09:34:06	--	- Group Contacts representing an on-topic group.
+2019-11-14 09:34:06	--	-  
+2019-11-14 09:34:06	--	- freenode runs an open proxy scanner.
+2019-11-14 09:34:06	--	-  
+2019-11-14 09:34:06	--	- If you are looking for assistance, you may be able to find a list of 
+2019-11-14 09:34:06	--	- volunteer staff on '/stats p' (shows only on-call staff) or by joining 
+2019-11-14 09:34:06	--	- #freenode and using the '/who freenode/staff/*' command. You may message
+2019-11-14 09:34:06	--	- any of us at any time. Please note that freenode predominantly provides 
+2019-11-14 09:34:06	--	- assistance via private message, and while we have a network channel the 
+2019-11-14 09:34:06	--	- primary venue for support requests is via private message to a member 
+2019-11-14 09:34:06	--	- of the volunteer staff team.
+2019-11-14 09:34:06	--	-  
+2019-11-14 09:34:06	--	- From time to time, volunteer staff may send server-wide notices relating to
+2019-11-14 09:34:06	--	- the project, or the communities that we host. The majority of such notices
+2019-11-14 09:34:06	--	- will be sent as wallops, and you can '/mode <yournick> +w' to ensure that you
+2019-11-14 09:34:06	--	- do not miss them. Important messages relating to the freenode project, including
+2019-11-14 09:34:06	--	- notices of upcoming maintenance and other scheduled downtime will be issued as
+2019-11-14 09:34:06	--	- global notices.
+2019-11-14 09:34:06	--	-  
+2019-11-14 09:34:06	--	- Representing an on-topic project? Don't forget to register, more information
+2019-11-14 09:34:06	--	- can be found on the https://freenode.net website under "Group Registration".
+2019-11-14 09:34:06	--	-  
+2019-11-14 09:34:07	--	- Thank you also to our server sponsors for the sustained support in keeping the
+2019-11-14 09:34:07	--	- network going for close to two decades.
+2019-11-14 09:34:07	--	-  
+2019-11-14 09:34:07	--	- Thank you to all of our attendees, sponsors, speakers, exhibitors, helpers,
+2019-11-14 09:34:07	--	- and everyone else who made this year's freenode #live conference amazing.
+2019-11-14 09:34:07	--	- https://freenode.net/news/live-2018
+2019-11-14 09:34:07	--	-  
+2019-11-14 09:34:07	--	- Thank you for using freenode!
+2019-11-14 09:34:07	--	End of /MOTD command.
+2019-11-14 09:34:07	--	User mode [+i] by Syrinxos
+2019-11-14 09:34:08	--	freenode-connect (frigg@freenode/utility-bot/frigg): Welcome to freenode. To protect the network all new connections will be scanned for vulnerabilities. This will not harm your computer, and vulnerable hosts will be notified.
+2019-11-14 09:34:08	--	CTCP requested by freenode-connect: VERSION
+2019-11-14 09:34:08	--	CTCP reply to freenode-connect: VERSION WeeChat 2.6 (Nov 12 2019 10:23:52)
+2019-11-14 09:34:13	--	#rust: ##rust :Forwarding to another channel
+2019-11-14 09:34:13	--	NickServ (NickServ@services.): You are already logged in as Syrinxos.

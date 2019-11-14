@@ -21,8 +21,7 @@ font pango:Iosevka 9
 #font pango:DejaVu Sans Mono 8
 
 exec --no-startup-id compton -b
-
-bindsym $mod+d exec rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3 -font 'Inconsolata 14' -modi ssh,run,drun,window
+bindsym $mod+d exec --no-startup-id "rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3 -font 'Inconsolata 14' -modi ssh,run,drun,window"
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -165,9 +164,12 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
-
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
 bar {
-        status_command i3status
+    status_command i3status --config ~/.config/i3status/i3status.conf
+    position top
+    tray_output primary
+    font Hack 24
+    tray_padding 4
+
+    separator_symbol "|"
 }

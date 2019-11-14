@@ -1345,3 +1345,77 @@
 2019-11-13 14:04:36	<--	Thedarkb (~beno@193.1.184.232) has quit (Ping timeout: 240 seconds)
 2019-11-13 14:34:50	<--	zap0 (~zap0@14-201-222-143.tpgi.com.au) has left #SDL
 2019-11-13 15:13:06	-->	LunarJetman (LunarJetma@5ec1bc5a.skybroadband.com) has joined #SDL
+2019-11-13 15:49:59	-->	ImQ009 (~ImQ009@unaffiliated/imq009) has joined #SDL
+2019-11-13 15:50:49	-->	Xeek (~xeek@unaffiliated/xeek) has joined #SDL
+2019-11-13 16:33:04	--	irc: disconnected from server
+2019-11-13 16:33:34	-->	Syrinxos (~syrinxos@93-34-1-82.ip47.fastwebnet.it) has joined #SDL
+2019-11-13 16:33:34	--	Topic for #SDL is "Official SDL Channel http://www.libsdl.org/ | You must identify with NickServ to join/talk"
+2019-11-13 16:33:34	--	Topic set by akawaka (~akawaka@2605:e000:1701:40f8:211:32ff:fe51:9639) on Wed, 01 Aug 2018 18:04:39
+2019-11-13 16:33:34	--	Channel #SDL: 87 nicks (1 op, 0 voices, 86 normals)
+2019-11-13 16:33:34	--	PvNotice(ChanServ): Welcome to #sdl - The Offical Simple DirectMedia Layer Channel
+2019-11-13 16:33:34	--	URL for #SDL: http://www.libsdl.org/
+2019-11-13 16:33:54	--	Channel created on Sun, 26 Nov 2006 07:42:43
+2019-11-13 16:57:23	<--	Lightkey (~Darklock@p200300F693C0485222CF30FFFE083718.dip0.t-ipconnect.de) has quit (Ping timeout: 245 seconds)
+2019-11-13 17:15:25	--	irc: disconnected from server
+2019-11-13 17:15:56	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #SDL
+2019-11-13 17:15:56	--	Topic for #SDL is "Official SDL Channel http://www.libsdl.org/ | You must identify with NickServ to join/talk"
+2019-11-13 17:15:56	--	Topic set by akawaka (~akawaka@2605:e000:1701:40f8:211:32ff:fe51:9639) on Wed, 01 Aug 2018 18:04:39
+2019-11-13 17:15:56	--	Channel #SDL: 87 nicks (1 op, 0 voices, 86 normals)
+2019-11-13 17:15:56	--	PvNotice(ChanServ): Welcome to #sdl - The Offical Simple DirectMedia Layer Channel
+2019-11-13 17:15:56	--	URL for #SDL: http://www.libsdl.org/
+2019-11-13 17:16:16	--	Channel created on Sun, 26 Nov 2006 07:42:43
+2019-11-13 17:31:36	-->	ambro718 (~ambro@unaffiliated/ambro718) has joined #SDL
+2019-11-13 17:40:50	<--	yann (~yann@85.118.38.73) has quit (Ping timeout: 240 seconds)
+2019-11-13 17:52:27	<--	krator44 (~krator44@unaffiliated/krator44) has quit (Remote host closed the connection)
+2019-11-13 17:53:09	-->	krator44 (~krator44@unaffiliated/krator44) has joined #SDL
+2019-11-13 17:54:04	<--	krator44 (~krator44@unaffiliated/krator44) has quit (Max SendQ exceeded)
+2019-11-13 17:54:39	-->	krator44 (~krator44@unaffiliated/krator44) has joined #SDL
+2019-11-14 09:34:13	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #SDL
+2019-11-14 09:34:13	--	Topic for #SDL is "Official SDL Channel http://www.libsdl.org/ | You must identify with NickServ to join/talk"
+2019-11-14 09:34:13	--	Topic set by akawaka (~akawaka@2605:e000:1701:40f8:211:32ff:fe51:9639) on Wed, 01 Aug 2018 18:04:39
+2019-11-14 09:34:13	--	Channel #SDL: 89 nicks (1 op, 0 voices, 88 normals)
+2019-11-14 09:34:13	--	PvNotice(ChanServ): Welcome to #sdl - The Offical Simple DirectMedia Layer Channel
+2019-11-14 09:34:13	--	URL for #SDL: http://www.libsdl.org/
+2019-11-14 09:34:22	--	Channel created on Sun, 26 Nov 2006 07:42:43
+2019-11-14 09:54:03	<--	fogobogo (~fogobogo@unaffiliated/fogobogo) has quit (Ping timeout: 268 seconds)
+2019-11-14 09:55:11	-->	fogobogo (~fogobogo@unaffiliated/fogobogo) has joined #SDL
+2019-11-14 10:15:16	<--	slvn_ (~slvn_@2a01:e34:ef55:a6f0:29ba:9515:39bd:8002) has quit (Remote host closed the connection)
+2019-11-14 10:22:06	<--	Jon (jon@dow.land) has left #SDL ("Leaving")
+2019-11-14 10:23:18	<--	bitwinery (~bitwinery@c-73-37-18-139.hsd1.wa.comcast.net) has quit (Quit: Leaving)
+2019-11-14 10:40:13	-->	Jon (jon@dow.land) has joined #SDL
+2019-11-14 11:02:03	<--	codebrainz (~codebrain@S010634bdfa9ee795.vc.shawcable.net) has quit (Ping timeout: 240 seconds)
+2019-11-14 11:20:21	-->	Redfoxmoon (~red@unaffiliated/kitt3n) has joined #SDL
+2019-11-14 11:31:52	-->	bomb (~bomb@gateway/tor-sasl/bomb) has joined #SDL
+2019-11-14 11:32:35	-->	wickedmic (~wickedmic@wickedmic.com) has joined #SDL
+2019-11-14 11:35:52	wickedmic	Hi, I'm trying to figure out what unit the timestamp member in the variouse event struct has and I can't find it anywhere in the documentation. Is it the unix timestamp? or maybe the seconds since OS start?
+2019-11-14 11:40:23	demonicmaniac3	it used to be filled in by calls to SDL_GetTicks() but my info is from sdl2 2.0.0 i dunno if it's still accurate
+2019-11-14 11:43:21	demonicmaniac3	looking 2.0.10 source code it still seems to be SDL_GetTicks()
+2019-11-14 11:43:57	demonicmaniac3	https://fossies.org/linux/SDL2/src/events/SDL_events.c see line 743
+2019-11-14 11:50:10	<--	fogobogo (~fogobogo@unaffiliated/fogobogo) has quit (Remote host closed the connection)
+2019-11-14 11:51:53	wickedmic	demonicmaniac3: ah, thanks a lot
+2019-11-14 13:22:43	<--	J_L_P (68251f14@gateway/web/cgi-irc/kiwiirc.com/ip.104.37.31.20) has quit (Remote host closed the connection)
+2019-11-14 13:26:54	<--	bomb (~bomb@gateway/tor-sasl/bomb) has quit (Remote host closed the connection)
+2019-11-14 13:32:22	-->	zap0 (~zap0@14-201-222-143.tpgi.com.au) has joined #SDL
+2019-11-14 13:44:27	-->	J_L_P (2d2986bf@gateway/web/cgi-irc/kiwiirc.com/ip.45.41.134.191) has joined #SDL
+2019-11-14 13:44:34	J_L_P	morning!
+2019-11-14 13:45:22	J_L_P	see Microsoft pushed out the 1909 update
+2019-11-14 13:48:04	zap0	hundred and ten years too late!
+2019-11-14 13:51:12	<--	krator44 (~krator44@unaffiliated/krator44) has quit (*.net *.split)
+2019-11-14 13:51:13	<--	begui (~begui@108-200-216-48.lightspeed.dybhfl.sbcglobal.net) has quit (*.net *.split)
+2019-11-14 13:51:14	<--	GoldenBear (~gb@172.83.42.24) has quit (*.net *.split)
+2019-11-14 13:51:15	<--	dexterfoo (dexter@2a01:7e00::f03c:91ff:fe86:59ec) has quit (*.net *.split)
+2019-11-14 13:51:16	<--	vuur (uid218839@gateway/web/irccloud.com/x-vkzufcyhlovadeby) has quit (*.net *.split)
+2019-11-14 13:51:17	<--	ZeZu (null@140-211-168-73-openstack.osuosl.org) has quit (*.net *.split)
+2019-11-14 13:53:57	-->	krator44 (~krator44@unaffiliated/krator44) has joined #SDL
+2019-11-14 13:53:57	-->	begui (~begui@108-200-216-48.lightspeed.dybhfl.sbcglobal.net) has joined #SDL
+2019-11-14 13:53:57	-->	GoldenBear (~gb@172.83.42.24) has joined #SDL
+2019-11-14 13:53:57	-->	dexterfoo (dexter@2a01:7e00::f03c:91ff:fe86:59ec) has joined #SDL
+2019-11-14 13:53:57	-->	vuur (uid218839@gateway/web/irccloud.com/x-vkzufcyhlovadeby) has joined #SDL
+2019-11-14 13:53:57	-->	ZeZu (null@140-211-168-73-openstack.osuosl.org) has joined #SDL
+2019-11-14 13:56:25	<--	mfiano2 (mfiano2@lispgames/developer/mfiano) has quit (Remote host closed the connection)
+2019-11-14 13:57:44	-->	mfiano2 (mfiano2@lispgames/developer/mfiano) has joined #SDL
+2019-11-14 14:18:23	-->	fogobogo (~fogobogo@unaffiliated/fogobogo) has joined #SDL
+2019-11-14 14:47:51	-->	PipStuart (~pip@2605:a000:a7ce:3400:c91c:76b9:89d6:630a) has joined #SDL
+2019-11-14 15:07:20	<--	stefkos (~Pawel@79.184.59.148.ipv4.supernova.orange.pl) has quit (Quit: Going offline, see ya! (www.adiirc.com))
+2019-11-14 16:10:38	-->	ImQ009 (~ImQ009@unaffiliated/imq009) has joined #SDL
+2019-11-14 16:23:56	<--	Lord-Kamina (~Lord-Kami@pc-64-100-214-201.cm.vtr.net) has quit (Ping timeout: 240 seconds)

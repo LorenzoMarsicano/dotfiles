@@ -2246,3 +2246,339 @@
 2019-11-13 14:25:42	<--	enrio (~nanoz@unaffiliated/nanoz) has quit (Read error: Connection reset by peer)
 2019-11-13 14:27:06	-->	enrio (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
 2019-11-13 15:21:56	<--	enrio (~nanoz@unaffiliated/nanoz) has quit (Ping timeout: 240 seconds)
+2019-11-13 15:49:46	-->	enrio (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-11-13 15:49:59	-->	ImQ009 (~ImQ009@unaffiliated/imq009) has joined #reddit-gamedev
+2019-11-13 16:06:38	<--	enrio (~nanoz@unaffiliated/nanoz) has quit (Read error: Connection timed out)
+2019-11-13 16:07:20	-->	enrio (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-11-13 16:12:54	+zebbiz_pi	https://www.youtube.com/watch?v=bTWv-l0JhAc
+2019-11-13 16:33:04	--	irc: disconnected from server
+2019-11-13 16:33:28	-->	Syrinxos (~syrinxos@93-34-1-82.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-11-13 16:33:28	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-11-13 16:33:28	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-11-13 16:33:28	--	Channel #reddit-gamedev: 67 nicks (0 ops, 16 voices, 51 normals)
+2019-11-13 16:33:48	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-11-13 16:40:27	<--	Punish3r (~Punisher@198.64.41.158) has quit (Ping timeout: 240 seconds)
+2019-11-13 17:00:21	-->	Punish3r (~Punisher@198.64.41.158) has joined #reddit-gamedev
+2019-11-13 17:00:22	<--	Punish3r (~Punisher@198.64.41.158) has quit (Remote host closed the connection)
+2019-11-13 17:00:36	-->	Punish3r (~Punisher@198.64.41.158) has joined #reddit-gamedev
+2019-11-13 17:01:02	<--	Punish3r (~Punisher@198.64.41.158) has quit (Remote host closed the connection)
+2019-11-13 17:15:25	--	irc: disconnected from server
+2019-11-13 17:15:50	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-11-13 17:15:50	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-11-13 17:15:50	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-11-13 17:15:50	--	Channel #reddit-gamedev: 66 nicks (0 ops, 16 voices, 50 normals)
+2019-11-13 17:16:10	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-11-13 17:31:06	<--	bomb (~bomb@gateway/tor-sasl/bomb) has quit (Quit: brb)
+2019-11-13 17:36:54	-->	macz (~macz@67.231.29.194) has joined #reddit-gamedev
+2019-11-13 17:40:48	-->	macz_ (~macz@162.221.202.202) has joined #reddit-gamedev
+2019-11-13 17:44:41	<--	macz (~macz@67.231.29.194) has quit (Ping timeout: 276 seconds)
+2019-11-13 17:50:42	aeth	bomb: The big engines with their own proprietary editors (in the sense of only works with them, so including Godot) tend to be more aimed at artists than programmers imo. If your strength is programming you might as well use a framework instead.
+2019-11-14 09:34:13	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-11-14 09:34:13	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-11-14 09:34:13	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-11-14 09:34:13	--	Channel #reddit-gamedev: 60 nicks (0 ops, 15 voices, 45 normals)
+2019-11-14 09:34:16	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-11-14 09:34:18	mursu	did someone mention Ogre3D??
+2019-11-14 09:34:18	+bomb	a horde of them!
+2019-11-14 09:34:58	+bomb	author of Irrlicht also has a commercial WYSIWYG game engine called CopperCube
+2019-11-14 09:35:43	+Jattenalle	*mumbles something about making your own engine and kids these days*
+2019-11-14 09:35:46	+Jattenalle	*spits in a bucket*
+2019-11-14 09:35:59	+Jattenalle	we didnt have none of these newfangled "ehngines" when i started
+2019-11-14 09:36:09	+Jattenalle	had to code our own things! uphill! both ways!
+2019-11-14 09:36:16	+Jattenalle	peek and poke raw memory addresses!
+2019-11-14 09:36:24	deniska	well, you had fixed pipeline, it was easier :P
+2019-11-14 09:37:37	aeth	GZdoom has (experimental?) Vulkan support... https://github.com/coelckers/gzdoom/tree/3467e0edcfee93ee3a6a47f7f1429fa7c6e8158d/src/rendering/vulkan
+2019-11-14 09:37:38	+bomb	come on now. Irrlich Engine started in 2003 by programmer nicknamed... Irllicht
+2019-11-14 09:37:48	aeth	The oldest of the mentioned engignes is probably the most modern...
+2019-11-14 09:37:59	aeth	(Probably because there's more freedom to do so)
+2019-11-14 09:39:08	deniska	it's probably not that hard to make new backends if you don't have slopes :)
+2019-11-14 09:40:02	aeth	I mean, this isn't Wolfenstein 3D we're talking about
+2019-11-14 09:41:42	+bomb	is Qt Creator nice or shite
+2019-11-14 09:41:44	aeth	Modern Doom maps even found some way around the classic restriction of no-floors-above-other-floors. The most popular megawad, Scythe 2, has a (small) bridge very early on.
+2019-11-14 09:41:47	aeth	I think the modern Doom map restriction is that you can have one floor above, at least in limited circumstances.
+2019-11-14 09:41:58	aeth	Now, anyone should be able to render Wolf3D maps
+2019-11-14 09:42:48	deniska	bomb: it's an ok C++ IDE
+2019-11-14 09:43:03	aeth	(Of course, even modern Doom isn't like Quake 1, where the whole campaign's level geometry screams "look up and look down because you can do that now".)
+2019-11-14 09:43:12	deniska	pretty decent for an IDE not named "Visual Studio"
+2019-11-14 09:43:22	+bomb	FWIW I'm new to C++
+2019-11-14 09:43:27	aeth	s/modern Doom/modern classic Doom, because they have to do reboots with the same name for some damn reason,/
+2019-11-14 09:43:38	+bomb	I have VS installed but I don't want to be tied to Microsoft Corporation
+2019-11-14 09:43:44	aeth	deniska: A merely ok C++ IDE doesn't sound very OK
+2019-11-14 09:43:56	mursu	Now I have a hankering to play some Doom
+2019-11-14 09:44:00	mursu	the classic
+2019-11-14 09:44:03	+bomb	and Code::Blocks looks less OK than Qt Creator
+2019-11-14 09:44:04	deniska	If you stick to Qt, Qt Creator essentially provides delphi/vb-like experience :)
+2019-11-14 09:44:49	+bomb	heh, I can uninstall Lazarus finally :P
+2019-11-14 09:45:26	deniska	plop controls onto a form, add handlers, stumble your way through autocompletion :)
+2019-11-14 09:45:38	deniska	Or, as we called it back in a day, RAD
+2019-11-14 09:45:55	+bomb	send masculine signals to sluts
+2019-11-14 09:48:15	aeth	I don't use an IDE with C++. I considered trying a few IDE-style plugins for Emacs, but I just settled on raw, vanilla Emacs.
+2019-11-14 09:48:31	aeth	If I make a simple mistake, the compiler tells me pretty much right away, anyway.
+2019-11-14 09:48:54	aeth	s/considered trying/considered using/
+2019-11-14 09:48:55	+bomb	I can smell the odor of your balls from here aeth
+2019-11-14 09:49:12	deniska	M-x balls
+2019-11-14 09:49:41	aeth	I mean, it's usually obvious if the API is good and when it's not obvious or too verbose (e.g. iterators) just auto it.
+2019-11-14 09:49:59	aeth	Although maybe Qt is just too bloated.
+2019-11-14 09:50:04	deniska	AAA stands for almost always auto
+2019-11-14 09:50:34	+bomb	Qt is bloated by design. we're talking about Qt Creator
+2019-11-14 09:50:56	aeth	why isn't it called Qreator?
+2019-11-14 09:51:07	aeth	or maybe QreaTor
+2019-11-14 09:51:16	+bomb	Qreatr
+2019-11-14 09:51:19	deniska	it's Qt, not QT
+2019-11-14 09:51:33	deniska	QT is QuickTime :P
+2019-11-14 09:51:38	aeth	it's hard to emphasize in plain text without capitalizing
+2019-11-14 09:51:45	+bomb	nobody said QT
+2019-11-14 09:52:02	+bomb	also QT is Quentin Tarantino
+2019-11-14 09:52:04	aeth	Is QuickTime still around? I haven't seen QuickTime or Real Player in maybe 15 years.
+2019-11-14 09:52:16	mursu	quicktime still comes preinstalled on macs
+2019-11-14 09:52:17	+bomb	it's still the default player on macOS
+2019-11-14 09:52:29	aeth	lol
+2019-11-14 09:52:38	mursu	also vim > emacs
+2019-11-14 09:52:47	mursu	:^)
+2019-11-14 09:53:07	+bomb	I miss watching TV on RealPlayer with 72p resolution
+2019-11-14 09:53:19	aeth	I mean, vim is a more efficient, but harder to learn editing experience. Emacs is a better extension platform and has a much better graphical version, though.
+2019-11-14 09:53:33	mursu	And better support for lisp
+2019-11-14 09:53:45	aeth	Well, I mean, I praise Emacs even though Emacs Lisp is probably the second worst Lisp after AutoLISP
+2019-11-14 09:53:49	+bomb	guys. we're talking about C++ and we're talking about getting shit done
+2019-11-14 09:53:59	+bomb	nobody gives rat's ass about lisp
+2019-11-14 09:54:18	mursu	why get shit done when you can configure your text editor for hundreds of hours
+2019-11-14 09:54:32	mursu	and then never use it!
+2019-11-14 09:54:35	aeth	you say that but once you have it configured it's copy and paste
+2019-11-14 09:54:46	+bomb	also my vimrc is like 20 lines
+2019-11-14 09:54:51	+bomb	I hate plugins
+2019-11-14 09:54:54	aeth	The adoption cost of Emacs is high, but once you have it, every text based problem looks like a nail to Emacs's hammer.
+2019-11-14 09:55:20	deniska	I tried both emacs and vim, liked vim way of doing things more
+2019-11-14 09:55:30	aeth	bomb: My .emacs is probably like 80-100 lines, mostly to make it more readable and probably could be closer to 40. When Emacs integrated a package manager that got rid of most of my .emacs
+2019-11-14 09:55:33	mursu	my init.vim is 117 lines :/
+2019-11-14 09:55:43	+bomb	lolwut @ https://www.facebook.com/100006735798590/posts/2547632585471243/
+2019-11-14 09:56:34	aeth	If that's the Carmack post: https://news.ycombinator.com/item?id=21533661
+2019-11-14 09:58:21	deniska	emacs is like a blaster, vim is like a lightsaber, an elegant weapon for a more civilized age
+2019-11-14 09:58:34	deniska	ok, #badanalogy
+2019-11-14 09:59:52	aeth	Emacs is like the second Death Star... very powerful, but some assembly required
+2019-11-14 10:00:27	aeth	Or maybe it's like the first Death Star... in that if anyone wanted to attack it I'm sure they could so oh my god why do people run web servers in emacs
+2019-11-14 10:00:44	mursu	also say what you want about Emacs Lisp but nothing is worse than vimscript
+2019-11-14 10:00:55	aeth	eh
+2019-11-14 10:01:12	aeth	the worst language people are using today in serious contexts is probably MUMPS
+2019-11-14 10:01:27	mursu	probably yeah
+2019-11-14 10:02:25	aeth	Of course, there is no best programming language, but there is a worst one, and there are enough contenders (excluding joke esolangs) that I'm not sure if it's MUMPS.
+2019-11-14 10:03:57	+bomb	AETH https://twitter.com/ID_AA_Carmack/status/985671860418416645
+2019-11-14 10:04:56	mursu	vi != vim
+2019-11-14 10:05:19	aeth	bomb: he's not using NeXT anymore?
+2019-11-14 10:05:19	+bomb	same shit
+2019-11-14 10:06:03	+bomb	did he ever?
+2019-11-14 10:06:31	aeth	Do you really think that they could have written the first FPSes inside of DOS?
+2019-11-14 10:06:48	aeth	In the old days, you used Unix workstations for serious things
+2019-11-14 10:07:13	aeth	(Nowadays, you use Linux workstations for serious things.)
+2019-11-14 10:07:20	+bomb	https://www.youtube.com/watch?v=HpEBUV_g9vU
+2019-11-14 10:07:35	deniska	If gamedevs were forced to use low-middle ranged machines, we'd get games with nicer minimal requirements :)
+2019-11-14 10:07:45	+zebbiz_pi	Maybe
+2019-11-14 10:08:07	+zebbiz_pi	Well, yes, but we wouldn't get those really pretty games
+2019-11-14 10:08:20	aeth	You need more powerful dev machines than target machines, especially in the old days... You have workflows like compiling levels, which you don't want to take all day and the user will never have to do this.
+2019-11-14 10:08:37	deniska	> and the user will never have to do this
+2019-11-14 10:08:40	aeth	Maybe today's level formats aren't compiled, but lighting calculations probably more than took over that wait time
+2019-11-14 10:08:40	+bomb	deniska: I have two Intel Asus powered netbooks on the desk exactly for that purpose
+2019-11-14 10:08:53	deniska	Hey! Users should be able to compile levels if they choose to
+2019-11-14 10:09:30	aeth	deniska: Yes, but the user can compile a map overnight. They'll finish their mod 20 years later, anyway.
+2019-11-14 10:10:36	deniska	map compilers typically have -nolighting -notextures -nogeometrychecks -lookslikegarbage compiler flags you can supply during development cycles :)
+2019-11-14 10:10:46	aeth	And it's still probably at least 300:1 unless the gimmick is map editing, in which case you might want something Minecraft-style... real-time multiplayer editing
+2019-11-14 10:10:50	deniska	Sudden Half-Life mapping nostalgia hit
+2019-11-14 10:11:01	aeth	s/300:1/300:1 non-mappers to mappers/
+2019-11-14 10:11:57	aeth	deniska: I have some 5% complete id tech 3 maps sitting around somewhere that are basically the same thing.
+2019-11-14 10:12:38	aeth	BSP...
+2019-11-14 10:13:01	aeth	These days kept alive by Garry's Mod, I guess.
+2019-11-14 10:13:50	deniska	aeth: I mapped my highschool for idtech3 and goldsrc
+2019-11-14 10:14:09	deniska	https://i.imgur.com/NUh8hvg.jpg :)
+2019-11-14 10:14:40	+bomb	such GtkRadiant skilz
+2019-11-14 10:15:42	deniska	https://i.imgur.com/8FFcIsf.jpg also, VHE
+2019-11-14 10:15:46	+Jonas___	deniska, wait, that's illegal
+2019-11-14 10:15:56	+Jonas___	school shooter identified
+2019-11-14 10:16:05	+Jonas___	literally!
+2019-11-14 10:17:19	deniska	In my recent VHE nostalgia hit I began mapping warehouse/office I currently work at https://i.imgur.com/2nwprPg.png https://i.imgur.com/8ludFLA.jpg
+2019-11-14 10:17:41	+bomb	pre-2000 Hammer Editor is still better than anything comes with Godot
+2019-11-14 10:18:04	deniska	as you can tell, I have a thing for arches
+2019-11-14 10:18:09	+bomb	deniska: these are your stuff, btw?
+2019-11-14 10:18:13	deniska	for bsp arches in particular :)
+2019-11-14 10:18:15	deniska	bomb: yeah
+2019-11-14 10:18:16	+Jonas___	note to self, never give deniska access to photos or plans of my home
+2019-11-14 10:19:24	+bomb	deniska: well fucking done. they look great
+2019-11-14 10:19:41	deniska	bomb: The idea of making level geometry in a 3d model editor and then importing it to a 3d engine still feels extremely weird to me :)
+2019-11-14 10:20:46	aeth	deniska: right, it makes no sense to me, either
+2019-11-14 10:21:06	aeth	models aren't game maps
+2019-11-14 10:21:26	+bomb	deniska: hundred percent agree. CSG all the way
+2019-11-14 10:21:51	+bomb	so do you still use Hammer Editor?
+2019-11-14 10:21:55	aeth	Games these days focus way too much on looks over gameplay clarity so half the SP games with photorealism have to put in a cheat-ish mode where it highlights the interactable items.
+2019-11-14 10:22:32	deniska	Making textures with actual photos is quick and yields great results
+2019-11-14 10:23:23	aeth	Imo, there needs to be a gameplay equivalent to Chekhov's gun. If there's a rifle on the wall, you better be able to press Use and equip it.
+2019-11-14 10:23:23	+bomb	shit deniska you're like a diamond in mud
+2019-11-14 10:24:06	aeth	deniska: Realistic textures aren't really the problem, the problem is, well, everything else. Detail clutter.
+2019-11-14 10:25:03	deniska	aeth: my pet peeve is all these games which have cars which have a better condition look than some cars on my street, and you can't ride them :)
+2019-11-14 10:25:18	+bomb	deniska: show me the true path. you're my prophet. tell me what I need to make 99-2000 era 3D levels today
+2019-11-14 10:25:24	aeth	deniska: clearly, no gas
+2019-11-14 10:25:30	deniska	No, I'm saying my maps probably look nice because I use textures cut from photos of the actual place :)
+2019-11-14 10:26:07	deniska	And yes, I still have VHE installed on some computers I use :)
+2019-11-14 10:26:17	aeth	deniska: no fuel :-)
+2019-11-14 10:26:36	aeth	deniska: And I mean, on the other hand, my pet peeve with old school map design (which you can see in CS:GO today, since they just keep redoing the same maps) is areas you can't go in, particularly when they were going for an outdoor urban environment
+2019-11-14 10:27:02	aeth	I see CS:GO and I see a window I'd like to be able to shoot from instead of just walking down the obvious alleyway. Of course, those windows are fake.
+2019-11-14 10:27:09	aeth	s/CS:GO/Counterstrike/
+2019-11-14 10:27:33	+bomb	I loved Tomb Raider 3 levels
+2019-11-14 10:27:41	aeth	The best cover is off limits in old school outdoor urban maps...
+2019-11-14 10:27:42	+bomb	so immersive
+2019-11-14 10:28:03	+bomb	I felt like I was really in a jungle
+2019-11-14 10:28:18	aeth	jungles are tricky, there's so much going on
+2019-11-14 10:29:20	aeth	The Hitman reboot game (because again they just have to call reboots the franchise name so I can never refer to them properly) had some great map environments. I mean, besides the whole issue of good luck finding interactables without cheat-vision.
+2019-11-14 10:29:59	aeth	I mean, gameplay needs to catch up with graphics because in some distant future you'll be able to pick up and throw just about any object, with essentially no decoration objects.
+2019-11-14 10:30:04	deniska	aeth: or even worse, "do not cross" tape is invisible wall :)
+2019-11-14 10:30:08	mursu	I think the point of the Hitman reboot games is to use cheatvision until you remember the whole level and then do it on the harder difficulty
+2019-11-14 10:30:22	+bomb	wtf is Hitman reboot
+2019-11-14 10:30:40	aeth	bomb: https://en.wikipedia.org/wiki/Hitman_(2016_video_game)
+2019-11-14 10:30:42	+bomb	there are only two hitman games: Hitman: Codename 47 and Hitman 2: Silent Assassin
+2019-11-14 10:30:43	mursu	Hitman and Hitman 2
+2019-11-14 10:30:49	aeth	I guess I should just call it Hitman 2016 like it's some sports game...
+2019-11-14 10:30:56	aeth	I guess it's technically a hunting game...
+2019-11-14 10:31:02	mursu	if you havent' played the new Hitman games they're really good
+2019-11-14 10:31:12	+bomb	hmm
+2019-11-14 10:31:21	+bomb	so how to make Hitman 1 maps today?
+2019-11-14 10:31:33	+bomb	deniska refused to share his wisdom
+2019-11-14 10:31:37	aeth	Hitman 2016 is a good example of how to make something feel alive. And you can go into most of the rooms that you'd want to go into. Enough to make you not really notice the ones where you can't.
+2019-11-14 10:32:06	mursu	Mafia 3 has that problem too
+2019-11-14 10:32:38	mursu	Mafia 3 has dumb walls of bushes too
+2019-11-14 10:32:49	aeth	Well Mafia 3 is open world like GTA afaik.
+2019-11-14 10:32:53	mursu	yeah
+2019-11-14 10:33:03	aeth	Open world is, well, I don't really like open world because the scale's all wrong and you can barely go inside of anything.
+2019-11-14 10:33:36	aeth	Contrast an open world game with Hitman 2016 or Deus Ex Mankind Divided's hub world. Much smaller levels, but you can find a way inside almost anything, even if it's a very roundabout, tricky way.
+2019-11-14 10:33:41	mursu	scaling the breadth instead of depth
+2019-11-14 10:34:04	+bomb	how do you make maps, though?
+2019-11-14 10:34:16	mursu	Maya
+2019-11-14 10:34:19	mursu	:^)
+2019-11-14 10:34:35	 *	bomb stabs himself in the eyes
+2019-11-14 10:35:46	+bomb	wtf i searched deniska and all the results are porn...  https://duckduckgo.com/?q=deniska&t=ffab&ia=web
+2019-11-14 10:35:52	mursu	lol
+2019-11-14 10:36:20	aeth	bomb: wtf i searched your irc name and all of the results are "Please See Your FBI Agent, We're Very Disappointed In You"
+2019-11-14 10:37:51	+bomb	:)
+2019-11-14 10:38:09	deniska	bomb: what engine is Hitman?
+2019-11-14 10:38:21	+bomb	not Hammer deniska
+2019-11-14 10:38:32	deniska	hammer is not an engine, it's a tool :P
+2019-11-14 10:38:42	+bomb	lol, I mean not source :P
+2019-11-14 10:38:49	aeth	If it's a AAA game and it looks good I assume it's UE4
+2019-11-14 10:39:01	aeth	Unless it's specifically on some custom engine :-p
+2019-11-14 10:39:10	mursu	I was under the assumption it was custom but I have no clue
+2019-11-14 10:39:13	deniska	custom engines are so 2003
+2019-11-14 10:39:16	+bomb	aeth won't you shut up for a sec, deniska will reveal his secret now
+2019-11-14 10:39:45	 *	bomb stares at deniska 
+2019-11-14 10:40:10	aeth	there's only done d...a that matters in gamedev and that's Daikatana. https://en.wikipedia.org/wiki/Daikatana
+2019-11-14 10:40:21	+bomb	aeth: he's not talking. I hope you're happy
+2019-11-14 10:40:43	deniska	bomb: 1) download VHE, 2) git gud
+2019-11-14 10:41:26	+bomb	yeah, looks like it's gonna be easier to find a tool or write one to import BSP
+2019-11-14 10:41:33	aeth	fun fact: Daikatana and (the original) Deus Ex were both released in 2000 by Ion Storm
+2019-11-14 10:41:35	deniska	and wally for making texture WADs
+2019-11-14 10:41:36	+bomb	(assuming it's still the format VHE uses)
+2019-11-14 10:41:57	deniska	bomb: VHE uses either .rmf or .map to store the source, bsp is an output of a compiler
+2019-11-14 10:42:36	+bomb	hmm
+2019-11-14 10:43:21	+bomb	Hammer Editor looks like Leadwerks editor actually
+2019-11-14 10:47:06	deniska	https://i.imgur.com/qJV6sIH.png I was also experimenting with level design in blender (same office scene)
+2019-11-14 10:47:56	deniska	but the fact that my work computer is a potato which can't even run blender 2.79 properly made me lose interest :)
+2019-11-14 10:48:26	aeth	I think that that's the wrong level of detail to work at.
+2019-11-14 10:49:12	aeth	Maps should be designed in some simple editor, and their contents should be proc genned to be filled with stuff made in 3D model editors.
+2019-11-14 10:49:22	aeth	That's probably the right use of proc gen in map design...
+2019-11-14 10:50:08	aeth	Making a map in Blender just encourages you to put a barrel (or in that case a computer monitor) directly into the map like that.
+2019-11-14 10:51:04	+bomb	the problem with level design in Blender isn't the geometry
+2019-11-14 10:51:08	deniska	props are good to give a sense of scale (well, that'd be a separate entity, not part of level geometry)
+2019-11-14 10:51:14	+bomb	Blender's texture workflow is weird
+2019-11-14 10:51:44	deniska	yeah, I'm almost tempted to make a plugin for making texture workflow more VHE-sque :)
+2019-11-14 10:52:13	+bomb	also if you disliked 2.79, give 2.80 a try. it's much better
+2019-11-14 10:52:16	deniska	it's not just blender, most 3d editors with orbiting bound to middle mouse button work like that :P
+2019-11-14 10:52:32	deniska	I liked 2.79
+2019-11-14 10:52:50	deniska	left click to select in 2.80 throws me off actually :)
+2019-11-14 10:53:05	+bomb	you can change that
+2019-11-14 10:53:27	deniska	sure, but then I'll have to change that option forever and ever on every blender I set up
+2019-11-14 10:53:42	deniska	I prefer to stick with defaults nowadays
+2019-11-14 10:58:07	-->	Quetzal2_ (c133ecab@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.171) has joined #reddit-gamedev
+2019-11-14 11:17:02	+bomb	I won't be able to make it
+2019-11-14 11:17:10	+bomb	everything about C++ looks weird to me
+2019-11-14 11:17:20	+bomb	can't we at least use Maven with it?
+2019-11-14 11:23:04	mursu	what have you programmed in before?
+2019-11-14 11:23:24	mursu	if anything
+2019-11-14 11:24:29	mursu	other than Java??
+2019-11-14 11:25:27	+bomb	Python, JavaScript professionally. Lua, some C, Erlang, Haxe and few others as hobby
+2019-11-14 11:25:38	<--	Quetzal2_ (c133ecab@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.171) has quit (Ping timeout: 240 seconds)
+2019-11-14 11:29:13	mursu	I think if you want to do C++ you'll probably want to use something like CMake as your build system
+2019-11-14 11:29:53	mursu	I'm not up to date on the terminology used
+2019-11-14 11:30:11	+bomb	lol mursu I literally came to ask if I should cmake first
+2019-11-14 11:30:30	+bomb	also just jpined #cmake channel and opened a cmake tutorial on youtube XD
+2019-11-14 11:31:15	+bomb	mursu: so if I get real good at CMake, dealing with dependencies won't be an issue, right? I can finally focus on C++-the-language?
+2019-11-14 11:33:20	mursu	maybe
+2019-11-14 11:33:53	+bomb	what did you quit C++ for?
+2019-11-14 11:34:55	mursu	web development job /_\
+2019-11-14 11:35:19	+bomb	:(
+2019-11-14 11:42:46	deniska	modern C++ is much more approachable than 15 years old C++
+2019-11-14 11:46:41	deniska	AAA gamedev is a strange world which mostly ignores modern C++ because they may target some weird m68k system using an older watcom compiler, or something
+2019-11-14 11:48:02	mursu	probably should give C++ another shot
+2019-11-14 11:48:41	mursu	instead of messing with functional programming languages and bad C wrapper libs
+2019-11-14 11:50:15	deniska	jokes on you, C++ is now a functional programming language :P
+2019-11-14 11:52:06	mursu	I think the word is multi-paradigm
+2019-11-14 11:52:23	mursu	I can still write my garbage imperative code :^)
+2019-11-14 11:52:57	mursu	I think it was Carmac who wrote a blog post about functional c++ programming?
+2019-11-14 11:53:35	mursu	https://www.gamasutra.com/view/news/169296/Indepth_Functional_programming_in_C.php this is the one
+2019-11-14 12:00:48	+bomb	okay I created my first CMake project
+2019-11-14 12:01:01	+bomb	do people usually start a CMake project first, then launch the IDE from generated project files
+2019-11-14 12:01:13	+bomb	or the IDE handles everything already?
+2019-11-14 12:05:31	+bomb	nvm
+2019-11-14 12:05:40	+bomb	Qt Creators handles it beautifully
+2019-11-14 12:05:52	+bomb	it creates a CMakeLists.txt file and it just works
+2019-11-14 12:09:50	-->	Quetzal2_ (c133ecab@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.171) has joined #reddit-gamedev
+2019-11-14 13:21:15	-->	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has joined #reddit-gamedev
+2019-11-14 13:24:34	-->	bomb_ (~bomb@gateway/tor-sasl/bomb) has joined #reddit-gamedev
+2019-11-14 13:24:34	--	Mode #reddit-gamedev [+v bomb_] by ChanServ
+2019-11-14 13:26:04	-->	DrAwesomeClaws (~DrAwesome@c-75-68-71-41.hsd1.ct.comcast.net) has joined #reddit-gamedev
+2019-11-14 13:26:05	--	Mode #reddit-gamedev [+v DrAwesomeClaws] by ChanServ
+2019-11-14 13:26:54	<--	bomb (~bomb@gateway/tor-sasl/bomb) has quit (Remote host closed the connection)
+2019-11-14 13:51:11	<--	titanbiscuit (~tbisk@152.89.160.126) has quit (*.net *.split)
+2019-11-14 13:51:13	<--	Motig (~Motig@unaffiliated/motig) has quit (*.net *.split)
+2019-11-14 13:51:14	<--	chipolux (~chipolux@2600:8804:5600:cd00:eea8:6bff:fe6b:e125) has quit (*.net *.split)
+2019-11-14 13:51:15	<--	zetaPRIME (~zetaPRIME@23.227.183.240) has quit (*.net *.split)
+2019-11-14 13:51:15	<--	paracyst (~paracyst@unaffiliated/paracyst) has quit (*.net *.split)
+2019-11-14 13:51:19	<--	sigtau (~will@2604:a880:800:a1::ce:9001) has quit (*.net *.split)
+2019-11-14 13:51:19	<--	bigblueboo (sid160802@gateway/web/irccloud.com/x-bbyeejmsdmhcrolb) has quit (*.net *.split)
+2019-11-14 13:51:20	<--	jorgenpt (sid57194@gateway/web/irccloud.com/x-cpcuoexobkyxefph) has quit (*.net *.split)
+2019-11-14 13:51:55	-->	enriox (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-11-14 13:53:57	-->	titanbiscuit (~tbisk@152.89.160.126) has joined #reddit-gamedev
+2019-11-14 13:53:57	-->	Motig (~Motig@unaffiliated/motig) has joined #reddit-gamedev
+2019-11-14 13:53:57	-->	chipolux (~chipolux@2600:8804:5600:cd00:eea8:6bff:fe6b:e125) has joined #reddit-gamedev
+2019-11-14 13:53:57	-->	zetaPRIME (~zetaPRIME@23.227.183.240) has joined #reddit-gamedev
+2019-11-14 13:53:57	-->	paracyst (~paracyst@unaffiliated/paracyst) has joined #reddit-gamedev
+2019-11-14 13:53:57	-->	sigtau (~will@2604:a880:800:a1::ce:9001) has joined #reddit-gamedev
+2019-11-14 13:53:57	-->	bigblueboo (sid160802@gateway/web/irccloud.com/x-bbyeejmsdmhcrolb) has joined #reddit-gamedev
+2019-11-14 13:53:57	-->	jorgenpt (sid57194@gateway/web/irccloud.com/x-cpcuoexobkyxefph) has joined #reddit-gamedev
+2019-11-14 13:53:57	--	Mode #reddit-gamedev [+vv sigtau jorgenpt] by card.freenode.net
+2019-11-14 14:05:34	--	bomb_ is now known as bomb
+2019-11-14 14:22:59	-->	Cahaan (~Cahaan@109.129.13.76) has joined #reddit-gamedev
+2019-11-14 14:22:59	--	Mode #reddit-gamedev [+v Cahaan] by ChanServ
+2019-11-14 14:51:50	+bomb	aeth: https://www.youtube.com/watch?v=D8K90hX4PrE
+2019-11-14 15:24:35	<--	bomb (~bomb@gateway/tor-sasl/bomb) has quit (Quit: ...)
+2019-11-14 15:31:25	+zebbiz_pi	Oh, man
+2019-11-14 15:31:43	+zebbiz_pi	I reviewed a collegues commit
+2019-11-14 15:32:19	+zebbiz_pi	Said "Hey, I left a comment or two on your commit."
+2019-11-14 15:32:32	+zebbiz_pi	"Oh, good!"
+2019-11-14 15:32:44	+zebbiz_pi	*Sees that it's 20+ comments*
+2019-11-14 15:32:53	+zebbiz_pi	"OH MY GOD!"
+2019-11-14 15:33:02	mursu	:DD
+2019-11-14 15:33:13	+zebbiz_pi	He was devastated during the afternoon break :P
+2019-11-14 15:33:39	+zebbiz_pi	To be fair, I am quite picky
+2019-11-14 15:33:59	+zebbiz_pi	And a lot of it were documentation, and his english is not the best
+2019-11-14 15:34:07	mursu	that's not too bad
+2019-11-14 15:35:05	mursu	or rather doesn't sound too bad
+2019-11-14 15:35:33	+zebbiz_pi	It will be a lot of work to fix them all
+2019-11-14 15:36:00	+Jonas___	he got zebbiz'd
+2019-11-14 15:36:07	+zebbiz_pi	Yeah
+2019-11-14 15:36:17	+Jonas___	the weak must learn to fear the code review
+2019-11-14 15:37:57	-->	arduiko (~arduiko@31-34-32-194.abo.bbox.fr) has joined #reddit-gamedev
+2019-11-14 15:38:29	mursu	easier to fix earlier rather than later
+2019-11-14 15:38:40	mursu	and also what Jonas___ said lol
+2019-11-14 15:41:32	+zebbiz_pi	The guy who reviewed the commit before me left 3 comments, I left 29
+2019-11-14 15:41:57	<--	arduiko (~arduiko@31-34-32-194.abo.bbox.fr) has quit (Client Quit)
+2019-11-14 15:42:26	+zebbiz_pi	The guy who commited reviewed another commit and gave it a +1, I gave the same commit a -1 and 16 comments
+2019-11-14 15:54:46	+zebbiz_pi	And now I'm looking at code that should never have gotten past me in a review
+2019-11-14 15:55:03	+zebbiz_pi	But I didn't review it because two other people were already doing that
+2019-11-14 15:55:16	+zebbiz_pi	Guess I'll have to be the code nazi
+2019-11-14 16:06:34	-->	Uhfgood (~Uhfgood@2603:9000:b10b:c00:68a7:bc50:aeb9:8d00) has joined #reddit-gamedev
+2019-11-14 16:10:38	-->	ImQ009 (~ImQ009@unaffiliated/imq009) has joined #reddit-gamedev

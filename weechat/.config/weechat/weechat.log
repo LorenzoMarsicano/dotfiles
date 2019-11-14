@@ -1,23 +1,25 @@
-[2019-11-13 09:09:52] WeeChat 2.6 (compiled on Nov 11 2019 16:11:38)
-[2019-11-13 09:09:52] Reading configuration file sec.conf
-[2019-11-13 09:09:52] Reading configuration file weechat.conf
-[2019-11-13 09:09:52] Reading configuration file plugins.conf
-[2019-11-13 09:09:53] Reading configuration file charset.conf
-[2019-11-13 09:09:53] Reading configuration file logger.conf
-[2019-11-13 09:09:53] Reading configuration file exec.conf
-[2019-11-13 09:09:53] Reading configuration file trigger.conf
-[2019-11-13 09:09:53] Reading configuration file spell.conf
-[2019-11-13 09:09:53] Reading configuration file alias.conf
-[2019-11-13 09:09:53] Reading configuration file buflist.conf
-[2019-11-13 09:09:53] Reading configuration file fifo.conf
-[2019-11-13 09:09:53] Reading configuration file xfer.conf
-[2019-11-13 09:09:53] Reading configuration file irc.conf
-[2019-11-13 09:09:53] Reading configuration file relay.conf
-[2019-11-13 09:09:53] Reading configuration file lua.conf
-[2019-11-13 09:09:53] Reading configuration file guile.conf
-[2019-11-13 09:09:53] Reading configuration file ruby.conf
-[2019-11-13 09:09:53] Reading configuration file perl.conf
-[2019-11-13 09:09:53] Reading configuration file iset.conf
-[2019-11-13 09:09:53] Reading configuration file script.conf
-[2019-11-13 09:09:53] Reading configuration file fset.conf
-[2019-11-13 09:09:53] irc: connecting to server chat.freenode.net/6667...
+[2019-11-14 09:33:57] WeeChat 2.6 (compiled on Nov 12 2019 10:23:52)
+[2019-11-14 09:33:57] Reading configuration file sec.conf
+[2019-11-14 09:33:57] Reading configuration file weechat.conf
+[2019-11-14 09:33:57] Reading configuration file plugins.conf
+[2019-11-14 09:33:57] Reading configuration file charset.conf
+[2019-11-14 09:33:57] Reading configuration file logger.conf
+[2019-11-14 09:33:57] Reading configuration file exec.conf
+[2019-11-14 09:33:57] Reading configuration file trigger.conf
+[2019-11-14 09:33:57] Reading configuration file spell.conf
+[2019-11-14 09:33:57] Reading configuration file alias.conf
+[2019-11-14 09:33:57] Reading configuration file buflist.conf
+[2019-11-14 09:33:57] Reading configuration file fifo.conf
+[2019-11-14 09:33:57] Reading configuration file xfer.conf
+[2019-11-14 09:33:57] Reading configuration file irc.conf
+[2019-11-14 09:33:57] Reading configuration file relay.conf
+[2019-11-14 09:33:57] Reading configuration file lua.conf
+[2019-11-14 09:33:57] Reading configuration file guile.conf
+[2019-11-14 09:33:57] Reading configuration file python.conf
+[2019-11-14 09:33:57] Reading configuration file colorize_nicks.conf
+[2019-11-14 09:33:57] Reading configuration file ruby.conf
+[2019-11-14 09:33:57] Reading configuration file perl.conf
+[2019-11-14 09:33:57] Reading configuration file iset.conf
+[2019-11-14 09:33:57] Reading configuration file script.conf
+[2019-11-14 09:33:57] Reading configuration file fset.conf
+[2019-11-14 09:33:57] irc: connecting to server chat.freenode.net/6667...

@@ -2679,3 +2679,172 @@
 2019-11-13 15:24:43	-->	Technipion (~Thunderbi@p200300F933D68BCAC95FF3B272DFAE3D.dip0.t-ipconnect.de) has joined #godotengine
 2019-11-13 15:25:32	-->	scde (~scde@p5B2678C8.dip0.t-ipconnect.de) has joined #godotengine
 2019-11-13 15:35:00	-->	biliogadafr (~bilio@46.53.248.20) has joined #godotengine
+2019-11-13 15:42:00	<--	aombk (~aombk@unaffiliated/aombk) has quit (Read error: Connection reset by peer)
+2019-11-13 15:42:27	<--	madmiraal (~Thunderbi@2001:984:a3d7:1:4c97:8ddf:f948:cabf) has quit (Quit: madmiraal)
+2019-11-13 15:43:40	-->	aombk (~aombk@unaffiliated/aombk) has joined #godotengine
+2019-11-13 15:51:35	<--	scde (~scde@p5B2678C8.dip0.t-ipconnect.de) has quit (Ping timeout: 276 seconds)
+2019-11-13 15:59:26	-->	Roughy (~mdaw45ns@188.126.200.178) has joined #godotengine
+2019-11-13 15:59:37	<--	mrcdk (~mrcdk@172-200-39-46.usuarios.innovasur.com) has quit (Read error: Connection reset by peer)
+2019-11-13 16:00:15	<--	greedom (~greedom@2001:16b8:2ec2:3f00:67b7:3e6f:d662:4253) has quit (Ping timeout: 250 seconds)
+2019-11-13 16:15:08	-->	rajkosto (~Rajko@cable-178-149-123-201.dynamic.sbb.rs) has joined #godotengine
+2019-11-13 16:16:19	azagaya	jimbzy: Also, this was not noticeable on my team's mate PC, as his pc is way better than mine. Perhaps you don't notice it even with my project
+2019-11-13 16:16:50	jimbzy	Very possible, azagaya.
+2019-11-13 16:17:26	jimbzy	Does it do it when exporting a release version, too?
+2019-11-13 16:17:44	<--	rainlizard (~rainlizar@180-150-38-48.b49626.bne.nbn.aussiebb.net) has quit
+2019-11-13 16:20:34	-->	Erops (~Erops@126.ip-192-99-144.net) has joined #godotengine
+2019-11-13 16:21:10	-->	harai (~harai@gateway/tor-sasl/harai) has joined #godotengine
+2019-11-13 16:22:26	azagaya	yeas it does
+2019-11-13 16:22:53	jimbzy	That stinks.
+2019-11-13 16:25:36	-->	dddddd (~dddddd@unaffiliated/dddddd) has joined #godotengine
+2019-11-13 16:27:03	-->	MoosePrime (~moose@207.44.22.117) has joined #godotengine
+2019-11-13 16:33:04	--	irc: disconnected from server
+2019-11-13 16:33:36	-->	Syrinxos (~syrinxos@93-34-1-82.ip47.fastwebnet.it) has joined #godotengine
+2019-11-13 16:33:36	--	Topic for #godotengine is "Godot Engine | https://godotengine.org | GitHub: https://github.com/godotengine/godot | Docs: https://docs.godotengine.org | Discord: https://discord.gg/zH7NUgz | Don't ask if you can ask, just ask! :) | Interested in engine development? Join #godotengine-devel | Want to help with the documentation? Join #godotengine-doc"
+2019-11-13 16:33:36	--	Topic set by Calinou (~quassel@fsf/member/calinou) on Mon, 25 Feb 2019 00:45:33
+2019-11-13 16:33:36	--	Channel #godotengine: 268 nicks (1 op, 0 voices, 267 normals)
+2019-11-13 16:33:56	--	Channel created on Tue, 11 Feb 2014 08:43:18
+2019-11-13 16:37:41	-->	ignaloidas (~ignaloida@158.129.26.113) has joined #godotengine
+2019-11-13 16:43:21	-->	greedom (~greedom@mue-88-130-54-025.dsl.tropolys.de) has joined #godotengine
+2019-11-13 16:47:13	-->	Optimizer (70863067@112.134.48.103) has joined #godotengine
+2019-11-13 16:47:59	<--	Optimizer (70863067@112.134.48.103) has quit (Remote host closed the connection)
+2019-11-13 16:55:41	<--	chargen (~chargen@2a02:2e02:9ee0:7100:b459:2ecf:2363:7983) has quit (Quit: BBL)
+2019-11-13 16:58:36	<--	Technipion (~Thunderbi@p200300F933D68BCAC95FF3B272DFAE3D.dip0.t-ipconnect.de) has quit (Quit: Technipion)
+2019-11-13 17:15:25	--	irc: disconnected from server
+2019-11-13 17:15:58	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #godotengine
+2019-11-13 17:15:58	--	Topic for #godotengine is "Godot Engine | https://godotengine.org | GitHub: https://github.com/godotengine/godot | Docs: https://docs.godotengine.org | Discord: https://discord.gg/zH7NUgz | Don't ask if you can ask, just ask! :) | Interested in engine development? Join #godotengine-devel | Want to help with the documentation? Join #godotengine-doc"
+2019-11-13 17:15:58	--	Topic set by Calinou (~quassel@fsf/member/calinou) on Mon, 25 Feb 2019 00:45:33
+2019-11-13 17:15:58	--	Channel #godotengine: 268 nicks (1 op, 0 voices, 267 normals)
+2019-11-13 17:16:18	--	Channel created on Tue, 11 Feb 2014 08:43:18
+2019-11-13 17:18:05	-->	Beliar (~Beliar@2a02:8108:9640:6c42:c10c:7381:5779:67dd) has joined #godotengine
+2019-11-13 17:18:08	<--	wyattb_ (~wyattb@static-71-127-241-93.nwrknj.fios.verizon.net) has quit (Ping timeout: 268 seconds)
+2019-11-13 17:18:59	-->	kimamb (~kimamb__@62.97.173.88) has joined #godotengine
+2019-11-13 17:23:35	-->	kriskropd (~kriskropd@unaffiliated/kriskropd) has joined #godotengine
+2019-11-13 17:26:44	azagaya	bojidar_bg: I've tried and moving `move_and_slide` from `_physics_process()` to `_process()` and gets a lot better.. shouldnt it work better on `_physics_process()`?
+2019-11-13 17:34:42	<--	kriskropd (~kriskropd@unaffiliated/kriskropd) has quit (Quit: kriskropd)
+2019-11-13 17:36:09	azagaya	i have arround 5fps with `move_and_slide` inside `_physics_process` and then i get 15fps in `_process`... its still low, but idk
+2019-11-13 17:39:14	bojidar_bg	azagaya: maybe it gets queued that way, and incurs less processing cost for slides and collisions
+2019-11-13 17:39:20	<--	saltpepp3r3 (~saltpepp3@91.207.173.118) has quit (Ping timeout: 265 seconds)
+2019-11-13 17:39:23	bojidar_bg	or, hm, don't know either
+2019-11-13 17:40:59	-->	saltpepp3r3 (~saltpepp3@91.207.173.118) has joined #godotengine
+2019-11-13 17:49:12	-->	scde (~scde@p5B2678C8.dip0.t-ipconnect.de) has joined #godotengine
+2019-11-13 17:50:49	azagaya	this seems to be related to #6507, isn't it?
+2019-11-13 17:50:49	IssueBot	#6507: Kinematic move() and move_and_slide() slows down randomly with multiple objects | https://git.io/JerYG
+2019-11-13 17:51:41	-->	Romlok (~mel@26.51-175-167.customer.lyse.net) has joined #godotengine
+2019-11-14 09:34:13	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #godotengine
+2019-11-14 09:34:13	--	Topic for #godotengine is "Godot Engine | https://godotengine.org | GitHub: https://github.com/godotengine/godot | Docs: https://docs.godotengine.org | Discord: https://discord.gg/zH7NUgz | Don't ask if you can ask, just ask! :) | Interested in engine development? Join #godotengine-devel | Want to help with the documentation? Join #godotengine-doc"
+2019-11-14 09:34:13	--	Topic set by Calinou (~quassel@fsf/member/calinou) on Mon, 25 Feb 2019 00:45:33
+2019-11-14 09:34:13	--	Channel #godotengine: 258 nicks (1 op, 0 voices, 257 normals)
+2019-11-14 09:34:24	--	Channel created on Tue, 11 Feb 2014 08:43:18
+2019-11-14 09:38:13	-->	karroffel8 (~karroffel@ip-178-203-190-17.hsi10.unitymediagroup.de) has joined #godotengine
+2019-11-14 09:38:29	<--	karroffel (~karroffel@ip-178-203-190-17.hsi10.unitymediagroup.de) has quit (Read error: Connection reset by peer)
+2019-11-14 09:38:30	--	karroffel8 is now known as karroffel
+2019-11-14 09:43:28	<--	greedom (~greedom@i577BC6D1.versanet.de) has quit (Remote host closed the connection)
+2019-11-14 09:44:35	-->	greedom (~greedom@i577BC6D1.versanet.de) has joined #godotengine
+2019-11-14 10:11:37	<--	Salabasama (~mustafa@68-118-84-232.dhcp.kgpt.tn.charter.com) has quit (Ping timeout: 265 seconds)
+2019-11-14 10:15:50	-->	ignaloidas (~ignaloida@158.129.26.113) has joined #godotengine
+2019-11-14 10:23:18	<--	bitwinery (~bitwinery@c-73-37-18-139.hsd1.wa.comcast.net) has quit (Quit: Leaving)
+2019-11-14 10:28:05	-->	thc202 (~thc202@unaffiliated/thc202) has joined #godotengine
+2019-11-14 10:31:28	-->	Einlander (~Einlander@108-197-18-137.lightspeed.cicril.sbcglobal.net) has joined #godotengine
+2019-11-14 10:44:17	-->	micheg (~micheg@host234-63-dynamic.18-79-r.retail.telecomitalia.it) has joined #godotengine
+2019-11-14 10:48:16	<--	saltiestpepp3r (~saltpepp3@91.207.173.118) has quit (Ping timeout: 240 seconds)
+2019-11-14 10:50:08	-->	brainzap (~brainzap@161.18.150.83.ftth.as8758.net) has joined #godotengine
+2019-11-14 10:50:37	-->	saltiestpepp3r (~saltpepp3@91.207.173.118) has joined #godotengine
+2019-11-14 11:08:36	<--	micheg (~micheg@host234-63-dynamic.18-79-r.retail.telecomitalia.it) has quit
+2019-11-14 11:08:51	-->	code-xd (uid402839@gateway/web/irccloud.com/x-qkjkkaybjdewihbh) has joined #godotengine
+2019-11-14 11:37:42	-->	maveerik (~1@178.127.204.71) has joined #godotengine
+2019-11-14 11:51:13	<--	maveerik (~1@178.127.204.71) has quit (Read error: Connection reset by peer)
+2019-11-14 12:10:19	-->	bdeshi (~bdeshi@103.55.145.108) has joined #godotengine
+2019-11-14 13:31:19	<--	endragor_ (~endragor@212.164.228.99) has quit (Remote host closed the connection)
+2019-11-14 13:34:46	-->	Technipion (~Thunderbi@p200300F933D68BCAF5D43C718135C28B.dip0.t-ipconnect.de) has joined #godotengine
+2019-11-14 13:45:46	-->	Yeldham (~michael@138.219.238.108.newlifeinformatica.com.br) has joined #godotengine
+2019-11-14 13:46:42	<--	biliogadafr (~bilio@46.53.248.20) has quit (Ping timeout: 265 seconds)
+2019-11-14 13:51:11	<--	odino (~odino3@2a02:1205:c6a7:4fc0:98bc:a665:d581:5c28) has quit (*.net *.split)
+2019-11-14 13:51:12	<--	jeffyboh (~JeffyBoh@c-76-18-203-239.hsd1.fl.comcast.net) has quit (*.net *.split)
+2019-11-14 13:51:13	<--	hamishtpb (~weechat@2001:8b0:cbdb:84b6:6ab8:dd2c:b6c:8b4a) has quit (*.net *.split)
+2019-11-14 13:51:13	<--	germinolegrand (~Thunderbi@2a01:cb14:a95:a000:6822:3808:5774:5644) has quit (*.net *.split)
+2019-11-14 13:51:14	<--	bagedevimo (~bagedevim@219.88.234.121) has quit (*.net *.split)
+2019-11-14 13:51:14	<--	chipolux (~chipolux@2600:8804:5600:cd00:eea8:6bff:fe6b:e125) has quit (*.net *.split)
+2019-11-14 13:51:14	<--	b1101 (~b1101@fsf/member/b1101) has quit (*.net *.split)
+2019-11-14 13:51:14	<--	murkx (~mur@unaffiliated/murkx) has quit (*.net *.split)
+2019-11-14 13:51:15	<--	chunkypuffs (~chunkypuf@static.203.112.216.95.clients.your-server.de) has quit (*.net *.split)
+2019-11-14 13:51:15	<--	Darkfoe (uid402081@gateway/web/irccloud.com/x-qzmymmpvrarczotw) has quit (*.net *.split)
+2019-11-14 13:51:15	<--	mceier (~mceier@89-68-132-187.dynamic.chello.pl) has quit (*.net *.split)
+2019-11-14 13:51:15	<--	meneldal (~meneldal@FL1-118-110-141-32.myg.mesh.ad.jp) has quit (*.net *.split)
+2019-11-14 13:51:16	<--	gachuk (~gachuk@173.red-83-59-240.dynamicip.rima-tde.net) has quit (*.net *.split)
+2019-11-14 13:51:16	<--	FIFOd (~FIFOd@neverfear.org) has quit (*.net *.split)
+2019-11-14 13:51:16	<--	siliex (~siliex@50.116.54.75) has quit (*.net *.split)
+2019-11-14 13:51:17	<--	bkhl (~bkhl@marsh.hcoop.net) has quit (*.net *.split)
+2019-11-14 13:51:17	<--	DarkUranium (~DarkUrani@stdrand.com) has quit (*.net *.split)
+2019-11-14 13:51:17	<--	literallyCrevice (~yoav@2a01:4f9:c010:2686::1) has quit (*.net *.split)
+2019-11-14 13:51:17	<--	copygirl (~koppeh@copy.mcft.net) has quit (*.net *.split)
+2019-11-14 13:51:17	<--	ddevault (znc@sourcehut/staff/ddevault) has quit (*.net *.split)
+2019-11-14 13:51:17	<--	Guest99146 (~metric@199.127.226.246) has quit (*.net *.split)
+2019-11-14 13:51:17	<--	kudan (~kudan@77-105-71-142.lpok.fi) has quit (*.net *.split)
+2019-11-14 13:51:17	<--	haagch (~quassel@2a03:4000:15:6be::dead:beef) has quit (*.net *.split)
+2019-11-14 13:51:18	<--	northcode (~northcode@vps-29.35.101.185.stwvps.net) has quit (*.net *.split)
+2019-11-14 13:51:18	<--	Auztin (Austin@auztin.net) has quit (*.net *.split)
+2019-11-14 13:51:18	<--	easty (~quassel@unaffiliated/easty) has quit (*.net *.split)
+2019-11-14 13:51:18	<--	Hijiri (~Hijiri@104.236.61.10) has quit (*.net *.split)
+2019-11-14 13:51:18	<--	P0neyd31337 (~P0neyd133@51.15.251.58) has quit (*.net *.split)
+2019-11-14 13:51:19	<--	swetland (sid155178@gateway/web/irccloud.com/x-xddajofdsbhbbvjz) has quit (*.net *.split)
+2019-11-14 13:51:19	<--	CyberNigma (sid146612@gateway/web/irccloud.com/x-gswatarwviygbrww) has quit (*.net *.split)
+2019-11-14 13:53:39	<--	brainzap (~brainzap@161.18.150.83.ftth.as8758.net) has quit (Ping timeout: 240 seconds)
+2019-11-14 13:53:50	-->	odino (~odino3@2a02:1205:c6a7:4fc0:98bc:a665:d581:5c28) has joined #godotengine
+2019-11-14 13:53:50	-->	jeffyboh (~JeffyBoh@c-76-18-203-239.hsd1.fl.comcast.net) has joined #godotengine
+2019-11-14 13:53:50	-->	hamishtpb (~weechat@2001:8b0:cbdb:84b6:6ab8:dd2c:b6c:8b4a) has joined #godotengine
+2019-11-14 13:53:51	-->	germinolegrand (~Thunderbi@2a01:cb14:a95:a000:6822:3808:5774:5644) has joined #godotengine
+2019-11-14 13:53:51	-->	bagedevimo (~bagedevim@219.88.234.121) has joined #godotengine
+2019-11-14 13:53:51	-->	chipolux (~chipolux@2600:8804:5600:cd00:eea8:6bff:fe6b:e125) has joined #godotengine
+2019-11-14 13:53:51	-->	b1101 (~b1101@fsf/member/b1101) has joined #godotengine
+2019-11-14 13:53:51	-->	murkx (~mur@unaffiliated/murkx) has joined #godotengine
+2019-11-14 13:53:51	-->	Darkfoe (uid402081@gateway/web/irccloud.com/x-qzmymmpvrarczotw) has joined #godotengine
+2019-11-14 13:53:51	-->	chunkypuffs (~chunkypuf@static.203.112.216.95.clients.your-server.de) has joined #godotengine
+2019-11-14 13:53:51	-->	mceier (~mceier@89-68-132-187.dynamic.chello.pl) has joined #godotengine
+2019-11-14 13:53:51	-->	bkhl (~bkhl@marsh.hcoop.net) has joined #godotengine
+2019-11-14 13:53:51	-->	meneldal (~meneldal@FL1-118-110-141-32.myg.mesh.ad.jp) has joined #godotengine
+2019-11-14 13:53:51	-->	gachuk (~gachuk@173.red-83-59-240.dynamicip.rima-tde.net) has joined #godotengine
+2019-11-14 13:53:51	-->	FIFOd (~FIFOd@neverfear.org) has joined #godotengine
+2019-11-14 13:53:51	-->	siliex (~siliex@50.116.54.75) has joined #godotengine
+2019-11-14 13:53:51	-->	copygirl (~koppeh@copy.mcft.net) has joined #godotengine
+2019-11-14 13:53:51	-->	literallyCrevice (~yoav@2a01:4f9:c010:2686::1) has joined #godotengine
+2019-11-14 13:53:51	-->	DarkUranium (~DarkUrani@stdrand.com) has joined #godotengine
+2019-11-14 13:53:51	-->	ddevault (znc@sourcehut/staff/ddevault) has joined #godotengine
+2019-11-14 13:53:51	-->	Guest99146 (~metric@199.127.226.246) has joined #godotengine
+2019-11-14 13:53:51	-->	kudan (~kudan@77-105-71-142.lpok.fi) has joined #godotengine
+2019-11-14 13:53:51	-->	haagch (~quassel@2a03:4000:15:6be::dead:beef) has joined #godotengine
+2019-11-14 13:53:51	-->	northcode (~northcode@vps-29.35.101.185.stwvps.net) has joined #godotengine
+2019-11-14 13:53:51	-->	Auztin (Austin@auztin.net) has joined #godotengine
+2019-11-14 13:53:51	-->	easty (~quassel@unaffiliated/easty) has joined #godotengine
+2019-11-14 13:53:51	-->	Hijiri (~Hijiri@104.236.61.10) has joined #godotengine
+2019-11-14 13:53:51	-->	P0neyd31337 (~P0neyd133@51.15.251.58) has joined #godotengine
+2019-11-14 13:53:51	-->	swetland (sid155178@gateway/web/irccloud.com/x-xddajofdsbhbbvjz) has joined #godotengine
+2019-11-14 13:53:51	-->	CyberNigma (sid146612@gateway/web/irccloud.com/x-gswatarwviygbrww) has joined #godotengine
+2019-11-14 13:54:44	-->	germinolegrand1 (~Thunderbi@2a01:cb14:a95:a000:9972:cd25:9f1e:6942) has joined #godotengine
+2019-11-14 13:54:45	<--	germinolegrand (~Thunderbi@2a01:cb14:a95:a000:6822:3808:5774:5644) has quit (Remote host closed the connection)
+2019-11-14 13:57:49	-->	brainzap (~brainzap@161.18.150.83.ftth.as8758.net) has joined #godotengine
+2019-11-14 13:58:15	<--	jaggz (~jaggz@unaffiliated/jaggz) has quit (Read error: Connection reset by peer)
+2019-11-14 13:58:37	-->	jaggz (~jaggz@unaffiliated/jaggz) has joined #godotengine
+2019-11-14 14:22:59	-->	Cahaan (~Cahaan@109.129.13.76) has joined #godotengine
+2019-11-14 14:30:48	-->	hamster_molhado (~cesar@45.56.200.25) has joined #godotengine
+2019-11-14 14:31:39	<--	kamui (~kamui@96-68-66-153-static.hfc.comcastbusiness.net) has quit (Ping timeout: 265 seconds)
+2019-11-14 14:32:53	-->	kamui (~kamui@96-68-66-153-static.hfc.comcastbusiness.net) has joined #godotengine
+2019-11-14 14:39:53	<--	Namigator (~nami@ip4d16389c.dynamic.kabel-deutschland.de) has quit (Remote host closed the connection)
+2019-11-14 14:40:23	-->	Namigator (~nami@ip4d16389c.dynamic.kabel-deutschland.de) has joined #godotengine
+2019-11-14 14:42:44	-->	regakakobigman (~regakakob@c-73-174-187-176.hsd1.pa.comcast.net) has joined #godotengine
+2019-11-14 14:46:51	-->	dddddd (~dddddd@unaffiliated/dddddd) has joined #godotengine
+2019-11-14 14:53:33	<--	Technipion (~Thunderbi@p200300F933D68BCAF5D43C718135C28B.dip0.t-ipconnect.de) has quit (Quit: Technipion)
+2019-11-14 14:53:44	<--	hamster_molhado (~cesar@45.56.200.25) has quit (Remote host closed the connection)
+2019-11-14 15:27:19	-->	maveerik (~1@178.127.204.71) has joined #godotengine
+2019-11-14 15:33:44	<--	brainzap (~brainzap@161.18.150.83.ftth.as8758.net) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-11-14 15:36:49	-->	psymin (~psymin@69.146.8.222) has joined #godotengine
+2019-11-14 16:04:50	-->	MoosePrime (~moose@207.44.22.117) has joined #godotengine
+2019-11-14 16:08:14	-->	brainzap (~brainzap@178.197.226.89) has joined #godotengine
+2019-11-14 16:13:27	<--	lerc_ (~quassel@161.65.216.115) has quit (Read error: Connection reset by peer)
+2019-11-14 16:15:34	-->	lerc (~quassel@161.65.216.115) has joined #godotengine
+2019-11-14 16:16:09	-->	ignaloidas_ (~ignaloida@158.129.26.113) has joined #godotengine
+2019-11-14 16:16:10	<--	ignaloidas (~ignaloida@158.129.26.113) has quit (Remote host closed the connection)
+2019-11-14 16:23:26	<--	brainzap (~brainzap@178.197.226.89) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-11-14 16:24:29	<--	vnen (~vnen@unaffiliated/vnen) has quit (Remote host closed the connection)
+2019-11-14 16:24:29	<--	jahd (~jahd2602@191.101.3.230) has quit (Remote host closed the connection)
+2019-11-14 16:24:48	-->	jahd (~jahd2602@191.101.3.230) has joined #godotengine
+2019-11-14 16:24:50	-->	vnen (~vnen@unaffiliated/vnen) has joined #godotengine

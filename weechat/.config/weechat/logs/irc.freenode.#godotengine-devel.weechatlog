@@ -2942,3 +2942,153 @@
 2019-11-13 15:24:24	<--	Technipion (~Thunderbi@p200300F933D68B69C95FF3B272DFAE3D.dip0.t-ipconnect.de) has quit (Ping timeout: 246 seconds)
 2019-11-13 15:24:43	-->	Technipion (~Thunderbi@p200300F933D68BCAC95FF3B272DFAE3D.dip0.t-ipconnect.de) has joined #godotengine-devel
 2019-11-13 15:35:00	-->	biliogadafr (~bilio@46.53.248.20) has joined #godotengine-devel
+2019-11-13 15:42:27	<--	madmiraal (~Thunderbi@2001:984:a3d7:1:4c97:8ddf:f948:cabf) has quit (Quit: madmiraal)
+2019-11-13 15:59:37	<--	mrcdk (~mrcdk@172-200-39-46.usuarios.innovasur.com) has quit (Read error: Connection reset by peer)
+2019-11-13 16:05:31	TMM	Hey all, if anyone's looking for a job as a Godot contractor for prehensile-tales (my company) please DM me here or email me at hp@prehensile-tales.com!
+2019-11-13 16:07:31	Akien	(Certified Employer of the Year™ 2019 in the "Professional Godot Engine" section, based on survey of the handful of contributors working with TMM :D)
+2019-11-13 16:10:31	-->	Welp (uid346815@gateway/web/irccloud.com/x-mzwxewjvqxoejgnh) has joined #godotengine-devel
+2019-11-13 16:14:49	jfons	I can confirm the aforementioned certification is indeed deserved
+2019-11-13 16:16:26	jimbzy	The last time I got certified it took 72hrs before they'd let me go home...  ;)
+2019-11-13 16:17:25	Groud	xD
+2019-11-13 16:17:50	RevoluPowered	Can confirm working for TMM: is awesome. 10/10 IGN reviews too. ;)
+2019-11-13 16:20:34	-->	Erops (~Erops@126.ip-192-99-144.net) has joined #godotengine-devel
+2019-11-13 16:23:40	TMM	*blush*
+2019-11-13 16:25:36	-->	dddddd (~dddddd@unaffiliated/dddddd) has joined #godotengine-devel
+2019-11-13 16:27:03	-->	MoosePrime (~moose@207.44.22.117) has joined #godotengine-devel
+2019-11-13 16:33:04	--	irc: disconnected from server
+2019-11-13 16:33:38	-->	Syrinxos (~syrinxos@93-34-1-82.ip47.fastwebnet.it) has joined #godotengine-devel
+2019-11-13 16:33:38	--	Topic for #godotengine-devel is "Godot Engine Developers | Tasks up for grabs: https://github.com/godotengine/godot/issues | ML: https://listengine.tuxfamily.org/godotengine.org/devel | Logs: http://godot.eska.me/irc-logs | Can't join from Matrix? https://frama.link/matrix-irc-needreggednick"
+2019-11-13 16:33:38	--	Topic set by Akien (~Akien@godotengine/akien) on Sun, 23 Sep 2018 17:02:58
+2019-11-13 16:33:38	--	Channel #godotengine-devel: 150 nicks (1 op, 0 voices, 149 normals)
+2019-11-13 16:33:58	--	Channel created on Tue, 23 Jun 2015 16:46:41
+2019-11-13 16:37:42	-->	ignaloidas (~ignaloida@158.129.26.113) has joined #godotengine-devel
+2019-11-13 16:58:36	<--	Technipion (~Thunderbi@p200300F933D68BCAC95FF3B272DFAE3D.dip0.t-ipconnect.de) has quit (Quit: Technipion)
+2019-11-13 17:15:25	--	irc: disconnected from server
+2019-11-13 17:16:00	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #godotengine-devel
+2019-11-13 17:16:00	--	Topic for #godotengine-devel is "Godot Engine Developers | Tasks up for grabs: https://github.com/godotengine/godot/issues | ML: https://listengine.tuxfamily.org/godotengine.org/devel | Logs: http://godot.eska.me/irc-logs | Can't join from Matrix? https://frama.link/matrix-irc-needreggednick"
+2019-11-13 17:16:00	--	Topic set by Akien (~Akien@godotengine/akien) on Sun, 23 Sep 2018 17:02:58
+2019-11-13 17:16:00	--	Channel #godotengine-devel: 150 nicks (1 op, 0 voices, 149 normals)
+2019-11-13 17:16:07	<--	balenol[m] (~balenolm]@180.252.26.105) has quit (Read error: Connection reset by peer)
+2019-11-13 17:16:20	--	Channel created on Tue, 23 Jun 2015 16:46:41
+2019-11-13 17:41:45	TMM	Calinou too bad, perhaps later!
+2019-11-14 09:34:13	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #godotengine-devel
+2019-11-14 09:34:13	--	Topic for #godotengine-devel is "Godot Engine Developers | Tasks up for grabs: https://github.com/godotengine/godot/issues | ML: https://listengine.tuxfamily.org/godotengine.org/devel | Logs: http://godot.eska.me/irc-logs | Can't join from Matrix? https://frama.link/matrix-irc-needreggednick"
+2019-11-14 09:34:13	--	Topic set by Akien (~Akien@godotengine/akien) on Sun, 23 Sep 2018 17:02:58
+2019-11-14 09:34:13	--	Channel #godotengine-devel: 147 nicks (1 op, 0 voices, 146 normals)
+2019-11-14 09:34:26	--	Channel created on Tue, 23 Jun 2015 16:46:41
+2019-11-14 09:38:13	-->	karroffel8 (~karroffel@ip-178-203-190-17.hsi10.unitymediagroup.de) has joined #godotengine-devel
+2019-11-14 09:38:29	<--	karroffel (~karroffel@ip-178-203-190-17.hsi10.unitymediagroup.de) has quit (Read error: Connection reset by peer)
+2019-11-14 09:38:30	--	karroffel8 is now known as karroffel
+2019-11-14 10:05:34	<--	chaosus89 (d58d8110@gateway/web/cgi-irc/kiwiirc.com/ip.213.141.129.16) has quit (Quit: Ping timeout (120 seconds))
+2019-11-14 10:15:50	-->	ignaloidas (~ignaloida@158.129.26.113) has joined #godotengine-devel
+2019-11-14 10:20:45	<--	pieq_ (~pieq@canonical/oem/pieq) has quit (Quit: Leaving)
+2019-11-14 10:28:05	-->	thc202 (~thc202@unaffiliated/thc202) has joined #godotengine-devel
+2019-11-14 10:29:54	IronicallySerio	Github Game Off recommends Godot twice on their itch page :) https://itch.io/jam/game-off-2019
+2019-11-14 10:31:28	-->	Einlander (~Einlander@108-197-18-137.lightspeed.cicril.sbcglobal.net) has joined #godotengine-devel
+2019-11-14 10:35:33	-->	chaosus89 (d58d8110@gateway/web/cgi-irc/kiwiirc.com/ip.213.141.129.16) has joined #godotengine-devel
+2019-11-14 10:40:47	Akien	Yeah Lee Reilly is always making good promotion for us :) Past Game Off editions even had Godot logos on the theme artwork
+2019-11-14 10:42:36	jfons	morning :)
+2019-11-14 11:02:54	jitspoe	Anybody familiar with the animation code? I'm fixing a blending bug, but I want to make sure there's not a reason for it being implemented the way it was.
+2019-11-14 11:02:55	jitspoe	Basically, if you play an animation with a long blend time followed by an animation with a short blend time (before the first blend finishes), what should be a short blend is slow.
+2019-11-14 11:04:01	jitspoe	Fixed it locally here, but I was curious if there's a reason it blended the animations in reverse order: https://github.com/jitspoe/godot/commit/cc057472e5da1c870fdbe57aa2e606f0f03b6260
+2019-11-14 11:07:57	<--	balenol[m] (~balenolm]@180.252.26.105) has quit (Remote host closed the connection)
+2019-11-14 11:08:15	-->	balenol[m] (~balenolm]@180.252.26.105) has joined #godotengine-devel
+2019-11-14 11:08:51	-->	code-xd (uid402839@gateway/web/irccloud.com/x-qkjkkaybjdewihbh) has joined #godotengine-devel
+2019-11-14 11:16:56	code-xd	I am new to debugging so I usually use print statements but is there any way to find out which function is being called while running Godot in debug mode
+2019-11-14 11:19:32	Akien	You can use breakpoints in your debugger to stop execution at a line you're interested in, and then get a backtrace of what calls led to it.
+2019-11-14 11:19:50	Akien	Or step line by line into the rest of the code from the breakpoint.
+2019-11-14 11:23:50	code-xd	The command for running the engine directly from terminal being
+2019-11-14 11:26:47	Akien	godot --path path/to/project -e
+2019-11-14 11:26:59	Akien	(to run the editor -- without -e to run the project)
+2019-11-14 11:27:19	code-xd	Akien: Thanks
+2019-11-14 11:35:50	Calinou	jitspoe: I think only reduz is really familiar with the animation code, I don't see others working on it often
+2019-11-14 11:47:21	code-xd	Can anyone tell me which function is dealing with providing suggestions while writing the gdscript in Godot script layout?
+2019-11-14 12:11:01	RevoluPowered	sorry I don't think anyone knows off the top of their head
+2019-11-14 12:11:57	Akien	Search "code_complete"
+2019-11-14 12:19:22	-->	jamm (~jam@unaffiliated/jamm) has joined #godotengine-devel
+2019-11-14 12:24:47	Akien	Looks like you can assign people who commented in an issue now, even if they're not part of the GitHub org
+2019-11-14 12:26:13	Groud	wow, that's great :)
+2019-11-14 12:27:39	code-xd	bear: parse exec trace file: /tmp/intercept-2_cw58u1/execution.zGcWY1 FAILED
+2019-11-14 12:27:48	code-xd	I am getting this when building using llvm and bear
+2019-11-14 12:31:05	Akien	I don't know about bear.
+2019-11-14 12:31:17	Akien	StraToN: another dialogue system, open source this one: https://github.com/LittleMouseGames/whiskers
+2019-11-14 13:11:04	Akien	fales[m]: Does the crypto class solve https://github.com/godotengine/godot/issues/19110 ?
+2019-11-14 13:23:01	Calinou	continuing work on my editor theme redesign, I fixed a few issues and am currently looking at GraphEdit/GraphNode theming
+2019-11-14 13:31:19	<--	endragor_ (~endragor@212.164.228.99) has quit (Remote host closed the connection)
+2019-11-14 13:34:46	-->	Technipion (~Thunderbi@p200300F933D68BCAF5D43C718135C28B.dip0.t-ipconnect.de) has joined #godotengine-devel
+2019-11-14 13:44:01	Akien	BTW I checked earlier and confirmed that antialiasing still doesn't work for GraphEdit bezier curves, neither in editor nor in game
+2019-11-14 13:44:57	Akien	It's using CanvasItem::draw_polyline_colors(), and p_antialiased is true and properly passed to the render command, but it doesn't seem to work even though both GLES2 and GLES3 use GL_SMOOTH_LINE
+2019-11-14 13:45:10	Akien	*GL_LINE_SMOOTH
+2019-11-14 13:45:44	Akien	I checked in vulkan, it's also not working there (and the lines are 1 px wide instead of 2)
+2019-11-14 13:45:46	-->	Yeldham (~michael@138.219.238.108.newlifeinformatica.com.br) has joined #godotengine-devel
+2019-11-14 13:46:42	<--	biliogadafr (~bilio@46.53.248.20) has quit (Ping timeout: 265 seconds)
+2019-11-14 13:47:29	Calinou	it works here… maybe it's a driver bug?
+2019-11-14 13:51:11	<--	odino (~odino3@2a02:1205:c6a7:4fc0:98bc:a665:d581:5c28) has quit (*.net *.split)
+2019-11-14 13:51:12	<--	jeffyboh (~JeffyBoh@c-76-18-203-239.hsd1.fl.comcast.net) has quit (*.net *.split)
+2019-11-14 13:51:14	<--	bagedevimo (~bagedevim@219.88.234.121) has quit (*.net *.split)
+2019-11-14 13:51:14	<--	b1101 (~b1101@fsf/member/b1101) has quit (*.net *.split)
+2019-11-14 13:51:14	<--	murkx (~mur@unaffiliated/murkx) has quit (*.net *.split)
+2019-11-14 13:51:16	<--	siliex (~siliex@50.116.54.75) has quit (*.net *.split)
+2019-11-14 13:51:16	<--	dt9 (dt9@nat/intel/x-iuteymivertlfugw) has quit (*.net *.split)
+2019-11-14 13:51:17	<--	ddevault (znc@sourcehut/staff/ddevault) has quit (*.net *.split)
+2019-11-14 13:51:17	<--	Guest99146 (~metric@199.127.226.246) has quit (*.net *.split)
+2019-11-14 13:51:18	<--	Hijiri (~Hijiri@104.236.61.10) has quit (*.net *.split)
+2019-11-14 13:51:19	<--	Spec-Chum (sid204588@gateway/web/irccloud.com/x-ffovcmggtbxtidzh) has quit (*.net *.split)
+2019-11-14 13:53:50	-->	odino (~odino3@2a02:1205:c6a7:4fc0:98bc:a665:d581:5c28) has joined #godotengine-devel
+2019-11-14 13:53:50	-->	jeffyboh (~JeffyBoh@c-76-18-203-239.hsd1.fl.comcast.net) has joined #godotengine-devel
+2019-11-14 13:53:50	-->	bagedevimo (~bagedevim@219.88.234.121) has joined #godotengine-devel
+2019-11-14 13:53:50	-->	b1101 (~b1101@fsf/member/b1101) has joined #godotengine-devel
+2019-11-14 13:53:50	-->	murkx (~mur@unaffiliated/murkx) has joined #godotengine-devel
+2019-11-14 13:53:50	-->	siliex (~siliex@50.116.54.75) has joined #godotengine-devel
+2019-11-14 13:53:50	-->	dt9 (dt9@nat/intel/x-iuteymivertlfugw) has joined #godotengine-devel
+2019-11-14 13:53:50	-->	ddevault (znc@sourcehut/staff/ddevault) has joined #godotengine-devel
+2019-11-14 13:53:50	-->	Guest99146 (~metric@199.127.226.246) has joined #godotengine-devel
+2019-11-14 13:53:50	-->	Hijiri (~Hijiri@104.236.61.10) has joined #godotengine-devel
+2019-11-14 13:53:50	-->	Spec-Chum (sid204588@gateway/web/irccloud.com/x-ffovcmggtbxtidzh) has joined #godotengine-devel
+2019-11-14 13:54:19	fales[m]	<Akien "fales: Does the crypto class sol"> @akien:matrix.org: no, DTLS for ENet, when completed will solve that
+2019-11-14 13:54:50	fales[m]	For now only websocket and webrtc can be encrypted
+2019-11-14 13:54:51	<--	balenol[m] (~balenolm]@180.252.26.105) has quit (Ping timeout: 240 seconds)
+2019-11-14 13:56:08	Calinou	trying to iterate over a Map<StringName, Color> but I get this: https://hastebin.com/ukagaqodiv.cpp
+2019-11-14 13:56:23	Calinou	(needed to do this to access colors directly, rather than just the resulting StyleBoxes)
+2019-11-14 13:57:07	Calinou	I don't know where the Comparator<StringName> and DefaultAllocator are coming from
+2019-11-14 13:57:37	Calinou	nevermind, I wrote String instead of StringName
+2019-11-14 13:57:51	Calinou	yay, it works :D
+2019-11-14 13:58:29	Calinou	~~NoodleScript~~ visual scripting redesign: https://i.imgur.com/CmPYt10.png
+2019-11-14 14:01:31	Akien	Calinou: looks nice :)
+2019-11-14 14:02:08	Akien	Calinou: and you're right, AA doesn't work on Mesa/Intel but it works on Mesa/Radeon for me.
+2019-11-14 14:13:25	Akien_	Wow the Matrix IRC bridge is buggy right now.
+2019-11-14 14:16:01	Akien_	(For a change...)
+2019-11-14 14:16:05	Akien_	(For a change...)
+2019-11-14 14:16:08	Akien_	(For a change...)
+2019-11-14 14:16:18	Akien_	(For a change...)
+2019-11-14 14:19:46	Akien_	Actually it's Matrix itself being slow as heck, takes a minute to send anything... (For a change... bis)
+2019-11-14 14:21:27	Akien_	Actually it's Matrix itself being slow as heck, takes a minute to send anything... (For a change... bis)
+2019-11-14 14:21:49	Akien_	Actually it's Matrix itself being slow as heck, takes a minute to send anything... (For a change... bis)
+2019-11-14 14:22:59	-->	Cahaan (~Cahaan@109.129.13.76) has joined #godotengine-devel
+2019-11-14 14:24:32	Technipion	that looks buggy ('o.o)
+2019-11-14 14:35:20	Calinou	I pushed the GraphNode theme redesign: https://github.com/Calinou/godot/tree/improve-editor-theme
+2019-11-14 14:35:43	Calinou	if anyone has spare time, feel free to clone that branch and test it (by using the editor as you'd do it usually). Tell me if there's anything that feels off :)
+2019-11-14 14:36:15	Calinou	you can try either dark or light themes, though my main focus is the dark theme (I know why the light theme looks off, I can fix it in a future PR as to not make this one too large)
+2019-11-14 14:46:51	-->	dddddd (~dddddd@unaffiliated/dddddd) has joined #godotengine-devel
+2019-11-14 14:53:33	<--	Technipion (~Thunderbi@p200300F933D68BCAF5D43C718135C28B.dip0.t-ipconnect.de) has quit (Quit: Technipion)
+2019-11-14 15:05:13	RevoluPowered	test
+2019-11-14 15:27:08	RevoluPowered	anyone else having fedora 31 unable to click on browser links with http://google.com or https://google.com?
+2019-11-14 15:27:20	RevoluPowered	literally doing nothing on f31
+2019-11-14 15:40:33	iFire	Calinou: looking
+2019-11-14 15:40:47	-->	balenol[m] (~balenolm]@180.252.26.105) has joined #godotengine-devel
+2019-11-14 15:43:44	iFire	Actually, I need to wake up, so I'll be delayed.
+2019-11-14 15:43:57	iFire	RevoluPowered: can't reproduce
+2019-11-14 15:44:05	RevoluPowered	hm
+2019-11-14 15:44:31	RevoluPowered	will run integrity check then
+2019-11-14 16:04:50	-->	MoosePrime (~moose@207.44.22.117) has joined #godotengine-devel
+2019-11-14 16:13:27	<--	lerc_ (~quassel@161.65.216.115) has quit (Read error: Connection reset by peer)
+2019-11-14 16:15:34	-->	lerc (~quassel@161.65.216.115) has joined #godotengine-devel
+2019-11-14 16:16:09	-->	ignaloidas_ (~ignaloida@158.129.26.113) has joined #godotengine-devel
+2019-11-14 16:16:10	<--	ignaloidas (~ignaloida@158.129.26.113) has quit (Remote host closed the connection)
+2019-11-14 16:19:19	-->	Welp (uid346815@gateway/web/irccloud.com/x-mowyerhzviwopiyq) has joined #godotengine-devel
+2019-11-14 16:24:29	<--	vnen (~vnen@unaffiliated/vnen) has quit (Remote host closed the connection)
+2019-11-14 16:24:29	<--	Dmat1 (~Dmat@191.101.3.230) has quit (Remote host closed the connection)
+2019-11-14 16:24:29	<--	jahd (~jahd2602@191.101.3.230) has quit (Remote host closed the connection)
+2019-11-14 16:24:47	-->	Dmat1 (~Dmat@191.101.3.230) has joined #godotengine-devel
+2019-11-14 16:24:48	-->	jahd (~jahd2602@191.101.3.230) has joined #godotengine-devel
+2019-11-14 16:24:51	-->	vnen (~vnen@unaffiliated/vnen) has joined #godotengine-devel

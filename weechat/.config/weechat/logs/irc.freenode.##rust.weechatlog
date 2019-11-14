@@ -7538,3 +7538,512 @@
 2019-11-13 15:32:08	naiveaiguy	how did I forget
 2019-11-13 15:32:24	j`ey	naiveaiguy: happens to the best of us
 2019-11-13 15:35:32	-->	JadeJitsu68 (~JadeJitsu@213.233.88.152) has joined ##rust
+2019-11-13 15:42:46	<--	JadeJitsu (~JadeJitsu@213.233.88.152) has quit (Quit: Igloo IRC: https://iglooirc.com)
+2019-11-13 15:43:24	-->	JadeJitsu (~jadejitsu@213.233.88.152) has joined ##rust
+2019-11-13 15:43:30	the_ment	yes, the difference between --release and debug is huge
+2019-11-13 15:47:41	<--	JadeJitsu (~jadejitsu@213.233.88.152) has quit (Client Quit)
+2019-11-13 15:48:07	-->	JadeJitsu (~jadejitsu@213.233.88.152) has joined ##rust
+2019-11-13 15:48:37	-->	jenny-m (~jdm-@167.100.78.229) has joined ##rust
+2019-11-13 15:48:45	<--	JadeJitsu (~jadejitsu@213.233.88.152) has quit (Client Quit)
+2019-11-13 15:48:59	naiveaiguy	Why is it that deriving PartialOrd with a custom Ord results in different behaviour than a PartialOrd manually written to simply return Some(self.cmp(&other)), thereby deferring to Ord? Does the default derived implementation not do this for some reason?
+2019-11-13 15:49:38	naiveaiguy	The Ord docs recommend implementing PartialEq and PartialOrd yourself as the same boilerplate, becuase deriving some traits and implementing others can lead to disagreements, but I'm not sure why this is
+2019-11-13 15:50:12	j`ey	partialord can be derived without ord being implemented
+2019-11-13 15:50:17	j`ey	so it couldnt default to that
+2019-11-13 15:51:35	<--	scde (~scde@p5B2678C8.dip0.t-ipconnect.de) has quit (Ping timeout: 276 seconds)
+2019-11-13 15:53:46	<--	cart_man (~rynot@196.61.22.83) has quit (Ping timeout: 252 seconds)
+2019-11-13 15:55:18	jellie	naiveaiguy: :)
+2019-11-13 15:55:44	jellie	Rust keeps getting easier at least. Phew!
+2019-11-13 15:56:22	naiveaiguy	j`ey: Ah, ok, that does make sense. If you just derive everything you can't delegate to Ord
+2019-11-13 16:00:09	<--	meandi (~meandi@dyndsl-178-142-252-078.ewe-ip-backbone.de) has quit (Read error: Connection reset by peer)
+2019-11-13 16:03:10	-->	scain (~scain@2607:5300:60:233b::1) has joined ##rust
+2019-11-13 16:03:24	-->	_Vi (~vi@2001:470:7bd6:1000::2) has joined ##rust
+2019-11-13 16:06:15	<--	jellie (~luv_panda@unaffiliated/zipper) has quit (Quit: WeeChat 2.6)
+2019-11-13 16:10:39	<--	DeltaHeavy (~DeltaHeav@unaffiliated/deltaheavy) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2019-11-13 16:18:13	<--	_Vi (~vi@2001:470:7bd6:1000::2) has quit (Ping timeout: 245 seconds)
+2019-11-13 16:21:50	-->	harai (~harai@gateway/tor-sasl/harai) has joined ##rust
+2019-11-13 16:27:03	<--	OmniMancer (~Paul@101.100.137.239) has quit (Read error: Connection reset by peer)
+2019-11-13 16:33:04	--	irc: disconnected from server
+2019-11-13 16:33:40	-->	Syrinxos (~syrinxos@93-34-1-82.ip47.fastwebnet.it) has joined ##rust
+2019-11-13 16:33:40	--	Topic for ##rust is "Unofficial channel for the Rust programming language |  Playground https://play.rust-lang.org/ | Discord http://discord.gg/rust-lang | Forum https://users.rust-lang.org | Code of conduct: rust-lang.org/conduct.html | TL;DR: be nice and we'll get along just fine"
+2019-11-13 16:33:40	--	Topic set by Manishearth (~Manishear@wikipedia/Manishearth) on Mon, 13 May 2019 05:47:40
+2019-11-13 16:33:40	--	Channel ##rust: 619 nicks (2 ops, 0 voices, 617 normals)
+2019-11-13 16:34:00	--	Channel created on Tue, 30 Jul 2013 17:50:50
+2019-11-13 16:34:49	-->	phildawson (~phildawso@167.98.27.226) has joined ##rust
+2019-11-13 16:36:40	-->	brool (~grendel@2600:1700:7d20:ae60:2c68:fddb:7f86:c16b) has joined ##rust
+2019-11-13 16:37:06	<--	OmniMancer (~Paul@101.100.137.239) has quit (Quit: Leaving.)
+2019-11-13 16:41:49	<--	JadeJitsu68 (~JadeJitsu@213.233.88.152) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-11-13 16:44:59	-->	urbanslug (~zipper@unaffiliated/zipper) has joined ##rust
+2019-11-13 16:45:51	<--	cheakoirccloud (uid293319@gateway/web/irccloud.com/x-blllhizietiefohc) has quit (Quit: Connection closed for inactivity)
+2019-11-13 16:46:45	<--	urbanslug (~zipper@unaffiliated/zipper) has quit (Client Quit)
+2019-11-13 16:48:28	<--	r4pr0n (~r4pr0n@gateway/tor-sasl/r4pr0n) has quit (Remote host closed the connection)
+2019-11-13 16:48:51	-->	r4pr0n (~r4pr0n@gateway/tor-sasl/r4pr0n) has joined ##rust
+2019-11-13 16:50:24	<--	Tichodroma (~lutz@fsf/member/Tichodroma) has quit (Quit: leaving)
+2019-11-13 17:03:33	<--	r4pr0n (~r4pr0n@gateway/tor-sasl/r4pr0n) has quit (Remote host closed the connection)
+2019-11-13 17:04:17	-->	r4pr0n (~r4pr0n@gateway/tor-sasl/r4pr0n) has joined ##rust
+2019-11-13 17:06:46	<--	r4pr0n (~r4pr0n@gateway/tor-sasl/r4pr0n) has quit (Remote host closed the connection)
+2019-11-13 17:07:11	-->	r4pr0n (~r4pr0n@gateway/tor-sasl/r4pr0n) has joined ##rust
+2019-11-13 17:08:58	naiveaiguy	Welp, I did finish the program, learned a whole lot about Rust along the way, and I'm beginning to genuinely like it! If any of y'all have time, I would greatly appreciate a code review on this: https://codereview.stackexchange.com/questions/232333/advent-of-code-2018-day-15-naive-rust-program
+2019-11-13 17:15:25	--	irc: disconnected from server
+2019-11-13 17:16:02	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined ##rust
+2019-11-13 17:16:02	--	Topic for ##rust is "Unofficial channel for the Rust programming language |  Playground https://play.rust-lang.org/ | Discord http://discord.gg/rust-lang | Forum https://users.rust-lang.org | Code of conduct: rust-lang.org/conduct.html | TL;DR: be nice and we'll get along just fine"
+2019-11-13 17:16:02	--	Topic set by Manishearth (~Manishear@wikipedia/Manishearth) on Mon, 13 May 2019 05:47:40
+2019-11-13 17:16:02	--	Channel ##rust: 617 nicks (2 ops, 0 voices, 615 normals)
+2019-11-13 17:16:22	--	Channel created on Tue, 30 Jul 2013 17:50:50
+2019-11-13 17:17:10	-->	smvoss (~smvoss@207.191.220.92) has joined ##rust
+2019-11-13 17:17:45	smvoss	what is the best way to handle splitting a string and taking one (or the other) value every time? if I have a string that is always "x = y" as an example, and I always want the value of y
+2019-11-13 17:18:46	smvoss	the initial thing I considered is split on =, but from there I either need to iterate to y or do a collect and use the value at y
+2019-11-13 17:19:01	smvoss	but wondering if there is a better way I'm not considering
+2019-11-13 17:19:52	j`ey	evalr: "x = y".rsplit("= ").next()
+2019-11-13 17:19:55	--	Notice(evalr): Some("y")
+2019-11-13 17:20:41	naiveaiguy	evalr: Some(Some(2)).unwrap()
+2019-11-13 17:20:47	--	Notice(evalr): Some(2)
+2019-11-13 17:20:58	naiveaiguy	Huh. Bit weird but ok
+2019-11-13 17:21:05	j`ey	why weird?
+2019-11-13 17:21:30	naiveaiguy	I didn't realize unwrap worked like this, it feels like it should unwrap "all the way" so to speak, or not?
+2019-11-13 17:21:30	j`ey	it would be weirder to unwrap multiple levels
+2019-11-13 17:21:47	j`ey	what if you needed Some(2) from that?
+2019-11-13 17:21:55	naiveaiguy	But why would you?
+2019-11-13 17:22:13	smvoss	yeah, so just iter and next once to get y
+2019-11-13 17:22:15	j`ey	because a fn expected an Option
+2019-11-13 17:22:42	j`ey	and unwrap unwrapping all the way would require specialisation, and I think it's just more confusing to unwrap alll the way
+2019-11-13 17:22:45	j`ey	than to just unwrap one level
+2019-11-13 17:23:15	naiveaiguy	that's fair I suppose
+2019-11-13 17:23:40	j`ey	and for example would Option(Ok(2)) unwrap all the way?
+2019-11-13 17:23:51	j`ey	would it unwrap everything that had the method 'unwrap'?
+2019-11-13 17:23:53	naiveaiguy	j`ey: Yeah I just thought of that, that would be extremely confusing
+2019-11-13 17:24:29	naiveaiguy	What if it's like an Some(Some(Err(Some(2))) or something, that doesn't make much sense if you unwrap it all the way
+2019-11-13 17:24:50	j`ey	right, that'd panic on the Err
+2019-11-13 17:31:24	-->	toure (toure@nat/redhat/x-juckkngcrwyuaeqz) has joined ##rust
+2019-11-13 17:33:05	-->	lemonpepper24 (~lemonpepp@dhcp-v030-231.mobile.uci.edu) has joined ##rust
+2019-11-13 17:36:53	<--	ziyourenxiang (~ziyourenx@unaffiliated/ziyourenxiang) has quit (Ping timeout: 276 seconds)
+2019-11-13 17:44:10	<--	learningc (~pi@121.122.85.105) has quit (Ping timeout: 265 seconds)
+2019-11-13 17:46:42	<--	naiveaiguy (~root@110.227.217.103) has quit (Quit: WeeChat 2.6)
+2019-11-13 17:49:12	-->	scde (~scde@p5B2678C8.dip0.t-ipconnect.de) has joined ##rust
+2019-11-13 17:53:25	stephe	Any macro wizards that can help me figure out why this macros not working as intended? I would figure it should print TUPLE, EXPR, EXPR, TUPLE?  https://glot.io/snippets/fhtf90h0eh
+2019-11-14 09:34:13	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined ##rust
+2019-11-14 09:34:13	--	Topic for ##rust is "Unofficial channel for the Rust programming language |  Playground https://play.rust-lang.org/ | Discord http://discord.gg/rust-lang | Forum https://users.rust-lang.org | Code of conduct: rust-lang.org/conduct.html | TL;DR: be nice and we'll get along just fine"
+2019-11-14 09:34:13	--	Topic set by Manishearth (~Manishear@wikipedia/Manishearth) on Mon, 13 May 2019 05:47:40
+2019-11-14 09:34:13	--	Channel ##rust: 601 nicks (2 ops, 0 voices, 599 normals)
+2019-11-14 09:34:28	--	Channel created on Tue, 30 Jul 2013 17:50:50
+2019-11-14 09:34:32	<--	ravenousmoose (~ravenousm@ptr-cud5aqg5mwnp5zv7fzk.18120a2.ip6.access.telenet.be) has quit (Ping timeout: 252 seconds)
+2019-11-14 09:35:07	-->	m0rphism (~m0rphism@HSI-KBW-085-216-106-127.hsi.kabelbw.de) has joined ##rust
+2019-11-14 09:37:06	<--	gnu3ra (~gnu3ra@ip-99-203-143-169.pools.spcsdns.net) has quit (Ping timeout: 252 seconds)
+2019-11-14 09:38:16	Arnavion	bsrd: Compare the mode flags for the C open() vs the Rust File::open(). If they're not the same then make the Rust one use the equivalent using OpenOptions (though it would be interesting to know what the difference is, too)
+2019-11-14 09:42:40	-->	JadeJitsu (~JadeJitsu@213.233.88.152) has joined ##rust
+2019-11-14 09:49:12	<--	lovesegfault (~bemeurer@2600:1700:5f20:83e0:ac48:5d57:d012:e724) has quit (Quit: WeeChat 2.6)
+2019-11-14 09:51:51	-->	zipper (~luv_panda@unaffiliated/zipper) has joined ##rust
+2019-11-14 09:54:20	<--	jellie (~luv_panda@unaffiliated/zipper) has quit (Ping timeout: 252 seconds)
+2019-11-14 09:55:26	-->	Tichodroma (~lutz@fsf/member/Tichodroma) has joined ##rust
+2019-11-14 09:56:54	bsrd	Arnavion Moongoodgirl: Somehow I needed to use min. 16 bytes when reading.
+2019-11-14 09:57:14	bsrd	Thanks so much for the help
+2019-11-14 10:01:05	Moongoodgirl	Arnavion: If the file wasn't open for reading, shouldn't they be getting EBADF rather than EINVAL?
+2019-11-14 10:01:24	Moongoodgirl	bsrd: that…doesn't sound right
+2019-11-14 10:04:53	-->	grabarz (~janko@d16-206.static.icpnet.pl) has joined ##rust
+2019-11-14 10:07:29	<--	SiegeLord (~SiegeLord@c-73-158-78-36.hsd1.ca.comcast.net) has quit (Read error: Connection reset by peer)
+2019-11-14 10:08:26	<--	Tichodroma (~lutz@fsf/member/Tichodroma) has quit (Ping timeout: 240 seconds)
+2019-11-14 10:10:36	-->	Tichodroma (~lutz@fsf/member/Tichodroma) has joined ##rust
+2019-11-14 10:10:57	-->	nokdoot (~nokdoot@211.205.207.39) has joined ##rust
+2019-11-14 10:20:48	-->	ravenousmoose (~ravenousm@ptr-cud5aqg5mwnp5zv7fzk.18120a2.ip6.access.telenet.be) has joined ##rust
+2019-11-14 10:20:48	<--	ravenousmoose (~ravenousm@ptr-cud5aqg5mwnp5zv7fzk.18120a2.ip6.access.telenet.be) has quit (Client Quit)
+2019-11-14 10:21:09	-->	_Vi (~vi@2001:470:7bd6:1000::2) has joined ##rust
+2019-11-14 10:23:18	<--	bitwinery (~bitwinery@c-73-37-18-139.hsd1.wa.comcast.net) has quit (Quit: Leaving)
+2019-11-14 10:33:35	bsrd	Moongoodgirl: It's super weird, but apparently I've to use at minimum the size of as sample of the iio:device. It's an accelerometer that you can choose to sample x, y, x 16 bits vectors and 64 bits timestamp. With all vectors and timestamp the sample is 128 bits, 16 extra bits for some separation tag, thus the minimum is 16 length 8 bits array. Without timestamp the minimum array that works is 6 length 8 bit
+2019-11-14 10:33:36	bsrd	array...
+2019-11-14 10:33:57	bsrd	Also tested in C
+2019-11-14 10:35:26	<--	lineus (~lineus@dynamic-acs-24-101-206-59.zoominternet.net) has quit (Ping timeout: 276 seconds)
+2019-11-14 10:40:48	-->	gnu3ra (~gnu3ra@c-98-226-242-1.hsd1.il.comcast.net) has joined ##rust
+2019-11-14 10:40:53	<--	JadeJitsu (~JadeJitsu@213.233.88.152) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-11-14 10:41:17	<--	grabarz (~janko@d16-206.static.icpnet.pl) has quit (Ping timeout: 250 seconds)
+2019-11-14 10:49:01	-->	user9 (984d0e74@dcm-info-22.u-ga.fr) has joined ##rust
+2019-11-14 10:52:38	-->	jammm (~jamm@unaffiliated/jamm) has joined ##rust
+2019-11-14 10:53:15	<--	gnu3ra (~gnu3ra@c-98-226-242-1.hsd1.il.comcast.net) has quit (Ping timeout: 268 seconds)
+2019-11-14 10:54:17	<--	pknull (~pooky@184.103.126.184) has quit (Quit: Departing.)
+2019-11-14 10:55:11	-->	pknull (~pooky@184.103.126.184) has joined ##rust
+2019-11-14 10:55:38	<--	jamm (~jamm@unaffiliated/jamm) has quit (Ping timeout: 240 seconds)
+2019-11-14 10:58:15	-->	gnu3ra_ (~gnu3ra@c-98-226-242-1.hsd1.il.comcast.net) has joined ##rust
+2019-11-14 11:00:06	-->	epony (epony@unaffiliated/epony) has joined ##rust
+2019-11-14 11:02:43	-->	capella-da-star (~capella-d@103.68.10.14) has joined ##rust
+2019-11-14 11:03:45	-->	AbedB (~AbedBhuty@bzq-109-65-83-5.red.bezeqint.net) has joined ##rust
+2019-11-14 11:09:21	-->	Xatenev (~I@87.190.19.178) has joined ##rust
+2019-11-14 11:13:38	-->	tsaka__ (~torstein@91.64.59.123) has joined ##rust
+2019-11-14 11:16:38	Xatenev	hello
+2019-11-14 11:17:03	Xatenev	is anyone using diesel here? I get a very annoying error
+2019-11-14 11:17:10	-->	multiproc (~mark@unaffiliated/multiproc) has joined ##rust
+2019-11-14 11:17:24	Xatenev	^^^^^^^^^^ the trait `diesel::deserialize::FromSql<diesel::sql_types::Nullable<diesel::sql_types::Bool>, _>` is not implemented for `bool`
+2019-11-14 11:17:44	-->	ign0tus (~mani@p200300E71F151D00E6B318FFFE897010.dip0.t-ipconnect.de) has joined ##rust
+2019-11-14 11:17:45	Xatenev	that happens when I try to .get_result::<Game>()
+2019-11-14 11:18:23	Xatenev	the type of the column is tinyint(1)
+2019-11-14 11:18:29	Xatenev	and its not nullable.
+2019-11-14 11:18:38	Xatenev	and my struct field is a bool
+2019-11-14 11:24:29	-->	grabarz (~janko@d16-206.static.icpnet.pl) has joined ##rust
+2019-11-14 11:25:23	Xatenev	okay its fixed, I changed the type to bool and then it works - I thought BOOL was just a synonym for tinyint(1)
+2019-11-14 11:37:53	<--	naiveaiguy (~root@122.170.135.104) has quit (Quit: WeeChat 2.6)
+2019-11-14 11:40:43	-->	JadeJitsu (~JadeJitsu@213.233.88.152) has joined ##rust
+2019-11-14 11:41:33	<--	_Vi (~vi@2001:470:7bd6:1000::2) has quit (Ping timeout: 245 seconds)
+2019-11-14 11:42:02	-->	thequux (~thequux@ptr-fzs5rlfrt77gc0ldk6i.18120a2.ip6.access.telenet.be) has joined ##rust
+2019-11-14 11:43:02	<--	Tichodroma (~lutz@fsf/member/Tichodroma) has quit (Ping timeout: 276 seconds)
+2019-11-14 11:44:06	-->	DeltaHeavy (~DeltaHeav@unaffiliated/deltaheavy) has joined ##rust
+2019-11-14 11:44:28	-->	Tichodroma (~lutz@fsf/member/Tichodroma) has joined ##rust
+2019-11-14 11:44:33	<--	ign0tus (~mani@p200300E71F151D00E6B318FFFE897010.dip0.t-ipconnect.de) has quit (Ping timeout: 250 seconds)
+2019-11-14 11:53:51	<--	pknull (~pooky@184.103.126.184) has quit (Quit: Departing.)
+2019-11-14 11:54:16	-->	pknull (~pooky@184.103.126.184) has joined ##rust
+2019-11-14 12:00:16	<--	pknull (~pooky@184.103.126.184) has quit (Quit: Departing.)
+2019-11-14 12:00:47	-->	pknull (~pooky@184.103.126.184) has joined ##rust
+2019-11-14 12:03:43	<--	pknull (~pooky@184.103.126.184) has quit (Client Quit)
+2019-11-14 12:04:17	-->	pknull (~pooky@184.103.126.184) has joined ##rust
+2019-11-14 12:05:24	<--	jammm (~jamm@unaffiliated/jamm) has quit (Ping timeout: 268 seconds)
+2019-11-14 12:07:26	-->	lineus (~lineus@dynamic-acs-24-101-206-59.zoominternet.net) has joined ##rust
+2019-11-14 12:09:55	-->	naiveaiguy (~root@122.170.135.104) has joined ##rust
+2019-11-14 12:12:56	<--	grabarz (~janko@d16-206.static.icpnet.pl) has quit (Ping timeout: 265 seconds)
+2019-11-14 12:18:51	<--	JadeJitsu (~JadeJitsu@213.233.88.152) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-11-14 12:23:12	-->	ravenousmoose (~ravenousm@ptr-cud5aqg5mwnp5zv7fzk.18120a2.ip6.access.telenet.be) has joined ##rust
+2019-11-14 12:27:33	<--	ravenousmoose (~ravenousm@ptr-cud5aqg5mwnp5zv7fzk.18120a2.ip6.access.telenet.be) has quit (Ping timeout: 246 seconds)
+2019-11-14 12:29:28	-->	JadeJitsu (~JadeJitsu@213.233.88.152) has joined ##rust
+2019-11-14 12:40:15	-->	_Vi (~vi@2001:470:7bd6:1000::2) has joined ##rust
+2019-11-14 12:40:24	<--	_Vi (~vi@2001:470:7bd6:1000::2) has quit (Read error: Connection reset by peer)
+2019-11-14 12:40:43	-->	_Vi (~vi@2001:470:7bd6:1000::2) has joined ##rust
+2019-11-14 12:43:22	-->	con3 (~kvirc@154.119.40.183) has joined ##rust
+2019-11-14 12:49:51	-->	yshui (~yshui@79.173.173.4) has joined ##rust
+2019-11-14 12:50:31	yshui	Why doesn't rust automatically extend the lifetime of temporaries? It seems to have all the information needed to do so.
+2019-11-14 12:52:44	<--	capella-da-star (~capella-d@103.68.10.14) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-11-14 12:55:15	<--	con3 (~kvirc@154.119.40.183) has quit (Quit: KVIrc 5.0.0 Aria http://www.kvirc.net/)
+2019-11-14 12:56:41	j`ey	yshui: https://manishearth.github.io/blog/2017/04/13/prolonging-temporaries-in-rust/
+2019-11-14 12:58:48	yshui	j`ey: right, i was wondering why can't the compiler do this automatically
+2019-11-14 12:59:19	yshui	it has all the information needed to do so
+2019-11-14 12:59:33	<--	lauromoura_ (~lauromour@2804:7f5:f380:2739:ac5c:95a9:ea8b:74b4) has quit (Remote host closed the connection)
+2019-11-14 12:59:52	-->	lauromoura_ (~lauromour@2804:7f5:f380:2739:a14a:179e:7db4:38b0) has joined ##rust
+2019-11-14 13:01:13	<--	bluezone (uid104970@gateway/web/irccloud.com/x-gnuosptaaqigyard) has quit (Quit: Connection closed for inactivity)
+2019-11-14 13:02:37	-->	capella-da-star (~capella-d@103.68.10.14) has joined ##rust
+2019-11-14 13:03:15	<--	pupskuchen (~pupskuche@unaffiliated/pupskuchen) has quit (Ping timeout: 240 seconds)
+2019-11-14 13:03:22	<--	capella-da-star (~capella-d@103.68.10.14) has quit (Client Quit)
+2019-11-14 13:05:13	-->	daimonos (~luv_panda@unaffiliated/zipper) has joined ##rust
+2019-11-14 13:05:36	-->	Strom (strom@127-16-191-90.dyn.estpak.ee) has joined ##rust
+2019-11-14 13:06:16	<--	zipper (~luv_panda@unaffiliated/zipper) has quit (Ping timeout: 240 seconds)
+2019-11-14 13:10:56	-->	grabarz (~janko@user-5-173-249-26.play-internet.pl) has joined ##rust
+2019-11-14 13:16:24	-->	ytain (~ghfg@2607:f2c0:92e3:a700:e133:604a:3b2a:308f) has joined ##rust
+2019-11-14 13:17:24	-->	capella-da-star (~capella-d@103.68.10.14) has joined ##rust
+2019-11-14 13:20:57	<--	nokdoot (~nokdoot@211.205.207.39) has quit (Remote host closed the connection)
+2019-11-14 13:21:29	<--	pknull (~pooky@184.103.126.184) has quit (Quit: Departing.)
+2019-11-14 13:22:24	-->	pknull (~pooky@184.103.126.184) has joined ##rust
+2019-11-14 13:24:50	<--	pknull (~pooky@184.103.126.184) has quit (Client Quit)
+2019-11-14 13:25:25	-->	pknull (~pooky@184.103.126.184) has joined ##rust
+2019-11-14 13:29:04	-->	ign0tus (~mani@p549AD39E.dip0.t-ipconnect.de) has joined ##rust
+2019-11-14 13:35:12	Moongoodgirl	j`ey: initck is really cool :3
+2019-11-14 13:35:53	j`ey	Moongoodgirl: is that a real name?
+2019-11-14 13:36:00	Moongoodgirl	yshui: Probably just not implemented yet. I think there's a feature in the works.
+2019-11-14 13:36:05	Moongoodgirl	j`ey: don't think so >.>
+2019-11-14 13:39:07	<--	pknull (~pooky@184.103.126.184) has quit (Quit: Departing.)
+2019-11-14 13:39:56	-->	pknull (~pooky@184.103.126.184) has joined ##rust
+2019-11-14 13:45:42	<--	user9 (984d0e74@dcm-info-22.u-ga.fr) has quit (Remote host closed the connection)
+2019-11-14 13:47:34	-->	r4pr0n (~r4pr0n@gateway/tor-sasl/r4pr0n) has joined ##rust
+2019-11-14 13:48:17	-->	jenny-m (~jdm-@167.100.78.229) has joined ##rust
+2019-11-14 13:51:10	<--	ign0tus (~mani@p549AD39E.dip0.t-ipconnect.de) has quit (*.net *.split)
+2019-11-14 13:51:10	<--	_Vi (~vi@2001:470:7bd6:1000::2) has quit (*.net *.split)
+2019-11-14 13:51:10	<--	lineus (~lineus@dynamic-acs-24-101-206-59.zoominternet.net) has quit (*.net *.split)
+2019-11-14 13:51:10	<--	thequux (~thequux@ptr-fzs5rlfrt77gc0ldk6i.18120a2.ip6.access.telenet.be) has quit (*.net *.split)
+2019-11-14 13:51:11	<--	narispo (~narispo@2a01:e0a:2a2:1590:f087:cd0f:862a:1c99) has quit (*.net *.split)
+2019-11-14 13:51:11	<--	jriese (~jriese@192.3.139.4) has quit (*.net *.split)
+2019-11-14 13:51:11	<--	efm (~efm@vpn.tummy.com) has quit (*.net *.split)
+2019-11-14 13:51:11	<--	ziyourenxiang (~ziyourenx@unaffiliated/ziyourenxiang) has quit (*.net *.split)
+2019-11-14 13:51:11	<--	justanotheruser (~justanoth@unaffiliated/justanotheruser) has quit (*.net *.split)
+2019-11-14 13:51:12	<--	rtyler (~rtyler@jenkins/developer/rtyler) has quit (*.net *.split)
+2019-11-14 13:51:12	<--	dXP (uid404260@gateway/web/irccloud.com/x-bgbmszwqmcedwnqb) has quit (*.net *.split)
+2019-11-14 13:51:12	<--	liiwi (liiwi@idle.fi) has quit (*.net *.split)
+2019-11-14 13:51:12	<--	jacob (~jacobirc@unaffiliated/jacob) has quit (*.net *.split)
+2019-11-14 13:51:12	<--	eythian (~quassel@fsf/member/eythian) has quit (*.net *.split)
+2019-11-14 13:51:12	<--	guzzlefry (~guzzlefry@unaffiliated/guzzlefry) has quit (*.net *.split)
+2019-11-14 13:51:13	<--	XVar (~XVar@unaffiliated/xvar) has quit (*.net *.split)
+2019-11-14 13:51:13	<--	ExoUNX (~ExoUNX@unaffiliated/exounx) has quit (*.net *.split)
+2019-11-14 13:51:13	<--	johnw (~johnw@haskell/developer/johnw) has quit (*.net *.split)
+2019-11-14 13:51:13	<--	bsdbandit (~bwell@users.757.org) has quit (*.net *.split)
+2019-11-14 13:51:13	<--	zmacs (sid402551@gateway/web/irccloud.com/x-ymyddjxeswrivbyw) has quit (*.net *.split)
+2019-11-14 13:51:13	<--	heftig (heftig@archlinux/developer/heftig) has quit (*.net *.split)
+2019-11-14 13:51:13	<--	wucke13 (~wucke13@mail.wucke13.de) has quit (*.net *.split)
+2019-11-14 13:51:13	<--	gkh (~gkh@thor.kevinhill.nl) has quit (*.net *.split)
+2019-11-14 13:51:13	<--	Bonstra (~Bonstra@val.bonstra.fr.eu.org) has quit (*.net *.split)
+2019-11-14 13:51:14	<--	Remosi (~isomer@windy.lorier.net) has quit (*.net *.split)
+2019-11-14 13:51:14	<--	Fairy (~Fairy@unaffiliated/fairy) has quit (*.net *.split)
+2019-11-14 13:51:14	<--	Freeaqingme (quassel@gateway/vpn/privateinternetaccess/freeaqingme) has quit (*.net *.split)
+2019-11-14 13:51:14	<--	bwe (~bwe@unaffiliated/bwe) has quit (*.net *.split)
+2019-11-14 13:51:14	<--	kyren (~kyren@2604:4300:a:316::6) has quit (*.net *.split)
+2019-11-14 13:51:14	<--	Derriick (~Derriick@254.218.203.77.rev.sfr.net) has quit (*.net *.split)
+2019-11-14 13:51:14	<--	TheWearyGamer (jmerdich@pool-173-76-152-218.bstnma.fios.verizon.net) has quit (*.net *.split)
+2019-11-14 13:51:14	<--	tse_ (~tse@static.240.142.216.95.clients.your-server.de) has quit (*.net *.split)
+2019-11-14 13:51:15	<--	Natch (~Natch@h-112-130.A444.priv.bahnhof.se) has quit (*.net *.split)
+2019-11-14 13:51:15	<--	w1gz (~do@159.89.11.133) has quit (*.net *.split)
+2019-11-14 13:51:15	<--	tempate (~tempate@unaffiliated/tempate) has quit (*.net *.split)
+2019-11-14 13:51:15	<--	heinrich5991 (~hein5991@unaffiliated/heinrich5991) has quit (*.net *.split)
+2019-11-14 13:51:15	<--	yrp (~x@unaffiliated/yrp) has quit (*.net *.split)
+2019-11-14 13:51:15	<--	paracyst (~paracyst@unaffiliated/paracyst) has quit (*.net *.split)
+2019-11-14 13:51:15	<--	doomba (~npc@slipgate.logbook.pw) has quit (*.net *.split)
+2019-11-14 13:51:16	<--	Hedgework (HedgeMage@unaffiliated/hedgemage) has quit (*.net *.split)
+2019-11-14 13:51:16	<--	RayS (~raysl@sdf1.xen.prgmr.com) has quit (*.net *.split)
+2019-11-14 13:51:16	<--	nekron (~nekron@noordsee.de) has quit (*.net *.split)
+2019-11-14 13:51:16	<--	tumdedum (~tumdedum@unaffiliated/espiral) has quit (*.net *.split)
+2019-11-14 13:51:16	<--	stux|RC (stux@2a01:270:0:ffff:ffff:2050:0:2) has quit (*.net *.split)
+2019-11-14 13:51:16	<--	IanWizard-Cloud (sid1815@gateway/web/irccloud.com/x-xdjexgcxxttgliii) has quit (*.net *.split)
+2019-11-14 13:51:16	<--	Yamakaja (~yamakaja@vps.pub.yamakaja.me) has quit (*.net *.split)
+2019-11-14 13:51:16	<--	Lymia (lymia@magical.girl.lyrical.lymia.moe) has quit (*.net *.split)
+2019-11-14 13:51:16	<--	delusionallogic (~delusiona@176-23-98-104-cable.dk.customer.tdc.net) has quit (*.net *.split)
+2019-11-14 13:51:16	<--	spesk_ (~swatson@47.19.105.250) has quit (*.net *.split)
+2019-11-14 13:51:17	<--	bkhl (~bkhl@marsh.hcoop.net) has quit (*.net *.split)
+2019-11-14 13:51:17	<--	dormiens (~alanjcfs@192.241.174.78) has quit (*.net *.split)
+2019-11-14 13:51:17	<--	jbaublitzzz (~jbaublitz@134.209.88.39) has quit (*.net *.split)
+2019-11-14 13:51:17	<--	andi_ (~andi@unaffiliated/andi/x-9058200) has quit (*.net *.split)
+2019-11-14 13:51:17	<--	athaudia (athaudia@athaudia.com) has quit (*.net *.split)
+2019-11-14 13:51:17	<--	_jack_ (uid396411@gateway/web/irccloud.com/x-rfpyscximquwbcfa) has quit (*.net *.split)
+2019-11-14 13:51:17	<--	nerdypepper (~NerdyPepp@139.59.93.193) has quit (*.net *.split)
+2019-11-14 13:51:17	<--	tcsc (uid145321@gateway/web/irccloud.com/x-fgkkxgeqedxtkrjz) has quit (*.net *.split)
+2019-11-14 13:51:17	<--	Blub\0 (~wry@unaffiliated/blubw/x-6625061) has quit (*.net *.split)
+2019-11-14 13:51:17	<--	xxpor (~xxpor@ec2-54-191-92-16.us-west-2.compute.amazonaws.com) has quit (*.net *.split)
+2019-11-14 13:51:18	<--	northcode (~northcode@vps-29.35.101.185.stwvps.net) has quit (*.net *.split)
+2019-11-14 13:51:18	<--	poutine (~freepouti@not.affiliated.with.the.freenode.network) has quit (*.net *.split)
+2019-11-14 13:51:18	<--	Guest39455 (~trui@2001:982:feff:1:a19c:662f:dde8:6560) has quit (*.net *.split)
+2019-11-14 13:51:18	<--	Kronuz (~Kronuz@unaffiliated/kronuz) has quit (*.net *.split)
+2019-11-14 13:51:18	<--	vup (~~~~@46.101.193.235) has quit (*.net *.split)
+2019-11-14 13:51:18	<--	dbrgn (~dbrgn@v2201907172493568.quicksrv.de) has quit (*.net *.split)
+2019-11-14 13:51:18	<--	justache (justache@gateway/web/irccloud.com/x-noubklhzjomxkpxl) has quit (*.net *.split)
+2019-11-14 13:51:18	<--	mp (sid298319@gateway/web/irccloud.com/x-mwiyahcotcudbdau) has quit (*.net *.split)
+2019-11-14 13:51:18	<--	bradleymeck (sid292902@gateway/web/irccloud.com/x-tkeawdgrvfoaainp) has quit (*.net *.split)
+2019-11-14 13:51:19	<--	saintdev (sid25343@gateway/web/irccloud.com/x-fcbujynbkdpksthq) has quit (*.net *.split)
+2019-11-14 13:51:19	<--	cja (sid161498@gateway/web/irccloud.com/x-qqmgjlatlfntawyr) has quit (*.net *.split)
+2019-11-14 13:51:19	<--	Nickeeh (~quassel@bulbasaur.sjorsgielen.nl) has quit (*.net *.split)
+2019-11-14 13:51:19	<--	Naeblis (~Naeblis@unaffiliated/naeblis) has quit (*.net *.split)
+2019-11-14 13:51:19	<--	cloudhead (~cloudhead@160.230.205.35.bc.googleusercontent.com) has quit (*.net *.split)
+2019-11-14 13:51:19	<--	naftulikay (sid278111@gateway/web/irccloud.com/x-eclrmjfbsxurhkgv) has quit (*.net *.split)
+2019-11-14 13:51:20	<--	eddyb[legacy] (sid155877@gateway/web/irccloud.com/x-otgtzelwkmxuzqaf) has quit (*.net *.split)
+2019-11-14 13:51:38	--	delusionallogic_ is now known as delusionallogic
+2019-11-14 13:53:10	yshui	Moongoodgirl: oh, that would be nice
+2019-11-14 13:53:39	<--	JadeJitsu (~JadeJitsu@213.233.88.152) has quit (Ping timeout: 260 seconds)
+2019-11-14 13:53:43	--	delusionallogic is now known as 7JTAAFBF4
+2019-11-14 13:53:50	-->	ign0tus (~mani@p549AD39E.dip0.t-ipconnect.de) has joined ##rust
+2019-11-14 13:53:50	-->	_Vi (~vi@2001:470:7bd6:1000::2) has joined ##rust
+2019-11-14 13:53:50	-->	lineus (~lineus@dynamic-acs-24-101-206-59.zoominternet.net) has joined ##rust
+2019-11-14 13:53:50	-->	thequux (~thequux@ptr-fzs5rlfrt77gc0ldk6i.18120a2.ip6.access.telenet.be) has joined ##rust
+2019-11-14 13:53:50	-->	narispo (~narispo@2a01:e0a:2a2:1590:f087:cd0f:862a:1c99) has joined ##rust
+2019-11-14 13:53:50	-->	jriese (~jriese@192.3.139.4) has joined ##rust
+2019-11-14 13:53:50	-->	efm (~efm@vpn.tummy.com) has joined ##rust
+2019-11-14 13:53:50	-->	ziyourenxiang (~ziyourenx@unaffiliated/ziyourenxiang) has joined ##rust
+2019-11-14 13:53:50	-->	justanotheruser (~justanoth@unaffiliated/justanotheruser) has joined ##rust
+2019-11-14 13:53:50	-->	rtyler (~rtyler@jenkins/developer/rtyler) has joined ##rust
+2019-11-14 13:53:50	-->	gkh (~gkh@thor.kevinhill.nl) has joined ##rust
+2019-11-14 13:53:50	-->	dXP (uid404260@gateway/web/irccloud.com/x-bgbmszwqmcedwnqb) has joined ##rust
+2019-11-14 13:53:50	-->	liiwi (liiwi@idle.fi) has joined ##rust
+2019-11-14 13:53:50	-->	eythian (~quassel@fsf/member/eythian) has joined ##rust
+2019-11-14 13:53:50	-->	jacob (~jacobirc@unaffiliated/jacob) has joined ##rust
+2019-11-14 13:53:50	-->	bsdbandit (~bwell@users.757.org) has joined ##rust
+2019-11-14 13:53:50	-->	guzzlefry (~guzzlefry@unaffiliated/guzzlefry) has joined ##rust
+2019-11-14 13:53:50	-->	XVar (~XVar@unaffiliated/xvar) has joined ##rust
+2019-11-14 13:53:50	-->	ExoUNX (~ExoUNX@unaffiliated/exounx) has joined ##rust
+2019-11-14 13:53:50	-->	johnw (~johnw@haskell/developer/johnw) has joined ##rust
+2019-11-14 13:53:50	-->	zmacs (sid402551@gateway/web/irccloud.com/x-ymyddjxeswrivbyw) has joined ##rust
+2019-11-14 13:53:50	-->	heftig (heftig@archlinux/developer/heftig) has joined ##rust
+2019-11-14 13:53:50	-->	wucke13 (~wucke13@mail.wucke13.de) has joined ##rust
+2019-11-14 13:53:50	-->	Bonstra (~Bonstra@val.bonstra.fr.eu.org) has joined ##rust
+2019-11-14 13:53:50	-->	Remosi (~isomer@windy.lorier.net) has joined ##rust
+2019-11-14 13:53:50	-->	Fairy (~Fairy@unaffiliated/fairy) has joined ##rust
+2019-11-14 13:53:50	-->	Freeaqingme (quassel@gateway/vpn/privateinternetaccess/freeaqingme) has joined ##rust
+2019-11-14 13:53:50	-->	bwe (~bwe@unaffiliated/bwe) has joined ##rust
+2019-11-14 13:53:50	-->	kyren (~kyren@2604:4300:a:316::6) has joined ##rust
+2019-11-14 13:53:50	-->	Derriick (~Derriick@254.218.203.77.rev.sfr.net) has joined ##rust
+2019-11-14 13:53:50	-->	TheWearyGamer (jmerdich@pool-173-76-152-218.bstnma.fios.verizon.net) has joined ##rust
+2019-11-14 13:53:50	-->	tse_ (~tse@static.240.142.216.95.clients.your-server.de) has joined ##rust
+2019-11-14 13:53:50	-->	Natch (~Natch@h-112-130.A444.priv.bahnhof.se) has joined ##rust
+2019-11-14 13:53:50	-->	w1gz (~do@159.89.11.133) has joined ##rust
+2019-11-14 13:53:50	-->	tempate (~tempate@unaffiliated/tempate) has joined ##rust
+2019-11-14 13:53:50	-->	cja (sid161498@gateway/web/irccloud.com/x-qqmgjlatlfntawyr) has joined ##rust
+2019-11-14 13:53:50	-->	heinrich5991 (~hein5991@unaffiliated/heinrich5991) has joined ##rust
+2019-11-14 13:53:50	-->	yrp (~x@unaffiliated/yrp) has joined ##rust
+2019-11-14 13:53:50	-->	paracyst (~paracyst@unaffiliated/paracyst) has joined ##rust
+2019-11-14 13:53:50	-->	doomba (~npc@slipgate.logbook.pw) has joined ##rust
+2019-11-14 13:53:50	-->	Hedgework (HedgeMage@unaffiliated/hedgemage) has joined ##rust
+2019-11-14 13:53:50	-->	RayS (~raysl@sdf1.xen.prgmr.com) has joined ##rust
+2019-11-14 13:53:50	-->	Nickeeh (~quassel@bulbasaur.sjorsgielen.nl) has joined ##rust
+2019-11-14 13:53:50	-->	nekron (~nekron@noordsee.de) has joined ##rust
+2019-11-14 13:53:50	-->	tumdedum (~tumdedum@unaffiliated/espiral) has joined ##rust
+2019-11-14 13:53:50	-->	stux|RC (stux@2a01:270:0:ffff:ffff:2050:0:2) has joined ##rust
+2019-11-14 13:53:50	-->	IanWizard-Cloud (sid1815@gateway/web/irccloud.com/x-xdjexgcxxttgliii) has joined ##rust
+2019-11-14 13:53:50	-->	Yamakaja (~yamakaja@vps.pub.yamakaja.me) has joined ##rust
+2019-11-14 13:53:50	-->	naftulikay (sid278111@gateway/web/irccloud.com/x-eclrmjfbsxurhkgv) has joined ##rust
+2019-11-14 13:53:50	-->	Blub\0 (~wry@unaffiliated/blubw/x-6625061) has joined ##rust
+2019-11-14 13:53:50	-->	athaudia (athaudia@athaudia.com) has joined ##rust
+2019-11-14 13:53:50	-->	Lymia (lymia@magical.girl.lyrical.lymia.moe) has joined ##rust
+2019-11-14 13:53:50	-->	delusionallogic (~delusiona@176-23-98-104-cable.dk.customer.tdc.net) has joined ##rust
+2019-11-14 13:53:50	-->	spesk_ (~swatson@47.19.105.250) has joined ##rust
+2019-11-14 13:53:50	-->	bkhl (~bkhl@marsh.hcoop.net) has joined ##rust
+2019-11-14 13:53:50	-->	dormiens (~alanjcfs@192.241.174.78) has joined ##rust
+2019-11-14 13:53:50	-->	jbaublitzzz (~jbaublitz@134.209.88.39) has joined ##rust
+2019-11-14 13:53:50	-->	andi_ (~andi@unaffiliated/andi/x-9058200) has joined ##rust
+2019-11-14 13:53:50	-->	_jack_ (uid396411@gateway/web/irccloud.com/x-rfpyscximquwbcfa) has joined ##rust
+2019-11-14 13:53:50	-->	poutine (~freepouti@not.affiliated.with.the.freenode.network) has joined ##rust
+2019-11-14 13:53:50	-->	nerdypepper (~NerdyPepp@139.59.93.193) has joined ##rust
+2019-11-14 13:53:50	-->	tcsc (uid145321@gateway/web/irccloud.com/x-fgkkxgeqedxtkrjz) has joined ##rust
+2019-11-14 13:53:50	-->	xxpor (~xxpor@ec2-54-191-92-16.us-west-2.compute.amazonaws.com) has joined ##rust
+2019-11-14 13:53:50	-->	northcode (~northcode@vps-29.35.101.185.stwvps.net) has joined ##rust
+2019-11-14 13:53:50	-->	Guest39455 (~trui@2001:982:feff:1:a19c:662f:dde8:6560) has joined ##rust
+2019-11-14 13:53:50	-->	dbrgn (~dbrgn@v2201907172493568.quicksrv.de) has joined ##rust
+2019-11-14 13:53:50	-->	Kronuz (~Kronuz@unaffiliated/kronuz) has joined ##rust
+2019-11-14 13:53:50	-->	vup (~~~~@46.101.193.235) has joined ##rust
+2019-11-14 13:53:50	-->	justache (justache@gateway/web/irccloud.com/x-noubklhzjomxkpxl) has joined ##rust
+2019-11-14 13:53:50	-->	mp (sid298319@gateway/web/irccloud.com/x-mwiyahcotcudbdau) has joined ##rust
+2019-11-14 13:53:50	-->	bradleymeck (sid292902@gateway/web/irccloud.com/x-tkeawdgrvfoaainp) has joined ##rust
+2019-11-14 13:53:50	-->	saintdev (sid25343@gateway/web/irccloud.com/x-fcbujynbkdpksthq) has joined ##rust
+2019-11-14 13:53:50	-->	cloudhead (~cloudhead@160.230.205.35.bc.googleusercontent.com) has joined ##rust
+2019-11-14 13:53:50	-->	Naeblis (~Naeblis@unaffiliated/naeblis) has joined ##rust
+2019-11-14 13:53:50	-->	eddyb[legacy] (sid155877@gateway/web/irccloud.com/x-otgtzelwkmxuzqaf) has joined ##rust
+2019-11-14 13:53:59	<--	evalr (~evalr@85.25.44.176) has quit (Remote host closed the connection)
+2019-11-14 13:54:09	-->	evalr (~evalr@85.25.44.176) has joined ##rust
+2019-11-14 13:54:45	<--	efm (~efm@vpn.tummy.com) has quit (Max SendQ exceeded)
+2019-11-14 13:54:45	<--	justanotheruser (~justanoth@unaffiliated/justanotheruser) has quit (Max SendQ exceeded)
+2019-11-14 13:54:45	<--	justache (justache@gateway/web/irccloud.com/x-noubklhzjomxkpxl) has quit (Max SendQ exceeded)
+2019-11-14 13:54:45	<--	stux|RC (stux@2a01:270:0:ffff:ffff:2050:0:2) has quit (Max SendQ exceeded)
+2019-11-14 13:55:07	-->	efm (~efm@vpn.tummy.com) has joined ##rust
+2019-11-14 13:55:28	<--	pknull (~pooky@184.103.126.184) has quit (Quit: Departing.)
+2019-11-14 13:55:39	<--	not_bravo (~bravo@destiny.cat.pdx.edu) has quit (Ping timeout: 240 seconds)
+2019-11-14 13:56:00	-->	justanotheruser (~justanoth@unaffiliated/justanotheruser) has joined ##rust
+2019-11-14 13:56:16	-->	tmager (~Thunderbi@146.115.18.74) has joined ##rust
+2019-11-14 13:56:27	-->	pknull (~pooky@184.103.126.184) has joined ##rust
+2019-11-14 13:57:00	-->	stux|RC (stux@cosmo.lunarshells.com) has joined ##rust
+2019-11-14 13:58:02	-->	dodobrain_ (~dodobrain@unaffiliated/freakabcd) has joined ##rust
+2019-11-14 13:58:14	-->	m0rphism1 (~m0rphism@ufr-132-230-194-116.eduroam-nat.uni-freiburg.de) has joined ##rust
+2019-11-14 13:58:22	<--	dodobrain (~dodobrain@unaffiliated/freakabcd) has quit (Read error: Connection reset by peer)
+2019-11-14 13:58:30	-->	justache (justache@gateway/web/irccloud.com/x-giibqjyvgmlufbbn) has joined ##rust
+2019-11-14 13:59:27	<--	pknull (~pooky@184.103.126.184) has quit (Client Quit)
+2019-11-14 13:59:57	-->	pknull (~pooky@184.103.126.184) has joined ##rust
+2019-11-14 14:03:15	<--	m0rphism1 (~m0rphism@ufr-132-230-194-116.eduroam-nat.uni-freiburg.de) has quit (Ping timeout: 240 seconds)
+2019-11-14 14:04:04	j`ey	https://www.ncameron.org/blog/rust-in-2020-one-more-thing/ I really hope there's not more magic/syntax made for Result :(
+2019-11-14 14:05:41	<--	daimonos (~luv_panda@unaffiliated/zipper) has quit (Quit: WeeChat 2.6)
+2019-11-14 14:06:06	-->	jellie (~luv_panda@unaffiliated/zipper) has joined ##rust
+2019-11-14 14:10:02	<--	grabarz (~janko@user-5-173-249-26.play-internet.pl) has quit (Read error: Connection reset by peer)
+2019-11-14 14:12:32	<--	ign0tus (~mani@p549AD39E.dip0.t-ipconnect.de) has quit (Ping timeout: 276 seconds)
+2019-11-14 14:13:48	-->	grabarz (~janko@user-5-173-249-26.play-internet.pl) has joined ##rust
+2019-11-14 14:14:50	<--	capella-da-star (~capella-d@103.68.10.14) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2019-11-14 14:15:13	-->	Gustavo6046 (~Gustavo60@unaffiliated/gustavo6046) has joined ##rust
+2019-11-14 14:15:17	-->	iq (~iq@2600:100e:bf18:1090:cda6:a18f:c634:fba6) has joined ##rust
+2019-11-14 14:21:00	naiveaiguy	j`ey: Why not?
+2019-11-14 14:23:04	<--	naiveaiguy (~root@122.170.135.104) has quit (Remote host closed the connection)
+2019-11-14 14:23:51	-->	naiveaiguy (~root@122.170.135.104) has joined ##rust
+2019-11-14 14:24:56	-->	con3 (~kvirc@154.119.40.183) has joined ##rust
+2019-11-14 14:27:27	<--	naiveaiguy (~root@122.170.135.104) has left ##rust
+2019-11-14 14:27:31	-->	naiveaiguy (~root@122.170.135.104) has joined ##rust
+2019-11-14 14:27:41	naiveaiguy	Are there any logs for this channel?
+2019-11-14 14:30:26	-->	m0rphism1 (~m0rphism@ufr-132-230-194-116.eduroam-nat.uni-freiburg.de) has joined ##rust
+2019-11-14 14:34:06	-->	pupskuchen (~pupskuche@unaffiliated/pupskuchen) has joined ##rust
+2019-11-14 14:39:23	<--	airstorm (~belovent@cr-01.anx09.lju.si.anexia-it.com) has quit (Quit: airstorm)
+2019-11-14 14:42:43	-->	regakakobigman (~regakakob@c-73-174-187-176.hsd1.pa.comcast.net) has joined ##rust
+2019-11-14 14:45:59	-->	ravenousmoose (~ravenousm@ptr-cud5aqg5mwnp5zv7fzk.18120a2.ip6.access.telenet.be) has joined ##rust
+2019-11-14 14:49:03	<--	swalladge (~swalladge@unaffiliated/swalladge) has quit (Ping timeout: 265 seconds)
+2019-11-14 14:50:01	<--	m0rphism1 (~m0rphism@ufr-132-230-194-116.eduroam-nat.uni-freiburg.de) has quit (Ping timeout: 265 seconds)
+2019-11-14 14:50:18	<--	ravenousmoose (~ravenousm@ptr-cud5aqg5mwnp5zv7fzk.18120a2.ip6.access.telenet.be) has quit (Ping timeout: 245 seconds)
+2019-11-14 14:51:14	Yaniel	nothing linked in the topic at least
+2019-11-14 14:51:19	<--	hexfive (~hexfive@50.35.80.237) has quit (Quit: WeeChat 2.6)
+2019-11-14 14:51:28	j`ey	naiveaiguy: cos syntax is usually bad
+2019-11-14 14:51:37	j`ey	and the fact that Result has very little syntax is good
+2019-11-14 14:51:50	j`ey	Ok(()) is really not that bad to write, implicit Oks would be a bad thing imo
+2019-11-14 14:52:09	dutchie	Ok(()) is fine imo
+2019-11-14 14:52:33	dutchie	but Err(foo)? and .map_err(Into::into) can be a little annoying
+2019-11-14 14:53:00	j`ey	are they worth more syntax?
+2019-11-14 14:54:07	dutchie	probably not
+2019-11-14 14:54:29	dutchie	i think just an ubiquitious .err_into() method would be enough
+2019-11-14 14:54:50	Yaniel	is Err(foo)? anything but a hipster way to say return Err(foo)
+2019-11-14 14:55:05	dutchie	Yaniel: it calls Into::into
+2019-11-14 14:55:06	j`ey	? does Into::into too, I think?
+2019-11-14 14:55:13	Yaniel	ah, right
+2019-11-14 14:55:14	naiveaiguy	Yaniel: Wait a second, why is there any difference between those two things?
+2019-11-14 14:55:23	naiveaiguy	Isn't Err(foo) at the end supposed to be implcit return?
+2019-11-14 14:55:31	Yaniel	at the end yes
+2019-11-14 14:55:51	Yaniel	but ? will return it explicitly from any point in the fn
+2019-11-14 14:56:05	naiveaiguy	j`ey: I think Ok(()) should be kept because it just looks really goddamn funny to me for some reason
+2019-11-14 14:56:45	naiveaiguy	Yaniel: ah ok, isn't the standard supposed to be to just use return if you want to do it midway through the function? why would you *ever* do Err(foo)? if you can't do that with any other type?
+2019-11-14 14:56:53	Yaniel	see what dutchie said
+2019-11-14 14:58:05	Yaniel	? desugars into something like `match x { Ok(a) => a, e @ Err(_) => return e.into() }`
+2019-11-14 14:58:50	dutchie	right, so `Err(foo)?` is a short way of writing `return Err(foo).into()`
+2019-11-14 14:58:51	Yaniel	so essentially you have `return Into::into::<return_type_here>(Err(foo))`
+2019-11-14 14:59:27	naiveaiguy	Yaniel: why... would you need to convert an Err into something that's not an err?
+2019-11-14 14:59:36	j`ey	naiveaiguy: different error types
+2019-11-14 14:59:40	-->	user9 (984d0e74@dcm-info-22.u-ga.fr) has joined ##rust
+2019-11-14 14:59:42	naiveaiguy	Ohhh
+2019-11-14 14:59:51	Yaniel	or rather, different Result types
+2019-11-14 15:00:08	naiveaiguy	So not Err -> usize, but just Result<T, Q> -> Result<T, U>
+2019-11-14 15:00:10	naiveaiguy	Yeah I get it
+2019-11-14 15:00:16	Yaniel	if the Ok type is different it wouldn't typecheck even if the Err types match AFAIK
+2019-11-14 15:01:09	dutchie	I think I may even have written `Ok(foo?)` because I decided it looked nicer than `foo.map_err(Into::into)`
+2019-11-14 15:02:56	-->	Timelord (~TL@64-252-202-134.lightspeed.jcsnms.sbcglobal.net) has joined ##rust
+2019-11-14 15:04:35	-->	ign0tus (~mani@tmo-112-128.customers.d1-online.com) has joined ##rust
+2019-11-14 15:04:45	naiveaiguy	dutchie: you mean Ok(function_that_might_fail()?) that seems a little confusing
+2019-11-14 15:05:23	<--	pknull (~pooky@184.103.126.184) has quit (Quit: Departing.)
+2019-11-14 15:05:45	naiveaiguy	Does function_that_might fail return a Result<T, Q> whereas you a Result<T, U>, thus you have to convert it using ?, thus causing this weird implicit thing
+2019-11-14 15:05:52	naiveaiguy	That is actually very weird
+2019-11-14 15:06:03	-->	pknull (~pooky@184.103.126.184) has joined ##rust
+2019-11-14 15:06:21	dutchie	yeah something like that
+2019-11-14 15:06:24	naiveaiguy	That requires you to specifically recall this fact everytime you read that line, which is weird
+2019-11-14 15:06:38	naiveaiguy	I'm not sure if this problem's solved with more syntax or less
+2019-11-14 15:06:41	j`ey	but it has a '?'
+2019-11-14 15:07:19	j`ey	unless you mean recall the fact that ? does the .into()
+2019-11-14 15:07:33	Moongoodgirl	(Yaniel: that type param is in the wrong place)
+2019-11-14 15:07:51	naiveaiguy	j`ey: Yeah, that's what I mean
+2019-11-14 15:10:38	<--	nykma (~nykma@103.140.136.55) has quit (Remote host closed the connection)
+2019-11-14 15:12:53	-->	pedro4 (~pedro4@213.152.162.99) has joined ##rust
+2019-11-14 15:13:12	-->	murla (~murla@146.120.13.152) has joined ##rust
+2019-11-14 15:14:16	-->	triste (~triste@185.215.60.34) has joined ##rust
+2019-11-14 15:15:10	-->	swalladge (~swalladge@unaffiliated/swalladge) has joined ##rust
+2019-11-14 15:15:51	<--	pknull (~pooky@184.103.126.184) has quit (Quit: Departing.)
+2019-11-14 15:16:34	-->	pknull (~pooky@184.103.126.184) has joined ##rust
+2019-11-14 15:19:08	murla	Hi, I think I write ugly code while using iterators on a matrix. Should I just use simple for loops instead or I just didn't master iterators-foo enough? Sample code is here - https://play.rust-lang.org/?version=stable&mode=debug&edition=2018&gist=c9491eab879946d5da0a0d3fbe86e4dc
+2019-11-14 15:20:13	<--	osa1 (~osa1@haskell/developer/osa1) has quit (Quit: osa1)
+2019-11-14 15:22:48	<--	jenny-m (~jdm-@167.100.78.229) has quit (Quit: Leaving...)
+2019-11-14 15:23:49	<--	Tichodroma (~lutz@fsf/member/Tichodroma) has left ##rust
+2019-11-14 15:27:45	oherrala	murla: you can also try to split the code into functions, like the one inside filter_map
+2019-11-14 15:34:50	murla	oherrala, yes, it can be done
+2019-11-14 15:35:13	Lumpio-	I think this can definitely be made more conscise though
+2019-11-14 15:35:33	Lumpio-	Your match is just a "map"
+2019-11-14 15:35:37	Lumpio-	I think
+2019-11-14 15:36:28	Lumpio-	And your max and then filter could be a max_by
+2019-11-14 15:37:33	<--	Iolo (~iolo@dsl-tkubng22-58c023-38.dhcp.inet.fi) has quit (Quit: ZNC 1.6.6+deb1ubuntu0.2 - http://znc.in)
+2019-11-14 15:38:17	<--	pknull (~pooky@184.103.126.184) has quit (Quit: Departing.)
+2019-11-14 15:38:36	Lumpio-	max_by_key even
+2019-11-14 15:39:27	murla	let me see how max_by_key can be applied to find all positions of max elements
+2019-11-14 15:40:07	murla	usual position() finds the first element only, can it be used until iterator is empty somehow?
+2019-11-14 15:40:53	Lumpio-	Oh you need all the maximums..?
+2019-11-14 15:42:05	Lumpio-	Your code only returned one maximum for each though
+2019-11-14 15:42:26	Lumpio-	So I didn't notice
+2019-11-14 15:42:28	jbg	if I have MyTrait: Any and some MyImpl of that trait, what's the right way to get a &MyImpl from a Box<dyn MyTrait>? I tried `use std::any::Any; (my_box.as_ref() as &dyn Any).downcast_ref::<MyImpl>()`
+2019-11-14 15:42:31	-->	Iolo (~iolo@dsl-tkubng22-58c023-38.dhcp.inet.fi) has joined ##rust
+2019-11-14 15:42:37	Lumpio-	Looks like the data just happened to be like that
+2019-11-14 15:42:49	jbg	but the compiler complains about that being a non-primitive cast
+2019-11-14 15:43:06	jbg	(the module-level docs for std::any seem to suggest doing that cast...)
+2019-11-14 15:44:18	murla	Lumpio-, yep, the data is like that, but the code actually finds indices of all maximum elements in matrix rows
+2019-11-14 15:44:32	Lumpio-	Yes I realized
+2019-11-14 15:44:51	-->	jenny-m (~jdm-@2605:8d80:6c0:5645:9af:8cac:b741:18da) has joined ##rust
+2019-11-14 15:45:30	Lumpio-	https://play.rust-lang.org/?version=stable&mode=debug&edition=2018&gist=3be92705a7225082e592825a14836fe4 This would at least change the match to a map
+2019-11-14 15:45:44	jbg	ah, some additional googling brought me to https://stackoverflow.com/questions/33687447/how-to-get-a-reference-to-a-concrete-type-from-a-trait-object which explains the issues well
+2019-11-14 15:46:43	Lumpio-	But yeah breaking that inner part into a function might be nice even still.
+2019-11-14 15:46:52	Lumpio-	get_maximums for an iterator makes sense as a standalone function
+2019-11-14 15:47:08	Lumpio-	Oh although since you need the indexes it becomes a bit messy...
+2019-11-14 15:49:08	-->	pknull (~pooky@184.103.126.184) has joined ##rust
+2019-11-14 15:52:35	-->	JadeJitsu (~JadeJitsu@89.165.130.67) has joined ##rust
+2019-11-14 15:55:28	murla	you keep chaining stuff after max(), that's interesting, haven't seen it before. Nice trick!
+2019-11-14 15:55:58	-->	brool (~grendel@2600:1700:7d20:ae60:2c68:fddb:7f86:c16b) has joined ##rust
+2019-11-14 15:56:05	Lumpio-	It's Option::map and it does exactly what your match does
+2019-11-14 15:56:15	Lumpio-	That type of match is pretty common so there's a method for that
+2019-11-14 16:05:30	murla	I see. I think this code still isn't much readable, is it? Comparing to creating an empty hashset, then using for-for loops for filling it.
+2019-11-14 16:06:58	Lumpio-	idk the only thing that made me stop and think for a bit was the naming because of the i and j
+2019-11-14 16:07:03	jbg	murla: it's really a matter of style. some people prefer the "functional" way, others prefer a more procedural way
+2019-11-14 16:07:04	Lumpio-	Had to look for a while to see what thye meant
+2019-11-14 16:07:25	jbg	some languages really push you one way or the other, Rust doesn't really, you can pick your style
+2019-11-14 16:09:27	murla	thanks for the feedback, guys, it's much appreciated!
+2019-11-14 16:09:29	<--	webstrand (~webstrand@23.94.139.105) has left ##rust
+2019-11-14 16:10:24	murla	it this case for -> if let Some -> for is just 4 LOC (+1 for HashSet init), much shorter
+2019-11-14 16:11:32	murla	Like this, Lumpio- https://play.rust-lang.org/?version=stable&mode=debug&edition=2018&gist=8449a9a4a40badb71e0f1ae69a9d3aee
+2019-11-14 16:11:32	Lumpio-	It's a bit more than 4 LOC tbh
+2019-11-14 16:11:51	Lumpio-	If you don't put linebreaks within your method chains the enumerator thing is one line :P
+2019-11-14 16:12:03	murla	closing brackets are on each line
+2019-11-14 16:12:18	murla	haha, of course :)
+2019-11-14 16:12:38	<--	user9 (984d0e74@dcm-info-22.u-ga.fr) has quit (Remote host closed the connection)
+2019-11-14 16:13:45	<--	grabarz (~janko@user-5-173-249-26.play-internet.pl) has quit (Read error: Connection reset by peer)
+2019-11-14 16:17:36	<--	pknull (~pooky@184.103.126.184) has quit (Quit: Departing.)
+2019-11-14 16:18:11	-->	pknull (~pooky@184.103.126.184) has joined ##rust
+2019-11-14 16:18:14	<--	gnu3ra_ (~gnu3ra@c-98-226-242-1.hsd1.il.comcast.net) has quit (Ping timeout: 268 seconds)
+2019-11-14 16:18:29	-->	user9 (984d0e74@dcm-info-22.u-ga.fr) has joined ##rust
+2019-11-14 16:19:36	-->	grabarz (~janko@d16-206.static.icpnet.pl) has joined ##rust
+2019-11-14 16:25:39	-->	scain (~scain@2607:5300:60:233b::1) has joined ##rust
