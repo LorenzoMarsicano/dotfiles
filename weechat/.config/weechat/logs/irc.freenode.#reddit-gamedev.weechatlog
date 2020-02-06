@@ -2582,3 +2582,1393 @@
 2019-11-14 15:55:16	+zebbiz_pi	Guess I'll have to be the code nazi
 2019-11-14 16:06:34	-->	Uhfgood (~Uhfgood@2603:9000:b10b:c00:68a7:bc50:aeb9:8d00) has joined #reddit-gamedev
 2019-11-14 16:10:38	-->	ImQ009 (~ImQ009@unaffiliated/imq009) has joined #reddit-gamedev
+2019-11-14 17:05:27	<--	shan (~shan@unaffiliated/jasatso1301) has quit (Quit: kthxbai)
+2019-11-14 17:06:59	-->	Chevluh (~Chev@238.49.77.83.dynamic.wline.res.cust.swisscom.ch) has joined #reddit-gamedev
+2019-11-14 17:24:37	-->	macz (~macz@162.221.202.202) has joined #reddit-gamedev
+2019-11-14 17:27:50	-->	_DB (68375605@gateway/web/cgi-irc/kiwiirc.com/ip.104.55.86.5) has joined #reddit-gamedev
+2019-11-15 09:16:18	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-11-15 09:16:18	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-11-15 09:16:18	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-11-15 09:16:18	--	Channel #reddit-gamedev: 59 nicks (0 ops, 15 voices, 44 normals)
+2019-11-15 09:16:22	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-11-15 09:17:23	<--	aeth (~Michael@wesnoth/umc-dev/developer/aethaeryn) has quit (Ping timeout: 245 seconds)
+2019-11-15 09:19:33	-->	aeth (~Michael@wesnoth/umc-dev/developer/aethaeryn) has joined #reddit-gamedev
+2019-11-15 09:38:07	-->	Coldblackice (c@gateway/vpn/privateinternetaccess/coldblackice) has joined #reddit-gamedev
+2019-11-15 10:31:09	-->	Cahaan (~Cahaan@109.129.13.76) has joined #reddit-gamedev
+2019-11-15 10:31:09	--	Mode #reddit-gamedev [+v Cahaan] by ChanServ
+2019-11-15 10:50:14	<--	bomb (~bomb@gateway/tor-sasl/bomb) has quit (Quit: ...)
+2019-11-15 11:00:41	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #reddit-gamedev
+2019-11-15 11:25:02	+DrAwesomeClaws	i bought a japanese saw
+2019-11-15 11:25:06	+DrAwesomeClaws	im basically a samuari
+2019-11-15 11:27:24	+carefish	at the very least a japanese carpenter in the making
+2019-11-15 11:27:55	+DrAwesomeClaws	just seems like a nice, versatile saw with decent steel for not too much money
+2019-11-15 11:28:09	+carefish	oh yeah, they can be handy
+2019-11-15 11:28:33	+carefish	though i think the only time i used one of them was with joint making
+2019-11-15 11:28:37	+DrAwesomeClaws	i built a pi 4 setup with retropi for my nephews for christmas.  Gotta make a cool looking case for it
+2019-11-15 11:28:44	+carefish	simple miter joints and such
+2019-11-15 11:29:51	+zebbiz_pi	DrAwesomeClaws: oics
+2019-11-15 11:29:53	+zebbiz_pi	pics
+2019-11-15 11:29:54	+carefish	though also some of the more complicated ones, i kinda liked making those joints... and the feel when its all flush
+2019-11-15 11:30:13	<--	Motig (~Motig@unaffiliated/motig) has quit (Remote host closed the connection)
+2019-11-15 11:30:26	+zebbiz_pi	pics of the saw
+2019-11-15 11:37:40	+DrAwesomeClaws	https://www.amazon.com/gp/product/B001Y4ZUJW/
+2019-11-15 11:38:02	+zebbiz_pi	Ah, one of those
+2019-11-15 11:59:48	+Jonas___	double-edged razorsaw
+2019-11-15 12:00:02	+Jonas___	seems like a good DPS upgrade, but probably a level requirement of at least like..7
+2019-11-15 12:01:18	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Quit: Leaving)
+2019-11-15 14:34:50	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-11-15 14:34:50	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-11-15 14:34:50	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-11-15 14:34:50	--	Channel #reddit-gamedev: 59 nicks (0 ops, 16 voices, 43 normals)
+2019-11-15 14:34:55	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-11-15 14:43:06	<--	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has quit (Ping timeout: 265 seconds)
+2019-11-15 14:46:14	+Jattenalle	DrAwesomeClaws, pics of case build progress when you get to it :)
+2019-11-15 14:46:55	+DrAwesomeClaws	will do.  It'll probably just be a simple mdf thing.  But i might do a 2D array of programmable LEDs on it if i have time
+2019-11-15 15:11:24	+Jonas___	I feel like a razorsaw is wasted on MDF, such a fancy blade for such weak timber
+2019-11-15 15:12:41	+DrAwesomeClaws	mdf isn't fancy, but its cheap, stiff, and easily worked
+2019-11-15 15:13:27	+DrAwesomeClaws	and its nice and heavy
+2019-11-15 15:13:49	+DrAwesomeClaws	but i wanted a decent saw for future projects as well
+2019-11-15 15:14:04	+DrAwesomeClaws	where i'll be using really exotic stuff like birch plywood
+2019-11-15 15:17:30	+Jonas___	plywood!
+2019-11-15 15:17:34	+Jonas___	now that's the good stuff
+2019-11-15 15:20:48	 *	deniska looks at the channel name
+2019-11-15 15:20:56	deniska	are we discussing literal *board* games? :P
+2019-11-15 15:21:07	+DrAwesomeClaws	this is #japenese-woodworking-and-hiking
+2019-11-15 15:27:37	+Jattenalle	food is also on-topic
+2019-11-15 15:42:56	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #reddit-gamedev
+2019-11-15 15:52:21	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #reddit-gamedev
+2019-11-15 16:05:26	-->	Uhfgood (~Uhfgood@2603:9000:b10b:c00:8086:231d:da8c:e16b) has joined #reddit-gamedev
+2019-11-15 16:08:33	<--	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has quit (Quit: WeeChat 1.9.1)
+2019-11-15 16:22:37	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Quit: Leaving)
+2019-11-15 16:23:13	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #reddit-gamedev
+2019-11-15 16:30:57	-->	bomb (~bomb@gateway/tor-sasl/bomb) has joined #reddit-gamedev
+2019-11-15 16:30:57	--	Mode #reddit-gamedev [+v bomb] by ChanServ
+2019-11-15 16:35:24	-->	ImQ009 (~ImQ009@unaffiliated/imq009) has joined #reddit-gamedev
+2019-11-15 16:35:59	+Jonas___	god, AWS really is a nice platform
+2019-11-15 16:36:05	-->	turt2live (travist2li@gateway/shell/matrix.org/x-elmrpklvatlndotj) has joined #reddit-gamedev
+2019-11-15 16:36:05	-->	planetis[m] (planetisma@gateway/shell/matrix.org/x-rdvyiufvssdfnrmr) has joined #reddit-gamedev
+2019-11-15 16:36:19	+Jonas___	it cradles me in its warm, cloudy bosom
+2019-11-15 16:38:09	+bomb	speaking of AWS
+2019-11-15 16:38:19	+bomb	did you notice that elsie isn't around for a week
+2019-11-15 16:47:14	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Quit: Leaving)
+2019-11-15 17:06:51	-->	macz (~macz@162.221.202.202) has joined #reddit-gamedev
+2019-11-15 17:15:14	-->	enrio (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-11-15 17:39:17	-->	Chevluh (~Chev@238.49.77.83.dynamic.wline.res.cust.swisscom.ch) has joined #reddit-gamedev
+2019-11-15 17:41:51	<--	macz (~macz@162.221.202.202) has quit (Read error: Connection reset by peer)
+2019-11-15 17:42:54	-->	macz (~macz@162.221.202.202) has joined #reddit-gamedev
+2019-11-18 09:27:23	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-11-18 09:27:23	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-11-18 09:27:23	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-11-18 09:27:23	--	Channel #reddit-gamedev: 66 nicks (0 ops, 17 voices, 49 normals)
+2019-11-18 09:27:27	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-11-18 10:21:48	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #reddit-gamedev
+2019-11-18 10:56:46	+Jonas___	deniska, what are you doing matt?!
+2019-11-18 10:56:58	+Jonas___	you are meddling with powers beyond man's comprehension
+2019-11-18 10:56:59	+zebbiz_pi	yuken: Oh, I saw that game a few years ago. He has come quite far
+2019-11-18 10:57:26	+Jonas___	teapots were never meant to act in this manner
+2019-11-18 11:13:47	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #reddit-gamedev
+2019-11-18 12:04:07	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Quit: Leaving)
+2019-11-18 13:27:48	<--	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has quit (Ping timeout: 245 seconds)
+2019-11-18 13:35:48	+zebbiz_pi	Jonas___: Listening to a song from 1984. Even back then they said that Expressen and Aftonbladet are the same
+2019-11-18 13:36:05	+zebbiz_pi	https://open.spotify.com/track/1HHTLGNshtMW0rKr366PLg?si=Rxpk7roMQfeC6AGK1nSoXQ
+2019-11-18 13:36:59	+Jonas___	I remember looking at the newspaper headliner pages outside konsum when I was around 10-12, thinking to myself "they are exaggerating wildly to make me buy, how dishonest"
+2019-11-18 13:37:34	+Jonas___	and since then my opinion of them have been about the same as that of something I'd wipe off my shoe with a disgusted face
+2019-11-18 13:38:16	+Jonas___	they have been garbage for as long as I remember, I guess is what I'm saying
+2019-11-18 13:38:47	+zebbiz_pi	>when I was around 10-12
+2019-11-18 13:38:57	+zebbiz_pi	Didn't know they existed back then
+2019-11-18 13:40:18	-->	Coldblackice (c@gateway/vpn/privateinternetaccess/coldblackice) has joined #reddit-gamedev
+2019-11-18 13:41:24	+zebbiz_pi	newspapers, that is
+2019-11-18 13:42:48	<--	Coldblackice_ (c@gateway/vpn/privateinternetaccess/coldblackice) has quit (Ping timeout: 245 seconds)
+2019-11-18 13:47:33	+zebbiz_pi	Jonas___: I'm saying you're old. Acknowledge my insult, damnit!
+2019-11-18 13:54:35	+Jonas___	zebbiz_pi, sorry, I was at work doing work things and you made my IRC chat while the boss was looking over my shoulder
+2019-11-18 13:54:48	+Jonas___	I'm not saying it's your fault but when I get fired I'm coming to hunt you down
+2019-11-18 13:54:49	+zebbiz_pi	sorry
+2019-11-18 13:56:57	-->	Coldblackice_ (c@gateway/vpn/privateinternetaccess/coldblackice) has joined #reddit-gamedev
+2019-11-18 13:57:16	<--	Coldblackice (c@gateway/vpn/privateinternetaccess/coldblackice) has quit (Read error: Connection reset by peer)
+2019-11-18 14:21:06	+zebbiz_pi	You do realize that hunting me down requires you to come back to sweden, right?
+2019-11-18 14:21:11	+zebbiz_pi	Cold weather
+2019-11-18 14:21:13	+zebbiz_pi	Slask
+2019-11-18 14:21:18	+zebbiz_pi	rain
+2019-11-18 14:21:31	+DrAwesomeClaws	good hiking pants made in sweden though
+2019-11-18 14:21:45	+zebbiz_pi	DrAwesomeClaws: Fjällräven?
+2019-11-18 14:21:47	+DrAwesomeClaws	yeah
+2019-11-18 14:21:58	+DrAwesomeClaws	specifically the keb series
+2019-11-18 14:23:57	+zebbiz_pi	Founded in my home town :)
+2019-11-18 14:29:15	+DrAwesomeClaws	nice
+2019-11-18 14:46:51	-->	Coldblackice (c@gateway/vpn/privateinternetaccess/coldblackice) has joined #reddit-gamedev
+2019-11-18 14:48:03	<--	Coldblackice_ (c@gateway/vpn/privateinternetaccess/coldblackice) has quit (Ping timeout: 240 seconds)
+2019-11-18 15:05:51	<--	djinni (~djinni@static.38.6.217.95.clients.your-server.de) has quit (Ping timeout: 265 seconds)
+2019-11-18 15:07:04	-->	djinni (~djinni@static.38.6.217.95.clients.your-server.de) has joined #reddit-gamedev
+2019-11-18 15:21:57	+Jonas___	zebbiz_pi, you make a good case for just getting a job selling sodas down on the beach
+2019-11-18 15:33:28	+zebbiz_pi	Sodas
+2019-11-18 15:33:30	+zebbiz_pi	not beer
+2019-11-18 15:33:32	+zebbiz_pi	dude
+2019-11-18 15:35:13	+zebbiz_pi	Jonas___: Did I say that I found a Nokia 3210?
+2019-11-18 15:35:21	+zebbiz_pi	A new battery is on its way :3
+2019-11-18 15:44:42	+Jonas___	retro AF
+2019-11-18 15:47:47	+zebbiz_pi	I said that I wouldn't review any commits today
+2019-11-18 15:47:57	+zebbiz_pi	to get work done on another task
+2019-11-18 15:48:10	+zebbiz_pi	So many commits are getting merged today
+2019-11-18 15:48:31	+zebbiz_pi	My coworkers are too lenient with their reviews :(
+2019-11-18 16:09:06	+shan	does anyone have a fedora machine running 3.8
+2019-11-18 16:09:13	+shan	*python
+2019-11-18 16:16:45	-->	ImQ009 (~ImQ009@unaffiliated/imq009) has joined #reddit-gamedev
+2019-11-18 16:35:50	+bomb	no, but I wouldn't use 3.8 yet
+2019-11-18 16:36:06	+bomb	very few libraries support it
+2019-11-18 16:56:21	+bomb	aeth: use C++
+2019-11-18 16:56:50	<--	bomb (~bomb@gateway/tor-sasl/bomb) has quit (Quit: ...)
+2019-11-18 16:58:16	-->	macz (~macz@162.221.202.202) has joined #reddit-gamedev
+2019-11-18 17:14:04	-->	Chevluh (~Chev@238.49.77.83.dynamic.wline.res.cust.swisscom.ch) has joined #reddit-gamedev
+2019-11-18 17:44:39	-->	zhov (~zhov@static-host-74-221-181-6.epbinternet.com) has joined #reddit-gamedev
+2019-11-18 17:44:39	--	Mode #reddit-gamedev [+v zhov] by ChanServ
+2019-11-18 17:46:08	+zebbiz_pi	zhov: You're a regular again, eh?
+2019-11-18 17:46:18	+zhov	doing regular gamedev so yes!
+2019-11-18 17:46:25	+zebbiz_pi	nice
+2019-11-19 12:58:41	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-11-19 12:58:41	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-11-19 12:58:41	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-11-19 12:58:41	--	Channel #reddit-gamedev: 68 nicks (0 ops, 15 voices, 53 normals)
+2019-11-19 12:58:44	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-11-19 12:59:02	+carefish	i use gyazo gif recording for that deniska
+2019-11-19 12:59:10	+carefish	gives me a webm or mp4 link
+2019-11-19 12:59:18	+carefish	iirc the free version is 30 seconds or something
+2019-11-19 12:59:40	+carefish	it's not ideal, but for showing quick things its awesome
+2019-11-19 13:00:31	+carefish	also cause handy shortcut: ctrl-shift-g
+2019-11-19 13:00:36	deniska	too late, installing obs in places I'm not supposed to
+2019-11-19 13:10:34	+carefish	pfah
+2019-11-19 13:10:39	+carefish	hipster with your obs
+2019-11-19 13:11:20	+bomb	carefish: "users don't need to install .net core" no shit?
+2019-11-19 13:11:30	+bomb	if you're making fun of me now I won't forgive you ever
+2019-11-19 13:12:22	+carefish	nope
+2019-11-19 13:12:41	+carefish	you can even then tell it to strip parts you're sure you don't use to make it even smaller
+2019-11-19 13:13:25	deniska	Users don't have to install anything if you install it for them *taps head*
+2019-11-19 13:19:10	+carefish	users don't have to install anything if you don't make anything *taps head*
+2019-11-19 13:25:04	deniska	windows decided to just ignore me clicking on obs start menu item
+2019-11-19 13:25:14	deniska	(inb4 3 obs instances appear 20 minutes later)
+2019-11-19 13:33:30	deniska	https://gfycat.com/ru/niceacademicafricangoldencat I totally wasn't slacking off from my actual work to make some movable handles
+2019-11-19 13:34:20	+carefish	tbh those seem pretty useful to me
+2019-11-19 13:35:27	deniska	much more useful than whatever I would be doing otherwise actually (which is watching youtube (because the day is slow anyway))
+2019-11-19 13:37:43	-->	enrio (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-11-19 13:50:24	<--	bomb (~bomb@gateway/tor-sasl/bomb) has quit (Quit: ...)
+2019-11-19 14:10:22	-->	shan (~shan@unaffiliated/jasatso1301) has joined #reddit-gamedev
+2019-11-19 14:10:22	--	Mode #reddit-gamedev [+v shan] by ChanServ
+2019-11-19 14:15:52	<--	shan (~shan@unaffiliated/jasatso1301) has quit (Quit: kthxbai)
+2019-11-19 14:18:10	-->	shan (~shan@unaffiliated/jasatso1301) has joined #reddit-gamedev
+2019-11-19 14:18:10	--	Mode #reddit-gamedev [+v shan] by ChanServ
+2019-11-19 14:56:03	-->	arduiko (~arduiko@31-34-32-194.abo.bbox.fr) has joined #reddit-gamedev
+2019-11-19 15:27:52	<--	Snoras (~Snoras@gateway/tor-sasl/snoras) has quit (Ping timeout: 260 seconds)
+2019-11-19 15:28:01	-->	Snoras_ (~Snoras@gateway/tor-sasl/snoras) has joined #reddit-gamedev
+2019-11-19 15:28:26	--	Snoras_ is now known as Snoras
+2019-11-19 15:36:00	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #reddit-gamedev
+2019-11-19 15:36:39	-->	macz (~macz@67.231.29.194) has joined #reddit-gamedev
+2019-11-19 15:37:56	--	WillisTF is now known as Cossid
+2019-11-19 15:39:24	-->	shan_ (~shan@unaffiliated/jasatso1301) has joined #reddit-gamedev
+2019-11-19 15:39:24	--	Mode #reddit-gamedev [+v shan_] by ChanServ
+2019-11-19 15:39:52	<--	cruelnoise (~cruelnois@glphon2233w-grc-15-74-15-47-201.dsl.bell.ca) has quit (Read error: Connection reset by peer)
+2019-11-19 15:43:58	-->	Type-21 (~Type-21@unaffiliated/type-21) has joined #reddit-gamedev
+2019-11-19 15:43:58	--	Mode #reddit-gamedev [+v Type-21] by ChanServ
+2019-11-19 15:53:49	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Quit: Leaving)
+2019-11-19 15:57:52	deniska	Hm, so, straight up assigning UVs looks fairly dorky, I need a proper perspective transform instead https://gfycat.com/ru/willingnauticalleopardseal
+2019-11-19 16:00:14	deniska	also godot doesn't normalize UVs to 0-0-1-1 and I spent way too much time looking at a murky green quad
+2019-11-19 16:09:15	 *	deniska googles "perspective transform"
+2019-11-19 16:09:18	<--	Type-21 (~Type-21@unaffiliated/type-21) has quit (Ping timeout: 252 seconds)
+2019-11-19 16:09:21	deniska	oh gawd, math, don't wanna
+2019-11-19 16:09:58	+zebbiz_pi	math, not even once
+2019-11-19 16:28:57	-->	ImQ009 (~ImQ009@unaffiliated/imq009) has joined #reddit-gamedev
+2019-11-19 16:32:44	-->	zhov (~zhov@static-host-74-221-181-6.epbinternet.com) has joined #reddit-gamedev
+2019-11-19 16:32:44	--	Mode #reddit-gamedev [+v zhov] by ChanServ
+2019-11-19 16:33:57	<--	zhov (~zhov@static-host-74-221-181-6.epbinternet.com) has quit (Client Quit)
+2019-11-19 16:34:33	-->	zhov (~zhov@static-host-74-221-181-6.epbinternet.com) has joined #reddit-gamedev
+2019-11-19 16:34:33	--	Mode #reddit-gamedev [+v zhov] by ChanServ
+2019-11-19 16:44:09	deniska	And it's not like I won't need to transfer images to a PC anyway… Unless I also make a level editor for android :\
+2019-11-19 16:45:51	<--	shan_ (~shan@unaffiliated/jasatso1301) has quit (Quit: kthxbai)
+2019-11-19 16:47:40	+zebbiz_pi	deniska: haha
+2019-11-19 16:52:34	deniska	AndroidRadiant? :D
+2019-11-19 16:54:35	+carefish	neat deniska @ gif\
+2019-11-19 16:55:16	+carefish	it would be even cooler if you could set vanishing points deniska
+2019-11-19 16:55:25	+carefish	like photoshop's perspective drawing tool thing
+2019-11-19 16:55:35	+carefish	should help with making nicer crops out of it
+2019-11-19 17:13:16	deniska	carefish: yeah, perspective tool is exactly what I want to reimplement
+2019-11-19 17:13:32	deniska	Also TIL about "fix perspective" mode in GIMP
+2019-11-19 17:13:38	deniska	my whole life was a lie :\
+2019-11-19 17:14:27	+carefish	?
+2019-11-19 17:14:30	+carefish	what's that
+2019-11-19 17:24:27	<--	arduiko (~arduiko@31-34-32-194.abo.bbox.fr) has quit
+2019-11-19 17:24:40	<--	shan (~shan@unaffiliated/jasatso1301) has quit (Quit: kthxbai)
+2019-11-19 17:34:12	<--	Cossid (Willis@66-188-244-59.dhcp.eucl.wi.charter.com) has quit
+2019-11-19 17:34:34	-->	Cossid (cossid@66-188-244-59.dhcp.eucl.wi.charter.com) has joined #reddit-gamedev
+2019-11-19 17:38:58	deniska	carefish: there're two modes in gimp's perspective tool
+2019-11-19 17:39:15	deniska	and the non-default one is much more convinient for what I've been doing :)
+2019-11-19 17:40:31	+carefish	ah
+2019-11-19 17:40:38	+carefish	nifty tool btw
+2019-11-19 17:41:20	<--	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has quit (Ping timeout: 265 seconds)
+2019-11-19 17:47:36	-->	Chevluh (~Chev@238.49.77.83.dynamic.wline.res.cust.swisscom.ch) has joined #reddit-gamedev
+2019-11-20 11:04:51	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-11-20 11:04:51	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-11-20 11:04:51	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-11-20 11:04:51	--	Channel #reddit-gamedev: 67 nicks (0 ops, 16 voices, 51 normals)
+2019-11-20 11:04:54	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-11-20 11:52:01	-->	Coldblackice (c@gateway/vpn/privateinternetaccess/coldblackice) has joined #reddit-gamedev
+2019-11-20 11:52:30	<--	Coldblackice_ (c@gateway/vpn/privateinternetaccess/coldblackice) has quit (Read error: Connection reset by peer)
+2019-11-20 12:12:09	-->	macz (~macz@d75-155-130-204.bchsia.telus.net) has joined #reddit-gamedev
+2019-11-20 12:16:26	<--	macz (~macz@d75-155-130-204.bchsia.telus.net) has quit (Ping timeout: 240 seconds)
+2019-11-20 12:41:19	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #reddit-gamedev
+2019-11-20 12:46:07	-->	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has joined #reddit-gamedev
+2019-11-20 13:14:48	+DrAwesomeClaws	just figured out how to get my mobile calendar app to scroll to the next or previous month
+2019-11-20 13:14:51	 *	DrAwesomeClaws is a power user
+2019-11-20 13:15:07	-->	arduiko (~arduiko@31-34-32-194.abo.bbox.fr) has joined #reddit-gamedev
+2019-11-20 13:53:25	+zebbiz_pi	wow
+2019-11-20 14:04:38	deniska	I recently saw a short review of an ancient electronic organizer
+2019-11-20 14:05:21	deniska	there to jump to a specific date in a calendar you should first open a calculator, enter a year, press a magic key, enter a month, press a magic key, enter a day, press a magic key and then jump back in a calendar mode :)
+2019-11-20 14:09:42	-->	Coldblackice_ (c@gateway/vpn/privateinternetaccess/coldblackice) has joined #reddit-gamedev
+2019-11-20 14:13:17	<--	Coldblackice (c@gateway/vpn/privateinternetaccess/coldblackice) has quit (Ping timeout: 240 seconds)
+2019-11-20 14:30:39	-->	muppa (muppa@elaborate.online.scam.fi) has joined #reddit-gamedev
+2019-11-20 14:32:26	<--	Quetzal2_ (c133ec7e@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.126) has quit (Ping timeout: 240 seconds)
+2019-11-20 14:33:14	<--	muppa (muppa@elaborate.online.scam.fi) has quit (Quit: leaving)
+2019-11-20 14:33:58	-->	Quetzal2_ (c133ec7e@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.126) has joined #reddit-gamedev
+2019-11-20 14:35:23	-->	macz (~macz@d75-155-130-204.bchsia.telus.net) has joined #reddit-gamedev
+2019-11-20 14:35:24	-->	muppa (muppa@elaborate.online.scam.fi) has joined #reddit-gamedev
+2019-11-20 14:39:51	<--	macz (~macz@d75-155-130-204.bchsia.telus.net) has quit (Ping timeout: 250 seconds)
+2019-11-20 14:50:34	<--	Coldblackice_ (c@gateway/vpn/privateinternetaccess/coldblackice) has quit (Ping timeout: 265 seconds)
+2019-11-20 15:01:38	-->	Coldblackice (c@gateway/vpn/privateinternetaccess/coldblackice) has joined #reddit-gamedev
+2019-11-20 15:04:17	<--	Quetzal2_ (c133ec7e@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.126) has quit (Ping timeout: 240 seconds)
+2019-11-20 15:11:39	-->	shan_ (~shan@unaffiliated/jasatso1301) has joined #reddit-gamedev
+2019-11-20 15:11:47	--	Mode #reddit-gamedev [+v shan_] by ChanServ
+2019-11-20 15:32:14	-->	enrio (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-11-20 15:36:54	<--	zhov (~zhov@static-host-74-221-181-6.epbinternet.com) has quit (Quit: My MacBook Pro has gone to sleep. ZZZzzz…)
+2019-11-20 16:21:34	-->	Quetzal2_ (c133ec7e@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.126) has joined #reddit-gamedev
+2019-11-20 16:26:03	-->	ImQ009 (~ImQ009@unaffiliated/imq009) has joined #reddit-gamedev
+2019-11-20 16:39:52	<--	Snoras (~Snoras@gateway/tor-sasl/snoras) has quit (Ping timeout: 260 seconds)
+2019-11-20 16:44:20	-->	Snoras (~Snoras@gateway/tor-sasl/snoras) has joined #reddit-gamedev
+2019-11-20 16:44:30	<--	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has quit (Quit: WeeChat 1.9.1)
+2019-11-20 17:39:54	<--	shan_ (~shan@unaffiliated/jasatso1301) has quit (Quit: kthxbai)
+2019-11-20 17:42:44	-->	macz (~macz@67.231.29.194) has joined #reddit-gamedev
+2019-11-20 17:50:02	<--	macz (~macz@67.231.29.194) has quit (Ping timeout: 240 seconds)
+2019-11-20 17:50:23	-->	Chevluh (~Chev@238.49.77.83.dynamic.wline.res.cust.swisscom.ch) has joined #reddit-gamedev
+2019-11-20 17:54:50	-->	macz (~macz@162.221.202.202) has joined #reddit-gamedev
+2019-11-20 17:57:08	<--	Quetzal2_ (c133ec7e@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.126) has quit (Remote host closed the connection)
+2019-11-22 08:59:25	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-11-22 08:59:25	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-11-22 08:59:25	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-11-22 08:59:25	--	Channel #reddit-gamedev: 65 nicks (0 ops, 16 voices, 49 normals)
+2019-11-22 08:59:28	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-11-22 09:57:13	<--	enrio (~nanoz@unaffiliated/nanoz) has quit (Read error: Connection reset by peer)
+2019-11-22 09:58:10	-->	enrio (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-11-22 10:39:49	<--	enrio (~nanoz@unaffiliated/nanoz) has quit (Read error: Connection reset by peer)
+2019-11-22 10:40:23	-->	enrio (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-11-22 10:45:34	-->	macz (~macz@d75-155-130-204.bchsia.telus.net) has joined #reddit-gamedev
+2019-11-22 10:50:20	<--	macz (~macz@d75-155-130-204.bchsia.telus.net) has quit (Ping timeout: 276 seconds)
+2019-11-22 12:20:10	+zebbiz_pi	I feel dirty
+2019-11-22 12:20:21	+zebbiz_pi	I'm looking at facebook's implementation of something
+2019-11-22 12:21:19	+carefish	link us up
+2019-11-22 12:22:01	+zebbiz_pi	https://github.com/facebook/folly/blob/master/folly/futures/Future.h
+2019-11-22 12:22:14	+zebbiz_pi	I want to know how they implement then()
+2019-11-22 12:22:24	+zebbiz_pi	https://en.cppreference.com/w/cpp/experimental/future/then
+2019-11-22 13:16:52	-->	Quetzal2_ (c133ecc7@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.199) has joined #reddit-gamedev
+2019-11-22 13:55:11	-->	macz (~macz@d75-155-130-204.bchsia.telus.net) has joined #reddit-gamedev
+2019-11-22 13:59:38	<--	macz (~macz@d75-155-130-204.bchsia.telus.net) has quit (Ping timeout: 240 seconds)
+2019-11-22 14:07:08	<--	the_al (~al@unaffiliated/the-al/x-0324965) has quit (Read error: Connection reset by peer)
+2019-11-22 14:08:38	-->	the_al (~al@unaffiliated/the-al/x-0324965) has joined #reddit-gamedev
+2019-11-22 14:10:40	-->	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has joined #reddit-gamedev
+2019-11-22 14:12:47	+bomb	so new Half Life is coming or what?
+2019-11-22 14:12:52	+bomb	but somehow not 3?
+2019-11-22 14:20:43	deniska	Now waiting for Half-Life: Lamarr
+2019-11-22 14:27:27	-->	krychu (~krychu@213.242.84.161) has joined #reddit-gamedev
+2019-11-22 14:29:58	-->	[0x00] (~0x00@pool-108-30-215-173.nycmny.fios.verizon.net) has joined #reddit-gamedev
+2019-11-22 14:50:34	<--	Quetzal2_ (c133ecc7@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.199) has quit (Remote host closed the connection)
+2019-11-22 14:59:04	-->	Quetzal2_ (c133ecc7@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.199) has joined #reddit-gamedev
+2019-11-22 16:01:42	-->	Uhfgood (~Uhfgood@2603:9000:b10b:c00:3832:f74a:48f6:8c86) has joined #reddit-gamedev
+2019-11-22 16:07:12	-->	bartwe (bartwe_@unaffiliated/bluelive) has joined #reddit-gamedev
+2019-11-22 16:07:13	--	Mode #reddit-gamedev [+v bartwe] by ChanServ
+2019-11-22 16:07:38	+bartwe	nothing like talking to a mobile gamedev to want to leave the field behind ;)
+2019-11-22 16:09:31	+bomb	mobile games suck
+2019-11-22 16:09:39	+bomb	become a desktop gamedev instead
+2019-11-22 16:11:00	+bartwe	oh i am, been fulltime for more than 7 years at this point
+2019-11-22 16:11:11	+bartwe	this irc channel actually got me started
+2019-11-22 16:14:13	+bomb	hmm 7 years ago. you started with Haxe, then
+2019-11-22 16:14:24	+bartwe	nope
+2019-11-22 16:14:28	+bartwe	c++ on starbound
+2019-11-22 16:14:36	+bomb	kek
+2019-11-22 16:37:51	<--	krychu (~krychu@213.242.84.161) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-11-22 17:39:31	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-11-22 17:39:31	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-11-22 17:39:31	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-11-22 17:39:31	--	Channel #reddit-gamedev: 70 nicks (0 ops, 17 voices, 53 normals)
+2019-11-22 17:39:34	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-11-22 17:42:30	-->	Quetzal2_ (c133ecc7@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.199) has joined #reddit-gamedev
+2019-11-22 17:47:56	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #reddit-gamedev
+2019-11-22 17:48:13	-->	Quetzal2_52 (c133eb4c@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.235.76) has joined #reddit-gamedev
+2019-11-22 17:48:53	-->	enrio (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-11-25 09:14:33	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-11-25 09:14:33	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-11-25 09:14:33	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-11-25 09:14:33	--	Channel #reddit-gamedev: 66 nicks (0 ops, 18 voices, 48 normals)
+2019-11-25 09:14:38	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-11-25 09:15:27	<--	diKoRac_ (~diKoRac@CPE788df7e7edf3-CM788df7e7edf0.cpe.net.cable.rogers.com) has quit (Ping timeout: 252 seconds)
+2019-11-25 09:17:20	-->	Coldblackice (c@gateway/vpn/privateinternetaccess/coldblackice) has joined #reddit-gamedev
+2019-11-25 09:28:37	-->	larpon (~larpon@193.106.166.119) has joined #reddit-gamedev
+2019-11-25 09:29:43	-->	macz (~macz@75.155.130.204) has joined #reddit-gamedev
+2019-11-25 09:34:02	<--	macz (~macz@75.155.130.204) has quit (Ping timeout: 240 seconds)
+2019-11-25 09:48:03	<--	Coldblackice (c@gateway/vpn/privateinternetaccess/coldblackice) has quit (Ping timeout: 250 seconds)
+2019-11-25 11:17:13	-->	Nokurn_ (~Nokurn@cpe-108-185-62-246.socal.res.rr.com) has joined #reddit-gamedev
+2019-11-25 11:18:14	<--	Nokurn (~Nokurn@cpe-108-185-62-246.socal.res.rr.com) has quit (Ping timeout: 268 seconds)
+2019-11-25 12:16:46	-->	bomb (~bomb@gateway/tor-sasl/bomb) has joined #reddit-gamedev
+2019-11-25 12:16:46	--	Mode #reddit-gamedev [+v bomb] by ChanServ
+2019-11-25 12:22:36	-->	krychu (~krychu@213.242.84.161) has joined #reddit-gamedev
+2019-11-25 12:27:08	+zebbiz_pi	I saw some 1TB ssd for like 100EUR
+2019-11-25 12:27:11	+zebbiz_pi	Amazing
+2019-11-25 12:31:12	+zebbiz_pi	DrAwesomeClaws_: https://www.youtube.com/watch?v=mmCbeBN_bw8
+2019-11-25 12:35:46	-->	vsync_ (~vsync@50-250-0-97-static.hfc.comcastbusiness.net) has joined #reddit-gamedev
+2019-11-25 12:39:32	deniska	aeth: ARMs from intel was a thing as well
+2019-11-25 12:39:47	+DrAwesomeClaws_	thanks zebbiz_pi, this is good.  Want to order the vinyl but I just spent a bunch of money this weekend
+2019-11-25 12:39:48	<--	vsync (~vsync@50-250-0-97-static.hfc.comcastbusiness.net) has quit (Ping timeout: 240 seconds)
+2019-11-25 12:39:48	+DrAwesomeClaws_	$14 shipping is tough though
+2019-11-25 12:41:11	deniska	SSDs got quite cheap especially if you don't mind aliexpress :)
+2019-11-25 12:43:02	-->	moldybits` (~moldybits@unaffiliated/moldybits) has joined #reddit-gamedev
+2019-11-25 12:47:25	-->	Serus_ (~Serus@unaffiliated/serus) has joined #reddit-gamedev
+2019-11-25 12:48:32	<--	moldybits (~moldybits@unaffiliated/moldybits) has quit (Ping timeout: 240 seconds)
+2019-11-25 12:48:33	<--	Serus (~Serus@unaffiliated/serus) has quit (Ping timeout: 240 seconds)
+2019-11-25 12:50:47	<--	krychu (~krychu@213.242.84.161) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-11-25 12:53:07	<--	bomb (~bomb@gateway/tor-sasl/bomb) has quit (Remote host closed the connection)
+2019-11-25 13:15:02	<--	larpon (~larpon@193.106.166.119) has quit (Quit: WeeChat 1.9.1)
+2019-11-25 13:16:02	<--	DrAwesomeClaws_ (DrAwesomeC@gateway/vpn/privateinternetaccess/drawesomeclaws) has quit (Ping timeout: 240 seconds)
+2019-11-25 13:19:29	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #reddit-gamedev
+2019-11-25 13:27:17	-->	Coldblackice (c@gateway/vpn/privateinternetaccess/coldblackice) has joined #reddit-gamedev
+2019-11-25 13:27:50	-->	krychu (~krychu@213.242.84.161) has joined #reddit-gamedev
+2019-11-25 13:30:23	-->	Coldblackice_ (c@gateway/vpn/privateinternetaccess/coldblackice) has joined #reddit-gamedev
+2019-11-25 13:32:01	-->	DrAwesomeClaws_ (~DrAwesome@c-75-68-71-41.hsd1.ct.comcast.net) has joined #reddit-gamedev
+2019-11-25 13:32:01	--	Mode #reddit-gamedev [+v DrAwesomeClaws_] by ChanServ
+2019-11-25 13:32:05	<--	Coldblackice (c@gateway/vpn/privateinternetaccess/coldblackice) has quit (Ping timeout: 276 seconds)
+2019-11-25 13:43:42	+Jattenalle	deniska, then your 1TB Aliexpress SSD arrives, and it's a 2MB USB thumbdrive in a 2.5" enclosure with a USB to SATA interface :P
+2019-11-25 13:43:55	+Jattenalle	see, the 1TB is the NAME of the product :3
+2019-11-25 13:44:12	+Jattenalle	the full name is: "Real SSD, 1TB capacity!"
+2019-11-25 13:44:13	+Jattenalle	:P
+2019-11-25 13:49:39	deniska	I actually bought a 720gb ssd sata from aliexpress, works fine, certainly has at least 200gb of real capacity :D
+2019-11-25 13:50:09	+Jattenalle	hehe
+2019-11-25 13:50:30	+Jattenalle	how much did it cost with shipping? pretty cheap?
+2019-11-25 14:01:48	deniska	I think it was around 70usd?
+2019-11-25 14:01:59	+Jattenalle	not bad
+2019-11-25 14:03:39	deniska	sellers often advertise free shipping because 70usd free shipping seems like a better deal than 50usd + 20usd shipping :)
+2019-11-25 14:04:59	-->	Cossid (cossid@66-188-244-59.dhcp.eucl.wi.charter.com) has joined #reddit-gamedev
+2019-11-25 14:27:36	<--	DrAwesomeClaws_ (~DrAwesome@c-75-68-71-41.hsd1.ct.comcast.net) has quit (Ping timeout: 240 seconds)
+2019-11-25 14:27:55	-->	DrAwesomeClaws_ (DrAwesomeC@gateway/vpn/privateinternetaccess/drawesomeclaws) has joined #reddit-gamedev
+2019-11-25 14:27:55	--	Mode #reddit-gamedev [+v DrAwesomeClaws_] by ChanServ
+2019-11-25 14:31:20	+Jonas___	I thought the thing to do in the US was advertise a price that is after you deduct some sort of weird rebate coupon that you have to jump through 10 different diffuse hoops to get, in the hopes that most people will forget to use it
+2019-11-25 14:35:47	+Jattenalle	Jonas___, also always pre-tax
+2019-11-25 14:36:01	+Jonas___	I forgot about that clutch trick
+2019-11-25 14:36:03	+Jattenalle	that still makes no sense to me... how prices are always without the tax, even in grocery stores
+2019-11-25 14:36:44	+Jattenalle	"It says $10 on the label" -"Yeah, that's not what it costs though."
+2019-11-25 14:36:44	+Jonas___	the thing is that tax varies by county, I believe, so they do it that way to avoid stores getting utterly fucked by being in a high-tax county next to a low-tax one
+2019-11-25 14:36:45	+Jattenalle	-_^
+2019-11-25 14:37:11	+Jattenalle	sure, but it just... it's scummy
+2019-11-25 14:37:23	+Jonas___	which is understandable from the store perspective, but it's not really convenient for the consumer
+2019-11-25 14:37:28	+Jattenalle	get to the checkout and it's just... more
+2019-11-25 14:37:38	+Jattenalle	they know people wont turn around at checkout either, social pressure
+2019-11-25 14:37:42	+Jattenalle	"We live in a society!"
+2019-11-25 14:37:42	+Jattenalle	:P
+2019-11-25 14:37:49	+Jonas___	presumably all americans know that this is how it works though, so I wouldn't call it deceptive really
+2019-11-25 14:38:15	+Jattenalle	it's still deceptive imo, just because people know doesn't change it
+2019-11-25 15:02:45	+DrAwesomeClaws_	bigger stores would also have to print a shitload of different price tags and advertisements, one for each different tax area.  Most of the time that's just states, rarely are sales taxes different below the state level
+2019-11-25 15:03:04	+DrAwesomeClaws_	but that's still be 50 different price tags you need to print for each item if you sell stuff nation wide
+2019-11-25 15:03:56	+DrAwesomeClaws_	and it decouples the price for advertising/marketing purposes
+2019-11-25 15:06:23	+Jattenalle	having county different taxes for goods is also weird
+2019-11-25 15:06:26	+Jattenalle	the US is weird.
+2019-11-25 15:06:29	+Jattenalle	i have spoken.
+2019-11-25 15:08:04	+DrAwesomeClaws_	like i said, it's almost never by county
+2019-11-25 15:09:06	+DrAwesomeClaws_	having it by state is just because the federal government doesn't have any sales tax.  They leave it to the states to decide if they want to implement one or not
+2019-11-25 15:09:10	+DrAwesomeClaws_	some don't have any sales tax
+2019-11-25 15:09:38	+Jattenalle	really?
+2019-11-25 15:09:40	+Jattenalle	TIL
+2019-11-25 15:10:32	+DrAwesomeClaws_	Alaska, Delaware, Montana, New Hampshire, and Oregon
+2019-11-25 15:10:50	+DrAwesomeClaws_	usually they have more toll roads or higher property taxes
+2019-11-25 15:12:02	+Jattenalle	that's so foreign to me.. here VAT/sales tax is just everywhere
+2019-11-25 15:12:53	+DrAwesomeClaws_	i think Alaska is the only state with no sales nor income taxes
+2019-11-25 15:12:59	+DrAwesomeClaws_	but they're rich with oil
+2019-11-25 15:13:15	+Jattenalle	also makes sense due to population sparsity, no?
+2019-11-25 15:13:25	+DrAwesomeClaws_	yeah, i imagine that plays in
+2019-11-25 15:13:38	+Jattenalle	like i can see a historic reason for it.. hard to enforce tax when you have to cover basically a continent to get to that one dude in a cabin :P
+2019-11-25 15:13:38	+DrAwesomeClaws_	each citizen actually gets a dividend from their oil reserves
+2019-11-25 15:14:01	+Jattenalle	oh, so sort of like Norway is doing it with their nationalized funds thing
+2019-11-25 15:14:11	+Jattenalle	sort of like how Norway*
+2019-11-25 15:14:20	+DrAwesomeClaws_	yeah
+2019-11-25 15:14:49	+DrAwesomeClaws_	looks like everyone in alaska gets about $1600/year from a quick google search
+2019-11-25 15:16:18	+DrAwesomeClaws_	there's actually a pizza delivery service in alaska that delivers via airplane
+2019-11-25 15:19:16	+Jattenalle	quite a few services like that, at least according to various documentaries set in alaska i've seen
+2019-11-25 15:19:33	+DrAwesomeClaws_	i want to hike the skurka loop in alaska
+2019-11-25 15:20:00	+DrAwesomeClaws_	http://andrewskurka.com/wp-content/uploads/route_map1.jpg
+2019-11-25 15:20:03	+DrAwesomeClaws_	that's a hell of a hike
+2019-11-25 15:20:17	+Jattenalle	that's like what, a 2 year hike?
+2019-11-25 15:20:34	+DrAwesomeClaws_	6 month
+2019-11-25 15:20:44	+Jattenalle	wow really? someone's in a hurry :P
+2019-11-25 15:20:59	+DrAwesomeClaws_	https://www.youtube.com/watch?v=hMf7TypZwtc  there's a cool talk he did about it for national geographic
+2019-11-25 15:21:20	+DrAwesomeClaws_	https://andrewskurka.com/adventures/alaska-yukon-expedition/ or old timey text
+2019-11-25 15:43:03	-->	ImQ009 (~ImQ009@unaffiliated/imq009) has joined #reddit-gamedev
+2019-11-25 15:46:10	<--	krychu (~krychu@213.242.84.161) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-11-25 15:56:56	--	vsync_ is now known as vsync
+2019-11-25 16:12:03	+Jonas___	DrAwesomeClaws_, how did your hike-date go?
+2019-11-25 16:21:43	+DrAwesomeClaws_	Jonas___, really well.  Just spent the weekend with her and we hiked up a mountain in freezing rain.  We originally planned a 11 mile loop, but I cut it short because of the conditions.  But she wanted to keep going
+2019-11-25 16:22:27	+Jonas___	nice, sounds like a keeper
+2019-11-25 16:22:56	+Jonas___	if she's down to climb mountains in cold rain, you know she's got spirit
+2019-11-25 16:23:03	+Jonas___	or really into you
+2019-11-25 16:23:24	+DrAwesomeClaws_	yeah, i think she is.  We're trying to slow things down but they're progressing quickly
+2019-11-25 16:27:32	+carefish	we ran out of ipv4 today
+2019-11-25 16:27:37	+carefish	https://twitter.com/ripencc/status/1198977232452145152
+2019-11-25 16:38:47	+DrAwesomeClaws_	snow tires are so awesome
+2019-11-25 16:41:52	--	moldybits` is now known as moldybits
+2019-11-25 16:56:23	-->	macz (~macz@d75-155-130-204.bchsia.telus.net) has joined #reddit-gamedev
+2019-11-25 16:56:58	<--	macz (~macz@d75-155-130-204.bchsia.telus.net) has quit (Remote host closed the connection)
+2019-11-25 16:57:31	-->	macz (~macz@67.231.29.194) has joined #reddit-gamedev
+2019-11-25 17:20:37	-->	[0x00] (~0x00@pool-108-30-215-173.nycmny.fios.verizon.net) has joined #reddit-gamedev
+2019-11-25 17:46:00	-->	bomb (~bomb@gateway/tor-sasl/bomb) has joined #reddit-gamedev
+2019-11-25 17:46:00	--	Mode #reddit-gamedev [+v bomb] by ChanServ
+2019-11-26 09:34:59	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-11-26 09:34:59	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-11-26 09:34:59	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-11-26 09:34:59	--	Channel #reddit-gamedev: 67 nicks (0 ops, 16 voices, 51 normals)
+2019-11-26 09:35:02	<--	bomb (~bomb@gateway/tor-sasl/bomb) has quit (Quit: ...)
+2019-11-26 09:35:03	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-11-26 09:41:59	<--	krychu (~krychu@213.242.84.161) has quit (Read error: Connection reset by peer)
+2019-11-26 09:50:32	-->	ragecryx (~ragecryx@62.169.207.124) has joined #reddit-gamedev
+2019-11-26 09:51:28	<--	ragecryx (~ragecryx@62.169.207.124) has quit (Remote host closed the connection)
+2019-11-26 10:03:17	-->	larpon (~larpon@193.106.166.119) has joined #reddit-gamedev
+2019-11-26 11:22:19	<--	Coldblackice_ (c@gateway/vpn/privateinternetaccess/coldblackice) has quit (Ping timeout: 265 seconds)
+2019-11-26 11:32:50	-->	krychu (~krychu@213.242.84.161) has joined #reddit-gamedev
+2019-11-26 11:41:53	-->	bomb (~bomb@gateway/tor-sasl/bomb) has joined #reddit-gamedev
+2019-11-26 11:41:53	--	Mode #reddit-gamedev [+v bomb] by ChanServ
+2019-11-26 11:42:17	<--	shan (~shan@unaffiliated/jasatso1301) has quit (Ping timeout: 240 seconds)
+2019-11-26 11:43:36	-->	shan (~shan@unaffiliated/jasatso1301) has joined #reddit-gamedev
+2019-11-26 11:43:36	--	Mode #reddit-gamedev [+v shan] by ChanServ
+2019-11-26 11:51:38	-->	Coldblackice (c@gateway/vpn/privateinternetaccess/coldblackice) has joined #reddit-gamedev
+2019-11-26 11:52:39	-->	Coldblackice_ (c@gateway/vpn/privateinternetaccess/coldblackice) has joined #reddit-gamedev
+2019-11-26 11:52:40	<--	Coldblackice (c@gateway/vpn/privateinternetaccess/coldblackice) has quit (Read error: Connection reset by peer)
+2019-11-26 11:53:53	<--	Coldblackice_ (c@gateway/vpn/privateinternetaccess/coldblackice) has quit (Read error: Connection reset by peer)
+2019-11-26 11:54:12	-->	Coldblackice_ (c@gateway/vpn/privateinternetaccess/coldblackice) has joined #reddit-gamedev
+2019-11-26 12:39:28	<--	krychu (~krychu@213.242.84.161) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-11-26 12:41:15	-->	macz (~macz@d75-155-130-204.bchsia.telus.net) has joined #reddit-gamedev
+2019-11-26 12:44:58	<--	larpon (~larpon@193.106.166.119) has quit (Ping timeout: 265 seconds)
+2019-11-26 12:45:36	<--	macz (~macz@d75-155-130-204.bchsia.telus.net) has quit (Ping timeout: 246 seconds)
+2019-11-26 13:06:43	-->	krychu (~krychu@213.242.84.161) has joined #reddit-gamedev
+2019-11-26 13:07:44	<--	krychu (~krychu@213.242.84.161) has quit (Client Quit)
+2019-11-26 13:10:50	-->	krychu (~krychu@213.242.84.161) has joined #reddit-gamedev
+2019-11-26 13:23:27	-->	DrGonzo (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has joined #reddit-gamedev
+2019-11-26 14:00:12	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #reddit-gamedev
+2019-11-26 14:10:11	-->	Cahaan (~Cahaan@109.129.13.76) has joined #reddit-gamedev
+2019-11-26 14:10:11	--	Mode #reddit-gamedev [+v Cahaan] by ChanServ
+2019-11-26 14:41:24	<--	krychu (~krychu@213.242.84.161) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-11-26 14:41:50	-->	arduiko (~arduiko@31-34-32-194.abo.bbox.fr) has joined #reddit-gamedev
+2019-11-26 14:50:18	-->	krychu (~krychu@213.242.84.161) has joined #reddit-gamedev
+2019-11-26 14:57:33	-->	Coldblackice (c@gateway/vpn/privateinternetaccess/coldblackice) has joined #reddit-gamedev
+2019-11-26 14:57:37	<--	Coldblackice_ (c@gateway/vpn/privateinternetaccess/coldblackice) has quit (Read error: Connection reset by peer)
+2019-11-26 15:00:46	<--	mmango (~mmango@unaffiliated/asdfasdffdsa) has quit (Ping timeout: 268 seconds)
+2019-11-26 17:00:17	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-11-26 17:00:17	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-11-26 17:00:17	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-11-26 17:00:17	--	Channel #reddit-gamedev: 70 nicks (0 ops, 17 voices, 53 normals)
+2019-11-26 17:00:21	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-11-26 17:04:53	<--	Coldblackice_ (c@gateway/vpn/privateinternetaccess/coldblackice) has quit (Ping timeout: 245 seconds)
+2019-11-26 17:05:19	-->	Chevluh (~Chev@238.49.77.83.dynamic.wline.res.cust.swisscom.ch) has joined #reddit-gamedev
+2019-11-26 17:05:56	-->	Coldblackice (c@gateway/vpn/privateinternetaccess/coldblackice) has joined #reddit-gamedev
+2019-11-26 17:07:14	-->	Coldblackice_ (c@gateway/vpn/privateinternetaccess/coldblackice) has joined #reddit-gamedev
+2019-11-26 17:08:36	<--	Coldblackice_ (c@gateway/vpn/privateinternetaccess/coldblackice) has quit (Max SendQ exceeded)
+2019-11-26 17:08:55	-->	Coldblackice_ (c@gateway/vpn/privateinternetaccess/coldblackice) has joined #reddit-gamedev
+2019-11-26 17:10:17	<--	Coldblackice (c@gateway/vpn/privateinternetaccess/coldblackice) has quit (Ping timeout: 240 seconds)
+2019-11-26 17:15:19	-->	Coldblackice (c@gateway/vpn/privateinternetaccess/coldblackice) has joined #reddit-gamedev
+2019-11-26 17:18:39	-->	Coldblackice|2 (c@gateway/vpn/privateinternetaccess/coldblackice) has joined #reddit-gamedev
+2019-11-26 17:18:41	<--	Coldblackice_ (c@gateway/vpn/privateinternetaccess/coldblackice) has quit (Ping timeout: 250 seconds)
+2019-11-26 17:22:36	<--	Coldblackice (c@gateway/vpn/privateinternetaccess/coldblackice) has quit (Ping timeout: 268 seconds)
+2019-11-26 17:24:38	-->	Coldblackice (c@gateway/vpn/privateinternetaccess/coldblackice) has joined #reddit-gamedev
+2019-11-26 17:24:54	<--	Coldblackice|2 (c@gateway/vpn/privateinternetaccess/coldblackice) has quit (Read error: Connection reset by peer)
+2019-11-26 17:38:22	<--	Coldblackice (c@gateway/vpn/privateinternetaccess/coldblackice) has quit (Read error: Connection reset by peer)
+2019-11-26 17:40:32	-->	Coldblackice (c@gateway/vpn/privateinternetaccess/coldblackice) has joined #reddit-gamedev
+2019-11-26 17:40:32	-->	Motig (~Motig@unaffiliated/motig) has joined #reddit-gamedev
+2019-11-26 17:43:23	<--	Coldblackice (c@gateway/vpn/privateinternetaccess/coldblackice) has quit (Max SendQ exceeded)
+2019-11-26 17:44:07	-->	Coldblackice (c@gateway/vpn/privateinternetaccess/coldblackice) has joined #reddit-gamedev
+2019-11-26 17:45:29	<--	Coldblackice (c@gateway/vpn/privateinternetaccess/coldblackice) has quit (Read error: Connection reset by peer)
+2019-11-26 17:45:34	-->	macz (~macz@67.231.29.194) has joined #reddit-gamedev
+2019-11-26 17:45:48	-->	Coldblackice (c@gateway/vpn/privateinternetaccess/coldblackice) has joined #reddit-gamedev
+2019-11-26 17:48:37	-->	Coldblackice_ (c@gateway/vpn/privateinternetaccess/coldblackice) has joined #reddit-gamedev
+2019-11-26 17:48:46	<--	Coldblackice (c@gateway/vpn/privateinternetaccess/coldblackice) has quit (Read error: Connection reset by peer)
+2019-11-26 17:49:22	<--	Coldblackice_ (c@gateway/vpn/privateinternetaccess/coldblackice) has quit (Read error: Connection reset by peer)
+2019-11-26 17:49:28	-->	Coldblackice (c@gateway/vpn/privateinternetaccess/coldblackice) has joined #reddit-gamedev
+2019-11-26 17:51:02	-->	Verra_Crude (~Username@lfbn-lil-1-89-27.w90-45.abo.wanadoo.fr) has joined #reddit-gamedev
+2019-11-27 09:05:18	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-11-27 09:05:18	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-11-27 09:05:18	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-11-27 09:05:18	--	Channel #reddit-gamedev: 66 nicks (0 ops, 14 voices, 52 normals)
+2019-11-27 09:05:22	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-11-27 09:13:11	+bomb	also, check this out:  https://www.gridsagegames.com/blog/gsg-content/uploads/2019/09/halfway_support_stats.png
+2019-11-27 09:13:41	+bomb	macOS/Linux is 6% of the sales, but causing 80% of the problems
+2019-11-27 09:18:37	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #reddit-gamedev
+2019-11-27 09:29:55	+carefish	bomb: indie studios tend to use unity, so i guess?
+2019-11-27 10:01:32	-->	shan (~shan@unaffiliated/jasatso1301) has joined #reddit-gamedev
+2019-11-27 10:01:32	--	Mode #reddit-gamedev [+v shan] by ChanServ
+2019-11-27 10:04:37	+bomb	carefish: oh boy I totally forgot about Unity
+2019-11-27 10:12:13	<--	bomb (~bomb@gateway/tor-sasl/bomb) has quit (Quit: :()
+2019-11-27 10:27:26	<--	planetis[m] (planetisma@gateway/shell/matrix.org/x-rdvyiufvssdfnrmr) has quit (Remote host closed the connection)
+2019-11-27 10:27:47	<--	turt2live (travist2li@gateway/shell/matrix.org/x-elmrpklvatlndotj) has quit (Write error: Connection reset by peer)
+2019-11-27 10:29:42	-->	Cahaan (~Cahaan@109.129.13.76) has joined #reddit-gamedev
+2019-11-27 10:29:42	--	Mode #reddit-gamedev [+v Cahaan] by ChanServ
+2019-11-27 10:51:19	deniska	Unity: never forget
+2019-11-27 11:11:19	<--	shan (~shan@unaffiliated/jasatso1301) has quit (Quit: kthxbai)
+2019-11-27 11:41:15	<--	krychu (~krychu@213.242.84.161) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-11-27 11:49:34	-->	turt2live (travist2li@gateway/shell/matrix.org/x-oerglzbghbcyfiet) has joined #reddit-gamedev
+2019-11-27 11:49:34	-->	planetis[m] (planetisma@gateway/shell/matrix.org/x-pfyuxzzrbqjaarbw) has joined #reddit-gamedev
+2019-11-27 11:55:13	-->	krychu (~krychu@213.242.84.161) has joined #reddit-gamedev
+2019-11-27 12:55:23	-->	enrio (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-11-27 12:58:17	-->	strlensize (~strlen@165.227.135.177) has joined #reddit-gamedev
+2019-11-27 12:58:44	strlensize	this place still exists
+2019-11-27 12:59:57	<--	strlensize (~strlen@165.227.135.177) has quit (Client Quit)
+2019-11-27 13:05:09	-->	irondude (~irondude@165.227.135.177) has joined #reddit-gamedev
+2019-11-27 13:52:49	<--	the_al (~al@unaffiliated/the-al/x-0324965) has quit (Ping timeout: 250 seconds)
+2019-11-27 13:58:52	-->	the_al (~al@unaffiliated/the-al/x-0324965) has joined #reddit-gamedev
+2019-11-27 14:03:01	-->	bomb (~bomb@gateway/tor-sasl/bomb) has joined #reddit-gamedev
+2019-11-27 14:03:01	--	Mode #reddit-gamedev [+v bomb] by ChanServ
+2019-11-27 14:25:23	<--	moldybits (~moldybits@unaffiliated/moldybits) has quit (Quit: WeeChat 2.4)
+2019-11-27 14:42:05	-->	arduiko (~arduiko@31-34-32-194.abo.bbox.fr) has joined #reddit-gamedev
+2019-11-27 16:05:41	<--	_DB (68375605@gateway/web/cgi-irc/kiwiirc.com/ip.104.55.86.5) has quit (Quit: Connection closed)
+2019-11-27 16:18:10	-->	_DB (68375605@gateway/web/cgi-irc/kiwiirc.com/ip.104.55.86.5) has joined #reddit-gamedev
+2019-11-27 16:24:34	-->	kcpdad (kcpdad@pool-74-101-244-20.nycmny.fios.verizon.net) has joined #reddit-gamedev
+2019-11-27 16:27:10	-->	Jonas__ (~Jonas__@unaffiliated/jonas/x-7723671) has joined #reddit-gamedev
+2019-11-27 16:27:10	--	Mode #reddit-gamedev [+v Jonas__] by ChanServ
+2019-11-27 16:30:21	<--	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has quit (Quit: WeeChat 1.9.1)
+2019-11-27 16:36:58	<--	krychu (~krychu@213.242.84.161) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-11-27 16:41:57	-->	Chevluh (~Chev@238.49.77.83.dynamic.wline.res.cust.swisscom.ch) has joined #reddit-gamedev
+2019-11-27 17:38:59	-->	macz (~macz@162.221.202.202) has joined #reddit-gamedev
+2019-11-27 17:39:20	<--	macz (~macz@162.221.202.202) has quit (Remote host closed the connection)
+2019-11-27 17:39:53	-->	macz (~macz@67.231.29.194) has joined #reddit-gamedev
+2019-11-27 17:39:54	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #reddit-gamedev
+2019-11-27 17:46:07	+zebbiz_pi	Jonas__: "Winter" here is such a disappointment...
+2019-11-29 09:13:56	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-11-29 09:13:56	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-11-29 09:13:56	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-11-29 09:13:56	--	Channel #reddit-gamedev: 68 nicks (0 ops, 15 voices, 53 normals)
+2019-11-29 09:14:00	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-11-29 09:28:13	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #reddit-gamedev
+2019-11-29 09:44:21	-->	bomb (~bomb@gateway/tor-sasl/bomb) has joined #reddit-gamedev
+2019-11-29 09:44:21	--	Mode #reddit-gamedev [+v bomb] by ChanServ
+2019-11-29 09:44:43	+bomb	goddamn talented people. I hate them...  https://www.shadertoy.com/view/WdVXWy
+2019-11-29 09:49:30	+carefish	insteead of projecting your self-hate onto them, why not get better yourself huh
+2019-11-29 09:50:22	+bomb	sure where to buy it?
+2019-11-29 09:50:27	mursu	too much work
+2019-11-29 09:50:44	+bomb	I'd grab one during Black Friday
+2019-11-29 09:51:09	+carefish	you have to self-checkout the self-hate at your nearest black friday discounter
+2019-11-29 09:51:17	<--	kcpdad (kcpdad@pool-74-101-244-20.nycmny.fios.verizon.net) has quit (Ping timeout: 240 seconds)
+2019-11-29 09:51:49	mursu	learning hard things is hard and requires lots of effort and discipline
+2019-11-29 09:51:53	mursu	:(
+2019-11-29 09:52:17	+bomb	are shader writers on demand?
+2019-11-29 09:54:11	+bomb	to word it better: is shader writing a good skill to have for plain normal gamedevs?
+2019-11-29 09:56:54	+carefish	yes
+2019-11-29 09:57:07	+carefish	there's a few performance optimizations you can do in the shader
+2019-11-29 09:57:37	+carefish	and you could make whichever artist you're working with really happy because you can help them make their stuff look even better
+2019-11-29 10:01:08	+bomb	https://paveldogreat.github.io/WebGL-Fluid-Simulation/
+2019-11-29 10:01:13	+bomb	this is witchcraft
+2019-11-29 10:01:33	+bomb	carefish: I'm all procedural
+2019-11-29 10:01:42	+carefish	that's even better
+2019-11-29 10:01:53	+carefish	that way you can make almost anything look better
+2019-11-29 10:02:37	+bomb	show me directions. I want to learn GLSL
+2019-11-29 10:03:00	+carefish	how's your maths
+2019-11-29 10:03:16	deniska	learn opengl, you'll have to learn glsl to output a triangle :D
+2019-11-29 10:03:24	+carefish	if that's not comfortable for you to use yet, go do some of those online linear algebra/trig courses
+2019-11-29 10:03:38	+carefish	then do what deniska says
+2019-11-29 10:03:39	 *	bomb <- good at math
+2019-11-29 10:04:18	+bomb	yay. I'll use that learnopengl website then
+2019-11-29 10:04:26	+carefish	that one is pretty neat starter
+2019-11-29 10:04:40	+carefish	https://open.gl/ another one
+2019-11-29 10:04:56	deniska	https://open.gl this is the best opengl introduction I saw not counting NeHe tutorials, but NeHe tutorials are, uhm, old
+2019-11-29 10:06:52	+bomb	old is good, old is reliable
+2019-11-29 10:07:03	+bomb	I want to learn pre-GL3 stuff too
+2019-11-29 10:09:47	deniska	I mean, you'll need some hairy compatibility layers to run older opengl on anything besides windows and linux
+2019-11-29 10:10:13	deniska	NeHe is targeting opengl 1.4 I think?
+2019-11-29 10:10:32	deniska	opengl2 already had shaders and such iirc
+2019-11-29 10:10:34	+bomb	eh. does 1.4 even support custom shaders?
+2019-11-29 10:10:39	deniska	I don't think so
+2019-11-29 10:10:47	+bomb	screw Nestle then
+2019-11-29 10:10:49	deniska	maybe with extensions?
+2019-11-29 10:10:52	+bomb	let's try open.gl
+2019-11-29 10:11:40	+bomb	it's weird tho. DX9 has all the fancy stuff, but its equivalent was 1.4?
+2019-11-29 10:13:37	deniska	I think dx9 kinda corresponds to gl2.0?
+2019-11-29 10:16:11	deniska	Fun fact: chinese release of dota 2 runs on opengl because through opengl it can access more modern features of a GPU than through dx9 available on winxp :)
+2019-11-29 10:16:38	+bomb	weird
+2019-11-29 10:19:01	deniska	winxp is (was?) weirdly overly popular in China
+2019-11-29 10:19:23	deniska	Even on newer machines
+2019-11-29 10:21:53	+carefish	https://codepen.io/lynnandtonic/pen/NWWmzjr
+2019-11-29 10:24:30	+bomb	maybe because winxp in a 512mb VM runs faster than non-virtualized win10
+2019-11-29 10:27:58	deniska	Installing ancient OS on modern systems for some reason doesn't provide experience better than high end machines of the era an OS was released at
+2019-11-29 10:28:43	deniska	Like if I install windows 7 on a threadripper it would feel exactly the same as windows 7 on a 2009 xeon :)
+2019-11-29 10:30:56	deniska	I ran winxp on one of my machines relatively recently (~2012 or something), the only benefit I noticed was much lower hdd footprint (that was the sole reason to use xp because I ended up with 30gb of space)
+2019-11-29 10:32:03	deniska	it's annoyingly hard to install, hard to find drivers, and nowadays hard to find working software
+2019-11-29 10:33:22	+carefish	tah tah
+2019-11-29 11:18:43	-->	Quetzal2_ (c133ec6e@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.110) has joined #reddit-gamedev
+2019-11-29 11:40:39	<--	Dwarden (Dwarden@static-84-42-238-19.net.upcbroadband.cz) has quit (Remote host closed the connection)
+2019-11-29 12:08:17	<--	Quetzal2_ (c133ec6e@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.110) has quit (Ping timeout: 240 seconds)
+2019-11-29 12:13:32	<--	bomb (~bomb@gateway/tor-sasl/bomb) has quit (Quit: ...)
+2019-11-29 12:42:59	-->	Quetzal2_ (c133ec6e@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.110) has joined #reddit-gamedev
+2019-11-29 13:31:30	-->	enrio (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-11-29 13:52:12	-->	kcpdad (kcpdad@pool-74-101-244-20.nycmny.fios.verizon.net) has joined #reddit-gamedev
+2019-11-29 13:58:57	<--	Quetzal2_ (c133ec6e@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.110) has quit (Ping timeout: 265 seconds)
+2019-11-29 14:17:14	<--	DrGonzo (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has quit (Ping timeout: 276 seconds)
+2019-11-29 14:43:06	+Jattenalle	GL 1.4 had "shaders"
+2019-11-29 14:43:16	+Jattenalle	GL 2.1 had what you'd think of as shaders though
+2019-11-29 14:43:24	+Jattenalle	ie: "modern" GLSL
+2019-11-29 15:32:18	-->	bomb (~bomb@gateway/tor-sasl/bomb) has joined #reddit-gamedev
+2019-11-29 15:32:18	--	Mode #reddit-gamedev [+v bomb] by ChanServ
+2019-11-29 15:57:31	-->	Quetzal2_ (c133ec6e@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.110) has joined #reddit-gamedev
+2019-11-29 16:30:28	-->	Chevluh (~Chev@238.49.77.83.dynamic.wline.res.cust.swisscom.ch) has joined #reddit-gamedev
+2019-11-29 17:21:12	-->	cruelnoise (~cruelnois@glphon2233w-grc-15-74-15-47-201.dsl.bell.ca) has joined #reddit-gamedev
+2019-11-29 17:32:39	-->	macz (~macz@162.221.202.202) has joined #reddit-gamedev
+2019-11-29 17:50:17	<--	Quetzal2_ (c133ec6e@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.110) has quit (Remote host closed the connection)
+2019-12-02 09:11:55	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-12-02 09:11:55	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-12-02 09:11:55	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-12-02 09:11:55	--	Channel #reddit-gamedev: 66 nicks (0 ops, 14 voices, 52 normals)
+2019-12-02 09:12:00	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-12-02 09:13:52	-->	Quetzal2_ (c133ec6b@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.107) has joined #reddit-gamedev
+2019-12-02 10:05:59	-->	endless90 (~endless90@p200300C577307600A45287FD24037508.dip0.t-ipconnect.de) has joined #reddit-gamedev
+2019-12-02 10:16:03	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #reddit-gamedev
+2019-12-02 11:10:12	-->	shan (~shan@unaffiliated/jasatso1301) has joined #reddit-gamedev
+2019-12-02 11:10:12	--	Mode #reddit-gamedev [+v shan] by ChanServ
+2019-12-02 12:19:03	<--	Quetzal2_ (c133ec6b@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.107) has quit (Ping timeout: 245 seconds)
+2019-12-02 12:55:43	-->	Quetzal2_ (c133ec6b@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.107) has joined #reddit-gamedev
+2019-12-02 13:25:19	-->	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has joined #reddit-gamedev
+2019-12-02 13:26:09	-->	Type-21 (~Type-21@unaffiliated/type-21) has joined #reddit-gamedev
+2019-12-02 13:26:09	--	Mode #reddit-gamedev [+v Type-21] by ChanServ
+2019-12-02 14:18:44	-->	enrio (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-12-02 14:24:16	<--	Type-21 (~Type-21@unaffiliated/type-21) has quit (Read error: Connection reset by peer)
+2019-12-02 14:55:36	-->	Uhfgood (~Uhfgood@2603:9000:b10b:c00:c30a:e81c:5e70:9978) has joined #reddit-gamedev
+2019-12-02 15:11:59	<--	enrio (~nanoz@unaffiliated/nanoz) has quit (Ping timeout: 268 seconds)
+2019-12-02 15:19:36	-->	enrio (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-12-02 15:38:27	--	shan is now known as shanlock_holmes
+2019-12-02 16:14:02	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #reddit-gamedev
+2019-12-02 16:29:57	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Ping timeout: 250 seconds)
+2019-12-02 16:30:52	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #reddit-gamedev
+2019-12-02 16:35:54	<--	endless90 (~endless90@p200300C577307600A45287FD24037508.dip0.t-ipconnect.de) has quit (Quit: endless90)
+2019-12-02 16:45:56	<--	DrAwesomeClaws_ (~DrAwesome@c-75-68-71-41.hsd1.ct.comcast.net) has quit (Ping timeout: 240 seconds)
+2019-12-02 16:48:04	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Quit: Leaving)
+2019-12-02 16:58:51	-->	macz (~macz@67.231.29.194) has joined #reddit-gamedev
+2019-12-02 16:59:01	-->	DrAwesomeClaws_ (DrAwesomeC@gateway/vpn/privateinternetaccess/drawesomeclaws) has joined #reddit-gamedev
+2019-12-02 16:59:02	--	Mode #reddit-gamedev [+v DrAwesomeClaws_] by ChanServ
+2019-12-02 17:25:15	-->	ImQ009 (~ImQ009@unaffiliated/imq009) has joined #reddit-gamedev
+2019-12-02 17:39:48	-->	Chevluh (~Chev@238.49.77.83.dynamic.wline.res.cust.swisscom.ch) has joined #reddit-gamedev
+2019-12-02 17:47:37	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #reddit-gamedev
+2019-12-03 09:07:31	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-12-03 09:07:31	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-12-03 09:07:31	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-12-03 09:07:31	--	Channel #reddit-gamedev: 66 nicks (0 ops, 13 voices, 53 normals)
+2019-12-03 09:07:35	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-12-03 09:12:35	-->	macz (~macz@d75-155-130-204.bchsia.telus.net) has joined #reddit-gamedev
+2019-12-03 09:16:37	<--	macz (~macz@d75-155-130-204.bchsia.telus.net) has quit (Ping timeout: 240 seconds)
+2019-12-03 09:34:31	<--	Uffgood (~Uhfgood@2603:9000:b10b:c00:c30a:e81c:5e70:9978) has quit (Remote host closed the connection)
+2019-12-03 10:15:27	-->	Cahaan (~Cahaan@109.129.13.76) has joined #reddit-gamedev
+2019-12-03 10:15:27	--	Mode #reddit-gamedev [+v Cahaan] by ChanServ
+2019-12-03 10:21:24	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #reddit-gamedev
+2019-12-03 10:22:49	-->	macz (~macz@d75-155-130-204.bchsia.telus.net) has joined #reddit-gamedev
+2019-12-03 10:24:59	<--	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has quit (Client Quit)
+2019-12-03 10:26:25	-->	bomb (~bomb@gateway/tor-sasl/bomb) has joined #reddit-gamedev
+2019-12-03 10:26:25	--	Mode #reddit-gamedev [+v bomb] by ChanServ
+2019-12-03 10:26:57	<--	macz (~macz@d75-155-130-204.bchsia.telus.net) has quit (Ping timeout: 240 seconds)
+2019-12-03 10:29:32	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #reddit-gamedev
+2019-12-03 10:47:36	-->	Quetzal2_ (c133ec6b@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.107) has joined #reddit-gamedev
+2019-12-03 11:10:13	-->	endless90 (~endless90@p200300DA372BCF006C816CC8E1322DD6.dip0.t-ipconnect.de) has joined #reddit-gamedev
+2019-12-03 12:06:53	<--	Quetzal2_ (c133ec6b@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.107) has quit (Ping timeout: 276 seconds)
+2019-12-03 13:02:50	<--	bomb (~bomb@gateway/tor-sasl/bomb) has quit (Remote host closed the connection)
+2019-12-03 13:05:06	-->	bomb (~bomb@gateway/tor-sasl/bomb) has joined #reddit-gamedev
+2019-12-03 13:05:06	--	Mode #reddit-gamedev [+v bomb] by ChanServ
+2019-12-03 13:17:48	-->	Quetzal2_ (c133ec6b@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.107) has joined #reddit-gamedev
+2019-12-03 13:26:31	-->	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has joined #reddit-gamedev
+2019-12-03 13:33:33	-->	macz (~macz@d75-155-130-204.bchsia.telus.net) has joined #reddit-gamedev
+2019-12-03 13:38:10	<--	macz (~macz@d75-155-130-204.bchsia.telus.net) has quit (Ping timeout: 268 seconds)
+2019-12-03 14:31:37	-->	shan (~shan@unaffiliated/jasatso1301) has joined #reddit-gamedev
+2019-12-03 14:31:37	--	Mode #reddit-gamedev [+v shan] by ChanServ
+2019-12-03 14:33:47	<--	deniska (~denis@unaffiliated/deniska) has quit (Ping timeout: 276 seconds)
+2019-12-03 14:34:10	-->	deniska (~denis@unaffiliated/deniska) has joined #reddit-gamedev
+2019-12-03 14:46:59	<--	Cahaan (~Cahaan@109.129.13.76) has quit (Quit: Leaving)
+2019-12-03 14:47:42	-->	Cahaan (~Cahaan@109.129.13.76) has joined #reddit-gamedev
+2019-12-03 14:47:42	--	Mode #reddit-gamedev [+v Cahaan] by ChanServ
+2019-12-03 15:16:15	<--	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has quit (Ping timeout: 250 seconds)
+2019-12-03 15:35:46	-->	Uhfgood (~Uhfgood@2603:9000:b10b:c00:a445:ee04:ccb:667b) has joined #reddit-gamedev
+2019-12-03 15:40:01	<--	testman (~testman@cpe-92-37-68-17.dynamic.amis.net) has quit (Read error: Connection reset by peer)
+2019-12-03 15:41:10	-->	testman (~testman@cpe-92-37-68-17.dynamic.amis.net) has joined #reddit-gamedev
+2019-12-03 15:48:54	<--	testman (~testman@cpe-92-37-68-17.dynamic.amis.net) has quit (Ping timeout: 268 seconds)
+2019-12-03 16:35:50	-->	ImQ009 (~ImQ009@unaffiliated/imq009) has joined #reddit-gamedev
+2019-12-03 17:27:28	-->	Chevluh (~Chev@238.49.77.83.dynamic.wline.res.cust.swisscom.ch) has joined #reddit-gamedev
+2019-12-03 17:35:45	-->	cruelnoise (~cruelnois@glphon2233w-grc-15-74-15-47-201.dsl.bell.ca) has joined #reddit-gamedev
+2019-12-03 17:51:52	<--	Quetzal2_ (c133ec6b@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.107) has quit (Remote host closed the connection)
+2019-12-03 17:53:03	-->	macz (~macz@67.231.29.194) has joined #reddit-gamedev
+2019-12-04 09:10:44	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-12-04 09:10:44	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-12-04 09:10:44	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-12-04 09:10:44	--	Channel #reddit-gamedev: 64 nicks (0 ops, 15 voices, 49 normals)
+2019-12-04 09:10:48	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-12-04 09:17:28	-->	Quetzal2_ (c133ec6b@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.107) has joined #reddit-gamedev
+2019-12-04 09:23:51	<--	Jaex (jaex@sharex/developer/jaex) has quit (*.net *.split)
+2019-12-04 09:23:52	<--	kaffse (~kaffo@46.101.50.227) has quit (*.net *.split)
+2019-12-04 09:24:34	-->	Jaex (jaex@sharex/developer/jaex) has joined #reddit-gamedev
+2019-12-04 09:24:34	-->	kaffse (~kaffo@46.101.50.227) has joined #reddit-gamedev
+2019-12-04 09:30:30	-->	bomb (~bomb@gateway/tor-sasl/bomb) has joined #reddit-gamedev
+2019-12-04 09:30:30	--	Mode #reddit-gamedev [+v bomb] by ChanServ
+2019-12-04 09:35:02	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #reddit-gamedev
+2019-12-04 09:52:05	-->	shan (~shan@unaffiliated/jasatso1301) has joined #reddit-gamedev
+2019-12-04 09:52:06	--	Mode #reddit-gamedev [+v shan] by ChanServ
+2019-12-04 09:55:44	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #reddit-gamedev
+2019-12-04 10:12:09	-->	ragecryx (~ragecryx@hrt933.static.otenet.gr) has joined #reddit-gamedev
+2019-12-04 10:16:05	<--	titanbiscuit (~tbisk@45.64.186.164) has quit (Quit: ZNC 1.7.4 - https://znc.in)
+2019-12-04 10:16:53	-->	titanbiscuit (~tbisk@45.64.186.164) has joined #reddit-gamedev
+2019-12-04 10:35:09	<--	titanbiscuit (~tbisk@45.64.186.164) has quit (Quit: ZNC 1.7.4 - https://znc.in)
+2019-12-04 10:35:31	-->	titanbiscuit (~tbisk@45.64.186.164) has joined #reddit-gamedev
+2019-12-04 10:42:16	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Quit: Leaving)
+2019-12-04 11:11:09	<--	ragecryx (~ragecryx@hrt933.static.otenet.gr) has quit (Quit: Leaving)
+2019-12-04 12:05:43	<--	Quetzal2_ (c133ec6b@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.107) has quit (Ping timeout: 245 seconds)
+2019-12-04 12:52:16	-->	Quetzal2_ (c133ec6b@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.107) has joined #reddit-gamedev
+2019-12-04 13:25:19	-->	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has joined #reddit-gamedev
+2019-12-04 13:26:52	-->	DrGonzo (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has joined #reddit-gamedev
+2019-12-04 13:30:41	<--	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has quit (Ping timeout: 268 seconds)
+2019-12-04 13:52:53	<--	shan (~shan@unaffiliated/jasatso1301) has quit (Ping timeout: 268 seconds)
+2019-12-04 13:53:36	-->	shan (~shan@unaffiliated/jasatso1301) has joined #reddit-gamedev
+2019-12-04 13:53:36	--	Mode #reddit-gamedev [+v shan] by ChanServ
+2019-12-04 14:39:15	-->	itsd4ndy (~tables@45-26-151-92.lightspeed.snantx.sbcglobal.net) has joined #reddit-gamedev
+2019-12-04 15:04:02	<--	sn (~snova@unaffiliated/snova) has quit (*.net *.split)
+2019-12-04 15:09:55	-->	sn (~snova@unaffiliated/snova) has joined #reddit-gamedev
+2019-12-04 15:09:55	--	Mode #reddit-gamedev [+v sn] by karatkievich.freenode.net
+2019-12-04 15:10:40	-->	Uhfgood (~Uhfgood@2603:9000:b10b:c00:382b:1a53:66b5:5d25) has joined #reddit-gamedev
+2019-12-04 15:13:58	<--	sn (~snova@unaffiliated/snova) has quit (*.net *.split)
+2019-12-04 15:19:35	-->	sn (~snova@unaffiliated/snova) has joined #reddit-gamedev
+2019-12-04 15:19:35	--	Mode #reddit-gamedev [+v sn] by karatkievich.freenode.net
+2019-12-04 15:28:47	<--	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has quit (Quit: WeeChat 1.9.1)
+2019-12-04 15:45:42	-->	arduiko (~arduiko@31-34-32-194.abo.bbox.fr) has joined #reddit-gamedev
+2019-12-04 15:56:08	<--	DrGonzo (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has quit (Ping timeout: 245 seconds)
+2019-12-04 16:15:29	-->	ImQ009 (~ImQ009@unaffiliated/imq009) has joined #reddit-gamedev
+2019-12-04 16:58:16	-->	Chevluh (~Chev@238.49.77.83.dynamic.wline.res.cust.swisscom.ch) has joined #reddit-gamedev
+2019-12-04 17:33:23	-->	DerHase (~Dave@catv-80-99-217-218.catv.broadband.hu) has joined #reddit-gamedev
+2019-12-04 17:46:09	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-12-04 17:46:09	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-12-04 17:46:09	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-12-04 17:46:09	--	Channel #reddit-gamedev: 73 nicks (0 ops, 17 voices, 56 normals)
+2019-12-04 17:46:13	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-12-04 17:53:10	<--	Quetzal2_ (c133ec6b@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.107) has quit (Remote host closed the connection)
+2019-12-05 08:02:41	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-12-05 08:02:41	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-12-05 08:02:41	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-12-05 08:02:41	--	Channel #reddit-gamedev: 67 nicks (0 ops, 16 voices, 51 normals)
+2019-12-05 08:02:45	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-12-05 08:20:31	-->	enrio (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-12-05 08:24:38	<--	terminx (~terminx@198.8.81.214) has quit (Ping timeout: 246 seconds)
+2019-12-05 08:24:52	-->	terminx_ (~terminx@198.8.81.214) has joined #reddit-gamedev
+2019-12-05 08:28:55	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #reddit-gamedev
+2019-12-05 08:30:57	<--	Uhfgood (~Uhfgood@2603:9000:b10b:c00:789e:83fe:4c99:7e1c) has quit (Quit: Leaving)
+2019-12-05 09:25:14	<--	titanbiscuit (~tbisk@45.64.186.164) has quit (Quit: ZNC 1.7.4 - https://znc.in)
+2019-12-05 09:26:05	-->	titanbiscuit (~tbisk@45.64.186.164) has joined #reddit-gamedev
+2019-12-05 09:31:03	<--	Cahaan (~Cahaan@109.129.13.76) has quit (Read error: Connection reset by peer)
+2019-12-05 09:32:33	-->	Cahaan (~Cahaan@109.129.13.76) has joined #reddit-gamedev
+2019-12-05 09:32:34	--	Mode #reddit-gamedev [+v Cahaan] by ChanServ
+2019-12-05 09:34:40	<--	fre3k (~root@cloud.konecki.fr) has quit (*.net *.split)
+2019-12-05 09:34:40	<--	ExpiredPopsicle (~ExpiredPo@71.19.153.130) has quit (*.net *.split)
+2019-12-05 09:38:17	-->	fre3k (~root@cloud.konecki.fr) has joined #reddit-gamedev
+2019-12-05 09:38:17	-->	ExpiredPopsicle (~ExpiredPo@71.19.153.130) has joined #reddit-gamedev
+2019-12-05 09:38:17	--	Mode #reddit-gamedev [+v ExpiredPopsicle] by wolfe.freenode.net
+2019-12-05 09:46:21	-->	Quetzal2_ (c133ec6b@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.107) has joined #reddit-gamedev
+2019-12-05 09:54:13	<--	titanbiscuit (~tbisk@45.64.186.164) has quit (Quit: ZNC 1.7.4 - https://znc.in)
+2019-12-05 09:54:37	-->	titanbiscuit (~tbisk@45.64.186.164) has joined #reddit-gamedev
+2019-12-05 10:54:53	<--	fre3k (~root@cloud.konecki.fr) has quit (*.net *.split)
+2019-12-05 10:54:53	<--	ExpiredPopsicle (~ExpiredPo@71.19.153.130) has quit (*.net *.split)
+2019-12-05 10:54:54	<--	Jaex (jaex@sharex/developer/jaex) has quit (*.net *.split)
+2019-12-05 10:54:54	<--	kaffse (~kaffo@46.101.50.227) has quit (*.net *.split)
+2019-12-05 10:54:54	<--	Cahaan (~Cahaan@109.129.13.76) has quit (*.net *.split)
+2019-12-05 10:54:55	<--	Motig (~Motig@unaffiliated/motig) has quit (*.net *.split)
+2019-12-05 10:54:55	<--	IkeKrull (~ikey@2a02:348:8e:6090::1) has quit (*.net *.split)
+2019-12-05 10:54:55	<--	flexd (~flexd@rxd.no) has quit (*.net *.split)
+2019-12-05 10:54:56	<--	TidB (sid345571@gateway/web/irccloud.com/x-ukdoxxlnqilsocsf) has quit (*.net *.split)
+2019-12-05 10:54:56	<--	itsd4ndy (~tables@45-26-151-92.lightspeed.snantx.sbcglobal.net) has quit (*.net *.split)
+2019-12-05 10:54:56	<--	Cossid (cossid@66-188-244-59.dhcp.eucl.wi.charter.com) has quit (*.net *.split)
+2019-12-05 10:54:57	<--	Nokurn (~Nokurn@cpe-108-185-62-246.socal.res.rr.com) has quit (*.net *.split)
+2019-12-05 10:54:57	<--	exezin (~exezin@oods.net) has quit (*.net *.split)
+2019-12-05 10:54:57	<--	steelgolem (~SteelGole@156.57.241.200) has quit (*.net *.split)
+2019-12-05 10:54:57	<--	yuken (~yuken@unaffiliated/yuken) has quit (*.net *.split)
+2019-12-05 10:54:57	<--	bttf (~bttf@138.68.16.63) has quit (*.net *.split)
+2019-12-05 10:54:58	<--	buirg (~buirg@178.128.75.133) has quit (*.net *.split)
+2019-12-05 10:54:58	<--	zebbiz_pi (~pi@h-13-78.A163.priv.bahnhof.se) has quit (*.net *.split)
+2019-12-05 10:54:58	<--	Thomas__ (~Thomas@ks357081.kimsufi.com) has quit (*.net *.split)
+2019-12-05 10:54:58	<--	irondude (~irondude@165.227.135.177) has quit (*.net *.split)
+2019-12-05 10:54:58	<--	vsync (~vsync@50-250-0-97-static.hfc.comcastbusiness.net) has quit (*.net *.split)
+2019-12-05 10:54:59	<--	Stenzek (~stenzek@2001:19f0:5801:3fe:5400:ff:fe5d:7bf6) has quit (*.net *.split)
+2019-12-05 10:54:59	<--	Luke_Filewalker (~Luke_File@129.232.155.51) has quit (*.net *.split)
+2019-12-05 10:54:59	<--	muppa (muppa@elaborate.online.scam.fi) has quit (*.net *.split)
+2019-12-05 10:54:59	<--	djinni (~djinni@static.38.6.217.95.clients.your-server.de) has quit (*.net *.split)
+2019-12-05 10:54:59	<--	zetaPRIME (~zetaPRIME@23.227.183.240) has quit (*.net *.split)
+2019-12-05 10:54:59	<--	paracyst (~paracyst@unaffiliated/paracyst) has quit (*.net *.split)
+2019-12-05 10:55:00	<--	sigtau (~will@2604:a880:800:a1::ce:9001) has quit (*.net *.split)
+2019-12-05 10:55:00	<--	bigblueboo (sid160802@gateway/web/irccloud.com/x-bbyeejmsdmhcrolb) has quit (*.net *.split)
+2019-12-05 10:55:00	<--	jorgenpt (sid57194@gateway/web/irccloud.com/x-cpcuoexobkyxefph) has quit (*.net *.split)
+2019-12-05 10:55:00	<--	planetis[m] (planetisma@gateway/shell/matrix.org/x-zscycckfcoaxuojq) has quit (*.net *.split)
+2019-12-05 10:55:01	<--	sn (~snova@unaffiliated/snova) has quit (*.net *.split)
+2019-12-05 10:55:01	<--	Snoras (~Snoras@gateway/tor-sasl/snoras) has quit (*.net *.split)
+2019-12-05 10:55:02	<--	terminx_ (~terminx@198.8.81.214) has quit (*.net *.split)
+2019-12-05 10:55:02	<--	enrio (~nanoz@unaffiliated/nanoz) has quit (*.net *.split)
+2019-12-05 10:55:02	<--	shan (~shan@unaffiliated/jasatso1301) has quit (*.net *.split)
+2019-12-05 10:55:02	<--	DrAwesomeClaws_ (~DrAwesome@c-75-68-71-41.hsd1.ct.comcast.net) has quit (*.net *.split)
+2019-12-05 10:55:02	<--	Albori (~Albori@67-43-243-189.fidnet.com) has quit (*.net *.split)
+2019-12-05 10:55:02	<--	edwardly (~edwardly@unaffiliated/edwardly) has quit (*.net *.split)
+2019-12-05 10:55:02	<--	tm512 (~tm512@static-50-53-130-33.bvtn.or.frontiernet.net) has quit (*.net *.split)
+2019-12-05 10:55:02	<--	Jonas__ (~Jonas__@unaffiliated/jonas/x-7723671) has quit (*.net *.split)
+2019-12-05 10:55:02	<--	aeth (~Michael@wesnoth/umc-dev/developer/aethaeryn) has quit (*.net *.split)
+2019-12-05 10:55:02	<--	Sadale (~Sadale@unaffiliated/sadale) has quit (*.net *.split)
+2019-12-05 10:55:03	<--	GLOKON (~GLOKON@unaffiliated/glokon) has quit (*.net *.split)
+2019-12-05 10:55:03	<--	StarLigh1 (~StarLight@188.166.48.181) has quit (*.net *.split)
+2019-12-05 10:55:03	<--	thesquib (~thesquib@192.241.198.27) has quit (*.net *.split)
+2019-12-05 10:55:03	<--	titanbiscuit (~tbisk@45.64.186.164) has quit (*.net *.split)
+2019-12-05 10:55:03	<--	endless90 (~endless90@p200300DA372BCF00C0542B0A94264CF2.dip0.t-ipconnect.de) has quit (*.net *.split)
+2019-12-05 10:55:05	<--	Smjert_ (~Smjert@unaffiliated/smjert) has quit (*.net *.split)
+2019-12-05 10:55:05	<--	Jattenalle (~CABAL@h-207-79.A246.priv.bahnhof.se) has quit (*.net *.split)
+2019-12-05 10:55:05	<--	intr0 (intro@s1.ct8.pl) has quit (*.net *.split)
+2019-12-05 10:55:05	<--	Seich (~seich@2605:de00:1:1:4a:45:0:2) has quit (*.net *.split)
+2019-12-05 10:55:05	<--	b2coutts (~b2coutts@corn-syrup.csclub.uwaterloo.ca) has quit (*.net *.split)
+2019-12-05 10:55:06	<--	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has quit (*.net *.split)
+2019-12-05 10:55:06	<--	Code_Green (~Code_Red@76.ip-151-80-61.eu) has quit (*.net *.split)
+2019-12-05 10:55:06	<--	NomadJim (~NomadJim@pdpc/supporter/active/nomadjim) has quit (*.net *.split)
+2019-12-05 10:55:06	<--	mursu (~ngWalrus@46.101.150.54) has quit (*.net *.split)
+2019-12-05 10:55:06	<--	Narris (~bunnies@vtelinet-216-66-102-10.vermontel.net) has quit (*.net *.split)
+2019-12-05 10:55:06	<--	Serus (~Serus@unaffiliated/serus) has quit (*.net *.split)
+2019-12-05 10:55:07	<--	diKoRac_- (~diKoRac@CPE788df7e7edf3-CM788df7e7edf0.cpe.net.cable.rogers.com) has quit (*.net *.split)
+2019-12-05 10:55:07	<--	ra4king (~ra4king@unaffiliated/ra4king) has quit (*.net *.split)
+2019-12-05 10:55:09	<--	Quetzal2_ (c133ec6b@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.107) has quit (*.net *.split)
+2019-12-05 10:55:10	<--	turt2live (travist2li@gateway/shell/matrix.org/x-znfabrqjudutikdv) has quit (*.net *.split)
+2019-12-05 10:55:10	<--	the_al (~al@unaffiliated/the-al/x-0324965) has quit (*.net *.split)
+2019-12-05 10:55:10	<--	carefish (~carefish@ipv6.is1337.eu) has quit (*.net *.split)
+2019-12-05 11:01:58	-->	TidB (sid345571@gateway/web/irccloud.com/x-ukdoxxlnqilsocsf) has joined #reddit-gamedev
+2019-12-05 11:01:58	-->	flexd (~flexd@rxd.no) has joined #reddit-gamedev
+2019-12-05 11:01:58	-->	IkeKrull (~ikey@2a02:348:8e:6090::1) has joined #reddit-gamedev
+2019-12-05 11:01:58	-->	Motig (~Motig@unaffiliated/motig) has joined #reddit-gamedev
+2019-12-05 11:01:58	-->	Cahaan (~Cahaan@109.129.13.76) has joined #reddit-gamedev
+2019-12-05 11:01:58	-->	bttf (~bttf@138.68.16.63) has joined #reddit-gamedev
+2019-12-05 11:01:58	-->	yuken (~yuken@unaffiliated/yuken) has joined #reddit-gamedev
+2019-12-05 11:01:58	-->	steelgolem (~SteelGole@156.57.241.200) has joined #reddit-gamedev
+2019-12-05 11:01:58	-->	exezin (~exezin@oods.net) has joined #reddit-gamedev
+2019-12-05 11:01:58	-->	Nokurn (~Nokurn@cpe-108-185-62-246.socal.res.rr.com) has joined #reddit-gamedev
+2019-12-05 11:01:58	-->	Cossid (cossid@66-188-244-59.dhcp.eucl.wi.charter.com) has joined #reddit-gamedev
+2019-12-05 11:01:58	-->	itsd4ndy (~tables@45-26-151-92.lightspeed.snantx.sbcglobal.net) has joined #reddit-gamedev
+2019-12-05 11:01:58	-->	titanbiscuit (~tbisk@45.64.186.164) has joined #reddit-gamedev
+2019-12-05 11:01:58	-->	Quetzal2_ (c133ec6b@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.107) has joined #reddit-gamedev
+2019-12-05 11:01:58	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #reddit-gamedev
+2019-12-05 11:01:58	-->	terminx_ (~terminx@198.8.81.214) has joined #reddit-gamedev
+2019-12-05 11:01:58	-->	enrio (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-12-05 11:01:58	-->	endless90 (~endless90@p200300DA372BCF00C0542B0A94264CF2.dip0.t-ipconnect.de) has joined #reddit-gamedev
+2019-12-05 11:01:58	-->	Snoras (~Snoras@gateway/tor-sasl/snoras) has joined #reddit-gamedev
+2019-12-05 11:01:58	-->	sn (~snova@unaffiliated/snova) has joined #reddit-gamedev
+2019-12-05 11:01:58	-->	shan (~shan@unaffiliated/jasatso1301) has joined #reddit-gamedev
+2019-12-05 11:01:58	--	Mode #reddit-gamedev [+vvvv flexd Cahaan sn shan] by wolfe.freenode.net
+2019-12-05 11:01:58	-->	Code_Green (~Code_Red@76.ip-151-80-61.eu) has joined #reddit-gamedev
+2019-12-05 11:01:58	-->	NomadJim (~NomadJim@pdpc/supporter/active/nomadjim) has joined #reddit-gamedev
+2019-12-05 11:01:58	-->	DrAwesomeClaws_ (~DrAwesome@c-75-68-71-41.hsd1.ct.comcast.net) has joined #reddit-gamedev
+2019-12-05 11:01:58	-->	mursu (~ngWalrus@46.101.150.54) has joined #reddit-gamedev
+2019-12-05 11:01:58	-->	Narris (~bunnies@vtelinet-216-66-102-10.vermontel.net) has joined #reddit-gamedev
+2019-12-05 11:01:58	-->	Albori (~Albori@67-43-243-189.fidnet.com) has joined #reddit-gamedev
+2019-12-05 11:01:58	-->	Serus (~Serus@unaffiliated/serus) has joined #reddit-gamedev
+2019-12-05 11:01:58	-->	edwardly (~edwardly@unaffiliated/edwardly) has joined #reddit-gamedev
+2019-12-05 11:01:58	-->	tm512 (~tm512@static-50-53-130-33.bvtn.or.frontiernet.net) has joined #reddit-gamedev
+2019-12-05 11:01:58	-->	turt2live (travist2li@gateway/shell/matrix.org/x-znfabrqjudutikdv) has joined #reddit-gamedev
+2019-12-05 11:01:58	-->	b2coutts (~b2coutts@corn-syrup.csclub.uwaterloo.ca) has joined #reddit-gamedev
+2019-12-05 11:01:58	-->	Jonas__ (~Jonas__@unaffiliated/jonas/x-7723671) has joined #reddit-gamedev
+2019-12-05 11:01:58	--	Mode #reddit-gamedev [+vvvv NomadJim DrAwesomeClaws_ tm512 Jonas__] by wolfe.freenode.net
+2019-12-05 11:01:58	-->	aeth (~Michael@wesnoth/umc-dev/developer/aethaeryn) has joined #reddit-gamedev
+2019-12-05 11:01:58	-->	the_al (~al@unaffiliated/the-al/x-0324965) has joined #reddit-gamedev
+2019-12-05 11:01:58	-->	diKoRac_- (~diKoRac@CPE788df7e7edf3-CM788df7e7edf0.cpe.net.cable.rogers.com) has joined #reddit-gamedev
+2019-12-05 11:01:58	-->	Sadale (~Sadale@unaffiliated/sadale) has joined #reddit-gamedev
+2019-12-05 11:01:58	-->	Smjert_ (~Smjert@unaffiliated/smjert) has joined #reddit-gamedev
+2019-12-05 11:01:58	-->	carefish (~carefish@ipv6.is1337.eu) has joined #reddit-gamedev
+2019-12-05 11:01:58	-->	ra4king (~ra4king@unaffiliated/ra4king) has joined #reddit-gamedev
+2019-12-05 11:01:58	-->	Jattenalle (~CABAL@h-207-79.A246.priv.bahnhof.se) has joined #reddit-gamedev
+2019-12-05 11:01:58	-->	intr0 (intro@s1.ct8.pl) has joined #reddit-gamedev
+2019-12-05 11:01:58	-->	GLOKON (~GLOKON@unaffiliated/glokon) has joined #reddit-gamedev
+2019-12-05 11:01:58	-->	Seich (~seich@2605:de00:1:1:4a:45:0:2) has joined #reddit-gamedev
+2019-12-05 11:01:58	-->	StarLigh1 (~StarLight@188.166.48.181) has joined #reddit-gamedev
+2019-12-05 11:01:58	--	Mode #reddit-gamedev [+vvv Sadale carefish Jattenalle] by wolfe.freenode.net
+2019-12-05 11:01:58	-->	thesquib (~thesquib@192.241.198.27) has joined #reddit-gamedev
+2019-12-05 11:03:51	-->	fre3k (~root@cloud.konecki.fr) has joined #reddit-gamedev
+2019-12-05 11:03:51	-->	ExpiredPopsicle (~ExpiredPo@71.19.153.130) has joined #reddit-gamedev
+2019-12-05 11:03:51	--	Mode #reddit-gamedev [+v ExpiredPopsicle] by wolfe.freenode.net
+2019-12-05 11:03:58	-->	Jaex (jaex@sharex/developer/jaex) has joined #reddit-gamedev
+2019-12-05 11:04:10	-->	planetis[m] (planetisma@gateway/shell/matrix.org/x-zscycckfcoaxuojq) has joined #reddit-gamedev
+2019-12-05 11:04:24	<--	shan (~shan@unaffiliated/jasatso1301) has quit (Ping timeout: 240 seconds)
+2019-12-05 11:04:24	-->	kaffo (~kaffo@46.101.50.227) has joined #reddit-gamedev
+2019-12-05 11:04:24	-->	buirg (~buirg@178.128.75.133) has joined #reddit-gamedev
+2019-12-05 11:04:24	-->	zebbiz_pi (~pi@h-13-78.A163.priv.bahnhof.se) has joined #reddit-gamedev
+2019-12-05 11:04:24	-->	Thomas__ (~Thomas@ks357081.kimsufi.com) has joined #reddit-gamedev
+2019-12-05 11:04:24	-->	irondude (~irondude@165.227.135.177) has joined #reddit-gamedev
+2019-12-05 11:04:24	-->	vsync (~vsync@50-250-0-97-static.hfc.comcastbusiness.net) has joined #reddit-gamedev
+2019-12-05 11:04:24	-->	Stenzek (~stenzek@2001:19f0:5801:3fe:5400:ff:fe5d:7bf6) has joined #reddit-gamedev
+2019-12-05 11:04:24	-->	Luke_Filewalker (~Luke_File@129.232.155.51) has joined #reddit-gamedev
+2019-12-05 11:04:24	-->	muppa (muppa@elaborate.online.scam.fi) has joined #reddit-gamedev
+2019-12-05 11:04:24	-->	djinni (~djinni@static.38.6.217.95.clients.your-server.de) has joined #reddit-gamedev
+2019-12-05 11:04:24	-->	zetaPRIME (~zetaPRIME@23.227.183.240) has joined #reddit-gamedev
+2019-12-05 11:04:24	-->	paracyst (~paracyst@unaffiliated/paracyst) has joined #reddit-gamedev
+2019-12-05 11:04:24	-->	sigtau (~will@2604:a880:800:a1::ce:9001) has joined #reddit-gamedev
+2019-12-05 11:04:24	-->	bigblueboo (sid160802@gateway/web/irccloud.com/x-bbyeejmsdmhcrolb) has joined #reddit-gamedev
+2019-12-05 11:04:24	-->	jorgenpt (sid57194@gateway/web/irccloud.com/x-cpcuoexobkyxefph) has joined #reddit-gamedev
+2019-12-05 11:04:24	--	Mode #reddit-gamedev [+vvv zebbiz_pi sigtau jorgenpt] by wolfe.freenode.net
+2019-12-05 11:05:34	--	Mode #reddit-gamedev [+v kaffo] by ChanServ
+2019-12-05 11:05:52	-->	shan (~shan@unaffiliated/jasatso1301) has joined #reddit-gamedev
+2019-12-05 11:05:52	--	Mode #reddit-gamedev [+v shan] by ChanServ
+2019-12-05 11:28:13	<--	titanbiscuit (~tbisk@45.64.186.164) has quit (Read error: Connection reset by peer)
+2019-12-05 11:30:37	-->	titanbiscuit (~tbisk@45.64.186.164) has joined #reddit-gamedev
+2019-12-05 11:36:54	+DrAwesomeClaws_	roll on 18 wheeler, roll on
+2019-12-05 12:13:14	<--	titanbiscuit (~tbisk@45.64.186.164) has quit (Quit: ZNC 1.7.4 - https://znc.in)
+2019-12-05 12:13:42	-->	titanbiscuit (~tbisk@45.64.186.164) has joined #reddit-gamedev
+2019-12-05 13:15:10	-->	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has joined #reddit-gamedev
+2019-12-05 13:41:15	-->	bomb (~bomb@gateway/tor-sasl/bomb) has joined #reddit-gamedev
+2019-12-05 13:41:15	--	Mode #reddit-gamedev [+v bomb] by ChanServ
+2019-12-05 14:27:37	<--	enrio (~nanoz@unaffiliated/nanoz) has quit (Ping timeout: 240 seconds)
+2019-12-05 14:55:01	-->	enrio (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-12-05 15:22:38	<--	enrio (~nanoz@unaffiliated/nanoz) has quit (Ping timeout: 265 seconds)
+2019-12-05 15:44:51	-->	enrio (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-12-05 16:00:28	<--	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has quit (Quit: WeeChat 1.9.1)
+2019-12-05 16:17:28	-->	ImQ009 (~ImQ009@unaffiliated/imq009) has joined #reddit-gamedev
+2019-12-05 16:17:37	<--	thesquib (~thesquib@192.241.198.27) has quit (Ping timeout: 240 seconds)
+2019-12-05 16:19:50	-->	thesquib (~thesquib@192.241.198.27) has joined #reddit-gamedev
+2019-12-05 16:32:51	<--	bomb (~bomb@gateway/tor-sasl/bomb) has quit (Remote host closed the connection)
+2019-12-05 17:11:27	<--	shan (~shan@unaffiliated/jasatso1301) has quit (Ping timeout: 250 seconds)
+2019-12-05 17:12:23	-->	shan (~shan@unaffiliated/jasatso1301) has joined #reddit-gamedev
+2019-12-05 17:12:23	--	Mode #reddit-gamedev [+v shan] by ChanServ
+2019-12-05 17:31:11	<--	titanbiscuit (~tbisk@45.64.186.164) has quit (Quit: ZNC 1.7.4 - https://znc.in)
+2019-12-05 17:32:33	-->	titanbiscuit (~tbisk@45.64.186.164) has joined #reddit-gamedev
+2019-12-05 17:43:16	<--	titanbiscuit (~tbisk@45.64.186.164) has quit (Quit: ZNC 1.7.4 - https://znc.in)
+2019-12-05 17:43:35	-->	titanbiscuit (~tbisk@45.64.186.164) has joined #reddit-gamedev
+2019-12-05 17:54:14	<--	titanbiscuit (~tbisk@45.64.186.164) has quit (Read error: Connection reset by peer)
+2019-12-06 09:10:56	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-12-06 09:10:56	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-12-06 09:10:56	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-12-06 09:10:56	--	Channel #reddit-gamedev: 65 nicks (0 ops, 16 voices, 49 normals)
+2019-12-06 09:10:59	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-12-06 09:11:28	-->	Quetzal2_ (c133ec6b@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.107) has joined #reddit-gamedev
+2019-12-06 09:18:57	-->	endless90 (~endless90@p200300DA372BCF00D1E0BCA691DC412F.dip0.t-ipconnect.de) has joined #reddit-gamedev
+2019-12-06 09:28:10	<--	DerHase (~Dave@catv-80-99-217-218.catv.broadband.hu) has quit (Ping timeout: 268 seconds)
+2019-12-06 09:28:26	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #reddit-gamedev
+2019-12-06 09:46:19	<--	titanbiscuit (~tbisk@45.64.186.164) has quit (Quit: ZNC 1.7.4 - https://znc.in)
+2019-12-06 09:48:41	-->	titanbiscuit (~tbisk@45.64.186.164) has joined #reddit-gamedev
+2019-12-06 09:55:39	-->	enrio (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-12-06 10:37:14	<--	terminx (~terminx@198.8.81.214) has quit (Ping timeout: 268 seconds)
+2019-12-06 10:39:15	-->	terminx (~terminx@173-23-140-183.client.mchsi.com) has joined #reddit-gamedev
+2019-12-06 10:39:15	--	Mode #reddit-gamedev [+v terminx] by ChanServ
+2019-12-06 10:44:14	<--	terminx (~terminx@173-23-140-183.client.mchsi.com) has quit (Ping timeout: 276 seconds)
+2019-12-06 10:49:06	-->	terminx (~terminx@198.8.81.214) has joined #reddit-gamedev
+2019-12-06 10:49:06	--	Mode #reddit-gamedev [+v terminx] by ChanServ
+2019-12-06 10:59:35	-->	Cahaan (~Cahaan@109.129.13.76) has joined #reddit-gamedev
+2019-12-06 10:59:36	--	Mode #reddit-gamedev [+v Cahaan] by ChanServ
+2019-12-06 12:19:56	<--	Quetzal2_ (c133ec6b@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.107) has quit (Ping timeout: 240 seconds)
+2019-12-06 12:51:32	-->	Quetzal2_ (c133ec6b@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.107) has joined #reddit-gamedev
+2019-12-06 13:00:19	<--	Quetzal2_ (c133ec6b@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.107) has quit (Remote host closed the connection)
+2019-12-06 13:00:25	-->	Quetzal2_ (c133ec6b@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.107) has joined #reddit-gamedev
+2019-12-06 13:26:45	<--	enrio (~nanoz@unaffiliated/nanoz) has quit (Read error: Connection reset by peer)
+2019-12-06 13:27:11	-->	enrio (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-12-06 14:24:36	-->	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has joined #reddit-gamedev
+2019-12-06 14:37:05	-->	Uhfgood (~Uhfgood@2603:9000:b10b:c00:592e:de76:62fc:6a85) has joined #reddit-gamedev
+2019-12-06 15:15:59	<--	Quetzal2_ (c133ec6b@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.107) has quit (Remote host closed the connection)
+2019-12-06 15:16:10	-->	Quetzal2_ (c133ec6b@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.107) has joined #reddit-gamedev
+2019-12-06 15:21:57	diKoRac_-	https://www.youtube.com/watch?v=SauvTwBDpto
+2019-12-06 15:22:18	diKoRac_-	Streets Of Rage 2 - Under Logic
+2019-12-06 15:22:31	diKoRac_-	Yuzo Koshiro
+2019-12-06 15:22:53	diKoRac_-	1992
+2019-12-06 15:48:13	<--	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has quit (Ping timeout: 250 seconds)
+2019-12-06 16:11:32	-->	ImQ009 (~ImQ009@unaffiliated/imq009) has joined #reddit-gamedev
+2019-12-06 16:19:07	-->	[0x00] (~0x00@pool-108-30-215-173.nycmny.fios.verizon.net) has joined #reddit-gamedev
+2019-12-06 16:34:35	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #reddit-gamedev
+2019-12-06 16:37:54	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Remote host closed the connection)
+2019-12-06 17:00:38	+Jattenalle	so following the rabbithole of "illegal numbers", i arrive at:
+2019-12-06 17:00:42	+Jattenalle	"Following this, Carmody discovered an 1811-digit primethis one being non-compressed, directly executable machine language in the ELF format for Linux i386, implementing the same DeCSS functionality. "
+2019-12-06 17:07:50	-->	Chevluh (~Chev@238.49.77.83.dynamic.wline.res.cust.swisscom.ch) has joined #reddit-gamedev
+2019-12-06 17:41:23	<--	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has quit (Quit: WeeChat 1.9.1)
+2019-12-06 17:43:55	<--	endless90 (~endless90@p200300DA372BCF00D1E0BCA691DC412F.dip0.t-ipconnect.de) has quit (Ping timeout: 250 seconds)
+2019-12-06 17:44:42	<--	Quetzal2_ (c133ec6b@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.107) has quit (Remote host closed the connection)
+2019-12-06 17:49:17	-->	bomb (~bomb@gateway/tor-sasl/bomb) has joined #reddit-gamedev
+2019-12-06 17:49:17	--	Mode #reddit-gamedev [+v bomb] by ChanServ
+2019-12-09 09:07:21	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-12-09 09:07:21	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-12-09 09:07:21	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-12-09 09:07:21	--	Channel #reddit-gamedev: 64 nicks (0 ops, 17 voices, 47 normals)
+2019-12-09 09:07:25	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-12-09 09:12:31	-->	Quetzal2_ (c133ec6b@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.107) has joined #reddit-gamedev
+2019-12-09 09:25:25	-->	endless90 (~endless90@p200300DA372BCF005885A03AF44ECE96.dip0.t-ipconnect.de) has joined #reddit-gamedev
+2019-12-09 09:33:41	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #reddit-gamedev
+2019-12-09 09:41:33	<--	enrioog (~nanoz@unaffiliated/nanoz) has quit (Read error: Connection reset by peer)
+2019-12-09 09:41:59	-->	enrioog (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-12-09 09:58:37	<--	Quetzal2_ (c133ec6b@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.107) has quit (Ping timeout: 240 seconds)
+2019-12-09 10:23:44	-->	Quetzal2_ (c133eb4c@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.235.76) has joined #reddit-gamedev
+2019-12-09 10:40:27	<--	shan (~shan@unaffiliated/jasatso1301) has quit (Ping timeout: 250 seconds)
+2019-12-09 11:16:05	<--	planetis[m] (planetisma@gateway/shell/matrix.org/x-ulbslrbmglidxxhk) has quit (Quit: killed)
+2019-12-09 11:16:26	<--	turt2live (travist2li@gateway/shell/matrix.org/x-ntxkfdqrfajtdven) has quit (Quit: killed)
+2019-12-09 12:03:56	<--	Quetzal2_ (c133eb4c@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.235.76) has quit (Ping timeout: 268 seconds)
+2019-12-09 12:42:26	-->	Quetzal2_ (c133ec6b@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.107) has joined #reddit-gamedev
+2019-12-09 12:51:23	-->	planetis[m] (planetisma@gateway/shell/matrix.org/x-qtruemmquvgmzghh) has joined #reddit-gamedev
+2019-12-09 12:51:23	-->	turt2live (travist2li@gateway/shell/matrix.org/x-thhkhozvyozlerzw) has joined #reddit-gamedev
+2019-12-09 13:24:14	-->	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has joined #reddit-gamedev
+2019-12-09 15:20:33	-->	steelgolem (~SteelGole@sydnns0115w-47-54-150-17.dhcp-dynamic.fibreop.ns.bellaliant.net) has joined #reddit-gamedev
+2019-12-09 16:01:44	<--	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has quit (Quit: WeeChat 1.9.1)
+2019-12-09 16:04:09	-->	ragecryx (~ragecryx@62.169.207.124) has joined #reddit-gamedev
+2019-12-09 16:10:48	<--	ragecryx (~ragecryx@62.169.207.124) has quit (Quit: Leaving)
+2019-12-09 17:04:28	-->	Chevluh (~Chev@238.49.77.83.dynamic.wline.res.cust.swisscom.ch) has joined #reddit-gamedev
+2019-12-09 17:06:59	<--	endless90 (~endless90@p200300DA372BCF005885A03AF44ECE96.dip0.t-ipconnect.de) has quit (Ping timeout: 250 seconds)
+2019-12-09 17:49:49	<--	Quetzal2_ (c133ec6b@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.107) has quit (Remote host closed the connection)
+2019-12-10 09:24:20	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-12-10 09:24:20	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-12-10 09:24:20	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-12-10 09:24:20	--	Channel #reddit-gamedev: 67 nicks (0 ops, 16 voices, 51 normals)
+2019-12-10 09:24:24	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-12-10 09:27:19	--	endless90_ is now known as endless90
+2019-12-10 09:43:42	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-12-10 09:43:42	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-12-10 09:43:42	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-12-10 09:43:42	--	Channel #reddit-gamedev: 67 nicks (0 ops, 16 voices, 51 normals)
+2019-12-10 09:43:46	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-12-10 10:01:12	-->	lily_summer (a434321e@164.52.50.30) has joined #reddit-gamedev
+2019-12-10 10:01:32	lily_summer	hi everyone
+2019-12-10 10:02:27	lily_summer	hi are you an avid redditer?
+2019-12-10 10:03:19	mursu	no
+2019-12-10 10:11:34	<--	lily_summer (a434321e@164.52.50.30) has quit (Remote host closed the connection)
+2019-12-10 10:18:08	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #reddit-gamedev
+2019-12-10 11:01:59	-->	Cahaan (~Cahaan@91.179.233.154) has joined #reddit-gamedev
+2019-12-10 11:01:59	--	Mode #reddit-gamedev [+v Cahaan] by ChanServ
+2019-12-10 11:44:40	-->	bomb (~bomb@gateway/tor-sasl/bomb) has joined #reddit-gamedev
+2019-12-10 11:44:40	--	Mode #reddit-gamedev [+v bomb] by ChanServ
+2019-12-10 12:11:39	<--	Quetzal2_ (c133ec6b@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.107) has quit (Ping timeout: 240 seconds)
+2019-12-10 12:58:09	-->	Quetzal2_ (c133ec6b@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.107) has joined #reddit-gamedev
+2019-12-10 13:54:07	<--	bomb (~bomb@gateway/tor-sasl/bomb) has quit (Quit: ...)
+2019-12-10 14:11:39	-->	Jatt (~CABAL@h-207-79.A246.priv.bahnhof.se) has joined #reddit-gamedev
+2019-12-10 14:13:19	<--	Jattenalle (~CABAL@h-207-79.A246.priv.bahnhof.se) has quit (Ping timeout: 245 seconds)
+2019-12-10 14:13:19	--	Jatt is now known as Jattenalle
+2019-12-10 15:02:20	<--	Snoras (~Snoras@gateway/tor-sasl/snoras) has quit (Ping timeout: 260 seconds)
+2019-12-10 15:02:27	-->	Snoras (~Snoras@gateway/tor-sasl/snoras) has joined #reddit-gamedev
+2019-12-10 15:07:01	<--	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has quit (Ping timeout: 268 seconds)
+2019-12-10 15:12:17	<--	Quetzal2_ (c133ec6b@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.107) has quit (Ping timeout: 240 seconds)
+2019-12-10 15:32:20	+shan	LOL did she just quit because of that :D
+2019-12-10 15:54:42	<--	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has quit (Quit: WeeChat 1.9.1)
+2019-12-10 15:57:51	-->	Quetzal2_ (c133ec6b@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.107) has joined #reddit-gamedev
+2019-12-11 09:11:38	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-12-11 09:11:38	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-12-11 09:11:38	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-12-11 09:11:38	--	Channel #reddit-gamedev: 68 nicks (0 ops, 15 voices, 53 normals)
+2019-12-11 09:11:42	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-12-11 10:29:36	+carefish	aeth: why not both?
+2019-12-11 10:29:51	+carefish	i really hate that a lot of people don't really know how to use a computer
+2019-12-11 10:30:16	+carefish	check the wires, reboot, try again before throwing a tantrum
+2019-12-11 10:30:25	+carefish	just try some of the basic stuff to fix it please
+2019-12-11 10:30:27	aeth	That hasn't really changed with generations, except that younger people who don't know how to use a computer at least can get as far as Netflix and Steam because TV is dead.
+2019-12-11 10:31:00	+carefish	yeah
+2019-12-11 10:31:03	+carefish	its a shame really
+2019-12-11 10:31:29	+carefish	not that tv is dead, but that yung un's don't spend more tme with figuring out how it works
+2019-12-11 10:32:20	aeth	Yes, TVs aren't that hard, you just need to know how to go through the menus with the remote control.
+2019-12-11 10:33:28	+carefish	i mean, how would you entice (young) people to look a bit further than netflix/facebook/steam?
+2019-12-11 10:33:51	+carefish	i don't think there's an easy answer for that, since some of the things computers do are straight up magic for those users
+2019-12-11 10:34:12	+carefish	and it's hard to learn how to use something more effectively if it is essentially magic to you
+2019-12-11 10:35:28	aeth	put a real computing environment in VR in a few VR generations when the resolution gets good for text, and gamify it
+2019-12-11 10:35:35	+carefish	i think... the only way to entice this stuff is to help people create a 'better' vocabulary to ask questions
+2019-12-11 10:37:03	+carefish	idk
+2019-12-11 10:37:13	+carefish	today i think i'll mess with meshroom
+2019-12-11 10:37:20	+carefish	that free/opensource photgrammatry app
+2019-12-11 10:43:55	aeth	interesting...
+2019-12-11 10:46:50	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-12-11 10:46:50	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-12-11 10:46:50	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-12-11 10:46:50	--	Channel #reddit-gamedev: 68 nicks (0 ops, 15 voices, 53 normals)
+2019-12-11 10:46:53	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-12-11 11:03:40	-->	bomb (~bomb@gateway/tor-sasl/bomb) has joined #reddit-gamedev
+2019-12-11 11:03:40	--	Mode #reddit-gamedev [+v bomb] by ChanServ
+2019-12-11 11:03:58	deniska	https://gfycat.com/ru/adeptinfiniteilladopsis mm, meshroom :)
+2019-12-11 11:04:26	deniska	y imgur no load for me?
+2019-12-11 11:04:50	deniska	seems like it's time to look for a new image host… again
+2019-12-11 11:05:34	+bomb	imgur throws errors if you disable ads, etc.
+2019-12-11 11:05:42	+bomb	why is your gfycat russki btw?
+2019-12-11 11:07:37	deniska	because I am
+2019-12-11 11:07:57	deniska	dunno why gfycat mildly doxx you like that :)
+2019-12-11 11:09:06	deniska	yay. imgur finally loaded
+2019-12-11 11:09:13	deniska	yeah, meshroom is nice :) https://i.imgur.com/YmKaF5D.jpg
+2019-12-11 11:09:43	+bomb	your browser gives that information to them
+2019-12-11 11:09:55	+carefish	is it hard to get into deniska?
+2019-12-11 11:09:58	+bomb	so it's not geo ip thingy
+2019-12-11 11:10:22	deniska	carefish: what exactly? Meshroom? Just put a bunch of photos in it, click "go" and wait :)
+2019-12-11 11:10:29	+carefish	neat
+2019-12-11 11:10:47	+carefish	how do you retopologize the mesh yourself?
+2019-12-11 11:10:50	deniska	(well, also you may have to put camera parameters in a config if it doesn't know about yours)
+2019-12-11 11:10:59	+bomb	haha carefish retopos manually
+2019-12-11 11:11:02	+carefish	i'm assuming some retopo is needed to make it game-ready
+2019-12-11 11:11:18	deniska	carefish: when I played with it, I didn't really :)
+2019-12-11 11:11:34	deniska	I put it in a 3d printer, not in a game
+2019-12-11 11:11:42	+carefish	ah, that explains
+2019-12-11 11:12:42	deniska	I don't think the mesh was particularly bad. It was just… way too high res
+2019-12-11 11:13:08	deniska	bomb: I don't mind gfycat knowing that info, I don't know why it puts /ru/ part in the url
+2019-12-11 11:13:39	+bomb	your browser tells them your ru
+2019-12-11 11:14:16	deniska	Sure, it's ok, but now I told y'all that I'm ru :)
+2019-12-11 11:14:41	deniska	And now it's harder for me to influence the elections from here
+2019-12-11 11:15:13	+carefish	nah, jsut keep at it mr john blyat smith
+2019-12-11 11:15:53	+bomb	we knew your ru anyway
+2019-12-11 11:16:57	+carefish	also unity's estimate of having their new stuff production ready by almsot 2 years is meh
+2019-12-11 11:17:23	+bomb	their new stuff?
+2019-12-11 11:17:28	+bomb	the engine written in C#?
+2019-12-11 11:17:34	+carefish	'we feel confident that before 2021 the new networking stack will be a much more performant solution than the hlapi'
+2019-12-11 11:18:01	+bomb	Unity is ghetto
+2019-12-11 11:21:40	+carefish	well i think for the poc i might have to use photon
+2019-12-11 11:22:57	+bomb	what is photon?
+2019-12-11 11:23:51	deniska	Unity is an enterprise grade game engine enabling developers and companies all over the world to rapidly develop computer, console, mobile games and other forms of digital entertainment
+2019-12-11 11:24:21	+bomb	:)
+2019-12-11 11:28:04	+carefish	photon is a third party plugin to help with making multiplayer games
+2019-12-11 11:28:15	+carefish	they provide a lot of nifty features
+2019-12-11 11:28:57	+bomb	gamedevs are lazy as fuk
+2019-12-11 11:32:15	+carefish	just like you
+2019-12-11 11:32:18	+carefish	their ideal role model
+2019-12-11 12:03:09	<--	Quetzal2_ (c133ec6b@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.107) has quit (Ping timeout: 268 seconds)
+2019-12-11 12:11:10	deniska	lazy programmers are best programmers
+2019-12-11 12:11:24	deniska	If a programmer is not lazy, they may write code, and who would ever want that?
+2019-12-11 12:14:18	+carefish	haha
+2019-12-11 12:16:34	deniska	more code = more work for CPUs and humans alike = more carbon footprint
+2019-12-11 12:42:31	-->	Quetzal2_ (c133ec6b@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.107) has joined #reddit-gamedev
+2019-12-11 13:00:56	-->	Uhfgood (~Uhfgood@2603:9000:b10b:c00:80d6:17be:cb26:28f6) has joined #reddit-gamedev
+2019-12-11 13:44:19	-->	enrio (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-12-11 14:57:12	--	irondude is now known as _bryan
+2019-12-11 15:13:27	+bomb	https://news.yahoo.com/marie-fredriksson-singer-roxette-dies-152005266.html
+2019-12-11 15:20:11	-->	cruelnoise (~cruelnois@glphon2233w-grc-15-74-15-47-201.dsl.bell.ca) has joined #reddit-gamedev
+2019-12-11 15:41:55	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-12-11 15:41:55	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-12-11 15:41:55	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-12-11 15:41:55	--	Channel #reddit-gamedev: 72 nicks (0 ops, 16 voices, 56 normals)
+2019-12-11 15:42:00	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-12-11 16:02:21	-->	ImQ009 (~ImQ009@unaffiliated/imq009) has joined #reddit-gamedev
+2019-12-11 16:19:21	--	irc: disconnected from server
+2019-12-11 16:19:46	-->	Syrinxos (~syrinxos@93-34-1-82.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-12-11 16:19:46	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-12-11 16:19:46	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-12-11 16:19:46	--	Channel #reddit-gamedev: 73 nicks (0 ops, 16 voices, 57 normals)
+2019-12-11 16:20:06	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-12-11 16:30:49	+Jonas__	deniska, did you just apply the Greta Thunberg principle to programming?
+2019-12-11 16:31:00	+Jonas__	that's a radical dedication to virtue signalling
+2019-12-11 16:31:29	+Jonas__	I am simultaneously both impressed and disgusted
+2019-12-11 16:31:31	deniska	Jonas__: computers stole my childhood, I shouldn't even be here :D
+2019-12-11 16:31:48	+Jonas__	how dare IBM
+2019-12-11 16:32:23	+bomb	easy bruh she's just a kid trying to avoid school
+2019-12-11 16:32:47	deniska	bomb: top 10 pranks which got too far
+2019-12-11 16:33:01	+bomb	hehe
+2019-12-11 16:33:05	deniska	When I wanted to avoid school I just pretended sick :)
+2019-12-11 16:33:33	+bomb	that would save you just a couple of days
+2019-12-11 16:33:57	+bomb	you should have pretended we're near an apocalypse
+2019-12-11 16:34:03	deniska	doesn't whatever country she's from have a homeschooling option?
+2019-12-11 16:34:33	+bomb	I don't think so
+2019-12-11 16:34:38	+bomb	she's Swiss, right?
+2019-12-11 16:34:58	deniska	I thought something scandinavian? Dunno
+2019-12-11 16:35:10	+bomb	oh nice she's Swede of course
+2019-12-11 16:36:39	deniska	"send her back to school" is a frequent jab towards her, but isn't it the school which caused the issue in the first place? :P
+2019-12-11 16:39:53	+bomb	yeah they should put her 28 year old boyfriend in jail first
+2019-12-11 16:40:51	-->	Quetzal2_39 (c133eb4c@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.235.76) has joined #reddit-gamedev
+2019-12-11 16:41:16	<--	cruelnoise (~cruelnois@glphon2233w-grc-15-74-15-47-201.dsl.bell.ca) has quit (Quit: Leaving)
+2019-12-11 16:42:03	<--	Quetzal2_39 (c133eb4c@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.235.76) has quit (Remote host closed the connection)
+2019-12-11 16:42:37	<--	Raziel (~Raziel@unaffiliated/raziel) has quit (Ping timeout: 240 seconds)
+2019-12-11 16:43:05	<--	Quetzal2_ (c133ec6b@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.107) has quit (Ping timeout: 250 seconds)
+2019-12-11 16:45:07	-->	RazielZ (~Raziel@unaffiliated/raziel) has joined #reddit-gamedev
+2019-12-11 16:47:58	<--	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has quit (Quit: WeeChat 1.9.1)
+2019-12-11 16:57:32	-->	Quetzal2_ (c133eb4c@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.235.76) has joined #reddit-gamedev
+2019-12-11 16:58:27	<--	Quetzal2_ (c133eb4c@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.235.76) has quit (Remote host closed the connection)
+2019-12-11 17:05:20	--	irc: disconnected from server
+2019-12-11 17:05:47	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-12-11 17:05:47	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-12-11 17:05:47	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-12-11 17:05:47	--	Channel #reddit-gamedev: 71 nicks (0 ops, 16 voices, 55 normals)
+2019-12-11 17:06:07	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-12-11 17:26:10	-->	Quetzal2_ (c133ec6b@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.107) has joined #reddit-gamedev
+2019-12-11 17:34:47	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-12-11 17:34:47	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-12-11 17:34:47	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-12-11 17:34:47	--	Channel #reddit-gamedev: 72 nicks (0 ops, 16 voices, 56 normals)
+2019-12-11 17:34:51	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-12-11 17:36:59	<--	twodayslate (sid13012@gateway/web/irccloud.com/x-kyluhlghzryekgjt) has quit
+2019-12-11 17:37:25	-->	twodayslate (sid13012@gateway/web/irccloud.com/x-batccwoohnmtcxoh) has joined #reddit-gamedev
+2019-12-11 17:38:40	-->	Type-21 (~Type-21@unaffiliated/type-21) has joined #reddit-gamedev
+2019-12-11 17:38:40	--	Mode #reddit-gamedev [+v Type-21] by ChanServ
+2019-12-12 09:00:19	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-12-12 09:00:19	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-12-12 09:00:19	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-12-12 09:00:19	--	Channel #reddit-gamedev: 70 nicks (0 ops, 17 voices, 53 normals)
+2019-12-12 09:00:23	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-12-12 09:05:17	-->	Cahaan (~Cahaan@91.179.233.154) has joined #reddit-gamedev
+2019-12-12 09:05:17	--	Mode #reddit-gamedev [+v Cahaan] by ChanServ
+2019-12-12 09:08:56	<--	Cahaan_ (~Cahaan@91.179.233.154) has quit (Ping timeout: 265 seconds)
+2019-12-12 09:09:05	-->	Cahaan_ (~Cahaan@91.179.233.154) has joined #reddit-gamedev
+2019-12-12 09:09:05	--	Mode #reddit-gamedev [+v Cahaan_] by ChanServ
+2019-12-12 09:10:49	<--	Cahaan (~Cahaan@91.179.233.154) has quit (Ping timeout: 252 seconds)
+2019-12-12 09:13:30	-->	Quetzal2_58 (c133eb4c@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.235.76) has joined #reddit-gamedev
+2019-12-12 09:14:15	<--	Quetzal2_58 (c133eb4c@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.235.76) has quit (Remote host closed the connection)
+2019-12-12 09:15:57	<--	Quetzal2_ (c133ec6b@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.107) has quit (Ping timeout: 252 seconds)
+2019-12-12 09:43:25	-->	Snoras_ (~Snoras@gateway/tor-sasl/snoras) has joined #reddit-gamedev
+2019-12-12 09:43:46	<--	Snoras (~Snoras@gateway/tor-sasl/snoras) has quit (Remote host closed the connection)
+2019-12-12 09:43:46	--	Snoras_ is now known as Snoras
+2019-12-12 09:47:15	-->	Quetzal2_ (c133eb4c@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.235.76) has joined #reddit-gamedev
+2019-12-12 09:53:08	<--	ra4king (~ra4king@unaffiliated/ra4king) has quit (Quit: Take a byte out of this!)
+2019-12-12 09:53:46	-->	ra4king (~ra4king@unaffiliated/ra4king) has joined #reddit-gamedev
+2019-12-12 10:08:11	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #reddit-gamedev
+2019-12-12 10:29:43	-->	Narris (~bunnies@vtelinet-216-66-102-10.vermontel.net) has joined #reddit-gamedev
+2019-12-12 10:32:37	<--	_DB (68375605@gateway/web/cgi-irc/kiwiirc.com/ip.104.55.86.5) has quit (Ping timeout: 240 seconds)
+2019-12-12 10:34:23	-->	enrio (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-12-12 11:23:51	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-12-12 11:23:51	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-12-12 11:23:51	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-12-12 11:23:51	--	Channel #reddit-gamedev: 72 nicks (0 ops, 17 voices, 55 normals)
+2019-12-12 11:23:55	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-12-12 11:37:10	<--	terminx (~terminx@198.8.81.214) has quit (Ping timeout: 268 seconds)
+2019-12-12 11:42:02	-->	terminx (~terminx@198.8.81.214) has joined #reddit-gamedev
+2019-12-12 11:42:02	--	Mode #reddit-gamedev [+v terminx] by ChanServ
+2019-12-12 11:48:47	-->	Cahaan (~Cahaan@91.179.233.154) has joined #reddit-gamedev
+2019-12-12 11:48:47	--	Mode #reddit-gamedev [+v Cahaan] by ChanServ
+2019-12-12 11:51:58	<--	Cahaan_ (~Cahaan@91.179.233.154) has quit (Ping timeout: 245 seconds)
+2019-12-12 12:06:46	-->	Cahaan_ (~Cahaan@91.179.233.154) has joined #reddit-gamedev
+2019-12-12 12:06:46	--	Mode #reddit-gamedev [+v Cahaan_] by ChanServ
+2019-12-12 12:09:37	<--	Cahaan (~Cahaan@91.179.233.154) has quit (Ping timeout: 240 seconds)
+2019-12-12 12:11:16	-->	Cahaan (~Cahaan@91.179.233.154) has joined #reddit-gamedev
+2019-12-12 12:11:17	--	Mode #reddit-gamedev [+v Cahaan] by ChanServ
+2019-12-12 12:14:17	<--	Cahaan_ (~Cahaan@91.179.233.154) has quit (Ping timeout: 240 seconds)
+2019-12-12 12:15:57	<--	Quetzal2_ (c133eb4c@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.235.76) has quit (Ping timeout: 240 seconds)
+2019-12-12 12:21:22	-->	bomb (~bomb@gateway/tor-sasl/bomb) has joined #reddit-gamedev
+2019-12-12 12:21:22	--	Mode #reddit-gamedev [+v bomb] by ChanServ
+2019-12-12 13:50:46	-->	Cahaan_ (~Cahaan@91.179.233.154) has joined #reddit-gamedev
+2019-12-12 13:50:46	--	Mode #reddit-gamedev [+v Cahaan_] by ChanServ
+2019-12-12 13:54:04	<--	Cahaan (~Cahaan@91.179.233.154) has quit (Ping timeout: 268 seconds)
+2019-12-12 13:58:43	-->	Quetzal2_ (c133ec6b@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.107) has joined #reddit-gamedev
+2019-12-12 14:41:55	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-12-12 14:41:55	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-12-12 14:41:55	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-12-12 14:41:55	--	Channel #reddit-gamedev: 73 nicks (0 ops, 18 voices, 55 normals)
+2019-12-12 14:41:58	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-12-12 15:34:35	<--	enrio (~nanoz@unaffiliated/nanoz) has quit (Ping timeout: 276 seconds)
+2019-12-12 15:47:24	-->	enrio (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-12-12 16:08:33	-->	ImQ009 (~ImQ009@unaffiliated/imq009) has joined #reddit-gamedev
+2019-12-12 16:48:58	-->	Chevluh (~Chev@238.49.77.83.dynamic.wline.res.cust.swisscom.ch) has joined #reddit-gamedev
+2019-12-12 17:09:40	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-12-12 17:09:40	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-12-12 17:09:40	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-12-12 17:09:40	--	Channel #reddit-gamedev: 75 nicks (0 ops, 18 voices, 57 normals)
+2019-12-12 17:09:44	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-12-12 17:13:03	-->	_DB (68375605@gateway/web/cgi-irc/kiwiirc.com/ip.104.55.86.5) has joined #reddit-gamedev
+2019-12-12 17:32:53	<--	endless90 (~endless90@p200300DA374D3C00B0855B00C031EE9D.dip0.t-ipconnect.de) has quit (Ping timeout: 250 seconds)
+2019-12-12 17:49:19	<--	Quetzal2_ (c133ec6b@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.107) has quit (Remote host closed the connection)
+2019-12-13 08:58:27	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-12-13 08:58:27	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-12-13 08:58:27	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-12-13 08:58:27	--	Channel #reddit-gamedev: 68 nicks (0 ops, 16 voices, 52 normals)
+2019-12-13 08:58:31	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-12-13 09:02:59	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #reddit-gamedev
+2019-12-13 10:35:56	-->	Quetzal2_ (c133ec6b@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.107) has joined #reddit-gamedev
+2019-12-13 12:50:34	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-12-13 12:50:34	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-12-13 12:50:34	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-12-13 12:50:34	--	Channel #reddit-gamedev: 70 nicks (0 ops, 16 voices, 54 normals)
+2019-12-13 12:50:37	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-12-13 12:53:20	-->	bomb (~bomb@gateway/tor-sasl/bomb) has joined #reddit-gamedev
+2019-12-13 12:53:20	--	Mode #reddit-gamedev [+v bomb] by ChanServ
+2019-12-13 13:05:40	-->	Cahaan (~Cahaan@91.179.233.154) has joined #reddit-gamedev
+2019-12-13 13:05:40	--	Mode #reddit-gamedev [+v Cahaan] by ChanServ
+2019-12-13 13:09:00	<--	Cahaan_ (~Cahaan@91.179.233.154) has quit (Ping timeout: 265 seconds)
+2019-12-13 13:09:22	-->	Cahaan_ (~Cahaan@91.179.233.154) has joined #reddit-gamedev
+2019-12-13 13:09:22	--	Mode #reddit-gamedev [+v Cahaan_] by ChanServ
+2019-12-13 13:11:59	<--	Cahaan (~Cahaan@91.179.233.154) has quit (Ping timeout: 250 seconds)
+2019-12-13 13:14:19	<--	Cahaan_ (~Cahaan@91.179.233.154) has quit (Ping timeout: 265 seconds)
+2019-12-13 13:43:49	<--	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has quit (Quit: WeeChat 1.9.1)
+2019-12-13 15:51:23	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #reddit-gamedev
+2019-12-13 16:12:57	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #reddit-gamedev
+2019-12-13 16:42:34	-->	ImQ009 (~ImQ009@unaffiliated/imq009) has joined #reddit-gamedev
+2019-12-13 16:54:55	<--	turt2live (travist2li@gateway/shell/matrix.org/x-thhkhozvyozlerzw) has quit (Ping timeout: 250 seconds)
+2019-12-13 16:59:23	<--	Quetzal2_ (c133ec6b@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.107) has quit (Remote host closed the connection)
+2019-12-13 17:04:50	<--	DrGonzo (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has quit (Ping timeout: 252 seconds)
+2019-12-13 17:46:40	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Quit: Leaving)
+2019-12-13 17:47:28	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #reddit-gamedev
+2019-12-13 17:49:11	-->	Chevluh (~Chev@238.49.77.83.dynamic.wline.res.cust.swisscom.ch) has joined #reddit-gamedev
+2019-12-16 09:11:55	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-12-16 09:11:55	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-12-16 09:11:55	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-12-16 09:11:55	--	Channel #reddit-gamedev: 58 nicks (0 ops, 12 voices, 46 normals)
+2019-12-16 09:11:59	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-12-16 09:19:41	deniska	I think websockets may do some framing for you?
+2019-12-16 09:19:47	deniska	Not sure, played with them quite long time ago
+2019-12-16 09:31:46	-->	enrio (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-12-16 09:34:09	yuken	I plan to just use UDP w/ the native client, deniska
+2019-12-16 09:39:53	-->	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has joined #reddit-gamedev
+2019-12-16 09:50:09	<--	enrio (~nanoz@unaffiliated/nanoz) has quit (Ping timeout: 268 seconds)
+2019-12-16 09:57:20	-->	enrio (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-12-16 10:15:50	--	irc: disconnected from server
+2019-12-16 10:16:16	-->	Syrinxos (~syrinxos@93-34-1-82.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-12-16 10:16:16	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-12-16 10:16:16	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-12-16 10:16:16	--	Channel #reddit-gamedev: 60 nicks (0 ops, 12 voices, 48 normals)
+2019-12-16 10:16:36	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-12-16 10:26:00	-->	Syrinxos (~syrinxos@93-34-1-82.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-12-16 10:26:00	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-12-16 10:26:00	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-12-16 10:26:00	--	Channel #reddit-gamedev: 60 nicks (0 ops, 12 voices, 48 normals)
+2019-12-16 10:26:05	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-12-16 10:29:30	<--	enrio (~nanoz@unaffiliated/nanoz) has quit (Read error: Connection reset by peer)
+2019-12-16 10:30:23	-->	enrio (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-12-16 10:35:02	-->	enrioog (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-12-16 10:37:55	<--	enrioog (~nanoz@unaffiliated/nanoz) has quit (Read error: Connection reset by peer)
+2019-12-16 10:38:14	<--	enrio (~nanoz@unaffiliated/nanoz) has quit (Ping timeout: 265 seconds)
+2019-12-16 10:39:36	-->	enrioog (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-12-16 11:05:26	-->	tm512 (~tm512@static-50-53-130-33.bvtn.or.frontiernet.net) has joined #reddit-gamedev
+2019-12-16 11:05:31	-->	StarLight (~StarLight@188.166.48.181) has joined #reddit-gamedev
+2019-12-16 11:05:55	--	Mode #reddit-gamedev [+v tm512] by ChanServ
+2019-12-16 11:06:15	-->	Albori (~Albori@67-43-243-189.fidnet.com) has joined #reddit-gamedev
+2019-12-16 11:06:16	-->	edwardly (~edwardly@70.19.69.147) has joined #reddit-gamedev
+2019-12-16 11:06:53	<--	edwardly (~edwardly@70.19.69.147) has quit (Changing host)
+2019-12-16 11:06:53	-->	edwardly (~edwardly@unaffiliated/edwardly) has joined #reddit-gamedev
+2019-12-16 11:07:16	-->	Jonas__ (~Jonas__@unaffiliated/jonas/x-7723671) has joined #reddit-gamedev
+2019-12-16 11:07:18	--	Mode #reddit-gamedev [+v Jonas__] by ChanServ
+2019-12-16 11:07:25	-->	Sadale (~Sadale@unaffiliated/sadale) has joined #reddit-gamedev
+2019-12-16 11:07:25	--	Mode #reddit-gamedev [+v Sadale] by ChanServ
+2019-12-16 11:09:36	-->	GLOKON (~GLOKON@unaffiliated/glokon) has joined #reddit-gamedev
+2019-12-16 11:12:23	-->	ninsei (~IRCIdent@104.45.157.104) has joined #reddit-gamedev
+2019-12-16 11:16:40	<--	enrioog (~nanoz@unaffiliated/nanoz) has quit (Read error: Connection timed out)
+2019-12-16 11:17:23	-->	enrioog (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-12-16 11:29:08	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-12-16 11:29:08	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-12-16 11:29:08	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-12-16 11:29:08	--	Channel #reddit-gamedev: 68 nicks (0 ops, 15 voices, 53 normals)
+2019-12-16 11:29:12	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-12-16 11:31:01	<--	Motig (~Motig@unaffiliated/motig) has quit (Remote host closed the connection)
+2019-12-16 11:35:37	<--	enrioog (~nanoz@unaffiliated/nanoz) has quit (Read error: Connection reset by peer)
+2019-12-16 11:36:27	-->	enrioog (~nanoz@unaffiliated/nanoz) has joined #reddit-gamedev
+2019-12-16 11:47:08	-->	Quetzal2_ (c133ec6b@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.107) has joined #reddit-gamedev
+2019-12-16 12:31:06	<--	Quetzal2_ (c133ec6b@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.107) has quit (Ping timeout: 268 seconds)
+2019-12-16 12:41:04	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #reddit-gamedev
+2019-12-16 13:03:12	-->	Quetzal2_ (c133ec6b@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.107) has joined #reddit-gamedev
+2019-12-16 13:18:43	-->	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has joined #reddit-gamedev
+2019-12-16 14:06:51	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-12-16 14:06:51	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-12-16 14:06:51	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-12-16 14:06:51	--	Channel #reddit-gamedev: 70 nicks (0 ops, 15 voices, 55 normals)
+2019-12-16 14:06:55	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-12-16 14:33:06	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-12-16 14:33:06	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-12-16 14:33:06	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-12-16 14:33:06	--	Channel #reddit-gamedev: 71 nicks (0 ops, 16 voices, 55 normals)
+2019-12-16 14:33:10	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-12-16 14:46:17	<--	Quetzal2_91 (c133eb4c@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.235.76) has quit (Remote host closed the connection)
+2019-12-16 14:46:33	<--	DrBenway (~DrBenway@modemcable080.164-57-74.mc.videotron.ca) has quit (Ping timeout: 245 seconds)
+2019-12-16 14:48:39	deniska	TIL how to turbo boost in Star Wars Ep1 Racer
+2019-12-16 14:48:55	deniska	turns out later levels in this game are not *that* hard
+2019-12-16 15:09:22	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Quit: Leaving)
+2019-12-16 15:14:39	+Jattenalle	yuken, stacked ethernet: https://i.imgur.com/JuxZ5ZE.jpg
+2019-12-16 15:23:34	deniska	that's not ethernet, that's usb
+2019-12-16 15:24:54	deniska	https://pbs.twimg.com/media/EJdFtNYUwAA3NRs.jpg:large but here's the ethernet connection with packet loss prevention :)
+2019-12-16 15:50:12	<--	larpon (~larpon@193-106-166-119.ip4.fiberby.net) has quit (Quit: WeeChat 1.9.1)
+2019-12-16 15:55:48	-->	Quetzal2_ (c133eb4c@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.235.76) has joined #reddit-gamedev
+2019-12-16 16:19:22	-->	shan_ (~shan@unaffiliated/jasatso1301) has joined #reddit-gamedev
+2019-12-16 16:19:22	--	Mode #reddit-gamedev [+v shan_] by ChanServ
+2019-12-16 16:41:36	-->	[0x00] (~0x00@pool-108-30-215-173.nycmny.fios.verizon.net) has joined #reddit-gamedev
+2019-12-16 16:43:07	-->	ImQ009 (~ImQ009@unaffiliated/imq009) has joined #reddit-gamedev
+2019-12-16 16:56:20	-->	Uhfgood (~Uhfgood@2603:9000:b10b:c00:68d4:62e2:8ad0:a4ee) has joined #reddit-gamedev
+2019-12-16 17:16:00	-->	Chevluh (~Chev@238.49.77.83.dynamic.wline.res.cust.swisscom.ch) has joined #reddit-gamedev
+2019-12-18 09:08:21	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #reddit-gamedev
+2019-12-18 09:08:21	--	Topic for #reddit-gamedev is "http://reddit.com/r/gamedev | http://reddit.com/r/gamedevscreens | Tag an OP about your gamedev for +v | This is a newbie friendly channel. Be polite with your responses or don't respond. | ##gamedevbot for reddit feeds"
+2019-12-18 09:08:21	--	Topic set by sn0wmonster (~yeti@taskhive/lead/sn0wmonster) on Mon, 04 Feb 2019 23:27:29
+2019-12-18 09:08:21	--	Channel #reddit-gamedev: 70 nicks (0 ops, 14 voices, 56 normals)
+2019-12-18 09:08:25	--	Channel created on Sat, 04 Jun 2011 03:33:39
+2019-12-18 09:11:18	<--	cruelnoise (~cruelnois@216.181.93.69) has quit (Read error: Connection reset by peer)
+2019-12-18 09:55:37	<--	endless90 (~endless90@p200300DA374338002533FE4812882D6E.dip0.t-ipconnect.de) has quit (Quit: endless90)
+2019-12-18 09:57:26	-->	DerHaseZzz (~Dave@catv-80-99-217-218.catv.broadband.hu) has joined #reddit-gamedev
+2019-12-18 10:00:43	<--	DerHaseZ (~Dave@catv-80-99-217-218.catv.broadband.hu) has quit (Ping timeout: 265 seconds)
+2019-12-18 10:05:08	<--	DerHaseZzz (~Dave@catv-80-99-217-218.catv.broadband.hu) has quit (Ping timeout: 248 seconds)
+2019-12-18 10:15:17	-->	Quetzal2_ (c133ec6b@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.107) has joined #reddit-gamedev
+2019-12-18 10:48:44	-->	Cahaan_ (~Cahaan@109.128.255.206) has joined #reddit-gamedev
+2019-12-18 10:48:44	--	Mode #reddit-gamedev [+v Cahaan_] by ChanServ
+2019-12-18 10:52:16	<--	Cahaan (~Cahaan@109.128.255.206) has quit (Ping timeout: 268 seconds)
+2019-12-18 12:05:39	<--	Quetzal2_ (c133ec6b@gateway/web/cgi-irc/kiwiirc.com/ip.193.51.236.107) has quit (Ping timeout: 268 seconds)

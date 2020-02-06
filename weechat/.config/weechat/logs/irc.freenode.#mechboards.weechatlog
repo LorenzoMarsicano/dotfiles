@@ -1317,3 +1317,1637 @@
 2019-11-14 15:31:33	<--	thadood (~thadood@donk.thunderbutt.org) has quit (Quit: ZNC - http://znc.in)
 2019-11-14 15:34:23	-->	thadood (~thadood@donk.thunderbutt.org) has joined #Mechboards
 2019-11-14 15:40:03	-->	ShinyRice (~ShinyRice@2001:720:1014:f410:fc15:6a01:6aee:7cbf) has joined #Mechboards
+2019-11-14 16:53:36	<--	pacbard (~pacbard@68.237.202.35.bc.googleusercontent.com) has quit (Read error: Connection reset by peer)
+2019-11-14 16:55:54	-->	pacbard (~pacbard@68.237.202.35.bc.googleusercontent.com) has joined #Mechboards
+2019-11-14 17:02:09	<--	Alternity (~tinycat@unaffiliated/tinycat) has quit (Quit: Alternity)
+2019-11-14 17:06:00	-->	Alternity (~tinycat@unaffiliated/tinycat) has joined #Mechboards
+2019-11-14 17:13:04	<--	ShinyRice (~ShinyRice@2001:720:1014:f410:fc15:6a01:6aee:7cbf) has quit (Quit: ShinyRice)
+2019-11-14 17:45:11	<--	yokel (~yokel@unaffiliated/contempt) has quit (Ping timeout: 268 seconds)
+2019-11-14 17:48:01	-->	ShinyRice (~ShinyRice@2001:720:1014:f410:fc15:6a01:6aee:7cbf) has joined #Mechboards
+2019-11-14 17:48:52	-->	yokel (~yokel@unaffiliated/contempt) has joined #Mechboards
+2019-11-15 09:16:18	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #Mechboards
+2019-11-15 09:16:18	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2019-11-15 09:16:18	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 10:38:51
+2019-11-15 09:16:18	--	Channel #Mechboards: 135 nicks (0 ops, 0 voices, 135 normals)
+2019-11-15 09:16:18	--	Channel created on Thu, 21 Feb 2013 05:50:48
+2019-11-15 09:17:22	--	ecloud_wfh is now known as ecloud
+2019-11-15 09:25:20	-->	multiproc (~mark@unaffiliated/multiproc) has joined #Mechboards
+2019-11-15 10:06:31	<--	audron (~quassel@jupiter.cocaine.farm) has quit (Remote host closed the connection)
+2019-11-15 10:28:55	-->	audron (~audron@jupiter.cocaine.farm) has joined #Mechboards
+2019-11-15 10:31:20	<--	FennecCode (~user@2605:e000:141f:8534:b1d6:27a:b710:eaf1) has quit (Quit: ERC (IRC client for Emacs 26.2))
+2019-11-15 10:50:51	<--	{Opsimath}Shawn (~shawn156@unaffiliated/shawn156) has quit (Read error: Connection reset by peer)
+2019-11-15 11:00:25	<--	zamnedix (~zamnedix@zamnedix.net) has quit (Quit: ZNC 1.7.4+deb7 - https://znc.in)
+2019-11-15 11:00:47	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #Mechboards
+2019-11-15 11:02:59	-->	zamnedix (~zamnedix@zamnedix.net) has joined #Mechboards
+2019-11-15 11:23:43	<--	multiproc (~mark@unaffiliated/multiproc) has quit (Ping timeout: 250 seconds)
+2019-11-15 11:49:58	-->	figuinhas (~pirilauam@194-79-86-23.static.net.novis.pt) has joined #Mechboards
+2019-11-15 12:01:14	<--	MrFahrenheit (~zumbi@unaffiliated/rageofthou) has quit (Ping timeout: 240 seconds)
+2019-11-15 12:01:18	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Quit: Leaving)
+2019-11-15 12:06:55	Hakala	https://livetaajuus.fi/radio/hitmix/
+2019-11-15 12:07:04	Hakala	Darude sandstorm for 24 hours
+2019-11-15 12:07:06	Hakala	:^^)=
+2019-11-15 12:16:38	-->	multiproc (~mark@unaffiliated/multiproc) has joined #Mechboards
+2019-11-15 12:25:18	<--	multiproc (~mark@unaffiliated/multiproc) has quit (Ping timeout: 245 seconds)
+2019-11-15 12:27:40	-->	ihre (9180c26a@gateway/web/cgi-irc/kiwiirc.com/ip.145.128.194.106) has joined #Mechboards
+2019-11-15 12:47:19	mads-	Hakala: Thats like my favorite song. How did you know?
+2019-11-15 12:54:25	-->	multiproc (~mark@unaffiliated/multiproc) has joined #Mechboards
+2019-11-15 13:01:13	<--	multiproc (~mark@unaffiliated/multiproc) has quit (Ping timeout: 250 seconds)
+2019-11-15 13:08:06	-->	ShinyRice (~ShinyRice@81.203.50.77.dyn.user.ono.com) has joined #Mechboards
+2019-11-15 14:34:50	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #Mechboards
+2019-11-15 14:34:50	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2019-11-15 14:34:50	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 10:38:51
+2019-11-15 14:34:50	--	Channel #Mechboards: 136 nicks (0 ops, 0 voices, 136 normals)
+2019-11-15 14:34:50	--	Channel created on Thu, 21 Feb 2013 05:50:48
+2019-11-15 14:39:14	festerB	Anyone know where I can buy a 75% with ISO layout? It would be a plus to buy w/o keycaps as Nordic does not cut for me.
+2019-11-15 14:57:41	<--	na_th_an (~nathan@unaffiliated/nathan/x-7706311) has quit (Quit: WeeChat 2.5)
+2019-11-15 15:06:45	-->	na_th_an (~nathan@unaffiliated/nathan/x-7706311) has joined #Mechboards
+2019-11-15 15:09:13	<--	xcm (~xcm@ipa210.225.tellas.gr) has quit (Remote host closed the connection)
+2019-11-15 15:13:45	-->	xcm (~xcm@ipa210.225.tellas.gr) has joined #Mechboards
+2019-11-15 15:52:26	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #Mechboards
+2019-11-15 16:22:37	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Quit: Leaving)
+2019-11-15 16:23:09	<--	ihre (9180c26a@gateway/web/cgi-irc/kiwiirc.com/ip.145.128.194.106) has quit (Ping timeout: 265 seconds)
+2019-11-15 16:23:18	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #Mechboards
+2019-11-15 16:47:14	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Quit: Leaving)
+2019-11-15 16:53:33	<--	pacbard (~pacbard@68.237.202.35.bc.googleusercontent.com) has quit (Read error: Connection reset by peer)
+2019-11-15 16:55:38	-->	pacbard (~pacbard@68.237.202.35.bc.googleusercontent.com) has joined #Mechboards
+2019-11-15 17:24:33	blitzkraft	festerB: checkout kbdfans. They have 75% iso pcbs
+2019-11-15 17:25:07	blitzkraft	Also, vortex pok3er series has an iso variant.
+2019-11-15 17:31:50	festerB	blitzkraft: Will do, any web you recommend to buy from? Is pcbs something I'd need to solder, bacause that's way out of my skillset? ;)
+2019-11-15 17:32:06	ShinyRice	yes
+2019-11-15 17:32:14	ShinyRice	you absolutely need to solder
+2019-11-15 17:32:37	ShinyRice	though I'm not sure if you need to do that if you socket your switches
+2019-11-15 17:32:41	blitzkraft	I see. There are hotswap options.
+2019-11-15 17:33:02	blitzkraft	I'm pretty sure kbdfans also has a 75% hotswap pcb.
+2019-11-15 17:33:15	blitzkraft	They don't need soldering.
+2019-11-15 17:33:26	ShinyRice	like, obviously I mean that the sockets may or may not need to be soldered, the key switches don't ever need to be soldered like this
+2019-11-15 17:41:58	festerB	Hmm looks like kbdfans only have 60-68% in iso layout - dang - they do have assembly service so not soldering might be ok
+2019-11-18 09:27:22	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #Mechboards
+2019-11-18 09:27:22	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2019-11-18 09:27:22	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 10:38:51
+2019-11-18 09:27:22	--	Channel #Mechboards: 132 nicks (0 ops, 0 voices, 132 normals)
+2019-11-18 09:27:23	--	Channel created on Thu, 21 Feb 2013 05:50:48
+2019-11-18 09:40:30	-->	ihre (535656c4@gateway/web/cgi-irc/kiwiirc.com/ip.83.86.86.196) has joined #Mechboards
+2019-11-18 09:40:49	<--	Thumpxr (~Thumpxr@server.thumper.de) has quit (Quit: The Lounge - https://thelounge.chat)
+2019-11-18 09:43:48	-->	Thumpxr (~Thumpxr@server.thumper.de) has joined #Mechboards
+2019-11-18 09:45:08	<--	Thumpxr (~Thumpxr@server.thumper.de) has quit (Client Quit)
+2019-11-18 09:47:08	<--	audron (~audron@jupiter.cocaine.farm) has quit (Remote host closed the connection)
+2019-11-18 09:48:18	-->	Thumpxr (~Thumpxr@server.thumper.de) has joined #Mechboards
+2019-11-18 09:55:26	-->	clemens3 (~clemens@mx.eniso-partners.com) has joined #Mechboards
+2019-11-18 09:55:58	<--	clemens3 (~clemens@mx.eniso-partners.com) has quit (Client Quit)
+2019-11-18 10:15:02	-->	audron (~audron@jupiter.cocaine.farm) has joined #Mechboards
+2019-11-18 10:45:48	<--	pacbard (~pacbard@68.237.202.35.bc.googleusercontent.com) has quit (Read error: Connection reset by peer)
+2019-11-18 10:47:42	-->	pacbard (~pacbard@68.237.202.35.bc.googleusercontent.com) has joined #Mechboards
+2019-11-18 11:00:27	<--	zamnedix (~zamnedix@zamnedix.net) has quit (Quit: ZNC 1.7.4+deb7 - https://znc.in)
+2019-11-18 11:04:42	-->	zamnedix (~zamnedix@zamnedix.net) has joined #Mechboards
+2019-11-18 11:13:52	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #Mechboards
+2019-11-18 11:44:55	-->	figuinhas (~pirilauam@194-79-86-23.static.net.novis.pt) has joined #Mechboards
+2019-11-18 11:56:56	<--	zacmps (~zacmps@121-74-149-27.telstraclear.net) has quit (Ping timeout: 240 seconds)
+2019-11-18 12:04:07	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Quit: Leaving)
+2019-11-18 12:07:49	<--	gagbo (~gagbo@unaffiliated/gagbo) has quit (Ping timeout: 250 seconds)
+2019-11-18 12:09:15	-->	gagbo (~gagbo@unaffiliated/gagbo) has joined #Mechboards
+2019-11-18 12:40:56	yourfate	I do believe genuine cherries are gold yes
+2019-11-18 12:41:42	yourfate	I think I still have a pack of cherry browns at home, I could check that
+2019-11-18 12:54:52	<--	gagbo (~gagbo@unaffiliated/gagbo) has quit (Ping timeout: 265 seconds)
+2019-11-18 12:57:22	-->	gagbo (~gagbo@unaffiliated/gagbo) has joined #Mechboards
+2019-11-18 12:57:41	-->	festerB (FesterB@gateway/vpn/protonvpn/festerb) has joined #Mechboards
+2019-11-18 13:08:22	-->	zacmps (~zacmps@246.215.252.27.dyn.cust.vf.net.nz) has joined #Mechboards
+2019-11-18 14:06:41	-->	veam (uid157194@gateway/web/irccloud.com/x-bryffbwuequmvtgd) has joined #Mechboards
+2019-11-18 14:47:43	<--	gagbo (~gagbo@unaffiliated/gagbo) has quit (Ping timeout: 250 seconds)
+2019-11-18 14:49:43	-->	gagbo (~gagbo@unaffiliated/gagbo) has joined #Mechboards
+2019-11-18 14:55:36	day	if this really happens with gold coated switches too then i will be keking hard
+2019-11-18 14:56:07	day	we just replaced some switches with gilded switches to avoid resistance buildup over time
+2019-11-18 14:56:42	day	fixing by throwing money at the problem
+2019-11-18 15:01:37	Joe	offtopic: but.....
+2019-11-18 15:01:41	Joe	is usb-c on laptops just a way to rehash 6k series processors with no real improvement in performance?
+2019-11-18 15:01:42	Joe	i feel like nothing has improved over 6k processors and 4k resolution, other than the addition of usb-c. While i get the "improvement" it really doesn't fit most people's usecase.
+2019-11-18 15:22:36	<--	gagbo (~gagbo@unaffiliated/gagbo) has quit (Ping timeout: 240 seconds)
+2019-11-18 15:24:14	-->	gagbo (~gagbo@unaffiliated/gagbo) has joined #Mechboards
+2019-11-18 15:53:14	<--	thadood (~thadood@donk.thunderbutt.org) has quit (Quit: ZNC - http://znc.in)
+2019-11-18 15:56:02	-->	thadood (~thadood@donk.thunderbutt.org) has joined #Mechboards
+2019-11-18 16:21:04	<--	xcm (~xcm@ipa210.225.tellas.gr) has quit (Remote host closed the connection)
+2019-11-18 16:21:18	-->	Cartoon-Dude (~Thunderbi@195.48.13.205) has joined #Mechboards
+2019-11-18 16:23:24	-->	xcm (~xcm@ipa210.225.tellas.gr) has joined #Mechboards
+2019-11-18 16:36:27	<--	gagbo (~gagbo@unaffiliated/gagbo) has quit (Remote host closed the connection)
+2019-11-18 16:37:28	-->	gagbo (~gagbo@unaffiliated/gagbo) has joined #Mechboards
+2019-11-18 17:47:37	<--	gagbo (~gagbo@unaffiliated/gagbo) has quit (Ping timeout: 240 seconds)
+2019-11-18 17:49:16	-->	gagbo (~gagbo@unaffiliated/gagbo) has joined #Mechboards
+2019-11-19 12:58:40	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #Mechboards
+2019-11-19 12:58:40	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2019-11-19 12:58:40	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 10:38:51
+2019-11-19 12:58:40	--	Channel #Mechboards: 138 nicks (0 ops, 0 voices, 138 normals)
+2019-11-19 12:58:41	--	Channel created on Thu, 21 Feb 2013 05:50:48
+2019-11-19 14:08:44	-->	veam (uid157194@gateway/web/irccloud.com/x-nnmligmgyziahhri) has joined #Mechboards
+2019-11-19 14:20:03	-->	ihre (9180c26a@gateway/web/cgi-irc/kiwiirc.com/ip.145.128.194.106) has joined #Mechboards
+2019-11-19 14:20:43	-->	ShinyRice (~ShinyRice@81.203.50.77.dyn.user.ono.com) has joined #Mechboards
+2019-11-19 14:46:47	-->	clemens3 (~clemens@mx.eniso-partners.com) has joined #Mechboards
+2019-11-19 14:51:03	<--	xcm (~xcm@ipa210.225.tellas.gr) has quit (Read error: Connection reset by peer)
+2019-11-19 14:52:52	-->	xcm (~xcm@ipa210.225.tellas.gr) has joined #Mechboards
+2019-11-19 15:24:47	<--	zod000 (~zod@47.199.50.17) has quit (Ping timeout: 268 seconds)
+2019-11-19 15:28:25	<--	zacmps (~zacmps@121-74-127-9.telstraclear.net) has quit (Ping timeout: 250 seconds)
+2019-11-19 15:36:05	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #Mechboards
+2019-11-19 15:37:58	-->	zacmps (~zacmps@188.209.252.27.dyn.cust.vf.net.nz) has joined #Mechboards
+2019-11-19 15:51:02	<--	figuinhas (~pirilauam@194-79-86-23.static.net.novis.pt) has quit (Quit: Leaving)
+2019-11-19 15:53:49	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Quit: Leaving)
+2019-11-19 16:22:12	-->	figuinhas (~pirilauam@194-79-86-23.static.net.novis.pt) has joined #Mechboards
+2019-11-19 16:34:55	<--	clemens3 (~clemens@mx.eniso-partners.com) has quit (Quit: WeeChat 1.6)
+2019-11-19 17:27:19	<--	ihre (9180c26a@gateway/web/cgi-irc/kiwiirc.com/ip.145.128.194.106) has quit (Ping timeout: 265 seconds)
+2019-11-19 17:36:23	-->	ihre (9180c26a@gateway/web/cgi-irc/kiwiirc.com/ip.145.128.194.106) has joined #Mechboards
+2019-11-20 11:04:50	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #Mechboards
+2019-11-20 11:04:50	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2019-11-20 11:04:50	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 10:38:51
+2019-11-20 11:04:50	--	Channel #Mechboards: 133 nicks (0 ops, 0 voices, 133 normals)
+2019-11-20 11:04:51	--	Channel created on Thu, 21 Feb 2013 05:50:48
+2019-11-20 11:14:53	<--	slaytaner (~slaytaner@2001:19f0:6401:36:5400:ff:fe31:df2) has quit (Ping timeout: 276 seconds)
+2019-11-20 11:15:16	-->	slaytaner (~slaytaner@2001:19f0:6401:36:5400:ff:fe31:df2) has joined #Mechboards
+2019-11-20 11:16:01	-->	figuinhas (~pirilauam@194-79-86-23.static.net.novis.pt) has joined #Mechboards
+2019-11-20 11:16:37	<--	aml (~antoon_i@h-213-221.A392.priv.bahnhof.se) has quit (Ping timeout: 240 seconds)
+2019-11-20 11:18:33	-->	aml (~antoon_i@h-213-221.A392.priv.bahnhof.se) has joined #Mechboards
+2019-11-20 11:30:50	<--	zacmps (~zacmps@255.200.252.27.dyn.cust.vf.net.nz) has quit (Ping timeout: 240 seconds)
+2019-11-20 11:32:53	<--	aml (~antoon_i@h-213-221.A392.priv.bahnhof.se) has quit (Ping timeout: 265 seconds)
+2019-11-20 11:33:22	<--	xcm (~xcm@ipa210.225.tellas.gr) has quit (Remote host closed the connection)
+2019-11-20 11:33:29	-->	aml (~antoon_i@h-213-221.A392.priv.bahnhof.se) has joined #Mechboards
+2019-11-20 11:35:14	-->	xcm (~xcm@ipa210.225.tellas.gr) has joined #Mechboards
+2019-11-20 11:37:14	-->	zacmps (~zacmps@101.208.252.27.dyn.cust.vf.net.nz) has joined #Mechboards
+2019-11-20 11:45:21	<--	ihre (535656c4@gateway/web/cgi-irc/kiwiirc.com/ip.83.86.86.196) has quit (Remote host closed the connection)
+2019-11-20 11:46:15	-->	Sabotender (~Sabotende@unaffiliated/sabotender) has joined #Mechboards
+2019-11-20 11:47:33	-->	ihre (535656c4@gateway/web/cgi-irc/kiwiirc.com/ip.83.86.86.196) has joined #Mechboards
+2019-11-20 12:25:34	-->	mord0d (~mord0d@gateway/tor-sasl/mord0d) has joined #Mechboards
+2019-11-20 13:11:10	<--	figuinhas (~pirilauam@194-79-86-23.static.net.novis.pt) has quit (Remote host closed the connection)
+2019-11-20 13:11:38	-->	figuinhas (~pirilauam@194-79-86-23.static.net.novis.pt) has joined #Mechboards
+2019-11-20 14:05:55	<--	figuinhas (~pirilauam@194-79-86-23.static.net.novis.pt) has quit (Quit: Leaving)
+2019-11-20 14:26:53	-->	figuinhas (~pirilauam@194-79-86-23.static.net.novis.pt) has joined #Mechboards
+2019-11-20 14:27:07	-->	veam (uid157194@gateway/web/irccloud.com/x-diwixkngehgydrxk) has joined #Mechboards
+2019-11-20 15:05:49	Hakala	https://old.reddit.com/r/CrappyDesign/comments/dyytwt/keyboard_for_a_few_bucks_two_pairs_of_shifts_a/
+2019-11-20 15:05:57	Hakala	now thats a layout
+2019-11-20 15:08:11	-->	ShinyRice (~ShinyRice@81.203.50.77.dyn.user.ono.com) has joined #Mechboards
+2019-11-20 15:46:03	-->	clemens3 (~clemens@mx.eniso-partners.com) has joined #Mechboards
+2019-11-20 16:00:36	thykka	wtf
+2019-11-20 16:04:56	<--	figuinhas (~pirilauam@194-79-86-23.static.net.novis.pt) has quit (Remote host closed the connection)
+2019-11-20 16:05:19	-->	figuinhas (~pirilauam@194-79-86-23.static.net.novis.pt) has joined #Mechboards
+2019-11-20 16:06:58	doppler	don't forget the two blank keys and the second Enter key
+2019-11-20 16:07:29	doppler	haha: "PauSe"
+2019-11-20 16:08:05	doppler	as funny as it looks I'd like to think there were at least somewhat reasonable explanations behind most of these decisions
+2019-11-20 16:08:20	doppler	like the shift situation seems pretty obvious to me
+2019-11-20 16:25:19	<--	ShinyRice (~ShinyRice@81.203.50.77.dyn.user.ono.com) has quit (Quit: ShinyRice)
+2019-11-20 16:26:53	-->	ShinyRice (~ShinyRice@81.203.50.77.dyn.user.ono.com) has joined #Mechboards
+2019-11-20 16:31:55	<--	figuinhas (~pirilauam@194-79-86-23.static.net.novis.pt) has quit (Remote host closed the connection)
+2019-11-20 16:32:24	-->	figuinhas (~pirilauam@194-79-86-23.static.net.novis.pt) has joined #Mechboards
+2019-11-20 16:32:52	<--	figuinhas (~pirilauam@194-79-86-23.static.net.novis.pt) has quit (Max SendQ exceeded)
+2019-11-20 16:40:20	<--	mord0d (~mord0d@gateway/tor-sasl/mord0d) has quit (Ping timeout: 260 seconds)
+2019-11-20 16:43:00	-->	mord0d (~mord0d@gateway/tor-sasl/mord0d) has joined #Mechboards
+2019-11-20 16:52:25	--	astronavt___ is now known as astronavt
+2019-11-20 17:09:08	<--	yokel (~yokel@unaffiliated/contempt) has quit (Ping timeout: 276 seconds)
+2019-11-20 17:20:14	-->	yokel (~yokel@unaffiliated/contempt) has joined #Mechboards
+2019-11-20 17:25:08	<--	ShinyRice (~ShinyRice@81.203.50.77.dyn.user.ono.com) has quit (Quit: ShinyRice)
+2019-11-20 17:31:58	<--	clemens3 (~clemens@mx.eniso-partners.com) has quit (Quit: WeeChat 1.6)
+2019-11-22 08:59:24	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #Mechboards
+2019-11-22 08:59:24	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2019-11-22 08:59:24	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 10:38:51
+2019-11-22 08:59:24	--	Channel #Mechboards: 136 nicks (0 ops, 0 voices, 136 normals)
+2019-11-22 08:59:25	--	Channel created on Thu, 21 Feb 2013 05:50:48
+2019-11-22 09:18:52	thykka	maaan.. I'm all for sticking it to the Man, but this postal strike is messing with my keyboard customization process :I
+2019-11-22 09:19:36	thykka	it's not like i can just walk into a shop and buy the keycaps I need ._.
+2019-11-22 09:22:43	-->	cyberjunkie (~cyberjunk@2400:6180:100:d0::8e0:5001) has joined #Mechboards
+2019-11-22 09:24:47	--	eziwaq_ is now known as eziwaq
+2019-11-22 09:41:16	switchy	thykka, maybe that is the problem
+2019-11-22 09:41:20	switchy	make keycaps mainstream again
+2019-11-22 09:44:14	-->	ShinyRice (~ShinyRice@2001:720:1014:f410:fc15:6a01:6aee:7cbf) has joined #Mechboards
+2019-11-22 09:47:58	<--	ShinyRice (~ShinyRice@2001:720:1014:f410:fc15:6a01:6aee:7cbf) has quit (Client Quit)
+2019-11-22 09:48:44	-->	ShinyRice (~ShinyRice@2001:720:1014:f410:fc15:6a01:6aee:7cbf) has joined #Mechboards
+2019-11-22 10:45:42	<--	pacbard (~pacbard@68.237.202.35.bc.googleusercontent.com) has quit (Read error: Connection reset by peer)
+2019-11-22 10:47:47	-->	pacbard (~pacbard@68.237.202.35.bc.googleusercontent.com) has joined #Mechboards
+2019-11-22 10:55:52	<--	ihre (535656c4@gateway/web/cgi-irc/kiwiirc.com/ip.83.86.86.196) has quit (Ping timeout: 252 seconds)
+2019-11-22 11:00:24	<--	zamnedix (~zamnedix@zamnedix.net) has quit (Quit: ZNC 1.7.4+deb7 - https://znc.in)
+2019-11-22 11:03:01	--	ecloud_ is now known as ecloud_wfh
+2019-11-22 11:04:03	-->	zamnedix (~zamnedix@zamnedix.net) has joined #Mechboards
+2019-11-22 11:13:37	-->	figuinhas (~pirilauam@194-79-86-23.static.net.novis.pt) has joined #Mechboards
+2019-11-22 11:14:25	<--	figuinhas (~pirilauam@194-79-86-23.static.net.novis.pt) has quit (Max SendQ exceeded)
+2019-11-22 11:14:56	-->	figuinhas (~pirilauam@194-79-86-23.static.net.novis.pt) has joined #Mechboards
+2019-11-22 11:59:05	<--	im0nde (~im0nde@2a0a-a546-c46e-0-2ad2-44ff-fe00-9395.ipv6dyn.netcologne.de) has quit (Ping timeout: 246 seconds)
+2019-11-22 12:32:41	<--	xcm (~xcm@ipa210.225.tellas.gr) has quit (Remote host closed the connection)
+2019-11-22 12:33:13	-->	ihre (9180c26a@gateway/web/cgi-irc/kiwiirc.com/ip.145.128.194.106) has joined #Mechboards
+2019-11-22 12:34:30	-->	xcm (~xcm@ipa210.225.tellas.gr) has joined #Mechboards
+2019-11-22 12:35:05	<--	ShinyRice (~ShinyRice@2001:720:1014:f410:fc15:6a01:6aee:7cbf) has quit (Quit: ShinyRice)
+2019-11-22 12:41:35	sauerkrause	switchy: yeah, the thelio is snazzy af for a desktop. I'd be interested to see their laptops
+2019-11-22 13:39:10	-->	im0nde (~im0nde@2a0a-a546-1618-0-2ad2-44ff-fe00-9395.ipv6dyn.netcologne.de) has joined #Mechboards
+2019-11-22 13:43:22	-->	ShinyRice (~ShinyRice@81.203.50.77.dyn.user.ono.com) has joined #Mechboards
+2019-11-22 13:44:03	<--	im0nde (~im0nde@2a0a-a546-1618-0-2ad2-44ff-fe00-9395.ipv6dyn.netcologne.de) has quit (Ping timeout: 245 seconds)
+2019-11-22 13:45:55	-->	im0nde (~im0nde@2a0a-a546-173e-0-2ad2-44ff-fe00-9395.ipv6dyn.netcologne.de) has joined #Mechboards
+2019-11-22 14:14:27	-->	veam (uid157194@gateway/web/irccloud.com/x-kiioxnfcckupinet) has joined #Mechboards
+2019-11-22 15:15:00	-->	day (~Unknown@unaffiliated/day) has joined #Mechboards
+2019-11-22 15:15:32	-->	day___ (~Unknown@unaffiliated/day) has joined #Mechboards
+2019-11-22 15:17:29	--	xcm is now known as Guest43098
+2019-11-22 15:17:32	<--	Guest43098 (~xcm@ipa210.225.tellas.gr) has quit (Remote host closed the connection)
+2019-11-22 15:18:25	<--	ShinyRice (~ShinyRice@81.203.50.77.dyn.user.ono.com) has quit (Quit: ShinyRice)
+2019-11-22 15:18:53	-->	xcm (~xcm@ipa210.225.tellas.gr) has joined #Mechboards
+2019-11-22 15:19:17	<--	day (~Unknown@unaffiliated/day) has quit (Ping timeout: 246 seconds)
+2019-11-22 15:19:18	--	day___ is now known as day
+2019-11-22 15:54:37	day	regarding the 'which USB controller i have'. lspci says 'USB controller: intel cor 9 Series chipset'
+2019-11-22 15:54:47	day	wrong mech channel ^.^
+2019-11-22 15:55:21	thykka	why does that matter? :O
+2019-11-22 15:56:08	day	have some issues with a specific board during bootup
+2019-11-22 15:57:31	day	someone else with an asmedia usb controller had similarr issues apparently
+2019-11-22 16:32:47	<--	ihre (9180c26a@gateway/web/cgi-irc/kiwiirc.com/ip.145.128.194.106) has quit (Ping timeout: 246 seconds)
+2019-11-22 17:39:30	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #Mechboards
+2019-11-22 17:39:30	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2019-11-22 17:39:30	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 10:38:51
+2019-11-22 17:39:30	--	Channel #Mechboards: 139 nicks (0 ops, 0 voices, 139 normals)
+2019-11-22 17:39:31	--	Channel created on Thu, 21 Feb 2013 05:50:48
+2019-11-22 17:48:01	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #Mechboards
+2019-11-25 09:14:33	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #Mechboards
+2019-11-25 09:14:33	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2019-11-25 09:14:33	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 10:38:51
+2019-11-25 09:14:33	--	Channel #Mechboards: 137 nicks (0 ops, 0 voices, 137 normals)
+2019-11-25 09:14:33	--	Channel created on Thu, 21 Feb 2013 05:50:48
+2019-11-25 09:30:55	<--	arij (uid225068@gateway/web/irccloud.com/x-jeczeytlfamplirv) has quit (Quit: Connection closed for inactivity)
+2019-11-25 09:52:14	-->	figuinhas (~pirilauam@a94-133-190-131.cpe.netcabo.pt) has joined #Mechboards
+2019-11-25 10:20:46	<--	figuinhas (~pirilauam@a94-133-190-131.cpe.netcabo.pt) has quit (Remote host closed the connection)
+2019-11-25 10:23:38	<--	gagbo (~gagbo@unaffiliated/gagbo) has quit (Ping timeout: 240 seconds)
+2019-11-25 10:25:22	-->	gagbo (~gagbo@unaffiliated/gagbo) has joined #Mechboards
+2019-11-25 10:30:57	<--	gagbo (~gagbo@unaffiliated/gagbo) has quit (Ping timeout: 240 seconds)
+2019-11-25 10:31:00	-->	figuinhas (~pirilauam@194-79-86-23.static.net.novis.pt) has joined #Mechboards
+2019-11-25 10:32:11	<--	eszett_ (~eszett@unaffiliated/eszett) has quit (Quit: Leaving)
+2019-11-25 10:32:48	-->	gagbo (~gagbo@unaffiliated/gagbo) has joined #Mechboards
+2019-11-25 10:44:50	<--	cyberjunkie (~cyberjunk@2400:6180:100:d0::8e0:5001) has quit (Quit: WeeChat 2.2)
+2019-11-25 10:45:41	<--	pacbard (~pacbard@68.237.202.35.bc.googleusercontent.com) has quit (Read error: Connection reset by peer)
+2019-11-25 10:45:45	-->	cyberjunkie (~cyberjunk@2400:6180:100:d0::8e0:5001) has joined #Mechboards
+2019-11-25 10:47:55	-->	pacbard (~pacbard@68.237.202.35.bc.googleusercontent.com) has joined #Mechboards
+2019-11-25 11:00:08	<--	zamnedix (~zamnedix@zamnedix.net) has quit (Quit: ZNC 1.7.4+deb7 - https://znc.in)
+2019-11-25 11:03:52	-->	zamnedix (~zamnedix@zamnedix.net) has joined #Mechboards
+2019-11-25 11:36:20	--	ecloud_wfh is now known as ecloud
+2019-11-25 12:19:09	-->	ihre (9180c26a@gateway/web/cgi-irc/kiwiirc.com/ip.145.128.194.106) has joined #Mechboards
+2019-11-25 12:23:41	-->	Cartoon-Dude (~Thunderbi@195.48.13.205) has joined #Mechboards
+2019-11-25 12:48:33	<--	spr0k3t (~spr0k3t@136.32.25.186) has quit (Ping timeout: 240 seconds)
+2019-11-25 12:51:47	<--	echarlie (irc-user@landgr.af) has quit (Ping timeout: 250 seconds)
+2019-11-25 12:54:04	-->	solalrpex (~bas@85.146.244.194) has joined #Mechboards
+2019-11-25 12:55:06	-->	echarlie (irc-user@landgr.af) has joined #Mechboards
+2019-11-25 13:59:44	-->	veam (uid157194@gateway/web/irccloud.com/x-dynczmscxjnlxpek) has joined #Mechboards
+2019-11-25 14:22:45	<--	ihre (9180c26a@gateway/web/cgi-irc/kiwiirc.com/ip.145.128.194.106) has quit (Remote host closed the connection)
+2019-11-25 14:25:39	<--	Cartoon-Dude (~Thunderbi@195.48.13.205) has quit (Ping timeout: 265 seconds)
+2019-11-25 14:26:29	-->	ihre (9180c26a@gateway/web/cgi-irc/kiwiirc.com/ip.145.128.194.106) has joined #Mechboards
+2019-11-25 14:27:24	-->	Cartoon-Dude (~Thunderbi@195.48.13.205) has joined #Mechboards
+2019-11-25 15:06:17	<--	im0nde_ (~im0nde@xdsl-213-196-246-236.nc.de) has quit (Ping timeout: 240 seconds)
+2019-11-25 15:14:53	-->	im0nde (~im0nde@2a0a-a546-b9a0-0-2ad2-44ff-fe00-9395.ipv6dyn.netcologne.de) has joined #Mechboards
+2019-11-25 15:22:37	-->	ShinyRice (~ShinyRice@81.203.50.77.dyn.user.ono.com) has joined #Mechboards
+2019-11-25 15:40:50	<--	solalrpex (~bas@85.146.244.194) has quit (Ping timeout: 240 seconds)
+2019-11-25 15:44:26	<--	ihre (9180c26a@gateway/web/cgi-irc/kiwiirc.com/ip.145.128.194.106) has quit (Ping timeout: 265 seconds)
+2019-11-25 16:14:35	<--	eziwaq (~eziwaq@unaffiliated/eziwaq) has quit (Read error: Connection reset by peer)
+2019-11-25 16:16:20	-->	eziwaq (~eziwaq@unaffiliated/eziwaq) has joined #Mechboards
+2019-11-25 16:52:02	<--	ShinyRice (~ShinyRice@81.203.50.77.dyn.user.ono.com) has quit (Quit: ShinyRice)
+2019-11-25 16:54:36	-->	ShinyRice (~ShinyRice@81.203.50.77.dyn.user.ono.com) has joined #Mechboards
+2019-11-25 16:57:58	<--	ShinyRice (~ShinyRice@81.203.50.77.dyn.user.ono.com) has quit (Client Quit)
+2019-11-25 16:59:58	-->	ShinyRice (~ShinyRice@81.203.50.77.dyn.user.ono.com) has joined #Mechboards
+2019-11-25 17:33:53	-->	ihre (535656c4@gateway/web/cgi-irc/kiwiirc.com/ip.83.86.86.196) has joined #Mechboards
+2019-11-26 09:34:59	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #Mechboards
+2019-11-26 09:34:59	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2019-11-26 09:34:59	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 10:38:51
+2019-11-26 09:34:59	--	Channel #Mechboards: 133 nicks (0 ops, 0 voices, 133 normals)
+2019-11-26 09:34:59	--	Channel created on Thu, 21 Feb 2013 05:50:48
+2019-11-26 09:38:28	<--	arij (uid225068@gateway/web/irccloud.com/x-iktopjqurnlqaqou) has quit (Quit: Connection closed for inactivity)
+2019-11-26 09:38:39	switchy	oh g'day mads-
+2019-11-26 09:51:11	-->	ihre (535656c4@gateway/web/cgi-irc/kiwiirc.com/ip.83.86.86.196) has joined #Mechboards
+2019-11-26 09:53:15	-->	gagbo (~gagbo@unaffiliated/gagbo) has joined #Mechboards
+2019-11-26 09:54:22	day	anyone in for a new threadripper? ^.^
+2019-11-26 09:55:44	switchy	heh, I got the 3900x
+2019-11-26 09:56:13	day	yeah expensive enough
+2019-11-26 10:45:49	<--	pacbard (~pacbard@68.237.202.35.bc.googleusercontent.com) has quit (Read error: Connection reset by peer)
+2019-11-26 10:47:38	-->	pacbard (~pacbard@68.237.202.35.bc.googleusercontent.com) has joined #Mechboards
+2019-11-26 10:51:30	day	switchy: how much RAM?
+2019-11-26 11:00:17	<--	zamnedix (~zamnedix@zamnedix.net) has quit (Quit: ZNC 1.7.4+deb7 - https://znc.in)
+2019-11-26 11:03:59	-->	zamnedix (~zamnedix@zamnedix.net) has joined #Mechboards
+2019-11-26 11:04:36	switchy	day, 32
+2019-11-26 11:05:48	day	disappointing! D:
+2019-11-26 11:06:54	day	but i guess more isnt really feasable on the non hedt platforms thanks to the dual channel interface
+2019-11-26 11:07:22	switchy	day, yeah, if I need more ram I'll just run stuff on hpc
+2019-11-26 11:09:36	day	you mean a rented VM?
+2019-11-26 11:10:10	switchy	day, no I mean an hpc facility
+2019-11-26 11:10:24	day	yeah but i doubt you have one in your basement ^^
+2019-11-26 11:10:41	switchy	heh, true, but I have access to one :)
+2019-11-26 11:11:13	day	everyone does. just most have to pay by the minute :p
+2019-11-26 11:11:44	switchy	poor people
+2019-11-26 11:12:21	switchy	well, I do have to pay, just imaginary supercomputer bucks
+2019-11-26 11:13:03	day	i would love to see the booking schedule of a supercomputer tbh
+2019-11-26 11:13:13	day	i bet theres so much bullshit being done on them
+2019-11-26 11:13:37	switchy	heh, whenever I look at the queue it's mostly computational chemistry
+2019-11-26 11:13:40	switchy	booooring
+2019-11-26 11:14:14	day	same goes for spacebased sensor equipment
+2019-11-26 11:14:46	day	well stuff may sound boring but that doesnt mean it's sensible work :)
+2019-11-26 11:15:03	day	it's not*
+2019-11-26 11:15:04	switchy	true, it's just not interesting in a supercomputer sense
+2019-11-26 11:15:31	switchy	multi-thousand core jobs are more fun
+2019-11-26 11:16:09	switchy	5180 cores, 2.65TB ram in use on one
+2019-11-26 11:16:33	day	arent all hpc tasks large parallelized? i would assume the single threading performance of these things is terrible
+2019-11-26 11:17:14	switchy	ideally, but some people just use it as a big pool of cores for single thread jobs
+2019-11-26 11:17:40	switchy	I actually don't know how computational chemistry codes work to be honest
+2019-11-26 11:17:51	switchy	or anything much outside my domain :P
+2019-11-26 12:18:04	-->	figuinhas (~pirilauam@194-79-86-23.static.net.novis.pt) has joined #Mechboards
+2019-11-26 12:22:56	<--	sm0g (~sm0g@unaffiliated/sm0g) has quit (Ping timeout: 276 seconds)
+2019-11-26 12:36:00	-->	sm0g (~sm0g@unaffiliated/sm0g) has joined #Mechboards
+2019-11-26 12:49:15	mads-	switchy: howdy
+2019-11-26 13:38:27	-->	ShinyRice (~ShinyRice@81.203.50.77.dyn.user.ono.com) has joined #Mechboards
+2019-11-26 13:49:16	<--	tg (~x@unaffiliated/tg) has quit (Ping timeout: 264 seconds)
+2019-11-26 13:52:36	-->	tg (~x@unaffiliated/tg) has joined #Mechboards
+2019-11-26 14:42:00	-->	veam (uid157194@gateway/web/irccloud.com/x-vovoassprvxkevdz) has joined #Mechboards
+2019-11-26 15:08:07	john_dee	blitzkraft: Nice!
+2019-11-26 15:08:45	john_dee	Custom keyboard using those could be called FrankenTopre :D
+2019-11-26 17:00:17	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #Mechboards
+2019-11-26 17:00:17	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2019-11-26 17:00:17	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 10:38:51
+2019-11-26 17:00:17	--	Channel #Mechboards: 137 nicks (0 ops, 0 voices, 137 normals)
+2019-11-26 17:00:17	--	Channel created on Thu, 21 Feb 2013 05:50:48
+2019-11-27 09:05:18	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #Mechboards
+2019-11-27 09:05:18	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2019-11-27 09:05:18	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 10:38:51
+2019-11-27 09:05:18	--	Channel #Mechboards: 134 nicks (0 ops, 0 voices, 134 normals)
+2019-11-27 09:05:18	--	Channel created on Thu, 21 Feb 2013 05:50:48
+2019-11-27 09:31:28	-->	eszett (~eszett@unaffiliated/eszett) has joined #Mechboards
+2019-11-27 09:37:59	<--	eszett (~eszett@unaffiliated/eszett) has quit (Quit: Leaving)
+2019-11-27 10:39:59	-->	figuinhas (~pirilauam@194-79-86-23.static.net.novis.pt) has joined #Mechboards
+2019-11-27 10:52:57	<--	ihre (535656c4@gateway/web/cgi-irc/kiwiirc.com/ip.83.86.86.196) has quit (Ping timeout: 240 seconds)
+2019-11-27 10:57:39	-->	jokoon (~jokoon@unaffiliated/jokoon) has joined #Mechboards
+2019-11-27 11:00:52	<--	zamnedix (~zamnedix@zamnedix.net) has quit (Quit: ZNC 1.7.4+deb7 - https://znc.in)
+2019-11-27 11:03:37	-->	zamnedix (~zamnedix@zamnedix.net) has joined #Mechboards
+2019-11-27 11:05:58	-->	ShinyRice (~ShinyRice@2001:720:1014:f410:fc15:6a01:6aee:7cbf) has joined #Mechboards
+2019-11-27 11:06:52	<--	cyberjunkie (~cyberjunk@2400:6180:100:d0::8e0:5001) has quit (Quit: WeeChat 2.2)
+2019-11-27 11:07:12	-->	cyberjunkie (~cyberjunk@2400:6180:100:d0::8e0:5001) has joined #Mechboards
+2019-11-27 11:35:34	-->	eszett (~eszett@unaffiliated/eszett) has joined #Mechboards
+2019-11-27 11:59:12	<--	ShinyRice (~ShinyRice@2001:720:1014:f410:fc15:6a01:6aee:7cbf) has quit (Quit: ShinyRice)
+2019-11-27 12:00:59	<--	eszett (~eszett@unaffiliated/eszett) has quit (Quit: Leaving)
+2019-11-27 12:29:08	-->	ihre (9180c26a@gateway/web/cgi-irc/kiwiirc.com/ip.145.128.194.106) has joined #Mechboards
+2019-11-27 13:13:45	<--	ihre (9180c26a@gateway/web/cgi-irc/kiwiirc.com/ip.145.128.194.106) has quit (Quit: Connection closed)
+2019-11-27 13:18:38	-->	spydon (~spydon@188.226.230.107) has joined #Mechboards
+2019-11-27 14:33:37	-->	veam (uid157194@gateway/web/irccloud.com/x-gizddudvwksjcpoa) has joined #Mechboards
+2019-11-27 15:13:04	<--	mord0d (~mord0d@gateway/tor-sasl/mord0d) has quit (Quit: segmentation fault)
+2019-11-27 15:17:48	-->	mord0d (~mord0d@gateway/tor-sasl/mord0d) has joined #Mechboards
+2019-11-27 15:26:11	-->	ShinyRice (~ShinyRice@2001:720:1014:f410:fc15:6a01:6aee:7cbf) has joined #Mechboards
+2019-11-27 15:42:24	-->	ihre (535656c4@gateway/web/cgi-irc/kiwiirc.com/ip.83.86.86.196) has joined #Mechboards
+2019-11-27 16:36:57	<--	flappity_ (~wolf@172-221-242-216.res.spectrum.com) has quit (Ping timeout: 240 seconds)
+2019-11-27 16:38:03	<--	gagbo (~gagbo@unaffiliated/gagbo) has quit (Quit: I'm out !)
+2019-11-27 16:40:34	-->	flappity (~wolf@172-221-242-216.res.spectrum.com) has joined #Mechboards
+2019-11-27 17:00:25	<--	ShinyRice (~ShinyRice@2001:720:1014:f410:fc15:6a01:6aee:7cbf) has quit (Quit: ShinyRice)
+2019-11-27 17:03:11	-->	ShinyRice (~ShinyRice@2001:720:1014:f410:fc15:6a01:6aee:7cbf) has joined #Mechboards
+2019-11-27 17:15:32	-->	robotmay (~quassel@2001:8b0:7af0:2580:89be:567:6dfa:8d2b) has joined #Mechboards
+2019-11-27 17:20:32	<--	robotmay (~quassel@2001:8b0:7af0:2580:89be:567:6dfa:8d2b) has quit (Quit: Be excellent to each other)
+2019-11-27 17:21:00	-->	robotmay (~beepboop@2001:8b0:7af0:2580:89be:567:6dfa:8d2b) has joined #Mechboards
+2019-11-27 17:24:05	-->	_rubik (~w.griggs@unaffiliated/-rubik/x-6307279) has joined #Mechboards
+2019-11-27 17:24:46	_rubik	Is anyone here familiar with hifi, or even just audio equiptment in general?
+2019-11-27 17:24:53	_rubik	also, good morning folks
+2019-11-27 17:39:59	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #Mechboards
+2019-11-27 17:42:29	<--	_rubik (~w.griggs@unaffiliated/-rubik/x-6307279) has quit (Ping timeout: 276 seconds)
+2019-11-27 17:44:26	-->	_rubik (~w.griggs@unaffiliated/-rubik/x-6307279) has joined #Mechboards
+2019-11-27 17:46:37	<--	yokel (~yokel@unaffiliated/contempt) has quit (Ping timeout: 240 seconds)
+2019-11-27 17:52:29	-->	yokel (~yokel@unaffiliated/contempt) has joined #Mechboards
+2019-11-29 09:13:56	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #Mechboards
+2019-11-29 09:13:56	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2019-11-29 09:13:56	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 10:38:51
+2019-11-29 09:13:56	--	Channel #Mechboards: 137 nicks (0 ops, 0 voices, 137 normals)
+2019-11-29 09:13:57	--	Channel created on Thu, 21 Feb 2013 05:50:48
+2019-11-29 09:26:41	<--	StathisA (~StathisA@unaffiliated/stathisa) has quit (Ping timeout: 250 seconds)
+2019-11-29 09:30:55	-->	StathisA (~StathisA@unaffiliated/stathisa) has joined #Mechboards
+2019-11-29 09:38:45	<--	zacps (~zacmps@69.211.252.27.dyn.cust.vf.net.nz) has quit (Ping timeout: 246 seconds)
+2019-11-29 09:43:45	<--	ihre (535656c4@gateway/web/cgi-irc/kiwiirc.com/ip.83.86.86.196) has quit (Ping timeout: 265 seconds)
+2019-11-29 10:23:27	-->	ihre (9180c26a@gateway/web/cgi-irc/kiwiirc.com/ip.145.128.194.106) has joined #Mechboards
+2019-11-29 11:00:05	<--	zamnedix (~zamnedix@zamnedix.net) has quit (Quit: ZNC 1.7.4+deb7 - https://znc.in)
+2019-11-29 11:00:26	-->	hxc0 (~hxc0@unaffiliated/hxc0) has joined #Mechboards
+2019-11-29 11:01:17	-->	zamnedix (~zamnedix@zamnedix.net) has joined #Mechboards
+2019-11-29 11:08:18	--	im0nde_ is now known as im0nde
+2019-11-29 11:14:32	-->	gagbo (~gagbo@unaffiliated/gagbo) has joined #Mechboards
+2019-11-29 11:31:14	-->	figuinhas (~pirilauam@194-79-86-23.static.net.novis.pt) has joined #Mechboards
+2019-11-29 11:32:12	<--	hxc0 (~hxc0@unaffiliated/hxc0) has quit (Ping timeout: 252 seconds)
+2019-11-29 11:32:34	-->	ShinyRice (~ShinyRice@81.203.50.77.dyn.user.ono.com) has joined #Mechboards
+2019-11-29 11:39:03	-->	hxc0 (~hxc0@unaffiliated/hxc0) has joined #Mechboards
+2019-11-29 12:33:20	<--	ShinyRice (~ShinyRice@81.203.50.77.dyn.user.ono.com) has quit (Quit: ShinyRice)
+2019-11-29 13:11:22	<--	ihre (9180c26a@gateway/web/cgi-irc/kiwiirc.com/ip.145.128.194.106) has quit (Ping timeout: 268 seconds)
+2019-11-29 13:33:41	-->	anotheryou (uid257186@gateway/web/irccloud.com/x-gckyhaehsaxstxil) has joined #Mechboards
+2019-11-29 14:30:59	<--	gagbo (~gagbo@unaffiliated/gagbo) has quit (Quit: I'm out !)
+2019-11-29 14:54:23	<--	smeggysmeg (~smeg@unaffiliated/smeggysmeg) has quit (Quit: Enlightenment is man’s leaving his self-caused immaturity. Immaturity is the incapacity to use one's intelligence without the guidance of another. -Immanuel Kant)
+2019-11-29 14:57:00	-->	smeggysmeg (~smeg@unaffiliated/smeggysmeg) has joined #Mechboards
+2019-11-29 15:36:40	<--	xelxebar (~xelxebar@gateway/tor-sasl/xelxebar) has quit (Ping timeout: 260 seconds)
+2019-11-29 15:38:08	-->	xelxebar (~xelxebar@gateway/tor-sasl/xelxebar) has joined #Mechboards
+2019-11-29 16:46:18	<--	figuinhas (~pirilauam@194-79-86-23.static.net.novis.pt) has quit (Remote host closed the connection)
+2019-11-29 16:46:45	-->	figuinhas (~pirilauam@194-79-86-23.static.net.novis.pt) has joined #Mechboards
+2019-11-29 16:58:39	<--	hxc0 (~hxc0@unaffiliated/hxc0) has quit (Ping timeout: 250 seconds)
+2019-11-29 17:02:48	<--	Sabotender (~Sabotende@unaffiliated/sabotender) has quit (Read error: Connection reset by peer)
+2019-11-29 17:05:26	-->	hxc0 (~hxc0@unaffiliated/hxc0) has joined #Mechboards
+2019-11-29 17:42:00	-->	Sabotender (~Sabotende@unaffiliated/sabotender) has joined #Mechboards
+2019-12-02 09:11:54	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #Mechboards
+2019-12-02 09:11:54	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2019-12-02 09:11:54	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 10:38:51
+2019-12-02 09:11:55	--	Channel #Mechboards: 136 nicks (0 ops, 0 voices, 136 normals)
+2019-12-02 09:11:56	--	Channel created on Thu, 21 Feb 2013 05:50:48
+2019-12-02 09:52:07	-->	anotheryou (uid257186@gateway/web/irccloud.com/x-evdttyrgnvdvzrqb) has joined #Mechboards
+2019-12-02 10:19:21	-->	clemens3 (~clemens@mx.eniso-partners.com) has joined #Mechboards
+2019-12-02 11:00:08	<--	zamnedix (~zamnedix@zamnedix.net) has quit (Quit: ZNC 1.7.4+deb7 - https://znc.in)
+2019-12-02 11:01:36	-->	zamnedix (~zamnedix@zamnedix.net) has joined #Mechboards
+2019-12-02 11:02:23	-->	figuinhas (~pirilauam@62.169.82.178.rev.optimus.pt) has joined #Mechboards
+2019-12-02 11:10:58	<--	figuinhas (~pirilauam@62.169.82.178.rev.optimus.pt) has quit (Remote host closed the connection)
+2019-12-02 11:18:56	-->	figuinhas (~pirilauam@62.169.82.178.rev.optimus.pt) has joined #Mechboards
+2019-12-02 11:23:36	<--	figuinhas (~pirilauam@62.169.82.178.rev.optimus.pt) has quit (Ping timeout: 240 seconds)
+2019-12-02 11:25:22	-->	figuinhas (~pirilauam@194-79-86-23.static.net.novis.pt) has joined #Mechboards
+2019-12-02 12:16:02	<--	joesventek (~smoon@joesventek.powered.by.lunarbnc.net) has quit (Remote host closed the connection)
+2019-12-02 12:23:16	-->	joesventek (~smoon@joesventek.powered.by.lunarbnc.net) has joined #Mechboards
+2019-12-02 12:32:52	<--	{Opsimath}Shawn (~shawn156@unaffiliated/shawn156) has quit (Read error: Connection reset by peer)
+2019-12-02 12:36:38	--	xcm is now known as Guest72826
+2019-12-02 12:36:38	<--	Guest72826 (~xcm@ipa210.225.tellas.gr) has quit (Killed (karatkievich.freenode.net (Nickname regained by services)))
+2019-12-02 12:38:02	-->	xcm (~xcm@ipa210.225.tellas.gr) has joined #Mechboards
+2019-12-02 14:08:36	-->	Cartoon-Dude (~Thunderbi@195.48.13.205) has joined #Mechboards
+2019-12-02 14:14:06	<--	GoldenBear (~gb@172.83.42.24) has quit (Quit: ZNC 1.7.4 - https://znc.in)
+2019-12-02 14:14:58	-->	GoldenBear (~gb@172.83.42.24) has joined #Mechboards
+2019-12-02 14:30:58	-->	veam (uid157194@gateway/web/irccloud.com/x-qafyjbfgapzjtrfb) has joined #Mechboards
+2019-12-02 14:52:05	-->	multiproc (~mark@unaffiliated/multiproc) has joined #Mechboards
+2019-12-02 15:00:25	<--	ThePendulum (~znc@37.139.2.240) has left #Mechboards
+2019-12-02 15:10:45	-->	ShinyRice (~ShinyRice@81.203.50.77.dyn.user.ono.com) has joined #Mechboards
+2019-12-02 15:31:58	-->	c0ck4m0u53 (~c0ck4m0u5@BSN-176-198-121.dynamic.siol.net) has joined #Mechboards
+2019-12-02 16:14:07	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #Mechboards
+2019-12-02 16:16:09	<--	ShinyRice (~ShinyRice@81.203.50.77.dyn.user.ono.com) has quit (Quit: ShinyRice)
+2019-12-02 16:29:57	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Ping timeout: 250 seconds)
+2019-12-02 16:30:52	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #Mechboards
+2019-12-02 16:48:04	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Quit: Leaving)
+2019-12-02 16:58:06	-->	gioyik (~gioyik@186.114.52.209) has joined #Mechboards
+2019-12-02 17:47:42	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #Mechboards
+2019-12-02 17:49:04	-->	ShinyRice (~ShinyRice@81.203.50.77.dyn.user.ono.com) has joined #Mechboards
+2019-12-03 09:07:31	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #Mechboards
+2019-12-03 09:07:31	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2019-12-03 09:07:31	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 10:38:51
+2019-12-03 09:07:31	--	Channel #Mechboards: 135 nicks (0 ops, 0 voices, 135 normals)
+2019-12-03 09:07:31	--	Channel created on Thu, 21 Feb 2013 05:50:48
+2019-12-03 09:15:32	-->	Joric (~joric@unaffiliated/joric) has joined #Mechboards
+2019-12-03 09:30:01	<--	Joric (~joric@unaffiliated/joric) has quit
+2019-12-03 09:34:49	day	oh boi
+2019-12-03 09:35:18	day	i just spotted the stainless steel casio gshock
+2019-12-03 09:35:28	day	for the cheap price of 399
+2019-12-03 10:03:56	-->	clemens3 (~clemens@mx.eniso-partners.com) has joined #Mechboards
+2019-12-03 10:03:58	<--	clemens3 (~clemens@mx.eniso-partners.com) has quit (Client Quit)
+2019-12-03 10:04:42	-->	clemens3 (~clemens@mx.eniso-partners.com) has joined #Mechboards
+2019-12-03 10:04:42	<--	clemens3 (~clemens@mx.eniso-partners.com) has quit (Client Quit)
+2019-12-03 10:05:01	-->	clemens3 (~clemens@mx.eniso-partners.com) has joined #Mechboards
+2019-12-03 10:15:46	<--	arij (uid225068@gateway/web/irccloud.com/x-tkipzocjnymqfurr) has quit (Quit: Connection closed for inactivity)
+2019-12-03 10:34:16	-->	ponky (ponky@94.237.13.38) has joined #Mechboards
+2019-12-03 10:35:52	switchy	blitzkraft, yeet
+2019-12-03 10:35:58	switchy	day, lonk?
+2019-12-03 10:42:17	<--	Zorton (~zorton@unaffiliated/zorton) has quit (Ping timeout: 240 seconds)
+2019-12-03 10:45:13	day	switchy: lonk?
+2019-12-03 10:45:21	switchy	to this watch?
+2019-12-03 10:45:23	switchy	link
+2019-12-03 10:45:28	day	oh
+2019-12-03 10:45:55	day	GMW-B5000GD-1DR google that
+2019-12-03 10:46:38	day	always wanted a high quality watch in that style. too bad they stuffed bluetooth into it :|
+2019-12-03 10:49:01	switchy	I guess you don't *need* to use the bluetooth though
+2019-12-03 11:00:18	<--	zamnedix (~zamnedix@zamnedix.net) has quit (Quit: ZNC 1.7.4+deb7 - https://znc.in)
+2019-12-03 11:03:17	day	switchy: it's just that it includes the obsolescence problem but non of the smartwatch functionality. but true the watch works fine without a phone
+2019-12-03 11:03:54	switchy	at least it synchronises the time through radio
+2019-12-03 11:04:14	-->	figuinhas (~pirilauam@194-79-86-23.static.net.novis.pt) has joined #Mechboards
+2019-12-03 11:04:24	switchy	that sounds cooler than bluetooth
+2019-12-03 11:05:17	-->	zamnedix (~zamnedix@zamnedix.net) has joined #Mechboards
+2019-12-03 11:06:30	<--	gioyik (~gioyik@186.114.52.209) has quit (Ping timeout: 252 seconds)
+2019-12-03 11:13:28	-->	multiproc (~mark@unaffiliated/multiproc) has joined #Mechboards
+2019-12-03 11:29:37	<--	elfmacs (~elfmacs@159.226.199.101) has quit (Ping timeout: 250 seconds)
+2019-12-03 11:33:35	-->	elfmacs (~elfmacs@159.226.199.101) has joined #Mechboards
+2019-12-03 11:33:42	day	they probably mean dcf77
+2019-12-03 11:40:04	day	dunno how it works in other countries, but in germany ?europe? theres this massive antenna array in Frankfurt which transmits a timesignal in a iirc. 1000km radius
+2019-12-03 11:40:38	day	you probably need quite large antennas at the edges though. im 400km away and reception isnt an issue
+2019-12-03 11:59:44	day	anyone doing advent of code?
+2019-12-03 11:59:59	j`ey	blitzkraft
+2019-12-03 12:06:00	day	just finished day1 got some catching up to do
+2019-12-03 13:20:54	<--	figuinhas (~pirilauam@194-79-86-23.static.net.novis.pt) has quit (Ping timeout: 268 seconds)
+2019-12-03 14:15:35	<--	elfmacs (~elfmacs@159.226.199.101) has quit (Ping timeout: 276 seconds)
+2019-12-03 14:18:48	-->	elfmacs (~elfmacs@159.226.199.101) has joined #Mechboards
+2019-12-03 14:23:52	<--	joesventek (~smoon@joesventek.powered.by.lunarbnc.net) has quit (Remote host closed the connection)
+2019-12-03 14:29:37	-->	figuinhas (~pirilauam@a109-48-28-166.cpe.netcabo.pt) has joined #Mechboards
+2019-12-03 14:31:36	-->	joesventek (~smoon@joesventek.powered.by.lunarbnc.net) has joined #Mechboards
+2019-12-03 15:00:21	-->	ShinyRice (~ShinyRice@81.203.50.77.dyn.user.ono.com) has joined #Mechboards
+2019-12-03 15:39:01	-->	c0ck4m0u53 (~c0ck4m0u5@BSN-176-198-121.dynamic.siol.net) has joined #Mechboards
+2019-12-03 15:39:11	-->	veam (uid157194@gateway/web/irccloud.com/x-txxuqscwjcppmwat) has joined #Mechboards
+2019-12-03 15:51:56	-->	Cartoon-Dude (~Thunderbi@195.48.13.205) has joined #Mechboards
+2019-12-03 15:53:05	<--	multiproc (~mark@unaffiliated/multiproc) has quit (Ping timeout: 250 seconds)
+2019-12-03 16:14:03	<--	elfmacs (~elfmacs@159.226.199.101) has quit (Ping timeout: 245 seconds)
+2019-12-03 16:28:28	<--	ShinyRice (~ShinyRice@81.203.50.77.dyn.user.ono.com) has quit (Quit: ShinyRice)
+2019-12-03 16:30:47	<--	Cartoon-Dude (~Thunderbi@195.48.13.205) has quit (Ping timeout: 250 seconds)
+2019-12-03 17:01:11	-->	gioyik (~gioyik@186.114.52.209) has joined #Mechboards
+2019-12-03 17:03:46	-->	ShinyRice (~ShinyRice@81.203.50.77.dyn.user.ono.com) has joined #Mechboards
+2019-12-03 17:14:52	-->	Cartoon-Dude (~Thunderbi@195.48.13.205) has joined #Mechboards
+2019-12-03 17:18:18	<--	ShinyRice (~ShinyRice@81.203.50.77.dyn.user.ono.com) has quit (Quit: ShinyRice)
+2019-12-03 17:19:15	-->	multiproc (~mark@unaffiliated/multiproc) has joined #Mechboards
+2019-12-03 17:38:17	-->	zekkin (~z@104.131.11.92) has joined #Mechboards
+2019-12-03 17:45:07	<--	c0ck4m0u53 (~c0ck4m0u5@BSN-176-198-121.dynamic.siol.net) has quit (Quit: Leaving)
+2019-12-03 17:52:16	-->	c0ck4m0u53 (~c0ck4m0u5@BSN-176-198-121.dynamic.siol.net) has joined #Mechboards
+2019-12-04 09:10:44	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #Mechboards
+2019-12-04 09:10:44	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2019-12-04 09:10:44	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 10:38:51
+2019-12-04 09:10:44	--	Channel #Mechboards: 138 nicks (0 ops, 0 voices, 138 normals)
+2019-12-04 09:10:44	--	Channel created on Thu, 21 Feb 2013 05:50:48
+2019-12-04 09:12:14	<--	gioyik (~gioyik@186.114.52.209) has quit (Quit: WeeChat 2.6)
+2019-12-04 09:12:38	-->	Sabotender (~Sabotende@unaffiliated/sabotender) has joined #Mechboards
+2019-12-04 09:14:35	-->	gioyik (~gioyik@186.114.52.209) has joined #Mechboards
+2019-12-04 09:23:17	<--	gioyik (~gioyik@186.114.52.209) has quit (Quit: WeeChat 2.6)
+2019-12-04 09:23:51	<--	thykka (~thykka@unaffiliated/thykka) has quit (*.net *.split)
+2019-12-04 09:23:52	<--	vhost- (~vhost@infoforcefeed/vhost-) has quit (*.net *.split)
+2019-12-04 09:23:52	<--	yourfate (~yourfate@unaffiliated/yourfate) has quit (*.net *.split)
+2019-12-04 09:23:52	<--	j`ey (~joey@unaffiliated/jey/x-00002) has quit (*.net *.split)
+2019-12-04 09:23:57	-->	gioyik (~gioyik@186.114.52.209) has joined #Mechboards
+2019-12-04 09:24:34	-->	thykka (~thykka@unaffiliated/thykka) has joined #Mechboards
+2019-12-04 09:24:34	-->	j`ey (~joey@unaffiliated/jey/x-00002) has joined #Mechboards
+2019-12-04 09:24:34	-->	vhost- (~vhost@infoforcefeed/vhost-) has joined #Mechboards
+2019-12-04 09:24:34	-->	yourfate (~yourfate@unaffiliated/yourfate) has joined #Mechboards
+2019-12-04 09:24:53	<--	vhost- (~vhost@infoforcefeed/vhost-) has quit (Max SendQ exceeded)
+2019-12-04 09:24:53	<--	yourfate (~yourfate@unaffiliated/yourfate) has quit (Max SendQ exceeded)
+2019-12-04 09:25:24	-->	vhost- (~vhost@infoforcefeed/vhost-) has joined #Mechboards
+2019-12-04 09:26:12	-->	yourfate (~yourfate@unaffiliated/yourfate) has joined #Mechboards
+2019-12-04 09:31:07	-->	clemens3 (~clemens@mx.eniso-partners.com) has joined #Mechboards
+2019-12-04 09:36:41	-->	ShinyRice (~ShinyRice@2001:720:1014:f410:fc15:6a01:6aee:7cbf) has joined #Mechboards
+2019-12-04 09:38:12	<--	gioyik (~gioyik@186.114.52.209) has quit (Quit: WeeChat 2.6)
+2019-12-04 09:55:49	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #Mechboards
+2019-12-04 10:06:51	-->	anotheryou (uid257186@gateway/web/irccloud.com/x-upcyydhehavnynri) has joined #Mechboards
+2019-12-04 10:09:06	<--	AtlasRisen (~AtlasRise@unaffiliated/atlasrisen) has quit (Ping timeout: 265 seconds)
+2019-12-04 10:10:17	<--	zacmps (~zacmps@121-74-125-244.telstraclear.net) has quit (Ping timeout: 250 seconds)
+2019-12-04 10:24:52	-->	multiproc (~mark@unaffiliated/multiproc) has joined #Mechboards
+2019-12-04 10:42:16	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Quit: Leaving)
+2019-12-04 10:44:17	-->	AtlasRisen (~AtlasRise@unaffiliated/atlasrisen) has joined #Mechboards
+2019-12-04 10:48:32	<--	flappity (~wolf@172-221-242-216.res.spectrum.com) has quit (Read error: Connection reset by peer)
+2019-12-04 10:53:43	-->	Sabotend_ (~Sabotende@unaffiliated/sabotender) has joined #Mechboards
+2019-12-04 10:56:39	<--	Sabotender (~Sabotende@unaffiliated/sabotender) has quit (Ping timeout: 250 seconds)
+2019-12-04 10:58:46	<--	Sabotend_ (~Sabotende@unaffiliated/sabotender) has quit (Quit: 1000 Needles!)
+2019-12-04 10:59:27	-->	Sabotender (~Sabotende@unaffiliated/sabotender) has joined #Mechboards
+2019-12-04 11:00:08	<--	zamnedix (~zamnedix@zamnedix.net) has quit (Quit: ZNC 1.7.4+deb7 - https://znc.in)
+2019-12-04 11:02:43	-->	zamnedix (~zamnedix@zamnedix.net) has joined #Mechboards
+2019-12-04 11:23:17	<--	figuinhas (~pirilauam@a109-48-28-166.cpe.netcabo.pt) has quit (Ping timeout: 240 seconds)
+2019-12-04 11:37:56	<--	elfmacs (~elfmacs@2400:dd01:1020:150:1fff:d6e6:16ff:eb3f) has quit (Ping timeout: 252 seconds)
+2019-12-04 11:52:38	<--	ShinyRice (~ShinyRice@2001:720:1014:f410:fc15:6a01:6aee:7cbf) has quit (Quit: ShinyRice)
+2019-12-04 12:02:03	<--	clemens3 (~clemens@mx.eniso-partners.com) has quit (Quit: WeeChat 1.6)
+2019-12-04 12:27:30	<--	arij (uid225068@gateway/web/irccloud.com/x-byeruyqpcabbexyf) has quit (Quit: Connection closed for inactivity)
+2019-12-04 12:43:05	-->	flappity (~wolf@172-221-242-216.res.spectrum.com) has joined #Mechboards
+2019-12-04 13:05:08	-->	elfmacs (~elfmacs@159.226.199.101) has joined #Mechboards
+2019-12-04 13:18:41	<--	amosbird (~amosbird@2a01:111:f102:8001::1761:4cf8) has left #Mechboards ("WeeChat 2.4")
+2019-12-04 13:19:47	-->	eziwaq_ (~eziwaq@unaffiliated/eziwaq) has joined #Mechboards
+2019-12-04 13:22:48	<--	eziwaq (~eziwaq@unaffiliated/eziwaq) has quit (Ping timeout: 245 seconds)
+2019-12-04 13:24:56	-->	eziwaq__ (~eziwaq@unaffiliated/eziwaq) has joined #Mechboards
+2019-12-04 13:29:11	<--	eziwaq_ (~eziwaq@unaffiliated/eziwaq) has quit (Ping timeout: 276 seconds)
+2019-12-04 13:29:19	--	eziwaq__ is now known as eziwaq
+2019-12-04 14:56:16	-->	ShinyRice (~ShinyRice@2001:720:1014:f410:fc15:6a01:6aee:7cbf) has joined #Mechboards
+2019-12-04 14:59:29	<--	elfmacs (~elfmacs@159.226.199.101) has quit (Ping timeout: 268 seconds)
+2019-12-04 15:02:55	-->	elfmacs (~elfmacs@159.226.199.101) has joined #Mechboards
+2019-12-04 15:04:02	<--	ch1pp0 (~ch1pp0@162.243.235.207) has quit (*.net *.split)
+2019-12-04 15:04:02	<--	azend|vps (~quassel@unaffiliated/azend) has quit (*.net *.split)
+2019-12-04 15:04:02	<--	boingolov (~nastynate@c-68-63-243-125.hsd1.tn.comcast.net) has quit (*.net *.split)
+2019-12-04 15:04:02	<--	kzisme (~kzisme@unaffiliated/kzisme) has quit (*.net *.split)
+2019-12-04 15:04:02	<--	thblt (~thblt@unaffiliated/thblt) has quit (*.net *.split)
+2019-12-04 15:04:02	<--	oddie (~oddie@infectiious.xyz) has quit (*.net *.split)
+2019-12-04 15:04:02	<--	Slasher (~Slasher@flatis.moe) has quit (*.net *.split)
+2019-12-04 15:04:02	<--	ashnur (~rak@unaffiliated/ashnur) has quit (*.net *.split)
+2019-12-04 15:05:02	<--	gigetoo (~gigetoo@c83-250-41-185.bredband.comhem.se) has quit (Ping timeout: 268 seconds)
+2019-12-04 15:09:55	-->	oddie (~oddie@infectiious.xyz) has joined #Mechboards
+2019-12-04 15:09:55	-->	kzisme (~kzisme@unaffiliated/kzisme) has joined #Mechboards
+2019-12-04 15:09:55	-->	ch1pp0 (~ch1pp0@162.243.235.207) has joined #Mechboards
+2019-12-04 15:09:55	-->	azend|vps (~quassel@unaffiliated/azend) has joined #Mechboards
+2019-12-04 15:09:55	-->	boingolov (~nastynate@c-68-63-243-125.hsd1.tn.comcast.net) has joined #Mechboards
+2019-12-04 15:09:55	-->	thblt (~thblt@unaffiliated/thblt) has joined #Mechboards
+2019-12-04 15:09:55	-->	Slasher (~Slasher@flatis.moe) has joined #Mechboards
+2019-12-04 15:09:55	-->	ashnur (~rak@unaffiliated/ashnur) has joined #Mechboards
+2019-12-04 15:13:58	<--	ch1pp0 (~ch1pp0@162.243.235.207) has quit (*.net *.split)
+2019-12-04 15:13:58	<--	azend|vps (~quassel@unaffiliated/azend) has quit (*.net *.split)
+2019-12-04 15:13:58	<--	boingolov (~nastynate@c-68-63-243-125.hsd1.tn.comcast.net) has quit (*.net *.split)
+2019-12-04 15:13:58	<--	kzisme (~kzisme@unaffiliated/kzisme) has quit (*.net *.split)
+2019-12-04 15:13:58	<--	thblt (~thblt@unaffiliated/thblt) has quit (*.net *.split)
+2019-12-04 15:13:58	<--	oddie (~oddie@infectiious.xyz) has quit (*.net *.split)
+2019-12-04 15:13:58	<--	Slasher (~Slasher@flatis.moe) has quit (*.net *.split)
+2019-12-04 15:13:58	<--	ashnur (~rak@unaffiliated/ashnur) has quit (*.net *.split)
+2019-12-04 15:17:17	-->	gigetoo (~gigetoo@c83-250-41-185.bredband.comhem.se) has joined #Mechboards
+2019-12-04 15:19:35	-->	oddie (~oddie@infectiious.xyz) has joined #Mechboards
+2019-12-04 15:19:35	-->	kzisme (~kzisme@unaffiliated/kzisme) has joined #Mechboards
+2019-12-04 15:19:35	-->	ch1pp0 (~ch1pp0@162.243.235.207) has joined #Mechboards
+2019-12-04 15:19:35	-->	azend|vps (~quassel@unaffiliated/azend) has joined #Mechboards
+2019-12-04 15:19:35	-->	boingolov (~nastynate@c-68-63-243-125.hsd1.tn.comcast.net) has joined #Mechboards
+2019-12-04 15:19:35	-->	thblt (~thblt@unaffiliated/thblt) has joined #Mechboards
+2019-12-04 15:19:35	-->	Slasher (~Slasher@flatis.moe) has joined #Mechboards
+2019-12-04 15:19:35	-->	ashnur (~rak@unaffiliated/ashnur) has joined #Mechboards
+2019-12-04 15:22:36	-->	veam (uid157194@gateway/web/irccloud.com/x-ziacqyjbutptgbpt) has joined #Mechboards
+2019-12-04 15:27:51	<--	gigetoo (~gigetoo@c83-250-41-185.bredband.comhem.se) has quit (Ping timeout: 268 seconds)
+2019-12-04 15:33:51	Hakala	https://www.youtube.com/watch?v=-butN9lrdWs
+2019-12-04 15:34:10	-->	gigetoo (~gigetoo@c83-250-41-185.bredband.comhem.se) has joined #Mechboards
+2019-12-04 15:38:19	<--	elfmacs (~elfmacs@159.226.199.101) has quit (Ping timeout: 250 seconds)
+2019-12-04 15:43:09	Hakala	As a self identified woman of color, I say this with all due indifference: frick you switchy
+2019-12-04 15:51:11	-->	c0ck4m0u53 (~c0ck4m0u5@BSN-176-198-121.dynamic.siol.net) has joined #Mechboards
+2019-12-04 16:38:46	<--	multiproc (~mark@unaffiliated/multiproc) has quit (Ping timeout: 268 seconds)
+2019-12-04 16:46:15	-->	veegee (~veegee@ipagstaticip-3d3f7614-22f3-5b69-be13-7ab4b2c585d9.sdsl.bell.ca) has joined #Mechboards
+2019-12-04 16:49:47	-->	freyrd (uid202114@gateway/web/irccloud.com/x-ozpivkuvdgrsiobd) has joined #Mechboards
+2019-12-04 16:55:03	-->	clemens3 (~clemens@mx.eniso-partners.com) has joined #Mechboards
+2019-12-04 17:10:34	<--	Sabotender (~Sabotende@unaffiliated/sabotender) has quit (Read error: Connection reset by peer)
+2019-12-04 17:15:45	-->	Sabotender (~Sabotende@unaffiliated/sabotender) has joined #Mechboards
+2019-12-04 17:16:43	-->	multiproc (~mark@unaffiliated/multiproc) has joined #Mechboards
+2019-12-04 17:29:41	<--	Sabotender (~Sabotende@unaffiliated/sabotender) has quit (Ping timeout: 250 seconds)
+2019-12-04 17:35:04	-->	Sabotender (~Sabotende@unaffiliated/sabotender) has joined #Mechboards
+2019-12-04 17:36:11	<--	multiproc (~mark@unaffiliated/multiproc) has quit (Ping timeout: 250 seconds)
+2019-12-04 17:46:09	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #Mechboards
+2019-12-04 17:46:09	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2019-12-04 17:46:09	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 10:38:51
+2019-12-04 17:46:09	--	Channel #Mechboards: 140 nicks (0 ops, 0 voices, 140 normals)
+2019-12-04 17:46:09	--	Channel created on Thu, 21 Feb 2013 05:50:48
+2019-12-05 08:02:41	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #Mechboards
+2019-12-05 08:02:41	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2019-12-05 08:02:41	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 10:38:51
+2019-12-05 08:02:41	--	Channel #Mechboards: 137 nicks (0 ops, 0 voices, 137 normals)
+2019-12-05 08:02:41	--	Channel created on Thu, 21 Feb 2013 05:50:48
+2019-12-05 08:03:03	<--	Ryuuguu (~cosmic@gateway/tor-sasl/ryuuguu) has quit (Quit: Leaving)
+2019-12-05 08:24:53	<--	im0nde (~im0nde@2a0a-a546-a877-0-2ad2-44ff-fe00-9395.ipv6dyn.netcologne.de) has quit (Ping timeout: 245 seconds)
+2019-12-05 08:26:05	-->	im0nde (~im0nde@xdsl-89-0-50-134.nc.de) has joined #Mechboards
+2019-12-05 08:40:37	<--	sakuru_ (~quassel@73.131.199.128) has quit (Ping timeout: 240 seconds)
+2019-12-05 08:54:03	-->	ShinyRice (~ShinyRice@2001:720:1014:f410:fc15:6a01:6aee:7cbf) has joined #Mechboards
+2019-12-05 09:05:18	<--	ShinyRice (~ShinyRice@2001:720:1014:f410:fc15:6a01:6aee:7cbf) has quit (Ping timeout: 245 seconds)
+2019-12-05 09:07:49	<--	{Opsimath}Shawn (~shawn156@unaffiliated/shawn156) has quit (Read error: Connection reset by peer)
+2019-12-05 09:34:40	<--	squires (~squires@li558-181.members.linode.com) has quit (*.net *.split)
+2019-12-05 09:34:40	<--	Exaga (~exaga@fatdog.eu) has quit (*.net *.split)
+2019-12-05 09:34:40	<--	danaur (~dan@138.68.226.168) has quit (*.net *.split)
+2019-12-05 09:34:40	<--	tr4656_ (sid20008@gateway/web/irccloud.com/x-mgiamkbrpqxxvmxx) has quit (*.net *.split)
+2019-12-05 09:38:17	-->	squires (~squires@li558-181.members.linode.com) has joined #Mechboards
+2019-12-05 09:38:17	-->	Exaga (~exaga@fatdog.eu) has joined #Mechboards
+2019-12-05 09:38:17	-->	danaur (~dan@138.68.226.168) has joined #Mechboards
+2019-12-05 09:38:17	-->	tr4656_ (sid20008@gateway/web/irccloud.com/x-mgiamkbrpqxxvmxx) has joined #Mechboards
+2019-12-05 10:24:11	-->	ShinyRice (~ShinyRice@2001:720:1014:f410:fc15:6a01:6aee:7cbf) has joined #Mechboards
+2019-12-05 10:38:46	switchy	*sigh* why is hp42s so $$$
+2019-12-05 10:54:53	<--	squires (~squires@li558-181.members.linode.com) has quit (*.net *.split)
+2019-12-05 10:54:53	<--	Exaga (~exaga@fatdog.eu) has quit (*.net *.split)
+2019-12-05 10:54:53	<--	danaur (~dan@138.68.226.168) has quit (*.net *.split)
+2019-12-05 10:54:53	<--	tr4656_ (sid20008@gateway/web/irccloud.com/x-mgiamkbrpqxxvmxx) has quit (*.net *.split)
+2019-12-05 10:54:53	<--	thykka (~thykka@unaffiliated/thykka) has quit (*.net *.split)
+2019-12-05 10:54:54	<--	j`ey (~joey@unaffiliated/jey/x-00002) has quit (*.net *.split)
+2019-12-05 10:54:54	<--	yourfate (~yourfate@unaffiliated/yourfate) has quit (*.net *.split)
+2019-12-05 10:54:54	<--	joesventek (~smoon@joesventek.powered.by.lunarbnc.net) has quit (*.net *.split)
+2019-12-05 10:54:54	<--	BKuhl_ (~BKuhl@pool-173-70-39-49.nwrknj.fios.verizon.net) has quit (*.net *.split)
+2019-12-05 10:54:55	<--	sQuEE (~sQuEE@unaffiliated/sq/x-3560400) has quit (*.net *.split)
+2019-12-05 10:54:55	<--	nibbling (~nibbling@165.227.18.242) has quit (*.net *.split)
+2019-12-05 10:54:55	<--	Some_Person (someperson@someperson.net) has quit (*.net *.split)
+2019-12-05 10:54:55	<--	HaaTa (~quassel@unaffiliated/haata) has quit (*.net *.split)
+2019-12-05 10:54:55	<--	vcanales (~v6@2a02:2770:9:0:21a:4aff:fe32:b286) has quit (*.net *.split)
+2019-12-05 10:54:56	<--	MetaNova (zero-one@znc/supporter/metanova) has quit (*.net *.split)
+2019-12-05 10:54:56	<--	MarkRobbo (~MarkRobbo@unaffiliated/markrobbo) has quit (*.net *.split)
+2019-12-05 10:54:56	<--	adar (uid1346@gateway/web/irccloud.com/x-uctxgjdeeyendrtu) has quit (*.net *.split)
+2019-12-05 10:54:56	<--	nitheon (~nemo@hachi.tejat.net) has quit (*.net *.split)
+2019-12-05 10:54:56	<--	Thumpxr (~Thumpxr@server.thumper.de) has quit (*.net *.split)
+2019-12-05 10:54:56	<--	ecloud (quassel@nat/qt/x-digwkhjrgljawjze) has quit (*.net *.split)
+2019-12-05 10:54:57	<--	exezin (~exezin@oods.net) has quit (*.net *.split)
+2019-12-05 10:54:57	<--	spydon (~spydon@188.226.230.107) has quit (*.net *.split)
+2019-12-05 10:54:57	<--	sm0g (~sm0g@unaffiliated/sm0g) has quit (*.net *.split)
+2019-12-05 10:54:57	<--	pbuell (~pbuell@ec2-34-192-148-15.compute-1.amazonaws.com) has quit (*.net *.split)
+2019-12-05 10:54:57	<--	infectiious (~droolendu@unaffiliated/droolendug) has quit (*.net *.split)
+2019-12-05 10:54:57	<--	im0nde (~im0nde@xdsl-89-0-50-134.nc.de) has quit (*.net *.split)
+2019-12-05 10:54:57	<--	cyberjunkie (~cyberjunk@2400:6180:100:d0::8e0:5001) has quit (*.net *.split)
+2019-12-05 10:54:58	<--	AtlasRisen (~AtlasRise@unaffiliated/atlasrisen) has quit (*.net *.split)
+2019-12-05 10:54:58	<--	Hamess (~hamess@unaffiliated/hamess) has quit (*.net *.split)
+2019-12-05 10:54:58	<--	tg (~x@unaffiliated/tg) has quit (*.net *.split)
+2019-12-05 10:54:58	<--	StathisA (~StathisA@unaffiliated/stathisa) has quit (*.net *.split)
+2019-12-05 10:54:58	<--	GoldenBear (~gb@172.83.42.24) has quit (*.net *.split)
+2019-12-05 10:54:58	<--	Arrowmaster (~Arrowmast@WoWUIDev/WoWAce/ResponsibleForEverythingAndNothing/Arrowmaster) has quit (*.net *.split)
+2019-12-05 10:54:58	<--	rustyj (~joeking@tilde.team/users/joek) has quit (*.net *.split)
+2019-12-05 10:54:59	<--	monotux (~monotux@2a01:4f9:c010:2920::beef) has quit (*.net *.split)
+2019-12-05 10:54:59	<--	waz0wski (~waz0wski@hrothgar.distortion.io) has quit (*.net *.split)
+2019-12-05 10:54:59	<--	tuzonghua (~tuzonghua@2604:a880:400:d1::997:8001) has quit (*.net *.split)
+2019-12-05 10:54:59	<--	rodgzilla (~rodgzilla@46.212.195.35.bc.googleusercontent.com) has quit (*.net *.split)
+2019-12-05 10:54:59	<--	aml (~antoon_i@h-213-221.A392.priv.bahnhof.se) has quit (*.net *.split)
+2019-12-05 10:54:59	<--	genpaku (~genpaku@107.191.100.185) has quit (*.net *.split)
+2019-12-05 10:54:59	<--	sauerkrause (~krause@17.225.196.35.bc.googleusercontent.com) has quit (*.net *.split)
+2019-12-05 10:54:59	<--	fenrir (~fenrir@unaffiliated/fenrir) has quit (*.net *.split)
+2019-12-05 10:54:59	<--	Asterisk (~asterisk@unaffiliated/asterisk) has quit (*.net *.split)
+2019-12-05 10:54:59	<--	Laogeodritt (laogeodrit@wikipedia/Laogeodritt) has quit (*.net *.split)
+2019-12-05 10:54:59	<--	Ditti (~Ditti@bacchus.riditt.de) has quit (*.net *.split)
+2019-12-05 10:54:59	<--	deluks (yS8B1LUiqf@markab.uberspace.de) has quit (*.net *.split)
+2019-12-05 10:54:59	<--	yang (~yang@freenode/sponsor/fsf.member.yang) has quit (*.net *.split)
+2019-12-05 10:54:59	<--	arti (~arti@do.arti.ee) has quit (*.net *.split)
+2019-12-05 10:55:01	<--	ch1pp0 (~ch1pp0@162.243.235.207) has quit (*.net *.split)
+2019-12-05 10:55:01	<--	azend|vps (~quassel@unaffiliated/azend) has quit (*.net *.split)
+2019-12-05 10:55:01	<--	boingolov (~nastynate@c-68-63-243-125.hsd1.tn.comcast.net) has quit (*.net *.split)
+2019-12-05 10:55:01	<--	kzisme (~kzisme@unaffiliated/kzisme) has quit (*.net *.split)
+2019-12-05 10:55:01	<--	thblt (~thblt@unaffiliated/thblt) has quit (*.net *.split)
+2019-12-05 10:55:01	<--	oddie (~oddie@infectiious.xyz) has quit (*.net *.split)
+2019-12-05 10:55:01	<--	Slasher (~Slasher@flatis.moe) has quit (*.net *.split)
+2019-12-05 10:55:01	<--	ashnur (~rak@unaffiliated/ashnur) has quit (*.net *.split)
+2019-12-05 10:55:01	<--	mek42 (mek42matri@gateway/shell/matrix.org/x-wplegirhggjxkfgb) has quit (*.net *.split)
+2019-12-05 10:55:01	<--	mord0d (~mord0d@gateway/tor-sasl/mord0d) has quit (*.net *.split)
+2019-12-05 10:55:01	<--	xelxebar (~xelxebar@gateway/tor-sasl/xelxebar) has quit (*.net *.split)
+2019-12-05 10:55:02	<--	pacbard (~pacbard@68.237.202.35.bc.googleusercontent.com) has quit (*.net *.split)
+2019-12-05 10:55:02	<--	smeggysmeg (~smeg@unaffiliated/smeggysmeg) has quit (*.net *.split)
+2019-12-05 10:55:02	<--	Dimtree (~dimtree@unaffiliated/dimtree) has quit (*.net *.split)
+2019-12-05 10:55:02	<--	Sabotender (~Sabotende@unaffiliated/sabotender) has quit (*.net *.split)
+2019-12-05 10:55:02	<--	gigetoo (~gigetoo@c83-250-41-185.bredband.comhem.se) has quit (*.net *.split)
+2019-12-05 10:55:02	<--	flappity (~wolf@172-221-242-216.res.spectrum.com) has quit (*.net *.split)
+2019-12-05 10:55:02	<--	oscillope (~oscillope@ec2-34-193-143-75.compute-1.amazonaws.com) has quit (*.net *.split)
+2019-12-05 10:55:02	<--	Albori (~Albori@67-43-243-189.fidnet.com) has quit (*.net *.split)
+2019-12-05 10:55:02	<--	hxc0 (~hxc0@unaffiliated/hxc0) has quit (*.net *.split)
+2019-12-05 10:55:03	<--	zekkin (~z@104.131.11.92) has quit (*.net *.split)
+2019-12-05 10:55:03	<--	raoniff (~raoni@labs-gw.ic.unicamp.br) has quit (*.net *.split)
+2019-12-05 10:55:03	<--	r3x5 (~r3x5@30.175.225.35.bc.googleusercontent.com) has quit (*.net *.split)
+2019-12-05 10:55:03	<--	thadood (~thadood@donk.thunderbutt.org) has quit (*.net *.split)
+2019-12-05 10:55:03	<--	john_dee (~id@178.62.244.242) has quit (*.net *.split)
+2019-12-05 10:55:03	<--	Ceryn (~user@77.75.161.102) has quit (*.net *.split)
+2019-12-05 10:55:03	<--	mads- (~mfrstar@soyuz.whatbox.ca) has quit (*.net *.split)
+2019-12-05 10:55:03	<--	WeaselSoup (~bigorneau@ns3291478.ip-5-135-185.eu) has quit (*.net *.split)
+2019-12-05 10:55:03	<--	microfracture (~microfrac@unaffiliated/microfracture) has quit (*.net *.split)
+2019-12-05 10:55:03	<--	gilbertw1 (~gilbertw1@ec2-52-91-154-1.compute-1.amazonaws.com) has quit (*.net *.split)
+2019-12-05 10:55:03	<--	switchy (~switchy@unaffiliated/switchy) has quit (*.net *.split)
+2019-12-05 10:55:04	<--	adereth (sid95111@gateway/web/irccloud.com/x-ovglshebeypcqpki) has quit (*.net *.split)
+2019-12-05 10:55:05	<--	copypasteque (~copypaste@2001:41d0:8:b325::1) has quit (*.net *.split)
+2019-12-05 10:55:05	<--	dka (~code-is-a@master-sbg-01.kopaxgroup.com) has quit (*.net *.split)
+2019-12-05 10:55:05	<--	echarlie (irc-user@landgr.af) has quit (*.net *.split)
+2019-12-05 10:55:05	<--	blitzkraft (~bk@24.136.27.86) has quit (*.net *.split)
+2019-12-05 10:55:05	<--	Alternity (~tinycat@unaffiliated/tinycat) has quit (*.net *.split)
+2019-12-05 10:55:05	<--	percY- (~percY@138.68.239.19) has quit (*.net *.split)
+2019-12-05 10:55:05	<--	KramerC (~kramer@unaffiliated/kramerc) has quit (*.net *.split)
+2019-12-05 10:55:05	<--	eising (sid172326@gateway/web/irccloud.com/x-jrncldrkadoefdat) has quit (*.net *.split)
+2019-12-05 10:55:05	<--	lermain (~qed@unaffiliated/lermain) has quit (*.net *.split)
+2019-12-05 10:55:05	<--	cukier (sid268358@gateway/web/irccloud.com/x-ldkrcvvgqtspqkgn) has quit (*.net *.split)
+2019-12-05 10:55:05	<--	g_glitch (~glitch@katana.samuraibox.com) has quit (*.net *.split)
+2019-12-05 10:55:05	<--	tom39291 (~tom@2401:c080:1800:401a:5400:1ff:fede:51f9) has quit (*.net *.split)
+2019-12-05 10:55:05	<--	fauxdebaux (sid14029@gateway/web/irccloud.com/x-tkrmjvyrmdmsudyl) has quit (*.net *.split)
+2019-12-05 10:55:05	<--	Neko-chan (~Neko@2001:19f0:5401:160d:5400:1ff:fec4:f4d6) has quit (*.net *.split)
+2019-12-05 10:55:06	<--	veegee (~veegee@ipagstaticip-3d3f7614-22f3-5b69-be13-7ab4b2c585d9.sdsl.bell.ca) has quit (*.net *.split)
+2019-12-05 10:55:06	<--	yokel (~yokel@unaffiliated/contempt) has quit (*.net *.split)
+2019-12-05 10:55:06	<--	zacmps (~zacmps@121.74.127.32) has quit (*.net *.split)
+2019-12-05 10:55:06	<--	eziwaq (~eziwaq@unaffiliated/eziwaq) has quit (*.net *.split)
+2019-12-05 10:55:06	<--	xcm (~xcm@ipa210.225.tellas.gr) has quit (*.net *.split)
+2019-12-05 10:55:06	<--	armin (~a@x86.li) has quit (*.net *.split)
+2019-12-05 10:55:06	<--	Graypup_ (Graypup@lfcode.ca) has quit (*.net *.split)
+2019-12-05 10:55:07	<--	CharlesA (~CharlesA@ubuntu/member/charlesa) has quit (*.net *.split)
+2019-12-05 10:55:07	<--	na_th_an (~nathan@unaffiliated/nathan/x-7706311) has quit (*.net *.split)
+2019-12-05 10:55:07	<--	obDC (~ob600@c-67-173-179-222.hsd1.il.comcast.net) has quit (*.net *.split)
+2019-12-05 10:55:07	<--	timewalker (~timewalke@eth0.nu) has quit (*.net *.split)
+2019-12-05 10:55:07	<--	kyau (kyau@blackbox.kyaulabs.com) has quit (*.net *.split)
+2019-12-05 10:55:07	<--	duoi (~duoi@python-zero/core/duoi) has quit (*.net *.split)
+2019-12-05 10:55:07	<--	inahd (~inahd@pool-71-185-171-99.phlapa.fios.verizon.net) has quit (*.net *.split)
+2019-12-05 10:55:07	<--	vishwin (~brioux@wikimedia/O) has quit (*.net *.split)
+2019-12-05 10:55:08	<--	hasuTMK (~hasu@58x13x224x139.ap58.ftth.ucom.ne.jp) has quit (*.net *.split)
+2019-12-05 10:55:08	<--	Squarism (~someone@178.62.91.8) has quit (*.net *.split)
+2019-12-05 10:55:08	<--	ifohancroft (~ifo@techtavern/ifo) has quit (*.net *.split)
+2019-12-05 10:55:09	<--	ShinyRice (~ShinyRice@2001:720:1014:f410:fc15:6a01:6aee:7cbf) has quit (*.net *.split)
+2019-12-05 10:55:09	<--	elfmacs (~elfmacs@159.226.199.101) has quit (*.net *.split)
+2019-12-05 10:55:09	<--	zamnedix (~zamnedix@zamnedix.net) has quit (*.net *.split)
+2019-12-05 10:55:09	<--	ponky (ponky@94.237.13.38) has quit (*.net *.split)
+2019-12-05 10:55:09	<--	Hakala (hakala@cc8f-8cff-fe82-6881.v6.fi-hel1.upcloud.host) has quit (*.net *.split)
+2019-12-05 10:55:09	<--	tanuki_ (~quassel@173.168.167.17) has quit (*.net *.split)
+2019-12-05 10:55:09	<--	abondis (~abondis@unaffiliated/abondis) has quit (*.net *.split)
+2019-12-05 10:55:09	<--	gko (~user@192.241.203.247) has quit (*.net *.split)
+2019-12-05 10:55:10	<--	jayray (~jayray@2602:ffc5:30::1:604) has quit (*.net *.split)
+2019-12-05 10:55:10	<--	mquin (~mquin@freenode/staff/mquin) has quit (*.net *.split)
+2019-12-05 10:55:10	<--	MrFahrenheit (~zumbi@unaffiliated/rageofthou) has quit (*.net *.split)
+2019-12-05 10:55:10	<--	donran (~~donran@waifu.se) has quit (*.net *.split)
+2019-12-05 10:55:10	<--	enclaved (~enclaved@unaffiliated/enclaved) has quit (*.net *.split)
+2019-12-05 10:55:10	<--	astronavt (~astronavt@unaffiliated/astronavt) has quit (*.net *.split)
+2019-12-05 10:55:11	<--	stratum (sid322746@gateway/web/irccloud.com/x-knchxfhfvmowziid) has quit (*.net *.split)
+2019-12-05 10:55:11	<--	mgsk (sid326960@gateway/web/irccloud.com/x-qnxhxnhsvwgzlfjm) has quit (*.net *.split)
+2019-12-05 11:01:58	-->	nitheon (~nemo@hachi.tejat.net) has joined #Mechboards
+2019-12-05 11:01:58	-->	MarkRobbo (~MarkRobbo@unaffiliated/markrobbo) has joined #Mechboards
+2019-12-05 11:01:58	-->	MetaNova (zero-one@znc/supporter/metanova) has joined #Mechboards
+2019-12-05 11:01:58	-->	adar (uid1346@gateway/web/irccloud.com/x-uctxgjdeeyendrtu) has joined #Mechboards
+2019-12-05 11:01:58	-->	vcanales (~v6@2a02:2770:9:0:21a:4aff:fe32:b286) has joined #Mechboards
+2019-12-05 11:01:58	-->	HaaTa (~quassel@unaffiliated/haata) has joined #Mechboards
+2019-12-05 11:01:58	-->	Some_Person (someperson@someperson.net) has joined #Mechboards
+2019-12-05 11:01:58	-->	nibbling (~nibbling@165.227.18.242) has joined #Mechboards
+2019-12-05 11:01:58	-->	sQuEE (~sQuEE@unaffiliated/sq/x-3560400) has joined #Mechboards
+2019-12-05 11:01:58	-->	joesventek (~smoon@joesventek.powered.by.lunarbnc.net) has joined #Mechboards
+2019-12-05 11:01:58	-->	yourfate (~yourfate@unaffiliated/yourfate) has joined #Mechboards
+2019-12-05 11:01:58	-->	infectiious (~droolendu@unaffiliated/droolendug) has joined #Mechboards
+2019-12-05 11:01:58	-->	pbuell (~pbuell@ec2-34-192-148-15.compute-1.amazonaws.com) has joined #Mechboards
+2019-12-05 11:01:58	-->	sm0g (~sm0g@unaffiliated/sm0g) has joined #Mechboards
+2019-12-05 11:01:58	-->	spydon (~spydon@188.226.230.107) has joined #Mechboards
+2019-12-05 11:01:58	-->	exezin (~exezin@oods.net) has joined #Mechboards
+2019-12-05 11:01:58	-->	ecloud (quassel@nat/qt/x-digwkhjrgljawjze) has joined #Mechboards
+2019-12-05 11:01:58	-->	Thumpxr (~Thumpxr@server.thumper.de) has joined #Mechboards
+2019-12-05 11:01:58	-->	BKuhl (~BKuhl@pool-173-70-39-49.nwrknj.fios.verizon.net) has joined #Mechboards
+2019-12-05 11:01:58	-->	elfmacs (~elfmacs@159.226.199.101) has joined #Mechboards
+2019-12-05 11:01:58	-->	mord0d (~mord0d@gateway/tor-sasl/mord0d) has joined #Mechboards
+2019-12-05 11:01:58	-->	pacbard (~pacbard@68.237.202.35.bc.googleusercontent.com) has joined #Mechboards
+2019-12-05 11:01:58	-->	smeggysmeg (~smeg@unaffiliated/smeggysmeg) has joined #Mechboards
+2019-12-05 11:01:58	-->	veegee (~veegee@ipagstaticip-3d3f7614-22f3-5b69-be13-7ab4b2c585d9.sdsl.bell.ca) has joined #Mechboards
+2019-12-05 11:01:58	-->	yokel (~yokel@unaffiliated/contempt) has joined #Mechboards
+2019-12-05 11:01:58	-->	Dimtree (~dimtree@unaffiliated/dimtree) has joined #Mechboards
+2019-12-05 11:01:58	-->	zacmps (~zacmps@121.74.127.32) has joined #Mechboards
+2019-12-05 11:01:58	-->	Sabotender (~Sabotende@unaffiliated/sabotender) has joined #Mechboards
+2019-12-05 11:01:58	-->	gigetoo (~gigetoo@c83-250-41-185.bredband.comhem.se) has joined #Mechboards
+2019-12-05 11:01:58	-->	ashnur (~rak@unaffiliated/ashnur) has joined #Mechboards
+2019-12-05 11:01:58	-->	Slasher (~Slasher@flatis.moe) has joined #Mechboards
+2019-12-05 11:01:58	-->	thblt (~thblt@unaffiliated/thblt) has joined #Mechboards
+2019-12-05 11:01:58	-->	boingolov (~nastynate@c-68-63-243-125.hsd1.tn.comcast.net) has joined #Mechboards
+2019-12-05 11:01:58	-->	azend|vps (~quassel@unaffiliated/azend) has joined #Mechboards
+2019-12-05 11:01:58	-->	ch1pp0 (~ch1pp0@162.243.235.207) has joined #Mechboards
+2019-12-05 11:01:58	-->	kzisme (~kzisme@unaffiliated/kzisme) has joined #Mechboards
+2019-12-05 11:01:58	-->	oddie (~oddie@infectiious.xyz) has joined #Mechboards
+2019-12-05 11:01:58	-->	eziwaq (~eziwaq@unaffiliated/eziwaq) has joined #Mechboards
+2019-12-05 11:01:58	-->	flappity (~wolf@172-221-242-216.res.spectrum.com) has joined #Mechboards
+2019-12-05 11:01:58	-->	mek42 (mek42matri@gateway/shell/matrix.org/x-wplegirhggjxkfgb) has joined #Mechboards
+2019-12-05 11:01:58	-->	Hakala (hakala@cc8f-8cff-fe82-6881.v6.fi-hel1.upcloud.host) has joined #Mechboards
+2019-12-05 11:01:58	-->	abondis (~abondis@unaffiliated/abondis) has joined #Mechboards
+2019-12-05 11:01:58	-->	zekkin (~z@104.131.11.92) has joined #Mechboards
+2019-12-05 11:01:58	-->	ponky (ponky@94.237.13.38) has joined #Mechboards
+2019-12-05 11:01:58	-->	xcm (~xcm@ipa210.225.tellas.gr) has joined #Mechboards
+2019-12-05 11:01:58	-->	oscillope (~oscillope@ec2-34-193-143-75.compute-1.amazonaws.com) has joined #Mechboards
+2019-12-05 11:01:58	-->	tanuki_ (~quassel@173.168.167.17) has joined #Mechboards
+2019-12-05 11:01:58	-->	adereth (sid95111@gateway/web/irccloud.com/x-ovglshebeypcqpki) has joined #Mechboards
+2019-12-05 11:01:58	-->	armin (~a@x86.li) has joined #Mechboards
+2019-12-05 11:01:58	-->	Albori (~Albori@67-43-243-189.fidnet.com) has joined #Mechboards
+2019-12-05 11:01:58	-->	hxc0 (~hxc0@unaffiliated/hxc0) has joined #Mechboards
+2019-12-05 11:01:58	-->	Graypup_ (Graypup@lfcode.ca) has joined #Mechboards
+2019-12-05 11:01:58	-->	xelxebar (~xelxebar@gateway/tor-sasl/xelxebar) has joined #Mechboards
+2019-12-05 11:01:58	-->	gko (~user@192.241.203.247) has joined #Mechboards
+2019-12-05 11:01:58	-->	copypasteque (~copypaste@2001:41d0:8:b325::1) has joined #Mechboards
+2019-12-05 11:01:58	-->	dka (~code-is-a@master-sbg-01.kopaxgroup.com) has joined #Mechboards
+2019-12-05 11:01:58	-->	echarlie (irc-user@landgr.af) has joined #Mechboards
+2019-12-05 11:01:58	-->	jayray (~jayray@2602:ffc5:30::1:604) has joined #Mechboards
+2019-12-05 11:01:58	-->	blitzkraft (~bk@24.136.27.86) has joined #Mechboards
+2019-12-05 11:01:58	-->	mquin (~mquin@freenode/staff/mquin) has joined #Mechboards
+2019-12-05 11:01:58	-->	MrFahrenheit (~zumbi@unaffiliated/rageofthou) has joined #Mechboards
+2019-12-05 11:01:58	-->	hasuTMK (~hasu@58x13x224x139.ap58.ftth.ucom.ne.jp) has joined #Mechboards
+2019-12-05 11:01:58	-->	raoniff (~raoni@labs-gw.ic.unicamp.br) has joined #Mechboards
+2019-12-05 11:01:58	-->	Alternity (~tinycat@unaffiliated/tinycat) has joined #Mechboards
+2019-12-05 11:01:58	-->	CharlesA (~CharlesA@ubuntu/member/charlesa) has joined #Mechboards
+2019-12-05 11:01:58	-->	donran (~~donran@waifu.se) has joined #Mechboards
+2019-12-05 11:01:58	-->	r3x5 (~r3x5@30.175.225.35.bc.googleusercontent.com) has joined #Mechboards
+2019-12-05 11:01:58	-->	na_th_an (~nathan@unaffiliated/nathan/x-7706311) has joined #Mechboards
+2019-12-05 11:01:58	-->	obDC (~ob600@c-67-173-179-222.hsd1.il.comcast.net) has joined #Mechboards
+2019-12-05 11:01:58	-->	thadood (~thadood@donk.thunderbutt.org) has joined #Mechboards
+2019-12-05 11:01:58	-->	enclaved (~enclaved@unaffiliated/enclaved) has joined #Mechboards
+2019-12-05 11:01:58	-->	john_dee (~id@178.62.244.242) has joined #Mechboards
+2019-12-05 11:01:58	-->	percY- (~percY@138.68.239.19) has joined #Mechboards
+2019-12-05 11:01:58	-->	KramerC (~kramer@unaffiliated/kramerc) has joined #Mechboards
+2019-12-05 11:01:58	-->	eising (sid172326@gateway/web/irccloud.com/x-jrncldrkadoefdat) has joined #Mechboards
+2019-12-05 11:01:58	-->	timewalker (~timewalke@eth0.nu) has joined #Mechboards
+2019-12-05 11:01:58	-->	Squarism (~someone@178.62.91.8) has joined #Mechboards
+2019-12-05 11:01:58	-->	Ceryn (~user@77.75.161.102) has joined #Mechboards
+2019-12-05 11:01:58	-->	kyau (kyau@blackbox.kyaulabs.com) has joined #Mechboards
+2019-12-05 11:01:58	-->	astronavt (~astronavt@unaffiliated/astronavt) has joined #Mechboards
+2019-12-05 11:01:58	-->	lermain (~qed@unaffiliated/lermain) has joined #Mechboards
+2019-12-05 11:01:58	-->	tom39291 (~tom@2401:c080:1800:401a:5400:1ff:fede:51f9) has joined #Mechboards
+2019-12-05 11:01:58	-->	cukier (sid268358@gateway/web/irccloud.com/x-ldkrcvvgqtspqkgn) has joined #Mechboards
+2019-12-05 11:01:58	-->	duoi (~duoi@python-zero/core/duoi) has joined #Mechboards
+2019-12-05 11:01:58	-->	ifohancroft (~ifo@techtavern/ifo) has joined #Mechboards
+2019-12-05 11:01:58	-->	inahd (~inahd@pool-71-185-171-99.phlapa.fios.verizon.net) has joined #Mechboards
+2019-12-05 11:01:58	-->	vishwin (~brioux@wikimedia/O) has joined #Mechboards
+2019-12-05 11:01:58	-->	g_glitch (~glitch@katana.samuraibox.com) has joined #Mechboards
+2019-12-05 11:01:58	-->	mads- (~mfrstar@soyuz.whatbox.ca) has joined #Mechboards
+2019-12-05 11:01:58	-->	WeaselSoup (~bigorneau@ns3291478.ip-5-135-185.eu) has joined #Mechboards
+2019-12-05 11:01:58	-->	microfracture (~microfrac@unaffiliated/microfracture) has joined #Mechboards
+2019-12-05 11:01:58	-->	gilbertw1 (~gilbertw1@ec2-52-91-154-1.compute-1.amazonaws.com) has joined #Mechboards
+2019-12-05 11:01:58	-->	switchy (~switchy@unaffiliated/switchy) has joined #Mechboards
+2019-12-05 11:01:58	-->	fauxdebaux (sid14029@gateway/web/irccloud.com/x-tkrmjvyrmdmsudyl) has joined #Mechboards
+2019-12-05 11:01:58	-->	Neko-chan (~Neko@2001:19f0:5401:160d:5400:1ff:fec4:f4d6) has joined #Mechboards
+2019-12-05 11:01:58	-->	mgsk (sid326960@gateway/web/irccloud.com/x-qnxhxnhsvwgzlfjm) has joined #Mechboards
+2019-12-05 11:01:58	-->	stratum (sid322746@gateway/web/irccloud.com/x-knchxfhfvmowziid) has joined #Mechboards
+2019-12-05 11:03:21	-->	zamnedix (~zamnedix@zamnedix.net) has joined #Mechboards
+2019-12-05 11:03:51	-->	squires (~squires@li558-181.members.linode.com) has joined #Mechboards
+2019-12-05 11:03:51	-->	Exaga (~exaga@fatdog.eu) has joined #Mechboards
+2019-12-05 11:03:51	-->	danaur (~dan@138.68.226.168) has joined #Mechboards
+2019-12-05 11:03:51	-->	tr4656_ (sid20008@gateway/web/irccloud.com/x-mgiamkbrpqxxvmxx) has joined #Mechboards
+2019-12-05 11:03:58	-->	thykka (~thykka@unaffiliated/thykka) has joined #Mechboards
+2019-12-05 11:03:58	-->	j`ey (~joey@unaffiliated/jey/x-00002) has joined #Mechboards
+2019-12-05 11:04:24	-->	im0nde (~im0nde@xdsl-89-0-50-134.nc.de) has joined #Mechboards
+2019-12-05 11:04:24	-->	cyberjunkie (~cyberjunk@2400:6180:100:d0::8e0:5001) has joined #Mechboards
+2019-12-05 11:04:24	-->	AtlasRisen (~AtlasRise@unaffiliated/atlasrisen) has joined #Mechboards
+2019-12-05 11:04:24	-->	Hamess (~hamess@unaffiliated/hamess) has joined #Mechboards
+2019-12-05 11:04:24	-->	tg (~x@unaffiliated/tg) has joined #Mechboards
+2019-12-05 11:04:24	-->	StathisA (~StathisA@unaffiliated/stathisa) has joined #Mechboards
+2019-12-05 11:04:24	-->	GoldenBear (~gb@172.83.42.24) has joined #Mechboards
+2019-12-05 11:04:24	-->	Arrowmaster (~Arrowmast@WoWUIDev/WoWAce/ResponsibleForEverythingAndNothing/Arrowmaster) has joined #Mechboards
+2019-12-05 11:04:24	-->	rustyj (~joeking@tilde.team/users/joek) has joined #Mechboards
+2019-12-05 11:04:24	-->	monotux (~monotux@2a01:4f9:c010:2920::beef) has joined #Mechboards
+2019-12-05 11:04:24	-->	waz0wski (~waz0wski@hrothgar.distortion.io) has joined #Mechboards
+2019-12-05 11:04:24	-->	tuzonghua (~tuzonghua@2604:a880:400:d1::997:8001) has joined #Mechboards
+2019-12-05 11:04:24	-->	rodgzilla (~rodgzilla@46.212.195.35.bc.googleusercontent.com) has joined #Mechboards
+2019-12-05 11:04:24	-->	aml (~antoon_i@h-213-221.A392.priv.bahnhof.se) has joined #Mechboards
+2019-12-05 11:04:24	-->	genpaku (~genpaku@107.191.100.185) has joined #Mechboards
+2019-12-05 11:04:24	-->	sauerkrause (~krause@17.225.196.35.bc.googleusercontent.com) has joined #Mechboards
+2019-12-05 11:04:24	-->	fenrir (~fenrir@unaffiliated/fenrir) has joined #Mechboards
+2019-12-05 11:04:24	-->	Asterisk (~asterisk@unaffiliated/asterisk) has joined #Mechboards
+2019-12-05 11:04:24	-->	yang (~yang@freenode/sponsor/fsf.member.yang) has joined #Mechboards
+2019-12-05 11:04:24	-->	Laogeodritt (laogeodrit@wikipedia/Laogeodritt) has joined #Mechboards
+2019-12-05 11:04:24	-->	Ditti (~Ditti@bacchus.riditt.de) has joined #Mechboards
+2019-12-05 11:04:24	-->	deluks (yS8B1LUiqf@markab.uberspace.de) has joined #Mechboards
+2019-12-05 11:04:24	-->	arti (~arti@do.arti.ee) has joined #Mechboards
+2019-12-05 11:05:31	<--	waz0wski (~waz0wski@hrothgar.distortion.io) has quit (Max SendQ exceeded)
+2019-12-05 11:07:47	-->	waz0wski (~waz0wski@hrothgar.distortion.io) has joined #Mechboards
+2019-12-05 11:18:05	-->	sakuru (~quassel@73.131.199.128) has joined #Mechboards
+2019-12-05 11:24:41	-->	clemens3 (~clemens@mx.eniso-partners.com) has joined #Mechboards
+2019-12-05 11:30:30	<--	elfmacs (~elfmacs@159.226.199.101) has quit (Ping timeout: 252 seconds)
+2019-12-05 11:32:40	-->	elfmacs (~elfmacs@2400:dd01:1020:150:1fff:d6e6:16ff:eb3f) has joined #Mechboards
+2019-12-05 11:34:34	-->	Cloudflare (~Cloudflar@unaffiliated/cloudflare) has joined #Mechboards
+2019-12-05 13:20:18	--	rustyj is now known as Joe
+2019-12-05 14:05:37	-->	ShinyRice (~ShinyRice@2001:720:1014:f410:fc15:6a01:6aee:7cbf) has joined #Mechboards
+2019-12-05 14:08:39	-->	Cartoon-Dude (~Thunderbi@195.48.13.205) has joined #Mechboards
+2019-12-05 14:19:53	<--	elfmacs (~elfmacs@2400:dd01:1020:150:1fff:d6e6:16ff:eb3f) has quit (Ping timeout: 246 seconds)
+2019-12-05 14:45:32	-->	veam (uid157194@gateway/web/irccloud.com/x-cutxcmenbomnbjan) has joined #Mechboards
+2019-12-05 14:55:30	-->	multiproc (~mark@unaffiliated/multiproc) has joined #Mechboards
+2019-12-05 16:03:24	<--	ShinyRice (~ShinyRice@2001:720:1014:f410:fc15:6a01:6aee:7cbf) has quit (Quit: ShinyRice)
+2019-12-05 16:10:08	-->	anotheryou (uid257186@gateway/web/irccloud.com/x-cfjxodbrvshfirdb) has joined #Mechboards
+2019-12-05 16:24:30	<--	Cartoon-Dude (~Thunderbi@195.48.13.205) has quit (Ping timeout: 268 seconds)
+2019-12-05 16:44:46	-->	Cartoon-Dude (~Thunderbi@195.48.13.205) has joined #Mechboards
+2019-12-05 17:03:43	-->	c0ck4m0u53 (~c0ck4m0u5@BSN-176-198-121.dynamic.siol.net) has joined #Mechboards
+2019-12-06 09:10:55	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #Mechboards
+2019-12-06 09:10:55	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2019-12-06 09:10:55	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 10:38:51
+2019-12-06 09:10:55	--	Channel #Mechboards: 141 nicks (0 ops, 0 voices, 141 normals)
+2019-12-06 09:10:56	--	Channel created on Thu, 21 Feb 2013 05:50:48
+2019-12-06 09:15:58	-->	im0nde_ (~im0nde@2a0a-a546-de92-0-2ad2-44ff-fe00-9395.ipv6dyn.netcologne.de) has joined #Mechboards
+2019-12-06 09:19:16	<--	flappity_ (~wolf@38.69.39.2) has quit (Ping timeout: 240 seconds)
+2019-12-06 09:19:44	<--	im0nde (~im0nde@xdsl-89-0-50-134.nc.de) has quit (Ping timeout: 276 seconds)
+2019-12-06 09:22:37	<--	elfmacs (~elfmacs@159.226.199.101) has quit (Ping timeout: 268 seconds)
+2019-12-06 09:26:09	-->	elfmacs (~elfmacs@159.226.199.101) has joined #Mechboards
+2019-12-06 09:32:41	<--	Ryuuguu (~cosmic@gateway/tor-sasl/ryuuguu) has quit (Quit: Leaving)
+2019-12-06 09:44:33	-->	flappity_ (~wolf@38.69.1.18) has joined #Mechboards
+2019-12-06 09:56:26	-->	clemens3 (~clemens@mx.eniso-partners.com) has joined #Mechboards
+2019-12-06 10:03:20	switchy	blitzkraft, did you catch up on aoc?
+2019-12-06 10:04:17	blitzkraft	Not yet. I made some progress on day5.
+2019-12-06 10:04:36	-->	multiproc (~mark@unaffiliated/multiproc) has joined #Mechboards
+2019-12-06 10:08:14	day	blitzkraft: im playing too!
+2019-12-06 10:13:03	switchy	day, playing what?
+2019-12-06 10:17:56	<--	flappity_ (~wolf@38.69.1.18) has quit (Ping timeout: 240 seconds)
+2019-12-06 10:19:49	-->	flappity_ (~wolf@38.69.1.18) has joined #Mechboards
+2019-12-06 10:32:44	day	aoc?
+2019-12-06 10:50:09	<--	ShinyRice (~ShinyRice@81.203.50.77.dyn.user.ono.com) has quit (Quit: ShinyRice)
+2019-12-06 10:55:27	switchy	oh, nice
+2019-12-06 10:55:29	switchy	how are you going?
+2019-12-06 11:00:16	<--	zamnedix (~zamnedix@zamnedix.net) has quit (Quit: ZNC 1.7.4+deb7 - https://znc.in)
+2019-12-06 11:01:17	-->	zamnedix (~zamnedix@zamnedix.net) has joined #Mechboards
+2019-12-06 11:02:55	Hakala	Looking at the gun safe there, seeing which shotgun to brush me teeth with
+2019-12-06 11:04:44	<--	clemens3 (~clemens@mx.eniso-partners.com) has quit (Ping timeout: 252 seconds)
+2019-12-06 11:14:59	-->	clemens3 (~clemens@mx.eniso-partners.com) has joined #Mechboards
+2019-12-06 11:16:57	<--	flappity_ (~wolf@38.69.1.18) has quit (Ping timeout: 265 seconds)
+2019-12-06 11:20:38	-->	flappity_ (~wolf@38.69.1.18) has joined #Mechboards
+2019-12-06 11:29:44	<--	elfmacs (~elfmacs@159.226.199.101) has quit (Ping timeout: 276 seconds)
+2019-12-06 11:31:32	-->	elfmacs (~elfmacs@2400:dd01:1020:150:1fff:d6e6:16ff:eb3f) has joined #Mechboards
+2019-12-06 11:34:14	-->	ShinyRice (~ShinyRice@81.203.50.77.dyn.user.ono.com) has joined #Mechboards
+2019-12-06 11:37:36	<--	Sabotender (~Sabotende@unaffiliated/sabotender) has quit (Ping timeout: 240 seconds)
+2019-12-06 11:40:41	day	switchy: am more or less up2date. haven't done today yet
+2019-12-06 11:55:23	-->	Sabotender (~Sabotende@unaffiliated/sabotender) has joined #Mechboards
+2019-12-06 12:07:22	-->	figuinhas (~pirilauam@194-79-86-23.static.net.novis.pt) has joined #Mechboards
+2019-12-06 12:10:21	<--	multiproc (~mark@unaffiliated/multiproc) has quit (Ping timeout: 268 seconds)
+2019-12-06 12:15:56	<--	flappity_ (~wolf@38.69.1.18) has quit (Ping timeout: 240 seconds)
+2019-12-06 12:35:47	-->	multiproc (~mark@unaffiliated/multiproc) has joined #Mechboards
+2019-12-06 12:42:07	<--	ShinyRice (~ShinyRice@81.203.50.77.dyn.user.ono.com) has quit (Quit: ShinyRice)
+2019-12-06 12:43:41	-->	ShinyRice (~ShinyRice@81.203.50.77.dyn.user.ono.com) has joined #Mechboards
+2019-12-06 12:48:05	-->	Sabotend_ (~Sabotende@unaffiliated/sabotender) has joined #Mechboards
+2019-12-06 12:48:34	Hakala	one day I will send day a birth day card, congratualting him for being born on a certain day
+2019-12-06 12:49:45	<--	Sabotender (~Sabotende@unaffiliated/sabotender) has quit (Ping timeout: 265 seconds)
+2019-12-06 12:53:35	<--	Sabotend_ (~Sabotende@unaffiliated/sabotender) has quit (Ping timeout: 250 seconds)
+2019-12-06 13:13:36	day	maybe you even guess the right one! the odds arent too bad
+2019-12-06 13:16:40	Hakala	its 5
+2019-12-06 13:17:05	j`ey	Hakala: 5 is a number
+2019-12-06 13:17:10	Hakala	yes
+2019-12-06 13:17:25	j`ey	cool, I wasnt sure
+2019-12-06 13:17:25	Hakala	and you're a towel
+2019-12-06 13:17:30	day	its the input for AoC day 5 task 2!
+2019-12-06 13:17:30	<--	StathisA (~StathisA@unaffiliated/stathisa) has quit (Ping timeout: 246 seconds)
+2019-12-06 13:17:42	j`ey	Hakala: at least i will be of use to a hitchhiker
+2019-12-06 13:18:25	day	lel someone in the company shat next to the toilet yesterday
+2019-12-06 13:18:41	day	now noones wants to clean it up and the toilet is on lockdown :D
+2019-12-06 13:20:04	j`ey	:||
+2019-12-06 13:20:39	day	we have some fucked up individuals in the company :|
+2019-12-06 13:20:56	day	stuff getting stolen, then that...yikes
+2019-12-06 13:21:13	day	and we are like 50-60ppl here :|
+2019-12-06 13:21:32	-->	StathisA (~StathisA@unaffiliated/stathisa) has joined #Mechboards
+2019-12-06 13:29:25	<--	cars (~cars@unaffiliated/cars) has quit (Quit: cars)
+2019-12-06 14:08:44	<--	pacbard (~pacbard@68.237.202.35.bc.googleusercontent.com) has quit (Read error: Connection reset by peer)
+2019-12-06 14:10:34	-->	pacbard (~pacbard@68.237.202.35.bc.googleusercontent.com) has joined #Mechboards
+2019-12-06 14:44:06	-->	Sabotender (~Sabotende@unaffiliated/sabotender) has joined #Mechboards
+2019-12-06 14:49:53	-->	Cartoon-Dude (~Thunderbi@195.48.13.205) has joined #Mechboards
+2019-12-06 15:07:21	-->	veam (uid157194@gateway/web/irccloud.com/x-rzvmytwxhoqyvywf) has joined #Mechboards
+2019-12-06 15:37:47	-->	hostile (~anon@adsl-185.176.58.194.tellas.gr) has joined #Mechboards
+2019-12-06 15:45:37	<--	StathisA (~StathisA@unaffiliated/stathisa) has quit (Ping timeout: 250 seconds)
+2019-12-06 15:47:43	-->	StathisA (~StathisA@unaffiliated/stathisa) has joined #Mechboards
+2019-12-06 15:48:56	-->	c0ck4m0u53 (~c0ck4m0u5@BSN-176-200-67.dynamic.siol.net) has joined #Mechboards
+2019-12-06 15:49:28	-->	StathisA_ (~StathisA@unaffiliated/stathisa) has joined #Mechboards
+2019-12-06 15:49:59	hostile	Hello, can anyone recommend me a keyboard that is similar in feel to the classic thinkpad keyboard?
+2019-12-06 15:51:49	-->	StathisA- (~StathisA@unaffiliated/stathisa) has joined #Mechboards
+2019-12-06 15:51:56	<--	StathisA (~StathisA@unaffiliated/stathisa) has quit (Ping timeout: 240 seconds)
+2019-12-06 15:52:42	--	StathisA- is now known as StathisA
+2019-12-06 15:54:43	<--	StathisA_ (~StathisA@unaffiliated/stathisa) has quit (Ping timeout: 250 seconds)
+2019-12-06 15:56:53	<--	StathisA (~StathisA@unaffiliated/stathisa) has quit (Ping timeout: 250 seconds)
+2019-12-06 15:59:12	-->	StathisA (~StathisA@unaffiliated/stathisa) has joined #Mechboards
+2019-12-06 16:03:40	<--	hostile (~anon@adsl-185.176.58.194.tellas.gr) has quit (Quit: Leaving)
+2019-12-06 16:10:49	<--	Sabotender (~Sabotende@unaffiliated/sabotender) has quit (Ping timeout: 265 seconds)
+2019-12-06 16:18:35	-->	Sabotender (~Sabotende@unaffiliated/sabotender) has joined #Mechboards
+2019-12-06 16:34:40	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #Mechboards
+2019-12-06 16:35:57	<--	StathisA (~StathisA@unaffiliated/stathisa) has quit (Ping timeout: 265 seconds)
+2019-12-06 16:37:54	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Remote host closed the connection)
+2019-12-06 16:39:10	-->	StathisA (~StathisA@unaffiliated/stathisa) has joined #Mechboards
+2019-12-06 16:40:29	<--	ShinyRice (~ShinyRice@81.203.50.77.dyn.user.ono.com) has quit (Quit: ShinyRice)
+2019-12-06 16:52:06	-->	t58 (~t58@2a01:388:5a1:150:1944:253b:2724:3fc3) has joined #Mechboards
+2019-12-06 16:57:06	<--	StathisA (~StathisA@unaffiliated/stathisa) has quit (Ping timeout: 268 seconds)
+2019-12-06 16:59:12	-->	StathisA (~StathisA@unaffiliated/stathisa) has joined #Mechboards
+2019-12-06 16:59:45	<--	elfmacs (~elfmacs@2400:dd01:1020:150:1fff:d6e6:16ff:eb3f) has quit (Ping timeout: 246 seconds)
+2019-12-06 17:00:38	-->	StathisA_ (~StathisA@unaffiliated/stathisa) has joined #Mechboards
+2019-12-06 17:01:01	<--	Cartoon-Dude (~Thunderbi@195.48.13.205) has quit (Ping timeout: 250 seconds)
+2019-12-06 17:03:37	-->	StathisA- (~StathisA@unaffiliated/stathisa) has joined #Mechboards
+2019-12-06 17:04:29	<--	StathisA (~StathisA@unaffiliated/stathisa) has quit (Ping timeout: 250 seconds)
+2019-12-06 17:04:31	--	StathisA- is now known as StathisA
+2019-12-06 17:07:05	<--	StathisA_ (~StathisA@unaffiliated/stathisa) has quit (Ping timeout: 250 seconds)
+2019-12-06 17:11:38	day	blitzkraft: day 6 was awesome!
+2019-12-06 17:12:59	day	that was a noticable step up in difficulty i would say
+2019-12-06 17:14:43	-->	Cartoon-Dude (~Thunderbi@195.48.13.205) has joined #Mechboards
+2019-12-06 17:20:47	-->	anon_ (~anon@adsl-185.176.58.194.tellas.gr) has joined #Mechboards
+2019-12-06 17:22:03	<--	anon_ (~anon@adsl-185.176.58.194.tellas.gr) has quit (Client Quit)
+2019-12-06 17:50:29	<--	arij (uid225068@gateway/web/irccloud.com/x-xausysrkkxbrsyul) has quit (Quit: Connection closed for inactivity)
+2019-12-09 09:07:21	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #Mechboards
+2019-12-09 09:07:21	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2019-12-09 09:07:21	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 10:38:51
+2019-12-09 09:07:21	--	Channel #Mechboards: 137 nicks (0 ops, 0 voices, 137 normals)
+2019-12-09 09:07:21	--	Channel created on Thu, 21 Feb 2013 05:50:48
+2019-12-09 09:13:47	<--	audron (~audron@jupiter.cocaine.farm) has quit (Ping timeout: 250 seconds)
+2019-12-09 09:14:45	-->	audron (~audron@jupiter.cocaine.farm) has joined #Mechboards
+2019-12-09 09:17:42	day	yey another intcode day >.>"
+2019-12-09 09:36:57	switchy	day, kind of easy one...
+2019-12-09 09:37:01	switchy	day, 2018 day 23 part 2
+2019-12-09 09:39:37	day	they always sound easy, but then i realize this new use case is jsut outside of what i can easily integrate into my c code (which is already beyond fucked, to cope with the last few feature extensions) :
+2019-12-09 09:41:51	switchy	ah yeah
+2019-12-09 10:01:27	day	switchy: are you training a specific language with it?
+2019-12-09 10:04:11	switchy	day, I'm doing them in racket
+2019-12-09 10:04:30	switchy	although I'm going through and re-doing them in fortran
+2019-12-09 10:30:32	-->	multiproc (~mark@unaffiliated/multiproc) has joined #Mechboards
+2019-12-09 10:33:31	<--	im0nde (~im0nde@2a0a-a546-ddc-0-2ad2-44ff-fe00-9395.ipv6dyn.netcologne.de) has quit (Ping timeout: 250 seconds)
+2019-12-09 10:33:34	-->	im0nde_ (~im0nde@2a0a-a546-a52f-0-2ad2-44ff-fe00-9395.ipv6dyn.netcologne.de) has joined #Mechboards
+2019-12-09 10:50:27	-->	anotheryou (uid257186@gateway/web/irccloud.com/x-eljyuwmuiiaqfklj) has joined #Mechboards
+2019-12-09 10:51:39	switchy	day, you're doing bare c?
+2019-12-09 10:52:39	day	yes
+2019-12-09 10:57:09	switchy	noice
+2019-12-09 11:00:17	<--	zamnedix (~zamnedix@zamnedix.net) has quit (Quit: ZNC 1.7.4+deb7 - https://znc.in)
+2019-12-09 11:01:17	-->	zamnedix (~zamnedix@zamnedix.net) has joined #Mechboards
+2019-12-09 11:10:51	<--	Sabotend_ (~Sabotende@unaffiliated/sabotender) has quit (Quit: 1000 Needles!)
+2019-12-09 11:11:12	-->	Sabotender (~Sabotende@unaffiliated/sabotender) has joined #Mechboards
+2019-12-09 11:16:36	<--	mek42 (mek42matri@gateway/shell/matrix.org/x-drpywblybmaknnuz) has quit (Quit: killed)
+2019-12-09 11:28:58	Hakala	yeehaww howdy cowbois
+2019-12-09 11:32:34	switchy	sup Hakala
+2019-12-09 11:34:26	Hakala	https://old.reddit.com/r/pics/comments/e826ri/the_new_prime_minister_of_finland/
+2019-12-09 11:45:17	Hakala	pmilf
+2019-12-09 11:50:16	<--	donran (~~donran@waifu.se) has quit (Ping timeout: 252 seconds)
+2019-12-09 12:13:48	-->	donran (~donran@waifu.se) has joined #Mechboards
+2019-12-09 13:06:46	Hakala	Do you concur
+2019-12-09 13:11:37	Hakala	I axe you a question switchy boi
+2019-12-09 14:08:35	<--	pacbard (~pacbard@68.237.202.35.bc.googleusercontent.com) has quit (Read error: Connection reset by peer)
+2019-12-09 14:10:21	-->	pacbard (~pacbard@68.237.202.35.bc.googleusercontent.com) has joined #Mechboards
+2019-12-09 14:35:48	-->	ShinyRice (~ShinyRice@81.203.50.77.dyn.user.ono.com) has joined #Mechboards
+2019-12-09 14:59:57	<--	hxc0 (~hxc0@unaffiliated/hxc0) has quit (Ping timeout: 240 seconds)
+2019-12-09 15:01:34	-->	veam (uid157194@gateway/web/irccloud.com/x-ywpeahurpbudezzk) has joined #Mechboards
+2019-12-09 15:07:23	<--	ShinyRice (~ShinyRice@81.203.50.77.dyn.user.ono.com) has quit (Quit: ShinyRice)
+2019-12-09 15:13:36	-->	clemens3 (~clemens@mx.eniso-partners.com) has joined #Mechboards
+2019-12-09 15:46:23	<--	elfmacs (~elfmacs@2400:dd01:1020:150:1fff:d6e6:16ff:eb3f) has quit (Ping timeout: 276 seconds)
+2019-12-09 16:59:43	<--	im0nde_ (~im0nde@2a0a-a546-a52f-0-2ad2-44ff-fe00-9395.ipv6dyn.netcologne.de) has quit (Quit: ZNC 1.7.4 - https://znc.in)
+2019-12-09 17:01:48	-->	im0nde (~im0nde@2a0a-a546-a52f-0-2ad2-44ff-fe00-9395.ipv6dyn.netcologne.de) has joined #Mechboards
+2019-12-09 17:40:24	-->	c0ck4m0u53 (~c0ck4m0u5@BSN-176-200-253.dynamic.siol.net) has joined #Mechboards
+2019-12-10 09:24:20	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #Mechboards
+2019-12-10 09:24:20	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2019-12-10 09:24:20	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 10:38:51
+2019-12-10 09:24:20	--	Channel #Mechboards: 135 nicks (0 ops, 0 voices, 135 normals)
+2019-12-10 09:24:20	--	Channel created on Thu, 21 Feb 2013 05:50:48
+2019-12-10 09:43:42	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #Mechboards
+2019-12-10 09:43:42	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2019-12-10 09:43:42	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 10:38:51
+2019-12-10 09:43:42	--	Channel #Mechboards: 135 nicks (0 ops, 0 voices, 135 normals)
+2019-12-10 09:43:42	--	Channel created on Thu, 21 Feb 2013 05:50:48
+2019-12-10 09:44:54	-->	anotheryou (uid257186@gateway/web/irccloud.com/x-mgnvnwduukmhanmn) has joined #Mechboards
+2019-12-10 09:46:51	blitzkraft	switchy: I am stuck in a weird state with tmux.
+2019-12-10 09:47:36	blitzkraft	On one tmux window, I have a vertical split. The width of the splits is 95 and 96 cols. Plus the border column. Nets to 192 cols.
+2019-12-10 09:47:45	blitzkraft	But the actual terminal is only 191 cols.
+2019-12-10 09:47:58	blitzkraft	So, one column is getting cut off. Only on that one window.
+2019-12-10 09:48:05	blitzkraft	Not sure how to fix it.
+2019-12-10 09:48:16	blitzkraft	Waiting for a reply on #tmux
+2019-12-10 09:51:15	Hakala	tmux dz nuts
+2019-12-10 09:53:44	switchy	blitzkraft, o.o
+2019-12-10 09:54:01	switchy	blitzkraft, <prefix> :refresh-client?
+2019-12-10 09:54:08	day	the new aoc is good i think
+2019-12-10 09:54:27	switchy	day, I'm being an idiot for part 2, ugh
+2019-12-10 09:54:29	blitzkraft	refresh-client didn't work.
+2019-12-10 09:54:44	day	i just started part 1
+2019-12-10 09:56:36	switchy	ah
+2019-12-10 09:56:44	switchy	sweet innocence
+2019-12-10 10:02:52	-->	multiproc (~mark@unaffiliated/multiproc) has joined #Mechboards
+2019-12-10 10:14:14	-->	Sabotender (~Sabotende@unaffiliated/sabotender) has joined #Mechboards
+2019-12-10 10:18:19	<--	Sabotend_ (~Sabotende@unaffiliated/sabotender) has quit (Ping timeout: 250 seconds)
+2019-12-10 10:42:42	<--	MrFahrenheit (~zumbi@unaffiliated/rageofthou) has quit (Ping timeout: 252 seconds)
+2019-12-10 10:45:41	-->	MrFahrenheit (~zumbi@unaffiliated/rageofthou) has joined #Mechboards
+2019-12-10 10:46:03	<--	im0nde (~im0nde@2a0a-a546-a52f-0-2ad2-44ff-fe00-9395.ipv6dyn.netcologne.de) has quit (Ping timeout: 250 seconds)
+2019-12-10 10:46:14	-->	im0nde_ (~im0nde@2a0a-a546-3a7f-0-2ad2-44ff-fe00-9395.ipv6dyn.netcologne.de) has joined #Mechboards
+2019-12-10 10:49:52	-->	figuinhas (~pirilauam@195-23-37-23.static.net.novis.pt) has joined #Mechboards
+2019-12-10 10:59:44	switchy	day, so much yuck
+2019-12-10 10:59:57	Hakala	https://i.redd.it/0maz2njx7p341.jpg
+2019-12-10 11:00:13	<--	zamnedix (~zamnedix@zamnedix.net) has quit (Quit: ZNC 1.7.4+deb7 - https://znc.in)
+2019-12-10 11:01:46	-->	zamnedix (~zamnedix@zamnedix.net) has joined #Mechboards
+2019-12-10 11:09:53	<--	fenrir (~fenrir@unaffiliated/fenrir) has quit (Ping timeout: 276 seconds)
+2019-12-10 11:14:03	switchy	Hakala, self portrait, untitled
+2019-12-10 11:23:53	Hakala	scrungy b o y e
+2019-12-10 11:23:59	Hakala	get titled mate
+2019-12-10 11:24:35	j`ey	pardon
+2019-12-10 11:25:02	Hakala	Anyway, then she let me gently touch her custom keycaps
+2019-12-10 11:25:08	Hakala	Oh sorry didn't see you come in j`ey
+2019-12-10 11:25:36	Hakala	Just talking about keyboards like we always are
+2019-12-10 11:29:10	Hakala	https://www.imdb.com/title/tt4016934/
+2019-12-10 11:29:11	Hakala	gutes movie
+2019-12-10 11:31:59	<--	oddie (~oddie@infectiious.xyz) has quit (Ping timeout: 240 seconds)
+2019-12-10 11:34:01	<--	flappity (~wolf@172-221-242-216.res.spectrum.com) has quit (Ping timeout: 240 seconds)
+2019-12-10 11:34:53	<--	infectiious (~droolendu@unaffiliated/droolendug) has quit (Ping timeout: 268 seconds)
+2019-12-10 11:35:36	j`ey	i prefer guts movie
+2019-12-10 11:37:34	-->	flappity (~wolf@172-221-242-216.res.spectrum.com) has joined #Mechboards
+2019-12-10 11:38:14	Hakala	:/
+2019-12-10 11:38:23	-->	infectiious (~droolendu@unaffiliated/droolendug) has joined #Mechboards
+2019-12-10 11:38:29	-->	oddie (~oddie@infectiious.xyz) has joined #Mechboards
+2019-12-10 12:16:38	day	switchy: how did you do it? create all vectors then normalize them by dividing throught the largest common denominator then remove the doubles, the reminders are then the result?
+2019-12-10 13:09:12	-->	Sabotend_ (~Sabotende@unaffiliated/sabotender) has joined #Mechboards
+2019-12-10 13:12:59	<--	Sabotender (~Sabotende@unaffiliated/sabotender) has quit (Ping timeout: 246 seconds)
+2019-12-10 14:04:37	<--	frop (~mrmr@unaffiliated/frop) has quit (Read error: Connection reset by peer)
+2019-12-10 14:08:18	-->	frop (~mrmr@unaffiliated/frop) has joined #Mechboards
+2019-12-10 14:08:35	<--	pacbard (~pacbard@68.237.202.35.bc.googleusercontent.com) has quit (Read error: Connection reset by peer)
+2019-12-10 14:10:50	-->	pacbard (~pacbard@68.237.202.35.bc.googleusercontent.com) has joined #Mechboards
+2019-12-10 14:27:14	<--	Sabotend_ (~Sabotende@unaffiliated/sabotender) has quit (Quit: 1000 Needles!)
+2019-12-10 14:28:21	-->	Sabotender (~Sabotende@unaffiliated/sabotender) has joined #Mechboards
+2019-12-10 14:29:38	-->	veam (uid157194@gateway/web/irccloud.com/x-lqyplnggzftlytdo) has joined #Mechboards
+2019-12-10 14:32:56	ponky	oh, new HHKBs released
+2019-12-10 14:32:59	ponky	cool
+2019-12-10 14:33:18	Hakala	ja steve jobs got on stage, had a keynote n shizzle
+2019-12-10 15:07:51	<--	elfmacs (~elfmacs@2400:dd01:1020:150:1fff:d6e6:16ff:eb3f) has quit (Ping timeout: 252 seconds)
+2019-12-10 15:11:25	-->	ShinyRice (~ShinyRice@81.203.50.77.dyn.user.ono.com) has joined #Mechboards
+2019-12-10 15:18:48	j`ey	ponky: v3?
+2019-12-10 15:43:38	-->	Joric (~joric@unaffiliated/joric) has joined #Mechboards
+2019-12-10 15:52:25	<--	Joric (~joric@unaffiliated/joric) has quit
+2019-12-11 09:11:38	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #Mechboards
+2019-12-11 09:11:38	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2019-12-11 09:11:38	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 10:38:51
+2019-12-11 09:11:38	--	Channel #Mechboards: 136 nicks (0 ops, 0 voices, 136 normals)
+2019-12-11 09:11:39	--	Channel created on Thu, 21 Feb 2013 05:50:48
+2019-12-11 09:19:19	-->	eziwaq (~eziwaq@unaffiliated/eziwaq) has joined #Mechboards
+2019-12-11 09:20:05	<--	Ryuuguu (~cosmic@gateway/tor-sasl/ryuuguu) has quit (Quit: Leaving)
+2019-12-11 09:25:18	<--	FennecCode (~user@2605:e000:141f:8534:b1d6:27a:b710:eaf1) has quit (Quit: ERC (IRC client for Emacs 26.2))
+2019-12-11 09:32:18	<--	joesventek (~smoon@joesventek.powered.by.lunarbnc.net) has quit (Ping timeout: 246 seconds)
+2019-12-11 09:42:26	-->	anotheryou (uid257186@gateway/web/irccloud.com/x-jipfjjzhvlrywiwd) has joined #Mechboards
+2019-12-11 09:46:50	-->	joesventek (~smoon@joesventek.powered.by.lunarbnc.net) has joined #Mechboards
+2019-12-11 10:14:26	switchy	day, did you code your ints?
+2019-12-11 10:14:58	-->	multiproc (~mark@unaffiliated/multiproc) has joined #Mechboards
+2019-12-11 10:41:57	-->	ecloud_ (~quassel@192.89.120.62) has joined #Mechboards
+2019-12-11 10:46:49	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #Mechboards
+2019-12-11 10:46:49	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2019-12-11 10:46:49	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 10:38:51
+2019-12-11 10:46:49	--	Channel #Mechboards: 138 nicks (0 ops, 0 voices, 138 normals)
+2019-12-11 10:46:50	--	Channel created on Thu, 21 Feb 2013 05:50:48
+2019-12-11 10:47:12	<--	ecloud_ (~quassel@192.89.120.62) has quit (Ping timeout: 265 seconds)
+2019-12-11 10:52:34	day	switchy: you mean todays challenge?
+2019-12-11 10:52:45	switchy	day, I did indeed
+2019-12-11 10:52:58	day	nah im skipping this intcode bullshit
+2019-12-11 10:53:20	-->	im0nde (~im0nde@2a0a-a546-d1fc-0-2ad2-44ff-fe00-9395.ipv6dyn.netcologne.de) has joined #Mechboards
+2019-12-11 10:53:21	day	im trying to do yesterdays in haskell
+2019-12-11 10:53:26	day	but im failing :D
+2019-12-11 10:54:03	<--	im0nde_ (~im0nde@2a0a-a546-3a7f-0-2ad2-44ff-fe00-9395.ipv6dyn.netcologne.de) has quit (Ping timeout: 245 seconds)
+2019-12-11 11:00:01	<--	zamnedix (~zamnedix@zamnedix.net) has quit (Quit: ZNC 1.7.4+deb7 - https://znc.in)
+2019-12-11 11:03:34	-->	zamnedix (~zamnedix@zamnedix.net) has joined #Mechboards
+2019-12-11 11:05:22	switchy	day, this is where the intcode starts to get interesting
+2019-12-11 11:05:41	switchy	do you do much haskell?
+2019-12-11 11:18:43	day	nah
+2019-12-11 11:20:06	day	im not a fan of these tasks that are based on other tasks that are based on... you cant discuss them
+2019-12-11 11:21:17	day	im struggling even with the simplest tasks in haskell, but i find the language intriguing
+2019-12-11 11:38:00	switchy	haha
+2019-12-11 11:38:00	switchy	haskell was the language they chose for my first year compsci course
+2019-12-11 11:38:04	switchy	I thought that was a bold choice
+2019-12-11 11:47:19	day	*sir we have too many first year students*
+2019-12-11 11:47:24	day	*say no more*
+2019-12-11 11:57:48	<--	tom39291 (~tom@2401:c080:1800:401a:5400:1ff:fede:51f9) has quit (Ping timeout: 245 seconds)
+2019-12-11 13:02:31	day	switchy: so how did the first year haskell work out?
+2019-12-11 13:19:48	<--	MarkRobbo (~MarkRobbo@unaffiliated/markrobbo) has quit (Ping timeout: 246 seconds)
+2019-12-11 14:08:36	<--	pacbard (~pacbard@68.237.202.35.bc.googleusercontent.com) has quit (Read error: Connection reset by peer)
+2019-12-11 14:10:25	-->	pacbard (~pacbard@68.237.202.35.bc.googleusercontent.com) has joined #Mechboards
+2019-12-11 14:43:38	<--	yokel (~yokel@unaffiliated/contempt) has quit (Ping timeout: 245 seconds)
+2019-12-11 14:46:30	-->	yokel (~yokel@unaffiliated/contempt) has joined #Mechboards
+2019-12-11 14:47:55	-->	Cartoon-Dude (~Thunderbi@195.48.13.205) has joined #Mechboards
+2019-12-11 14:53:14	<--	elfmacs (~elfmacs@2400:dd01:1020:150:1fff:d6e6:16ff:eb3f) has quit (Ping timeout: 276 seconds)
+2019-12-11 15:10:17	-->	veam (uid157194@gateway/web/irccloud.com/x-xaqrabtocrwlruka) has joined #Mechboards
+2019-12-11 15:37:10	-->	c0ck4m0u53 (~c0ck4m0u5@BSN-176-200-253.dynamic.siol.net) has joined #Mechboards
+2019-12-11 15:41:55	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #Mechboards
+2019-12-11 15:41:55	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2019-12-11 15:41:55	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 10:38:51
+2019-12-11 15:41:55	--	Channel #Mechboards: 137 nicks (0 ops, 0 voices, 137 normals)
+2019-12-11 15:41:55	--	Channel created on Thu, 21 Feb 2013 05:50:48
+2019-12-11 16:19:20	--	irc: disconnected from server
+2019-12-11 16:19:45	-->	Syrinxos (~syrinxos@93-34-1-82.ip47.fastwebnet.it) has joined #Mechboards
+2019-12-11 16:19:45	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2019-12-11 16:19:45	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 10:38:51
+2019-12-11 16:19:45	--	Channel #Mechboards: 137 nicks (0 ops, 0 voices, 137 normals)
+2019-12-11 16:20:02	--	Channel created on Thu, 21 Feb 2013 05:50:48
+2019-12-11 17:05:19	--	irc: disconnected from server
+2019-12-11 17:05:46	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #Mechboards
+2019-12-11 17:05:46	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2019-12-11 17:05:46	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 10:38:51
+2019-12-11 17:05:46	--	Channel #Mechboards: 138 nicks (0 ops, 0 voices, 138 normals)
+2019-12-11 17:06:03	--	Channel created on Thu, 21 Feb 2013 05:50:48
+2019-12-11 17:34:47	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #Mechboards
+2019-12-11 17:34:47	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2019-12-11 17:34:47	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 10:38:51
+2019-12-11 17:34:47	--	Channel #Mechboards: 138 nicks (0 ops, 0 voices, 138 normals)
+2019-12-11 17:34:47	--	Channel created on Thu, 21 Feb 2013 05:50:48
+2019-12-11 17:49:08	<--	clemens3 (~clemens@mx.eniso-partners.com) has quit (Quit: WeeChat 1.6)
+2019-12-12 09:00:19	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #Mechboards
+2019-12-12 09:00:19	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2019-12-12 09:00:19	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 10:38:51
+2019-12-12 09:00:19	--	Channel #Mechboards: 134 nicks (0 ops, 0 voices, 134 normals)
+2019-12-12 09:00:19	--	Channel created on Thu, 21 Feb 2013 05:50:48
+2019-12-12 09:16:04	switchy	blitzkraft, yay
+2019-12-12 09:16:16	blitzkraft	Done?
+2019-12-12 09:16:45	switchy	blitzkraft, yeah
+2019-12-12 09:16:54	blitzkraft	Nice!
+2019-12-12 09:17:36	<--	Ryuuguu (~cosmic@gateway/tor-sasl/ryuuguu) has quit (Quit: Leaving)
+2019-12-12 10:04:23	day	My Jupiter system is gaining energy at an alarming rate :|
+2019-12-12 10:07:19	switchy	day, perpetual motion!
+2019-12-12 10:09:39	-->	multiproc (~mark@unaffiliated/multiproc) has joined #Mechboards
+2019-12-12 10:10:20	-->	clemens3 (~clemens@mx.eniso-partners.com) has joined #Mechboards
+2019-12-12 10:16:59	-->	Seaweed_Seal (SeaweedSea@gateway/vpn/privateinternetaccess/seaweedseal) has joined #Mechboards
+2019-12-12 10:20:51	<--	Seaweedseal (~SeaweedSe@unaffiliated/seaweedseal) has quit (Ping timeout: 250 seconds)
+2019-12-12 10:24:26	switchy	it's so mean going from racket with a big standard library to fortran which...doesn't
+2019-12-12 10:35:20	<--	eziwaq (~eziwaq@unaffiliated/eziwaq) has quit (Quit: Leaving)
+2019-12-12 10:39:22	Hakala	     Car automotive electronics dog working principle:when detect radar tachometer,it will issue a warning in advance.for example,when detect there have electronic eyes or speed device, it will broadcast in advance.
+2019-12-12 11:23:51	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #Mechboards
+2019-12-12 11:23:51	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2019-12-12 11:23:51	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 10:38:51
+2019-12-12 11:23:51	--	Channel #Mechboards: 134 nicks (0 ops, 0 voices, 134 normals)
+2019-12-12 11:23:51	--	Channel created on Thu, 21 Feb 2013 05:50:48
+2019-12-12 11:28:37	<--	elfmacs (~elfmacs@159.226.199.101) has quit (Ping timeout: 240 seconds)
+2019-12-12 11:32:19	-->	elfmacs (~elfmacs@159.226.199.101) has joined #Mechboards
+2019-12-12 11:37:15	switchy	Hakala, do you eat rye crisps?
+2019-12-12 11:38:18	Hakala	I've been known to at times to taste a few
+2019-12-12 11:38:51	Hakala	https://en.wikipedia.org/wiki/Finnish_bread#Crispbread
+2019-12-12 11:38:54	Hakala	this is goooooooood shit
+2019-12-12 11:39:17	switchy	we have finncrisps
+2019-12-12 11:39:21	switchy	they're yummy
+2019-12-12 11:40:15	-->	figuinhas (~pirilauam@194-79-86-23.static.net.novis.pt) has joined #Mechboards
+2019-12-12 11:42:49	-->	robotmay (~beepboop@2001:8b0:7af0:2580:916a:c866:a10:7568) has joined #Mechboards
+2019-12-12 11:51:14	-->	veeee (v7ematrixo@gateway/shell/matrix.org/x-czaanofqsgivfnlu) has joined #Mechboards
+2019-12-12 11:51:23	day	so does part 2 mean "steps till you are back at the initial state" or "steps till ANY previously encountered state reappears?"
+2019-12-12 11:51:46	day	im not sure the later is != the first though
+2019-12-12 11:52:25	day	i suspect without external forces it cant reenter the loop somewhere else but through the initial state
+2019-12-12 11:52:43	veeee	are there any custom keyboards compatible with old thinkpad models?
+2019-12-12 11:55:18	clemens3	veeee: what do you mean by compatible?
+2019-12-12 11:56:02	switchy	day, your latter statement
+2019-12-12 11:56:06	switchy	but your suspicion may be correct
+2019-12-12 11:57:01	veeee	with the same connector or that fit the laptop case
+2019-12-12 11:57:23	veeee	i would like to replace the original keyboard but there are some problems
+2019-12-12 11:57:35	veeee	space, and turning on the laptop
+2019-12-12 12:18:38	-->	anotheryou (uid257186@gateway/web/irccloud.com/x-owlwhklgnwtwiksm) has joined #Mechboards
+2019-12-12 12:25:13	Hakala	Everything must come to an end, even the 6 day weekend
+2019-12-12 12:35:37	-->	Sabotender (~Sabotende@unaffiliated/sabotender) has joined #Mechboards
+2019-12-12 13:05:46	<--	multiproc (~mark@unaffiliated/multiproc) has quit (Ping timeout: 265 seconds)
+2019-12-12 13:07:02	-->	multiproc (~mark@unaffiliated/multiproc) has joined #Mechboards
+2019-12-12 13:19:52	day	D:
+2019-12-12 13:38:45	-->	cottoneyejim (~cottoneye@46.33.207.90) has joined #Mechboards
+2019-12-12 13:41:08	day	switchy: did you simply loop until you found a state that equals the initial state?
+2019-12-12 13:46:42	<--	cottoneyejim (~cottoneye@46.33.207.90) has quit (Quit: cottoneyejim)
+2019-12-12 13:47:00	-->	cottoneyejim (~cottoneye@46.33.207.90) has joined #Mechboards
+2019-12-12 13:51:47	<--	cottoneyejim (~cottoneye@46.33.207.90) has quit (Client Quit)
+2019-12-12 13:52:05	-->	cottoneyejim (~cottoneye@46.33.207.90) has joined #Mechboards
+2019-12-12 13:56:41	<--	cottoneyejim (~cottoneye@46.33.207.90) has quit (Client Quit)
+2019-12-12 13:56:59	-->	cottoneyejim (~cottoneye@46.33.207.90) has joined #Mechboards
+2019-12-12 13:58:01	<--	cottoneyejim (~cottoneye@46.33.207.90) has quit (Client Quit)
+2019-12-12 13:58:19	-->	cottoneyejim (~cottoneye@46.33.207.90) has joined #Mechboards
+2019-12-12 13:59:54	<--	elfmacs (~elfmacs@159.226.199.101) has quit (Ping timeout: 265 seconds)
+2019-12-12 14:03:13	-->	elfmacs (~elfmacs@159.226.199.101) has joined #Mechboards
+2019-12-12 14:08:34	<--	pacbard (~pacbard@68.237.202.35.bc.googleusercontent.com) has quit (Read error: Connection reset by peer)
+2019-12-12 14:10:41	-->	pacbard (~pacbard@68.237.202.35.bc.googleusercontent.com) has joined #Mechboards
+2019-12-12 14:11:57	<--	cottoneyejim (~cottoneye@46.33.207.90) has quit (Ping timeout: 268 seconds)
+2019-12-12 14:12:17	<--	multiproc (~mark@unaffiliated/multiproc) has quit (Ping timeout: 240 seconds)
+2019-12-12 14:14:23	-->	multiproc (~mark@unaffiliated/multiproc) has joined #Mechboards
+2019-12-12 14:41:54	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #Mechboards
+2019-12-12 14:41:54	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2019-12-12 14:41:54	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 10:38:51
+2019-12-12 14:41:54	--	Channel #Mechboards: 139 nicks (0 ops, 0 voices, 139 normals)
+2019-12-12 14:41:55	--	Channel created on Thu, 21 Feb 2013 05:50:48
+2019-12-12 14:44:02	-->	mord0d_ (~mord0d@gateway/tor-sasl/mord0d) has joined #Mechboards
+2019-12-12 14:44:16	<--	mord0d (~mord0d@gateway/tor-sasl/mord0d) has quit (Ping timeout: 260 seconds)
+2019-12-12 14:56:25	day	blitzkraft:
+2019-12-12 15:15:25	--	mord0d_ is now known as mord0d
+2019-12-12 15:24:20	-->	veam (uid157194@gateway/web/irccloud.com/x-gimiwyzwmrkhncqp) has joined #Mechboards
+2019-12-12 15:47:17	<--	elfmacs (~elfmacs@159.226.199.101) has quit (Ping timeout: 240 seconds)
+2019-12-12 16:06:13	-->	c0ck4m0u53 (~c0ck4m0u5@BSN-176-200-253.dynamic.siol.net) has joined #Mechboards
+2019-12-12 16:20:30	<--	anotheryou (uid257186@gateway/web/irccloud.com/x-owlwhklgnwtwiksm) has quit (Quit: Connection closed for inactivity)
+2019-12-12 16:43:51	-->	cottoneyejim (~cottoneye@46.33.207.90) has joined #Mechboards
+2019-12-12 17:09:39	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #Mechboards
+2019-12-12 17:09:39	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2019-12-12 17:09:39	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 10:38:51
+2019-12-12 17:09:39	--	Channel #Mechboards: 140 nicks (0 ops, 0 voices, 140 normals)
+2019-12-12 17:09:40	--	Channel created on Thu, 21 Feb 2013 05:50:48
+2019-12-12 17:39:18	-->	Cartoon-Dude (~Thunderbi@195.48.13.205) has joined #Mechboards
+2019-12-13 08:58:27	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #Mechboards
+2019-12-13 08:58:27	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2019-12-13 08:58:27	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 10:38:51
+2019-12-13 08:58:27	--	Channel #Mechboards: 136 nicks (0 ops, 0 voices, 136 normals)
+2019-12-13 08:58:27	--	Channel created on Thu, 21 Feb 2013 05:50:48
+2019-12-13 09:12:37	day	how is that subreddit not banned yet :|
+2019-12-13 09:13:19	day	shoutout to /r/megalinks!
+2019-12-13 09:23:15	-->	arij (uid225068@gateway/web/irccloud.com/x-ypbzzrrrnufthgua) has joined #Mechboards
+2019-12-13 09:26:41	Hakala	They don't post links to any pirated content buddy boi
+2019-12-13 09:27:07	Hakala	gota pee like a water buffalo
+2019-12-13 09:39:18	<--	deviantfero (~deviantfe@ip168-243-230-189.intercom.com.sv) has quit (Ping timeout: 268 seconds)
+2019-12-13 09:39:23	switchy	day, did you do it yet?
+2019-12-13 09:40:52	day	switchy: nah and i wont. intcode
+2019-12-13 09:42:00	-->	Sabotender (~Sabotende@unaffiliated/sabotender) has joined #Mechboards
+2019-12-13 09:45:43	switchy	day, it's really good
+2019-12-13 09:45:49	switchy	big recommend
+2019-12-13 09:58:34	mads-	switchy: not much. you? Working at new place where ssh access to my seedbox is blocked, so not much chatting these days :(
+2019-12-13 10:01:26	switchy	mads-, :( lame
+2019-12-13 10:01:40	switchy	I'm just crosswording and thinking about refactoring my advent of code intcode interpreter
+2019-12-13 10:03:18	-->	multiproc (~mark@unaffiliated/multiproc) has joined #Mechboards
+2019-12-13 10:04:29	mads-	switchy: How far are you?
+2019-12-13 10:04:44	mads-	I made the first intcode in ideone.com . thought it was OK to throw away
+2019-12-13 10:04:55	mads-	When I saw the next intcode one... I was like ... damn
+2019-12-13 10:04:57	switchy	I'm caught up
+2019-12-13 10:05:08	switchy	heh, every odd day has been intcode, I think
+2019-12-13 10:05:22	-->	PCoves (~PCoves@ns3309246.ip-178-32-222.eu) has joined #Mechboards
+2019-12-13 10:05:40	PCoves	Hello there.
+2019-12-13 10:05:59	switchy	g'day PCoves
+2019-12-13 10:06:19	PCoves	Just wanted to share an IRC/
+2019-12-13 10:06:27	PCoves	Just wanted to share an IRC/Mech related feature :
+2019-12-13 10:06:53	PCoves	The rainbow unicorn feature
+2019-12-13 10:07:20	PCoves	Directly in QMK, if anyone is interested.
+2019-12-13 10:07:53	PCoves	It simply prefix every letter I type with an IRC color code .
+2019-12-13 10:10:46	blitzkraft	Neat.
+2019-12-13 10:10:48	blitzkraft	How?
+2019-12-13 10:12:06	PCoves	Can I paste the code here?
+2019-12-13 10:13:16	switchy	is it long?
+2019-12-13 10:13:24	mads-	PCoves: Please use a pastebin :)
+2019-12-13 10:13:40	mads-	switchy: Guess I  have to catch up with a new intcode. The first one wasn't that bad
+2019-12-13 10:14:06	switchy	mads-, a few more things get added, not too bad
+2019-12-13 10:14:25	switchy	mads-, what langugae are/were you using?
+2019-12-13 10:14:45	PCoves	http://ix.io/24hq/c
+2019-12-13 10:15:02	PCoves	Simple, but it works.
+2019-12-13 10:15:11	switchy	neat
+2019-12-13 10:16:13	PCoves	At line 35, it's also possible to use sprintf and build a more complex color code including background color.
+2019-12-13 10:16:32	PCoves	But then there is a noticeable lag.
+2019-12-13 10:17:03	PCoves	Also, I gave the random color a try, worst lag.
+2019-12-13 10:17:43	mads-	switchy: C++. You?
+2019-12-13 10:18:05	PCoves	And, the (line 30) mods save is here to be able to type capitalized letters without screwing the color code.
+2019-12-13 10:18:16	switchy	mads-, racket and fortran
+2019-12-13 10:19:19	switchy	PCoves, there's noticeable lag using sprintf?
+2019-12-13 10:20:46	PCoves	No, but every tapped key has to output between 5 and 8 chars.
+2019-12-13 10:20:46	mads-	switchy: nice :D I haven't tried racket. Is it any fun?
+2019-12-13 10:20:54	blitzkraft	Does color need to be enabled on the channel? PCoves : Could you type in a color message here??
+2019-12-13 10:21:20	PCoves	Like this?
+2019-12-13 10:21:41	PCoves	It's more on the client side I suppose.
+2019-12-13 10:21:43	switchy	I think +c disables them
+2019-12-13 10:22:01	PCoves	Ho, you guys don't see them.
+2019-12-13 10:22:06	day	no
+2019-12-13 10:22:09	 *	PCoves is kind of sad.
+2019-12-13 10:22:29	PCoves	https://freenode.net/kb/answer/channelmodes Indeed, +c disables colors.
+2019-12-13 10:22:35	switchy	I *could* enable them... but that could be anarchy
+2019-12-13 10:22:46	PCoves	Please don't.
+2019-12-13 10:22:53	PCoves	It's of no importance.
+2019-12-13 10:23:10	PCoves	I like anarchy though.
+2019-12-13 10:23:17	day	but i want to use my rainbow plugin :|
+2019-12-13 10:23:35	PCoves	But I guess you did not refered to the political one.
+2019-12-13 10:23:42	<--	elfmacs (~elfmacs@159.226.199.101) has quit (Ping timeout: 265 seconds)
+2019-12-13 10:24:39	switchy	day, you can just pretend :D
+2019-12-13 10:26:10	day	i can only be happy if i know your eyes are bleeding :(
+2019-12-13 10:26:35	switchy	day, oh I assure they are, just the very thought of it
+2019-12-13 10:26:48	-->	elfmacs (~elfmacs@159.226.199.101) has joined #Mechboards
+2019-12-13 10:28:31	day	so with the int code challenges, are they all based on the previous one, or do you keep reusing the first version of it?
+2019-12-13 10:28:57	day	A->B, A->C, A-D vs. A->B->C->D ?
+2019-12-13 10:29:06	switchy	the former
+2019-12-13 10:29:16	switchy	well, you add more opcodes a few times, and then just use it as-is
+2019-12-13 10:31:03	switchy	I think the one where you finish the interpreter is basically a program that verifies your interpreter is correct
+2019-12-13 10:33:50	mads-	switchy: That's pretty nice
+2019-12-13 10:34:00	mads-	Seems like a lot of work goes into that challenge.
+2019-12-13 10:34:05	switchy	for sure
+2019-12-13 10:41:11	<--	Sabotender (~Sabotende@unaffiliated/sabotender) has quit (Ping timeout: 276 seconds)
+2019-12-13 10:42:48	<--	ShinyRice (~ShinyRice@2001:720:1014:f410:d16f:ac47:7a6f:6f76) has quit (Ping timeout: 245 seconds)
+2019-12-13 10:43:18	-->	Sabotender (~Sabotende@unaffiliated/sabotender) has joined #Mechboards
+2019-12-13 10:43:44	-->	ShinyRice (~ShinyRice@31.177.98.99) has joined #Mechboards
+2019-12-13 10:45:06	veeee	time to build a new keyboard
+2019-12-13 10:46:28	switchy	always time
+2019-12-13 10:47:20	day	i never got this image decoder to work either
+2019-12-13 10:47:27	day	like it works, but it doesnt :|
+2019-12-13 10:47:40	switchy	day, ?
+2019-12-13 10:47:54	day	challenge a few days ago with the 10layer image
+2019-12-13 10:48:11	day	find the ones with the most 0 was task 1, task 2 was to compile the final image
+2019-12-13 10:48:49	switchy	ah right
+2019-12-13 10:49:18	day	the resulting image was just garbage in my case, i could see anything in there
+2019-12-13 10:49:53	-->	cottoneyejim (~cottoneye@46.33.207.90) has joined #Mechboards
+2019-12-13 10:52:06	switchy	maybe you had it upside down?
+2019-12-13 10:53:20	day	thought that as well at first but then i printed all layers and decoded it by hand and some pixel where 100% transparent. idk
+2019-12-13 10:54:00	day	but my layer separation code has to be correct because i finished task 1
+2019-12-13 10:54:06	<--	PCoves (~PCoves@ns3309246.ip-178-32-222.eu) has left #Mechboards
+2019-12-13 10:54:42	veeee	are there any dactyls with f keys?
+2019-12-13 10:59:56	switchy	day, I don't think any should be transparent
+2019-12-13 11:00:25	<--	zamnedix (~zamnedix@zamnedix.net) has quit (Quit: ZNC 1.7.4+deb7 - https://znc.in)
+2019-12-13 11:00:45	day	yeah i found that odd as well. maybe i recheck it. but its so simple i dont know what could have gone wrong
+2019-12-13 11:00:53	day	its literally two nested loops :|
+2019-12-13 11:00:56	switchy	veeee, I dunno, ask na_th_an :P
+2019-12-13 11:02:26	-->	zamnedix (~zamnedix@zamnedix.net) has joined #Mechboards
+2019-12-13 11:03:02	switchy	day, heh, true... in fact I used implicit loops
+2019-12-13 11:05:16	switchy	must be something minor then
+2019-12-13 11:05:51	veeee	best website for mesure typing speed?
+2019-12-13 11:06:05	veeee	there are so many i never remember which one is the best
+2019-12-13 11:06:12	switchy	I dunno what the best is
+2019-12-13 11:06:22	switchy	https://typing-speed-test.aoeu.eu/ is one of those random word ones
+2019-12-13 11:06:29	switchy	I used to just use typeracer a lot...
+2019-12-13 11:17:23	veeee	is there one with ladders?
+2019-12-13 11:31:14	switchy	ladders?
+2019-12-13 11:38:20	veeee	never mind
+2019-12-13 11:38:29	veeee	i have something else to ask you
+2019-12-13 11:39:04	<--	ShinyRice (~ShinyRice@31.177.98.99) has quit (Read error: Connection reset by peer)
+2019-12-13 11:39:46	-->	ShinyRice (~ShinyRice@81.203.50.77.dyn.user.ono.com) has joined #Mechboards
+2019-12-13 11:40:02	veeee	i would also like to build a midi knob/wheel to control audio
+2019-12-13 11:40:37	switchy	sounds cool
+2019-12-13 11:40:52	veeee	but i never figure out which switch to buy
+2019-12-13 11:41:12	switchy	optical rotary encoder?
+2019-12-13 11:42:11	veeee	optical?
+2019-12-13 11:43:53	veeee	there are so many i don't know which to buy
+2019-12-13 11:52:17	<--	mads- (~mfrstar@soyuz.whatbox.ca) has quit (Ping timeout: 240 seconds)
+2019-12-13 11:59:39	Hakala	DJANGOOOOOOOOO
+2019-12-13 12:14:05	day	ANTSCHÄINT
+2019-12-13 12:32:39	<--	arij (uid225068@gateway/web/irccloud.com/x-ypbzzrrrnufthgua) has quit (Quit: Connection closed for inactivity)
+2019-12-13 12:35:43	Hakala	bless you
+2019-12-13 12:38:50	<--	cottoneyejim (~cottoneye@46.33.207.90) has quit (Ping timeout: 276 seconds)
+2019-12-13 12:50:33	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #Mechboards
+2019-12-13 12:50:33	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2019-12-13 12:50:33	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 10:38:51
+2019-12-13 12:50:33	--	Channel #Mechboards: 136 nicks (0 ops, 0 voices, 136 normals)
+2019-12-13 12:50:34	--	Channel created on Thu, 21 Feb 2013 05:50:48
+2019-12-13 12:54:18	audron	veeee: potentiometers are easiest and cheapest
+2019-12-13 12:54:47	audron	Reminds me I still have my midi board pcbs and should actually build them
+2019-12-13 13:09:30	-->	clemens3 (~clemens@mx.eniso-partners.com) has joined #Mechboards
+2019-12-13 13:25:16	veeee	i don't care much about the price
+2019-12-13 13:25:19	veeee	i only need 1
+2019-12-13 13:48:01	<--	ShinyRice (~ShinyRice@81.203.50.77.dyn.user.ono.com) has quit (Read error: Connection reset by peer)
+2019-12-13 13:49:42	-->	ShinyRice (~ShinyRice@81.203.50.77.dyn.user.ono.com) has joined #Mechboards
+2019-12-13 13:49:50	<--	ShinyRice (~ShinyRice@81.203.50.77.dyn.user.ono.com) has quit (Client Quit)
+2019-12-13 13:58:36	-->	Cartoon-Dude (~Thunderbi@195.48.13.205) has joined #Mechboards
+2019-12-13 14:08:33	<--	pacbard (~pacbard@68.237.202.35.bc.googleusercontent.com) has quit (Read error: Connection reset by peer)
+2019-12-13 14:10:24	-->	pacbard (~pacbard@68.237.202.35.bc.googleusercontent.com) has joined #Mechboards
+2019-12-13 14:22:46	day	pricesticker are for poor people
+2019-12-13 14:25:55	-->	ShinyRice (~ShinyRice@81.203.50.77.dyn.user.ono.com) has joined #Mechboards
+2019-12-13 15:05:23	-->	fp7 (~fp7@unaffiliated/fp7) has joined #Mechboards
+2019-12-13 15:13:06	<--	Cartoon-Dude (~Thunderbi@195.48.13.205) has quit (Quit: Cartoon-Dude)
+2019-12-13 15:32:00	<--	Seaweed_Seal (~SeaweedSe@unaffiliated/seaweedseal) has quit (Read error: Connection reset by peer)
+2019-12-13 15:33:19	<--	ShinyRice (~ShinyRice@81.203.50.77.dyn.user.ono.com) has quit (Quit: ShinyRice)
+2019-12-13 16:07:02	-->	c0ck4m0u53 (~c0ck4m0u5@BSN-176-200-253.dynamic.siol.net) has joined #Mechboards
+2019-12-13 16:13:03	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #Mechboards
+2019-12-13 16:22:49	-->	anotheryou (uid257186@gateway/web/irccloud.com/x-gthinolhkgzountz) has joined #Mechboards
+2019-12-13 16:22:51	-->	deviantfero (~deviantfe@ip168-243-230-189.intercom.com.sv) has joined #Mechboards
+2019-12-13 16:28:10	<--	elfmacs (~elfmacs@159.226.199.101) has quit (Ping timeout: 252 seconds)
+2019-12-13 16:41:16	<--	deviantfero (~deviantfe@ip168-243-230-189.intercom.com.sv) has quit (Quit: WeeChat 2.6)
+2019-12-13 16:44:54	<--	zekkin (~z@104.131.11.92) has left #Mechboards ("WeeChat 2.6")
+2019-12-13 16:47:57	<--	Sabotender (~Sabotende@unaffiliated/sabotender) has quit (Ping timeout: 240 seconds)
+2019-12-13 16:54:41	-->	Sabotender (~Sabotende@unaffiliated/sabotender) has joined #Mechboards
+2019-12-13 17:12:00	-->	ShinyRice (~ShinyRice@81.203.50.77.dyn.user.ono.com) has joined #Mechboards
+2019-12-13 17:23:32	<--	ShinyRice (~ShinyRice@81.203.50.77.dyn.user.ono.com) has quit (Quit: ShinyRice)
+2019-12-13 17:34:49	-->	cottoneyejim (~cottoneye@46.33.207.90) has joined #Mechboards
+2019-12-13 17:46:40	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Quit: Leaving)
+2019-12-13 17:47:33	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #Mechboards
+2019-12-16 09:11:55	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #Mechboards
+2019-12-16 09:11:55	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2019-12-16 09:11:55	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 10:38:51
+2019-12-16 09:11:55	--	Channel #Mechboards: 119 nicks (0 ops, 0 voices, 119 normals)
+2019-12-16 09:11:55	--	Channel created on Thu, 21 Feb 2013 05:50:48
+2019-12-16 09:21:51	-->	Sabotend_ (~Sabotende@unaffiliated/sabotender) has joined #Mechboards
+2019-12-16 09:22:24	<--	Sabotender (~Sabotende@unaffiliated/sabotender) has quit (Ping timeout: 268 seconds)
+2019-12-16 09:59:24	-->	anotheryou (uid257186@gateway/web/irccloud.com/x-xuxwqazpeifzvadz) has joined #Mechboards
+2019-12-16 10:02:51	-->	figuinhas (~pirilauam@109.207.137.78.rev.vodafone.pt) has joined #Mechboards
+2019-12-16 10:15:50	--	irc: disconnected from server
+2019-12-16 10:16:16	-->	Syrinxos (~syrinxos@93-34-1-82.ip47.fastwebnet.it) has joined #Mechboards
+2019-12-16 10:16:16	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2019-12-16 10:16:16	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 10:38:51
+2019-12-16 10:16:16	--	Channel #Mechboards: 121 nicks (0 ops, 0 voices, 121 normals)
+2019-12-16 10:16:32	--	Channel created on Thu, 21 Feb 2013 05:50:48
+2019-12-16 10:26:00	-->	Syrinxos (~syrinxos@93-34-1-82.ip47.fastwebnet.it) has joined #Mechboards
+2019-12-16 10:26:00	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2019-12-16 10:26:00	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 10:38:51
+2019-12-16 10:26:00	--	Channel #Mechboards: 121 nicks (0 ops, 0 voices, 121 normals)
+2019-12-16 10:26:00	--	Channel created on Thu, 21 Feb 2013 05:50:48
+2019-12-16 10:30:31	<--	figuinhas (~pirilauam@109.207.137.78.rev.vodafone.pt) has quit (Remote host closed the connection)
+2019-12-16 10:31:17	-->	figuinhas (~pirilauam@109.207.137.78.rev.vodafone.pt) has joined #Mechboards
+2019-12-16 10:36:37	-->	piri (~pirilauam@194-79-86-23.static.net.novis.pt) has joined #Mechboards
+2019-12-16 10:39:03	-->	multiproc (~mark@unaffiliated/multiproc) has joined #Mechboards
+2019-12-16 10:40:10	<--	figuinhas (~pirilauam@109.207.137.78.rev.vodafone.pt) has quit (Ping timeout: 265 seconds)
+2019-12-16 10:51:08	<--	xcm (~xcm@ipa210.225.tellas.gr) has quit (Ping timeout: 245 seconds)
+2019-12-16 11:01:08	-->	zamnedix (~zamnedix@zamnedix.net) has joined #Mechboards
+2019-12-16 11:05:49	-->	lermain (~qed@unaffiliated/lermain) has joined #Mechboards
+2019-12-16 11:05:56	-->	oddie (~oddie@infectiious.xyz) has joined #Mechboards
+2019-12-16 11:06:39	-->	MrFahrenheit (~zumbi@unaffiliated/rageofthou) has joined #Mechboards
+2019-12-16 11:07:04	-->	Arrowmaster (~Arrowmast@WoWUIDev/WoWAce/ResponsibleForEverythingAndNothing/Arrowmaster) has joined #Mechboards
+2019-12-16 11:07:11	-->	oscillope (~oscillope@ec2-34-193-143-75.compute-1.amazonaws.com) has joined #Mechboards
+2019-12-16 11:07:19	-->	r3x5 (~r3x5@30.175.225.35.bc.googleusercontent.com) has joined #Mechboards
+2019-12-16 11:08:17	-->	smeggysmeg (~smeg@unaffiliated/smeggysmeg) has joined #Mechboards
+2019-12-16 11:08:57	-->	WeaselSoup (~bigorneau@ns3291478.ip-5-135-185.eu) has joined #Mechboards
+2019-12-16 11:09:31	-->	gilbertw1 (~gilbertw1@ec2-52-91-154-1.compute-1.amazonaws.com) has joined #Mechboards
+2019-12-16 11:15:33	<--	arij (uid225068@gateway/web/irccloud.com/x-ftqainaazkbdkdhq) has quit (Quit: Connection closed for inactivity)
+2019-12-16 11:29:08	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #Mechboards
+2019-12-16 11:29:08	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2019-12-16 11:29:08	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 10:38:51
+2019-12-16 11:29:08	--	Channel #Mechboards: 130 nicks (0 ops, 0 voices, 130 normals)
+2019-12-16 11:29:08	--	Channel created on Thu, 21 Feb 2013 05:50:48
+2019-12-16 11:57:46	<--	piri (~pirilauam@194-79-86-23.static.net.novis.pt) has quit (Remote host closed the connection)
+2019-12-16 11:58:14	-->	piri (~pirilauam@194-79-86-23.static.net.novis.pt) has joined #Mechboards
+2019-12-16 12:19:27	<--	Sabotend_ (~Sabotende@unaffiliated/sabotender) has quit (Ping timeout: 246 seconds)
+2019-12-16 12:28:00	-->	Sabotender (~Sabotende@unaffiliated/sabotender) has joined #Mechboards
+2019-12-16 12:41:09	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #Mechboards
+2019-12-16 13:58:20	<--	Sabotender (~Sabotende@unaffiliated/sabotender) has quit (Ping timeout: 265 seconds)
+2019-12-16 14:06:51	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #Mechboards
+2019-12-16 14:06:51	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2019-12-16 14:06:51	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 10:38:51
+2019-12-16 14:06:51	--	Channel #Mechboards: 131 nicks (0 ops, 0 voices, 131 normals)
+2019-12-16 14:06:52	--	Channel created on Thu, 21 Feb 2013 05:50:48
+2019-12-16 14:08:38	<--	pacbard (~pacbard@68.237.202.35.bc.googleusercontent.com) has quit (Read error: Connection reset by peer)
+2019-12-16 14:09:21	-->	veam (uid157194@gateway/web/irccloud.com/x-pbzpqhgbexfurpis) has joined #Mechboards
+2019-12-16 14:10:11	-->	pacbard (~pacbard@68.237.202.35.bc.googleusercontent.com) has joined #Mechboards
+2019-12-16 14:33:06	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #Mechboards
+2019-12-16 14:33:06	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2019-12-16 14:33:06	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 10:38:51
+2019-12-16 14:33:06	--	Channel #Mechboards: 135 nicks (0 ops, 0 voices, 135 normals)
+2019-12-16 14:33:06	--	Channel created on Thu, 21 Feb 2013 05:50:48
+2019-12-16 14:57:39	day	switchy: solved today?
+2019-12-16 14:58:12	day	im curious, does part two require trickery? did you run into any performance constrains?
+2019-12-16 15:02:17	day	im reasonably sure my haskell logic is fine, but im not getting a result, probably because it needs more resources than i have ^_^
+2019-12-16 15:09:22	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Quit: Leaving)
+2019-12-16 15:24:56	<--	ShinyRice (~ShinyRice@81.203.50.77.dyn.user.ono.com) has quit (Quit: ShinyRice)
+2019-12-16 15:41:46	<--	flappity_ (~wolf@172-221-242-216.res.spectrum.com) has quit (Ping timeout: 265 seconds)
+2019-12-16 15:44:37	-->	flappity (~wolf@172-221-242-216.res.spectrum.com) has joined #Mechboards
+2019-12-16 15:45:02	-->	c0ck4m0u53 (~c0ck4m0u5@BSN-176-200-253.dynamic.siol.net) has joined #Mechboards
+2019-12-16 16:22:23	<--	Sabotender (~Sabotende@unaffiliated/sabotender) has quit (Ping timeout: 245 seconds)
+2019-12-16 16:53:13	-->	Sabotender (~Sabotende@unaffiliated/sabotender) has joined #Mechboards
+2019-12-16 17:14:22	-->	festerB (~FesterB@unaffiliated/festerb) has joined #Mechboards
+2019-12-16 17:15:31	<--	AtlasRisen (~AtlasRise@unaffiliated/atlasrisen) has quit (Read error: Connection reset by peer)
+2019-12-16 17:18:36	-->	AtlasRisen (~AtlasRise@unaffiliated/atlasrisen) has joined #Mechboards
+2019-12-16 17:21:35	<--	festerB (~FesterB@unaffiliated/festerb) has quit (Quit: festerB)
+2019-12-16 17:23:37	-->	festerB (~FesterB@unaffiliated/festerb) has joined #Mechboards
+2019-12-18 09:08:21	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #Mechboards
+2019-12-18 09:08:21	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2019-12-18 09:08:21	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 10:38:51
+2019-12-18 09:08:21	--	Channel #Mechboards: 129 nicks (0 ops, 0 voices, 129 normals)
+2019-12-18 09:08:21	--	Channel created on Thu, 21 Feb 2013 05:50:48
+2019-12-18 09:36:53	<--	Ryuuguu (~cosmic@gateway/tor-sasl/ryuuguu) has quit (Quit: Leaving)
+2019-12-18 09:55:56	-->	cottoneyejim (~cottoneye@46.33.207.90) has joined #Mechboards
+2019-12-18 10:06:02	day	switchy: ok today is brutal :|
+2019-12-18 10:06:39	switchy	day, yeah I am doing badly
+2019-12-18 10:06:56	switchy	I have a vague idea
+2019-12-18 10:10:51	day	the 1d example i was thinking nice, its just like decoding  a math formula
+2019-12-18 10:10:58	day	but then the 2d stuff...nope
+2019-12-18 10:12:05	<--	ponky (ponky@94.237.13.38) has left #Mechboards
+2019-12-18 10:13:58	switchy	day, surely the same principle would apply
+2019-12-18 10:16:02	day	dont think so, due to the "shortest way" thing
+2019-12-18 10:16:48	day	im thinking combining it with a tree, and choosing the shortest route? but the example is probably gigantic again to prevent that?
+2019-12-18 10:17:58	-->	multiproc (~mark@unaffiliated/multiproc) has joined #Mechboards
+2019-12-18 10:18:24	switchy	day, yeah, my thought was something along those lines
+2019-12-18 10:18:59	switchy	I don't think there are any cycles though
+2019-12-18 10:20:26	switchy	maybe there are...
+2019-12-18 10:31:59	Joe	so, so far this guy seems alright witht he tofu cases.
+2019-12-18 10:32:49	Joe	answered pretty quickly on reddit and was polite and professional, i ordered the case from his shopify and he says he will 2 day express it tomorrow.
+2019-12-18 10:33:44	Joe	doesn't seem like a guy who wants to sell cases as much as someone holding inventory from a group buy, i could be wrong about that tho.
+2019-12-18 10:41:25	<--	ShinyRice (~ShinyRice@2001:720:1014:f410:fc15:6a01:6aee:7cbf) has quit (Quit: ShinyRice)
+2019-12-18 10:49:08	day	switchy: the most difficult part for me right now is the fact that you need to collect multiple keys between opening doors
+2019-12-18 11:00:08	<--	zamnedix (~zamnedix@zamnedix.net) has quit (Quit: ZNC 1.7.4+deb7 - https://znc.in)
+2019-12-18 11:01:07	-->	zamnedix (~zamnedix@zamnedix.net) has joined #Mechboards
+2019-12-18 11:04:48	-->	ShinyRice (~ShinyRice@poolnat-9.eduroam.uv.es) has joined #Mechboards
+2019-12-18 11:05:21	-->	figuinhas (~pirilauam@194-79-86-23.static.net.novis.pt) has joined #Mechboards
+2019-12-18 11:06:05	switchy	day, yeah...
+2019-12-18 11:06:58	<--	ShinyRice (~ShinyRice@poolnat-9.eduroam.uv.es) has quit (Client Quit)
+2019-12-18 11:08:01	switchy	day, even so I can't think of a good way to order the doors
+2019-12-18 11:09:08	<--	slaytaner (~slaytaner@2001:19f0:6401:36:5400:ff:fe31:df2) has quit (Ping timeout: 248 seconds)
+2019-12-18 11:10:06	day	yeah me neither. i just realized i misunderstood the task. i thought the goal was to find the key without a matching door, in which case i could at least order the doors recursively
+2019-12-18 11:10:39	switchy	gotta get all the keys, right?
+2019-12-18 11:10:47	day	yes
+2019-12-18 11:11:36	switchy	it's like a hamiltonian path, but with extra steps
+2019-12-18 11:17:05	-->	slaytaner (~slaytaner@2001:19f0:6401:36:5400:ff:fe31:df2) has joined #Mechboards
+2019-12-18 11:23:56	--	yang_ is now known as yang
+2019-12-18 11:35:36	<--	xcm (~xcm@ipa210.225.tellas.gr) has quit (Remote host closed the connection)
+2019-12-18 11:35:44	switchy	wtf
+2019-12-18 11:35:47	<--	figuinhas (~pirilauam@194-79-86-23.static.net.novis.pt) has quit (Remote host closed the connection)
+2019-12-18 11:35:51	switchy	it's warm, and there are so many beetles outside that it sounds like it's raining
+2019-12-18 11:36:17	-->	figuinhas (~pirilauam@194-79-86-23.static.net.novis.pt) has joined #Mechboards
+2019-12-18 11:36:21	day	true, almost 10c here!
+2019-12-18 11:37:20	-->	xcm (~xcm@ipa210.225.tellas.gr) has joined #Mechboards
+2019-12-18 11:37:39	switchy	nearly 10pm and still around 30 here
+2019-12-18 11:38:09	day	i bet you have an AC D:
+2019-12-18 11:38:16	switchy	heh, nope
+2019-12-18 11:38:20	day	oof
+2019-12-18 11:38:26	switchy	we're off-grid, ac is too power hungry
+2019-12-18 11:39:17	day	how do you generate power? solar+batteries? diesel generator?
+2019-12-18 11:39:46	switchy	yeah, solar + batteries, diesel generator as a backup
+2019-12-18 11:43:36	<--	figuinhas (~pirilauam@194-79-86-23.static.net.novis.pt) has quit (Remote host closed the connection)
+2019-12-18 11:44:02	-->	figuinhas (~pirilauam@194-79-86-23.static.net.novis.pt) has joined #Mechboards
+2019-12-18 11:45:09	day	how far do you need to drive to the next town?
+2019-12-18 11:45:29	switchy	oh, not that far, like 15 min
+2019-12-18 11:45:34	day	ah ok
+2019-12-18 11:45:43	day	i thought you are in the middle of nowhere :D
+2019-12-18 11:45:50	switchy	haha, thankfully not
+2019-12-18 11:46:05	switchy	just some space in the country, but close enough to work and have city facilities
+2019-12-18 11:46:20	day	but crazy that you dont have access to the power grid :|
+2019-12-18 11:46:32	day	15mins is nothing
+2019-12-18 11:46:53	switchy	there are some power poles along our road, it's just crazy expensive to get new ones installed to the house
+2019-12-18 11:46:55	day	friend of mine isnt connected to the water grid, but they have power
+2019-12-18 11:47:23	switchy	that seems pretty reasonable
+2019-12-18 11:47:55	day	yeah its alright. they have their own water treatment thingie
+2019-12-18 11:48:32	switchy	only bad thing is when you're in a drought...
+2019-12-18 11:48:41	day	which is basically just an artificial little pond (maybe tennis field size)
+2019-12-18 11:49:45	switchy	for drinking water?
+2019-12-18 11:49:45	day	we dont have droughts. at worst it doesnt rain for a few weeks, but theres still "unlimited" water from the ground
+2019-12-18 11:50:02	day	they are connected to a pump that belongs to a group of houses i believe
+2019-12-18 11:50:15	day	which just pumps up groundwater
+2019-12-18 11:51:14	switchy	aha, interesting
+2019-12-18 11:54:05	switchy	not on the water mains, but still close enough to others to be on the same water supply anyway
+2019-12-18 11:55:25	day	yeah. they pay flat fee, which just covers the maintainance/electricity. so their water is dirt cheap
+2019-12-18 11:57:01	switchy	sounds like their water isn't far removed from dirt anyway :D
+2019-12-18 11:57:35	day	nah it is perfectly fine and drinkable
+2019-12-18 12:02:35	switchy	there is a truly unfathomable amount of beetles on my flyscreen
+2019-12-18 12:38:01	-->	Cartoon-Dude (~Thunderbi@195.48.13.205) has joined #Mechboards
+2019-12-18 12:42:32	day	and gigantic spiders
+2019-12-18 12:42:33	day	and
+2019-12-18 12:42:50	day	other nightmares that shouldnt exist!
+2019-12-18 12:43:18	day	the brits knew what they were doing when they sent their criminals there!
+2019-12-18 12:44:05	switchy	giant spiders are bros
+2019-12-18 12:46:30	switchy	day, hmmph, still being too dumb to think of algorithm

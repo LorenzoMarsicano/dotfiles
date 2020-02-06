@@ -363,3 +363,463 @@
 2019-11-14 09:33:57		script: downloading list of scripts...
 2019-11-14 09:33:57		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, xfer
 2019-11-14 09:33:58		script: 364 scripts for WeeChat 2.6
+2019-11-14 17:54:46		perl: scripts unloaded
+2019-11-14 17:54:46		python: scripts unloaded
+2019-11-14 17:54:46		fifo: pipe closed
+2019-11-15 09:16:04		python: stdout/stderr (?):   File "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py", line 47
+2019-11-15 09:16:04		python: stdout/stderr (?):     print "This script must be run under WeeChat."
+2019-11-15 09:16:04		python: stdout/stderr (?):                                                  ^
+2019-11-15 09:16:04		python: stdout/stderr (?): SyntaxError: Missing parentheses in call to 'print'. Did you mean print("This script must be run under WeeChat.")?
+2019-11-15 09:16:04	=!=	python: unable to parse file "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py"
+2019-11-15 09:16:04		python scripts loaded: buffer_autoclose, colorize_nicks, go
+2019-11-15 09:16:04		perl scripts loaded: iset
+2019-11-15 09:16:04		script: 364 scripts for WeeChat 2.6
+2019-11-15 09:16:04		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, xfer
+2019-11-15 13:15:07		perl: scripts unloaded
+2019-11-15 13:15:07		python: scripts unloaded
+2019-11-15 13:15:07		fifo: pipe closed
+2019-11-15 14:34:32		python: stdout/stderr (?):   File "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py", line 47
+2019-11-15 14:34:32		python: stdout/stderr (?):     print "This script must be run under WeeChat."
+2019-11-15 14:34:32		python: stdout/stderr (?):           ^
+2019-11-15 14:34:32		python: stdout/stderr (?): SyntaxError: Missing parentheses in call to 'print'. Did you mean print("This script must be run under WeeChat.")?
+2019-11-15 14:34:32	=!=	python: unable to parse file "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py"
+2019-11-15 14:34:33		python scripts loaded: buffer_autoclose, colorize_nicks, go
+2019-11-15 14:34:33		perl scripts loaded: iset
+2019-11-15 14:34:33		script: downloading list of scripts...
+2019-11-15 14:34:33		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, xfer
+2019-11-15 14:34:33		script: 364 scripts for WeeChat 2.6
+2019-11-15 17:56:34		perl: scripts unloaded
+2019-11-15 17:56:34		python: scripts unloaded
+2019-11-15 17:56:34		fifo: pipe closed
+2019-11-18 09:27:07		python: stdout/stderr (?):   File "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py", line 47
+2019-11-18 09:27:07		python: stdout/stderr (?):     print "This script must be run under WeeChat."
+2019-11-18 09:27:07		python: stdout/stderr (?):           ^
+2019-11-18 09:27:07		python: stdout/stderr (?): SyntaxError: Missing parentheses in call to 'print'. Did you mean print("This script must be run under WeeChat.")?
+2019-11-18 09:27:07	=!=	python: unable to parse file "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py"
+2019-11-18 09:27:07		python scripts loaded: buffer_autoclose, colorize_nicks, go
+2019-11-18 09:27:07		perl scripts loaded: iset
+2019-11-18 09:27:07		script: downloading list of scripts...
+2019-11-18 09:27:07		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, xfer
+2019-11-18 09:27:08		script: 364 scripts for WeeChat 2.6
+2019-11-18 17:51:53		perl: scripts unloaded
+2019-11-18 17:51:53		python: scripts unloaded
+2019-11-18 17:51:53		fifo: pipe closed
+2019-11-19 12:58:22		python: stdout/stderr (?):   File "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py", line 47
+2019-11-19 12:58:22		python: stdout/stderr (?):     print "This script must be run under WeeChat."
+2019-11-19 12:58:22		python: stdout/stderr (?):           ^
+2019-11-19 12:58:22		python: stdout/stderr (?): SyntaxError: Missing parentheses in call to 'print'. Did you mean print("This script must be run under WeeChat.")?
+2019-11-19 12:58:22	=!=	python: unable to parse file "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py"
+2019-11-19 12:58:22		python scripts loaded: buffer_autoclose, colorize_nicks, go
+2019-11-19 12:58:22		perl scripts loaded: iset
+2019-11-19 12:58:22		script: downloading list of scripts...
+2019-11-19 12:58:22		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, xfer
+2019-11-19 12:58:23		script: 364 scripts for WeeChat 2.6
+2019-11-19 17:56:48		perl: scripts unloaded
+2019-11-19 17:56:48		python: scripts unloaded
+2019-11-19 17:56:48		fifo: pipe closed
+2019-11-20 11:04:33		python: stdout/stderr (?):   File "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py", line 47
+2019-11-20 11:04:33		python: stdout/stderr (?):     print "This script must be run under WeeChat."
+2019-11-20 11:04:33		python: stdout/stderr (?):           ^
+2019-11-20 11:04:33		python: stdout/stderr (?): SyntaxError: Missing parentheses in call to 'print'. Did you mean print("This script must be run under WeeChat.")?
+2019-11-20 11:04:33	=!=	python: unable to parse file "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py"
+2019-11-20 11:04:33		python scripts loaded: buffer_autoclose, colorize_nicks, go
+2019-11-20 11:04:33		perl scripts loaded: iset
+2019-11-20 11:04:33		script: 364 scripts for WeeChat 2.6
+2019-11-20 11:04:33		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, xfer
+2019-11-20 18:03:40		perl: scripts unloaded
+2019-11-20 18:03:40		python: scripts unloaded
+2019-11-20 18:03:40		fifo: pipe closed
+2019-11-22 08:59:07		python: stdout/stderr (?):   File "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py", line 47
+2019-11-22 08:59:07		python: stdout/stderr (?):     print "This script must be run under WeeChat."
+2019-11-22 08:59:07		python: stdout/stderr (?):           ^
+2019-11-22 08:59:07		python: stdout/stderr (?): SyntaxError: Missing parentheses in call to 'print'. Did you mean print("This script must be run under WeeChat.")?
+2019-11-22 08:59:07	=!=	python: unable to parse file "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py"
+2019-11-22 08:59:07		python scripts loaded: buffer_autoclose, colorize_nicks, go
+2019-11-22 08:59:07		perl scripts loaded: iset
+2019-11-22 08:59:07		script: downloading list of scripts...
+2019-11-22 08:59:07		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, xfer
+2019-11-22 08:59:08		script: 364 scripts for WeeChat 2.6
+2019-11-22 16:37:55		perl: scripts unloaded
+2019-11-22 16:37:56		python: scripts unloaded
+2019-11-22 16:37:56		fifo: pipe closed
+2019-11-22 17:39:13		python: stdout/stderr (?):   File "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py", line 47
+2019-11-22 17:39:13		python: stdout/stderr (?):     print "This script must be run under WeeChat."
+2019-11-22 17:39:13		python: stdout/stderr (?):           ^
+2019-11-22 17:39:13		python: stdout/stderr (?): SyntaxError: Missing parentheses in call to 'print'. Did you mean print("This script must be run under WeeChat.")?
+2019-11-22 17:39:13	=!=	python: unable to parse file "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py"
+2019-11-22 17:39:13		python scripts loaded: buffer_autoclose, colorize_nicks, go
+2019-11-22 17:39:13		perl scripts loaded: iset
+2019-11-22 17:39:13		script: 364 scripts for WeeChat 2.6
+2019-11-22 17:39:13		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, xfer
+2019-11-22 17:49:34		perl: scripts unloaded
+2019-11-22 17:49:34		python: scripts unloaded
+2019-11-22 17:49:34		fifo: pipe closed
+2019-11-25 09:14:17		python: stdout/stderr (?):   File "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py", line 47
+2019-11-25 09:14:17		python: stdout/stderr (?):     print "This script must be run under WeeChat."
+2019-11-25 09:14:17		python: stdout/stderr (?):           ^
+2019-11-25 09:14:17		python: stdout/stderr (?): SyntaxError: Missing parentheses in call to 'print'. Did you mean print("This script must be run under WeeChat.")?
+2019-11-25 09:14:17	=!=	python: unable to parse file "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py"
+2019-11-25 09:14:17		python scripts loaded: buffer_autoclose, colorize_nicks, go
+2019-11-25 09:14:17		perl scripts loaded: iset
+2019-11-25 09:14:17		script: downloading list of scripts...
+2019-11-25 09:14:17		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, xfer
+2019-11-25 09:14:17		script: 364 scripts for WeeChat 2.6
+2019-11-25 17:52:25		perl: scripts unloaded
+2019-11-25 17:52:25		python: scripts unloaded
+2019-11-25 17:52:25		fifo: pipe closed
+2019-11-26 09:34:44		python: stdout/stderr (?):   File "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py", line 47
+2019-11-26 09:34:44		python: stdout/stderr (?):     print "This script must be run under WeeChat."
+2019-11-26 09:34:44		python: stdout/stderr (?):           ^
+2019-11-26 09:34:44		python: stdout/stderr (?): SyntaxError: Missing parentheses in call to 'print'. Did you mean print("This script must be run under WeeChat.")?
+2019-11-26 09:34:44	=!=	python: unable to parse file "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py"
+2019-11-26 09:34:44		python scripts loaded: buffer_autoclose, colorize_nicks, go
+2019-11-26 09:34:44		perl scripts loaded: iset
+2019-11-26 09:34:44		script: downloading list of scripts...
+2019-11-26 09:34:44		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, xfer
+2019-11-26 09:34:44		script: 364 scripts for WeeChat 2.6
+2019-11-26 15:16:28		perl: scripts unloaded
+2019-11-26 15:16:28		python: scripts unloaded
+2019-11-26 15:16:28		fifo: pipe closed
+2019-11-26 16:59:59		python: stdout/stderr (?):   File "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py", line 47
+2019-11-26 16:59:59		python: stdout/stderr (?):     print "This script must be run under WeeChat."
+2019-11-26 16:59:59		python: stdout/stderr (?):           ^
+2019-11-26 16:59:59		python: stdout/stderr (?): SyntaxError: Missing parentheses in call to 'print'. Did you mean print("This script must be run under WeeChat.")?
+2019-11-26 16:59:59	=!=	python: unable to parse file "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py"
+2019-11-26 16:59:59		python scripts loaded: buffer_autoclose, colorize_nicks, go
+2019-11-26 16:59:59		perl scripts loaded: iset
+2019-11-26 16:59:59		script: 364 scripts for WeeChat 2.6
+2019-11-26 16:59:59		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, xfer
+2019-11-26 17:53:35		perl: scripts unloaded
+2019-11-26 17:53:35		python: scripts unloaded
+2019-11-26 17:53:35		fifo: pipe closed
+2019-11-27 09:05:01		python: stdout/stderr (?):   File "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py", line 47
+2019-11-27 09:05:01		python: stdout/stderr (?):     print "This script must be run under WeeChat."
+2019-11-27 09:05:01		python: stdout/stderr (?):           ^
+2019-11-27 09:05:01		python: stdout/stderr (?): SyntaxError: Missing parentheses in call to 'print'. Did you mean print("This script must be run under WeeChat.")?
+2019-11-27 09:05:01	=!=	python: unable to parse file "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py"
+2019-11-27 09:05:02		python scripts loaded: buffer_autoclose, colorize_nicks, go
+2019-11-27 09:05:02		perl scripts loaded: iset
+2019-11-27 09:05:02		script: 364 scripts for WeeChat 2.6
+2019-11-27 09:05:02		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, xfer
+2019-11-27 17:53:07		perl: scripts unloaded
+2019-11-27 17:53:07		python: scripts unloaded
+2019-11-27 17:53:07		fifo: pipe closed
+2019-11-29 09:13:42		python: stdout/stderr (?):   File "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py", line 47
+2019-11-29 09:13:42		python: stdout/stderr (?):     print "This script must be run under WeeChat."
+2019-11-29 09:13:42		python: stdout/stderr (?):           ^
+2019-11-29 09:13:42		python: stdout/stderr (?): SyntaxError: Missing parentheses in call to 'print'. Did you mean print("This script must be run under WeeChat.")?
+2019-11-29 09:13:42	=!=	python: unable to parse file "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py"
+2019-11-29 09:13:42		python scripts loaded: buffer_autoclose, colorize_nicks, go
+2019-11-29 09:13:42		perl scripts loaded: iset
+2019-11-29 09:13:42		script: downloading list of scripts...
+2019-11-29 09:13:42		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, xfer
+2019-11-29 09:13:43		script: 364 scripts for WeeChat 2.6
+2019-11-29 17:55:18		perl: scripts unloaded
+2019-11-29 17:55:18		python: scripts unloaded
+2019-11-29 17:55:18		fifo: pipe closed
+2019-12-02 09:11:32		python: stdout/stderr (?):   File "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py", line 47
+2019-12-02 09:11:32		python: stdout/stderr (?):     print "This script must be run under WeeChat."
+2019-12-02 09:11:32		python: stdout/stderr (?):           ^
+2019-12-02 09:11:32		python: stdout/stderr (?): SyntaxError: Missing parentheses in call to 'print'. Did you mean print("This script must be run under WeeChat.")?
+2019-12-02 09:11:32	=!=	python: unable to parse file "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py"
+2019-12-02 09:11:32		python scripts loaded: buffer_autoclose, colorize_nicks, go
+2019-12-02 09:11:32		perl scripts loaded: iset
+2019-12-02 09:11:32		script: downloading list of scripts...
+2019-12-02 09:11:32		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, xfer
+2019-12-02 09:11:33		script: 364 scripts for WeeChat 2.6
+2019-12-02 17:55:23		perl: scripts unloaded
+2019-12-02 17:55:23		python: scripts unloaded
+2019-12-02 17:55:23		fifo: pipe closed
+2019-12-03 09:07:14		python: stdout/stderr (?):   File "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py", line 47
+2019-12-03 09:07:14		python: stdout/stderr (?):     print "This script must be run under WeeChat."
+2019-12-03 09:07:14		python: stdout/stderr (?):           ^
+2019-12-03 09:07:14		python: stdout/stderr (?): SyntaxError: Missing parentheses in call to 'print'. Did you mean print("This script must be run under WeeChat.")?
+2019-12-03 09:07:14	=!=	python: unable to parse file "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py"
+2019-12-03 09:07:14		python scripts loaded: buffer_autoclose, colorize_nicks, go
+2019-12-03 09:07:14		perl scripts loaded: iset
+2019-12-03 09:07:14		script: 364 scripts for WeeChat 2.6
+2019-12-03 09:07:14		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, xfer
+2019-12-03 17:54:54		perl: scripts unloaded
+2019-12-03 17:54:54		python: scripts unloaded
+2019-12-03 17:54:54		fifo: pipe closed
+2019-12-04 09:10:25		python: stdout/stderr (?):   File "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py", line 47
+2019-12-04 09:10:25		python: stdout/stderr (?):     print "This script must be run under WeeChat."
+2019-12-04 09:10:25		python: stdout/stderr (?):           ^
+2019-12-04 09:10:25		python: stdout/stderr (?): SyntaxError: Missing parentheses in call to 'print'. Did you mean print("This script must be run under WeeChat.")?
+2019-12-04 09:10:25	=!=	python: unable to parse file "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py"
+2019-12-04 09:10:25		python scripts loaded: buffer_autoclose, colorize_nicks, go
+2019-12-04 09:10:25		perl scripts loaded: iset
+2019-12-04 09:10:25		script: downloading list of scripts...
+2019-12-04 09:10:25		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, xfer
+2019-12-04 09:10:26		script: 364 scripts for WeeChat 2.6
+2019-12-04 17:42:49		perl: scripts unloaded
+2019-12-04 17:42:49		python: scripts unloaded
+2019-12-04 17:42:49		fifo: pipe closed
+2019-12-04 17:45:50		python: stdout/stderr (?):   File "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py", line 47
+2019-12-04 17:45:50		python: stdout/stderr (?):     print "This script must be run under WeeChat."
+2019-12-04 17:45:50		python: stdout/stderr (?):           ^
+2019-12-04 17:45:50		python: stdout/stderr (?): SyntaxError: Missing parentheses in call to 'print'. Did you mean print("This script must be run under WeeChat.")?
+2019-12-04 17:45:50	=!=	python: unable to parse file "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py"
+2019-12-04 17:45:50		python scripts loaded: buffer_autoclose, colorize_nicks, go
+2019-12-04 17:45:50		perl scripts loaded: iset
+2019-12-04 17:45:50		script: 364 scripts for WeeChat 2.6
+2019-12-04 17:45:50		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, xfer
+2019-12-04 17:55:02		perl: scripts unloaded
+2019-12-04 17:55:02		python: scripts unloaded
+2019-12-04 17:55:02		fifo: pipe closed
+2019-12-05 08:02:23		python: stdout/stderr (?):   File "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py", line 47
+2019-12-05 08:02:23		python: stdout/stderr (?):     print "This script must be run under WeeChat."
+2019-12-05 08:02:23		python: stdout/stderr (?):           ^
+2019-12-05 08:02:23		python: stdout/stderr (?): SyntaxError: Missing parentheses in call to 'print'. Did you mean print("This script must be run under WeeChat.")?
+2019-12-05 08:02:23	=!=	python: unable to parse file "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py"
+2019-12-05 08:02:23		python scripts loaded: buffer_autoclose, colorize_nicks, go
+2019-12-05 08:02:23		perl scripts loaded: iset
+2019-12-05 08:02:23		script: 364 scripts for WeeChat 2.6
+2019-12-05 08:02:24		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, xfer
+2019-12-05 17:54:51		perl: scripts unloaded
+2019-12-05 17:54:51		python: scripts unloaded
+2019-12-05 17:54:51		fifo: pipe closed
+2019-12-06 09:10:39		python: stdout/stderr (?):   File "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py", line 47
+2019-12-06 09:10:39		python: stdout/stderr (?):     print "This script must be run under WeeChat."
+2019-12-06 09:10:39		python: stdout/stderr (?):           ^
+2019-12-06 09:10:39		python: stdout/stderr (?): SyntaxError: Missing parentheses in call to 'print'. Did you mean print("This script must be run under WeeChat.")?
+2019-12-06 09:10:39	=!=	python: unable to parse file "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py"
+2019-12-06 09:10:39		python scripts loaded: buffer_autoclose, colorize_nicks, go
+2019-12-06 09:10:39		perl scripts loaded: iset
+2019-12-06 09:10:39		script: downloading list of scripts...
+2019-12-06 09:10:39		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, xfer
+2019-12-06 09:10:40		script: 364 scripts for WeeChat 2.6
+2019-12-06 17:52:37		perl: scripts unloaded
+2019-12-06 17:52:38		python: scripts unloaded
+2019-12-06 17:52:38		fifo: pipe closed
+2019-12-09 09:07:03		python: stdout/stderr (?):   File "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py", line 47
+2019-12-09 09:07:03		python: stdout/stderr (?):     print "This script must be run under WeeChat."
+2019-12-09 09:07:03		python: stdout/stderr (?):           ^
+2019-12-09 09:07:03		python: stdout/stderr (?): SyntaxError: Missing parentheses in call to 'print'. Did you mean print("This script must be run under WeeChat.")?
+2019-12-09 09:07:03	=!=	python: unable to parse file "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py"
+2019-12-09 09:07:03		python scripts loaded: buffer_autoclose, colorize_nicks, go
+2019-12-09 09:07:03		perl scripts loaded: iset
+2019-12-09 09:07:03		script: downloading list of scripts...
+2019-12-09 09:07:03		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, xfer
+2019-12-09 09:07:03		script: 364 scripts for WeeChat 2.6
+2019-12-09 17:51:09		perl: scripts unloaded
+2019-12-09 17:51:09		python: scripts unloaded
+2019-12-09 17:51:09		fifo: pipe closed
+2019-12-10 09:24:02		python: stdout/stderr (?):   File "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py", line 47
+2019-12-10 09:24:02		python: stdout/stderr (?):     print "This script must be run under WeeChat."
+2019-12-10 09:24:02		python: stdout/stderr (?):           ^
+2019-12-10 09:24:02		python: stdout/stderr (?): SyntaxError: Missing parentheses in call to 'print'. Did you mean print("This script must be run under WeeChat.")?
+2019-12-10 09:24:02	=!=	python: unable to parse file "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py"
+2019-12-10 09:24:02		python scripts loaded: buffer_autoclose, colorize_nicks, go
+2019-12-10 09:24:02		perl scripts loaded: iset
+2019-12-10 09:24:02		script: downloading list of scripts...
+2019-12-10 09:24:02		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, xfer
+2019-12-10 09:24:03		script: 364 scripts for WeeChat 2.6
+2019-12-10 09:41:09		perl: scripts unloaded
+2019-12-10 09:41:09		python: scripts unloaded
+2019-12-10 09:41:09		fifo: pipe closed
+2019-12-10 09:43:26		python: stdout/stderr (?):   File "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py", line 47
+2019-12-10 09:43:26		python: stdout/stderr (?):     print "This script must be run under WeeChat."
+2019-12-10 09:43:26		python: stdout/stderr (?):           ^
+2019-12-10 09:43:26		python: stdout/stderr (?): SyntaxError: Missing parentheses in call to 'print'. Did you mean print("This script must be run under WeeChat.")?
+2019-12-10 09:43:26	=!=	python: unable to parse file "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py"
+2019-12-10 09:43:26		python scripts loaded: buffer_autoclose, colorize_nicks, go
+2019-12-10 09:43:26		perl scripts loaded: iset
+2019-12-10 09:43:26		script: 364 scripts for WeeChat 2.6
+2019-12-10 09:43:26		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, xfer
+2019-12-10 16:03:41		perl: scripts unloaded
+2019-12-10 16:03:41		python: scripts unloaded
+2019-12-10 16:03:41		fifo: pipe closed
+2019-12-11 09:11:21		python: stdout/stderr (?):   File "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py", line 47
+2019-12-11 09:11:21		python: stdout/stderr (?):     print "This script must be run under WeeChat."
+2019-12-11 09:11:21		python: stdout/stderr (?):           ^
+2019-12-11 09:11:21		python: stdout/stderr (?): SyntaxError: Missing parentheses in call to 'print'. Did you mean print("This script must be run under WeeChat.")?
+2019-12-11 09:11:21	=!=	python: unable to parse file "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py"
+2019-12-11 09:11:21		python scripts loaded: buffer_autoclose, colorize_nicks, go
+2019-12-11 09:11:21		perl scripts loaded: iset
+2019-12-11 09:11:21		script: 364 scripts for WeeChat 2.6
+2019-12-11 09:11:21		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, xfer
+2019-12-11 10:44:04		perl: scripts unloaded
+2019-12-11 10:44:04		python: scripts unloaded
+2019-12-11 10:44:04		fifo: pipe closed
+2019-12-11 10:46:33		python: stdout/stderr (?):   File "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py", line 47
+2019-12-11 10:46:33		python: stdout/stderr (?):     print "This script must be run under WeeChat."
+2019-12-11 10:46:33		python: stdout/stderr (?):           ^
+2019-12-11 10:46:33		python: stdout/stderr (?): SyntaxError: Missing parentheses in call to 'print'. Did you mean print("This script must be run under WeeChat.")?
+2019-12-11 10:46:33	=!=	python: unable to parse file "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py"
+2019-12-11 10:46:33		python scripts loaded: buffer_autoclose, colorize_nicks, go
+2019-12-11 10:46:33		perl scripts loaded: iset
+2019-12-11 10:46:33		script: downloading list of scripts...
+2019-12-11 10:46:33		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, xfer
+2019-12-11 10:46:33		script: 364 scripts for WeeChat 2.6
+2019-12-11 15:41:41		python: stdout/stderr (?):   File "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py", line 47
+2019-12-11 15:41:41		python: stdout/stderr (?):     print "This script must be run under WeeChat."
+2019-12-11 15:41:41		python: stdout/stderr (?):           ^
+2019-12-11 15:41:41		python: stdout/stderr (?): SyntaxError: Missing parentheses in call to 'print'. Did you mean print("This script must be run under WeeChat.")?
+2019-12-11 15:41:41	=!=	python: unable to parse file "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py"
+2019-12-11 15:41:41		python scripts loaded: buffer_autoclose, colorize_nicks, go
+2019-12-11 15:41:41		perl scripts loaded: iset
+2019-12-11 15:41:41		script: 364 scripts for WeeChat 2.6
+2019-12-11 15:41:41		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, xfer
+2019-12-11 17:30:25		perl: scripts unloaded
+2019-12-11 17:30:25		python: scripts unloaded
+2019-12-11 17:30:25		fifo: pipe closed
+2019-12-11 17:34:32		python: stdout/stderr (?):   File "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py", line 47
+2019-12-11 17:34:32		python: stdout/stderr (?):     print "This script must be run under WeeChat."
+2019-12-11 17:34:32		python: stdout/stderr (?):           ^
+2019-12-11 17:34:32		python: stdout/stderr (?): SyntaxError: Missing parentheses in call to 'print'. Did you mean print("This script must be run under WeeChat.")?
+2019-12-11 17:34:32	=!=	python: unable to parse file "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py"
+2019-12-11 17:34:32		python scripts loaded: buffer_autoclose, colorize_nicks, go
+2019-12-11 17:34:32		perl scripts loaded: iset
+2019-12-11 17:34:32		script: 364 scripts for WeeChat 2.6
+2019-12-11 17:34:32		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, xfer
+2019-12-11 17:51:31		perl: scripts unloaded
+2019-12-11 17:51:31		python: scripts unloaded
+2019-12-11 17:51:31		fifo: pipe closed
+2019-12-12 09:00:04		python: stdout/stderr (?):   File "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py", line 47
+2019-12-12 09:00:04		python: stdout/stderr (?):     print "This script must be run under WeeChat."
+2019-12-12 09:00:04		python: stdout/stderr (?):           ^
+2019-12-12 09:00:04		python: stdout/stderr (?): SyntaxError: Missing parentheses in call to 'print'. Did you mean print("This script must be run under WeeChat.")?
+2019-12-12 09:00:04	=!=	python: unable to parse file "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py"
+2019-12-12 09:00:04		python scripts loaded: buffer_autoclose, colorize_nicks, go
+2019-12-12 09:00:04		perl scripts loaded: iset
+2019-12-12 09:00:05		script: 364 scripts for WeeChat 2.6
+2019-12-12 09:00:05		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, xfer
+2019-12-12 10:42:42		perl: scripts unloaded
+2019-12-12 10:42:42		python: scripts unloaded
+2019-12-12 10:42:42		fifo: pipe closed
+2019-12-12 11:23:36		python: stdout/stderr (?):   File "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py", line 47
+2019-12-12 11:23:36		python: stdout/stderr (?):     print "This script must be run under WeeChat."
+2019-12-12 11:23:36		python: stdout/stderr (?):           ^
+2019-12-12 11:23:36		python: stdout/stderr (?): SyntaxError: Missing parentheses in call to 'print'. Did you mean print("This script must be run under WeeChat.")?
+2019-12-12 11:23:36	=!=	python: unable to parse file "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py"
+2019-12-12 11:23:36		python scripts loaded: buffer_autoclose, colorize_nicks, go
+2019-12-12 11:23:36		perl scripts loaded: iset
+2019-12-12 11:23:36		script: downloading list of scripts...
+2019-12-12 11:23:36		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, xfer
+2019-12-12 11:23:36		script: 364 scripts for WeeChat 2.6
+2019-12-12 14:34:48		perl: scripts unloaded
+2019-12-12 14:34:48		python: scripts unloaded
+2019-12-12 14:34:48		fifo: pipe closed
+2019-12-12 14:41:40		python: stdout/stderr (?):   File "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py", line 47
+2019-12-12 14:41:40		python: stdout/stderr (?):     print "This script must be run under WeeChat."
+2019-12-12 14:41:40		python: stdout/stderr (?):           ^
+2019-12-12 14:41:40		python: stdout/stderr (?): SyntaxError: Missing parentheses in call to 'print'. Did you mean print("This script must be run under WeeChat.")?
+2019-12-12 14:41:40	=!=	python: unable to parse file "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py"
+2019-12-12 14:41:40		python scripts loaded: buffer_autoclose, colorize_nicks, go
+2019-12-12 14:41:40		perl scripts loaded: iset
+2019-12-12 14:41:40		script: 364 scripts for WeeChat 2.6
+2019-12-12 14:41:40		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, xfer
+2019-12-12 17:00:28		perl: scripts unloaded
+2019-12-12 17:00:28		python: scripts unloaded
+2019-12-12 17:00:28		fifo: pipe closed
+2019-12-12 17:09:19		python: stdout/stderr (?):   File "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py", line 47
+2019-12-12 17:09:19		python: stdout/stderr (?):     print "This script must be run under WeeChat."
+2019-12-12 17:09:19		python: stdout/stderr (?):           ^
+2019-12-12 17:09:19		python: stdout/stderr (?): SyntaxError: Missing parentheses in call to 'print'. Did you mean print("This script must be run under WeeChat.")?
+2019-12-12 17:09:19	=!=	python: unable to parse file "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py"
+2019-12-12 17:09:19		python scripts loaded: buffer_autoclose, colorize_nicks, go
+2019-12-12 17:09:19		perl scripts loaded: iset
+2019-12-12 17:09:20		script: 364 scripts for WeeChat 2.6
+2019-12-12 17:09:20		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, xfer
+2019-12-12 17:52:53		perl: scripts unloaded
+2019-12-12 17:52:53		python: scripts unloaded
+2019-12-12 17:52:53		fifo: pipe closed
+2019-12-13 08:58:10		python: stdout/stderr (?):   File "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py", line 47
+2019-12-13 08:58:10		python: stdout/stderr (?):     print "This script must be run under WeeChat."
+2019-12-13 08:58:10		python: stdout/stderr (?):           ^
+2019-12-13 08:58:10		python: stdout/stderr (?): SyntaxError: Missing parentheses in call to 'print'. Did you mean print("This script must be run under WeeChat.")?
+2019-12-13 08:58:10	=!=	python: unable to parse file "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py"
+2019-12-13 08:58:10		python scripts loaded: buffer_autoclose, colorize_nicks, go
+2019-12-13 08:58:10		perl scripts loaded: iset
+2019-12-13 08:58:10		script: 364 scripts for WeeChat 2.6
+2019-12-13 08:58:10		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, xfer
+2019-12-13 12:47:41		perl: scripts unloaded
+2019-12-13 12:47:41		python: scripts unloaded
+2019-12-13 12:47:41		fifo: pipe closed
+2019-12-13 12:50:16		python: stdout/stderr (?):   File "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py", line 47
+2019-12-13 12:50:16		python: stdout/stderr (?):     print "This script must be run under WeeChat."
+2019-12-13 12:50:16		python: stdout/stderr (?):           ^
+2019-12-13 12:50:16		python: stdout/stderr (?): SyntaxError: Missing parentheses in call to 'print'. Did you mean print("This script must be run under WeeChat.")?
+2019-12-13 12:50:16	=!=	python: unable to parse file "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py"
+2019-12-13 12:50:16		python scripts loaded: buffer_autoclose, colorize_nicks, go
+2019-12-13 12:50:16		perl scripts loaded: iset
+2019-12-13 12:50:16		script: downloading list of scripts...
+2019-12-13 12:50:16		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, xfer
+2019-12-13 12:50:17		script: 364 scripts for WeeChat 2.6
+2019-12-13 17:54:48		perl: scripts unloaded
+2019-12-13 17:54:48		python: scripts unloaded
+2019-12-13 17:54:48		fifo: pipe closed
+2019-12-16 09:11:23		python: stdout/stderr (?):   File "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py", line 47
+2019-12-16 09:11:23		python: stdout/stderr (?):     print "This script must be run under WeeChat."
+2019-12-16 09:11:23		python: stdout/stderr (?):           ^
+2019-12-16 09:11:23		python: stdout/stderr (?): SyntaxError: Missing parentheses in call to 'print'. Did you mean print("This script must be run under WeeChat.")?
+2019-12-16 09:11:23	=!=	python: unable to parse file "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py"
+2019-12-16 09:11:23		python scripts loaded: buffer_autoclose, colorize_nicks, go
+2019-12-16 09:11:23		perl scripts loaded: iset
+2019-12-16 09:11:23		script: downloading list of scripts...
+2019-12-16 09:11:23		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, xfer
+2019-12-16 09:11:24		script: 364 scripts for WeeChat 2.6
+2019-12-16 10:20:19		perl: scripts unloaded
+2019-12-16 10:20:19		python: scripts unloaded
+2019-12-16 10:20:19		fifo: pipe closed
+2019-12-16 10:25:42		python: stdout/stderr (?):   File "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py", line 47
+2019-12-16 10:25:42		python: stdout/stderr (?):     print "This script must be run under WeeChat."
+2019-12-16 10:25:42		python: stdout/stderr (?):           ^
+2019-12-16 10:25:42		python: stdout/stderr (?): SyntaxError: Missing parentheses in call to 'print'. Did you mean print("This script must be run under WeeChat.")?
+2019-12-16 10:25:42	=!=	python: unable to parse file "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py"
+2019-12-16 10:25:42		python scripts loaded: buffer_autoclose, colorize_nicks, go
+2019-12-16 10:25:42		perl scripts loaded: iset
+2019-12-16 10:25:42		script: 364 scripts for WeeChat 2.6
+2019-12-16 10:25:42		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, xfer
+2019-12-16 11:20:42		perl: scripts unloaded
+2019-12-16 11:20:42		python: scripts unloaded
+2019-12-16 11:20:42		fifo: pipe closed
+2019-12-16 11:28:52	=!=	Warning: /home/lorenzo/.config/weechat/irc.conf, line 91: unknown option for section "network": channel_encode = off
+2019-12-16 11:28:52		python: stdout/stderr (?):   File "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py", line 47
+2019-12-16 11:28:52		python: stdout/stderr (?):     print "This script must be run under WeeChat."
+2019-12-16 11:28:52		python: stdout/stderr (?):           ^
+2019-12-16 11:28:52		python: stdout/stderr (?): SyntaxError: Missing parentheses in call to 'print'. Did you mean print("This script must be run under WeeChat.")?
+2019-12-16 11:28:52	=!=	python: unable to parse file "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py"
+2019-12-16 11:28:52		python scripts loaded: buffer_autoclose, colorize_nicks, go
+2019-12-16 11:28:52		perl scripts loaded: iset
+2019-12-16 11:28:52		script: 364 scripts for WeeChat 2.7
+2019-12-16 11:28:52		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, xfer
+2019-12-16 14:06:33	=!=	Warning: /home/lorenzo/.config/weechat/irc.conf, line 91: unknown option for section "network": channel_encode = off
+2019-12-16 14:06:33		python: stdout/stderr (?):   File "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py", line 47
+2019-12-16 14:06:33		python: stdout/stderr (?):     print "This script must be run under WeeChat."
+2019-12-16 14:06:33		python: stdout/stderr (?):           ^
+2019-12-16 14:06:33		python: stdout/stderr (?): SyntaxError: Missing parentheses in call to 'print'. Did you mean print("This script must be run under WeeChat.")?
+2019-12-16 14:06:33	=!=	python: unable to parse file "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py"
+2019-12-16 14:06:33		python scripts loaded: buffer_autoclose, colorize_nicks, go
+2019-12-16 14:06:33		perl scripts loaded: iset
+2019-12-16 14:06:33		script: 364 scripts for WeeChat 2.7
+2019-12-16 14:06:33		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, xfer
+2019-12-16 14:13:22		perl: scripts unloaded
+2019-12-16 14:13:23		python: scripts unloaded
+2019-12-16 14:13:23		fifo: pipe closed
+2019-12-16 14:32:48		python: stdout/stderr (?):   File "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py", line 47
+2019-12-16 14:32:48		python: stdout/stderr (?):     print "This script must be run under WeeChat."
+2019-12-16 14:32:48		python: stdout/stderr (?):           ^
+2019-12-16 14:32:48		python: stdout/stderr (?): SyntaxError: Missing parentheses in call to 'print'. Did you mean print("This script must be run under WeeChat.")?
+2019-12-16 14:32:48	=!=	python: unable to parse file "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py"
+2019-12-16 14:32:48		python scripts loaded: buffer_autoclose, colorize_nicks, go
+2019-12-16 14:32:48		perl scripts loaded: iset
+2019-12-16 14:32:48		script: 364 scripts for WeeChat 2.7
+2019-12-16 14:32:48		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, xfer
+2019-12-16 17:27:45		perl: scripts unloaded
+2019-12-16 17:27:45		python: scripts unloaded
+2019-12-16 17:27:45		fifo: pipe closed
+2019-12-18 09:08:05		python: stdout/stderr (?):   File "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py", line 47
+2019-12-18 09:08:05		python: stdout/stderr (?):     print "This script must be run under WeeChat."
+2019-12-18 09:08:05		python: stdout/stderr (?):           ^
+2019-12-18 09:08:05		python: stdout/stderr (?): SyntaxError: Missing parentheses in call to 'print'. Did you mean print("This script must be run under WeeChat.")?
+2019-12-18 09:08:05	=!=	python: unable to parse file "/home/lorenzo/dotfiles/weechat/.config/weechat/python/autoload/urlbuf.py"
+2019-12-18 09:08:05		python scripts loaded: buffer_autoclose, colorize_nicks, go
+2019-12-18 09:08:05		perl scripts loaded: iset
+2019-12-18 09:08:05		script: downloading list of scripts...
+2019-12-18 09:08:05		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, xfer
+2019-12-18 09:08:05		script: 364 scripts for WeeChat 2.7
+2019-12-18 12:57:59		perl: scripts unloaded
+2019-12-18 12:57:59		python: scripts unloaded
+2019-12-18 12:57:59		fifo: pipe closed
