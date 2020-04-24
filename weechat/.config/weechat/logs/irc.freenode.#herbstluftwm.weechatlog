@@ -1,0 +1,804 @@
+2019-09-13 09:06:12	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-09-13 09:06:12	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-09-13 09:06:12	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-09-13 09:06:12	--	Channel #herbstluftwm: 46 nicks (0 ops, 0 voices, 46 normals)
+2019-09-13 09:06:18	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-09-13 10:31:06	-->	shinboi (~cherry@dmc9p540d6r4pgj07vy-4.rev.dnainternet.fi) has joined #herbstluftwm
+2019-09-13 14:26:40	-->	Shyiskhar (~Shyiskhar@thesifr.com) has joined #herbstluftwm
+2019-09-13 14:42:42	<--	astronavt (~astronavt@unaffiliated/astronavt) has quit (Quit: ...)
+2019-09-13 14:43:12	-->	astronavt (~astronavt@unaffiliated/astronavt) has joined #herbstluftwm
+2019-09-13 15:22:26	<--	shinboi (~cherry@dmc9p540d6r4pgj07vy-4.rev.dnainternet.fi) has quit (Quit: test)
+2019-09-13 15:22:40	-->	shinboi (~cherry@dmc9p540d6r4pgj07vy-4.rev.dnainternet.fi) has joined #herbstluftwm
+2019-10-17 11:12:42	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-10-17 11:12:42	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-10-17 11:12:42	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-10-17 11:12:42	--	Channel #herbstluftwm: 49 nicks (0 ops, 0 voices, 49 normals)
+2019-10-17 11:12:48	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-10-17 11:21:11	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-10-17 11:21:11	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-10-17 11:21:11	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-10-17 11:21:11	--	Channel #herbstluftwm: 49 nicks (0 ops, 0 voices, 49 normals)
+2019-10-17 11:21:18	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-10-17 11:51:14	<--	silverghost (~silver@112.65.161.211) has quit (Ping timeout: 240 seconds)
+2019-10-17 11:52:05	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-10-17 13:48:56	<--	silverghost (~silver@112.65.161.211) has quit (Ping timeout: 240 seconds)
+2019-10-17 13:49:24	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-10-17 13:53:28	<--	scoobertron (~tom@81.2.175.4) has quit (Quit: Changing server)
+2019-10-17 13:55:22	-->	scoobertron (~tom@81.2.175.4) has joined #herbstluftwm
+2019-10-17 14:05:34	<--	scoobertron (~tom@81.2.175.4) has quit (Remote host closed the connection)
+2019-10-17 14:05:39	<--	silverghost (~silver@112.65.161.211) has quit (Ping timeout: 240 seconds)
+2019-10-17 14:06:08	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-10-17 14:14:13	-->	scoobertron (~tom@81.2.175.4) has joined #herbstluftwm
+2019-10-17 14:47:38	<--	silverghost (~silver@112.65.161.211) has quit (Ping timeout: 268 seconds)
+2019-10-17 14:48:07	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-10-17 15:55:49	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-10-17 15:55:49	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-10-17 15:55:49	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-10-17 15:55:49	--	Channel #herbstluftwm: 49 nicks (0 ops, 0 voices, 49 normals)
+2019-10-17 15:55:54	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-10-17 17:20:22	-->	climbingturtle (~climbingt@c213-89-14-151.bredband.comhem.se) has joined #herbstluftwm
+2019-10-18 08:05:44	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-10-18 08:05:44	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-10-18 08:05:44	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-10-18 08:05:44	--	Channel #herbstluftwm: 49 nicks (0 ops, 0 voices, 49 normals)
+2019-10-18 08:05:51	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-10-18 08:09:38	<--	silverghost (~silver@112.65.161.211) has quit (Ping timeout: 240 seconds)
+2019-10-18 08:10:07	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-10-18 08:22:31	-->	david2 (~david2@212-186-25-215.cable.dynamic.surfer.at) has joined #herbstluftwm
+2019-10-18 08:49:13	<--	silverghost (~silver@112.65.161.211) has quit (Ping timeout: 265 seconds)
+2019-10-18 08:49:43	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-10-18 09:26:33	<--	silverghost (~silver@112.65.161.211) has quit (Ping timeout: 245 seconds)
+2019-10-18 09:27:02	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-10-18 10:51:22	<--	silverghost (~silver@112.65.161.211) has quit (Quit: WeeChat 2.6)
+2019-10-18 11:47:06	david2	hi guys
+2019-10-18 11:47:59	david2	can anybody shares his xworkspace modules with me for polybar please ? im struggling to have it working its displaying the icons ..but when i switch workspace the icons doesnt switch to a different state like active ect thanks for your help
+2019-10-18 12:11:16	<--	david2 (~david2@212-186-25-215.cable.dynamic.surfer.at) has quit (Quit: WeeChat 2.6)
+2019-10-18 12:11:38	-->	david2 (~david2@212-186-25-215.cable.dynamic.surfer.at) has joined #herbstluftwm
+2019-10-18 16:17:43	codedmart	david2: I don't use polybar but from a google search I found this:
+2019-10-18 16:17:45	codedmart	https://github.com/polybar/polybar-scripts/tree/master/polybar-scripts/info-hlwm-workspaces
+2019-10-18 16:49:10	-->	sdk (sdkmatrixo@gateway/shell/matrix.org/x-kafilbckscyhyhrs) has joined #herbstluftwm
+2019-10-21 09:25:20	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-10-21 09:25:20	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-10-21 09:25:20	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-10-21 09:25:20	--	Channel #herbstluftwm: 50 nicks (0 ops, 0 voices, 50 normals)
+2019-10-21 09:25:26	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-10-21 10:57:54	<--	scoobertron (~tom@81.2.175.4) has quit (Quit: leaving)
+2019-10-21 13:03:00	<--	Marc3l (~Marc3l@unaffiliated/marc3l) has quit (Quit: ZNC - https://znc.in)
+2019-10-21 13:04:32	-->	Marc3l (~Marc3l@unaffiliated/marc3l) has joined #herbstluftwm
+2019-10-21 17:28:56	-->	phd_doom (~spike@99-145-32-252.lightspeed.iplsin.sbcglobal.net) has joined #herbstluftwm
+2019-10-21 17:32:14	-->	climbingturtle (~climbingt@c213-89-14-151.bredband.comhem.se) has joined #herbstluftwm
+2019-10-22 09:05:17	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-10-22 09:05:17	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-10-22 09:05:17	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-10-22 09:05:17	--	Channel #herbstluftwm: 51 nicks (0 ops, 0 voices, 51 normals)
+2019-10-22 09:05:24	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-10-22 11:07:12	<--	codedmart (codedmart@2600:3c01::f03c:91ff:feb8:181) has quit (Quit: ZNC 1.7.1 - https://znc.in)
+2019-10-22 13:40:03	<--	david2 (~david2@212-186-25-215.cable.dynamic.surfer.at) has quit (Ping timeout: 240 seconds)
+2019-10-22 15:07:52	<--	sdk (sdkmatrixo@gateway/shell/matrix.org/x-kafilbckscyhyhrs) has quit (Remote host closed the connection)
+2019-10-22 17:25:48	-->	climbingturtle (~climbingt@c213-89-14-151.bredband.comhem.se) has joined #herbstluftwm
+2019-10-23 10:06:11	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-10-23 10:06:11	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-10-23 10:06:11	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-10-23 10:06:11	--	Channel #herbstluftwm: 50 nicks (0 ops, 0 voices, 50 normals)
+2019-10-23 10:06:18	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-10-23 10:38:50	-->	notis (~notis@amcosa.static.otenet.gr) has joined #herbstluftwm
+2019-10-23 11:03:01	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-10-23 11:03:01	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-10-23 11:03:01	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-10-23 11:03:01	--	Channel #herbstluftwm: 51 nicks (0 ops, 0 voices, 51 normals)
+2019-10-23 11:03:07	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-10-23 17:07:37	<--	notis (~notis@amcosa.static.otenet.gr) has quit (Ping timeout: 240 seconds)
+2019-10-23 17:23:12	<--	david2 (~david2@212-186-25-215.cable.dynamic.surfer.at) has quit (Ping timeout: 246 seconds)
+2019-10-23 17:39:56	-->	climbingturtle (~climbingt@c213-89-14-151.bredband.comhem.se) has joined #herbstluftwm
+2019-10-24 10:39:40	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-10-24 10:39:40	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-10-24 10:39:40	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-10-24 10:39:40	--	Channel #herbstluftwm: 48 nicks (0 ops, 0 voices, 48 normals)
+2019-10-24 10:39:46	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-10-24 12:25:53	-->	notis (~notis@amcosa.static.otenet.gr) has joined #herbstluftwm
+2019-10-24 17:09:03	<--	notis (~notis@amcosa.static.otenet.gr) has quit (Ping timeout: 264 seconds)
+2019-10-24 17:51:15	-->	climbingturtle (~climbingt@c213-89-14-151.bredband.comhem.se) has joined #herbstluftwm
+2019-10-25 09:01:51	--	irc: disconnected from server
+2019-10-25 09:02:17	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-10-25 09:02:17	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-10-25 09:02:17	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-10-25 09:02:17	--	Channel #herbstluftwm: 49 nicks (0 ops, 0 voices, 49 normals)
+2019-10-25 09:02:37	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-10-25 09:21:22	-->	notis (~notis@amcosa.static.otenet.gr) has joined #herbstluftwm
+2019-10-25 09:34:55	<--	notis (~notis@amcosa.static.otenet.gr) has quit (Ping timeout: 252 seconds)
+2019-10-25 09:45:26	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-10-25 09:45:26	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-10-25 09:45:26	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-10-25 09:45:26	--	Channel #herbstluftwm: 49 nicks (0 ops, 0 voices, 49 normals)
+2019-10-25 09:45:32	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-10-25 17:25:04	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-10-25 17:25:04	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-10-25 17:25:04	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-10-25 17:25:04	--	Channel #herbstluftwm: 49 nicks (0 ops, 0 voices, 49 normals)
+2019-10-25 17:25:10	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-10-28 09:59:47	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-10-28 09:59:47	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-10-28 09:59:47	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-10-28 09:59:47	--	Channel #herbstluftwm: 50 nicks (0 ops, 0 voices, 50 normals)
+2019-10-28 09:59:53	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-10-28 10:53:37	<--	olminator (~olminator@507286BB.static.ziggozakelijk.nl) has quit (Quit: WeeChat 2.5)
+2019-10-28 11:01:02	-->	olminator (~olminator@507286BB.static.ziggozakelijk.nl) has joined #herbstluftwm
+2019-10-28 14:05:43	<--	gardouille (~gardouill@ks10.101010.fr) has quit (Ping timeout: 245 seconds)
+2019-10-28 14:06:03	-->	gardouille (~gardouill@ks10.101010.fr) has joined #herbstluftwm
+2019-10-28 16:27:46	--	irc: disconnected from server
+2019-10-28 16:35:42	-->	Syrinxos (~syrinxos@93-34-1-82.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-10-28 16:35:42	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-10-28 16:35:42	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-10-28 16:35:42	--	Channel #herbstluftwm: 50 nicks (0 ops, 0 voices, 50 normals)
+2019-10-28 16:36:02	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-10-29 09:21:40	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-10-29 09:21:40	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-10-29 09:21:40	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-10-29 09:21:40	--	Channel #herbstluftwm: 50 nicks (0 ops, 0 voices, 50 normals)
+2019-10-29 09:21:45	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-10-29 13:29:05	<--	yawkat (~yawkat@cats.coffee) has quit (Ping timeout: 276 seconds)
+2019-10-29 14:04:28	-->	yawkat (~yawkat@cats.coffee) has joined #herbstluftwm
+2019-10-29 16:16:17	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-10-29 16:16:17	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-10-29 16:16:17	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-10-29 16:16:17	--	Channel #herbstluftwm: 50 nicks (0 ops, 0 voices, 50 normals)
+2019-10-29 16:16:22	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-10-30 09:15:49	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-10-30 09:15:49	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-10-30 09:15:49	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-10-30 09:15:49	--	Channel #herbstluftwm: 50 nicks (0 ops, 0 voices, 50 normals)
+2019-10-30 09:15:54	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-10-30 09:49:40	<--	hpd (~hpd@hpdeifel.de) has quit (Quit: WeeChat 2.5)
+2019-10-30 09:52:28	-->	hpd (~hpd@hpdeifel.de) has joined #herbstluftwm
+2019-10-30 10:48:15	-->	shinboi (~cherry@dkg5pk5x0rc6xbpgtp8-4.rev.dnainternet.fi) has joined #herbstluftwm
+2019-10-30 11:42:42	<--	sdk (sdkmatrixo@gateway/shell/matrix.org/x-siqdvhkillffadgh) has quit (Read error: Connection reset by peer)
+2019-10-30 12:05:48	-->	sdk (sdkmatrixo@gateway/shell/matrix.org/x-cglygckhzdlrzvnq) has joined #herbstluftwm
+2019-10-30 15:57:13	<--	shinboi (~cherry@dkg5pk5x0rc6xbpgtp8-4.rev.dnainternet.fi) has quit (Quit: test)
+2019-10-31 09:16:12	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-10-31 09:16:12	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-10-31 09:16:12	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-10-31 09:16:12	--	Channel #herbstluftwm: 49 nicks (0 ops, 0 voices, 49 normals)
+2019-10-31 09:16:18	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-10-31 10:31:50	-->	marulkan (~marulkan@mailhost.dev0.nu) has joined #herbstluftwm
+2019-10-31 13:47:09	The-Compiler	Anyone here using zathura with mupdf (rather than poppler)?
+2019-10-31 13:47:34	The-Compiler	Since some months, there is a weird bug with PDF pages having the wrong size and being cropped as soon as I unfocus the zathura window
+2019-10-31 13:47:55	The-Compiler	I switched to poppler now, and that seems to work better - but I still wonder what's going on (haven't tried with another WM yet)
+2019-10-31 13:55:05	yushyin	I only know about the zoom bug
+2019-10-31 14:51:24	The-Compiler	oh god and I can finally search in PDFs again
+2019-10-31 14:51:50	The-Compiler	recently with mupdf it somehow parsed "example" as "e x a m p l e" so I couldn't search without typing that - I was about to give up on zathura :D
+2019-10-31 14:55:44	HolySmoke	postscript is weird
+2019-10-31 16:19:48	-->	climbingturtle (~climbingt@c213-89-14-151.bredband.comhem.se) has joined #herbstluftwm
+2019-11-04 11:06:53	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-11-04 11:06:53	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-11-04 11:06:53	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-11-04 11:06:53	--	Channel #herbstluftwm: 52 nicks (0 ops, 0 voices, 52 normals)
+2019-11-04 11:07:00	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-11-04 14:10:32	<--	notis (~notis@amcosa.static.otenet.gr) has quit (Ping timeout: 252 seconds)
+2019-11-04 15:52:49	-->	david2_ (~david2@212-186-25-215.cable.dynamic.surfer.at) has joined #herbstluftwm
+2019-11-04 17:30:25	-->	climbingturtle (~climbingt@c213-89-14-151.bredband.comhem.se) has joined #herbstluftwm
+2019-11-04 17:38:38	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-11-04 17:38:38	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-11-04 17:38:38	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-11-04 17:38:38	--	Channel #herbstluftwm: 53 nicks (0 ops, 0 voices, 53 normals)
+2019-11-04 17:38:43	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-11-05 09:04:51	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-11-05 09:04:51	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-11-05 09:04:51	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-11-05 09:04:51	--	Channel #herbstluftwm: 52 nicks (0 ops, 0 voices, 52 normals)
+2019-11-05 09:04:57	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-11-05 10:36:10	<--	david2 (~david2@212-186-25-215.cable.dynamic.surfer.at) has quit (Ping timeout: 265 seconds)
+2019-11-05 15:55:52	-->	Shyiskhar (~Shy@gateway/tor-sasl/shyiskhar) has joined #herbstluftwm
+2019-11-06 09:03:18	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-11-06 09:03:18	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-11-06 09:03:18	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-11-06 09:03:18	--	Channel #herbstluftwm: 52 nicks (0 ops, 0 voices, 52 normals)
+2019-11-06 09:03:23	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-11-06 10:45:52	-->	notis (~notis@185.217.71.36) has joined #herbstluftwm
+2019-11-06 11:35:15	<--	notis (~notis@185.217.71.36) has quit (Ping timeout: 268 seconds)
+2019-11-07 09:11:40	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-11-07 09:11:40	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-11-07 09:11:40	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-11-07 09:11:40	--	Channel #herbstluftwm: 52 nicks (0 ops, 0 voices, 52 normals)
+2019-11-07 09:11:45	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-11-07 09:32:16	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-11-07 09:32:16	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-11-07 09:32:16	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-11-07 09:32:16	--	Channel #herbstluftwm: 52 nicks (0 ops, 0 voices, 52 normals)
+2019-11-07 09:32:22	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-11-07 11:06:11	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-11-07 11:06:11	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-11-07 11:06:11	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-11-07 11:06:11	--	Channel #herbstluftwm: 52 nicks (0 ops, 0 voices, 52 normals)
+2019-11-07 11:06:18	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-11-07 12:29:41	<--	rudi_sY (~simon@steep.informatik.uni-erlangen.de) has quit (Quit: leaving)
+2019-11-07 15:34:17	<--	Roliga (~roliga@178.128.241.64) has quit (Remote host closed the connection)
+2019-11-07 15:35:40	-->	Roliga (~roliga@178.128.241.64) has joined #herbstluftwm
+2019-11-07 17:57:38	<--	Shinryuu (~cherry@dkg5pkmq6g236rkxj94-4.rev.dnainternet.fi) has quit (Quit: WeeChat 2.6)
+2019-11-08 09:09:17	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-11-08 09:09:17	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-11-08 09:09:17	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-11-08 09:09:17	--	Channel #herbstluftwm: 50 nicks (0 ops, 0 voices, 50 normals)
+2019-11-08 09:09:24	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-11-08 12:20:37	<--	Treak (4RUpGFygmG@libra.uberspace.de) has quit (Ping timeout: 246 seconds)
+2019-11-08 12:21:35	<--	maxfragg (J4L5qaBQ1n@horologium.uberspace.de) has quit (Ping timeout: 276 seconds)
+2019-11-08 12:21:40	<--	thorsten` (qdPQloRson@apus.uberspace.de) has quit (Ping timeout: 264 seconds)
+2019-11-08 12:42:44	-->	Treak (F0k0ilyAUT@libra.uberspace.de) has joined #herbstluftwm
+2019-11-08 12:43:05	-->	thorsten` (bFWpFDuj01@apus.uberspace.de) has joined #herbstluftwm
+2019-11-08 12:46:59	-->	maxfragg (J0mzDqDiFA@horologium.uberspace.de) has joined #herbstluftwm
+2019-11-08 17:12:53	-->	climbingturtle (~climbingt@c213-89-14-151.bredband.comhem.se) has joined #herbstluftwm
+2019-11-11 09:32:18	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-11-11 09:32:18	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-11-11 09:32:18	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-11-11 09:32:18	--	Channel #herbstluftwm: 49 nicks (0 ops, 0 voices, 49 normals)
+2019-11-11 09:32:23	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-11-11 11:24:13	-->	xd1le (~u@unaffiliated/xd1le) has joined #herbstluftwm
+2019-11-11 11:40:05	-->	scoobertron (~tom@81.2.166.72) has joined #herbstluftwm
+2019-11-11 13:31:20	<--	ravndal (~weechat@unaffiliated/ravndal) has quit (Quit: WeeChat 2.6)
+2019-11-11 13:32:53	-->	ravndal (~weechat@unaffiliated/ravndal) has joined #herbstluftwm
+2019-11-11 13:43:57	<--	hpd (~hpd@hpdeifel.de) has quit (Quit: WeeChat 2.5)
+2019-11-11 15:19:14	-->	dario (~dario@hetzner.deaktualisierung.org) has joined #herbstluftwm
+2019-11-11 15:53:21	-->	hpd (~hpd@hpdeifel.de) has joined #herbstluftwm
+2019-11-11 16:27:10	-->	climbingturtle (~climbingt@c213-89-14-151.bredband.comhem.se) has joined #herbstluftwm
+2019-11-11 17:35:28	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-11-11 17:35:28	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-11-11 17:35:28	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-11-11 17:35:28	--	Channel #herbstluftwm: 53 nicks (0 ops, 0 voices, 53 normals)
+2019-11-11 17:35:33	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-11-12 09:16:51	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-11-12 09:16:51	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-11-12 09:16:51	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-11-12 09:16:51	--	Channel #herbstluftwm: 51 nicks (0 ops, 0 voices, 51 normals)
+2019-11-12 09:16:57	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-11-12 10:42:19	<--	Proximyst (~Proximyst@148.251.50.76) has quit (Read error: Connection reset by peer)
+2019-11-12 10:43:39	-->	Proximyst (~Proximyst@148.251.50.76) has joined #herbstluftwm
+2019-11-12 11:06:59	-->	Shinryuu (~cherry@line-20289.dyn.kponet.fi) has joined #herbstluftwm
+2019-11-12 13:20:42	<--	Proximyst (~Proximyst@148.251.50.76) has quit (Quit: Robbing a bank)
+2019-11-12 13:23:12	-->	Proximyst (~Proximyst@148.251.50.76) has joined #herbstluftwm
+2019-11-12 14:56:02	<--	Shinryuu (~cherry@line-20289.dyn.kponet.fi) has quit (Ping timeout: 240 seconds)
+2019-11-12 14:58:10	-->	Shinryuu (cherry@gateway/vpn/mullvad/shinryuu) has joined #herbstluftwm
+2019-11-12 16:11:16	<--	Shyiskhar (~Shy@gateway/tor-sasl/shyiskhar) has quit (Ping timeout: 260 seconds)
+2019-11-12 16:16:45	-->	Shyiskhar (~Shy@gateway/tor-sasl/shyiskhar) has joined #herbstluftwm
+2019-11-12 16:50:16	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-11-12 16:50:16	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-11-12 16:50:16	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-11-12 16:50:16	--	Channel #herbstluftwm: 51 nicks (0 ops, 0 voices, 51 normals)
+2019-11-12 16:50:23	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-11-12 16:50:59	-->	dopplergange (~dop@45.12.223.70) has joined #herbstluftwm
+2019-11-13 09:10:10	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-11-13 09:10:10	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-11-13 09:10:10	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-11-13 09:10:10	--	Channel #herbstluftwm: 51 nicks (0 ops, 0 voices, 51 normals)
+2019-11-13 09:10:15	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-11-13 09:54:05	<--	klonfish (~klonfish@unaffiliated/klonfish) has quit (Ping timeout: 250 seconds)
+2019-11-13 11:30:40	<--	thealamenthe (~qwert@unaffiliated/thealamenthe) has quit (Ping timeout: 264 seconds)
+2019-11-13 16:33:04	--	irc: disconnected from server
+2019-11-13 16:33:30	-->	Syrinxos (~syrinxos@93-34-1-82.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-11-13 16:33:30	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-11-13 16:33:30	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-11-13 16:33:30	--	Channel #herbstluftwm: 49 nicks (0 ops, 0 voices, 49 normals)
+2019-11-13 16:33:50	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-11-13 17:15:25	--	irc: disconnected from server
+2019-11-13 17:15:52	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-11-13 17:15:52	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-11-13 17:15:52	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-11-13 17:15:52	--	Channel #herbstluftwm: 49 nicks (0 ops, 0 voices, 49 normals)
+2019-11-13 17:16:12	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-11-14 09:34:13	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-11-14 09:34:13	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-11-14 09:34:13	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-11-14 09:34:13	--	Channel #herbstluftwm: 49 nicks (0 ops, 0 voices, 49 normals)
+2019-11-14 09:34:18	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-11-14 09:57:44	<--	stettberger (~qy03fugy@2a02:560:4add:f901:921b:eff:fe2a:82b7) has quit (Ping timeout: 276 seconds)
+2019-11-14 10:29:29	-->	stettberger (~qy03fugy@2a02:560:4aeb:6301:921b:eff:fe2a:82b7) has joined #herbstluftwm
+2019-11-14 13:51:13	<--	n0a110w (~n0a110w@unaffiliated/n0a110w) has quit (*.net *.split)
+2019-11-14 13:51:15	<--	Spritzgebaeck (~Spritzgeb@voxpupuli/contributor/Spritzgebaeck) has quit (*.net *.split)
+2019-11-14 13:51:17	<--	Hydraxis (~Hydraxis@2a01:4f8:1c0c:49f3::1) has quit (*.net *.split)
+2019-11-14 13:51:18	<--	dario (~dario@hetzner.deaktualisierung.org) has quit (*.net *.split)
+2019-11-14 13:53:57	-->	n0a110w (~n0a110w@unaffiliated/n0a110w) has joined #herbstluftwm
+2019-11-14 13:53:57	-->	dario (~dario@hetzner.deaktualisierung.org) has joined #herbstluftwm
+2019-11-14 13:53:57	-->	Spritzgebaeck (~Spritzgeb@voxpupuli/contributor/Spritzgebaeck) has joined #herbstluftwm
+2019-11-14 13:53:57	-->	Hydraxis (~Hydraxis@2a01:4f8:1c0c:49f3::1) has joined #herbstluftwm
+2019-11-14 14:46:03	<--	scoobertron (~tom@81.2.166.72) has quit (Remote host closed the connection)
+2019-11-14 17:28:29	-->	climbingturtle (~climbingt@c213-89-14-151.bredband.comhem.se) has joined #herbstluftwm
+2019-11-15 09:16:18	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-11-15 09:16:18	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-11-15 09:16:18	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-11-15 09:16:18	--	Channel #herbstluftwm: 48 nicks (0 ops, 0 voices, 48 normals)
+2019-11-15 09:16:24	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-11-15 14:34:50	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-11-15 14:34:50	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-11-15 14:34:50	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-11-15 14:34:50	--	Channel #herbstluftwm: 48 nicks (0 ops, 0 voices, 48 normals)
+2019-11-15 14:34:57	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-11-15 17:43:25	-->	climbingturtle (~climbingt@c213-89-14-151.bredband.comhem.se) has joined #herbstluftwm
+2019-11-18 09:27:23	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-11-18 09:27:23	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-11-18 09:27:23	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-11-18 09:27:23	--	Channel #herbstluftwm: 50 nicks (0 ops, 0 voices, 50 normals)
+2019-11-18 09:27:29	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-11-18 09:32:56	<--	silverghost (~silver@112.65.161.211) has quit (Ping timeout: 240 seconds)
+2019-11-18 09:33:23	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-11-18 10:25:29	<--	silverghost (~silver@112.65.161.211) has quit (Quit: WeeChat 2.6)
+2019-11-18 15:30:08	-->	hqdruxn08_ (hqdruxn08@gateway/vpn/privateinternetaccess/hqdruxn08) has joined #herbstluftwm
+2019-11-18 15:31:25	<--	hqdruxn08 (hqdruxn08@gateway/vpn/privateinternetaccess/hqdruxn08) has quit (Ping timeout: 246 seconds)
+2019-11-19 12:58:41	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-11-19 12:58:41	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-11-19 12:58:41	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-11-19 12:58:41	--	Channel #herbstluftwm: 49 nicks (0 ops, 0 voices, 49 normals)
+2019-11-19 12:58:46	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-11-19 13:58:18	<--	Shyiskhar (~Shy@gateway/tor-sasl/shyiskhar) has quit (Remote host closed the connection)
+2019-11-19 13:59:05	-->	Shyiskhar (~Shy@gateway/tor-sasl/shyiskhar) has joined #herbstluftwm
+2019-11-20 11:04:51	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-11-20 11:04:51	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-11-20 11:04:51	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-11-20 11:04:51	--	Channel #herbstluftwm: 49 nicks (0 ops, 0 voices, 49 normals)
+2019-11-20 11:04:56	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-11-20 16:39:24	<--	Shyiskhar (~Shy@gateway/tor-sasl/shyiskhar) has quit (Ping timeout: 260 seconds)
+2019-11-20 16:44:54	-->	Shyiskhar (~Shy@gateway/tor-sasl/shyiskhar) has joined #herbstluftwm
+2019-11-20 16:52:25	--	astronavt___ is now known as astronavt
+2019-11-22 08:59:25	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-11-22 08:59:25	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-11-22 08:59:25	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-11-22 08:59:25	--	Channel #herbstluftwm: 49 nicks (0 ops, 0 voices, 49 normals)
+2019-11-22 08:59:30	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-11-22 10:58:36	--	yawkat` is now known as yawkat
+2019-11-22 17:39:31	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-11-22 17:39:31	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-11-22 17:39:31	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-11-22 17:39:31	--	Channel #herbstluftwm: 49 nicks (0 ops, 0 voices, 49 normals)
+2019-11-22 17:39:36	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-11-25 09:14:33	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-11-25 09:14:33	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-11-25 09:14:33	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-11-25 09:14:33	--	Channel #herbstluftwm: 49 nicks (0 ops, 0 voices, 49 normals)
+2019-11-25 09:14:40	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-11-25 12:43:15	-->	shmibs_ (~shmibs@airen-no-jikken.icu) has joined #herbstluftwm
+2019-11-25 12:46:27	-->	olminator_ (~olminator@507286BB.static.ziggozakelijk.nl) has joined #herbstluftwm
+2019-11-25 12:48:32	<--	shmibs (~shmibs@airen-no-jikken.icu) has quit (Quit: leaving =o)
+2019-11-25 12:48:33	<--	olminator (~olminator@507286BB.static.ziggozakelijk.nl) has quit (Ping timeout: 240 seconds)
+2019-11-25 12:48:33	--	shmibs_ is now known as shmibs
+2019-11-25 12:51:47	<--	echarlie (irc-user@landgr.af) has quit (Ping timeout: 250 seconds)
+2019-11-25 12:54:50	-->	echarlie (irc-user@landgr.af) has joined #herbstluftwm
+2019-11-26 09:34:59	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-11-26 09:34:59	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-11-26 09:34:59	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-11-26 09:34:59	--	Channel #herbstluftwm: 49 nicks (0 ops, 0 voices, 49 normals)
+2019-11-26 09:35:05	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-11-26 13:49:16	<--	tg (~x@unaffiliated/tg) has quit (Ping timeout: 264 seconds)
+2019-11-26 13:53:06	-->	tg (~x@unaffiliated/tg) has joined #herbstluftwm
+2019-11-26 17:00:17	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-11-26 17:00:17	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-11-26 17:00:17	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-11-26 17:00:17	--	Channel #herbstluftwm: 49 nicks (0 ops, 0 voices, 49 normals)
+2019-11-26 17:00:23	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-11-27 09:05:18	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-11-27 09:05:18	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-11-27 09:05:18	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-11-27 09:05:18	--	Channel #herbstluftwm: 50 nicks (0 ops, 0 voices, 50 normals)
+2019-11-27 09:05:24	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-11-27 09:28:55	<--	silverghost (~silver@112.65.161.211) has quit (Ping timeout: 268 seconds)
+2019-11-27 09:29:20	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-11-27 10:22:42	<--	silverghost (~silver@112.65.161.211) has quit (Ping timeout: 246 seconds)
+2019-11-27 10:23:11	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-11-27 10:26:47	<--	silverghost (~silver@112.65.161.211) has quit (Client Quit)
+2019-11-27 12:16:53	Duponin	Hi, I experience global latency with herbstluftwm. To swap tags takes time, in application it takes time too, everywhere. I have 3 displays but only 2 are active (to reduce latency). About hardware I have a T490 Thinkpad with and Intel GPU. Do you think it's more an Herbstluftwm issue or an Intel driver issue? (or something else?) Thank you (and still the best WM so far)
+2019-11-27 12:21:41	Mullet	Duponin: Does it get worse with more displays (or better with only 1)?
+2019-11-27 12:21:48	HolySmoke	I have two 1920x1200 displays on an intel card here and swapping tags is pretty much instantly
+2019-11-27 12:22:10	HolySmoke	I do have compton in use though, that might speed things up
+2019-11-27 12:23:29	HolySmoke	oh, and I'm using the options "AccelMethod" "SNA" and "TearFree" "true"
+2019-11-27 13:25:18	marulkan	Duponin: which driver are you using? I have 3 screens without much problem, but I had a lot of stutter when I were using xf86-video-intel.
+2019-11-27 13:47:20	Duponin	Mullet: In laptop's display it goes fine (2560x1440). It goes a bit better with only two displays (1920x1200)
+2019-11-27 13:48:31	Duponin	HolySmoke: I do have compton with default config, I'll try to disable it to spot difference
+2019-11-27 13:50:38	Duponin	marulkan: I have xf86-video-intel (version 2.99.917.847), livb-intel-driver and linux firware-intel. I don't know which on is used by X11 (I use Voidlinux)
+2019-11-27 13:55:44	marulkan	check the Installation part on https://wiki.archlinux.org/index.php/Intel_graphics about why it's not recomended. It's not distribution specific so should be applicable for void to.
+2019-11-27 14:27:31	Duponin	marulkan: which one is not recommended? I don't see anything about a driver to discord in Installation part nor somewhere else
+2019-11-27 14:28:55	marulkan	Note: Some (Debian & Ubuntu, Fedora, KDE) recommend not installing the xf86-video-intel driver
+2019-11-27 14:29:21	marulkan	and instead just use the mesa driver
+2019-11-27 14:31:51	Duponin	Oh ok
+2019-11-27 14:32:10	Duponin	I'll try when I'll have spare time, to remove that driver
+2019-11-27 14:33:41	The-Compiler	note your screen names will change :D
+2019-11-27 14:33:49	The-Compiler	at least they did for me
+2019-11-27 14:34:16	Duponin	The-Compiler: Not the worst thing ever ^^
+2019-11-27 14:35:26	HolySmoke	wat
+2019-11-27 14:35:38	HolySmoke	oh, the names of the screens, lol
+2019-11-27 14:35:51	HolySmoke	I though "wasn't he always The-Compiler?"
+2019-11-27 14:36:45	marulkan	I had fun in sway with that, my docking station incremented the screen-name everytime I docked in and out so had to build a wrapper to identify them on which serial number they had :P
+2019-11-27 14:42:04	The-Compiler	gah :D
+2019-11-27 15:22:31	Duponin	What a strange behaviour, haha
+2019-11-29 09:13:56	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-11-29 09:13:56	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-11-29 09:13:56	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-11-29 09:13:56	--	Channel #herbstluftwm: 49 nicks (0 ops, 0 voices, 49 normals)
+2019-11-29 09:14:02	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-11-29 10:13:07	thorsten`	olminator_: thanks for opening an issue!
+2019-11-29 10:14:49	thorsten`	olminator_: i've mentioned it in https://github.com/herbstluftwm/herbstluftwm/issues/592
+2019-12-02 09:11:55	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-12-02 09:11:55	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-12-02 09:11:55	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-12-02 09:11:55	--	Channel #herbstluftwm: 51 nicks (0 ops, 0 voices, 51 normals)
+2019-12-02 09:12:02	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-12-02 09:12:29	<--	silverghost (~silver@112.65.161.211) has quit (Ping timeout: 268 seconds)
+2019-12-02 09:12:55	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-12-02 09:16:51	<--	silverghost (~silver@112.65.161.211) has quit (Client Quit)
+2019-12-02 09:18:17	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-12-02 09:22:23	<--	silverghost (~silver@112.65.161.211) has quit (Ping timeout: 245 seconds)
+2019-12-02 09:22:48	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-12-02 12:23:14	<--	silverghost (~silver@112.65.161.211) has quit (Ping timeout: 252 seconds)
+2019-12-02 12:24:39	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-12-02 13:34:14	<--	silverghost (~silver@112.65.161.211) has quit (Ping timeout: 276 seconds)
+2019-12-02 13:36:02	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-12-02 14:52:16	<--	silverghost (~silver@112.65.161.211) has quit (Ping timeout: 240 seconds)
+2019-12-02 14:52:46	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-12-02 15:15:12	<--	silverghost (~silver@112.65.161.211) has quit (Ping timeout: 252 seconds)
+2019-12-02 15:17:11	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-12-02 15:52:04	<--	silverghost (~silver@112.65.161.211) has quit (Ping timeout: 268 seconds)
+2019-12-02 15:53:34	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-12-02 16:53:38	<--	silverghost (~silver@112.65.161.211) has quit (Ping timeout: 245 seconds)
+2019-12-02 16:54:05	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-12-02 17:24:31	<--	silverghost (~silver@112.65.161.211) has quit (Quit: WeeChat 2.6)
+2019-12-02 17:41:10	-->	climbingturtle (~climbingt@c213-89-14-151.bredband.comhem.se) has joined #herbstluftwm
+2019-12-03 09:07:31	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-12-03 09:07:31	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-12-03 09:07:31	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-12-03 09:07:31	--	Channel #herbstluftwm: 49 nicks (0 ops, 0 voices, 49 normals)
+2019-12-03 09:07:37	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-12-03 09:24:48	<--	utsushi (~user@gateway/tor-sasl/utsushi) has quit (Ping timeout: 260 seconds)
+2019-12-03 09:36:27	-->	utsushi (~user@gateway/tor-sasl/utsushi) has joined #herbstluftwm
+2019-12-03 10:41:37	<--	Marc3l_ (~Marc3l@unaffiliated/marc3l) has quit (Ping timeout: 240 seconds)
+2019-12-03 10:41:37	<--	johnLate (~johnlate@lexington.scnr.net) has quit (Ping timeout: 240 seconds)
+2019-12-03 10:41:37	-->	Marc3l (~Marc3l@unaffiliated/marc3l) has joined #herbstluftwm
+2019-12-03 10:41:57	<--	dario (~dario@hetzner.deaktualisierung.org) has quit (Ping timeout: 240 seconds)
+2019-12-03 10:42:17	<--	yawkat (~yawkat@cats.coffee) has quit (Ping timeout: 240 seconds)
+2019-12-03 10:42:44	<--	Shyiskhar (~Shy@gateway/tor-sasl/shyiskhar) has quit (Ping timeout: 260 seconds)
+2019-12-03 10:43:22	-->	yawkat (~yawkat@cats.coffee) has joined #herbstluftwm
+2019-12-03 10:44:30	<--	HolySmoke (znc@localhorst.tv) has quit (Quit: With my wings ablaze, I'm falling back to earth)
+2019-12-03 10:45:06	-->	HolySmoke (znc@localhorst.tv) has joined #herbstluftwm
+2019-12-03 10:47:29	-->	Shyiskhar (~Shy@gateway/tor-sasl/shyiskhar) has joined #herbstluftwm
+2019-12-03 10:50:46	-->	johnLate (~johnlate@lexington.scnr.net) has joined #herbstluftwm
+2019-12-03 10:53:51	<--	Shyiskhar (~Shy@gateway/tor-sasl/shyiskhar) has quit (Remote host closed the connection)
+2019-12-03 10:54:05	-->	Shyiskhar (~Shy@gateway/tor-sasl/shyiskhar) has joined #herbstluftwm
+2019-12-03 11:47:08	<--	utsushi (~user@gateway/tor-sasl/utsushi) has quit (Ping timeout: 260 seconds)
+2019-12-03 11:48:35	-->	utsushi (~user@gateway/tor-sasl/utsushi) has joined #herbstluftwm
+2019-12-03 12:26:20	<--	utsushi (~user@gateway/tor-sasl/utsushi) has quit (Ping timeout: 260 seconds)
+2019-12-03 12:33:06	-->	utsushi (~user@gateway/tor-sasl/utsushi) has joined #herbstluftwm
+2019-12-04 09:10:44	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-12-04 09:10:44	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-12-04 09:10:44	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-12-04 09:10:44	--	Channel #herbstluftwm: 52 nicks (0 ops, 0 voices, 52 normals)
+2019-12-04 09:10:50	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-12-04 09:24:29	-->	FruitieX (~FruitieX@81-175-216-79.bb.dnainternet.fi) has joined #herbstluftwm
+2019-12-04 09:40:40	<--	silverghost (~silver@112.65.161.211) has quit (Ping timeout: 268 seconds)
+2019-12-04 09:42:07	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-12-04 10:06:23	<--	stettberger (~qy03fugy@2a02:560:4a46:d401:921b:eff:fe2a:82b7) has quit (Ping timeout: 276 seconds)
+2019-12-04 10:25:55	-->	stettberger (~qy03fugy@2a02:560:4a50:7101:921b:eff:fe2a:82b7) has joined #herbstluftwm
+2019-12-04 10:48:25	<--	silverghost (~silver@112.65.161.211) has quit (Ping timeout: 250 seconds)
+2019-12-04 10:48:53	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-12-04 11:14:21	<--	silverghost (~silver@112.65.161.211) has quit (Ping timeout: 265 seconds)
+2019-12-04 11:14:49	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-12-04 12:54:44	<--	silverghost (~silver@112.65.161.211) has quit (Ping timeout: 276 seconds)
+2019-12-04 12:55:12	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-12-04 14:15:40	<--	utsushi (~user@gateway/tor-sasl/utsushi) has quit (Ping timeout: 260 seconds)
+2019-12-04 14:17:43	<--	silverghost (~silver@112.65.161.211) has quit (Ping timeout: 250 seconds)
+2019-12-04 14:18:12	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-12-04 14:22:11	-->	utsushi (~user@gateway/tor-sasl/utsushi) has joined #herbstluftwm
+2019-12-04 15:23:20	<--	utsushi (~user@gateway/tor-sasl/utsushi) has quit (Ping timeout: 260 seconds)
+2019-12-04 15:29:17	<--	silverghost (~silver@112.65.161.211) has quit (Quit: WeeChat 2.6)
+2019-12-04 15:31:16	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-12-04 16:23:32	-->	utsushi (~user@gateway/tor-sasl/utsushi) has joined #herbstluftwm
+2019-12-04 16:48:06	<--	silverghost (~silver@112.65.161.211) has quit (Quit: WeeChat 2.6)
+2019-12-04 17:46:09	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-12-04 17:46:09	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-12-04 17:46:09	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-12-04 17:46:09	--	Channel #herbstluftwm: 52 nicks (0 ops, 0 voices, 52 normals)
+2019-12-04 17:46:15	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-12-05 08:02:41	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-12-05 08:02:41	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-12-05 08:02:41	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-12-05 08:02:41	--	Channel #herbstluftwm: 51 nicks (0 ops, 0 voices, 51 normals)
+2019-12-05 08:02:47	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-12-05 09:34:40	<--	hqdruxn08__ (hqdruxn08@gateway/vpn/privateinternetaccess/hqdruxn08) has quit (*.net *.split)
+2019-12-05 09:38:41	-->	hqdruxn08 (hqdruxn08@gateway/vpn/privateinternetaccess/hqdruxn08) has joined #herbstluftwm
+2019-12-05 10:54:53	<--	hqdruxn08 (hqdruxn08@gateway/vpn/privateinternetaccess/hqdruxn08) has quit (*.net *.split)
+2019-12-05 10:54:54	<--	FruitieX (~FruitieX@81-175-216-79.bb.dnainternet.fi) has quit (*.net *.split)
+2019-12-05 10:54:54	<--	Hund (~Hund@ubuntu/member/hund) has quit (*.net *.split)
+2019-12-05 10:54:54	<--	The-Compiler (~compiler@qutebrowser/dev/The-Compiler) has quit (*.net *.split)
+2019-12-05 10:54:54	<--	thealamenthe (~qwert@unaffiliated/thealamenthe) has quit (*.net *.split)
+2019-12-05 10:54:54	<--	GyroW (~GyroW@unaffiliated/gyrow) has quit (*.net *.split)
+2019-12-05 10:54:55	<--	Treak (TFRWMOXZuQ@libra.uberspace.de) has quit (*.net *.split)
+2019-12-05 10:54:56	<--	e (e@freenode/staff/spy.edk) has quit (*.net *.split)
+2019-12-05 10:54:57	<--	codedmart (~codedmart@li159-179.members.linode.com) has quit (*.net *.split)
+2019-12-05 10:54:58	<--	Marc3l (~Marc3l@unaffiliated/marc3l) has quit (*.net *.split)
+2019-12-05 10:54:58	<--	tg (~x@unaffiliated/tg) has quit (*.net *.split)
+2019-12-05 10:54:58	<--	shmibs (~shmibs@airen-no-jikken.icu) has quit (*.net *.split)
+2019-12-05 10:54:59	<--	christoph_debian (~christoph@orion.siccegge.de) has quit (*.net *.split)
+2019-12-05 10:55:01	<--	utsushi (~user@gateway/tor-sasl/utsushi) has quit (*.net *.split)
+2019-12-05 10:55:01	<--	Shyiskhar (~Shy@gateway/tor-sasl/shyiskhar) has quit (*.net *.split)
+2019-12-05 10:55:02	<--	gardouille (~gardouill@ks10.101010.fr) has quit (*.net *.split)
+2019-12-05 10:55:04	<--	Hydraxis (~Hydraxis@2a01:4f8:1c0c:49f3::1) has quit (*.net *.split)
+2019-12-05 10:55:05	<--	echarlie (irc-user@landgr.af) has quit (*.net *.split)
+2019-12-05 10:55:05	<--	raoulb (~weechat@stateless.vsos.ethz.ch) has quit (*.net *.split)
+2019-12-05 10:55:05	<--	nun (~nun@178.115.236.156.static.drei.at) has quit (*.net *.split)
+2019-12-05 10:55:05	<--	rudi_s (~simon@bmi.informatik.uni-erlangen.de) has quit (*.net *.split)
+2019-12-05 10:55:05	<--	klesk (~klesk@unaffiliated/klesk) has quit (*.net *.split)
+2019-12-05 10:55:05	<--	preisi (~preisi@prei.si) has quit (*.net *.split)
+2019-12-05 10:55:06	<--	Kryptron (~Kryptron@unaffiliated/kryptron) has quit (*.net *.split)
+2019-12-05 10:55:06	<--	yawkat (~yawkat@cats.coffee) has quit (*.net *.split)
+2019-12-05 10:55:06	<--	dopplergange (~dop@31.169.121.17) has quit (*.net *.split)
+2019-12-05 10:55:06	<--	Roliga (~roliga@178.128.241.64) has quit (*.net *.split)
+2019-12-05 10:55:06	<--	pandather (~pandather@sadbox.org) has quit (*.net *.split)
+2019-12-05 10:55:06	<--	fiete (urU2MYKi5A@qutebrowser/user/fiete) has quit (*.net *.split)
+2019-12-05 10:55:06	<--	olminator_ (~olminator@507286BB.static.ziggozakelijk.nl) has quit (*.net *.split)
+2019-12-05 10:55:07	<--	marulkan (~marulkan@mailhost.dev0.nu) has quit (*.net *.split)
+2019-12-05 10:55:07	<--	FireFly (znc@freenode/staff/firefly) has quit (*.net *.split)
+2019-12-05 10:55:08	<--	Mullet (~irc@xd.informatik.uni-erlangen.de) has quit (*.net *.split)
+2019-12-05 10:55:08	<--	HolySmoke (znc@localhorst.tv) has quit (*.net *.split)
+2019-12-05 10:55:08	<--	thorsten` (bFWpFDuj01@apus.uberspace.de) has quit (*.net *.split)
+2019-12-05 10:55:08	<--	yushyin (uL9EEWhYbt@karif.server-speed.net) has quit (*.net *.split)
+2019-12-05 10:55:09	<--	stettberger (~qy03fugy@2a02:560:4a5e:7f01:921b:eff:fe2a:82b7) has quit (*.net *.split)
+2019-12-05 10:55:09	<--	fireglow (fireglow@fireglow.su) has quit (*.net *.split)
+2019-12-05 10:55:09	<--	Spritzgebaeck (~Spritzgeb@voxpupuli/contributor/Spritzgebaeck) has quit (*.net *.split)
+2019-12-05 10:55:10	<--	klonfish (~klonfish@unaffiliated/klonfish) has quit (*.net *.split)
+2019-12-05 10:55:10	<--	maxfragg (vLcSsVPLu9@horologium.uberspace.de) has quit (*.net *.split)
+2019-12-05 10:55:10	<--	Proximyst (~Proximyst@148.251.50.76) has quit (*.net *.split)
+2019-12-05 10:55:10	<--	astronavt (~astronavt@unaffiliated/astronavt) has quit (*.net *.split)
+2019-12-05 10:55:10	<--	Duponin (~Duponin@dupon.in) has quit (*.net *.split)
+2019-12-05 10:55:10	<--	i7c (ypGtWTKoLv@unaffiliated/i7c) has quit (*.net *.split)
+2019-12-05 11:01:58	-->	e (e@freenode/staff/spy.edk) has joined #herbstluftwm
+2019-12-05 11:01:58	-->	Treak (TFRWMOXZuQ@libra.uberspace.de) has joined #herbstluftwm
+2019-12-05 11:01:58	-->	thealamenthe (~qwert@unaffiliated/thealamenthe) has joined #herbstluftwm
+2019-12-05 11:01:58	-->	The-Compiler (~compiler@qutebrowser/dev/The-Compiler) has joined #herbstluftwm
+2019-12-05 11:01:58	-->	GyroW (~GyroW@unaffiliated/gyrow) has joined #herbstluftwm
+2019-12-05 11:01:58	-->	Hund (~Hund@ubuntu/member/hund) has joined #herbstluftwm
+2019-12-05 11:01:58	-->	codedmart (~codedmart@li159-179.members.linode.com) has joined #herbstluftwm
+2019-12-05 11:01:58	-->	utsushi (~user@gateway/tor-sasl/utsushi) has joined #herbstluftwm
+2019-12-05 11:01:58	-->	Shyiskhar (~Shy@gateway/tor-sasl/shyiskhar) has joined #herbstluftwm
+2019-12-05 11:01:58	-->	Kryptron (~Kryptron@unaffiliated/kryptron) has joined #herbstluftwm
+2019-12-05 11:01:58	-->	stettberger (~qy03fugy@2a02:560:4a5e:7f01:921b:eff:fe2a:82b7) has joined #herbstluftwm
+2019-12-05 11:01:58	-->	gardouille (~gardouill@ks10.101010.fr) has joined #herbstluftwm
+2019-12-05 11:01:58	-->	yawkat (~yawkat@cats.coffee) has joined #herbstluftwm
+2019-12-05 11:01:58	-->	HolySmoke (znc@localhorst.tv) has joined #herbstluftwm
+2019-12-05 11:01:58	-->	dopplergange (~dop@31.169.121.17) has joined #herbstluftwm
+2019-12-05 11:01:58	-->	Roliga (~roliga@178.128.241.64) has joined #herbstluftwm
+2019-12-05 11:01:58	-->	pandather (~pandather@sadbox.org) has joined #herbstluftwm
+2019-12-05 11:01:58	-->	fiete (urU2MYKi5A@qutebrowser/user/fiete) has joined #herbstluftwm
+2019-12-05 11:01:58	-->	fireglow (fireglow@fireglow.su) has joined #herbstluftwm
+2019-12-05 11:01:58	-->	Spritzgebaeck (~Spritzgeb@voxpupuli/contributor/Spritzgebaeck) has joined #herbstluftwm
+2019-12-05 11:01:58	-->	Hydraxis (~Hydraxis@2a01:4f8:1c0c:49f3::1) has joined #herbstluftwm
+2019-12-05 11:01:58	-->	echarlie (irc-user@landgr.af) has joined #herbstluftwm
+2019-12-05 11:01:58	-->	olminator_ (~olminator@507286BB.static.ziggozakelijk.nl) has joined #herbstluftwm
+2019-12-05 11:01:58	-->	raoulb (~weechat@stateless.vsos.ethz.ch) has joined #herbstluftwm
+2019-12-05 11:01:58	-->	klonfish (~klonfish@unaffiliated/klonfish) has joined #herbstluftwm
+2019-12-05 11:01:58	-->	maxfragg (vLcSsVPLu9@horologium.uberspace.de) has joined #herbstluftwm
+2019-12-05 11:01:58	-->	nun (~nun@178.115.236.156.static.drei.at) has joined #herbstluftwm
+2019-12-05 11:01:58	-->	Proximyst (~Proximyst@148.251.50.76) has joined #herbstluftwm
+2019-12-05 11:01:58	-->	thorsten` (bFWpFDuj01@apus.uberspace.de) has joined #herbstluftwm
+2019-12-05 11:01:58	-->	rudi_s (~simon@bmi.informatik.uni-erlangen.de) has joined #herbstluftwm
+2019-12-05 11:01:58	-->	astronavt (~astronavt@unaffiliated/astronavt) has joined #herbstluftwm
+2019-12-05 11:01:58	-->	marulkan (~marulkan@mailhost.dev0.nu) has joined #herbstluftwm
+2019-12-05 11:01:58	-->	Duponin (~Duponin@dupon.in) has joined #herbstluftwm
+2019-12-05 11:01:58	-->	klesk (~klesk@unaffiliated/klesk) has joined #herbstluftwm
+2019-12-05 11:01:58	-->	preisi (~preisi@prei.si) has joined #herbstluftwm
+2019-12-05 11:01:58	-->	FireFly (znc@freenode/staff/firefly) has joined #herbstluftwm
+2019-12-05 11:01:58	-->	i7c (ypGtWTKoLv@unaffiliated/i7c) has joined #herbstluftwm
+2019-12-05 11:01:58	-->	yushyin (uL9EEWhYbt@karif.server-speed.net) has joined #herbstluftwm
+2019-12-05 11:01:58	-->	Mullet (~irc@xd.informatik.uni-erlangen.de) has joined #herbstluftwm
+2019-12-05 11:03:56	-->	FruitieX (~FruitieX@81-175-216-79.bb.dnainternet.fi) has joined #herbstluftwm
+2019-12-05 11:04:24	-->	Marc3l (~Marc3l@unaffiliated/marc3l) has joined #herbstluftwm
+2019-12-05 11:04:24	-->	tg (~x@unaffiliated/tg) has joined #herbstluftwm
+2019-12-05 11:04:24	-->	shmibs (~shmibs@airen-no-jikken.icu) has joined #herbstluftwm
+2019-12-05 11:04:24	-->	christoph_debian (~christoph@orion.siccegge.de) has joined #herbstluftwm
+2019-12-05 11:05:25	-->	hqdruxn08 (hqdruxn08@gateway/vpn/privateinternetaccess/hqdruxn08) has joined #herbstluftwm
+2019-12-05 14:32:32	repo	thorsten`: i found it hilarious when i built winterbreeze how fast it was built. after that i built polybar. A freakin' bar... And it took so much longer :D
+2019-12-05 14:34:30	thorsten`	thanks :-) I'm always amazed how slow winterbreeze builds compared to the code in master (which also needs the c++ compiler but uses nearly no c++ features)
+2019-12-05 14:35:43	thorsten`	On the otherhand, a slow compile time is "fine" for me because most of the time it means that the compiler does something that either I don't need to write anymore or that does not need to be done at run-time anymore
+2019-12-05 14:54:37	<--	gardouille (~gardouill@ks10.101010.fr) has quit (Read error: Connection reset by peer)
+2019-12-05 14:56:35	The-Compiler	thorsten`: yeah, it's hard work!
+2019-12-05 14:57:32	-->	gardouille (~gardouill@ks10.101010.fr) has joined #herbstluftwm
+2019-12-05 16:58:17	Mullet	thorsten`: It's been a while, but IIRC, I've once compiled winterbreeze with a rather old GCC and most of the "safety checks" disabled and it was much faster.
+2019-12-06 09:10:56	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-12-06 09:10:56	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-12-06 09:10:56	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-12-06 09:10:56	--	Channel #herbstluftwm: 52 nicks (0 ops, 0 voices, 52 normals)
+2019-12-06 09:11:01	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-12-06 10:52:02	<--	silverghost (~silver@112.65.161.211) has quit (Ping timeout: 268 seconds)
+2019-12-06 10:52:30	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-12-06 11:51:51	<--	silverghost (~silver@112.65.161.211) has quit (Ping timeout: 268 seconds)
+2019-12-06 11:52:20	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-12-06 13:32:56	<--	silverghost (~silver@112.65.161.211) has quit (Ping timeout: 240 seconds)
+2019-12-06 13:34:26	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-12-06 14:34:11	<--	silverghost (~silver@112.65.161.211) has quit (Quit: WeeChat 2.6)
+2019-12-06 14:51:30	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-12-06 14:53:20	<--	silverghost (~silver@112.65.161.211) has quit (Client Quit)
+2019-12-06 15:43:21	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-12-06 15:43:38	<--	silverghost (~silver@112.65.161.211) has quit (Client Quit)
+2019-12-06 15:45:13	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-12-06 16:07:43	<--	silverghost (~silver@112.65.161.211) has quit (Ping timeout: 250 seconds)
+2019-12-06 16:12:02	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-12-06 17:34:30	<--	silverghost (~silver@112.65.161.211) has quit (Quit: WeeChat 2.6)
+2019-12-09 09:07:21	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-12-09 09:07:21	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-12-09 09:07:21	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-12-09 09:07:21	--	Channel #herbstluftwm: 53 nicks (0 ops, 0 voices, 53 normals)
+2019-12-09 09:07:27	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-12-09 10:12:28	Mullet	I've been using it as my daily driver for a while now, so it actually is usable right now. :-)
+2019-12-09 10:34:56	-->	optima (~lurch@141.31.94.203) has joined #herbstluftwm
+2019-12-09 10:58:37	<--	optima (~lurch@141.31.94.203) has quit (Ping timeout: 265 seconds)
+2019-12-09 11:42:25	<--	silverghost (~silver@112.65.161.211) has quit (Ping timeout: 250 seconds)
+2019-12-09 11:42:53	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-12-09 12:26:08	<--	silverghost (~silver@112.65.161.211) has quit (Ping timeout: 245 seconds)
+2019-12-09 12:26:36	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-12-09 12:53:55	<--	silverghost (~silver@112.65.161.211) has quit (Ping timeout: 250 seconds)
+2019-12-09 12:54:22	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-12-09 13:25:20	<--	Marc3l (~Marc3l@unaffiliated/marc3l) has quit (Ping timeout: 276 seconds)
+2019-12-09 13:28:35	<--	silverghost (~silver@112.65.161.211) has quit (Ping timeout: 250 seconds)
+2019-12-09 13:29:03	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-12-09 13:36:13	-->	Marc3l (~Marc3l@unaffiliated/marc3l) has joined #herbstluftwm
+2019-12-09 13:55:21	<--	silverghost (~silver@112.65.161.211) has quit (Ping timeout: 246 seconds)
+2019-12-09 13:55:51	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-12-09 15:07:49	<--	silverghost (~silver@112.65.161.211) has quit (Ping timeout: 250 seconds)
+2019-12-09 15:09:55	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-12-09 15:41:52	<--	Roliga (~roliga@178.128.241.64) has quit (Remote host closed the connection)
+2019-12-09 15:42:26	-->	Roliga (~roliga@178.128.241.64) has joined #herbstluftwm
+2019-12-09 17:05:25	-->	hqdruxn08__ (hqdruxn08@gateway/vpn/privateinternetaccess/hqdruxn08) has joined #herbstluftwm
+2019-12-09 17:09:04	<--	hqdruxn08_ (hqdruxn08@gateway/vpn/privateinternetaccess/hqdruxn08) has quit (Ping timeout: 246 seconds)
+2019-12-09 17:12:27	<--	silverghost (~silver@112.65.161.211) has quit (Quit: WeeChat 2.6)
+2019-12-10 09:24:20	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-12-10 09:24:20	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-12-10 09:24:20	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-12-10 09:24:20	--	Channel #herbstluftwm: 51 nicks (0 ops, 0 voices, 51 normals)
+2019-12-10 09:24:26	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-12-10 09:43:42	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-12-10 09:43:42	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-12-10 09:43:42	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-12-10 09:43:42	--	Channel #herbstluftwm: 51 nicks (0 ops, 0 voices, 51 normals)
+2019-12-10 09:43:48	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-12-10 10:49:57	<--	Hund (~Hund@ubuntu/member/hund) has quit (Ping timeout: 250 seconds)
+2019-12-10 11:02:16	-->	Hund (~Hund@ubuntu/member/hund) has joined #herbstluftwm
+2019-12-11 09:11:38	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-12-11 09:11:38	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-12-11 09:11:38	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-12-11 09:11:38	--	Channel #herbstluftwm: 53 nicks (0 ops, 0 voices, 53 normals)
+2019-12-11 09:11:44	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-12-11 09:53:39	<--	silverghost (~silver@112.65.161.211) has quit (Ping timeout: 268 seconds)
+2019-12-11 09:54:06	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-12-11 10:03:17	<--	silverghost (~silver@112.65.161.211) has quit (Ping timeout: 240 seconds)
+2019-12-11 10:03:46	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-12-11 10:46:50	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-12-11 10:46:50	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-12-11 10:46:50	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-12-11 10:46:50	--	Channel #herbstluftwm: 53 nicks (0 ops, 0 voices, 53 normals)
+2019-12-11 10:46:55	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-12-11 11:41:17	<--	silverghost (~silver@112.65.161.211) has quit (Ping timeout: 240 seconds)
+2019-12-11 11:41:55	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-12-11 13:31:01	<--	Shyiskhar (~Shy@gateway/tor-sasl/shyiskhar) has quit (Remote host closed the connection)
+2019-12-11 13:31:17	-->	Shyiskhar (~Shy@gateway/tor-sasl/shyiskhar) has joined #herbstluftwm
+2019-12-11 14:18:12	<--	silverghost (~silver@112.65.161.211) has quit (Ping timeout: 268 seconds)
+2019-12-11 14:18:39	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-12-11 14:30:18	<--	silverghost (~silver@112.65.161.211) has quit (Ping timeout: 252 seconds)
+2019-12-11 14:30:51	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-12-11 15:41:55	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-12-11 15:41:55	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-12-11 15:41:55	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-12-11 15:41:55	--	Channel #herbstluftwm: 53 nicks (0 ops, 0 voices, 53 normals)
+2019-12-11 15:42:02	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-12-11 16:19:21	--	irc: disconnected from server
+2019-12-11 16:19:48	-->	Syrinxos (~syrinxos@93-34-1-82.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-12-11 16:19:48	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-12-11 16:19:48	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-12-11 16:19:48	--	Channel #herbstluftwm: 53 nicks (0 ops, 0 voices, 53 normals)
+2019-12-11 16:20:08	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-12-11 16:39:39	<--	silverghost (~silver@112.65.161.211) has quit (Quit: WeeChat 2.7)
+2019-12-11 16:43:21	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-12-11 17:05:20	--	irc: disconnected from server
+2019-12-11 17:05:49	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-12-11 17:05:49	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-12-11 17:05:49	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-12-11 17:05:49	--	Channel #herbstluftwm: 53 nicks (0 ops, 0 voices, 53 normals)
+2019-12-11 17:06:09	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-12-11 17:07:56	-->	shnryu (~shn@185.204.1.223) has joined #herbstluftwm
+2019-12-11 17:34:47	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-12-11 17:34:47	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-12-11 17:34:47	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-12-11 17:34:47	--	Channel #herbstluftwm: 53 nicks (0 ops, 0 voices, 53 normals)
+2019-12-11 17:34:53	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-12-12 09:00:19	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-12-12 09:00:19	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-12-12 09:00:19	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-12-12 09:00:19	--	Channel #herbstluftwm: 53 nicks (0 ops, 0 voices, 53 normals)
+2019-12-12 09:00:25	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-12-12 11:23:51	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-12-12 11:23:51	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-12-12 11:23:51	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-12-12 11:23:51	--	Channel #herbstluftwm: 53 nicks (0 ops, 0 voices, 53 normals)
+2019-12-12 11:23:57	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-12-12 12:48:05	<--	marulkan (~marulkan@mailhost.dev0.nu) has quit (Quit: ZNC 1.7.4 - https://znc.in)
+2019-12-12 12:49:06	-->	marulkan (~marulkan@mailhost.dev0.nu) has joined #herbstluftwm
+2019-12-12 14:00:30	<--	Hund (~Hund@ubuntu/member/hund) has quit (Ping timeout: 252 seconds)
+2019-12-12 14:13:06	-->	Hund (~Hund@ubuntu/member/hund) has joined #herbstluftwm
+2019-12-12 14:41:55	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-12-12 14:41:55	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-12-12 14:41:55	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-12-12 14:41:55	--	Channel #herbstluftwm: 53 nicks (0 ops, 0 voices, 53 normals)
+2019-12-12 14:42:00	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-12-12 14:54:04	<--	Shyiskhar (~Shy@gateway/tor-sasl/shyiskhar) has quit (Ping timeout: 260 seconds)
+2019-12-12 14:56:11	-->	Shyiskhar (~Shy@gateway/tor-sasl/shyiskhar) has joined #herbstluftwm
+2019-12-12 16:36:03	<--	Hund (~Hund@ubuntu/member/hund) has left #herbstluftwm ("WeeChat 2.6")
+2019-12-12 17:09:40	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-12-12 17:09:40	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-12-12 17:09:40	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-12-12 17:09:40	--	Channel #herbstluftwm: 52 nicks (0 ops, 0 voices, 52 normals)
+2019-12-12 17:09:46	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-12-12 17:31:27	<--	Shyiskhar (~Shy@gateway/tor-sasl/shyiskhar) has quit (Remote host closed the connection)
+2019-12-12 17:31:48	-->	Shyiskhar (~Shy@gateway/tor-sasl/shyiskhar) has joined #herbstluftwm
+2019-12-13 08:58:27	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-12-13 08:58:27	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-12-13 08:58:27	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-12-13 08:58:27	--	Channel #herbstluftwm: 53 nicks (0 ops, 0 voices, 53 normals)
+2019-12-13 08:58:33	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-12-13 09:25:47	<--	silverghost (~silver@112.65.161.211) has quit (Ping timeout: 276 seconds)
+2019-12-13 09:26:18	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-12-13 11:10:26	<--	preisi (~preisi@prei.si) has quit (Ping timeout: 276 seconds)
+2019-12-13 11:12:46	-->	preisi (~preisi@prei.si) has joined #herbstluftwm
+2019-12-13 11:25:37	<--	preisi (~preisi@prei.si) has quit (Ping timeout: 240 seconds)
+2019-12-13 11:43:16	-->	preisi (~preisi@prei.si) has joined #herbstluftwm
+2019-12-13 12:33:45	<--	silverghost (~silver@112.65.161.211) has quit (Ping timeout: 246 seconds)
+2019-12-13 12:36:57	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-12-13 12:50:34	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-12-13 12:50:34	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-12-13 12:50:34	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-12-13 12:50:34	--	Channel #herbstluftwm: 53 nicks (0 ops, 0 voices, 53 normals)
+2019-12-13 12:50:39	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-12-13 14:06:19	<--	silverghost (~silver@112.65.161.211) has quit (Ping timeout: 268 seconds)
+2019-12-13 14:06:46	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-12-13 14:14:57	<--	silverghost (~silver@112.65.161.211) has quit (Ping timeout: 240 seconds)
+2019-12-13 14:15:23	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-12-13 15:37:35	<--	silverghost (~silver@112.65.161.211) has quit (Ping timeout: 268 seconds)
+2019-12-13 15:38:52	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-12-13 17:14:07	-->	climbingturtle (~climbingt@c213-89-14-151.bredband.comhem.se) has joined #herbstluftwm
+2019-12-13 17:24:18	<--	silverghost (~silver@112.65.161.211) has quit (Quit: WeeChat 2.7)
+2019-12-16 09:11:55	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-12-16 09:11:55	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-12-16 09:11:55	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-12-16 09:11:55	--	Channel #herbstluftwm: 51 nicks (0 ops, 0 voices, 51 normals)
+2019-12-16 09:12:01	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-12-16 10:15:50	--	irc: disconnected from server
+2019-12-16 10:16:18	-->	Syrinxos (~syrinxos@93-34-1-82.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-12-16 10:16:18	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-12-16 10:16:18	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-12-16 10:16:18	--	Channel #herbstluftwm: 51 nicks (0 ops, 0 voices, 51 normals)
+2019-12-16 10:16:38	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-12-16 10:26:00	-->	Syrinxos (~syrinxos@93-34-1-82.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-12-16 10:26:00	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-12-16 10:26:00	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-12-16 10:26:00	--	Channel #herbstluftwm: 51 nicks (0 ops, 0 voices, 51 normals)
+2019-12-16 10:26:07	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-12-16 10:50:19	<--	silverghost (~silver@112.65.161.211) has quit (Ping timeout: 265 seconds)
+2019-12-16 10:50:47	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-12-16 11:07:20	-->	yawkat (~yawkat@cats.coffee) has joined #herbstluftwm
+2019-12-16 11:07:33	-->	GyroW (~GyroW@unaffiliated/gyrow) has joined #herbstluftwm
+2019-12-16 11:07:49	-->	gardouille (~gardouill@ks10.101010.fr) has joined #herbstluftwm
+2019-12-16 11:29:08	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-12-16 11:29:08	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-12-16 11:29:08	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-12-16 11:29:08	--	Channel #herbstluftwm: 54 nicks (0 ops, 0 voices, 54 normals)
+2019-12-16 11:29:14	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-12-16 11:33:45	<--	silverghost (~silver@112.65.161.211) has quit (Ping timeout: 268 seconds)
+2019-12-16 11:34:13	-->	silverghost (~silver@112.65.161.211) has joined #herbstluftwm
+2019-12-16 12:39:37	-->	notis (~notis@45.9.251.57) has joined #herbstluftwm
+2019-12-16 12:44:18	<--	notis (~notis@45.9.251.57) has quit (Ping timeout: 246 seconds)
+2019-12-16 14:06:51	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-12-16 14:06:51	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-12-16 14:06:51	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-12-16 14:06:51	--	Channel #herbstluftwm: 54 nicks (0 ops, 0 voices, 54 normals)
+2019-12-16 14:06:58	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-12-16 14:33:06	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-12-16 14:33:06	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-12-16 14:33:06	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-12-16 14:33:06	--	Channel #herbstluftwm: 54 nicks (0 ops, 0 voices, 54 normals)
+2019-12-16 14:33:12	--	Channel created on Mon, 19 Sep 2011 13:36:30
+2019-12-16 16:13:56	-->	notis (~notis@amcosa.static.otenet.gr) has joined #herbstluftwm
+2019-12-18 09:08:21	-->	Syrinxos (~syrinxos@93-34-1-84.ip47.fastwebnet.it) has joined #herbstluftwm
+2019-12-18 09:08:21	--	Topic for #herbstluftwm is "herbstluftwm v0.7.2 https://herbstluftwm.org | Winterbreeze is usable soon"
+2019-12-18 09:08:21	--	Topic set by thorsten` (Q800L4KIBi@apus.uberspace.de) on Tue, 28 May 2019 22:40:10
+2019-12-18 09:08:21	--	Channel #herbstluftwm: 52 nicks (0 ops, 0 voices, 52 normals)
+2019-12-18 09:08:27	--	Channel created on Mon, 19 Sep 2011 13:36:30

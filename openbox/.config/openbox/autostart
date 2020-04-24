@@ -1,0 +1,10 @@
+xbindkeys
+dropbox &
+wal -R &
+polybar main &
+setxkbmap -layout us -variant intl &
+pkill redshift-gtk &
+redshift-gtk &
+#mpd ~/.config/mpd/mpd.conf
+compton &
+syncthing-gtk &

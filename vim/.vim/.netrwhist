@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/syrinxos/Code/Zerynth/vm/vm/boards/esp32_devkitc/config/standard'
+let g:netrw_dirhist_2='/home/syrinxos/Code/Zerynth/vm/vm/boards/esp32_devkitc'
+let g:netrw_dirhist_3='/home/syrinxos/Code/Zerynth/vm/vm/boards/esp32_devkitc/config'
+let g:netrw_dirhist_4='/home/syrinxos/Code/Zerynth/vm/vm/boards/esp32_devkitc/config/ble'
