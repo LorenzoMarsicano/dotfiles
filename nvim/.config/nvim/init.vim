@@ -31,6 +31,9 @@ set mouse=a
 filetype plugin on
 syntax enable
 
+set foldmethod=syntax
+nnoremap <S>^I za<CR>	
+
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
@@ -43,7 +46,7 @@ set showmode
 set showcmd
 set wildmenu
 set wildmode=list:longest
-"set cursorline
+set cursorline
 set backspace=indent,eol,start
 set laststatus=2
 set relativenumber
