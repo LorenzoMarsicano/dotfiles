@@ -1,3 +1,0 @@
-loadbin /home/lorenzo/Code/Zerynth/repos/vm/vm_branch/build/renesas_tbs5d5/r19.11.14_97d170e1550eee4afc0af065b78cda302a97674c/zerynth_unprotected.bin, 0x0
-r
-exit

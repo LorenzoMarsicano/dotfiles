@@ -32,3 +32,6 @@ alias :qa="exit"
 #------------------------------------------------------------------------------------------------------------
 set -g -x GOPATH /home/lorenzo/Code/go/
 if test -f /home/lorenzo/.autojump/share/autojump/autojump.fish; . /home/lorenzo/.autojump/share/autojump/autojump.fish; end
+
+function fish_mode_prompt
+end

@@ -1,2 +1,0 @@
-#!/bin/bash
-env ZERYNTH_TESTMODE=2 ~/Downloads/Zerynth/zerynth
