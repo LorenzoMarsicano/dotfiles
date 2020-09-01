@@ -28,6 +28,7 @@ alias v="nvim"
 alias :q="exit"
 alias :x="exit"
 alias :qa="exit"
+alias cat="bat"
 
 #------------------------------------------------------------------------------------------------------------
 set -g -x GOPATH /home/lorenzo/Code/go/

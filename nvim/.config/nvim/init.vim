@@ -18,11 +18,12 @@ Plug 'kshenoy/vim-signature'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'morhetz/gruvbox'
 
 call plug#end()
 
 set title
-colorscheme dracula 
+colorscheme gruvbox
 set nocompatible
 set modelines=0
 set filetype=on
@@ -32,16 +33,16 @@ filetype plugin on
 syntax enable
 
 set foldmethod=syntax
-nnoremap <S>^I za<CR>	
+set foldlevelstart=4
 
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set expandtab
+nnoremap <S>^I za<CR>
+command! RemoveTrailing :%s/\s\+$//e
+
+set list
+set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
 
 set encoding=utf-8
 set scrolloff=3
-set autoindent
 set showmode
 set showcmd
 set wildmenu
@@ -55,7 +56,14 @@ set undofile
 set smartindent
 syntax enable
 
+set clipboard=unnamedplus
+
 let mapleader=","
+
+set autoindent
+set noexpandtab
+set tabstop=4
+set shiftwidth=4
 
 nnoremap / /\v
 vnoremap / /\v
@@ -122,6 +130,8 @@ nmap <leader>' :Marks<CR>
 noremap U :UndotreeToggle<CR>
 
 nnoremap <C-S-f> :Ag 
+
+
 
 " Coc
 " Use c-space to toggle completion
