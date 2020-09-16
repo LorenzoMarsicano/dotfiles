@@ -1,28 +1,54 @@
-sw_volume: 100
+sw_volume: 94
 audio_device_state:1:alsa for audio soundcard
 audio_device_state:1:my_fifo
 state: pause
-current: 7
-time: 0.751000
-random: 0
-repeat: 0
+current: 3
+time: 2.071000
+random: 1
+repeat: 1
 single: 0
-consume: 0
+consume: 1
 crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:Pigeons Playing Ping Pong - Psycology/Pigeons Playing Ping Pong - Psychology - 01 F.U..flac
-1:Pigeons Playing Ping Pong - Psycology/Pigeons Playing Ping Pong - Psychology - 02 Melting Lights.flac
-2:Pigeons Playing Ping Pong - Psycology/Pigeons Playing Ping Pong - Psychology - 03 Julia.flac
-3:Pigeons Playing Ping Pong - Psycology/Pigeons Playing Ping Pong - Psychology - 04 Schwanthem.flac
-4:Pigeons Playing Ping Pong - Psycology/Pigeons Playing Ping Pong - Psychology - 05 Zydeko.flac
-5:Pigeons Playing Ping Pong - Psycology/Pigeons Playing Ping Pong - Psychology - 06 Time To Ride.flac
-6:Pigeons Playing Ping Pong - Psycology/Pigeons Playing Ping Pong - Psychology - 07 Sunny Day.flac
-7:Pigeons Playing Ping Pong - Psycology/Pigeons Playing Ping Pong - Psychology - 08 Moonwalk.flac
-8:Pigeons Playing Ping Pong - Psycology/Pigeons Playing Ping Pong - Psychology - 09 Horizon.flac
-9:Pigeons Playing Ping Pong - Psycology/Pigeons Playing Ping Pong - Psychology - 10 Lightning.flac
-10:Pigeons Playing Ping Pong - Psycology/Pigeons Playing Ping Pong - Psychology - 11 White Night.flac
-11:Pigeons Playing Ping Pong - Psycology/Pigeons Playing Ping Pong - Psychology - 12 Live Life.flac
-12:Pigeons Playing Ping Pong - Psycology/Pigeons Playing Ping Pong - Psychology - 13 Upfunk.flac
+0:Louie Zong - Jazz/Louie Zong - jazz - 01 baguette bop.flac
+1:Louie Zong - Jazz/Louie Zong - jazz - 02 hold on, please!.flac
+2:Louie Zong - Jazz/Louie Zong - jazz - 03 dogtective.flac
+3:Louie Zong - Jazz/Louie Zong - jazz - 04 minty fresh.flac
+4:Louie Zong - Jazz/Louie Zong - jazz - 05 charlie brown's day off.flac
+5:Louie Zong - Jazz/Louie Zong - jazz - 06 puzzle jazz.flac
+6:Louie Zong - Jazz/Louie Zong - jazz - 07 horn dog shuffle (ft. the barking dawgz).flac
+7:Louie Zong - Jazz/Louie Zong - jazz - 08 after the rain.flac
+8:Pigeons Playing Ping Pong - Psychology/Pigeons Playing Ping Pong - Psychology - 01 F.U..flac
+9:Pigeons Playing Ping Pong - Psychology/Pigeons Playing Ping Pong - Psychology - 02 Melting Lights.flac
+10:Pigeons Playing Ping Pong - Psychology/Pigeons Playing Ping Pong - Psychology - 03 Julia.flac
+11:Pigeons Playing Ping Pong - Psychology/Pigeons Playing Ping Pong - Psychology - 04 Schwanthem.flac
+12:Pigeons Playing Ping Pong - Psychology/Pigeons Playing Ping Pong - Psychology - 05 Zydeko.flac
+13:Pigeons Playing Ping Pong - Psychology/Pigeons Playing Ping Pong - Psychology - 07 Sunny Day.flac
+14:Pigeons Playing Ping Pong - Psychology/Pigeons Playing Ping Pong - Psychology - 08 Moonwalk.flac
+15:Pigeons Playing Ping Pong - Psychology/Pigeons Playing Ping Pong - Psychology - 09 Horizon.flac
+16:Pigeons Playing Ping Pong - Psychology/Pigeons Playing Ping Pong - Psychology - 10 Lightning.flac
+17:Pigeons Playing Ping Pong - Psychology/Pigeons Playing Ping Pong - Psychology - 11 White Night.flac
+18:Pigeons Playing Ping Pong - Psychology/Pigeons Playing Ping Pong - Psychology - 12 Live Life.flac
+19:Pigeons Playing Ping Pong - Psychology/Pigeons Playing Ping Pong - Psychology - 13 Upfunk.flac
+20:Saint Motel - saintmotelevision (2016) [MP3~320Kbps]/Saint Motel - saintmotelevision (2016)/01 Move.mp3
+21:Saint Motel - saintmotelevision (2016) [MP3~320Kbps]/Saint Motel - saintmotelevision (2016)/02 Get Away.mp3
+22:Saint Motel - saintmotelevision (2016) [MP3~320Kbps]/Saint Motel - saintmotelevision (2016)/03 Destroyer.mp3
+23:Saint Motel - saintmotelevision (2016) [MP3~320Kbps]/Saint Motel - saintmotelevision (2016)/06 You Can Be You.mp3
+24:Saint Motel - saintmotelevision (2016) [MP3~320Kbps]/Saint Motel - saintmotelevision (2016)/09 Slow Motion.mp3
+25:Saint Motel - saintmotelevision (2016) [MP3~320Kbps]/Saint Motel - saintmotelevision (2016)/10 Happy Accidents.mp3
+26:Sammy Ray - The Good Life/Sammy Rae - The Good Life - 01 The Feeling.flac
+27:Sammy Ray - The Good Life/Sammy Rae - The Good Life - 03 Flesh & Bone.flac
+28:Sammy Ray - The Good Life/Sammy Rae - The Good Life - 04 Talk It Up.flac
+29:Sammy Ray - The Good Life/Sammy Rae - The Good Life - 05 Kick It To Me (Extended Version).flac
+30:Shaun Martin - Seven Summers/Shaun Martin - Seven Summers - 01 Intro.flac
+31:Shaun Martin - Seven Summers/Shaun Martin - Seven Summers - 03 The Yellow Jacket.flac
+32:Shaun Martin - Seven Summers/Shaun Martin - Seven Summers - 04 Lotus.flac
+33:Shaun Martin - Seven Summers/Shaun Martin - Seven Summers - 07 Long Gone (feat. Adrian Hulet and Mark Lettieri).flac
+34:Shaun Martin - Seven Summers/Shaun Martin - Seven Summers - 08 The Torrent.flac
+35:Shaun Martin - Seven Summers/Shaun Martin - Seven Summers - 09 Madiba Monologue.flac
+36:Shaun Martin - Seven Summers/Shaun Martin - Seven Summers - 10 Madiba.flac
+37:Shaun Martin - Seven Summers/Shaun Martin - Seven Summers - 11 All In A Days' Work (feat. Geno Young and RC Williams).flac
+38:Shaun Martin - Seven Summers/Shaun Martin - Seven Summers - 12 Closing Credits (A Requiem for Carolyn).flac
 playlist_end

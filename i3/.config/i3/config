@@ -37,6 +37,7 @@ set $ws10 "10"
 ####################### STARTUP #######################
 
 exec --no-startup-id compton -b
+exec --no-startup-id mpd 
 exec setxkbmap us -variant intl
 exec polybar main
 exec wal -R
@@ -56,6 +57,8 @@ bindsym $mod+Shift+s exec --no-startup-id "sleep 0.2s; scrot -s ~/Pictures/scree
 #bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id change-volume-dunst.sh up
 bindsym XF86AudioLowerVolume exec --no-startup-id change-volume-dunst.sh down
+bindsym XF86AudioNext exec --no-startup-id mpc next
+bindsym XF86AudioPlay exec --no-startup-id mpc toggle
 bindsym XF86AudioMute exec --no-startup-id change-volume-dunst.sh mute
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness

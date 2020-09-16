@@ -56,7 +56,7 @@ font-1 = GohuFont Nerd Font:pixelsize=10;1
 font-2 = siji:size=11;1
 
 modules-left = powermenu i3
-modules-center = date
+modules-center = date 
 modules-right = xbacklight pulseaudio cpu wlan eth battery 
 
 ;wm-restack = bspwm
@@ -101,7 +101,7 @@ font-1 = GohuFont Nerd Font:pixelsize=10;1
 font-2 = siji:size=11;1
 
 modules-left = powermenu i3
-modules-center = date
+modules-center = date mpd
 modules-right = xbacklight pulseaudio cpu wlan eth battery 
 
 tray-position = right
@@ -191,7 +191,7 @@ label-urgent-padding = 2
 
 [module/mpd]
 type = internal/mpd
-format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
+format-online =   <icon-prev> <label-song> <icon-next>
 
 icon-prev = 
 icon-stop = 
