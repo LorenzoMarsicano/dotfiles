@@ -33,7 +33,7 @@ filetype plugin on
 syntax enable
 
 set foldmethod=syntax
-set foldlevelstart=4
+set foldlevelstart=8
 
 nnoremap <S>^I za<CR>
 command! RemoveTrailing :%s/\s\+$//e

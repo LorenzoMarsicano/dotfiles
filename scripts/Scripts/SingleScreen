@@ -1,0 +1,5 @@
+#! /bin/bash
+
+pkill polybar
+~/.screenlayout/single.sh
+polybar main &> /dev/null & disown

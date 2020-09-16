@@ -1,0 +1,5 @@
+#! /bin/bash
+
+~/.screenlayout/dual_screen_office.sh 
+feh --bg-fill ~/Pictures/Gransasso.jpg
+polybar vertical &> /dev/null & disown
