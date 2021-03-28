@@ -3,7 +3,7 @@ set -xg EDITOR nvim
 #cat ~/.cache/wal/sequences &  
 
 #---------------------------------- EXPORT-----------------------------------------------------------------
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$HOME/Code/go/bin:$PATH:$HOME/Scripts:$HOME/Code/Zerynth/dev-utils/gitscripts"
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$HOME/Code/go/bin:$PATH:$HOME/Scripts:$HOME/Code/Zerynth/dev-utils/gitscripts:$HOME/.gem/ruby/2.7.0/bin:$HOME/.local/bin:$HOME/Code/Lorenzo/esp/xtensa-esp32-elf/bin"
 
 export LC_COLLATE="C"
 
@@ -17,18 +17,12 @@ export PURE_GIT_UP_ARROW='↑'
 
 export WEECHAT_HOME='~/.config/weechat'
 export TERM=termite
+export IDF_PATH=~/esp/esp-idf
 
 #---------------------------------- ALIAS ------------------------------------------------------------------
-alias ls="ls -al --color"
-alias l="ls"
 alias n="nnn"
-alias cal="cal -m"
 alias vim="nvim"
 alias v="nvim"
-alias :q="exit"
-alias :x="exit"
-alias :qa="exit"
-alias cat="bat"
 
 #------------------------------------------------------------------------------------------------------------
 set -g -x GOPATH /home/lorenzo/Code/go/

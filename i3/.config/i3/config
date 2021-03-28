@@ -37,13 +37,14 @@ set $ws10 "10"
 ####################### STARTUP #######################
 
 exec --no-startup-id compton -b
-exec --no-startup-id mpd 
+#exec --no-startup-id mpd 
 exec setxkbmap us -variant intl
 exec polybar main
 exec wal -R
-exec feh --bg-fill ~/Pictures/Gransasso.jpg
+exec feh --bg-fill ~/Downloads/0039_20201013_nyt_pandemic_02361-1050_x2.jpg
 exec dunst
 exec blueman-applet
+exec dropbox 
 exec redshift-gtk
 
 ####################### BINDSYM #######################
@@ -55,11 +56,13 @@ bindsym $mod+Shift+s exec --no-startup-id "sleep 0.2s; scrot -s ~/Pictures/scree
 #bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
 #bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
 #bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id change-volume-dunst.sh up
-bindsym XF86AudioLowerVolume exec --no-startup-id change-volume-dunst.sh down
-bindsym XF86AudioNext exec --no-startup-id mpc next
-bindsym XF86AudioPlay exec --no-startup-id mpc toggle
-bindsym XF86AudioMute exec --no-startup-id change-volume-dunst.sh mute
+bindsym XF86AudioRaiseVolume exec --no-startup-id $HOME/Scripts/change-volume-dunst.sh up && sleep 0.5s
+bindsym XF86AudioLowerVolume exec --no-startup-id $HOME/Scripts/change-volume-dunst.sh down && sleep 0.5s
+#bindsym XF86AudioNext exec --no-startup-id mpc next && sleep 0.5s
+#bindsym XF86AudioPlay exec --no-startup-id mpc toggle && sleep 0.5s
+bindsym XF86AudioNext exec --no-startup-id "cmus-remote -n"
+bindsym XF86AudioPlay exec --no-startup-id "cmus-remote -u"
+bindsym XF86AudioMute exec --no-startup-id $HOME/Scripts/change-volume-dunst.sh mute &&  sleep 0.5s
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
@@ -211,3 +214,4 @@ for_window [class=".*"] border pixel 3
 gaps inner 5
 smart_gaps on
 
+for_window [title="PPLANE*"] floating enable

@@ -17,19 +17,20 @@
 ;==========================================================
 
 [colors]
-background = ${xrdb:color0:#222}
-background-visible = ${xrdb:color2:#222}
-;background = #222
+;background = ${xrdb:color0:#222}
+;background-visible = ${xrdb:color2:#222}
+background = #222
 background-alt = #444
-foreground = ${xrdb:color7:#222}
-;foreground = #dfdfdf
+background2-alt = #000
+;foreground = ${xrdb:color7:#222}
+foreground = #dfdfdf
 foreground-alt = #555
 primary = #fff52a
 secondary = #e60053
 alert = #bd2c40
 
 [bar/vertical]
-monitor = DP1-3
+monitor = DP-1
 width = 100%
 height = 24
 ;offset-x = 1%
@@ -50,17 +51,13 @@ padding-right = 1
 module-margin-left = 1
 module-margin-right = 1
 
-
 font-0 = Inconsolata Nerd Font:size=11;1
-font-1 = GohuFont Nerd Font:pixelsize=10;1
+font-1 = GohuFont Nerd Font:pixelsize=11;1
 font-2 = siji:size=11;1
 
-modules-left = powermenu i3
-modules-center = date 
-modules-right = xbacklight pulseaudio cpu wlan eth battery 
-
-;wm-restack = bspwm
-wm-restack = i3
+modules-left = pulseaudio
+modules-center = i3 
+modules-right = wlan eth sep battery sep date
 
 ;override-redirect = true
 
@@ -76,6 +73,7 @@ cursor-scroll = ns-resize
 
 [bar/main]
 ;monitor = ${env:MONITOR:HDMI-1}
+monitor = eDP-1
 width = 100%
 height = 24
 ;offset-x = 1%
@@ -97,18 +95,15 @@ module-margin-left = 1
 module-margin-right = 1
 
 font-0 = Inconsolata Nerd Font:size=11;1
-font-1 = GohuFont Nerd Font:pixelsize=10;1
+font-1 = GohuFont Nerd Font:pixelsize=11;1
 font-2 = siji:size=11;1
 
-modules-left = powermenu i3
-modules-center = date mpd
-modules-right = xbacklight pulseaudio cpu wlan eth battery 
+modules-left = pulseaudio sep mpd
+modules-center = i3 
+modules-right = xbacklight sep wlan eth sep battery sep date sep 
 
 tray-position = right
 tray-padding = 2
-
-;wm-restack = bspwm
-wm-restack = i3
 
 ;override-redirect = true
 
@@ -120,6 +115,13 @@ wm-restack = i3
 
 cursor-click = pointer
 cursor-scroll = ns-resize
+
+[module/sep]
+type = "custom/text" 
+content = ""
+content-padding = 0
+content-foreground = ${colors.foreground-alt}
+
 
 [module/xwindow]
 type = internal/xwindow
@@ -176,7 +178,7 @@ label-unfocused-padding = 2
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %index%
-label-visible-background = ${colors.background-visible}
+label-visible-background = ${colors.background2-alt}
 label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
@@ -191,15 +193,15 @@ label-urgent-padding = 2
 
 [module/mpd]
 type = internal/mpd
+label-song = %artist% - %title%
 format-online =   <icon-prev> <label-song> <icon-next>
 
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
+label-offline = <icon-prev> mpd is offline <icon-next>
 
-label-song-maxlen = 25
+icon-prev = ≤
+icon-next = ≥
+
+label-song-maxlen = 35
 label-song-ellipsis = true
 
 [module/xbacklight]
@@ -251,7 +253,7 @@ label-connected = %essid%
 format-disconnected =
 ;format-disconnected = <label-disconnected>
 ;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
+label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
 ramp-signal-0 = " "
@@ -277,11 +279,9 @@ format-disconnected =
 type = internal/date
 interval = 5
 
-date =
-date-alt = " %d-%m-%Y"
+date = " %a %d,"
 
 time = %H:%M
-time-alt = %H:%M:%S
 
 format-prefix = " "
 ;format-prefix-foreground = ${colors.foreground-alt}

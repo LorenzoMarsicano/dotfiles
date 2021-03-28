@@ -15,10 +15,13 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'easymotion/vim-easymotion'
 Plug 'airblade/vim-gitgutter'
 Plug 'kshenoy/vim-signature'
+Plug 'preservim/tagbar'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'morhetz/gruvbox'
+
+Plug 'tikhomirov/vim-glsl'
 
 call plug#end()
 
@@ -35,8 +38,10 @@ syntax enable
 set foldmethod=syntax
 set foldlevelstart=8
 
-nnoremap <S>^I za<CR>
+nnoremap <Space> za<CR>
 command! RemoveTrailing :%s/\s\+$//e
+:com! FindTODO :vimgrep /\<TODO\>/j **/* | :cope
+command! Paste :!curl --data-binary @% https://paste.rs/ | tail -n 1 | xclip -sel clip
 
 set list
 set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
@@ -100,7 +105,6 @@ nnoremap <A-x> <C-x>
 
 nmap ,d :b#<bar>bd#<CR>
 
-
 " NerdTree
 map <C-m> :NERDTreeFocus<CR>
 
@@ -129,9 +133,8 @@ nmap <leader>' :Marks<CR>
 
 noremap U :UndotreeToggle<CR>
 
-nnoremap <C-S-f> :Ag 
-
-
+nnoremap <C-f> :Ag 
+nmap <silent> ]t :TagbarToggle<CR>
 
 " Coc
 " Use c-space to toggle completion
@@ -164,15 +167,3 @@ function! s:show_documentation()
   endif
 endfunction
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
-
-" Coc Snippet
-" Use <C-l> for trigger snippet expand.
-imap <C-l> <Plug>(coc-snippets-expand)
-" Use <C-j> for select text for visual placeholder of snippet.
-vmap <C-j> <Plug>(coc-snippets-select)
-" Use <C-j> for jump to next placeholder, it's default of coc.nvim
-let g:coc_snippet_next = '<c-j>'
-" Use <C-k> for jump to previous placeholder, it's default of coc.nvim
-let g:coc_snippet_prev = '<c-k>'
-" Use <C-j> for both expand and jump (make expand higher priority.)
-imap <C-j> <Plug>(coc-snippets-expand-jump)
