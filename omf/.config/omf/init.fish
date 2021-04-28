@@ -14,6 +14,8 @@ export PURE_GIT_DOWN_ARROW='↓'
 export PURE_GIT_UP_ARROW='↑'
 
 export WEECHAT_HOME='~/.config/weechat'
+export TERM=termite
+export IDF_PATH=/home/lorenzo/Code/esp/esp-idf
 
 #---------------------------------- ALIAS ------------------------------------------------------------------
 alias ls="ls -al --color"
@@ -28,5 +30,7 @@ alias :qa="exit"
 
 #------------------------------------------------------------------------------------------------------------
 set -g -x GOPATH /home/lorenzo/Code/go/
+if test -f /home/lorenzo/.autojump/share/autojump/autojump.fish; . /home/lorenzo/.autojump/share/autojump/autojump.fish; end
 
-set fish_greeting
+function fish_mode_prompt
+end

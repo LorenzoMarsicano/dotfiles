@@ -1,1 +1,1 @@
-/home/syrinxos/.local/share/omf/themes/nelsonjchen/fish_prompt.fish
+/home/lorenzo/.local/share/omf/themes/neolambda/fish_prompt.fish

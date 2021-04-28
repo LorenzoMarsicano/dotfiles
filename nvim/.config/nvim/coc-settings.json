@@ -1,27 +1,28 @@
 {
     "languageserver": {
-    "ccls": {
-      "command": "ccls",
-      "filetypes": ["c", "cpp", "objc", "objcpp"],
-      "rootPatterns": [".ccls", "compile_commands.json", ".vim/", ".git/", ".hg/"],
-      "initializationOptions": {
-         "cache": {
-           "directory": "/tmp/ccls"
-         }
-       }
+        "ccls": {
+            "command": "ccls",
+            "filetypes": ["c", "cpp", "cuda", "objc", "objcpp"],
+            "rootPatterns": [".ccls-root", "compile_commands.json"],
+            "initializationOptions": {
+                "cache": {
+                    "directory": ".ccls-cache"
+                },
+                "client": {
+                    "snippetSupport": true
+                }
+            }
+        },
+        "clojure-lsp": {
+            "command": "bash",
+            "args": ["-c", "clojure-lsp"],
+            "filetypes": ["clojure"],
+            "rootPatterns": ["project.clj"],
+            "additionalSchemes": ["jar", "zipfile"],
+            "trace.server": "verbose",
+            "initializationOptions": {
+            }
+        }
     }
-  },
-  "languageserver": {
-    "clojure-lsp": {
-      "command": "bash",
-      "args": ["-c", "clojure-lsp"],
-      "filetypes": ["clojure"],
-      "rootPatterns": ["project.clj"],
-      "additionalSchemes": ["jar", "zipfile"],
-      "trace.server": "verbose",
-      "initializationOptions": {
-      }
-    }
-  }
 }
 
